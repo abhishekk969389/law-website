@@ -1,0 +1,590 @@
+{
+  "topbar": {
+    "address": "Noida One Tower C, Sector 62 Noida 226001",
+    "phone": "+91 98765 43210",
+    "email": "contact@veritaslegal.in",
+    "workingHours": "Mon - Sat: 9:30 AM - 6:30 PM",
+    "socialLinks": [
+      {
+        "name": "LinkedIn",
+        "platform": "linkedin",
+        "url": "https://linkedin.com"
+      },
+      {
+        "name": "Facebook",
+        "platform": "facebook",
+        "url": "https://facebook.com"
+      },
+      {
+        "name": "X",
+        "platform": "x",
+        "url": "https://x.com"
+      }
+    ]
+  },
+  "navbar": {
+    "logo": "/main-logo.svg",
+    "navLinks": [
+      {
+        "title": "Home",
+        "href": "/",
+        "isActive": true
+      },
+      {
+        "title": "About Us",
+        "href": "/about"
+      },
+      {
+        "title": "Services",
+        "href": "/services",
+        "hasDropdown": true
+      },
+      {
+        "title": "Our Partner",
+        "href": "/partners"
+      },
+      {
+        "title": "FAQ's",
+        "href": "/faqs"
+      },
+      {
+        "title": "Career",
+        "href": "/career"
+      },
+      {
+        "title": "News Media",
+        "href": "/news-media"
+      }
+    ],
+    "actionButtons": {
+      "contactUs": {
+        "text": "Contact Us",
+        "href": "/contact"
+      },
+      "consultation": {
+        "text": "Free Case Consultation",
+        "href": "/consultation"
+      }
+    }
+  },
+  "banner": {
+    "tagline": "Justice. Integrity. Results.",
+    "heading": {
+      "line1": "Your Rights.",
+      "line2": "Our",
+      "highlight": "Responsibility."
+    },
+    "subheading": "At Veritas Law Partners, we stand by you with expert legal guidance and relentless advocacy.",
+    "buttons": [
+      {
+        "text": "Free Case Consultation",
+        "href": "/consultation",
+        "variant": "primary"
+      },
+      {
+        "text": "Explore Our Services",
+        "href": "/services",
+        "variant": "outline"
+      }
+    ],
+    "stats": [
+      {
+        "value": "15+",
+        "label": "Years of Experience"
+      },
+      {
+        "value": "1000+",
+        "label": "Cases Handled"
+      },
+      {
+        "value": "98%",
+        "label": "Client Satisfaction"
+      }
+    ],
+    "quote": {
+      "text1": "Fairness.",
+      "text2": "is not an option",
+      "text3": "it's our foundation"
+    },
+    "backgroundImage": "/bannerbg.svg"
+  },
+  "features": [
+    {
+      "id": "1",
+      "icon": "user",
+      "title": "Expert Legal Team",
+      "description": "Seasoned lawyers with domain expertise."
+    },
+    {
+      "id": "2",
+      "icon": "shield",
+      "title": "Client-First Approach",
+      "description": "Your goals, our priority."
+    },
+    {
+      "id": "3",
+      "icon": "gavel",
+      "title": "Strategic Advocacy",
+      "description": "Smarter legal solutions for better outcomes."
+    },
+    {
+      "id": "4",
+      "icon": "landmark",
+      "title": "Trusted & Confidential",
+      "description": "Your privacy is always protected with us."
+    }
+  ],
+  "about": {
+    "topBadge": "Unparalleled Company About",
+    "subTagline": "ABOUT US",
+    "heading": {
+      "line1": "Built on Integrity.",
+      "line2": "Driven by",
+      "highlight": "Justice."
+    },
+    "seal": {
+      "badgeImage": "/seal-badge.svg",
+      "text": "VERITAS LAW GROUP",
+      "description": "A law firm committed to protecting your rights and securing your future."
+    },
+    "image": "/about.svg",
+    "imageBadge": {
+      "title": "Client First",
+      "subtitle": "Always."
+    },
+    "foundation": {
+      "subTagline": "OUR FOUNDATION",
+      "heading": {
+        "line1": "Dedication &",
+        "highlight": "Commitment"
+      },
+      "description": "At Veritas Law Partners, we believe in upholding the highest standards of legal practice. Our dedicated team of attorneys works tirelessly to ensure your rights are protected and your voice is heard with strategic solutions.",
+      "items": [
+        {
+          "id": "1",
+          "icon": "shield",
+          "title": "Integrity First",
+          "description": "We uphold the highest ethical standards."
+        },
+        {
+          "id": "2",
+          "icon": "user",
+          "title": "Client Focused",
+          "description": "Your goals are our top priority."
+        },
+        {
+          "id": "3",
+          "icon": "gavel",
+          "title": "Results Driven",
+          "description": "Strategic solutions that deliver results."
+        },
+        {
+          "id": "4",
+          "icon": "lock",
+          "title": "Confidential & Secure",
+          "description": "Your privacy is our promise."
+        }
+      ]
+    }
+  },
+  "services": {
+    "tagline": "OUR BEST OF SERVICE",
+    "heading": {
+      "line1": "What People Say About",
+      "line2": "Our",
+      "highlight": "Legal Practice Areas"
+    },
+    "subheading": "We provide strategic legal solutions tailored to your unique needs with dedication, integrity, and proven results.",
+    "items": [
+      {
+        "id": "1",
+        "icon": "handcuffs",
+        "image": "/service1.svg",
+        "title": "Criminal Defense",
+        "description": "Aggressive defense for your rights and freedom. We fight for the best possible outcome.",
+        "linkText": "Learn More",
+        "linkHref": "/services/criminal-defense"
+      },
+      {
+        "id": "2",
+        "icon": "car",
+        "image": "/service2.svg",
+        "title": "DUI Defense",
+        "description": "Experienced representation for DUI/DWI charges and license restoration.",
+        "linkText": "Learn More",
+        "linkHref": "/services/dui-defense"
+      },
+      {
+        "id": "3",
+        "icon": "shield",
+        "image": "/service3.svg",
+        "title": "Domestic Violence",
+        "description": "Compassionate legal support and protection when you need it most.",
+        "linkText": "Learn More",
+        "linkHref": "/services/domestic-violence"
+      },
+      {
+        "id": "4",
+        "icon": "fileText",
+        "image": "/service5.svg",
+        "title": "Simple Possession",
+        "description": "Legal assistance for simple possession charges with a focus on the future.",
+        "linkText": "Learn More",
+        "linkHref": "/services/simple-possession"
+      }
+    ]
+  },
+  "counting": [
+    {
+      "id": "1",
+      "value": "08+",
+      "label": "Years of Experience",
+      "icon": "scale"
+    },
+    {
+      "id": "2",
+      "value": "1000+",
+      "label": "Cases Handled",
+      "icon": "briefcase"
+    },
+    {
+      "id": "3",
+      "value": "98%",
+      "label": "Client Satisfaction",
+      "icon": "users"
+    },
+    {
+      "id": "4",
+      "value": "15+",
+      "label": "Practice Areas",
+      "icon": "award"
+    },
+    {
+      "id": "5",
+      "value": "24/7",
+      "label": "Client Support",
+      "icon": "shield"
+    }
+  ],
+  "caseStudy": {
+    "tagline": "CASE STUDY",
+    "heading": {
+      "line1": "Tailored For",
+      "highlight": "Legal",
+      "line2": "Practices In Injury Law And Traffic Defense"
+    },
+    "subheading": "Explore how our strategic legal solutions have delivered real results and made a difference in our clients' lives.",
+    "items": [
+      {
+        "id": "1",
+        "number": "01",
+        "image": "/casestudy1.svg",
+        "title": "Dedicated Criminal Defense with a Human Touch",
+        "description": "We provide aggressive defense while ensuring our clients feel heard, supported, and confident throughout the process.",
+        "linkText": "View Case Study",
+        "linkHref": "/case-study/1"
+      },
+      {
+        "id": "2",
+        "number": "02",
+        "image": "/casestudy2.svg",
+        "title": "A Family's Fight for Justice: Their Legal Odyssey",
+        "description": "From complex disputes to emotional challenges, we stood by the family and delivered the justice they deserved.",
+        "linkText": "View Case Study",
+        "linkHref": "/case-study/2"
+      },
+      {
+        "id": "3",
+        "number": "03",
+        "image": "/casestudy3.svg",
+        "title": "Defending Justice: A Family's Legal Journey",
+        "description": "We successfully defended our client's rights and secured a favorable outcome in a complex legal battle.",
+        "linkText": "View Case Study",
+        "linkHref": "/case-study/3"
+      },
+      {
+        "id": "4",
+        "number": "04",
+        "image": "/casestudy4.svg",
+        "title": "Strategic Corporate Defense & Dispute Resolution",
+        "description": "Delivering expert legal representation to navigate high-stakes litigation and protect organizational integrity.",
+        "linkText": "View Case Study",
+        "linkHref": "/case-study/4"
+      },
+      {
+        "id": "5",
+        "number": "05",
+        "image": "/casestudy4.svg",
+        "title": "Strategic Corporate Defense & Dispute Resolution",
+        "description": "Delivering expert legal representation to navigate high-stakes litigation and protect organizational integrity.",
+        "linkText": "View Case Study",
+        "linkHref": "/case-study/4"
+      }
+    ]
+  },
+  "testimonials": {
+    "tagline": "Client Testimonials",
+    "heading": "What Our Clients Say",
+    "image": "/testinomial.svg",
+    "items": [
+      {
+        "id": "1",
+        "quote": "I was struggling with family law for months before I found abc. They not only provided me with the solution I needed, but they also educated me on how to prevent the issue from happening again. Their team is incredibly knowledgeable and patient, and they always go the extra mile to ensure customer satisfaction. I am so grateful for their help and would recommend them to anyone.",
+        "authorName": "William Hazelip",
+        "authorRole": "Ui/Ux Designer",
+        "authorAvatar": "/service1.svg",
+        "rating": 5
+      },
+      {
+        "id": "2",
+        "quote": "Veritas Law Partners handled our complex business litigation with exceptional diligence and professionalism. Their strategic insight secured a victory beyond our expectations. Truly a top-tier legal team.",
+        "authorName": "Sarah Jenkins",
+        "authorRole": "Corporate Executive",
+        "authorAvatar": "/service2.svg",
+        "rating": 5
+      },
+      {
+        "id": "3",
+        "quote": "Prompt, compassionate, and fiercely defensive of our rights. They stood by us every step of the way and made an overwhelming process seamless and reassuring.",
+        "authorName": "Michael Ross",
+        "authorRole": "Small Business Owner",
+        "authorAvatar": "/service3.svg",
+        "rating": 5
+      }
+    ]
+  },
+  "blog": {
+    "tagline": "NEWS & BLOG",
+    "heading": {
+      "line1": "Legal News &",
+      "highlight": "Updates"
+    },
+    "subheading": "Stay informed with the latest legal insights, case updates, and important changes that matter to you.",
+    "buttonText": "View All Articles",
+    "buttonHref": "/blog",
+    "items": [
+      {
+        "id": "1",
+        "image": "/casestudy1.svg",
+        "author": "Jonson",
+        "date": "23 Sep, 2025",
+        "commentsCount": "3 Comments",
+        "title": "It's important to keep up with the latest changes in family..",
+        "linkHref": "/blog/1"
+      },
+      {
+        "id": "2",
+        "image": "/casestudy2.svg",
+        "author": "Jonson",
+        "date": "24 Sep, 2025",
+        "commentsCount": "2 Comments",
+        "title": "There have been significant modifications in family law.",
+        "linkHref": "/blog/2"
+      },
+      {
+        "id": "3",
+        "image": "/casestudy3.svg",
+        "author": "Jonson",
+        "date": "26 Sep, 2025",
+        "commentsCount": "4 Comments",
+        "title": "It's crucial to be aware of the latest updates in family law.",
+        "linkHref": "/blog/3"
+      }
+    ]
+  },
+  "faq": {
+    "tagline": "FAQ'S",
+    "heading": {
+      "line1": "Frequently Asked",
+      "highlight": "Questions"
+    },
+    "subheading": "Find answers to common questions about our legal services and how we can help you.",
+    "image": "/testinomial.svg",
+    "items": [
+      {
+        "id": "1",
+        "question": "What types of legal cases do you handle?",
+        "answer": "We handle a wide range of legal matters including family law, criminal defense, personal injury, DUI/DWI, and civil litigation. Our experienced attorneys are here to help you with your specific legal needs."
+      },
+      {
+        "id": "2",
+        "question": "How do I schedule a consultation?",
+        "answer": "You can schedule a consultation by calling our office directly, filling out the online contact form on our website, or sending us an email. We offer flexible scheduling options to accommodate your needs."
+      },
+      {
+        "id": "3",
+        "question": "What should I bring to my first meeting?",
+        "answer": "Please bring any relevant legal documents, contracts, police reports, correspondence, and a list of questions you have. The more information you provide, the better we can evaluate your case."
+      },
+      {
+        "id": "4",
+        "question": "How long will my case take?",
+        "answer": "The timeline of a legal case depends on its complexity, court schedules, and willingness of parties to settle. During your initial consultation, we will provide a realistic timeline based on your specific circumstances."
+      },
+      {
+        "id": "5",
+        "question": "What are your legal fees?",
+        "answer": "Our fee structure varies depending on the type of case. We offer hourly rates, flat fees for specific services, and contingency fees for personal injury cases. We transparently discuss all costs upfront."
+      },
+      {
+        "id": "6",
+        "question": "Do you offer payment plans?",
+        "answer": "Yes, we understand that legal expenses can be unexpected. We offer flexible payment plans and structured options tailored to your financial situation."
+      }
+    ]
+  },
+  "footer": {
+    "backgroundImage": "/footerimg.svg",
+    "newsletter": {
+      "tagline": "Get More Updates",
+      "heading": "Subscribe Newsletters",
+      "inputPlaceholder": "Enter Email Address",
+      "buttonText": "SUBSCRIBE NOW"
+    },
+    "brand": {
+      "logo": "/main-logo.svg",
+      "title": "VERITAS",
+      "subtitle": "LAW PARTNERS",
+      "description": "Sed ut perspiciatis unde omnis iste natus error voluptate santium doloremque laudantium totames aperiam eaque psa quae.",
+      "followUsText": "Follow Us",
+      "socials": [
+        {
+          "id": "1",
+          "name": "Facebook",
+          "url": "#"
+        },
+        {
+          "id": "2",
+          "name": "Twitter",
+          "url": "#"
+        },
+        {
+          "id": "3",
+          "name": "Behance",
+          "url": "#"
+        },
+        {
+          "id": "4",
+          "name": "Youtube",
+          "url": "#"
+        }
+      ]
+    },
+    "popularCases": {
+      "title": "Quick Links",
+      "links": [
+        {
+          "id": "1",
+          "title": "Industries",
+          "linkHref": ""
+        },
+        {
+          "id": "2",
+          "title": "Legal Updates",
+          "linkHref": ""
+        },
+        {
+          "id": "3",
+          "title": "News & Media",
+          "linkHref": ""
+        },
+        {
+          "id": "4",
+          "title": "Publications",
+          "linkHref": ""
+        },
+        {
+          "id": "5",
+          "title": "Testimonials",
+          "linkHref": ""
+        },
+        {
+          "id": "6",
+          "title": "Client Resources",
+          "linkHref": ""
+        },
+        {
+          "id": "7",
+          "title": "Events",
+          "linkHref": ""
+        }
+      ]
+    },
+    "resources": {
+      "title": "Resources",
+      "links": [
+        {
+          "id": "1",
+          "title": "Office Locations",
+          "linkHref": ""
+        },
+        {
+          "id": "2",
+          "title": "Book Consultation",
+          "linkHref": ""
+        },
+        {
+          "id": "3",
+          "title": "404",
+          "linkHref": ""
+        },
+        {
+          "id": "4",
+          "title": "Privacy Policy",
+          "linkHref": ""
+        },
+        {
+          "id": "5",
+          "title": "Terms & Conditions",
+          "linkHref": ""
+        },
+        {
+          "id": "6",
+          "title": "Legal Disclaimer",
+          "linkHref": ""
+        },
+        {
+          "id": "7",
+          "title": "Sitemap",
+          "linkHref": ""
+        }
+      ]
+    },
+    "recentNews": {
+      "title": "Recent News",
+      "items": [
+        {
+          "id": "1",
+          "title": "Seamless Spreadsheet Import Expere",
+          "date": "25 May 2021",
+          "image": "/casestudy1.svg",
+          "linkHref": "/blog/1"
+        },
+        {
+          "id": "2",
+          "title": "Online Environme Work Older",
+          "date": "25 May 2021",
+          "image": "/casestudy2.svg",
+          "linkHref": "/blog/2"
+        },
+        {
+          "id": "3",
+          "title": "Website Feels More Haunted House",
+          "date": "25 May 2021",
+          "image": "/casestudy3.svg",
+          "linkHref": "/blog/3"
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contact Us",
+      "phone": "+012 (345) 56 998",
+      "email": "support@gmail.com",
+      "address": "59 Main Street, USA",
+      "openingHoursTitle": "Opening Hour",
+      "openingHours": "Sun - Friday, 09 am - 08 pm",
+      "closedText": "Saturday Closed"
+    },
+    "copyrightText": "©2021 Veritas All Rights Reserved."
+  }
+}

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0F1A" />
+      <stop offset="50%" stop-color="#141D2C" />
+      <stop offset="100%" stop-color="#0B0F18" />
+    </linearGradient>
+    <linearGradient id="goldGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E5AB" />
+      <stop offset="100%" stop-color="#D4A359" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bgGrad2)" />
+
+  <!-- White Document in center with "DUI LAW" -->
+  <g transform="translate(150, 80)">
+    <rect x="0" y="0" width="300" height="240" rx="8" fill="#F8FAFC" shadow="lg" />
+    <!-- DUI LAW Text -->
+    <text x="150" y="100" text-anchor="middle" font-family="'Cinzel', 'Playfair Display', serif" font-size="32px" font-weight="bold" fill="#0F172A" letter-spacing="4px">
+      DUI LAW
+    </text>
+    <!-- Document lines -->
+    <line x1="40" y1="130" x2="260" y2="130" stroke="#94A3B8" stroke-width="2" />
+    <line x1="40" y1="150" x2="260" y2="150" stroke="#94A3B8" stroke-width="2" />
+    <line x1="40" y1="170" x2="200" y2="170" stroke="#94A3B8" stroke-width="2" />
+  </g>
+
+  <!-- Wooden Gavel (Right) -->
+  <g transform="translate(420, 180) rotate(-25)">
+    <rect x="-30" y="-15" width="60" height="30" rx="4" fill="url(#goldGrad2)" />
+    <rect x="-4" y="15" width="8" height="120" rx="3" fill="#881337" stroke="url(#goldGrad2)" stroke-width="1" />
+  </g>
+
+  <!-- Glasses (Top) -->
+  <g transform="translate(260, 40)" opacity="0.8">
+    <ellipse cx="30" cy="20" rx="22" ry="16" fill="none" stroke="url(#goldGrad2)" stroke-width="2" />
+    <ellipse cx="90" cy="20" rx="22" ry="16" fill="none" stroke="url(#goldGrad2)" stroke-width="2" />
+    <line x1="52" y1="20" x2="68" y2="20" stroke="url(#goldGrad2)" stroke-width="2" />
+  </g>
+</svg>

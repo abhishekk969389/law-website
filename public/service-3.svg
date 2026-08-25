@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="50%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#090D16" />
+    </linearGradient>
+    <linearGradient id="goldGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E5AB" />
+      <stop offset="100%" stop-color="#D4A359" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bgGrad3)" />
+
+  <!-- Family Silhouettes & Support Scene -->
+  <!-- Parent 1 -->
+  <g transform="translate(180, 110)">
+    <path d="M 30, 160 L 60, 90 C 70, 75 100, 75 110, 90 L 140, 160 Z" fill="#334155" />
+    <circle cx="85" cy="48" r="20" fill="#E2E8F0" opacity="0.9" />
+  </g>
+
+  <!-- Child Sitting (Center) -->
+  <g transform="translate(270, 180)">
+    <path d="M 20, 110 L 40, 60 C 45, 50 65, 50 70, 60 L 90, 110 Z" fill="#D4A359" opacity="0.8" />
+    <circle cx="55" cy="30" r="14" fill="#F8FAFC" />
+  </g>
+
+  <!-- Counselor / Advocate (Right) -->
+  <g transform="translate(370, 100)">
+    <path d="M 30, 170 L 70, 95 C 80, 80 115, 80 125, 95 L 165, 170 Z" fill="#1E293B" />
+    <circle cx="97" cy="50" r="21" fill="#CBD5E1" />
+  </g>
+
+  <!-- Shield of Protection Outline around child -->
+  <path d="M 300, 140 L 350, 160 C 350, 260 300, 310 300, 310 C 300, 310 250, 260 250, 160 Z" fill="none" stroke="url(#goldGrad3)" stroke-width="2" stroke-dasharray="4,4" opacity="0.6" />
+</svg>

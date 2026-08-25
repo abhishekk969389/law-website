@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <!-- Gold Color Linear & Radial Gradients -->
+    <linearGradient id="sealGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E5AB" />
+      <stop offset="50%" stop-color="#D4A359" />
+      <stop offset="100%" stop-color="#B8860B" />
+    </linearGradient>
+
+    <!-- Top Text Arc Path -->
+    <path id="sealTopArc" d="M 28, 100 A 72,72 0 0,1 172, 100" fill="none" />
+    <!-- Bottom Text Arc Path -->
+    <path id="sealBottomArc" d="M 172, 100 A 72,72 0 0,1 28, 100" fill="none" />
+  </defs>
+
+  <!-- Outer Solid Golden Circle Ring -->
+  <circle cx="100" cy="100" r="92" fill="none" stroke="url(#sealGoldGrad)" stroke-width="2" />
+
+  <!-- Inner Dotted Golden Circle Ring -->
+  <circle cx="100" cy="100" r="82" fill="none" stroke="url(#sealGoldGrad)" stroke-width="1.2" stroke-dasharray="3,4" stroke-opacity="0.85" />
+
+  <!-- Top Arched Text -->
+  <text font-family="'Cinzel', 'Playfair Display', serif, sans-serif" font-size="14.5px" font-weight="700" letter-spacing="4px" fill="url(#sealGoldGrad)">
+    <textPath href="#sealTopArc" startOffset="50%" text-anchor="middle">
+      VERITAS LAW GROUP
+    </textPath>
+  </text>
+
+  <!-- Bottom Arched Text -->
+  <text font-family="'Inter', sans-serif" font-size="12px" font-weight="600" letter-spacing="3.5px" fill="url(#sealGoldGrad)">
+    <textPath href="#sealBottomArc" startOffset="50%" text-anchor="middle">
+      DEDICATION • TRUST • RESULTS
+    </textPath>
+  </text>
+
+  <!-- Center Golden Shield Emblem -->
+  <path d="M 100, 62 L 124, 73 C 124, 102 100, 122 100, 122 C 100, 122 76, 102 76, 73 Z" fill="none" stroke="url(#sealGoldGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Center Letter 'V.' inside Shield -->
+  <text x="100" y="99" text-anchor="middle" dominant-baseline="central" font-family="'Cinzel', 'Playfair Display', 'Georgia', serif" font-size="24px" font-weight="bold" fill="url(#sealGoldGrad)">
+    V.
+  </text>
+</svg>
