@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="silverPlate" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#CBD5E1"/>
+    </linearGradient>
+  </defs>
+  <rect x="15" y="15" width="170" height="170" rx="8" fill="url(#silverPlate)" stroke="#D4A359" stroke-width="3"/>
+  <rect x="22" y="22" width="156" height="156" rx="4" fill="none" stroke="#000000" stroke-width="1"/>
+  <text x="100" y="50" font-family="Georgia, serif" font-size="11" font-weight="bold" fill="#0A0E17" text-anchor="middle">INDIAN LAW FIRM</text>
+  <text x="100" y="66" font-family="Georgia, serif" font-size="11" font-weight="bold" fill="#0A0E17" text-anchor="middle">AWARDS 2022</text>
+  <rect x="35" y="78" width="130" height="40" fill="#0A0E17" rx="3"/>
+  <text x="100" y="95" font-family="sans-serif" font-size="8" font-weight="bold" fill="#D4A359" text-anchor="middle">EXCELLENCE IN</text>
+  <text x="100" y="108" font-family="sans-serif" font-size="8" font-weight="bold" fill="#D4A359" text-anchor="middle">TAXATION (DIRECT)</text>
+  <text x="100" y="145" font-family="'Brush Script MT', cursive" font-size="13" fill="#333" text-anchor="middle">Veritas Law Partners</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="goldRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FACC15"/>
+      <stop offset="50%" stop-color="#CA8A04"/>
+      <stop offset="100%" stop-color="#713F12"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="85" fill="#0A0E17" stroke="url(#goldRing)" stroke-width="4"/>
+  <path d="M 42,105 C 38,75 52,50 72,40 C 58,58 50,78 54,105 Z" fill="url(#goldRing)"/>
+  <path d="M 158,105 C 162,75 148,50 128,40 C 142,58 150,78 146,105 Z" fill="url(#goldRing)"/>
+  <text x="100" y="70" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#FFFFFF" text-anchor="middle">IFLR</text>
+  <text x="100" y="92" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="url(#goldRing)" text-anchor="middle">1000</text>
+  <text x="100" y="115" font-family="sans-serif" font-size="9" font-weight="bold" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">RECOGNIZED</text>
+  <text x="100" y="128" font-family="sans-serif" font-size="9" font-weight="bold" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">FIRM</text>
+  <text x="100" y="152" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="url(#goldRing)" text-anchor="middle">2023</text>
+</svg>

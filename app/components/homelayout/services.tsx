@@ -43,8 +43,8 @@ export default function Services({ data = defaultServicesData }: ServicesProps) 
           <div className="flex items-center justify-center gap-3 mb-3">
             <span className="w-12 h-[1px] bg-[#D4A359]/60" />
             <div className="flex items-center gap-2">
-              <Scale className="w-4 h-4 text-[#D4A359]" />
-              <span className="text-[#D4A359] text-xs md:text-sm font-semibold tracking-widest uppercase">
+              <Scale className="w-6 h-6 text-[#D4A359]" />
+              <span className="text-[#D4A359] text-xs md:text-lg font-semibold tracking-widest uppercase">
                 {tagline}
               </span>
             </div>

@@ -44,7 +44,7 @@ export default function About({ data = defaultAboutData }: AboutProps) {
 
                         {/* Sub Tagline */}
                         <div className="flex items-center gap-3 mb-2">
-                            <span className="text-[#D4A359] mt-4 text-xs md:text-lg font-semibold tracking-widest uppercase">
+                            <span className="text-[#D4A359] mt-4 text-xs md:text-lg font-semibold tracking-widest ">
                                 {subTagline}
                             </span>
                             <span className="w-12 h-[1px] mt-4 bg-[#D4A359]/60" />

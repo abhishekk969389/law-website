@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="200" height="120">
+  <polygon points="45,12 165,18 155,108 35,102" fill="#E53935" stroke="#FFFFFF" stroke-width="3.5"/>
+  <text x="100" y="54" font-family="'Segoe UI', 'Nirmala UI', 'Arial', sans-serif" font-size="30" font-weight="bold" fill="#FFFFFF" text-anchor="middle">आज</text>
+  <text x="96" y="90" font-family="'Segoe UI', 'Nirmala UI', 'Arial', sans-serif" font-size="30" font-weight="bold" fill="#FFFFFF" text-anchor="middle">तक</text>
+</svg>

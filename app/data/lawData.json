@@ -1,4 +1,1734 @@
 {
+  "aboutSubBanner": {
+    "title": "About us",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "About Us",
+        "href": "/about",
+        "isActive": true
+      }
+    ],
+    "backgroundImage": "/subbanner.svg"
+  },
+  "whyChooseSubBanner": {
+    "title": "Why Choose Us",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Why Choose Us",
+        "href": "/whychoose",
+        "isActive": true
+      }
+    ],
+    "backgroundImage": "/subbanner.svg"
+  },
+  "ourApproachSubBanner": {
+    "title": "Our Approach",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Our Approach",
+        "href": "/ourapproach",
+        "isActive": true
+      }
+    ],
+    "backgroundImage": "/subbanner.svg"
+  },
+  "servicesSubBanner": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive & Strategic Legal Solutions",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Services",
+        "href": "/service",
+        "isActive": true
+      }
+    ],
+    "backgroundImage": "/subbanner.svg"
+  },
+  "teamSubBanner": {
+    "title": "Our Team",
+    "subtitle": "Experienced Attorneys Dedicated To Excellence",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Our Team",
+        "href": "/team",
+        "isActive": true
+      }
+    ],
+    "backgroundImage": "/subbanner.svg"
+  },
+  "industriesSubBanner": {
+    "title": "Industries",
+    "subtitle": "Tailored Legal Solutions Across Key Business Sectors",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Industries",
+        "href": "/industries",
+        "isActive": true
+      }
+    ],
+    "backgroundImage": "/subbanner.svg"
+  },
+  "caseStudySubBanner": {
+    "title": "Case Study",
+    "subtitle": "Proven Track Record Of Successful Client Outcomes",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Case Studies",
+        "href": "/casestudy",
+        "isActive": true
+      }
+    ],
+    "backgroundImage": "/subbanner.svg"
+  },
+  "blogSubBanner": {
+    "title": "Blog",
+    "subtitle": "Latest News, Articles & Legal Insights",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Blog",
+        "href": "/blog",
+        "isActive": true
+      }
+    ],
+    "backgroundImage": "/subbanner.svg"
+  },
+  "legalSubBanner": {
+    "title": "Legal Updates",
+    "subtitle": "Terms of Service, Privacy Policy & Legal Terms",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Legal",
+        "href": "/legal",
+        "isActive": true
+      }
+    ],
+    "backgroundImage": "/subbanner.svg"
+  },
+  "mediaSubBanner": {
+    "title": "Media & Press",
+    "subtitle": "Press Releases, News Features & Media Mentions",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Media",
+        "href": "/media",
+        "isActive": true
+      }
+    ],
+    "backgroundImage": "/subbanner.svg"
+  },
+  "eventSubBanner": {
+    "title": "Events",
+    "subtitle": "Upcoming Legal Seminars, Conferences & Interactive Workshops",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Event",
+        "href": "/event",
+        "isActive": true
+      }
+    ],
+    "backgroundImage": "/subbanner.svg"
+  },
+  "publicationsSubBanner": {
+    "title": "Publications",
+    "subtitle": "Articles, Legal Papers, Books & Research Publications",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Publications",
+        "href": "/publications",
+        "isActive": true
+      }
+    ],
+    "backgroundImage": "/subbanner.svg"
+  },
+  "awardSubBanner": {
+    "title": "Awards & Recognition",
+    "subtitle": "Honors, Accolades & Industry Recognition",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Award",
+        "href": "/award",
+        "isActive": true
+      }
+    ],
+    "backgroundImage": "/subbanner.svg"
+  },
+  "testimonialSubBanner": {
+    "title": "Testimonials",
+    "subtitle": "Client Feedback, Reviews & Success Stories",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Testimonial",
+        "href": "/testimonial",
+        "isActive": true
+      }
+    ],
+    "backgroundImage": "/subbanner.svg"
+  },
+  "clientSubBanner": {
+    "title": "Client Resources",
+    "subtitle": "Valuable Guides, Toolkits & Legal Practice Resources",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Client Resources",
+        "href": "/client",
+        "isActive": true
+      }
+    ],
+    "backgroundImage": "/subbanner.svg"
+  },
+  "faqSubBanner": {
+    "title": "FAQ'S",
+    "subtitle": "Find Answers to Common Legal Questions & Client Queries",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "FAQ",
+        "href": "/faq",
+        "isActive": true
+      }
+    ],
+    "backgroundImage": "/subbanner.svg"
+  },
+  "careerSubBanner": {
+    "title": "Careers",
+    "subtitle": "Join Our Team & Build a Rewarding Legal Career",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Careers",
+        "href": "/career",
+        "isActive": true
+      }
+    ],
+    "backgroundImage": "/subbanner.svg"
+  },
+  "officeSubBanner": {
+    "title": "Office Location",
+    "subtitle": "Pan-India Presence & Strategic Office Locations",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Our Offices",
+        "href": "/office",
+        "isActive": true
+      }
+    ],
+    "backgroundImage": "/subbanner.svg"
+  },
+  "contactSubBanner": {
+    "title": "Contact Us",
+    "subtitle": "Get in Touch with Our Expert Legal Team Today",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Contact Us",
+        "href": "/contactus",
+        "isActive": true
+      }
+    ],
+    "backgroundImage": "/subbanner.svg"
+  },
+  "bookConsSubBanner": {
+    "title": "Book Consultation",
+    "subtitle": "Schedule a Legal Strategy Session with Our Senior Attorneys",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Book Consultation",
+        "href": "/bookcons",
+        "isActive": true
+      }
+    ],
+    "backgroundImage": "/subbanner.svg"
+  },
+  "privacyPolicySubBanner": {
+    "title": "Privacy Policy",
+    "subtitle": "How We Collect, Use, and Safeguard Your Personal Information",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Privacy Policy",
+        "href": "/privacypolicy",
+        "isActive": true
+      }
+    ],
+    "backgroundImage": "/subbanner.svg"
+  },
+  "termsConditionSubBanner": {
+    "title": "Terms & Conditions",
+    "subtitle": "Terms and Conditions Governing Your Use of Our Legal Services",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Terms & Conditions",
+        "href": "/termscondition",
+        "isActive": true
+      }
+    ],
+    "backgroundImage": "/subbanner.svg"
+  },
+  "legalDisclaimerSubBanner": {
+    "title": "Legal Disclaimer",
+    "subtitle": "Important Regulatory and Professional Notices Governing Our Legal Practice",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Legal Disclaimer",
+        "href": "/legaldisclimer",
+        "isActive": true
+      }
+    ],
+    "backgroundImage": "/subbanner.svg"
+  },
+  "ourApproachSection": {
+    "tagline": "OUR APPROACH",
+    "heading": {
+      "line1": "A Strategic Approach.",
+      "line2Prefix": "Focused on ",
+      "highlight": "Results."
+    },
+    "description": "At Veritas Law Partners, we follow a proven approach that ensures every case is handled with precision, strategy, and dedication. Our process is designed to protect your rights and achieve the best possible outcome.",
+    "image": "/testinomial.svg",
+    "items": [
+      {
+        "id": "1",
+        "icon": "target",
+        "title": "Client First",
+        "description": "Your goals are our priority."
+      },
+      {
+        "id": "2",
+        "icon": "shield-check",
+        "title": "Strategic Mindset",
+        "description": "Every decision is backed by strategy."
+      },
+      {
+        "id": "3",
+        "icon": "gavel",
+        "title": "Legal Excellence",
+        "description": "Decades of experience on your side."
+      },
+      {
+        "id": "4",
+        "icon": "handshake",
+        "title": "Results Driven",
+        "description": "We focus on what truly matters."
+      }
+    ]
+  },
+  "provenApproach": {
+    "tagline": "OUR PROVEN APPROACH",
+    "steps": [
+      {
+        "id": "1",
+        "stepNumber": "01",
+        "icon": "users",
+        "title": "Understand Your Situation",
+        "description": "We begin by listening carefully to your concerns and gathering all the necessary details."
+      },
+      {
+        "id": "2",
+        "stepNumber": "02",
+        "icon": "file-search",
+        "title": "Evaluate & Analyse",
+        "description": "Our legal experts analyse your case thoroughly and identify the best possible strategies."
+      },
+      {
+        "id": "3",
+        "stepNumber": "03",
+        "icon": "file-edit",
+        "title": "Develop a Strategy",
+        "description": "We craft a tailored legal plan designed to protect your rights and achieve results."
+      },
+      {
+        "id": "4",
+        "stepNumber": "04",
+        "icon": "gavel",
+        "title": "Take Action & Advocate",
+        "description": "We take decisive action and strongly advocate on your behalf at every step."
+      },
+      {
+        "id": "5",
+        "stepNumber": "05",
+        "icon": "shield-check",
+        "title": "Achieve the Best Outcome",
+        "description": "Our focus is always on securing the best possible outcome for you and your future."
+      }
+    ],
+    "bottomBanner": {
+      "text": "Every case is unique. Our approach is built around your goals, and we are committed to achieving the best possible results.",
+      "callText": "Let's Discuss Your Case",
+      "phoneNumber": "+012 (345) 56 998",
+      "phoneHref": "tel:+01234556998"
+    }
+  },
+  "serviceSection": {
+    "tagline": "OUR BEST OF SERVICE",
+    "heading": {
+      "line1": "What People Say About",
+      "line2Prefix": "Our ",
+      "highlight": "Legal Practice Areas"
+    },
+    "description": "We provide strategic legal solutions tailored to your unique needs with dedication, integrity, and proven results.",
+    "items": [
+      {
+        "id": "1",
+        "title": "Criminal Defense",
+        "description": "Aggressive defense for your rights and freedom. We fight for the best possible outcome.",
+        "icon": "handshake",
+        "image": "/service1.svg",
+        "link": "/service/criminal-defense"
+      },
+      {
+        "id": "2",
+        "title": "DUI Defense",
+        "description": "Experienced representation for DUI/DWI charges and license restoration.",
+        "icon": "scale",
+        "image": "/service2.svg",
+        "link": "/service/dui-defense"
+      },
+      {
+        "id": "3",
+        "title": "Domestic Violence",
+        "description": "Compassionate legal support and protection when you need it most.",
+        "icon": "shield",
+        "image": "/service3.svg",
+        "link": "/service/domestic-violence"
+      },
+      {
+        "id": "4",
+        "title": "Simple Possession",
+        "description": "Legal assistance for simple possession charges with a focus on the future.",
+        "icon": "file-text",
+        "image": "/service4.svg",
+        "link": "/service/simple-possession"
+      },
+      {
+        "id": "5",
+        "title": "Criminal Defense",
+        "description": "Aggressive defense for your rights and freedom. We fight for the best possible outcome.",
+        "icon": "handshake",
+        "image": "/service5.svg",
+        "link": "/service/criminal-defense"
+      },
+      {
+        "id": "6",
+        "title": "DUI Defense",
+        "description": "Experienced representation for DUI/DWI charges and license restoration.",
+        "icon": "scale",
+        "image": "/casestudy1.svg",
+        "link": "/service/dui-defense"
+      },
+      {
+        "id": "7",
+        "title": "Domestic Violence",
+        "description": "Compassionate legal support and protection when you need it most.",
+        "icon": "shield",
+        "image": "/casestudy2.svg",
+        "link": "/service/domestic-violence"
+      },
+      {
+        "id": "8",
+        "title": "Simple Possession",
+        "description": "Legal assistance for simple possession charges with a focus on the future.",
+        "icon": "file-text",
+        "image": "/casestudy3.svg",
+        "link": "/service/simple-possession"
+      }
+    ]
+  },
+  "teamSection": {
+    "tagline": "OUR BEST OF SERVICE",
+    "heading": {
+      "line1": "Legal Practice Areas Best",
+      "line2Prefix": "Of ",
+      "highlight": "Special Team Members"
+    },
+    "members": [
+      {
+        "id": "1",
+        "name": "Jonathan Pierce",
+        "role": "Founding Partner",
+        "image": "/about.svg",
+        "link": "/team/jonathan-pierce"
+      },
+      {
+        "id": "2",
+        "name": "Sophia Martinez",
+        "role": "Senior Partner",
+        "image": "/casestudy1.svg",
+        "link": "/team/sophia-martinez"
+      },
+      {
+        "id": "3",
+        "name": "Michael Thompson",
+        "role": "Litigation Partner",
+        "image": "/casestudy2.svg",
+        "link": "/team/michael-thompson"
+      },
+      {
+        "id": "4",
+        "name": "Emily Roberts",
+        "role": "Corporate Counsel",
+        "image": "/casestudy3.svg",
+        "link": "/team/emily-roberts"
+      },
+      {
+        "id": "5",
+        "name": "David Kapoor",
+        "role": "Tax Law Specialist",
+        "image": "/casestudy4.svg",
+        "link": "/team/david-kapoor"
+      },
+      {
+        "id": "6",
+        "name": "Jessica Lane",
+        "role": "Family Law Attorney",
+        "image": "/about.svg",
+        "link": "/team/jessica-lane"
+      },
+      {
+        "id": "7",
+        "name": "Richard Hamilton",
+        "role": "Of Counsel",
+        "image": "/casestudy1.svg",
+        "link": "/team/richard-hamilton"
+      },
+      {
+        "id": "8",
+        "name": "Olivia Chen",
+        "role": "Associate Attorney",
+        "image": "/casestudy2.svg",
+        "link": "/team/olivia-chen"
+      }
+    ]
+  },
+  "industrySection": {
+    "tagline": "INDUSTRIES WE SERVE",
+    "heading": {
+      "line1": "Tailored Legal Solutions",
+      "line2Prefix": "Across ",
+      "highlight": "Key Business Sectors"
+    },
+    "description": "We provide specialized legal counsel to businesses and organizations across a wide range of industries, navigating complex regulatory environments and strategic growth.",
+    "items": [
+      {
+        "id": "1",
+        "title": "Banking & Financial Services",
+        "description": "We advise banks, financial institutions, and fintech companies on regulatory compliance, risk management, transactions, and dispute resolution.",
+        "icon": "landmark",
+        "image": "/about.svg",
+        "link": "/industries/banking-financial"
+      },
+      {
+        "id": "2",
+        "title": "Corporate & Commercial",
+        "description": "From mergers and acquisitions to corporate governance and commercial contracts, we help businesses navigate complex legal landscapes and achieve their goals.",
+        "icon": "building",
+        "image": "/service1.svg",
+        "link": "/industries/corporate-commercial"
+      },
+      {
+        "id": "3",
+        "title": "Real Estate & Construction",
+        "description": "We provide end-to-end legal support for real estate transactions, construction projects, property disputes, and regulatory approvals.",
+        "icon": "construction",
+        "image": "/service2.svg",
+        "link": "/industries/real-estate-construction"
+      },
+      {
+        "id": "4",
+        "title": "Litigation & Dispute Resolution",
+        "description": "Our litigators represent clients in complex commercial disputes, arbitration, and alternative dispute resolution with a focus on favorable outcomes.",
+        "icon": "scale",
+        "image": "/service3.svg",
+        "link": "/industries/litigation-dispute"
+      },
+      {
+        "id": "5",
+        "title": "Technology, Media & Telecom",
+        "description": "We help technology, media, and telecom companies with regulatory compliance, data protection, intellectual property, and commercial agreements.",
+        "icon": "shield",
+        "image": "/service4.svg",
+        "link": "/industries/technology-media-telecom"
+      },
+      {
+        "id": "6",
+        "title": "Energy & Environment",
+        "description": "We support energy and environmental projects with regulatory compliance, risk assessment, and sustainable business practices.",
+        "icon": "leaf",
+        "image": "/service5.svg",
+        "link": "/industries/energy-environment"
+      }
+    ]
+  },
+  "caseStudySection": {
+    "tagline": "CASE STUDY",
+    "heading": {
+      "line1": "Tailored For",
+      "highlight": "Legal",
+      "line2": "Practices In Injury Law And Traffic Defense"
+    },
+    "subheading": "Explore how our strategic legal solutions have delivered real results and made a difference in our clients' lives.",
+    "items": [
+      {
+        "id": "1",
+        "number": "01",
+        "title": "Maximum Compensation For Car Accident Victim",
+        "description": "We secured a six-figure settlement for a client injured in a severe car accident caused by a negligent driver.",
+        "image": "/casestudy1.svg",
+        "linkText": "View Case Study",
+        "linkHref": "/casestudy/car-accident-victim"
+      },
+      {
+        "id": "2",
+        "number": "02",
+        "title": "Dismissal Of Charges In A DUI Case",
+        "description": "Our strategic defense led to a complete dismissal of DUI charges, protecting our client's license and future.",
+        "image": "/casestudy2.svg",
+        "linkText": "View Case Study",
+        "linkHref": "/casestudy/dui-dismissal"
+      },
+      {
+        "id": "3",
+        "number": "03",
+        "title": "Reduced Penalties In Reckless Driving Case",
+        "description": "We negotiated significantly reduced penalties and fines for a client charged with reckless driving.",
+        "image": "/casestudy3.svg",
+        "linkText": "View Case Study",
+        "linkHref": "/casestudy/reckless-driving"
+      },
+      {
+        "id": "4",
+        "number": "04",
+        "title": "Overturned Wrongful Conviction",
+        "description": "We successfully appealed and overturned a wrongful conviction, restoring our client's freedom and reputation.",
+        "image": "/casestudy4.svg",
+        "linkText": "View Case Study",
+        "linkHref": "/casestudy/wrongful-conviction"
+      },
+      {
+        "id": "5",
+        "number": "05",
+        "title": "Insurance Claim Maximized For Injured Motorist",
+        "description": "We fought back against the insurance company and secured the maximum payout for our injured client.",
+        "image": "/about.svg",
+        "linkText": "View Case Study",
+        "linkHref": "/casestudy/insurance-claim-maximized"
+      },
+      {
+        "id": "6",
+        "number": "06",
+        "title": "Traffic Ticket Dismissed Protecting Driving Record",
+        "description": "We got a serious traffic ticket dismissed, helping our client avoid points, fines and license suspension.",
+        "image": "/appro.svg",
+        "linkText": "View Case Study",
+        "linkHref": "/casestudy/traffic-ticket-dismissed"
+      }
+    ]
+  },
+  "blogSection": {
+    "tagline": "NEWS & BLOG",
+    "heading": {
+      "line1": "Legal News &",
+      "highlight": "Updates"
+    },
+    "subheading": "Stay informed with the latest legal insights, case updates, and important changes that matter to you.",
+    "items": [
+      {
+        "id": "1",
+        "title": "It's important to keep up with the latest changes in family law.",
+        "author": "Jonson",
+        "date": "23 Sep, 2025",
+        "commentsCount": "3 Comments",
+        "image": "/about.svg",
+        "linkHref": "/blog/latest-changes-family-law-1"
+      },
+      {
+        "id": "2",
+        "title": "There have been significant modifications in family law.",
+        "author": "Jonson",
+        "date": "24 Sep, 2025",
+        "commentsCount": "2 Comments",
+        "image": "/service1.svg",
+        "linkHref": "/blog/significant-modifications-family-law-1"
+      },
+      {
+        "id": "3",
+        "title": "It's crucial to be aware of the latest updates in family law.",
+        "author": "Jonson",
+        "date": "25 Sep, 2025",
+        "commentsCount": "4 Comments",
+        "image": "/service2.svg",
+        "linkHref": "/blog/crucial-updates-family-law-1"
+      },
+      {
+        "id": "4",
+        "title": "It's important to keep up with the latest changes in family law.",
+        "author": "Jonson",
+        "date": "23 Sep, 2025",
+        "commentsCount": "3 Comments",
+        "image": "/about.svg",
+        "linkHref": "/blog/latest-changes-family-law-2"
+      },
+      {
+        "id": "5",
+        "title": "There have been significant modifications in family law.",
+        "author": "Jonson",
+        "date": "24 Sep, 2025",
+        "commentsCount": "2 Comments",
+        "image": "/service1.svg",
+        "linkHref": "/blog/significant-modifications-family-law-2"
+      },
+      {
+        "id": "6",
+        "title": "It's crucial to be aware of the latest updates in family law.",
+        "author": "Jonson",
+        "date": "25 Sep, 2025",
+        "commentsCount": "4 Comments",
+        "image": "/service2.svg",
+        "linkHref": "/blog/crucial-updates-family-law-2"
+      }
+    ]
+  },
+  "legalSection": {
+    "tagline": "LEGAL UPDATES",
+    "heading": {
+      "line1": "Legal News &",
+      "highlight": "Updates"
+    },
+    "subheading": "Stay informed with the latest legal insights, case updates, and important changes that matter to you.",
+    "featured": {
+      "id": "feat-1",
+      "badge": "FEATURED",
+      "date": "MAY 20, 2024",
+      "category": "CORPORATE LAW",
+      "title": "New Corporate Governance Rules: What Businesses Need to Know",
+      "description": "A comprehensive overview of the newly introduced corporate governance rules and their impact on businesses. Understand your responsibilities and stay compliant.",
+      "image": "/subbanner.svg",
+      "link": "/legal/corporate-governance-rules-2024"
+    },
+    "items": [
+      {
+        "id": "1",
+        "date": "MAY 15, 2024",
+        "category": "LITIGATION",
+        "title": "Recent Supreme Court Rulings and Their Impact",
+        "description": "Key takeaways from recent Supreme Court decisions and how they may impact ongoing and future cases.",
+        "image": "/about.svg",
+        "link": "/legal/supreme-court-rulings"
+      },
+      {
+        "id": "2",
+        "date": "MAY 10, 2024",
+        "category": "CONTRACT LAW",
+        "title": "Essential Clauses Every Business Contract Must Have",
+        "description": "Learn about the crucial contract clauses that protect your business interests and minimize legal risks.",
+        "image": "/service1.svg",
+        "link": "/legal/essential-contract-clauses"
+      },
+      {
+        "id": "3",
+        "date": "MAY 05, 2024",
+        "category": "DATA PRIVACY",
+        "title": "Data Privacy Compliance: A Guide for Businesses",
+        "description": "Understand the latest data privacy regulations and steps your business should take to ensure compliance.",
+        "image": "/service4.svg",
+        "link": "/legal/data-privacy-compliance"
+      },
+      {
+        "id": "4",
+        "date": "APR 30, 2024",
+        "category": "CRIMINAL LAW",
+        "title": "Bail Laws in 2024: Key Changes Explained",
+        "description": "An overview of the recent amendments in bail laws and what they mean for defendants and legal practitioners.",
+        "image": "/service2.svg",
+        "link": "/legal/bail-laws-2024-changes"
+      },
+      {
+        "id": "5",
+        "date": "APR 25, 2024",
+        "category": "EMPLOYMENT LAW",
+        "title": "Workplace Policies You Need to Update in 2024",
+        "description": "Important workplace policy updates businesses should implement to stay compliant with current laws.",
+        "image": "/service5.svg",
+        "link": "/legal/workplace-policies-update"
+      },
+      {
+        "id": "6",
+        "date": "APR 20, 2024",
+        "category": "FAMILY LAW",
+        "title": "Understanding Child Custody Laws in Modern Times",
+        "description": "A guide to child custody laws and how courts determine the best interests of the child in today's world.",
+        "image": "/casestudy1.svg",
+        "link": "/legal/child-custody-laws"
+      }
+    ]
+  },
+  "mediaSection": {
+    "tagline": "MEDIA & PRESS",
+    "heading": {
+      "line1": "Veritas in the",
+      "highlight": "News"
+    },
+    "subheading": "Explore recent media mentions, news features, expert commentary, and press releases across leading national publications.",
+    "items": [
+      {
+        "id": "1",
+        "logo": "/media-lallantop.svg",
+        "title": "What the Latest Tax Amendments Mean for Individuals and Businesses",
+        "date": "10 Sep, 2024",
+        "link": "/media/tax-amendments-2024"
+      },
+      {
+        "id": "2",
+        "logo": "/media-newsindia.svg",
+        "title": "Upcoming Webinar: Navigating Legal Challenges in 2024",
+        "date": "05 Sep, 2024",
+        "link": "/media/webinar-legal-challenges"
+      },
+      {
+        "id": "3",
+        "logo": "/media-indiatv.svg",
+        "title": "Changes in Arbitration Laws: What You Need to Know",
+        "date": "01 Sep, 2024",
+        "link": "/media/arbitration-laws-changes"
+      },
+      {
+        "id": "4",
+        "logo": "/media-aajtak.svg",
+        "title": "New Labour Code Updates: Key Compliance Highlights",
+        "date": "28 Aug, 2024",
+        "link": "/media/labour-code-updates"
+      },
+      {
+        "id": "5",
+        "logo": "/media-economictimes.svg",
+        "title": "RBI Announces New Guidelines for Digital Transactions",
+        "date": "25 Aug, 2024",
+        "link": "/media/rbi-digital-transactions-guidelines"
+      },
+      {
+        "id": "6",
+        "logo": "/media-businessstandard.svg",
+        "title": "Insolvency and Bankruptcy Code Amendments Explained",
+        "date": "22 Aug, 2024",
+        "link": "/media/ibc-amendments-explained"
+      }
+    ]
+  },
+  "eventSection": {
+    "tagline": "UPCOMING EVENTS",
+    "heading": {
+      "line1": "Legal Events &",
+      "highlight": "Webinars"
+    },
+    "subheading": "Participate in our interactive seminars, industry webinars, and legal compliance workshops.",
+    "items": [
+      {
+        "id": "1",
+        "badge": "SEMINAR",
+        "day": "24",
+        "month": "MAY",
+        "year": "2025",
+        "title": "Recent Developments in Corporate Law",
+        "fullDate": "24 May 2025",
+        "time": "10:00 AM – 01:00 PM",
+        "location": "The Claridges, New Delhi",
+        "image": "/service3.svg",
+        "link": "/event/corporate-law-developments"
+      },
+      {
+        "id": "2",
+        "badge": "WEBINAR",
+        "day": "07",
+        "month": "JUN",
+        "year": "2025",
+        "title": "Understanding Arbitration in Commercial Disputes",
+        "fullDate": "07 June 2025",
+        "time": "04:00 PM – 05:30 PM",
+        "location": "Online (Zoom)",
+        "image": "/service1.svg",
+        "link": "/event/arbitration-commercial-disputes"
+      },
+      {
+        "id": "3",
+        "badge": "PANEL DISCUSSION",
+        "day": "21",
+        "month": "JUN",
+        "year": "2025",
+        "title": "Future of Legal Practice: Trends & Technology",
+        "fullDate": "21 June 2025",
+        "time": "11:00 AM – 01:00 PM",
+        "location": "India Habitat Centre, New Delhi",
+        "image": "/about.svg",
+        "link": "/event/future-of-legal-practice"
+      },
+      {
+        "id": "4",
+        "badge": "WORKSHOP",
+        "day": "05",
+        "month": "JUL",
+        "year": "2025",
+        "title": "Contract Drafting Workshop for Legal Professionals",
+        "fullDate": "05 July 2025",
+        "time": "02:00 PM – 05:00 PM",
+        "location": "Lex & Co. Office, New Delhi",
+        "image": "/service4.svg",
+        "link": "/event/contract-drafting-workshop"
+      },
+      {
+        "id": "5",
+        "badge": "WEBINAR",
+        "day": "19",
+        "month": "JUL",
+        "year": "2025",
+        "title": "Data Protection Law: Compliance & Beyond",
+        "fullDate": "19 July 2025",
+        "time": "04:00 PM – 05:30 PM",
+        "location": "Online (Google Meet)",
+        "image": "/service5.svg",
+        "link": "/event/data-protection-compliance"
+      },
+      {
+        "id": "6",
+        "badge": "SEMINAR",
+        "day": "02",
+        "month": "AUG",
+        "year": "2025",
+        "title": "Insolvency & Bankruptcy Code: Key Insights",
+        "fullDate": "02 August 2025",
+        "time": "10:30 AM – 01:00 PM",
+        "location": "The Leela Palace, New Delhi",
+        "image": "/casestudy2.svg",
+        "link": "/event/insolvency-bankruptcy-insights"
+      }
+    ]
+  },
+  "publicationsSection": {
+    "title": "Publications",
+    "description": "Explore our collection of articles, guides, and insights on legal developments, industry trends, and practical solutions for your business and personal needs.",
+    "items": [
+      {
+        "id": "1",
+        "date": "MAY 20, 2024",
+        "category": "CORPORATE LAW",
+        "title": "New Corporate Governance Rules: What Businesses Need to Know",
+        "description": "A comprehensive overview of the newly introduced corporate governance rules and their impact on businesses.",
+        "image": "/service3.svg",
+        "link": "/publications/corporate-governance-rules"
+      },
+      {
+        "id": "2",
+        "date": "MAY 15, 2024",
+        "category": "LITIGATION",
+        "title": "Recent Supreme Court Rulings and Their Impact",
+        "description": "Key takeaways from recent Supreme Court decisions and how they may impact ongoing and future cases.",
+        "image": "/about.svg",
+        "link": "/publications/supreme-court-rulings"
+      },
+      {
+        "id": "3",
+        "date": "MAY 10, 2024",
+        "category": "CONTRACT LAW",
+        "title": "Essential Clauses Every Business Contract Must Have",
+        "description": "Learn about the crucial contract clauses that protect your business interests and minimize legal risks.",
+        "image": "/service4.svg",
+        "link": "/publications/essential-contract-clauses"
+      },
+      {
+        "id": "4",
+        "date": "MAY 05, 2024",
+        "category": "DATA PRIVACY",
+        "title": "Data Privacy Compliance: A Guide for Businesses",
+        "description": "Understand the latest data privacy regulations and steps your business should take to ensure compliance.",
+        "image": "/service5.svg",
+        "link": "/publications/data-privacy-guide"
+      },
+      {
+        "id": "5",
+        "date": "APR 30, 2024",
+        "category": "CRIMINAL LAW",
+        "title": "Bail Laws in 2024: Key Changes Explained",
+        "description": "An overview of the recent amendments in bail laws and what they mean for defendants and legal practitioners.",
+        "image": "/service2.svg",
+        "link": "/publications/bail-laws-2024"
+      },
+      {
+        "id": "6",
+        "date": "APR 20, 2024",
+        "category": "FAMILY LAW",
+        "title": "Understanding Child Custody Laws in Modern Times",
+        "description": "A guide to child custody laws and how courts determine the best interests of the child in today's world.",
+        "image": "/casestudy1.svg",
+        "link": "/publications/child-custody-laws"
+      }
+    ]
+  },
+  "stayUpdated": {
+    "title": "Stay Updated",
+    "subtitle": "Subscribe to our newsletter to receive the latest legal insights and firm publications.",
+    "placeholder": "Enter your email address",
+    "buttonText": "Subscribe"
+  },
+  "awardSection": {
+    "tagline": "AWARDS & RECOGNITION",
+    "heading": {
+      "line1Prefix": "Honored for",
+      "highlight": "Excellence.",
+      "line1Suffix": "Trusted for Results."
+    },
+    "subheading": "Our commitment to legal excellence and client success has earned us recognition from leading legal directories and industry organizations.",
+    "items": [
+      {
+        "id": "1",
+        "logo": "/award-iblj-alist-2024.svg",
+        "organization": "India Business Law Journal",
+        "awardTitle": "A-List 2024"
+      },
+      {
+        "id": "2",
+        "logo": "/award-legal500-2024.svg",
+        "organization": "The Legal 500 Asia Pacific",
+        "awardTitle": "Top Tier Firm 2024"
+      },
+      {
+        "id": "3",
+        "logo": "/award-chambers-2024.svg",
+        "organization": "Chambers and Partners",
+        "awardTitle": "Asia Pacific 2024"
+      },
+      {
+        "id": "4",
+        "logo": "/award-benchmark-2024.svg",
+        "organization": "Benchmark Litigation",
+        "awardTitle": "Asia-Pacific 2024"
+      },
+      {
+        "id": "5",
+        "logo": "/award-leaders-in-law-2024.svg",
+        "organization": "Leaders in Law",
+        "awardTitle": "Global Awards 2024"
+      },
+      {
+        "id": "6",
+        "logo": "/award-iblj-awards-2023.svg",
+        "organization": "India Business Law Journal",
+        "awardTitle": "Indian Law Firm Awards 2023"
+      },
+      {
+        "id": "7",
+        "logo": "/award-asialaw-2023.svg",
+        "organization": "Asialaw Profiles",
+        "awardTitle": "Outstanding Firm 2023"
+      },
+      {
+        "id": "8",
+        "logo": "/award-bw-legal-2023.svg",
+        "organization": "BW Legal World",
+        "awardTitle": "Top Law Firms 2023"
+      },
+      {
+        "id": "9",
+        "logo": "/award-iflr1000-2023.svg",
+        "organization": "IFLR1000",
+        "awardTitle": "Recognized Firm 2023"
+      },
+      {
+        "id": "10",
+        "logo": "/award-indiatoday-2023.svg",
+        "organization": "India Today",
+        "awardTitle": "Best Law Firms 2023"
+      },
+      {
+        "id": "11",
+        "logo": "/award-indian-law-firm-2022.svg",
+        "organization": "Indian Law Firm Awards 2022",
+        "awardTitle": "Excellence in Taxation (Direct)"
+      },
+      {
+        "id": "12",
+        "logo": "/award-global-law-experts-2022.svg",
+        "organization": "Global Law Experts",
+        "awardTitle": "Award 2022"
+      }
+    ]
+  },
+  "clientSection": {
+    "title": "Client Resources",
+    "subheading": "Practical tools, guides, and insights to help you make informed legal decisions.",
+    "image": "/about.svg"
+  },
+  "clientCards": {
+    "items": [
+      {
+        "id": "1",
+        "icon": "FileText",
+        "title": "Legal Guides",
+        "description": "Step-by-step guides to help you understand key legal processes and your rights.",
+        "actionText": "View All Guides",
+        "link": "/legal"
+      },
+      {
+        "id": "2",
+        "icon": "BookOpen",
+        "title": "Articles & Insights",
+        "description": "In-depth articles on legal topics that matter to you and your business.",
+        "actionText": "Explore Articles",
+        "link": "/blog"
+      },
+      {
+        "id": "3",
+        "icon": "Layers",
+        "title": "Case Studies",
+        "description": "Real-world case studies showcasing our approach and results.",
+        "actionText": "View Case Studies",
+        "link": "/casestudy"
+      },
+      {
+        "id": "4",
+        "icon": "Shield",
+        "title": "FAQs",
+        "description": "Find answers to common legal questions from our clients.",
+        "actionText": "Browse FAQs",
+        "link": "/faq"
+      },
+      {
+        "id": "5",
+        "icon": "Download",
+        "title": "Forms & Templates",
+        "description": "Downloadable legal forms and templates for your convenience.",
+        "actionText": "Download Now",
+        "link": "/client"
+      },
+      {
+        "id": "6",
+        "icon": "Bookmark",
+        "title": "Checklists",
+        "description": "Practical checklists to help you stay prepared and compliant.",
+        "actionText": "View Checklists",
+        "link": "/client"
+      },
+      {
+        "id": "7",
+        "icon": "Video",
+        "title": "Videos & Webinars",
+        "description": "Watch expert videos and webinars on important legal topics.",
+        "actionText": "Watch Now",
+        "link": "/event"
+      },
+      {
+        "id": "8",
+        "icon": "Bell",
+        "title": "Alerts & Updates",
+        "description": "Stay updated with the latest legal changes and industry developments.",
+        "actionText": "Subscribe Now",
+        "link": "/publications"
+      }
+    ]
+  },
+  "careerSection": {
+    "title": "Open Positions",
+    "description": "Explore opportunities to grow your career with a team that values excellence, integrity, and a passion for justice.",
+    "items": [
+      {
+        "id": "1",
+        "badge": "Full Time",
+        "icon": "Scale",
+        "title": "Senior Associate – Corporate Law",
+        "location": "Mumbai, India",
+        "description": "Handle corporate advisory, due diligence, mergers & acquisitions, and compliance matters for leading national and international clients.",
+        "link": "/career/senior-associate-corporate-law"
+      },
+      {
+        "id": "2",
+        "badge": "Full Time",
+        "icon": "Gavel",
+        "title": "Associate – Litigation",
+        "location": "Delhi, India",
+        "description": "Represent clients in civil, commercial, and criminal litigation matters before various courts and tribunals.",
+        "link": "/career/associate-litigation"
+      },
+      {
+        "id": "3",
+        "badge": "Full Time",
+        "icon": "FileText",
+        "title": "Legal Researcher",
+        "location": "Bengaluru, India",
+        "description": "Conduct comprehensive legal research and draft opinions, briefs, and memoranda on diverse areas of law.",
+        "link": "/career/legal-researcher"
+      },
+      {
+        "id": "4",
+        "badge": "Full Time",
+        "icon": "Users",
+        "title": "Trainee Associate",
+        "location": "Hyderabad, India",
+        "description": "Work with partners and senior associates on live matters, legal drafting, and client advisory assignments.",
+        "link": "/career/trainee-associate"
+      },
+      {
+        "id": "5",
+        "badge": "Full Time",
+        "icon": "BookOpen",
+        "title": "Paralegal",
+        "location": "Pune, India",
+        "description": "Assist in case preparation, document management, court filings, and maintaining legal databases.",
+        "link": "/career/paralegal"
+      },
+      {
+        "id": "6",
+        "badge": "Full Time",
+        "icon": "ShieldCheck",
+        "title": "Compliance Officer",
+        "location": "Gurugram, India",
+        "description": "Ensure compliance with legal and regulatory requirements and support internal policies and procedures.",
+        "link": "/career/compliance-officer"
+      }
+    ]
+  },
+  "careerCta": {
+    "title": "Don't see the right role?",
+    "subtitle": "We're always looking for talented individuals. Share your resume with us.",
+    "buttonText": "Submit Your Resume",
+    "buttonLink": "/contact",
+    "email": "careers@yourlawfirm.com"
+  },
+  "officeSection": {
+    "tagline": "OUR OFFICES",
+    "heading": {
+      "line1": "Multiple Offices.",
+      "line2": "One Commitment."
+    },
+    "description": "Our offices are strategically located across major cities to provide you with accessible, responsive and client-focused legal services wherever you are.",
+    "stats": [
+      {
+        "id": "1",
+        "icon": "Building",
+        "value": "8+",
+        "label": "Offices"
+      },
+      {
+        "id": "2",
+        "icon": "MapPin",
+        "value": "6+",
+        "label": "States"
+      },
+      {
+        "id": "3",
+        "icon": "UserCheck",
+        "value": "100+",
+        "label": "Legal Experts"
+      }
+    ],
+    "quote": "Delivering excellence in legal advice and representation across India.",
+    "image": "/testinomial.svg"
+  },
+  "officeLocations": {
+    "title": "Our Office Locations",
+    "items": [
+      {
+        "id": "1",
+        "city": "New Delhi",
+        "address": "A-142, Sector 136, Noida, Uttar Pradesh – 201304, India",
+        "phone": "+91 11 4122 5555",
+        "directionsLink": "https://maps.google.com/?q=Noida+Uttar+Pradesh",
+        "icon": "india-gate"
+      },
+      {
+        "id": "2",
+        "city": "Mumbai",
+        "address": "21st Floor, Maker Tower E, Cuffe Parade, Mumbai – 400005, India",
+        "phone": "+91 22 4356 7890",
+        "directionsLink": "https://maps.google.com/?q=Maker+Tower+Cuffe+Parade+Mumbai",
+        "icon": "gateway-of-india"
+      },
+      {
+        "id": "3",
+        "city": "Bengaluru",
+        "address": "Prestige Meridian II, No. 30, MG Road, Bengaluru – 560001, India",
+        "phone": "+91 80 4567 8901",
+        "directionsLink": "https://maps.google.com/?q=MG+Road+Bengaluru",
+        "icon": "vidhana-soudha"
+      },
+      {
+        "id": "4",
+        "city": "Hyderabad",
+        "address": "8-2-293/82/A, Road No. 36, Jubilee Hills, Hyderabad – 500033, India",
+        "phone": "+91 40 4566 7890",
+        "directionsLink": "https://maps.google.com/?q=Jubilee+Hills+Hyderabad",
+        "icon": "charminar"
+      },
+      {
+        "id": "5",
+        "city": "Jaipur",
+        "address": "Indira Tower, 2nd Floor, C-Scheme, Jaipur – 302001, India",
+        "phone": "+91 141 456 7890",
+        "directionsLink": "https://maps.google.com/?q=C-Scheme+Jaipur",
+        "icon": "hawa-mahal"
+      },
+      {
+        "id": "6",
+        "city": "Kolkata",
+        "address": "Unit No. 12C, 12th Floor, PS Srijan Tech Park, Kolkata – 700091, India",
+        "phone": "+91 33 4564 7890",
+        "directionsLink": "https://maps.google.com/?q=PS+Srijan+Tech+Park+Kolkata",
+        "icon": "howrah-bridge"
+      },
+      {
+        "id": "7",
+        "city": "Ahmedabad",
+        "address": "504, 5th Floor, Venus Atlantis, Prahladnagar, Ahmedabad – 380015, India",
+        "phone": "+91 79 4567 8901",
+        "directionsLink": "https://maps.google.com/?q=Prahladnagar+Ahmedabad",
+        "icon": "ahmedabad"
+      },
+      {
+        "id": "8",
+        "city": "Chandigarh",
+        "address": "SCO 123-124, 1st Floor, Sector 8C, Chandigarh – 160009, India",
+        "phone": "+91 172 456 7890",
+        "directionsLink": "https://maps.google.com/?q=Sector+8C+Chandigarh",
+        "icon": "chandigarh"
+      }
+    ]
+  },
+  "officeCta": {
+    "tagline": "NEED ASSISTANCE?",
+    "title": "We'll connect you with the right expert.",
+    "subtitle": "Our team is ready to help you with your legal needs.",
+    "buttonText": "Contact Us",
+    "buttonLink": "/contact"
+  },
+  "contactSection": {
+    "tagline": "OUR CONTACTS",
+    "heading": "We're Here To Help You",
+    "visitUs": {
+      "title": "Visit Us",
+      "addressLines": [
+        "Unit No. 218, 2nd Floor,",
+        "Noida Tower Sector 62,",
+        "Institutional Area,",
+        "Noida - 201301,",
+        "Delhi-NCR, India"
+      ]
+    },
+    "officeHours": {
+      "title": "Office Hours",
+      "items": [
+        {
+          "days": "Monday - Thursday",
+          "time": "9:30 AM - 6:30 PM"
+        },
+        {
+          "days": "Friday",
+          "time": "9:30 AM - 5:00 PM"
+        },
+        {
+          "days": "Saturday - Sunday",
+          "time": "Closed",
+          "isClosed": true
+        }
+      ]
+    },
+    "contactInfo": {
+      "callTitle": "Call Us",
+      "phones": [
+        "+91 1234 567 890",
+        "+91 9876 543 210"
+      ],
+      "emailTitle": "Email Us",
+      "emails": [
+        "info@lawfirm.com"
+      ]
+    }
+  },
+  "questionsSection": {
+    "tagline": "HAVE ANY QUESTION?",
+    "headingLine1": "Have Be Any Question?",
+    "headingLine2": "Feel Free To Contact With Us.",
+    "formLabels": {
+      "namePlaceholder": "Your Name*",
+      "emailPlaceholder": "Your Email*",
+      "servicePlaceholder": "Service Looking For?",
+      "phonePlaceholder": "Your Phone Number",
+      "messagePlaceholder": "Your Message*",
+      "buttonText": "Submit Your Message"
+    },
+    "image": "/bannerbg.svg"
+  },
+  "bookSection": {
+    "title": "Book a Consultation",
+    "subtitle": "Schedule a one-on-one consultation with our legal experts and get the right advice for your legal needs.",
+    "features": [
+      {
+        "id": "1",
+        "title": "Expert Legal Advice",
+        "description": "Consult with experienced lawyers specialized in your area of need.",
+        "icon": "user"
+      },
+      {
+        "id": "2",
+        "title": "Confidential & Secure",
+        "description": "Your information is protected with the highest level of confidentiality.",
+        "icon": "shield"
+      },
+      {
+        "id": "3",
+        "title": "Flexible Scheduling",
+        "description": "Choose a convenient time for consultation that works best for you.",
+        "icon": "calendar"
+      },
+      {
+        "id": "4",
+        "title": "Personalized Solutions",
+        "description": "Get tailored legal solutions designed for your specific situation.",
+        "icon": "file"
+      }
+    ],
+    "assistance": {
+      "title": "Need Immediate Assistance?",
+      "description": "Our team is available to help you right away.",
+      "phone": "+1 222 333 44 55"
+    },
+    "formTitle": "Fill in your details",
+    "formSubtitle": "Our team will get back to you shortly.",
+    "practiceAreas": [
+      "Corporate & Commercial Law",
+      "Litigation & Dispute Resolution",
+      "Intellectual Property",
+      "Real Estate & Property",
+      "Banking & Finance",
+      "Taxation & Regulatory"
+    ],
+    "consultationTypes": [
+      "In-Person Office Visit",
+      "Online Video Call",
+      "Phone Call Consultation"
+    ],
+    "preferredTimes": [
+      "Morning (9:00 AM - 12:00 PM)",
+      "Afternoon (12:00 PM - 4:00 PM)",
+      "Evening (4:00 PM - 7:00 PM)"
+    ]
+  },
+  "privacyPolicySection": {
+    "topics": [
+      {
+        "id": "1",
+        "title": "1. Our Services And Privacy Policy",
+        "paragraphs": [
+          "Many desktop publishing packages and web page editors use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+          "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+          "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful."
+        ]
+      },
+      {
+        "id": "2",
+        "title": "2. Information We Collect Directly From You",
+        "paragraphs": [
+          "It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+          "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source."
+        ]
+      },
+      {
+        "id": "3",
+        "title": "3. How We Use Your Information",
+        "paragraphs": [
+          "Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of 'de Finibus Bonorum et Malorum' (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, 'Lorem ipsum dolor sit amet..', comes from a line in section 1.10.32.",
+          "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham."
+        ]
+      },
+      {
+        "id": "4",
+        "title": "4. Security",
+        "paragraphs": [
+          "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+          "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy."
+        ]
+      },
+      {
+        "id": "5",
+        "title": "5. How We Protect Your Information",
+        "paragraphs": [
+          "Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of 'de Finibus Bonorum et Malorum' (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, 'Lorem ipsum dolor sit amet..', comes from a line in section 1.10.32.",
+          "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham."
+        ]
+      },
+      {
+        "id": "6",
+        "title": "6. Contact",
+        "paragraphs": [
+          "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters as opposed to using."
+        ]
+      }
+    ]
+  },
+  "termsConditionSection": {
+    "topics": [
+      {
+        "id": "1",
+        "title": "1. Acceptance of Terms",
+        "paragraphs": [
+          "By accessing or using the website and legal services provided by Veritas Law Partners, you agree to be bound by these Terms and Conditions and our Privacy Policy. If you do not agree to all of these terms, please do not access or use our site.",
+          "We reserve the right to modify, amend, or update these Terms and Conditions at any time without prior notice. Your continued use of the website following any changes constitutes your acceptance of the revised terms."
+        ]
+      },
+      {
+        "id": "2",
+        "title": "2. Use of Our Services & Website",
+        "paragraphs": [
+          "The materials and information available on this website are provided for general informational purposes only and do not constitute formal legal advice or create an attorney-client relationship.",
+          "You agree to use our website only for lawful purposes and in a manner that does not infringe upon the rights of, or restrict or inhibit the use and enjoyment of this site by, any third party."
+        ]
+      },
+      {
+        "id": "3",
+        "title": "3. Intellectual Property Rights",
+        "paragraphs": [
+          "All content, logos, trademarks, graphics, text, images, and software used on this site are the exclusive property of Veritas Law Partners or its content suppliers and are protected by copyright, trademark, and other applicable intellectual property laws.",
+          "You may not reproduce, distribute, modify, transmit, reuse, or use the content of the site for public or commercial purposes without explicit written permission from Veritas Law Partners."
+        ]
+      },
+      {
+        "id": "4",
+        "title": "4. Disclaimers & Limitation of Liability",
+        "paragraphs": [
+          "This website and all information provided herein are made available 'as is' without warranties of any kind, either express or implied, including but not limited to implied warranties of merchantability or fitness for a particular purpose.",
+          "In no event shall Veritas Law Partners, its partners, associates, or employees be liable for any direct, indirect, incidental, consequential, or punitive damages arising out of your access to or use of this website."
+        ]
+      },
+      {
+        "id": "5",
+        "title": "5. Governing Law & Jurisdiction",
+        "paragraphs": [
+          "These Terms and Conditions shall be governed by and construed in accordance with the laws of India. Any disputes or claims arising out of or related to the use of this website shall be subject to the exclusive jurisdiction of the competent courts in Noida / New Delhi, India."
+        ]
+      },
+      {
+        "id": "6",
+        "title": "6. Amendments & Contact Information",
+        "paragraphs": [
+          "If you have any questions, concerns, or inquiries regarding these Terms and Conditions, please contact us at contact@veritaslaw.com or call our office at +91 1234 567 890."
+        ]
+      }
+    ]
+  },
+  "legalDisclaimerSection": {
+    "topics": [
+      {
+        "id": "1",
+        "title": "1. No Attorney-Client Relationship",
+        "paragraphs": [
+          "The transmission and receipt of information contained on this website, in whole or in part, or communication with Veritas Law Partners via the Internet or email through this website does not constitute or create an attorney-client relationship between us and any recipient.",
+          "You should not send any confidential information to us until you have entered into a formal written engagement agreement with Veritas Law Partners."
+        ]
+      },
+      {
+        "id": "2",
+        "title": "2. Compliance with Bar Council Rules",
+        "paragraphs": [
+          "This website is designed for informational purposes in compliance with the rules and guidelines of the Bar Council of India. As per the Bar Council rules, advocates and law firms are prohibited from soliciting work or advertising their services.",
+          "By accessing this website, you acknowledge that you are seeking information about Veritas Law Partners voluntarily of your own accord and that there has been no advertisement, personal communication, solicitation, or inducement of any kind."
+        ]
+      },
+      {
+        "id": "3",
+        "title": "3. Informational Purposes Only & Disclaimers",
+        "paragraphs": [
+          "The contents of this website, including legal insights, articles, case summaries, and publications, are provided solely for general informational and educational guidance. They do not constitute formal legal opinion or legal advice.",
+          "Veritas Law Partners expressly disclaims all liability with respect to actions taken or not taken based on any or all of the contents of this website."
+        ]
+      },
+      {
+        "id": "4",
+        "title": "4. Third-Party Links & External Content",
+        "paragraphs": [
+          "This website may contain links to third-party websites or resources for your convenience. Veritas Law Partners does not endorse, guarantee, or assume responsibility for the accuracy, security, or reliability of any content provided on third-party sites."
+        ]
+      },
+      {
+        "id": "5",
+        "title": "5. Limitation of Professional Liability",
+        "paragraphs": [
+          "Under no circumstances shall Veritas Law Partners or its partners, counsel, or associates be liable for any direct, indirect, special, incidental, or consequential damages resulting from the use of or inability to use this website or its content."
+        ]
+      },
+      {
+        "id": "6",
+        "title": "6. Contact & Regulatory Inquiries",
+        "paragraphs": [
+          "For official queries or regulatory correspondence regarding this Legal Disclaimer, please write to us at info@veritaslaw.com or visit our main office in Noida Sector 62, Delhi-NCR, India."
+        ]
+      }
+    ]
+  },
+  "whyChooseUs": {
+    "tagline": "WHY CHOOSE US",
+    "heading": {
+      "line1": "Why Clients Choose",
+      "highlight": "Veritas",
+      "line2": "Law Partners"
+    },
+    "description": "We combine legal excellence with a client-first approach to deliver outcomes that truly matter.",
+    "image": "/testinomial.svg",
+    "items": [
+      {
+        "id": "1",
+        "icon": "user-star",
+        "title": "Client Focused",
+        "description": "Your goals are our priority. We listen, we understand, and we act in your best interest."
+      },
+      {
+        "id": "2",
+        "icon": "shield-check",
+        "title": "Proven Expertise",
+        "description": "Years of experience in handling complex legal matters with precision and care."
+      },
+      {
+        "id": "3",
+        "icon": "gavel",
+        "title": "Strong Advocacy",
+        "description": "We are dedicated advocates who fight for your rights and the best possible results."
+      },
+      {
+        "id": "4",
+        "icon": "handshake",
+        "title": "Integrity & Trust",
+        "description": "We uphold the highest ethical standards and build relationships based on trust."
+      },
+      {
+        "id": "5",
+        "icon": "file-text",
+        "title": "Transparent Process",
+        "description": "Clear communication, honest advice, and transparency at every step of the way."
+      },
+      {
+        "id": "6",
+        "icon": "users",
+        "title": "Results Driven",
+        "description": "Our focus is on achieving favorable outcomes and making a real difference in our clients' lives."
+      }
+    ]
+  },
+  "team": {
+    "tagline": "Our Best Of Service",
+    "heading": {
+      "line1": "Legal Practice Areas Best",
+      "line2Prefix": "Of ",
+      "highlight": "Special Team Members"
+    },
+    "members": [
+      {
+        "id": "1",
+        "name": "Jonathan Pierce",
+        "role": "Founding Partner",
+        "image": "/casestudy1.svg"
+      },
+      {
+        "id": "2",
+        "name": "Sophia Martinez",
+        "role": "Senior Partner",
+        "image": "/casestudy2.svg"
+      },
+      {
+        "id": "3",
+        "name": "Michael Thompson",
+        "role": "Litigation Partner",
+        "image": "/casestudy3.svg"
+      },
+      {
+        "id": "4",
+        "name": "Emily Roberts",
+        "role": "Corporate Counsel",
+        "image": "/casestudy4.svg"
+      }
+    ]
+  },
   "topbar": {
     "address": "Noida One Tower C, Sector 62 Noida 226001",
     "phone": "+91 98765 43210",
@@ -32,20 +1762,42 @@
       },
       {
         "title": "About Us",
-        "href": "/about"
+        "href": "/about",
+        "hasDropdown": true,
+        "dropdownItems": [
+          {
+            "title": "Why Choose Us",
+            "href": "/whychoose"
+          },
+          {
+            "title": "Our Approach",
+            "href": "/ourapproach"
+          },
+          {
+            "title": "Team",
+            "href": "/team"
+          },
+          {
+            "title": "Case Study",
+            "href": "/casestudy"
+          },  
+          {
+            "title": "Awards & Recognition",
+            "href": "/award"
+          }
+        ]
       },
       {
         "title": "Services",
-        "href": "/services",
-        "hasDropdown": true
+        "href": "/service"
       },
       {
-        "title": "Our Partner",
-        "href": "/partners"
+        "title": "Event",
+        "href": "/event"
       },
       {
-        "title": "FAQ's",
-        "href": "/faqs"
+        "title": "Blog",
+        "href": "/blog"
       },
       {
         "title": "Career",
@@ -53,17 +1805,17 @@
       },
       {
         "title": "News Media",
-        "href": "/news-media"
+        "href": "/media"
       }
     ],
     "actionButtons": {
       "contactUs": {
         "text": "Contact Us",
-        "href": "/contact"
+        "href": "/contactus"
       },
       "consultation": {
         "text": "Free Case Consultation",
-        "href": "/consultation"
+        "href": "/bookcons"
       }
     }
   },
@@ -78,7 +1830,7 @@
     "buttons": [
       {
         "text": "Free Case Consultation",
-        "href": "/consultation",
+        "href": "/bookcons",
         "variant": "primary"
       },
       {
@@ -476,37 +2228,37 @@
         {
           "id": "1",
           "title": "Industries",
-          "linkHref": ""
+          "linkHref": "/industries"
         },
         {
           "id": "2",
           "title": "Legal Updates",
-          "linkHref": ""
+          "linkHref": "/legal"
         },
         {
           "id": "3",
           "title": "News & Media",
-          "linkHref": ""
+          "linkHref": "/media"
         },
         {
           "id": "4",
           "title": "Publications",
-          "linkHref": ""
+          "linkHref": "/publications"
         },
         {
           "id": "5",
           "title": "Testimonials",
-          "linkHref": ""
+          "linkHref": "/testimonial"
         },
         {
           "id": "6",
           "title": "Client Resources",
-          "linkHref": ""
+          "linkHref": "/client"
         },
         {
           "id": "7",
-          "title": "Events",
-          "linkHref": ""
+          "title": "Media & Press",
+          "linkHref": "/media"
         }
       ]
     },
@@ -516,32 +2268,32 @@
         {
           "id": "1",
           "title": "Office Locations",
-          "linkHref": ""
+          "linkHref": "/office"
         },
         {
           "id": "2",
           "title": "Book Consultation",
-          "linkHref": ""
+          "linkHref": "/bookcons"
         },
         {
           "id": "3",
-          "title": "404",
-          "linkHref": ""
+          "title": "FAQ'S",
+          "linkHref": "/faq"
         },
         {
           "id": "4",
           "title": "Privacy Policy",
-          "linkHref": ""
+          "linkHref": "/privacypolicy"
         },
         {
           "id": "5",
           "title": "Terms & Conditions",
-          "linkHref": ""
+          "linkHref": "/termscondition"
         },
         {
           "id": "6",
           "title": "Legal Disclaimer",
-          "linkHref": ""
+          "linkHref": "/legaldisclimer"
         },
         {
           "id": "7",

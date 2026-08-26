@@ -50,8 +50,8 @@ export default function CaseStudy({ data = defaultCaseStudyData }: CaseStudyProp
                     <div className="max-w-3xl">
                         {/* Tag Badge */}
                         <div className="flex items-center gap-2 mb-3">
-                            <Folder className="w-4 h-4 text-[#D4A359]" />
-                            <span className="text-[#D4A359] text-xs md:text-sm font-semibold tracking-widest uppercase">
+                            <Folder className="w-6 h-6 text-[#D4A359]" />
+                            <span className="text-[#D4A359] text-xs md:text-lg font-semibold tracking-widest uppercase">
                                 {tagline}
                             </span>
                             <span className="w-12 h-[1px] bg-[#D4A359]/60 ml-1" />

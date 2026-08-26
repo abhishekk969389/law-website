@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2E8F0"/>
+      <stop offset="50%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#CBD5E1"/>
+    </linearGradient>
+    <linearGradient id="goldTrim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4A359"/>
+      <stop offset="100%" stop-color="#9A7029"/>
+    </linearGradient>
+  </defs>
+  <rect x="15" y="15" width="170" height="170" rx="8" fill="url(#silverGrad)" stroke="url(#goldTrim)" stroke-width="4"/>
+  <rect x="22" y="22" width="156" height="156" rx="4" fill="none" stroke="#000" stroke-width="1"/>
+  <text x="100" y="70" font-family="'Times New Roman', Georgia, serif" font-size="52" font-weight="bold" fill="#0A0E17" text-anchor="middle">A</text>
+  <text x="100" y="85" font-family="sans-serif" font-size="12" font-weight="bold" fill="#D4A359" text-anchor="middle" letter-spacing="1">2024</text>
+  <text x="100" y="100" font-family="sans-serif" font-size="10" fill="#0A0E17" text-anchor="middle" letter-spacing="2">List</text>
+  <line x1="35" y1="115" x2="165" y2="115" stroke="#0A0E17" stroke-width="1.5"/>
+  <text x="100" y="132" font-family="Georgia, serif" font-size="11" font-weight="bold" fill="#0A0E17" text-anchor="middle">INDIA BUSINESS</text>
+  <text x="100" y="148" font-family="Georgia, serif" font-size="11" font-weight="bold" fill="#0A0E17" text-anchor="middle">LAW JOURNAL</text>
+</svg>

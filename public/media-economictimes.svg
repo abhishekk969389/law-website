@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="200" height="120">
+  <rect x="75" y="15" width="50" height="50" rx="6" fill="#C62828"/>
+  <text x="100" y="50" font-family="Georgia, serif" font-size="30" font-weight="bold" fill="#FFFFFF" text-anchor="middle">ET</text>
+  <text x="100" y="92" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">THE ECONOMIC TIMES</text>
+</svg>

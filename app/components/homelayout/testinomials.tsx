@@ -76,7 +76,7 @@ export default function Testimonials({ data = defaultTestimonialsData }: Testimo
 
                         {/* Tagline */}
                         <div className="flex items-center gap-2 mb-3">
-                            <span className="text-[#D4A359] text-xs md:text-sm font-semibold tracking-widest uppercase">
+                            <span className="text-[#D4A359] text-xs md:text-lg font-semibold tracking-widest uppercase">
                                 {tagline}
                             </span>
                             <span className="w-12 h-[1px] bg-[#D4A359]/60 ml-1" />

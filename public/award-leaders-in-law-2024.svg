@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="50%" stop-color="#D4A359"/>
+      <stop offset="100%" stop-color="#785317"/>
+    </linearGradient>
+  </defs>
+  <rect x="20" y="15" width="160" height="170" rx="8" fill="#0A0E17" stroke="url(#goldAccent)" stroke-width="4"/>
+  <polygon points="100,35 105,48 120,48 107,56 112,70 100,60 88,70 93,56 80,48 95,48" fill="none" stroke="url(#goldAccent)" stroke-width="2"/>
+  <text x="100" y="90" font-family="sans-serif" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">LEADERS IN LAW</text>
+  <text x="100" y="105" font-family="sans-serif" font-size="9" fill="url(#goldAccent)" text-anchor="middle">GLOBAL AWARDS</text>
+  <line x1="50" y1="116" x2="150" y2="116" stroke="url(#goldAccent)" stroke-width="1"/>
+  <text x="100" y="138" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">WINNER</text>
+  <text x="100" y="160" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="url(#goldAccent)" text-anchor="middle">2024</text>
+</svg>
