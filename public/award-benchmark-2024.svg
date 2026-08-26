@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="silverPlated" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F1F5F9"/>
+      <stop offset="100%" stop-color="#CBD5E1"/>
+    </linearGradient>
+    <linearGradient id="goldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4A359"/>
+      <stop offset="100%" stop-color="#7B5618"/>
+    </linearGradient>
+  </defs>
+  <rect x="15" y="15" width="170" height="170" rx="8" fill="url(#silverPlated)" stroke="url(#goldBorder)" stroke-width="4"/>
+  <circle cx="100" cy="55" r="18" fill="none" stroke="#000000" stroke-width="2"/>
+  <text x="100" y="62" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#000000" text-anchor="middle">B</text>
+  <text x="100" y="90" font-family="Georgia, serif" font-size="12" font-weight="bold" fill="#000000" text-anchor="middle">BENCHMARK</text>
+  <text x="100" y="103" font-family="Georgia, serif" font-size="12" font-weight="bold" fill="#000000" text-anchor="middle">LITIGATION</text>
+  <text x="100" y="116" font-family="sans-serif" font-size="8" fill="#555" text-anchor="middle">ASIA PACIFIC</text>
+  <line x1="40" y1="125" x2="160" y2="125" stroke="#D4A359" stroke-width="1.5"/>
+  <text x="100" y="142" font-family="sans-serif" font-size="10" font-weight="bold" fill="#000000" text-anchor="middle">TOP TIER FIRM</text>
+  <text x="100" y="162" font-family="sans-serif" font-size="14" font-weight="bold" fill="#000000" text-anchor="middle">2024</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="silverGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#94A3B8"/>
+    </linearGradient>
+  </defs>
+  <rect x="15" y="15" width="170" height="170" rx="8" fill="url(#silverGlow)" stroke="#D4A359" stroke-width="3"/>
+  <rect x="22" y="22" width="156" height="156" rx="4" fill="none" stroke="#000000" stroke-width="1"/>
+  <text x="100" y="52" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="#0A0E17" text-anchor="middle">INDIA BUSINESS</text>
+  <text x="100" y="66" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="#0A0E17" text-anchor="middle">LAW JOURNAL</text>
+  <line x1="40" y1="78" x2="160" y2="78" stroke="#0A0E17" stroke-width="1"/>
+  <text x="100" y="100" font-family="Georgia, serif" font-size="15" font-weight="bold" fill="#0A0E17" text-anchor="middle">Indian Law Firm</text>
+  <text x="100" y="120" font-family="Georgia, serif" font-size="15" font-weight="bold" fill="#0A0E17" text-anchor="middle">Awards 2023</text>
+  <text x="100" y="150" font-family="'Brush Script MT', cursive" font-size="13" fill="#333333" text-anchor="middle">Veritas Law Partners</text>
+</svg>
