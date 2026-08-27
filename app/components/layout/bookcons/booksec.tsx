@@ -14,6 +14,8 @@ import {
 } from "lucide-react";
 import rawLawData from "@/app/data/lawData.json";
 import { BookSectionData, GlobalLawData } from "@/types/law";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
+import { motion } from "framer-motion";
 
 const defaultBookSectionData = (rawLawData as GlobalLawData).bookSection;
 
@@ -98,7 +100,7 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
       <div className="max-w-[1400px] mx-auto">
         
         {/* Single Unified Outer Card Container */}
-        <div className="group relative rounded-3xl border border-slate-800/80 bg-[#070A11] p-6 sm:p-10 lg:p-12 shadow-2xl overflow-hidden hover:border-[#D4A359]/30 transition-all duration-300">
+        <FadeIn direction="up" delay={0.1} className="group relative rounded-3xl border border-slate-800/80 bg-[#070A11] p-6 sm:p-10 lg:p-12 shadow-2xl overflow-hidden hover:border-[#D4A359]/30 transition-all duration-300">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-stretch relative z-10">
             
@@ -416,7 +418,7 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
             </div>
 
           </div>
-        </div>
+        </FadeIn>
 
       </div>
     </section>

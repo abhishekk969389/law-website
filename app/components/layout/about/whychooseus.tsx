@@ -14,6 +14,8 @@ import {
 } from "lucide-react";
 import rawLawData from "@/app/data/lawData.json";
 import { WhyChooseUsData, GlobalLawData } from "@/types/law";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
+import { motion } from "framer-motion";
 
 const defaultWhyChooseUsData = (rawLawData as GlobalLawData).whyChooseUs;
 
@@ -43,68 +45,82 @@ export function WhyChooseUs({ data = defaultWhyChooseUsData }: WhyChooseUsProps)
                     <div className="lg:col-span-7 flex flex-col justify-between">
                         <div>
                             {/* Tagline */}
-                            <div className="flex items-center gap-3 mb-3">
-                                <span className="w-8 h-[2px] bg-[#D4A359]" />
-                                <span className="text-[#D4A359] text-xs md:text-lg font-semibold tracking-widest uppercase">
-                                    {tagline}
-                                </span>
-                            </div>
+                            <FadeIn direction="up" delay={0.1}>
+                                <div className="flex items-center gap-3 mb-3">
+                                    <span className="w-8 h-[2px] bg-[#D4A359]" />
+                                    <span className="text-[#D4A359] text-xs md:text-lg font-semibold tracking-widest uppercase">
+                                        {tagline}
+                                    </span>
+                                </div>
+                            </FadeIn>
 
                             {/* Main Heading */}
-                            <h2 className="font-serif text-4xl sm:text-5xl lg:text-[56px] leading-[1.15] tracking-tight mb-4">
-                                <span className="text-white font-medium block sm:inline">{heading.line1} </span>
-                                <span className="text-[#D4A359] italic font-serif font-medium">
-                                    {heading.highlight}{" "}
-                                </span>
-                                <span className="text-white font-medium block sm:inline">{heading.line2}</span>
-                            </h2>
+                            <FadeIn direction="up" delay={0.2}>
+                                <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.15] tracking-tight mb-4">
+                                    <span className="text-white font-medium block sm:inline">{heading.line1} </span>
+                                    <span className="text-[#D4A359] italic font-serif font-medium">
+                                        {heading.highlight}{" "}
+                                    </span>
+                                    <span className="text-white font-medium block sm:inline">{heading.line2}</span>
+                                </h2>
+                            </FadeIn>
 
                             {/* Decorative Divider */}
-                            <div className="flex items-center gap-4 my-6 max-w-md">
-                                <div className="h-[1px] bg-slate-800 flex-1" />
-                                <Scale className="w-5 h-5 text-[#D4A359] shrink-0" />
-                                <div className="h-[1px] bg-slate-800 flex-1" />
-                            </div>
+                            <FadeIn direction="up" delay={0.25}>
+                                <div className="flex items-center gap-4 my-6 max-w-md">
+                                    <div className="h-[1px] bg-slate-800 flex-1" />
+                                    <Scale className="w-5 h-5 text-[#D4A359] shrink-0" />
+                                    <div className="h-[1px] bg-slate-800 flex-1" />
+                                </div>
+                            </FadeIn>
 
                             {/* Subheading / Description */}
-                            <p className="text-slate-300 text-sm md:text-lg leading-relaxed mb-8 max-w-2xl font-normal">
-                                {description}
-                            </p>
+                            <FadeIn direction="up" delay={0.3}>
+                                <p className="text-slate-300 text-sm md:text-lg leading-relaxed mb-8 max-w-2xl font-normal">
+                                    {description}
+                                </p>
+                            </FadeIn>
 
                             {/* 6 Feature Cards Grid */}
-                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
+                            <StaggerContainer staggerChildren={0.1} delayChildren={0.35} className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
                                 {items &&
                                     items.map((item) => {
                                         const IconComponent = iconMap[item.icon] || UserCheck;
 
                                         return (
-                                            <div
-                                                key={item.id}
-                                                className="bg-[#0E131C] border border-slate-800/80 rounded-xl p-5 text-center flex flex-col items-center group hover:border-[#D4A359]/60 hover:bg-[#121824] transition-all duration-300 shadow-lg"
-                                            >
-                                                {/* Circle Icon Badge */}
-                                                <div className="w-14 h-14 rounded-full border border-[#D4A359]/60 flex items-center justify-center mb-4 p-3 group-hover:scale-110 group-hover:border-[#D4A359] group-hover:bg-[#D4A359]/10 transition-all duration-300">
-                                                    <IconComponent className="w-6 h-6 text-[#D4A359]" />
-                                                </div>
+                                            <StaggerItem key={item.id}>
+                                                <motion.div
+                                                    whileHover={{ y: -5, scale: 1.02 }}
+                                                    transition={{ duration: 0.2 }}
+                                                    className="bg-[#0E131C] border border-slate-800/80 rounded-xl p-5 text-center flex flex-col items-center group hover:border-[#D4A359]/60 hover:bg-[#121824] transition-colors duration-300 shadow-lg h-full cursor-pointer"
+                                                >
+                                                    {/* Circle Icon Badge */}
+                                                    <motion.div
+                                                        whileHover={{ scale: 1.1, rotate: 6 }}
+                                                        className="w-14 h-14 rounded-full border border-[#D4A359]/60 flex items-center justify-center mb-4 p-3 group-hover:border-[#D4A359] group-hover:bg-[#D4A359]/10 transition-all duration-300"
+                                                    >
+                                                        <IconComponent className="w-6 h-6 text-[#D4A359]" />
+                                                    </motion.div>
 
-                                                {/* Card Title */}
-                                                <h3 className="font-serif font-semibold text-white text-lg md:text-xl mb-2 group-hover:text-[#D4A359] transition-colors">
-                                                    {item.title}
-                                                </h3>
+                                                    {/* Card Title */}
+                                                    <h3 className="font-serif font-semibold text-white text-lg md:text-xl mb-2 group-hover:text-[#D4A359] transition-colors">
+                                                        {item.title}
+                                                    </h3>
 
-                                                {/* Card Description */}
-                                                <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
-                                                    {item.description}
-                                                </p>
-                                            </div>
+                                                    {/* Card Description */}
+                                                    <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                                                        {item.description}
+                                                    </p>
+                                                </motion.div>
+                                            </StaggerItem>
                                         );
                                     })}
-                            </div>
+                            </StaggerContainer>
                         </div>
                     </div>
 
                     {/* Right Column: Ornate Gold Framed Legal Image */}
-                    <div className="lg:col-span-5 flex items-center justify-center">
+                    <FadeIn direction="left" delay={0.3} className="lg:col-span-5 flex items-center justify-center">
                         <div className="relative w-full h-full min-h-[420px] sm:min-h-[480px] lg:min-h-[540px] rounded-2xl p-3 border-2 border-[#C99A2E]/70 bg-[#0E131C] shadow-2xl overflow-hidden group">
                             {/* Inner Gold Border Accent */}
                             <div className="relative w-full h-full rounded-xl overflow-hidden border border-[#C99A2E]/40">
@@ -117,7 +133,7 @@ export function WhyChooseUs({ data = defaultWhyChooseUsData }: WhyChooseUsProps)
                                 />
                             </div>
                         </div>
-                    </div>
+                    </FadeIn>
                 </div>
             </div>
         </section>

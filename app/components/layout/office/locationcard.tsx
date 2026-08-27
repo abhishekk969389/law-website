@@ -4,6 +4,8 @@ import React from "react";
 import { Phone, ArrowRight } from "lucide-react";
 import rawLawData from "@/app/data/lawData.json";
 import { OfficeLocationSectionData, GlobalLawData } from "@/types/law";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
+import { motion } from "framer-motion";
 
 const defaultOfficeLocationsData = (rawLawData as GlobalLawData).officeLocations;
 
@@ -129,25 +131,29 @@ export function Locationcard({ data = defaultOfficeLocationsData }: Locationcard
       <div className="max-w-[1400px] mx-auto">
         
         {/* Section Title */}
-        <h2 className="font-serif text-3xl text-white mb-6 font-medium">
-          {title || "Our Office Locations"}
-        </h2>
+        <FadeIn direction="up" delay={0.1}>
+          <h2 className="font-serif text-2xl sm:text-2xl md:text-4xl text-white mb-6 font-medium">
+            {title || "Our Office Locations"}
+          </h2>
+        </FadeIn>
 
         {/* 8 Office Locations Cards Grid (3 columns on lg screens) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <StaggerContainer staggerChildren={0.1} delayChildren={0.2} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {items &&
             items.map((item) => (
-              <div
-                key={item.id}
-                className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] p-6 sm:p-7 flex flex-col justify-between hover:border-[#D4A359]/50 transition-all duration-300 shadow-xl min-h-[260px]"
-              >
-                {/* Top Section: Left Monument Box + City Title & Address + Right Phone Circle Badge */}
-                <div>
-                  <div className="flex items-start justify-between gap-4">
-                    {/* Left: Dark Container Box for Monument Icon + City & Address */}
-                    <div className="flex items-start gap-4 flex-1">
-                      {/* Dark Square Box for Monument Vector Icon */}
-                      <div className="w-16 h-16 sm:w-18 sm:h-18 rounded-2xl border border-slate-800 bg-[#060911] flex items-center justify-center shrink-0 shadow-md p-2.5">
+              <StaggerItem key={item.id}>
+                <motion.div
+                  whileHover={{ y: -6, scale: 1.01 }}
+                  transition={{ duration: 0.25 }}
+                  className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] p-6 sm:p-7 flex flex-col justify-between hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl min-h-[260px] cursor-pointer h-full"
+                >
+                  {/* Top Section: Left Monument Box + City Title & Address + Right Phone Circle Badge */}
+                  <div>
+                    <div className="flex items-start justify-between gap-4">
+                      {/* Left: Dark Container Box for Monument Icon + City & Address */}
+                      <div className="flex items-start gap-4 flex-1">
+                        {/* Dark Square Box for Monument Vector Icon */}
+                        <div className="w-16 h-16 sm:w-18 sm:h-18 rounded-2xl border border-slate-800 bg-[#060911] flex items-center justify-center shrink-0 shadow-md p-2.5">
                         <MonumentSvg icon={item.icon} />
                       </div>
 
@@ -197,9 +203,10 @@ export function Locationcard({ data = defaultOfficeLocationsData }: Locationcard
                   </a>
                 </div>
 
-              </div>
+                </motion.div>
+              </StaggerItem>
             ))}
-        </div>
+        </StaggerContainer>
 
       </div>
     </section>

@@ -12,6 +12,8 @@ import {
 } from "lucide-react";
 import rawLawData from "@/app/data/lawData.json";
 import { ApproachData, GlobalLawData } from "@/types/law";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
+import { motion } from "framer-motion";
 
 const defaultApproachData = (rawLawData as GlobalLawData).ourApproachSection;
 
@@ -69,68 +71,84 @@ export function ApproachSec({ data = defaultApproachData }: ApproachSecProps) {
                     <div className="max-w-2xl lg:max-w-xl xl:max-w-2xl">
 
                         {/* Tagline Badge */}
-                        <div className="flex items-center gap-3 mb-3">
-                            <span className="w-8 h-[1px] bg-[#D4A359]/60" />
-                            <Scale className="w-4 h-4 text-[#D4A359] shrink-0" />
-                            <span className="text-[#D4A359] text-xs md:text-lg font-semibold tracking-widest uppercase">
-                                {tagline}
-                            </span>
-                            <span className="w-8 h-[1px] bg-[#D4A359]/60" />
-                        </div>
+                        <FadeIn direction="up" delay={0.1}>
+                            <div className="flex items-center gap-3 mb-3">
+                                <span className="w-8 h-[1px] bg-[#D4A359]/60" />
+                                <Scale className="w-4 h-4 text-[#D4A359] shrink-0" />
+                                <span className="text-[#D4A359] text-xs md:text-lg font-semibold tracking-widest uppercase">
+                                    {tagline}
+                                </span>
+                                <span className="w-8 h-[1px] bg-[#D4A359]/60" />
+                            </div>
+                        </FadeIn>
 
                         {/* Main Heading matching About section & whychooseus typography */}
-                        <h2 className="font-serif text-4xl sm:text-5xl lg:text-[56px] leading-[1.15] tracking-tight mb-4">
-                            <span className="block text-white font-medium mb-1">
-                                {heading.line1}
-                            </span>
-                            <span className="block text-white font-medium">
-                                {heading.line2Prefix || ""}
-                                <span className="text-[#D4A359] italic font-serif font-medium">
-                                    {heading.highlight}
+                        <FadeIn direction="up" delay={0.2}>
+                            <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.15] tracking-tight mb-4">
+                                <span className="block text-white font-medium mb-1">
+                                    {heading.line1}
                                 </span>
-                            </span>
-                        </h2>
+                                <span className="block text-white font-medium">
+                                    {heading.line2Prefix || ""}
+                                    <span className="text-[#D4A359] italic font-serif font-medium">
+                                        {heading.highlight}
+                                    </span>
+                                </span>
+                            </h2>
+                        </FadeIn>
 
                         {/* Gold Ornate Line Divider */}
-                        <div className="flex items-center gap-4 my-4 max-w-md">
-                            <div className="h-[1px] bg-slate-800 flex-1" />
-                            <span className="text-[#D4A359] text-sm sm:text-base md:text-lg font-medium leading-none drop-shadow-[0_0_6px_rgba(212,163,89,0.4)]">
-                                ❖
-                            </span>
-                            <div className="h-[1px] bg-slate-800 flex-1" />
-                        </div>
+                        <FadeIn direction="up" delay={0.25}>
+                            <div className="flex items-center gap-4 my-4 max-w-md">
+                                <div className="h-[1px] bg-slate-800 flex-1" />
+                                <span className="text-[#D4A359] text-sm sm:text-base md:text-lg font-medium leading-none drop-shadow-[0_0_6px_rgba(212,163,89,0.4)]">
+                                    ❖
+                                </span>
+                                <div className="h-[1px] bg-slate-800 flex-1" />
+                            </div>
+                        </FadeIn>
 
                         {/* Subheading / Description */}
-                        <p className="text-slate-300 text-sm md:text-base lg:text-lg leading-relaxed mb-6 font-normal">
-                            {description}
-                        </p>
+                        <FadeIn direction="up" delay={0.3}>
+                            <p className="text-slate-300 text-sm md:text-base lg:text-lg leading-relaxed mb-6 font-normal">
+                                {description}
+                            </p>
+                        </FadeIn>
 
                         {/* 4 Feature Columns Row */}
-                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-5 pt-5 border-t border-slate-800/80">
+                        <StaggerContainer staggerChildren={0.1} delayChildren={0.35} className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-5 pt-5 border-t border-slate-800/80">
                             {items &&
                                 items.map((item) => {
                                     const IconComponent = iconMap[item.icon] || Target;
 
                                     return (
-                                        <div key={item.id} className="flex flex-col items-start group">
-                                            {/* Circle Icon Badge */}
-                                            <div className="w-11 h-11 rounded-full border border-[#D4A359]/60 flex items-center justify-center mb-2.5 p-2 group-hover:scale-110 group-hover:border-[#D4A359] group-hover:bg-[#D4A359]/10 transition-all duration-300">
-                                                <IconComponent className="w-5 h-5 text-[#D4A359]" />
-                                            </div>
+                                        <StaggerItem key={item.id}>
+                                            <motion.div
+                                                whileHover={{ y: -4 }}
+                                                className="flex flex-col items-start group cursor-pointer"
+                                            >
+                                                {/* Circle Icon Badge */}
+                                                <motion.div
+                                                    whileHover={{ scale: 1.1, rotate: 6 }}
+                                                    className="w-11 h-11 rounded-full border border-[#D4A359]/60 flex items-center justify-center mb-2.5 p-2 group-hover:border-[#D4A359] group-hover:bg-[#D4A359]/10 transition-all duration-300"
+                                                >
+                                                    <IconComponent className="w-5 h-5 text-[#D4A359]" />
+                                                </motion.div>
 
-                                            {/* Feature Title */}
-                                            <h3 className="font-serif font-semibold text-white text-base md:text-lg mb-1 group-hover:text-[#D4A359] transition-colors">
-                                                {item.title}
-                                            </h3>
+                                                {/* Feature Title */}
+                                                <h3 className="font-serif font-semibold text-white text-base md:text-lg mb-1 group-hover:text-[#D4A359] transition-colors">
+                                                    {item.title}
+                                                </h3>
 
-                                            {/* Feature Description */}
-                                            <p className="text-slate-400 text-xs md:text-sm leading-relaxed">
-                                                {item.description}
-                                            </p>
-                                        </div>
+                                                {/* Feature Description */}
+                                                <p className="text-slate-400 text-xs md:text-sm leading-relaxed">
+                                                    {item.description}
+                                                </p>
+                                            </motion.div>
+                                        </StaggerItem>
                                     );
                                 })}
-                        </div>
+                        </StaggerContainer>
                     </div>
                 </div>
             </div>

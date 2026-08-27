@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 import { BannerData, GlobalLawData } from '@/types/law';
 import rawLawData from '@/app/data/lawData.json';
+import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from '@/app/components/ui/animations';
 
 const defaultBannerData: BannerData = (rawLawData as GlobalLawData).banner;
 
@@ -31,65 +32,72 @@ export default function Banner({ data = defaultBannerData }: BannerProps) {
         {/* Left Content */}
         <div className="w-full lg:w-3/5">
           {/* Tagline */}
-          <div className="flex items-center gap-3 sm:gap-4 mb-4">
-            <span className="italic font-serif text-[#C5A45D] text-base sm:text-lg lg:text-xl">
-              {data.tagline}
-            </span>
-            <div className="h-[1px] w-8 sm:w-12 bg-[#C5A45D]/50" />
-          </div>
+          <FadeIn direction="right" delay={0.1} duration={0.6}>
+            <div className="flex items-center gap-3 sm:gap-4 mb-4">
+              <span className="italic font-serif text-[#C5A45D] text-base sm:text-lg lg:text-xl">
+                {data.tagline}
+              </span>
+              <div className="h-[1px] w-8 sm:w-12 bg-[#C5A45D]/50" />
+            </div>
+          </FadeIn>
 
           {/* Main Heading */}
-          <h1 className="font-serif text-[28px] xs:text-3xl sm:text-4xl md:text-5xl lg:text-[65px] mb-6 leading-[1.2] lg:leading-none">
-            <span className="block text-white">{data.heading.line1}</span>
-            <span className="block text-white">
-              {data.heading.line2}{' '}
-              <span className="text-[#C5A45D]">{data.heading.highlight}</span>
-            </span>
-          </h1>
+          <FadeIn direction="up" delay={0.2} duration={0.7}>
+            <h1 className="font-serif text-[28px] xs:text-3xl sm:text-4xl md:text-5xl lg:text-[65px] mb-6 leading-[1.2] lg:leading-none">
+              <span className="block text-white">{data.heading.line1}</span>
+              <span className="block text-white">
+                {data.heading.line2}{' '}
+                <span className="text-[#D4A359]">{data.heading.highlight}</span>
+              </span>
+            </h1>
+          </FadeIn>
 
           {/* Subheading */}
-          <p className="text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl max-w-xl mb-8 sm:mb-10 leading-relaxed">
-            {data.subheading}
-          </p>
+          <FadeIn direction="up" delay={0.35} duration={0.7}>
+            <p className="text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl max-w-xl mb-8 sm:mb-10 leading-relaxed">
+              {data.subheading}
+            </p>
+          </FadeIn>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3.5 sm:gap-4 mb-10">
+          <StaggerContainer delayChildren={0.45} staggerChildren={0.15} className="flex flex-col sm:flex-row gap-3.5 sm:gap-4 mb-10">
             {data.buttons.map((button, index) => (
-              <a
-                key={index}
-                href={button.href}
-                className={`
-                  inline-flex items-center justify-center w-full sm:w-auto px-6 sm:px-8 py-3.5 text-xs sm:text-sm font-medium transition-all duration-300
-                  ${button.variant === 'primary'
-                    ? 'bg-[#E3C280] text-[#0B0E14] hover:bg-[#C5A45D] rounded-md'
-                    : 'border border-[#C5A45D] text-white hover:bg-[#C5A45D]/10 rounded-md'
-                  }
-                `}
-              >
-                {button.text}
-                <ArrowUpRight className="ml-2 w-4 h-4" />
-              </a>
+              <StaggerItem key={index}>
+                <a
+                  href={button.href}
+                  className={`
+                    inline-flex items-center justify-center w-full sm:w-auto px-6 sm:px-8 py-3.5 text-xs sm:text-sm font-medium transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 rounded-lg
+                    ${button.variant === 'primary'
+                      ? 'bg-[#E5B562] text-[#0B0E14] hover:bg-[#D4A359] shadow-md'
+                      : 'border border-[#D4A359] text-white hover:bg-[#D4A359]/10'
+                    }
+                  `}
+                >
+                  {button.text}
+                  <ArrowUpRight className="ml-2 w-4 h-4 text-[#0B0E14]" />
+                </a>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
 
           {/* Stats */}
-          <div className="flex items-center divide-x divide-gray-700">
+          <StaggerContainer delayChildren={0.6} staggerChildren={0.1} className="flex items-center divide-x divide-gray-700">
             {data.stats.map((stat, index) => (
-              <div key={index} className="px-3 sm:px-6 first:pl-0 flex flex-col justify-center">
-                <span className="text-[#E3C280] text-xl sm:text-3xl mb-1">
+              <StaggerItem key={index} className="px-3 sm:px-6 first:pl-0 flex flex-col justify-center">
+                <span className="text-[#D4A359] text-xl sm:text-3xl mb-1 font-serif">
                   {stat.value}
                 </span>
                 <span className="text-gray-400 text-[10px] sm:text-xs md:text-sm tracking-wider uppercase">
                   {stat.label}
                 </span>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
 
         {/* Right Content - Quote Box */}
-        <div className="mt-8 lg:mt-0 lg:ml-8 w-full max-w-xs sm:max-w-sm lg:w-[240px] xl:w-[260px] shrink-0">
-          <div className="border border-white/30 rounded-3xl p-5 sm:p-6 bg-[#0F171E]/30 flex flex-col items-center justify-center text-center shadow-xl">
+        <ScaleIn delay={0.5} duration={0.8} initialScale={0.85} className="mt-8 lg:mt-0 lg:ml-8 w-full max-w-xs sm:max-w-sm lg:w-[240px] xl:w-[260px] shrink-0">
+          <div className="border border-white/30 rounded-3xl p-5 sm:p-6 bg-[#0F171E]/40 backdrop-blur-sm flex flex-col items-center justify-center text-center shadow-2xl hover:border-[#C5A45D]/60 transition-colors duration-500">
             {/* Top Centered Double Quotes */}
             <div className="text-[#9C8052] text-6xl sm:text-7xl font-serif leading-none -mb-4 sm:-mb-5 select-none opacity-90">
               “
@@ -111,7 +119,7 @@ export default function Banner({ data = defaultBannerData }: BannerProps) {
             {/* Bottom Centered Gold Accent Line */}
             <div className="h-[2px] w-10 sm:w-12 bg-[#C5A45D] mt-4 sm:mt-5" />
           </div>
-        </div>
+        </ScaleIn>
       </div>
     </section>
   );

@@ -13,6 +13,8 @@ import {
 } from "lucide-react";
 import { FooterData, GlobalLawData } from "@/types/law";
 import rawLawData from "@/app/data/lawData.json";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
+import { motion } from "framer-motion";
 
 const defaultFooterData: FooterData = (rawLawData as GlobalLawData).footer as FooterData;
 
@@ -38,7 +40,7 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
 
   return (
     <footer className="relative w-full bg-[#0C191B] text-white pt-4 sm:pt-6 md:pt-8 overflow-hidden">
-      
+
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Image
@@ -52,9 +54,9 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
       </div>
 
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Top Newsletter Subscribe Bar */}
-        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 sm:pb-7 border-b border-white/10">
+        <FadeIn direction="up" delay={0.1} className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 sm:pb-7 border-b border-white/10">
           <div>
             <div className="flex items-center gap-2 mb-2">
               <span className="w-8 h-[1px] bg-[#D4A359]" />
@@ -62,7 +64,7 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
                 {newsletter.tagline}
               </span>
             </div>
-            <h3 className="font-serif text-3xl sm:text-4xl lg:text-[48px] font-bold text-white tracking-tight leading-tight">
+            <h3 className="font-serif text-2xl sm:text-2xl md:text-4xl lg:text-[48px] text-white tracking-tight leading-tight">
               {newsletter.heading}
             </h3>
           </div>
@@ -74,20 +76,22 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
               className="w-full px-6 py-4 bg-white text-[#0B1A2D] placeholder:text-[#0B1A2D] font-bold text-sm sm:text-base focus:outline-none rounded-none"
               required
             />
-            <button
+            <motion.button
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
               type="submit"
-              className="w-full sm:w-auto bg-[#B98E53] hover:bg-[#a67d45] text-white font-bold text-xs sm:text-sm tracking-wider uppercase px-8 py-4 rounded-none transition-colors shrink-0 whitespace-nowrap"
+              className="w-full sm:w-auto bg-[#B98E53] hover:bg-[#a67d45] text-white font-bold text-xs sm:text-sm tracking-wider uppercase px-8 py-4 rounded-none transition-colors shrink-0 whitespace-nowrap cursor-pointer"
             >
               {newsletter.buttonText}
-            </button>
+            </motion.button>
           </form>
-        </div>
+        </FadeIn>
 
         {/* Main 5-Column Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-5 sm:gap-6 lg:gap-4 xl:gap-7 py-6 sm:py-7">
-          
+        <StaggerContainer staggerChildren={0.1} delayChildren={0.2} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-5 sm:gap-6 lg:gap-4 xl:gap-7 py-6 sm:py-7">
+
           {/* Column 1: Brand Info & Socials */}
-          <div className="lg:col-span-3">
+          <StaggerItem className="lg:col-span-3">
             <div className="mb-4">
               <Link href="/" className="inline-block">
                 <Image
@@ -110,10 +114,12 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
               </h5>
               <div className="flex items-center gap-3.5">
                 {(brand?.socials || []).map((social) => (
-                  <a
+                  <motion.a
                     key={social.id}
                     href={social.url}
                     aria-label={social.name}
+                    whileHover={{ scale: 1.15, y: -2 }}
+                    whileTap={{ scale: 0.9 }}
                     className="w-9 h-9 lg:w-9 lg:h-9 xl:w-[42px] xl:h-[42px] rounded-full border border-[#D4A359]/70 hover:border-[#D4A359] hover:bg-[#D4A359]/15 flex items-center justify-center text-[#D4A359] transition-all duration-300"
                   >
                     {social.name === "Facebook" && (
@@ -137,14 +143,14 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
                     {!["Facebook", "Twitter", "Behance", "Youtube"].includes(social.name) && (
                       <span className="font-bold text-xs sm:text-sm">{social.name.charAt(0)}</span>
                     )}
-                  </a>
+                  </motion.a>
                 ))}
               </div>
             </div>
-          </div>
+          </StaggerItem>
 
           {/* Column 2: Quick Links */}
-          <div className="lg:col-span-2">
+          <StaggerItem className="lg:col-span-2">
             <h5 className="text-lg lg:text-base xl:text-xl font-bold text-[#D4A359] mb-3.5 lg:mb-3 xl:mb-4">
               {popularCases?.title}
             </h5>
@@ -161,10 +167,10 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
                 </li>
               ))}
             </ul>
-          </div>
+          </StaggerItem>
 
           {/* Column 3: Resources */}
-          <div className="lg:col-span-2">
+          <StaggerItem className="lg:col-span-2">
             <h5 className="text-lg lg:text-base xl:text-xl font-bold text-[#D4A359] mb-3.5 lg:mb-3 xl:mb-4">
               {resources?.title || "Resources"}
             </h5>
@@ -186,10 +192,10 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
                 </li>
               ))}
             </ul>
-          </div>
+          </StaggerItem>
 
           {/* Column 4: Recent News */}
-          <div className="lg:col-span-2">
+          <StaggerItem className="lg:col-span-2">
             <h5 className="text-lg lg:text-base xl:text-xl font-bold text-[#D4A359] mb-3.5 lg:mb-3 xl:mb-4">
               {recentNews?.title}
             </h5>
@@ -220,10 +226,10 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
                 </Link>
               ))}
             </div>
-          </div>
+          </StaggerItem>
 
           {/* Column 5: Contact Us & Opening Hours */}
-          <div className="lg:col-span-3 lg:justify-self-end space-y-4 lg:space-y-3.5 xl:space-y-4.5">
+          <StaggerItem className="lg:col-span-3 lg:justify-self-end space-y-4 lg:space-y-3.5 xl:space-y-4.5">
             <div>
               <h5 className="text-lg lg:text-base xl:text-xl font-bold text-[#D4A359] mb-2.5 lg:mb-2 xl:mb-3">
                 {contact.title}
@@ -256,15 +262,15 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
                 <p className="text-[#D4A359] text-sm lg:text-xs xl:text-[15px] font-bold pl-6 lg:pl-5 xl:pl-7 mt-1 xl:mt-1.5 whitespace-nowrap">{contact.closedText}</p>
               </div>
             </div>
-          </div>
+          </StaggerItem>
 
-        </div>
+        </StaggerContainer>
 
       </div>
 
       {/* Bottom Copyright Contained Gold Bar */}
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pb-5 sm:pb-6 pt-2 sm:pt-3 relative z-10">
-            <div className="w-full bg-[#E5B562]/80 text-[#0B0E14] font-semibold text-xs sm:text-sm md:text-md lg:text-[16px] text-center py-3.5 sm:py-4 px-4 shadow-md">
+        <div className="w-full bg-[#E5B562]/80 text-[#0B0E14] font-semibold text-xs sm:text-sm md:text-md lg:text-[16px] text-center py-3.5 sm:py-4 px-4 shadow-md">
           {copyrightText}
         </div>
       </div>

@@ -5,6 +5,8 @@ import Image from "next/image";
 import { User, Mail, Briefcase, Phone, Pencil, ArrowRight } from "lucide-react";
 import rawLawData from "@/app/data/lawData.json";
 import { QuestionsSectionData, GlobalLawData } from "@/types/law";
+import { FadeIn } from "@/app/components/ui/animations";
+import { motion } from "framer-motion";
 
 const defaultQuestionsSectionData = (rawLawData as GlobalLawData).questionsSection;
 
@@ -54,7 +56,7 @@ export function Questions({ data = defaultQuestionsSectionData }: QuestionsProps
         <div className="max-w-4xl mx-auto relative z-10">
           
           {/* Centered Section Header matching site typography standard */}
-          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+          <FadeIn direction="up" delay={0.1} className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
             
             {/* Top Tagline with side lines */}
             <div className="flex items-center justify-center gap-3 mb-3">
@@ -66,7 +68,7 @@ export function Questions({ data = defaultQuestionsSectionData }: QuestionsProps
             </div>
 
             {/* Main Heading */}
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-[50px] leading-[1.2] tracking-tight text-white mb-3">
+            <h2 className="font-serif text-2xl sm:text-2xl md:text-4xl lg:text-[50px] leading-[1.2] tracking-tight text-white mb-3">
               {headingLine1 || "Have Be Any Question?"} <br />
               <span className="text-white font-normal">{headingLine2 || "Feel Free To Contact With Us."}</span>
             </h2>
@@ -76,102 +78,106 @@ export function Questions({ data = defaultQuestionsSectionData }: QuestionsProps
               <span className="w-1.5 h-1.5 bg-[#D4A359] rotate-45 absolute" />
             </div>
 
-          </div>
+          </FadeIn>
 
           {/* Centered Form */}
-          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
-            
-            {/* Row 1: Name & Email */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-              {/* Your Name */}
-              <div className="relative rounded-xl border border-slate-800/90 bg-[#060911]/90 flex items-center px-4 py-3.5 focus-within:border-[#D4A359]/60 transition-colors shadow-inner">
-                <User className="w-5 h-5 text-[#D4A359] shrink-0 mr-3" />
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
+          <FadeIn direction="up" delay={0.25}>
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+              
+              {/* Row 1: Name & Email */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                {/* Your Name */}
+                <div className="relative rounded-xl border border-slate-800/90 bg-[#060911]/90 flex items-center px-4 py-3.5 focus-within:border-[#D4A359]/60 transition-colors shadow-inner">
+                  <User className="w-5 h-5 text-[#D4A359] shrink-0 mr-3" />
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    placeholder={formLabels?.namePlaceholder || "Your Name*"}
+                    className="w-full bg-transparent text-white placeholder-slate-400 text-sm sm:text-base outline-none"
+                  />
+                </div>
+
+                {/* Your Email */}
+                <div className="relative rounded-xl border border-slate-800/90 bg-[#060911]/90 flex items-center px-4 py-3.5 focus-within:border-[#D4A359]/60 transition-colors shadow-inner">
+                  <Mail className="w-5 h-5 text-[#D4A359] shrink-0 mr-3" />
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    placeholder={formLabels?.emailPlaceholder || "Your Email*"}
+                    className="w-full bg-transparent text-white placeholder-slate-400 text-sm sm:text-base outline-none"
+                  />
+                </div>
+              </div>
+
+              {/* Row 2: Service Looking For & Phone Number */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                {/* Service Looking For */}
+                <div className="relative rounded-xl border border-slate-800/90 bg-[#060911]/90 flex items-center px-4 py-3.5 focus-within:border-[#D4A359]/60 transition-colors shadow-inner">
+                  <Briefcase className="w-5 h-5 text-[#D4A359] shrink-0 mr-3" />
+                  <input
+                    type="text"
+                    name="service"
+                    value={formData.service}
+                    onChange={handleChange}
+                    placeholder={formLabels?.servicePlaceholder || "Service Looking For?"}
+                    className="w-full bg-transparent text-white placeholder-slate-400 text-sm sm:text-base outline-none"
+                  />
+                </div>
+
+                {/* Your Phone Number */}
+                <div className="relative rounded-xl border border-slate-800/90 bg-[#060911]/90 flex items-center px-4 py-3.5 focus-within:border-[#D4A359]/60 transition-colors shadow-inner">
+                  <Phone className="w-5 h-5 text-[#D4A359] shrink-0 mr-3" />
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder={formLabels?.phonePlaceholder || "Your Phone Number"}
+                    className="w-full bg-transparent text-white placeholder-slate-400 text-sm sm:text-base outline-none"
+                  />
+                </div>
+              </div>
+
+              {/* Row 3: Your Message Textarea */}
+              <div className="relative rounded-xl border border-slate-800/90 bg-[#060911]/90 flex items-start px-4 py-3.5 focus-within:border-[#D4A359]/60 transition-colors shadow-inner">
+                <Pencil className="w-5 h-5 text-[#D4A359] shrink-0 mr-3 mt-1" />
+                <textarea
+                  name="message"
+                  value={formData.message}
                   onChange={handleChange}
                   required
-                  placeholder={formLabels?.namePlaceholder || "Your Name*"}
-                  className="w-full bg-transparent text-white placeholder-slate-400 text-sm sm:text-base outline-none"
+                  rows={5}
+                  placeholder={formLabels?.messagePlaceholder || "Your Message*"}
+                  className="w-full bg-transparent text-white placeholder-slate-400 text-sm sm:text-base outline-none resize-none"
                 />
               </div>
 
-              {/* Your Email */}
-              <div className="relative rounded-xl border border-slate-800/90 bg-[#060911]/90 flex items-center px-4 py-3.5 focus-within:border-[#D4A359]/60 transition-colors shadow-inner">
-                <Mail className="w-5 h-5 text-[#D4A359] shrink-0 mr-3" />
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  placeholder={formLabels?.emailPlaceholder || "Your Email*"}
-                  className="w-full bg-transparent text-white placeholder-slate-400 text-sm sm:text-base outline-none"
-                />
-              </div>
-            </div>
-
-            {/* Row 2: Service Looking For & Phone Number */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-              {/* Service Looking For */}
-              <div className="relative rounded-xl border border-slate-800/90 bg-[#060911]/90 flex items-center px-4 py-3.5 focus-within:border-[#D4A359]/60 transition-colors shadow-inner">
-                <Briefcase className="w-5 h-5 text-[#D4A359] shrink-0 mr-3" />
-                <input
-                  type="text"
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                  placeholder={formLabels?.servicePlaceholder || "Service Looking For?"}
-                  className="w-full bg-transparent text-white placeholder-slate-400 text-sm sm:text-base outline-none"
-                />
+              {/* Submit Button */}
+              <div className="pt-4 text-center">
+                <motion.button
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  type="submit"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-sm bg-gradient-to-r from-[#B87B1D] to-[#D4A359] hover:from-[#C88A23] hover:to-[#E3B46A] text-white font-serif font-medium text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-200 cursor-pointer mx-auto"
+                >
+                  <span>{formLabels?.buttonText || "Submit Your Message"}</span>
+                  <ArrowRight className="w-5 h-5 text-white" />
+                </motion.button>
               </div>
 
-              {/* Your Phone Number */}
-              <div className="relative rounded-xl border border-slate-800/90 bg-[#060911]/90 flex items-center px-4 py-3.5 focus-within:border-[#D4A359]/60 transition-colors shadow-inner">
-                <Phone className="w-5 h-5 text-[#D4A359] shrink-0 mr-3" />
-                <input
-                  type="tel"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  placeholder={formLabels?.phonePlaceholder || "Your Phone Number"}
-                  className="w-full bg-transparent text-white placeholder-slate-400 text-sm sm:text-base outline-none"
-                />
-              </div>
-            </div>
-
-            {/* Row 3: Your Message Textarea */}
-            <div className="relative rounded-xl border border-slate-800/90 bg-[#060911]/90 flex items-start px-4 py-3.5 focus-within:border-[#D4A359]/60 transition-colors shadow-inner">
-              <Pencil className="w-5 h-5 text-[#D4A359] shrink-0 mr-3 mt-1" />
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                rows={5}
-                placeholder={formLabels?.messagePlaceholder || "Your Message*"}
-                className="w-full bg-transparent text-white placeholder-slate-400 text-sm sm:text-base outline-none resize-none"
-              />
-            </div>
-
-            {/* Submit Button */}
-            <div className="pt-4 text-center">
-              <button
-                type="submit"
-                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-sm bg-gradient-to-r from-[#B87B1D] to-[#D4A359] hover:from-[#C88A23] hover:to-[#E3B46A] text-white font-serif font-medium text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-200 cursor-pointer mx-auto"
-              >
-                <span>{formLabels?.buttonText || "Submit Your Message"}</span>
-                <ArrowRight className="w-5 h-5 text-white" />
-              </button>
-            </div>
-
-          </form>
+            </form>
+          </FadeIn>
         </div>
       </section>
 
       {/* 2. Map Section (Clean background without image) */}
-      <section className="w-full bg-[#0B0E14] px-4 sm:px-6 lg:px-8 mt-8 sm:mt-10 md:mt-12 lg:mt-14">
+      <FadeIn direction="up" delay={0.3} className="w-full bg-[#0B0E14] px-4 sm:px-6 lg:px-8 mt-8 sm:mt-10 md:mt-12 lg:mt-14">
         <div className="max-w-[1400px] mx-auto">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224356.85923192592!2d77.23701088488971!3d28.522404036526275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc03f!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1786345160037!5m2!1sen!2sin"
@@ -184,10 +190,11 @@ export function Questions({ data = defaultQuestionsSectionData }: QuestionsProps
             referrerPolicy="strict-origin-when-cross-origin"
           />
         </div>
-      </section>
+      </FadeIn>
 
     </div>
   );
 }
 
 export default Questions;
+

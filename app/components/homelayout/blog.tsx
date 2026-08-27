@@ -6,6 +6,8 @@ import Link from "next/link";
 import { PenTool, User, Calendar, MessageSquare, ArrowRight } from "lucide-react";
 import { BlogData, GlobalLawData } from "@/types/law";
 import rawLawData from "@/app/data/lawData.json";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
+import { motion } from "framer-motion";
 
 const defaultBlogData: BlogData = (rawLawData as GlobalLawData).blog || {
   tagline: "NEWS & BLOG",
@@ -31,22 +33,22 @@ export default function Blog({ data = defaultBlogData }: BlogProps) {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Section Header (Centered) */}
-        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-9">
-          
+        <FadeIn direction="up" delay={0.1} className="text-center max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-9">
+
           {/* Top Tagline with Pen Icon */}
-          <div className="flex items-center justify-center gap-3 mb-3">
-            <span className="w-12 h-[1px] bg-[#D4A359]/60" />
-            <div className="flex items-center gap-2">
-              <PenTool className="w-6 h-6 text-[#D4A359]" />
-              <span className="text-[#D4A359] text-xs md:text-lg font-semibold tracking-widest uppercase">
+          <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 max-w-full overflow-hidden">
+            <span className="w-6 sm:w-12 h-[1px] bg-[#D4A359]/60 shrink" />
+            <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+              <PenTool className="w-5 h-5 sm:w-6 sm:h-6 text-[#D4A359]" />
+              <span className="text-[#D4A359] text-[11px] sm:text-xs md:text-lg font-semibold tracking-wider sm:tracking-widest uppercase">
                 {tagline}
               </span>
             </div>
-            <span className="w-12 h-[1px] bg-[#D4A359]/60" />
+            <span className="w-6 sm:w-12 h-[1px] bg-[#D4A359]/60 shrink" />
           </div>
 
           {/* Main Heading */}
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-[56px] leading-[1.15] tracking-tight mb-4">
+          <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.2] tracking-tight mb-4">
             <span className="text-white font-medium">{heading.line1}</span>{" "}
             <span className="text-[#D4A359] italic font-serif">{heading.highlight}</span>
           </h2>
@@ -56,74 +58,79 @@ export default function Blog({ data = defaultBlogData }: BlogProps) {
             {subheading}
           </p>
 
-        </div>
+        </FadeIn>
 
         {/* Blog Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <StaggerContainer staggerChildren={0.12} delayChildren={0.2} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {items.map((item) => (
-            <div
-              key={item.id}
-              className="flex flex-col bg-[#0C191B]/90 border border-white/10 rounded-3xl p-5 sm:p-6 transition-all duration-300 hover:border-[#D4A359]/40 hover:shadow-[0_15px_35px_rgba(0,0,0,0.5)] group"
-            >
-              {/* Image Container */}
-              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-5">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0B0E14]/40 via-transparent to-transparent opacity-60" />
-              </div>
-
-              {/* Meta Details (Author, Date, Comments) */}
-              <div className="flex items-center gap-3.5 text-xs text-gray-400 font-light mb-3 flex-wrap">
-                <div className="flex items-center gap-1.5">
-                  <User className="w-3.5 h-3.5 text-[#D4A359]" />
-                  <span>By {item.author}</span>
+            <StaggerItem key={item.id}>
+              <motion.div
+                whileHover={{ y: -6, scale: 1.01 }}
+                transition={{ duration: 0.25 }}
+                className="flex flex-col bg-[#0C191B]/90 border border-white/10 rounded-3xl p-5 sm:p-6 transition-colors duration-300 hover:border-[#D4A359]/40 hover:shadow-[0_15px_35px_rgba(0,0,0,0.5)] group h-full cursor-pointer"
+              >
+                {/* Image Container */}
+                <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-5">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B0E14]/40 via-transparent to-transparent opacity-60" />
                 </div>
-                <span className="text-gray-600">|</span>
-                <div className="flex items-center gap-1.5">
-                  <Calendar className="w-3.5 h-3.5 text-[#D4A359]" />
-                  <span>{item.date}</span>
+
+                {/* Meta Details (Author, Date, Comments) */}
+                <div className="flex items-center gap-3.5 text-xs text-gray-400 font-light mb-3 flex-wrap">
+                  <div className="flex items-center gap-1.5">
+                    <User className="w-3.5 h-3.5 text-[#D4A359]" />
+                    <span>By {item.author}</span>
+                  </div>
+                  <span className="text-gray-600">|</span>
+                  <div className="flex items-center gap-1.5">
+                    <Calendar className="w-3.5 h-3.5 text-[#D4A359]" />
+                    <span>{item.date}</span>
+                  </div>
+                  <span className="text-gray-600">|</span>
+                  <div className="flex items-center gap-1.5">
+                    <MessageSquare className="w-3.5 h-3.5 text-[#D4A359]" />
+                    <span>{item.commentsCount}</span>
+                  </div>
                 </div>
-                <span className="text-gray-600">|</span>
-                <div className="flex items-center gap-1.5">
-                  <MessageSquare className="w-3.5 h-3.5 text-[#D4A359]" />
-                  <span>{item.commentsCount}</span>
+
+                {/* Blog Title */}
+                <h3 className="font-serif text-lg sm:text-xl font-medium text-white leading-snug mb-5 group-hover:text-[#E3C280] transition-colors line-clamp-2">
+                  {item.title}
+                </h3>
+
+                {/* Read More Link */}
+                <div className="mt-auto">
+                  <Link
+                    href={item.linkHref}
+                    className="inline-flex items-center gap-2 text-[#D4A359] text-xs sm:text-sm font-medium hover:text-[#E3C280] transition-colors group/link"
+                  >
+                    <span>Read More</span>
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+                  </Link>
                 </div>
-              </div>
 
-              {/* Blog Title */}
-              <h3 className="font-serif text-lg sm:text-xl font-medium text-white leading-snug mb-5 group-hover:text-[#E3C280] transition-colors line-clamp-2">
-                {item.title}
-              </h3>
-
-              {/* Read More Link */}
-              <div className="mt-auto">
-                <Link
-                  href={item.linkHref}
-                  className="inline-flex items-center gap-2 text-[#D4A359] text-xs sm:text-sm font-medium hover:text-[#E3C280] transition-colors group/link"
-                >
-                  <span>Read More</span>
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
-                </Link>
-              </div>
-
-            </div>
+              </motion.div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
 
         {/* View All Articles Action Button */}
-        <div className="flex items-center justify-center mt-10 sm:mt-12">
-          <Link
-            href={buttonHref}
-            className="inline-flex items-center gap-3 px-8 py-3.5 rounded-xl border border-white/15 bg-white/5 hover:bg-[#D4A359] hover:text-[#0B0E14] hover:border-[#D4A359] text-white text-sm font-medium transition-all duration-300 backdrop-blur-sm group/btn"
-          >
-            <span>{buttonText}</span>
-            <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
-          </Link>
-        </div>
+        <FadeIn direction="up" delay={0.4} className="flex items-center justify-center mt-10 sm:mt-12">
+          <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }}>
+            <Link
+              href={buttonHref}
+              className="inline-flex items-center gap-3 px-8 py-3.5 rounded-xl border border-white/15 bg-white/5 hover:bg-[#D4A359] hover:text-[#0B0E14] hover:border-[#D4A359] text-white text-sm font-medium transition-all duration-300 backdrop-blur-sm group/btn"
+            >
+              <span>{buttonText}</span>
+              <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+            </Link>
+          </motion.div>
+        </FadeIn>
 
       </div>
     </section>
