@@ -23,7 +23,7 @@ export function Teamsec({ data = defaultTeamSectionData }: TeamsecProps) {
   return (
     <section className="relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1400px] mx-auto">
-        
+
         {/* Top Centered Header */}
         <FadeIn direction="up" delay={0.1} className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
           {/* Overlapping Double Gold Circles Tagline Badge matching about.tsx / teams.tsx */}
@@ -67,7 +67,7 @@ export function Teamsec({ data = defaultTeamSectionData }: TeamsecProps) {
                     transition={{ duration: 0.25 }}
                     className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] overflow-hidden hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl flex flex-col justify-between h-full cursor-pointer"
                   >
-                    <Link href={member.link || "/team"} className="block">
+                    <Link href={member.link || (member.name ? `/team/${member.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}` : `/team/${member.id}`)} className="block">
                       {/* Top Image Container */}
                       <div className="relative w-full h-[280px] sm:h-[300px] overflow-hidden bg-slate-900">
                         <Image

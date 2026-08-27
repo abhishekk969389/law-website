@@ -85,8 +85,7 @@ export function Navbar({ data = defaultNavbarData }: NavbarProps) {
                                         <span>{link.title}</span>
                                         <ChevronDown className={`w-3.5 h-3.5 text-slate-400 group-hover:text-[#D4A359] transition-transform duration-200 ${isDropdownOpen ? "rotate-180 text-[#D4A359]" : ""}`} />
                                         {isActive && (
-                                            <motion.span
-                                                layoutId="activeNavIndicator"
+                                            <span
                                                 className="absolute left-0 right-0 -bottom-1 h-[2.5px] bg-[#D4A359] rounded-full"
                                             />
                                         )}
@@ -101,8 +100,7 @@ export function Navbar({ data = defaultNavbarData }: NavbarProps) {
                                     >
                                         <span>{link.title}</span>
                                         {isActive && (
-                                            <motion.span
-                                                layoutId="activeNavIndicator"
+                                            <span
                                                 className="absolute left-0 right-0 -bottom-1 h-[2.5px] bg-[#D4A359] rounded-full"
                                             />
                                         )}

@@ -473,67 +473,67 @@
     "items": [
       {
         "id": "1",
-        "title": "Criminal Defense",
-        "description": "Aggressive defense for your rights and freedom. We fight for the best possible outcome.",
-        "icon": "handshake",
+        "title": "Car Accidents Law",
+        "description": "Aggressive legal representation for injured victims to recover maximum compensation.",
+        "icon": "car",
         "image": "/service1.svg",
-        "link": "/service/criminal-defense"
+        "link": "/service/car-accidents-law"
       },
       {
         "id": "2",
-        "title": "DUI Defense",
-        "description": "Experienced representation for DUI/DWI charges and license restoration.",
-        "icon": "scale",
-        "image": "/service2.svg",
-        "link": "/service/dui-defense"
-      },
-      {
-        "id": "3",
-        "title": "Domestic Violence",
-        "description": "Compassionate legal support and protection when you need it most.",
-        "icon": "shield",
-        "image": "/service3.svg",
-        "link": "/service/domestic-violence"
-      },
-      {
-        "id": "4",
-        "title": "Simple Possession",
-        "description": "Legal assistance for simple possession charges with a focus on the future.",
-        "icon": "file-text",
-        "image": "/service4.svg",
-        "link": "/service/simple-possession"
-      },
-      {
-        "id": "5",
         "title": "Criminal Defense",
         "description": "Aggressive defense for your rights and freedom. We fight for the best possible outcome.",
         "icon": "handshake",
-        "image": "/service5.svg",
+        "image": "/service2.svg",
         "link": "/service/criminal-defense"
       },
       {
-        "id": "6",
+        "id": "3",
         "title": "DUI Defense",
         "description": "Experienced representation for DUI/DWI charges and license restoration.",
         "icon": "scale",
-        "image": "/casestudy1.svg",
+        "image": "/service1.svg",
         "link": "/service/dui-defense"
       },
       {
-        "id": "7",
+        "id": "4",
         "title": "Domestic Violence",
         "description": "Compassionate legal support and protection when you need it most.",
         "icon": "shield",
-        "image": "/casestudy2.svg",
+        "image": "/service4.svg",
         "link": "/service/domestic-violence"
       },
       {
-        "id": "8",
+        "id": "5",
         "title": "Simple Possession",
         "description": "Legal assistance for simple possession charges with a focus on the future.",
         "icon": "file-text",
-        "image": "/casestudy3.svg",
+        "image": "/service5.svg",
         "link": "/service/simple-possession"
+      },
+      {
+        "id": "6",
+        "title": "Corporate Law",
+        "description": "Strategic legal counsel for business operations, compliance, and dispute resolution.",
+        "icon": "building",
+        "image": "/casestudy1.svg",
+        "link": "/service/corporate-law"
+      },
+      {
+        "id": "7",
+        "title": "Family & Custody Law",
+        "description": "Dedicated guidance for divorce, child custody, and family legal matters.",
+        "icon": "users",
+        "image": "/casestudy2.svg",
+        "link": "/service/family-law"
+      },
+      {
+        "id": "8",
+        "title": "Personal Injury Law",
+        "description": "Relentless advocacy for accident victims to secure full financial recovery.",
+        "icon": "briefcase",
+        "image": "/casestudy3.svg",
+        "link": "/service/personal-injury"
       }
     ]
   },
@@ -550,28 +550,28 @@
         "name": "Abhishek kumar",
         "role": "Founding Partner",
         "image": "/about.svg",
-        "link": "/team/jonathan-pierce"
+        "link": "/team/abhishek-kumar"
       },
       {
         "id": "2",
         "name": "Kalal Singh",
         "role": "Senior Partner",
         "image": "/casestudy1.svg",
-        "link": "/team/sophia-martinez"
+        "link": "/team/kalal-singh"
       },
       {
         "id": "3",
         "name": "Deepak Kumar",
         "role": "Litigation Partner",
         "image": "/casestudy2.svg",
-        "link": "/team/michael-thompson"
+        "link": "/team/deepak-kumar"
       },
       {
         "id": "4",
-        "name": "Suman Kumar",
+        "name": "Akash Kumar",
         "role": "Corporate Counsel",
         "image": "/casestudy3.svg",
-        "link": "/team/emily-roberts"
+        "link": "/team/akash-kumar"
       },
       {
         "id": "5",
@@ -585,21 +585,21 @@
         "name": "Aman Prajapati",
         "role": "Family Law Attorney",
         "image": "/about.svg",
-        "link": "/team/jessica-lane"
+        "link": "/team/aman-prajapati"
       },
       {
         "id": "7",
         "name": "Mukesh Kumar",
         "role": "Of Counsel",
         "image": "/casestudy1.svg",
-        "link": "/team/richard-hamilton"
+        "link": "/team/mukesh-kumar"
       },
       {
         "id": "8",
         "name": "Mohan Lal",
         "role": "Associate Attorney",
         "image": "/casestudy2.svg",
-        "link": "/team/olivia-chen"
+        "link": "/team/mohan-lal"
       }
     ]
   },
@@ -641,7 +641,7 @@
         "title": "Litigation & Dispute Resolution",
         "description": "Our litigators represent clients in complex commercial disputes, arbitration, and alternative dispute resolution with a focus on favorable outcomes.",
         "icon": "scale",
-        "image": "/service3.svg",
+        "image": "/service1.svg",
         "link": "/industries/litigation-dispute"
       },
       {
@@ -968,7 +968,7 @@
         "category": "CYBER LAW",
         "title": "Cybercrime Prevention and Incident Response Plans",
         "description": "Legal guidelines for enterprise cyber incident reporting and mitigating ransomware liabilities.",
-        "image": "/service3.svg",
+        "image": "/service1.svg",
         "link": "/legal/cybercrime-prevention-incident-response"
       }
     ]
@@ -1106,7 +1106,7 @@
         "fullDate": "24 May 2025",
         "time": "10:00 AM – 01:00 PM",
         "location": "The Claridges, New Delhi",
-        "image": "/service3.svg",
+        "image": "/service1.svg",
         "link": "/event/corporate-law-developments"
       },
       {
@@ -1186,7 +1186,7 @@
         "category": "CORPORATE LAW",
         "title": "New Corporate Governance Rules: What Businesses Need to Know",
         "description": "A comprehensive overview of the newly introduced corporate governance rules and their impact on businesses.",
-        "image": "/service3.svg",
+        "image": "/service1.svg",
         "link": "/publications/corporate-governance-rules"
       },
       {
@@ -1285,7 +1285,7 @@
         "category": "CYBERSECURITY",
         "title": "Enterprise Ransomware Defense and Statutory Data Breach Reporting",
         "description": "Steps organizations must take upon discovering a cybersecurity breach under CERT-In guidelines.",
-        "image": "/service3.svg",
+        "image": "/service1.svg",
         "link": "/publications/enterprise-cybersecurity-defense"
       }
     ]
@@ -2161,27 +2161,35 @@
     "members": [
       {
         "id": "1",
-        "name": "Jonathan Pierce",
-        "role": "Founding Partner",
-        "image": "/casestudy1.svg"
+        "name": "Abhishek Kumar",
+        "role": "Attorney & Legal Advisor",
+        "image": "/about.svg",
+        "linkHref": "/team/abhishek-kumar",
+        "link": "/team/abhishek-kumar"
       },
       {
         "id": "2",
-        "name": "Sophia Martinez",
+        "name": "Kalal Singh",
         "role": "Senior Partner",
-        "image": "/casestudy2.svg"
+        "image": "/casestudy1.svg",
+        "linkHref": "/team/kalal-singh",
+        "link": "/team/kalal-singh"
       },
       {
         "id": "3",
-        "name": "Michael Thompson",
+        "name": "Deepak Kumar",
         "role": "Litigation Partner",
-        "image": "/casestudy3.svg"
+        "image": "/casestudy2.svg",
+        "linkHref": "/team/deepak-kumar",
+        "link": "/team/deepak-kumar"
       },
       {
         "id": "4",
-        "name": "Emily Roberts",
+        "name": "Suman Kumar",
         "role": "Corporate Counsel",
-        "image": "/casestudy4.svg"
+        "image": "/casestudy3.svg",
+        "linkHref": "/team/suman-kumar",
+        "link": "/team/suman-kumar"
       }
     ]
   },
@@ -2410,39 +2418,39 @@
     "items": [
       {
         "id": "1",
-        "icon": "handcuffs",
+        "icon": "car",
         "image": "/service1.svg",
-        "title": "Criminal Defense",
-        "description": "Aggressive defense for your rights and freedom. We fight for the best possible outcome.",
+        "title": "Car Accidents Law",
+        "description": "Aggressive legal representation for injured victims to recover maximum compensation.",
         "linkText": "Learn More",
-        "linkHref": "/services/criminal-defense"
+        "linkHref": "/service/car-accidents-law"
       },
       {
         "id": "2",
-        "icon": "car",
+        "icon": "handcuffs",
         "image": "/service2.svg",
-        "title": "DUI Defense",
-        "description": "Experienced representation for DUI/DWI charges and license restoration.",
+        "title": "Criminal Defense",
+        "description": "Aggressive defense for your rights and freedom. We fight for the best possible outcome.",
         "linkText": "Learn More",
-        "linkHref": "/services/dui-defense"
+        "linkHref": "/service/criminal-defense"
       },
       {
         "id": "3",
         "icon": "shield",
-        "image": "/service3.svg",
-        "title": "Domestic Violence",
-        "description": "Compassionate legal support and protection when you need it most.",
+        "image": "/service1.svg",
+        "title": "DUI Defense",
+        "description": "Experienced representation for DUI/DWI charges and license restoration.",
         "linkText": "Learn More",
-        "linkHref": "/services/domestic-violence"
+        "linkHref": "/service/dui-defense"
       },
       {
         "id": "4",
         "icon": "fileText",
         "image": "/service5.svg",
-        "title": "Simple Possession",
-        "description": "Legal assistance for simple possession charges with a focus on the future.",
+        "title": "Domestic Violence",
+        "description": "Compassionate legal support and protection when you need it most.",
         "linkText": "Learn More",
-        "linkHref": "/services/simple-possession"
+        "linkHref": "/service/domestic-violence"
       }
     ]
   },
@@ -2560,7 +2568,7 @@
         "quote": "Prompt, compassionate, and fiercely defensive of our rights. They stood by us every step of the way and made an overwhelming process seamless and reassuring.",
         "authorName": "Michael Ross",
         "authorRole": "Small Business Owner",
-        "authorAvatar": "/service3.svg",
+        "authorAvatar": "/service1.svg",
         "rating": 5
       }
     ]
@@ -2798,5 +2806,835 @@
       "closedText": "Saturday Closed"
     },
     "copyrightText": "©2021 Veritas All Rights Reserved."
+  },
+  "serviceDetails": [
+    {
+      "id": "1",
+      "slug": "car-accidents-law",
+      "icon": "car",
+      "title": {
+        "line1": "Car Accidents",
+        "line2": "Law"
+      },
+      "subtitle": "We provide aggressive legal representation for individuals injured in car accidents. Our goal is to help you recover the compensation you deserve so you can focus on your recovery.",
+      "headerImage": "/service1.svg",
+      "highlights": [
+        {
+          "id": "h1",
+          "icon": "dollar-sign",
+          "title": "Maximum Compensation"
+        },
+        {
+          "id": "h2",
+          "icon": "shield-check",
+          "title": "No Win No Fee"
+        },
+        {
+          "id": "h3",
+          "icon": "clipboard-check",
+          "title": "Free Case Evaluation"
+        }
+      ],
+      "about": {
+        "title": "About This Service",
+        "description": "Car accidents can lead to serious injuries, emotional trauma, and financial stress. Our experienced attorneys are here to protect your rights and fight for the compensation you deserve. We handle every aspect of your case, from investigating the accident to negotiating with insurance companies.",
+        "processes": [
+          {
+            "id": "p1",
+            "icon": "search",
+            "title": "Investigate",
+            "description": "We thoroughly investigate the accident to gather evidence and build a strong case."
+          },
+          {
+            "id": "p2",
+            "icon": "handshake",
+            "title": "Negotiate",
+            "description": "We deal with insurance companies so you don't have to and fight for fair settlements."
+          },
+          {
+            "id": "p3",
+            "icon": "gavel",
+            "title": "Litigate",
+            "description": "If a fair settlement isn't possible, we're ready to take your case to court."
+          },
+          {
+            "id": "p4",
+            "icon": "coins",
+            "title": "Maximize",
+            "description": "Our goal is to maximize your compensation for medical bills, lost wages, and pain & suffering."
+          }
+        ]
+      },
+      "approach": {
+        "title": "Our Approach",
+        "description": "We are committed to delivering personalized legal solutions with compassion and dedication.",
+        "image": "/about-img.svg",
+        "benefits": [
+          "Comprehensive Case Evaluation",
+          "Personalized Legal Strategy",
+          "Aggressive Representation",
+          "Clear Communication",
+          "Focused on Your Recovery"
+        ]
+      },
+      "sidebarContact": {
+        "title": "Contact Info",
+        "phone": {
+          "label": "Contact Phone",
+          "value": "+012 (345) 56 998",
+          "href": "tel:+01234556998"
+        },
+        "email": {
+          "label": "Contact Mail",
+          "value": "support@gmail.com",
+          "href": "mailto:support@gmail.com"
+        },
+        "location": {
+          "label": "Office Location",
+          "value": "59 Main Street, USA"
+        }
+      },
+      "sidebarForm": {
+        "title": "Get In Touch",
+        "namePlaceholder": "Your Full Name",
+        "emailPlaceholder": "Email Address",
+        "messagePlaceholder": "Additional Message",
+        "buttonText": "Get In Touch"
+      }
+    },
+    {
+      "id": "2",
+      "slug": "criminal-defense",
+      "icon": "handshake",
+      "title": {
+        "line1": "Criminal Defense",
+        "line2": "Law"
+      },
+      "subtitle": "Aggressive defense for your rights and freedom. We fight relentlessly for the best possible outcome in state and federal courts.",
+      "headerImage": "/service2.svg",
+      "highlights": [
+        {
+          "id": "h1",
+          "icon": "shield-check",
+          "title": "Rights Protection"
+        },
+        {
+          "id": "h2",
+          "icon": "clipboard-check",
+          "title": "24/7 Consultation"
+        },
+        {
+          "id": "h3",
+          "icon": "dollar-sign",
+          "title": "Trial Readiness"
+        }
+      ],
+      "about": {
+        "title": "About This Service",
+        "description": "Facing criminal charges can threaten your reputation, career, and personal freedom. Our defense attorneys scrutinize state evidence, challenge law enforcement procedure, and build robust defense strategies tailored to your situation.",
+        "processes": [
+          {
+            "id": "p1",
+            "icon": "search",
+            "title": "Audit Evidence",
+            "description": "We carefully examine police reports, witness statements, and forensic evidence for errors."
+          },
+          {
+            "id": "p2",
+            "icon": "handshake",
+            "title": "Negotiate Terms",
+            "description": "We advocate for charge dismissals, bail reductions, and favorable plea agreements."
+          },
+          {
+            "id": "p3",
+            "icon": "gavel",
+            "title": "Court Defense",
+            "description": "If your case proceeds to trial, we present compelling arguments to defend your innocence."
+          },
+          {
+            "id": "p4",
+            "icon": "coins",
+            "title": "Protect Future",
+            "description": "Our objective is to safeguard your record, reputation, and long-term liberty."
+          }
+        ]
+      },
+      "approach": {
+        "title": "Our Approach",
+        "description": "We combine aggressive defense tactics with thorough preparation to protect your Constitutional rights.",
+        "image": "/casestudy1.svg",
+        "benefits": [
+          "Immediate Pre-Trial Intervention",
+          "Confidential Case Strategy",
+          "Expert Forensic Analysis",
+          "Proven Courtroom Success",
+          "Dedicated Legal Advocates"
+        ]
+      }
+    },
+    {
+      "id": "3",
+      "slug": "dui-defense",
+      "icon": "scale",
+      "title": {
+        "line1": "DUI & DWI Defense",
+        "line2": "Law"
+      },
+      "subtitle": "Experienced legal representation for DUI/DWI charges, breathalyzer challenges, and driver's license restoration.",
+      "headerImage": "/service1.svg",
+      "highlights": [
+        {
+          "id": "h1",
+          "icon": "shield-check",
+          "title": "License Defense"
+        },
+        {
+          "id": "h2",
+          "icon": "clipboard-check",
+          "title": "Technical Audits"
+        },
+        {
+          "id": "h3",
+          "icon": "dollar-sign",
+          "title": "Penalty Reduction"
+        }
+      ],
+      "about": {
+        "title": "About This Service",
+        "description": "A DUI charge can lead to license suspension, steep fines, and insurance premium surges. Our attorneys challenge field sobriety testing, breathalyzer device calibration, and officer stop legality.",
+        "processes": [
+          {
+            "id": "p1",
+            "icon": "search",
+            "title": "Review Stop",
+            "description": "We verify whether law enforcement had reasonable suspicion for your initial traffic stop."
+          },
+          {
+            "id": "p2",
+            "icon": "handshake",
+            "title": "DMV Hearing",
+            "description": "We represent you at administrative driver license hearings to prevent suspension."
+          },
+          {
+            "id": "p3",
+            "icon": "gavel",
+            "title": "Litigate Charges",
+            "description": "We contest improper testing protocols and challenge prosecution evidence in court."
+          },
+          {
+            "id": "p4",
+            "icon": "coins",
+            "title": "Minimize Impact",
+            "description": "We seek diversion programs, reduced penalties, and expungement of records."
+          }
+        ]
+      },
+      "approach": {
+        "title": "Our Approach",
+        "description": "We scrutinize every technical aspect of your arrest to protect your driving privileges.",
+        "image": "/casestudy2.svg",
+        "benefits": [
+          "Administrative Hearing Defense",
+          "Breathalyzer Calibration Audits",
+          "First-Offender Diversion Options",
+          "Driving License Restoration",
+          "Targeted Court Representation"
+        ]
+      }
+    },
+    {
+      "id": "4",
+      "slug": "domestic-violence",
+      "icon": "shield",
+      "title": {
+        "line1": "Domestic Violence",
+        "line2": "Law"
+      },
+      "subtitle": "Compassionate legal support, emergency protective orders, and defense representation during sensitive family matters.",
+      "headerImage": "/service4.svg",
+      "highlights": [
+        {
+          "id": "h1",
+          "icon": "shield-check",
+          "title": "Emergency Orders"
+        },
+        {
+          "id": "h2",
+          "icon": "clipboard-check",
+          "title": "Confidential Care"
+        },
+        {
+          "id": "h3",
+          "icon": "dollar-sign",
+          "title": "Family Rights"
+        }
+      ],
+      "about": {
+        "title": "About This Service",
+        "description": "Domestic legal disputes require prompt, discreet, and decisive action. Whether securing emergency protective orders or defending against false claims, we protect your safety and legal standing.",
+        "processes": [
+          {
+            "id": "p1",
+            "icon": "search",
+            "title": "Evaluate Risk",
+            "description": "We assess immediate safety needs and prepare emergency legal filings."
+          },
+          {
+            "id": "p2",
+            "icon": "handshake",
+            "title": "Protect Rights",
+            "description": "We negotiate protective order terms and child safety arrangements."
+          },
+          {
+            "id": "p3",
+            "icon": "gavel",
+            "title": "Court Hearing",
+            "description": "We represent your interests at restraining order and domestic court proceedings."
+          },
+          {
+            "id": "p4",
+            "icon": "coins",
+            "title": "Long-Term Peace",
+            "description": "We secure stable, enforceable legal orders for ongoing security."
+          }
+        ]
+      },
+      "approach": {
+        "title": "Our Approach",
+        "description": "We treat every domestic matter with discretion, urgency, and firm advocacy.",
+        "image": "/casestudy3.svg",
+        "benefits": [
+          "Emergency Restraining Orders",
+          "Custody & Visitation Guidance",
+          "Confidential Case Management",
+          "Discreet Dispute Resolution",
+          "Dedicated Client Support"
+        ]
+      }
+    },
+    {
+      "id": "5",
+      "slug": "simple-possession",
+      "icon": "file-text",
+      "title": {
+        "line1": "Simple Possession",
+        "line2": "Law"
+      },
+      "subtitle": "Strategic legal assistance for possession charges with a focus on pre-trial diversion and record protection.",
+      "headerImage": "/service5.svg",
+      "highlights": [
+        {
+          "id": "h1",
+          "icon": "shield-check",
+          "title": "Record Sealing"
+        },
+        {
+          "id": "h2",
+          "icon": "clipboard-check",
+          "title": "Pre-Trial Diversion"
+        },
+        {
+          "id": "h3",
+          "icon": "dollar-sign",
+          "title": "Clean Background"
+        }
+      ],
+      "about": {
+        "title": "About This Service",
+        "description": "Simple possession charges can negatively impact employment opportunities and educational goals. We work aggressively to secure entry into pre-trial intervention or conditional discharge programs.",
+        "processes": [
+          {
+            "id": "p1",
+            "icon": "search",
+            "title": "Search Audit",
+            "description": "We challenge illegal searches, seizures, and traffic stops that violated your rights."
+          },
+          {
+            "id": "p2",
+            "icon": "handshake",
+            "title": "Diversion Entry",
+            "description": "We petition prosecutors for pre-trial intervention to avoid a conviction."
+          },
+          {
+            "id": "p3",
+            "icon": "gavel",
+            "title": "Case Dismissal",
+            "description": "Upon successful program completion, we move for immediate charge dismissal."
+          },
+          {
+            "id": "p4",
+            "icon": "coins",
+            "title": "Expungement",
+            "description": "We file for criminal record expungement to protect your professional future."
+          }
+        ]
+      },
+      "approach": {
+        "title": "Our Approach",
+        "description": "Our priority is to resolve simple possession charges swiftly without permanent record damage.",
+        "image": "/service1.svg",
+        "benefits": [
+          "Constitutional Rights Defense",
+          "Pre-Trial Diversion Placement",
+          "Expungement Preparation",
+          "Student & Professional Defense",
+          "Proactive Case Resolution"
+        ]
+      }
+    },
+    {
+      "id": "6",
+      "slug": "corporate-law",
+      "icon": "building",
+      "title": {
+        "line1": "Corporate & Business",
+        "line2": "Law"
+      },
+      "subtitle": "Comprehensive legal advisory for enterprise formation, contract negotiations, compliance, and business litigation.",
+      "headerImage": "/service2.svg",
+      "highlights": [
+        {
+          "id": "h1",
+          "icon": "shield-check",
+          "title": "Corporate Guard"
+        },
+        {
+          "id": "h2",
+          "icon": "clipboard-check",
+          "title": "Contract Audits"
+        },
+        {
+          "id": "h3",
+          "icon": "dollar-sign",
+          "title": "Asset Protection"
+        }
+      ],
+      "about": {
+        "title": "About This Service",
+        "description": "Businesses face complex regulatory demands and contractual challenges. Our legal team serves as outside general counsel, protecting corporate assets, negotiating deals, and resolving shareholder disputes.",
+        "processes": [
+          {
+            "id": "p1",
+            "icon": "search",
+            "title": "Risk Analysis",
+            "description": "We review corporate structure, compliance, and commercial contracts."
+          },
+          {
+            "id": "p2",
+            "icon": "handshake",
+            "title": "Deal Drafting",
+            "description": "We structure, draft, and negotiate robust commercial agreements."
+          },
+          {
+            "id": "p3",
+            "icon": "gavel",
+            "title": "Dispute Defense",
+            "description": "We defend corporate interests in arbitration and commercial court."
+          },
+          {
+            "id": "p4",
+            "icon": "coins",
+            "title": "Enterprise Growth",
+            "description": "We provide ongoing legal infrastructure for scalable corporate growth."
+          }
+        ]
+      },
+      "approach": {
+        "title": "Our Approach",
+        "description": "We partner with businesses to minimize liability, streamline compliance, and drive strategic expansion.",
+        "image": "/service1.svg",
+        "benefits": [
+          "Executive Advisory Services",
+          "Custom Contract Drafting",
+          "Shareholder Dispute Mitigation",
+          "Regulatory Compliance Audits",
+          "Mergers & Acquisitions Guidance"
+        ]
+      }
+    },
+    {
+      "id": "7",
+      "slug": "family-law",
+      "icon": "users",
+      "title": {
+        "line1": "Family & Custody",
+        "line2": "Law"
+      },
+      "subtitle": "Dedicated legal guidance for divorce, child custody agreements, spousal support, and marital property division.",
+      "headerImage": "/service1.svg",
+      "highlights": [
+        {
+          "id": "h1",
+          "icon": "shield-check",
+          "title": "Child Best Interest"
+        },
+        {
+          "id": "h2",
+          "icon": "clipboard-check",
+          "title": "Asset Division"
+        },
+        {
+          "id": "h3",
+          "icon": "dollar-sign",
+          "title": "Fair Settlement"
+        }
+      ],
+      "about": {
+        "title": "About This Service",
+        "description": "Family law matters require empathy backed by assertive legal advocacy. We guide clients through divorce proceedings, custody negotiations, and financial settlements while safeguarding familial stability.",
+        "processes": [
+          {
+            "id": "p1",
+            "icon": "search",
+            "title": "Asset Audit",
+            "description": "We uncover and value all marital assets, real estate, and financial holdings."
+          },
+          {
+            "id": "p2",
+            "icon": "handshake",
+            "title": "Mediation",
+            "description": "We seek amicable custody, support, and property settlement agreements."
+          },
+          {
+            "id": "p3",
+            "icon": "gavel",
+            "title": "Family Court",
+            "description": "We advocate fiercely in court when contested issues require trial."
+          },
+          {
+            "id": "p4",
+            "icon": "coins",
+            "title": "Decree Execution",
+            "description": "We ensure full enforcement of custody schedules and financial orders."
+          }
+        ]
+      },
+      "approach": {
+        "title": "Our Approach",
+        "description": "We combine sensitive personal support with rigorous legal strategy to protect your family's future.",
+        "image": "/service4.svg",
+        "benefits": [
+          "Child Custody & Support Strategy",
+          "High-Net-Worth Property Division",
+          "Alimony & Spousal Support",
+          "Pre- & Post-Nuptial Agreements",
+          "Post-Decree Modifications"
+        ]
+      }
+    },
+    {
+      "id": "8",
+      "slug": "personal-injury",
+      "icon": "briefcase",
+      "title": {
+        "line1": "Personal Injury",
+        "line2": "Law"
+      },
+      "subtitle": "Relentless legal advocacy for victims of negligence to recover medical costs, lost income, and pain & suffering.",
+      "headerImage": "/service4.svg",
+      "highlights": [
+        {
+          "id": "h1",
+          "icon": "dollar-sign",
+          "title": "Full Recovery"
+        },
+        {
+          "id": "h2",
+          "icon": "shield-check",
+          "title": "Zero Out-of-Pocket"
+        },
+        {
+          "id": "h3",
+          "icon": "clipboard-check",
+          "title": "Free Evaluation"
+        }
+      ],
+      "about": {
+        "title": "About This Service",
+        "description": "When someone else's negligence causes serious harm, insurance companies often try to minimize settlements. Our trial lawyers build overwhelming evidence to secure maximum financial compensation.",
+        "processes": [
+          {
+            "id": "p1",
+            "icon": "search",
+            "title": "Gather Proof",
+            "description": "We collect medical records, accident reports, expert testimony, and video evidence."
+          },
+          {
+            "id": "p2",
+            "icon": "handshake",
+            "title": "Insurer Demands",
+            "description": "We present comprehensive compensation demands to insurance adjusters."
+          },
+          {
+            "id": "p3",
+            "icon": "gavel",
+            "title": "Jury Litigation",
+            "description": "If insurers refuse fair payment, we take your injury claim to trial."
+          },
+          {
+            "id": "p4",
+            "icon": "coins",
+            "title": "Max Payout",
+            "description": "We secure compensation for medical bills, rehabilitation, lost wages, and pain."
+          }
+        ]
+      },
+      "approach": {
+        "title": "Our Approach",
+        "description": "We take on corporate insurance providers on your behalf so you can focus entirely on physical healing.",
+        "image": "/service5.svg",
+        "benefits": [
+          "No Fee Unless We Win",
+          "Comprehensive Medical Claim Valuation",
+          "Expert Accident Reconstruction",
+          "Aggressive Insurance Negotiations",
+          "Maximum Compensation Focus"
+        ]
+      }
+    }
+  ],
+  "teamDetails": [
+    {
+      "id": "1",
+      "slug": "abhishek-kumar",
+      "name": "Abhishek Kumar",
+      "role": "Attorney & Legal Advisor",
+      "tagline": "EXPERIENCED ATTORNEYS",
+      "image": "/about.svg",
+      "shortBio": "At Marvin McKinney, our team of dedicated attorneys brings together years of experience, diverse legal expertise, and a shared commitment to achieving the best outcomes for our clients. Each member of our team is passionate about upholding justice and delivering results-driven representation across a range of legal areas.",
+      "contactInfo": {
+        "experienceLabel": "Experience",
+        "experienceValue": "More Than 20 Years",
+        "phoneLabel": "Phone",
+        "phoneValue": "+888 (555) 546-33",
+        "phoneHref": "tel:+88855554633",
+        "emailLabel": "Email",
+        "emailValue": "Info@Example.Com",
+        "emailHref": "mailto:Info@Example.Com",
+        "faxLabel": "Fax",
+        "faxValue": "+3265551209"
+      },
+      "aboutMe": {
+        "title": "About Me",
+        "paragraphs": [
+          "Hello, I'm Abhishek Kumar, an attorney dedicated to helping individuals and businesses navigate complex legal challenges with confidence and clarity. With 20 of experience in practice areas such as family law, criminal defense, and estate planning, my goal is to provide tailored, strategic guidance to every client I serve.",
+          "My approach is built on active listening, clear communication, and a deep understanding of each client's unique circumstances. I take the time to understand your goals and concerns, creating a legal strategy that aligns with what matters most to you. Whether I'm in the courtroom or advocating behind the scenes, I am committed to achieving the best possible outcomes."
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "slug": "kalal-singh",
+      "name": "Kalal Singh",
+      "role": "Senior Partner",
+      "tagline": "EXPERIENCED ATTORNEYS",
+      "image": "/casestudy1.svg",
+      "shortBio": "At Marvin McKinney, our team of dedicated attorneys brings together years of experience, diverse legal expertise, and a shared commitment to achieving the best outcomes for our clients. Each member of our team is passionate about upholding justice and delivering results-driven representation across a range of legal areas",
+      "contactInfo": {
+        "experienceLabel": "Experience",
+        "experienceValue": "More Than 18 Years",
+        "phoneLabel": "Phone",
+        "phoneValue": "+888 (555) 546-34",
+        "phoneHref": "tel:+88855554634",
+        "emailLabel": "Email",
+        "emailValue": "Kalal@Example.Com",
+        "emailHref": "mailto:Kalal@Example.Com",
+        "faxLabel": "Fax",
+        "faxValue": "+3265551210"
+      },
+      "aboutMe": {
+        "title": "About Me",
+        "paragraphs": [
+          "Hello, I'm Kalal Singh, an attorney dedicated to helping individuals and businesses navigate complex legal challenges with confidence and clarity. With 20 of experience in practice areas such as family law, criminal defense, and estate planning, my goal is to provide tailored, strategic guidance to every client I serve.",
+          "My approach is built on active listening, clear communication, and a deep understanding of each client's unique circumstances. I take the time to understand your goals and concerns, creating a legal strategy that aligns with what matters most to you. Whether I'm in the courtroom or advocating behind the scenes, I am committed to achieving the best possible outcomes."
+        ]
+      }
+    },
+    {
+      "id": "3",
+      "slug": "deepak-kumar",
+      "name": "Deepak Kumar",
+      "role": "Litigation Partner",
+      "tagline": "EXPERIENCED ATTORNEYS",
+      "image": "/casestudy2.svg",
+      "shortBio": "At Marvin McKinney, our team of dedicated attorneys brings together years of experience, diverse legal expertise, and a shared commitment to achieving the best outcomes for our clients. Each member of our team is passionate about upholding justice and delivering results-driven representation across a range of legal areas",
+      "contactInfo": {
+        "experienceLabel": "Experience",
+        "experienceValue": "More Than 15 Years",
+        "phoneLabel": "Phone",
+        "phoneValue": "+888 (555) 546-35",
+        "phoneHref": "tel:+88855554635",
+        "emailLabel": "Email",
+        "emailValue": "Deepak@Example.Com",
+        "emailHref": "mailto:Deepak@Example.Com",
+        "faxLabel": "Fax",
+        "faxValue": "+3265551211"
+      },
+      "aboutMe": {
+        "title": "About Me",
+        "paragraphs": [
+          "Hello, I'm Deepak Kumar, an attorney dedicated to helping individuals and businesses navigate complex legal challenges with confidence and clarity. With 20 of experience in practice areas such as family law, criminal defense, and estate planning, my goal is to provide tailored, strategic guidance to every client I serve.",
+          "My approach is built on active listening, clear communication, and a deep understanding of each client's unique circumstances. I take the time to understand your goals and concerns, creating a legal strategy that aligns with what matters most to you. Whether I'm in the courtroom or advocating behind the scenes, I am committed to achieving the best possible outcomes."
+        ]
+      }
+    },
+    {
+      "id": "4",
+      "slug": "akash-kumar",
+      "name": "Akash Kumar",
+      "role": "Corporate Counsel",
+      "tagline": "EXPERIENCED ATTORNEYS",
+      "image": "/casestudy3.svg",
+      "shortBio": "At Marvin McKinney, our team of dedicated attorneys brings together years of experience, diverse legal expertise, and a shared commitment to achieving the best outcomes for our clients. Each member of our team is passionate about upholding justice and delivering results-driven representation across a range of legal areas",
+      "contactInfo": {
+        "experienceLabel": "Experience",
+        "experienceValue": "More Than 12 Years",
+        "phoneLabel": "Phone",
+        "phoneValue": "+888 (555) 546-36",
+        "phoneHref": "tel:+88855554636",
+        "emailLabel": "Email",
+        "emailValue": "Suman@Example.Com",
+        "emailHref": "mailto:Suman@Example.Com",
+        "faxLabel": "Fax",
+        "faxValue": "+3265551212"
+      },
+      "aboutMe": {
+        "title": "About Me",
+        "paragraphs": [
+          "Hello, I'm Suman Kumar, an attorney dedicated to helping individuals and businesses navigate complex legal challenges with confidence and clarity. With 20 of experience in practice areas such as family law, criminal defense, and estate planning, my goal is to provide tailored, strategic guidance to every client I serve.",
+          "My approach is built on active listening, clear communication, and a deep understanding of each client's unique circumstances. I take the time to understand your goals and concerns, creating a legal strategy that aligns with what matters most to you. Whether I'm in the courtroom or advocating behind the scenes, I am committed to achieving the best possible outcomes."
+        ]
+      }
+    },
+    {
+      "id": "5",
+      "slug": "david-kapoor",
+      "name": "David Kapoor",
+      "role": "Tax Law Specialist",
+      "tagline": "EXPERIENCED ATTORNEYS",
+      "image": "/casestudy4.svg",
+      "shortBio": "At Marvin McKinney, our team of dedicated attorneys brings together years of experience, diverse legal expertise, and a shared commitment to achieving the best outcomes for our clients. Each member of our team is passionate about upholding justice and delivering results-driven representation across a range of legal areas",
+      "contactInfo": {
+        "experienceLabel": "Experience",
+        "experienceValue": "More Than 16 Years",
+        "phoneLabel": "Phone",
+        "phoneValue": "+888 (555) 546-37",
+        "phoneHref": "tel:+88855554637",
+        "emailLabel": "Email",
+        "emailValue": "David@Example.Com",
+        "emailHref": "mailto:David@Example.Com",
+        "faxLabel": "Fax",
+        "faxValue": "+3265551213"
+      },
+      "aboutMe": {
+        "title": "About Me",
+        "paragraphs": [
+          "Hello, I'm David Kapoor, an attorney dedicated to helping individuals and businesses navigate complex legal challenges with confidence and clarity. With 20 of experience in practice areas such as family law, criminal defense, and estate planning, my goal is to provide tailored, strategic guidance to every client I serve.",
+          "My approach is built on active listening, clear communication, and a deep understanding of each client's unique circumstances. I take the time to understand your goals and concerns, creating a legal strategy that aligns with what matters most to you. Whether I'm in the courtroom or advocating behind the scenes, I am committed to achieving the best possible outcomes."
+        ]
+      }
+    },
+    {
+      "id": "6",
+      "slug": "aman-prajapati",
+      "name": "Aman Prajapati",
+      "role": "Family Law Attorney",
+      "tagline": "EXPERIENCED ATTORNEYS",
+      "image": "/about.svg",
+      "shortBio": "At Marvin McKinney, our team of dedicated attorneys brings together years of experience, diverse legal expertise, and a shared commitment to achieving the best outcomes for our clients. Each member of our team is passionate about upholding justice and delivering results-driven representation across a range of legal areas",
+      "contactInfo": {
+        "experienceLabel": "Experience",
+        "experienceValue": "More Than 10 Years",
+        "phoneLabel": "Phone",
+        "phoneValue": "+888 (555) 546-38",
+        "phoneHref": "tel:+88855554638",
+        "emailLabel": "Email",
+        "emailValue": "Aman@Example.Com",
+        "emailHref": "mailto:Aman@Example.Com",
+        "faxLabel": "Fax",
+        "faxValue": "+3265551214"
+      },
+      "aboutMe": {
+        "title": "About Me",
+        "paragraphs": [
+          ", I'm Aman Prajapati, an attorney dedicated to helping individuals and businesses navigate complex legal challenges with confidence and clarity. With 20 of experience in practice areas such as family law, criminal defense, and estate planning, my goal is to provide tailored, strategic guidance to every client I serve.",
+          "My approach is built on active listening, clear communication, and a deep understanding of each client's unique circumstances. I take the time to understand your goals and concerns, creating a legal strategy that aligns with what matters most to you. Whether I'm in the courtroom or advocating behind the scenes, I am committed to achieving the best possible outcomes."
+        ]
+      }
+    },
+    {
+      "id": "7",
+      "slug": "mukesh-kumar",
+      "name": "Mukesh Kumar",
+      "role": "Of Counsel",
+      "tagline": "EXPERIENCED ATTORNEYS",
+      "image": "/casestudy1.svg",
+      "shortBio": "At Marvin McKinney, our team of dedicated attorneys brings together years of experience, diverse legal expertise, and a shared commitment to achieving the best outcomes for our clients. Each member of our team is passionate about upholding justice and delivering results-driven representation across a range of legal areas",
+      "contactInfo": {
+        "experienceLabel": "Experience",
+        "experienceValue": "More Than 25 Years",
+        "phoneLabel": "Phone",
+        "phoneValue": "+888 (555) 546-39",
+        "phoneHref": "tel:+88855554639",
+        "emailLabel": "Email",
+        "emailValue": "Mukesh@Example.Com",
+        "emailHref": "mailto:Mukesh@Example.Com",
+        "faxLabel": "Fax",
+        "faxValue": "+3265551215"
+      },
+      "aboutMe": {
+        "title": "About Me",
+        "paragraphs": [
+          "Hello, I'm Mukesh Kumar, an attorney dedicated to helping individuals and businesses navigate complex legal challenges with confidence and clarity. With 20 of experience in practice areas such as family law, criminal defense, and estate planning, my goal is to provide tailored, strategic guidance to every client I serve.",
+          "My approach is built on active listening, clear communication, and a deep understanding of each client's unique circumstances. I take the time to understand your goals and concerns, creating a legal strategy that aligns with what matters most to you. Whether I'm in the courtroom or advocating behind the scenes, I am committed to achieving the best possible outcomes."
+        ]
+      }
+    },
+    {
+      "id": "8",
+      "slug": "mohan-lal",
+      "name": "Mohan Lal",
+      "role": "Associate Attorney",
+      "tagline": "EXPERIENCED ATTORNEYS",
+      "image": "/casestudy2.svg",
+      "shortBio": "At Marvin McKinney, our team of dedicated attorneys brings together years of experience, diverse legal expertise, and a shared commitment to achieving the best outcomes for our clients. Each member of our team is passionate about upholding justice and delivering results-driven representation across a range of legal areas",
+      "contactInfo": {
+        "experienceLabel": "Experience",
+        "experienceValue": "More Than 7 Years",
+        "phoneLabel": "Phone",
+        "phoneValue": "+888 (555) 546-40",
+        "phoneHref": "tel:+88855554640",
+        "emailLabel": "Email",
+        "emailValue": "Mohan@Example.Com",
+        "emailHref": "mailto:Mohan@Example.Com",
+        "faxLabel": "Fax",
+        "faxValue": "+3265551216"
+      },
+      "aboutMe": {
+        "title": "About Me",
+        "paragraphs": [
+          "Hello, I'm Mohan Lal, an attorney dedicated to helping individuals and businesses navigate complex legal challenges with confidence and clarity. With 20 of experience in practice areas such as family law, criminal defense, and estate planning, my goal is to provide tailored, strategic guidance to every client I serve.",
+          "My approach is built on active listening, clear communication, and a deep understanding of each client's unique circumstances. I take the time to understand your goals and concerns, creating a legal strategy that aligns with what matters most to you. Whether I'm in the courtroom or advocating behind the scenes, I am committed to achieving the best possible outcomes."
+        ]
+      }
+    }
+  ],
+  "teamDetailsSubBanner": {
+    "title": "Team Details",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Our Team",
+        "href": "/team"
+      },
+      {
+        "label": "Team Details",
+        "isActive": true
+      }
+    ],
+    "backgroundImage": "/subbanner.svg"
   }
 }

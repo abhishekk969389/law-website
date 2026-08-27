@@ -117,9 +117,11 @@ export default function Services({ data = defaultServicesData }: ServicesProps) 
                     </motion.div>
 
                     {/* Card Title */}
-                    <h3 className="text-white font-serif font-medium text-lg sm:text-xl mb-2 tracking-tight group-hover:text-[#D4A359] transition-colors">
-                      {item.title}
-                    </h3>
+                    <Link href={item.linkHref || `/service/${item.id || index + 1}`}>
+                      <h3 className="text-white font-serif font-medium text-lg sm:text-xl mb-2 tracking-tight group-hover:text-[#D4A359] transition-colors cursor-pointer">
+                        {item.title}
+                      </h3>
+                    </Link>
 
                     {/* Small Golden Underline */}
                     <div className="w-9 h-[2px] bg-[#D4A359]/80 mb-3" />
@@ -131,7 +133,7 @@ export default function Services({ data = defaultServicesData }: ServicesProps) 
 
                     {/* Learn More Action Button */}
                     <Link
-                      href={item.linkHref || "#"}
+                      href={item.linkHref || `/service/${item.id || index + 1}`}
                       className="inline-flex items-center gap-2 text-[#D4A359] hover:text-[#E3C280] font-medium text-xs sm:text-sm tracking-wide transition-all group-hover:gap-3 mt-auto"
                     >
                       <span>{item.linkText || "Learn More"}</span>

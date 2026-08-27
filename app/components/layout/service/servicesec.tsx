@@ -111,9 +111,11 @@ export function Servicesec({ data = defaultServiceSectionData }: ServicesecProps
                       {/* Card Content Body */}
                       <div className="pt-10 pb-4 px-5 text-center">
                         {/* Card Title */}
-                        <h3 className="font-serif font-semibold text-white text-lg sm:text-xl text-center mb-2.5 group-hover:text-[#D4A359] transition-colors">
-                          {item.title}
-                        </h3>
+                        <Link href={item.link || `/service/${item.id}`}>
+                          <h3 className="font-serif font-semibold text-white text-lg sm:text-xl text-center mb-2.5 group-hover:text-[#D4A359] transition-colors cursor-pointer">
+                            {item.title}
+                          </h3>
+                        </Link>
 
                         {/* Card Description */}
                         <p className="text-slate-400 text-xs sm:text-sm leading-relaxed text-center min-h-[44px]">
@@ -125,7 +127,7 @@ export function Servicesec({ data = defaultServiceSectionData }: ServicesecProps
                     {/* Card Action Link */}
                     <div className="pb-6 pt-2 px-5 text-center">
                       <Link
-                        href={item.link || "/service"}
+                        href={item.link || `/service/${item.id}`}
                         className="inline-flex items-center justify-center gap-2 text-[#D4A359] text-xs font-semibold uppercase tracking-wider group-hover:gap-3 transition-all hover:underline"
                       >
                         <span>Learn More</span>
