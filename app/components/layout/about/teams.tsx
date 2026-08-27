@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import rawLawData from "@/app/data/lawData.json";
 import { TeamData, GlobalLawData } from "@/types/law";
@@ -59,39 +60,41 @@ export function Team({ data = defaultTeamData }: TeamProps) {
                   transition={{ duration: 0.25 }}
                   className="group relative bg-[#0E131C] border border-slate-800/80 rounded-2xl overflow-hidden shadow-xl hover:border-[#D4A359]/60 hover:bg-[#121824] transition-colors duration-300 flex flex-col cursor-pointer h-full"
                 >
-                  {/* Member Portrait Image */}
-                  <div className="relative w-full h-[280px] sm:h-[320px] lg:h-[340px] overflow-hidden bg-slate-900">
-                    <Image
-                      src={member.image || "/casestudy1.svg"}
-                      alt={member.name}
-                      fill
-                      priority
-                      className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                    />
-                    {/* Subtle Dark Gradient Overlay at bottom of image */}
-                    <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#0E131C] to-transparent opacity-80" />
-                  </div>
-
-                  {/* Member Info Card Body */}
-                  <div className="p-5 sm:p-6 flex flex-col justify-between flex-1">
-                    <div>
-                      {/* Role Title */}
-                      <p className="text-slate-400 text-xs sm:text-sm font-medium tracking-wide mb-2 group-hover:text-slate-300 transition-colors">
-                        {member.role}
-                      </p>
-
-                      {/* Gold Underline Accent */}
-                      <div className="w-8 h-[1.5px] bg-[#D4A359]/50 mb-4 group-hover:w-14 group-hover:bg-[#D4A359] transition-all duration-300" />
+                  <Link href={member.linkHref || `/team/${member.id}`} className="flex flex-col h-full w-full">
+                    {/* Member Portrait Image */}
+                    <div className="relative w-full h-[280px] sm:h-[320px] lg:h-[340px] overflow-hidden bg-slate-900">
+                      <Image
+                        src={member.image || "/casestudy1.svg"}
+                        alt={member.name}
+                        fill
+                        priority
+                        className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                      />
+                      {/* Subtle Dark Gradient Overlay at bottom of image */}
+                      <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#0E131C] to-transparent opacity-80" />
                     </div>
 
-                    {/* Name and Top-Right Arrow */}
-                    <div className="flex items-center justify-between gap-2">
-                      <h3 className="font-serif font-semibold text-white text-lg sm:text-xl group-hover:text-[#D4A359] transition-colors">
-                        {member.name}
-                      </h3>
-                      <ArrowUpRight className="w-5 h-5 text-[#D4A359] shrink-0 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform stroke-[2.5]" />
+                    {/* Member Info Card Body */}
+                    <div className="p-5 sm:p-6 flex flex-col justify-between flex-1">
+                      <div>
+                        {/* Role Title */}
+                        <p className="text-slate-400 text-xs sm:text-sm font-medium tracking-wide mb-2 group-hover:text-slate-300 transition-colors">
+                          {member.role}
+                        </p>
+
+                        {/* Gold Underline Accent */}
+                        <div className="w-8 h-[1.5px] bg-[#D4A359]/50 mb-4 group-hover:w-14 group-hover:bg-[#D4A359] transition-all duration-300" />
+                      </div>
+
+                      {/* Name and Top-Right Arrow */}
+                      <div className="flex items-center justify-between gap-2">
+                        <h3 className="font-serif font-semibold text-white text-lg sm:text-xl group-hover:text-[#D4A359] transition-colors">
+                          {member.name}
+                        </h3>
+                        <ArrowUpRight className="w-5 h-5 text-[#D4A359] shrink-0 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform stroke-[2.5]" />
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </motion.div>
               </StaggerItem>
             ))}
@@ -102,4 +105,3 @@ export function Team({ data = defaultTeamData }: TeamProps) {
 }
 
 export default Team;
-

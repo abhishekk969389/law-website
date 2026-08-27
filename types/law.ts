@@ -326,6 +326,54 @@ export interface TeamMemberItem {
   linkHref?: string;
 }
 
+export interface TeamMemberContactInfo {
+  experienceLabel?: string;
+  experienceValue?: string;
+  phoneLabel?: string;
+  phoneValue?: string;
+  phoneHref?: string;
+  emailLabel?: string;
+  emailValue?: string;
+  emailHref?: string;
+  faxLabel?: string;
+  faxValue?: string;
+}
+
+export interface TeamMemberSkill {
+  name: string;
+  percentage?: number;
+}
+
+export interface TeamMemberEducation {
+  degree: string;
+  institution: string;
+  year?: string;
+}
+
+export interface TeamAboutData {
+  title?: string;
+  paragraphs: string[];
+}
+
+export interface TeamDetailItem {
+  id: string;
+  slug?: string;
+  name: string;
+  role: string;
+  tagline?: string;
+  image: string;
+  shortBio: string;
+  contactInfo: TeamMemberContactInfo;
+  aboutMe?: TeamAboutData;
+  description?: string[];
+  skills?: TeamMemberSkill[];
+  education?: TeamMemberEducation[];
+  socials?: SocialLink[];
+  practiceAreas?: string[];
+  badgeText?: string;
+}
+
+
 export interface TeamData {
   tagline: string;
   heading: {
@@ -786,6 +834,62 @@ export interface SitemapSectionData {
   categories: SitemapCategoryCard[];
 }
 
+export interface ServiceHeaderHighlight {
+  id: string;
+  icon: string;
+  title: string;
+}
+
+export interface ServiceProcessItem {
+  id: string;
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export interface ServiceApproachData {
+  title: string;
+  description: string;
+  image: string;
+  benefits: string[];
+}
+
+export interface ServiceSidebarContact {
+  title: string;
+  phone: { label: string; value: string; href?: string };
+  email: { label: string; value: string; href?: string };
+  location: { label: string; value: string };
+}
+
+export interface ServiceSidebarForm {
+  title: string;
+  namePlaceholder: string;
+  emailPlaceholder: string;
+  messagePlaceholder: string;
+  buttonText: string;
+}
+
+export interface ServiceDetailItem {
+  id: string;
+  slug?: string;
+  title: {
+    line1: string;
+    line2: string;
+  };
+  icon?: string;
+  subtitle: string;
+  headerImage: string;
+  highlights: ServiceHeaderHighlight[];
+  about: {
+    title: string;
+    description: string;
+    processes: ServiceProcessItem[];
+  };
+  approach: ServiceApproachData;
+  sidebarContact?: ServiceSidebarContact;
+  sidebarForm?: ServiceSidebarForm;
+}
+
 export interface LawData {
   topbar: TopbarData;
   navbar: NavbarData;
@@ -793,12 +897,15 @@ export interface LawData {
   features: FeatureItem[];
   about: AboutData;
   services: ServicesData;
+  serviceDetails?: ServiceDetailItem[];
+  teamDetails?: TeamDetailItem[];
   subBanner?: SubBannerData;
   aboutSubBanner?: SubBannerData;
   whyChooseSubBanner?: SubBannerData;
   ourApproachSubBanner?: SubBannerData;
   servicesSubBanner?: SubBannerData;
   teamSubBanner?: SubBannerData;
+  teamDetailsSubBanner?: SubBannerData;
   industriesSubBanner?: SubBannerData;
   caseStudySubBanner?: SubBannerData;
   blogSubBanner?: SubBannerData;
