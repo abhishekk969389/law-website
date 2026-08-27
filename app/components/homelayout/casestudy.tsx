@@ -60,7 +60,7 @@ export default function CaseStudy({ data = defaultCaseStudyData }: CaseStudyProp
                         </div>
 
                         {/* Main Heading */}
-                        <h2 className="font-serif text-2.5xl sm:text-4xl md:text-5xl lg:text-[56px] leading-[1.2] tracking-tight text-white mb-4">
+                        <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.2] tracking-tight text-white mb-4">
                             <span className="font-medium">{heading.line1}</span>{" "}
                             <span className="text-[#D4A359] italic font-serif">{heading.highlight}</span>{" "}
                             <span className="font-medium">{heading.line2}</span>

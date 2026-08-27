@@ -92,7 +92,7 @@ export default function Testimonials({ data = defaultTestimonialsData }: Testimo
 
                         {/* Heading */}
                         <FadeIn direction="up" delay={0.2}>
-                            <h2 className="font-serif text-2.5xl sm:text-4xl md:text-5xl lg:text-[56px] leading-[1.2] tracking-tight text-white mb-4">
+                            <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.2] tracking-tight text-white mb-4">
                                 {heading}
                             </h2>
                         </FadeIn>

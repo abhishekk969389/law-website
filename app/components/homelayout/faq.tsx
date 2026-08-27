@@ -51,7 +51,7 @@ export default function Faq({ data = defaultFaqData }: FaqProps) {
           </div>
 
           {/* Main Heading */}
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-[56px] leading-[1.15] tracking-tight mb-4">
+          <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.15] tracking-tight mb-4">
             <span className="text-white font-medium">{heading.line1}</span>{" "}
             <span className="text-[#D4A359] italic font-serif">{heading.highlight}</span>
           </h2>

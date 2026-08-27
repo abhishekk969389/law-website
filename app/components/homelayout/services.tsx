@@ -54,7 +54,7 @@ export default function Services({ data = defaultServicesData }: ServicesProps) 
           </div>
 
           {/* Main Heading */}
-          <h2 className="font-serif text-2.5xl sm:text-4xl md:text-5xl lg:text-[56px] leading-[1.2] tracking-tight mb-4">
+          <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.2] tracking-tight mb-4">
             <span className="block text-white font-medium">{heading.line1}</span>
             <span className="block text-white font-medium">
               {heading.line2}{" "}

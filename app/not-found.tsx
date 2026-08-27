@@ -73,7 +73,6 @@ export default function NotFound() {
           </div>
         </motion.div>
 
-        {/* 404 Big Numbers */}
         <motion.h1
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -85,7 +84,6 @@ export default function NotFound() {
           <span className="text-white drop-shadow-[0_10px_25px_rgba(255,255,255,0.1)]">4</span>
         </motion.h1>
 
-        {/* PAGE NOT FOUND Tagline with lines */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -99,7 +97,6 @@ export default function NotFound() {
           <span className="flex-1 h-[1px] bg-gradient-to-l from-transparent via-[#D4A359]/50 to-[#D4A359]" />
         </motion.div>
 
-        {/* Paragraph Description */}
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -109,7 +106,6 @@ export default function NotFound() {
           The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
         </motion.p>
 
-        {/* Action Button: Back To Home */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}

@@ -64,7 +64,7 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
                 {newsletter.tagline}
               </span>
             </div>
-            <h3 className="font-serif text-3xl sm:text-4xl lg:text-[48px] font-bold text-white tracking-tight leading-tight">
+            <h3 className="font-serif text-2xl sm:text-2xl md:text-4xl lg:text-[48px] text-white tracking-tight leading-tight">
               {newsletter.heading}
             </h3>
           </div>
