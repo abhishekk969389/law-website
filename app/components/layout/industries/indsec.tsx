@@ -15,6 +15,8 @@ import {
 } from "lucide-react";
 import rawLawData from "@/app/data/lawData.json";
 import { IndustrySectionData, GlobalLawData } from "@/types/law";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
+import { motion } from "framer-motion";
 
 const defaultIndustrySectionData = (rawLawData as GlobalLawData).industrySection;
 
@@ -41,7 +43,7 @@ export function Indsec({ data = defaultIndustrySectionData }: IndsecProps) {
       <div className="max-w-[1400px] mx-auto">
         
         {/* Top Centered Header */}
-        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+        <FadeIn direction="up" delay={0.1} className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
           {/* Overlapping Double Gold Circles Tagline Badge matching about.tsx / teamsec.tsx */}
           <div className="inline-flex items-center gap-2.5 mb-4">
             <div className="flex items-center -space-x-1.5">
@@ -54,7 +56,7 @@ export function Indsec({ data = defaultIndustrySectionData }: IndsecProps) {
           </div>
 
           {/* Main Heading matching about.tsx typography */}
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-[56px] leading-[1.15] tracking-tight text-white mb-4">
+          <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.15] tracking-tight text-white mb-4">
             <span className="block text-white font-medium mb-1">{heading?.line1}</span>
             <span className="block text-white font-medium">
               {heading?.line2Prefix || ""}
@@ -70,66 +72,72 @@ export function Indsec({ data = defaultIndustrySectionData }: IndsecProps) {
               {description}
             </p>
           )}
-        </div>
+        </FadeIn>
 
         {/* 6 Industry Cards Grid (3 columns on md/lg screens) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <StaggerContainer staggerChildren={0.12} delayChildren={0.2} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {items &&
             items.map((item) => {
               const IconComponent = iconMap[item.icon] || Scale;
 
               return (
-                <div
-                  key={item.id}
-                  className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] overflow-hidden hover:border-[#D4A359]/50 transition-all duration-300 shadow-xl flex flex-col justify-between"
-                >
-                  <div>
-                    {/* Top Image & Left Floating Badge Wrapper */}
-                    <div className="relative w-full h-[210px]">
-                      {/* Image Container with overflow-hidden for hover zoom */}
-                      <div className="relative w-full h-full overflow-hidden bg-slate-900">
-                        <Image
-                          src={item.image || "/about.svg"}
-                          alt={item.title}
-                          fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-500"
-                        />
+                <StaggerItem key={item.id}>
+                  <motion.div
+                    whileHover={{ y: -6, scale: 1.01 }}
+                    transition={{ duration: 0.25 }}
+                    className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] overflow-hidden hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl flex flex-col justify-between h-full cursor-pointer"
+                  >
+                    <div>
+                      {/* Top Image & Left Floating Badge Wrapper */}
+                      <div className="relative w-full h-[210px]">
+                        {/* Image Container with overflow-hidden for hover zoom */}
+                        <div className="relative w-full h-full overflow-hidden bg-slate-900">
+                          <Image
+                            src={item.image || "/about.svg"}
+                            alt={item.title}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-700"
+                          />
+                        </div>
+
+                        {/* Floating Gold Circle Icon Badge (aligned left) */}
+                        <motion.div
+                          whileHover={{ scale: 1.1, rotate: 6 }}
+                          className="w-12 h-12 rounded-full border-2 border-[#D4A359] bg-[#0A0E17] flex items-center justify-center text-[#D4A359] absolute -bottom-6 left-6 z-20 shadow-xl transition-transform duration-300"
+                        >
+                          <IconComponent className="w-5 h-5 stroke-[1.75]" />
+                        </motion.div>
                       </div>
 
-                      {/* Floating Gold Circle Icon Badge (aligned left) */}
-                      <div className="w-12 h-12 rounded-full border-2 border-[#D4A359] bg-[#0A0E17] flex items-center justify-center text-[#D4A359] absolute -bottom-6 left-6 z-20 shadow-xl group-hover:scale-110 transition-transform duration-300">
-                        <IconComponent className="w-5 h-5 stroke-[1.75]" />
+                      {/* Card Content Body */}
+                      <div className="pt-9 pb-4 px-6 text-left">
+                        {/* Card Title */}
+                        <h3 className="font-serif font-semibold text-white text-xl sm:text-2xl text-left mb-3 group-hover:text-[#D4A359] transition-colors">
+                          {item.title}
+                        </h3>
+
+                        {/* Card Description */}
+                        <p className="text-slate-400 text-xs sm:text-sm leading-relaxed text-left min-h-[56px]">
+                          {item.description}
+                        </p>
                       </div>
                     </div>
 
-                    {/* Card Content Body */}
-                    <div className="pt-9 pb-4 px-6 text-left">
-                      {/* Card Title */}
-                      <h3 className="font-serif font-semibold text-white text-xl sm:text-2xl text-left mb-3 group-hover:text-[#D4A359] transition-colors">
-                        {item.title}
-                      </h3>
-
-                      {/* Card Description */}
-                      <p className="text-slate-400 text-xs sm:text-sm leading-relaxed text-left min-h-[56px]">
-                        {item.description}
-                      </p>
+                    {/* Card Action Link */}
+                    <div className="pb-6 pt-2 px-6 text-left">
+                      <Link
+                        href={item.link || "/industries"}
+                        className="inline-flex items-center justify-start gap-2 text-[#D4A359] text-xs font-semibold uppercase tracking-wider group-hover:gap-3 transition-all hover:underline"
+                      >
+                        <span>Learn More</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
                     </div>
-                  </div>
-
-                  {/* Card Action Link */}
-                  <div className="pb-6 pt-2 px-6 text-left">
-                    <Link
-                      href={item.link || "/industries"}
-                      className="inline-flex items-center justify-start gap-2 text-[#D4A359] text-xs font-semibold uppercase tracking-wider group-hover:gap-3 transition-all hover:underline"
-                    >
-                      <span>Learn More</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </div>
-                </div>
+                  </motion.div>
+                </StaggerItem>
               );
             })}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

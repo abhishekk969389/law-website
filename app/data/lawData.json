@@ -364,6 +364,22 @@
     ],
     "backgroundImage": "/subbanner.svg"
   },
+  "sitemapSubBanner": {
+    "title": "Sitemap",
+    "subtitle": "Overview and Quick Navigation to All Pages Across Veritas Law Partners",
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Sitemap",
+        "href": "/sitemap",
+        "isActive": true
+      }
+    ],
+    "backgroundImage": "/subbanner.svg"
+  },
   "ourApproachSection": {
     "tagline": "OUR APPROACH",
     "heading": {
@@ -531,28 +547,28 @@
     "members": [
       {
         "id": "1",
-        "name": "Jonathan Pierce",
+        "name": "Abhishek kumar",
         "role": "Founding Partner",
         "image": "/about.svg",
         "link": "/team/jonathan-pierce"
       },
       {
         "id": "2",
-        "name": "Sophia Martinez",
+        "name": "Kalal Singh",
         "role": "Senior Partner",
         "image": "/casestudy1.svg",
         "link": "/team/sophia-martinez"
       },
       {
         "id": "3",
-        "name": "Michael Thompson",
+        "name": "Deepak Kumar",
         "role": "Litigation Partner",
         "image": "/casestudy2.svg",
         "link": "/team/michael-thompson"
       },
       {
         "id": "4",
-        "name": "Emily Roberts",
+        "name": "Suman Kumar",
         "role": "Corporate Counsel",
         "image": "/casestudy3.svg",
         "link": "/team/emily-roberts"
@@ -566,21 +582,21 @@
       },
       {
         "id": "6",
-        "name": "Jessica Lane",
+        "name": "Aman Prajapati",
         "role": "Family Law Attorney",
         "image": "/about.svg",
         "link": "/team/jessica-lane"
       },
       {
         "id": "7",
-        "name": "Richard Hamilton",
+        "name": "Mukesh Kumar",
         "role": "Of Counsel",
         "image": "/casestudy1.svg",
         "link": "/team/richard-hamilton"
       },
       {
         "id": "8",
-        "name": "Olivia Chen",
+        "name": "Mohan Lal",
         "role": "Associate Attorney",
         "image": "/casestudy2.svg",
         "link": "/team/olivia-chen"
@@ -772,6 +788,60 @@
         "commentsCount": "4 Comments",
         "image": "/service2.svg",
         "linkHref": "/blog/crucial-updates-family-law-2"
+      },
+      {
+        "id": "7",
+        "title": "Understanding Corporate Restructuring and M&A Guidelines.",
+        "author": "Sophia Martinez",
+        "date": "26 Sep, 2025",
+        "commentsCount": "5 Comments",
+        "image": "/casestudy1.svg",
+        "linkHref": "/blog/corporate-restructuring-ma-guidelines"
+      },
+      {
+        "id": "8",
+        "title": "Navigating Real Estate Laws and Commercial Lease Agreements.",
+        "author": "Michael Thompson",
+        "date": "27 Sep, 2025",
+        "commentsCount": "3 Comments",
+        "image": "/casestudy2.svg",
+        "linkHref": "/blog/real-estate-laws-lease-agreements"
+      },
+      {
+        "id": "9",
+        "title": "Intellectual Property Rights: Protecting Your Digital Brand.",
+        "author": "Emily Roberts",
+        "date": "28 Sep, 2025",
+        "commentsCount": "6 Comments",
+        "image": "/casestudy3.svg",
+        "linkHref": "/blog/intellectual-property-digital-brand"
+      },
+      {
+        "id": "10",
+        "title": "Key Insights into Criminal Defense Strategies and Trial Law.",
+        "author": "Jonathan Pierce",
+        "date": "29 Sep, 2025",
+        "commentsCount": "2 Comments",
+        "image": "/casestudy4.svg",
+        "linkHref": "/blog/criminal-defense-strategies-trial-law"
+      },
+      {
+        "id": "11",
+        "title": "Tax Regulation Updates for Small and Medium Enterprises.",
+        "author": "David Kapoor",
+        "date": "30 Sep, 2025",
+        "commentsCount": "4 Comments",
+        "image": "/about.svg",
+        "linkHref": "/blog/tax-regulation-updates-sme"
+      },
+      {
+        "id": "12",
+        "title": "Labor Laws & Employment Contract Dispute Resolution.",
+        "author": "Richard Hamilton",
+        "date": "01 Oct, 2025",
+        "commentsCount": "1 Comment",
+        "image": "/service1.svg",
+        "linkHref": "/blog/labor-laws-employment-dispute-resolution"
       }
     ]
   },
@@ -846,6 +916,60 @@
         "description": "A guide to child custody laws and how courts determine the best interests of the child in today's world.",
         "image": "/casestudy1.svg",
         "link": "/legal/child-custody-laws"
+      },
+      {
+        "id": "7",
+        "date": "APR 15, 2024",
+        "category": "TAXATION",
+        "title": "GST Compliance Updates for Financial Year 2024-25",
+        "description": "Essential GST updates and statutory compliance checklists for Indian corporates and startups.",
+        "image": "/casestudy2.svg",
+        "link": "/legal/gst-compliance-updates"
+      },
+      {
+        "id": "8",
+        "date": "APR 10, 2024",
+        "category": "INTELLECTUAL PROPERTY",
+        "title": "Trademark Protection Strategies in Digital Marketplaces",
+        "description": "How e-commerce sellers and brand owners can safeguard their trademarks against online infringement.",
+        "image": "/casestudy3.svg",
+        "link": "/legal/trademark-protection-digital"
+      },
+      {
+        "id": "9",
+        "date": "APR 05, 2024",
+        "category": "REAL ESTATE",
+        "title": "RERA Judgments: Standardizing Real Estate Lease Standards",
+        "description": "Analyzing key RERA rulings on builder-buyer agreements and delayed possession compensation.",
+        "image": "/casestudy4.svg",
+        "link": "/legal/rera-judgments-real-estate"
+      },
+      {
+        "id": "10",
+        "date": "MAR 30, 2024",
+        "category": "BANKING & FINANCE",
+        "title": "NCLT Insolvency Proceedings: Rights of Financial Creditors",
+        "description": "Understanding the priority of financial creditors during corporate insolvency resolution processes.",
+        "image": "/about.svg",
+        "link": "/legal/nclt-insolvency-proceedings"
+      },
+      {
+        "id": "11",
+        "date": "MAR 25, 2024",
+        "category": "ENVIRONMENTAL LAW",
+        "title": "ESG Disclosure Mandates for Listed Companies",
+        "description": "SEBI's new Business Responsibility and Sustainability Reporting (BRSR) norms explained.",
+        "image": "/service1.svg",
+        "link": "/legal/esg-disclosure-mandates"
+      },
+      {
+        "id": "12",
+        "date": "MAR 20, 2024",
+        "category": "CYBER LAW",
+        "title": "Cybercrime Prevention and Incident Response Plans",
+        "description": "Legal guidelines for enterprise cyber incident reporting and mitigating ransomware liabilities.",
+        "image": "/service3.svg",
+        "link": "/legal/cybercrime-prevention-incident-response"
       }
     ]
   },
@@ -898,6 +1022,69 @@
         "title": "Insolvency and Bankruptcy Code Amendments Explained",
         "date": "22 Aug, 2024",
         "link": "/media/ibc-amendments-explained"
+      },
+      {
+        "id": "7",
+        "logo": "/media-lallantop.svg",
+        "title": "Corporate Law Amendments 2024: Key Compliance Insights",
+        "date": "18 Aug, 2024",
+        "link": "/media/corporate-law-amendments-2024"
+      },
+      {
+        "id": "8",
+        "logo": "/media-newsindia.svg",
+        "title": "Intellectual Property Protection in the Era of Artificial Intelligence",
+        "date": "14 Aug, 2024",
+        "link": "/media/ip-protection-ai-era"
+      },
+      {
+        "id": "9",
+        "logo": "/media-indiatv.svg",
+        "title": "Veritas Law Partners Named Top Corporate Advisory Firm 2024",
+        "date": "10 Aug, 2024",
+        "link": "/media/top-corporate-advisory-firm-2024"
+      },
+      {
+        "id": "10",
+        "logo": "/media-aajtak.svg",
+        "title": "Real Estate Regulatory Framework: Protecting Homebuyers' Rights",
+        "date": "05 Aug, 2024",
+        "link": "/media/rera-framework-homebuyers-rights"
+      },
+      {
+        "id": "11",
+        "logo": "/media-economictimes.svg",
+        "title": "SEBI Compliance Requirements for Listed Companies Updated",
+        "date": "01 Aug, 2024",
+        "link": "/media/sebi-compliance-listed-companies"
+      },
+      {
+        "id": "12",
+        "logo": "/media-businessstandard.svg",
+        "title": "Understanding Cross-Border Mergers: Legal and Financial Tax Impact",
+        "date": "28 Jul, 2024",
+        "link": "/media/cross-border-mergers-legal-tax"
+      },
+      {
+        "id": "13",
+        "logo": "/media-lallantop.svg",
+        "title": "Digital Personal Data Protection Act 2023: Corporate Playbook",
+        "date": "22 Jul, 2024",
+        "link": "/media/dpdp-act-corporate-playbook"
+      },
+      {
+        "id": "14",
+        "logo": "/media-newsindia.svg",
+        "title": "ESG Regulations and Sustainable Finance Frameworks for Indian Business",
+        "date": "18 Jul, 2024",
+        "link": "/media/esg-regulations-sustainable-finance"
+      },
+      {
+        "id": "15",
+        "logo": "/media-indiatv.svg",
+        "title": "Navigating Dispute Resolution in High-Stakes Commercial Contracts",
+        "date": "12 Jul, 2024",
+        "link": "/media/dispute-resolution-commercial-contracts"
       }
     ]
   },
@@ -1046,6 +1233,60 @@
         "description": "A guide to child custody laws and how courts determine the best interests of the child in today's world.",
         "image": "/casestudy1.svg",
         "link": "/publications/child-custody-laws"
+      },
+      {
+        "id": "7",
+        "date": "APR 15, 2024",
+        "category": "REAL ESTATE",
+        "title": "Commercial Real Estate Leases: Tenant Rights and Drafting Guide",
+        "description": "Essential legal considerations when negotiating commercial real estate leases and property rights.",
+        "image": "/casestudy2.svg",
+        "link": "/publications/commercial-real-estate-leases"
+      },
+      {
+        "id": "8",
+        "date": "APR 10, 2024",
+        "category": "TAXATION",
+        "title": "Corporate Tax Structuring and Cross-Border Transaction Insights",
+        "description": "Strategies for corporate tax optimization and double taxation avoidance agreement compliance.",
+        "image": "/casestudy3.svg",
+        "link": "/publications/corporate-tax-structuring"
+      },
+      {
+        "id": "9",
+        "date": "APR 05, 2024",
+        "category": "ARBITRATION",
+        "title": "Commercial Dispute Resolution through International Arbitration",
+        "description": "A guide to enforcing international arbitral awards and resolving cross-border contract conflicts.",
+        "image": "/casestudy4.svg",
+        "link": "/publications/international-arbitration-guide"
+      },
+      {
+        "id": "10",
+        "date": "MAR 30, 2024",
+        "category": "FINANCE & BANKING",
+        "title": "Regulatory Framework for Fintech and Digital Payment Platforms",
+        "description": "Understanding RBI regulations and compliance protocols for emerging financial technology ventures.",
+        "image": "/about.svg",
+        "link": "/publications/fintech-digital-payment-regulations"
+      },
+      {
+        "id": "11",
+        "date": "MAR 25, 2024",
+        "category": "LABOR & EMPLOYMENT",
+        "title": "Managing Executive Severance and Non-Compete Agreements",
+        "description": "Legal enforceability of non-compete clauses, non-solicitation covenants, and executive exit terms.",
+        "image": "/service1.svg",
+        "link": "/publications/executive-severance-non-compete"
+      },
+      {
+        "id": "12",
+        "date": "MAR 20, 2024",
+        "category": "CYBERSECURITY",
+        "title": "Enterprise Ransomware Defense and Statutory Data Breach Reporting",
+        "description": "Steps organizations must take upon discovering a cybersecurity breach under CERT-In guidelines.",
+        "image": "/service3.svg",
+        "link": "/publications/enterprise-cybersecurity-defense"
       }
     ]
   },
@@ -1066,73 +1307,73 @@
     "items": [
       {
         "id": "1",
-        "logo": "/award-iblj-alist-2024.svg",
+        "logo": "/award1.svg",
         "organization": "India Business Law Journal",
         "awardTitle": "A-List 2024"
       },
       {
         "id": "2",
-        "logo": "/award-legal500-2024.svg",
+        "logo": "/award2.svg",
         "organization": "The Legal 500 Asia Pacific",
         "awardTitle": "Top Tier Firm 2024"
       },
       {
         "id": "3",
-        "logo": "/award-chambers-2024.svg",
+        "logo": "/award3.svg",
         "organization": "Chambers and Partners",
         "awardTitle": "Asia Pacific 2024"
       },
       {
         "id": "4",
-        "logo": "/award-benchmark-2024.svg",
+        "logo": "/award4.svg",
         "organization": "Benchmark Litigation",
         "awardTitle": "Asia-Pacific 2024"
       },
       {
         "id": "5",
-        "logo": "/award-leaders-in-law-2024.svg",
+        "logo": "/award5.svg",
         "organization": "Leaders in Law",
         "awardTitle": "Global Awards 2024"
       },
       {
         "id": "6",
-        "logo": "/award-iblj-awards-2023.svg",
+        "logo": "/award6.svg",
         "organization": "India Business Law Journal",
         "awardTitle": "Indian Law Firm Awards 2023"
       },
       {
         "id": "7",
-        "logo": "/award-asialaw-2023.svg",
+        "logo": "/award7.svg",
         "organization": "Asialaw Profiles",
         "awardTitle": "Outstanding Firm 2023"
       },
       {
         "id": "8",
-        "logo": "/award-bw-legal-2023.svg",
+        "logo": "/award8.svg",
         "organization": "BW Legal World",
         "awardTitle": "Top Law Firms 2023"
       },
       {
         "id": "9",
-        "logo": "/award-iflr1000-2023.svg",
+        "logo": "/award9.svg",
         "organization": "IFLR1000",
         "awardTitle": "Recognized Firm 2023"
       },
       {
         "id": "10",
-        "logo": "/award-indiatoday-2023.svg",
+        "logo": "/award10.svg",
         "organization": "India Today",
         "awardTitle": "Best Law Firms 2023"
       },
       {
         "id": "11",
-        "logo": "/award-indian-law-firm-2022.svg",
+        "logo": "/award11.svg",
         "organization": "Indian Law Firm Awards 2022",
         "awardTitle": "Excellence in Taxation (Direct)"
       },
       {
         "id": "12",
-        "logo": "/award-global-law-experts-2022.svg",
+        "logo": "/award12.svg",
         "organization": "Global Law Experts",
         "awardTitle": "Award 2022"
       }
@@ -1647,6 +1888,101 @@
       }
     ]
   },
+  "sitemapSection": {
+    "tagline": "EXPLORE",
+    "heading": {
+      "line1": "Explore ",
+      "highlight": "all Pages"
+    },
+    "categories": [
+      {
+        "id": "1",
+        "title": "FIRM & INFORMATION",
+        "icon": "landmark",
+        "links": [
+          { "id": "1-1", "label": "Home", "href": "/" },
+          { "id": "1-2", "label": "About Us", "href": "/about" },
+          { "id": "1-3", "label": "Why Choose Us", "href": "/whychoose" },
+          { "id": "1-4", "label": "Our Approach", "href": "/ourapproach" }
+        ]
+      },
+      {
+        "id": "2",
+        "title": "SERVICES & EXPERTISE",
+        "icon": "briefcase",
+        "links": [
+          { "id": "2-1", "label": "Services", "href": "/service" },
+          { "id": "2-2", "label": "Services Detail", "href": "/service" },
+          { "id": "2-3", "label": "Industries", "href": "/industries" },
+          { "id": "2-4", "label": "Industry Detail", "href": "/industries" }
+        ]
+      },
+      {
+        "id": "3",
+        "title": "PEOPLE & TEAM",
+        "icon": "users",
+        "links": [
+          { "id": "3-1", "label": "Our Team", "href": "/team" },
+          { "id": "3-2", "label": "Team Detail", "href": "/team" },
+          { "id": "3-3", "label": "Careers", "href": "/career" },
+          { "id": "3-4", "label": "Job Detail", "href": "/career" }
+        ]
+      },
+      {
+        "id": "4",
+        "title": "CASES & RESULTS",
+        "icon": "gavel",
+        "links": [
+          { "id": "4-1", "label": "Case Studies / Representative Matters", "href": "/casestudy" },
+          { "id": "4-2", "label": "Case Study Detail", "href": "/casestudy" }
+        ]
+      },
+      {
+        "id": "5",
+        "title": "INSIGHTS & RESOURCES",
+        "icon": "lightbulb",
+        "links": [
+          { "id": "5-1", "label": "Insights / Blog", "href": "/blog" },
+          { "id": "5-2", "label": "Blog Detail", "href": "/blog" },
+          { "id": "5-3", "label": "Legal Updates", "href": "/legal" },
+          { "id": "5-4", "label": "Legal Updates Detail", "href": "/legal" },
+          { "id": "5-5", "label": "Client Resources", "href": "/client" }
+        ]
+      },
+      {
+        "id": "6",
+        "title": "NEWS & EVENTS",
+        "icon": "megaphone",
+        "links": [
+          { "id": "6-1", "label": "News & Media", "href": "/media" },
+          { "id": "6-2", "label": "Events", "href": "/event" },
+          { "id": "6-3", "label": "Events Detail", "href": "/event" },
+          { "id": "6-4", "label": "Publications", "href": "/publications" },
+          { "id": "6-5", "label": "Publications Detail", "href": "/publications" }
+        ]
+      },
+      {
+        "id": "7",
+        "title": "RECOGNITION & TRUST",
+        "icon": "trophy",
+        "links": [
+          { "id": "7-1", "label": "Awards & Recognition", "href": "/award" },
+          { "id": "7-2", "label": "Testimonials", "href": "/testimonial" }
+        ]
+      },
+      {
+        "id": "8",
+        "title": "OTHER PAGES",
+        "icon": "folder",
+        "links": [
+          { "id": "8-1", "label": "FAQs", "href": "/faq" },
+          { "id": "8-2", "label": "Office Locations", "href": "/office" },
+          { "id": "8-7", "label": "Terms & Conditions", "href": "/termscondition" },
+          { "id": "8-8", "label": "Legal Disclaimer", "href": "/legaldisclimer" }
+        ]
+      }
+    ]
+  },
   "whyChooseUs": {
     "tagline": "WHY CHOOSE US",
     "heading": {
@@ -1765,6 +2101,10 @@
         "href": "/about",
         "hasDropdown": true,
         "dropdownItems": [
+            {
+            "title": "About Us",
+            "href": "/about"
+          },
           {
             "title": "Why Choose Us",
             "href": "/whychoose"
@@ -2298,7 +2638,7 @@
         {
           "id": "7",
           "title": "Sitemap",
-          "linkHref": ""
+          "linkHref": "/sitemap"
         }
       ]
     },
@@ -2330,9 +2670,9 @@
     },
     "contact": {
       "title": "Contact Us",
-      "phone": "+012 (345) 56 998",
+      "phone": "+91 882 332 1245",
       "email": "support@gmail.com",
-      "address": "59 Main Street, USA",
+      "address": "Noida One Tower, Noida",
       "openingHoursTitle": "Opening Hour",
       "openingHours": "Sun - Friday, 09 am - 08 pm",
       "closedText": "Saturday Closed"

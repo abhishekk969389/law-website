@@ -13,6 +13,8 @@ import {
 } from "lucide-react";
 import rawLawData from "@/app/data/lawData.json";
 import { ProvenApproachData, GlobalLawData } from "@/types/law";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
+import { motion } from "framer-motion";
 
 const defaultProvenData = (rawLawData as GlobalLawData).provenApproach;
 
@@ -37,7 +39,7 @@ export function Proven({ data = defaultProvenData }: ProvenProps) {
         <section className="relative w-full bg-[#08171B] text-white  mt-8 sm:mt-10 md:mt-12 lg:mt-14 pb-16  select-none px-4 sm:px-6 lg:px-8">
 
             {/* Outer Card Container with Gold/Slate Border Accent */}
-            <div className="max-w-[1400px] mx-auto rounded-3xl border border-[#D4A359]/35 bg-[#0A1C20]/90 px-6 sm:px-8 lg:px-12 pt-8 sm:pt-10 lg:pt-12 pb-4 sm:pb-6 shadow-2xl relative">
+            <FadeIn direction="up" delay={0.1} className="max-w-[1400px] mx-auto rounded-3xl border border-[#D4A359]/35 bg-[#0A1C20]/90 px-6 sm:px-8 lg:px-12 pt-8 sm:pt-10 lg:pt-12 pb-4 sm:pb-6 shadow-2xl relative">
 
                 {/* Top Tagline Header embedded directly on top border line */}
                 <div className="absolute -top-3 sm:-top-3.5 left-1/2 -translate-x-1/2 bg-[#08171B] py-1 px-4 sm:px-6 flex items-center gap-3 sm:gap-4 z-20">
@@ -49,43 +51,48 @@ export function Proven({ data = defaultProvenData }: ProvenProps) {
                 </div>
 
                 {/* 5 Process Steps Grid */}
-                <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-0 divide-y sm:divide-y-0 lg:divide-x divide-slate-800/80">
+                <StaggerContainer staggerChildren={0.1} delayChildren={0.2} className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-0 divide-y sm:divide-y-0 lg:divide-x divide-slate-800/80">
                     {steps &&
                         steps.map((step) => {
                             const IconComponent = iconMap[step.icon] || Users;
 
                             return (
-                                <div
-                                    key={step.id}
-                                    className="flex flex-col items-center text-center px-3 sm:px-4 lg:px-5 py-4 lg:py-0 relative group"
-                                >
-                                    {/* Top Row: Translucent Step Number + Gold Circle Icon Badge */}
-                                    <div className="flex items-center justify-center gap-3 mb-2">
-                                        <span className="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-slate-600/50 select-none">
-                                            {step.stepNumber}
-                                        </span>
-                                        <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full border border-[#D4A359]/70 flex items-center justify-center p-3 text-[#D4A359] group-hover:border-[#D4A359] group-hover:bg-[#D4A359]/10 group-hover:scale-110 transition-all duration-300 shadow-[0_0_12px_rgba(212,163,89,0.15)]">
-                                            <IconComponent className="w-6 h-6 stroke-[1.75]" />
+                                <StaggerItem key={step.id}>
+                                    <motion.div
+                                        whileHover={{ y: -4 }}
+                                        className="flex flex-col items-center text-center px-3 sm:px-4 lg:px-5 py-4 lg:py-0 relative group cursor-pointer"
+                                    >
+                                        {/* Top Row: Translucent Step Number + Gold Circle Icon Badge */}
+                                        <div className="flex items-center justify-center gap-3 mb-2">
+                                            <span className="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-slate-600/50 select-none">
+                                                {step.stepNumber}
+                                            </span>
+                                            <motion.div
+                                                whileHover={{ scale: 1.1, rotate: 6 }}
+                                                className="w-13 h-13 sm:w-14 sm:h-14 rounded-full border border-[#D4A359]/70 flex items-center justify-center p-3 text-[#D4A359] group-hover:border-[#D4A359] group-hover:bg-[#D4A359]/10 transition-all duration-300 shadow-[0_0_12px_rgba(212,163,89,0.15)]"
+                                            >
+                                                <IconComponent className="w-6 h-6 stroke-[1.75]" />
+                                            </motion.div>
                                         </div>
-                                    </div>
 
-                                    {/* Step Title */}
-                                    <h3 className="font-serif font-semibold text-white text-base sm:text-lg lg:text-xl mt-3 mb-2 min-h-[48px] flex items-center justify-center group-hover:text-[#D4A359] transition-colors">
-                                        {step.title}
-                                    </h3>
+                                        {/* Step Title */}
+                                        <h3 className="font-serif font-semibold text-white text-base sm:text-lg lg:text-xl mt-3 mb-2 min-h-[48px] flex items-center justify-center group-hover:text-[#D4A359] transition-colors">
+                                            {step.title}
+                                        </h3>
 
-                                    {/* Step Description */}
-                                    <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-xs">
-                                        {step.description}
-                                    </p>
-                                </div>
+                                        {/* Step Description */}
+                                        <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-xs">
+                                            {step.description}
+                                        </p>
+                                    </motion.div>
+                                </StaggerItem>
                             );
                         })}
-                </div>
+                </StaggerContainer>
 
                 {/* Bottom Consultation Box (Overlapping Bottom Border Line: Reduced Space Above) */}
                 {bottomBanner && (
-                    <div className="-mb-16 sm:-mb-18 lg:-mb-20 translate-y-3 sm:translate-y-4 relative z-20 mt-4 sm:mt-5 rounded-2xl border border-[#D4A359]/35 bg-[#061418] p-5 sm:p-6 lg:p-7 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+                    <FadeIn direction="up" delay={0.3} className="-mb-16 sm:-mb-18 lg:-mb-20 translate-y-3 sm:translate-y-4 relative z-20 mt-4 sm:mt-5 rounded-2xl border border-[#D4A359]/35 bg-[#061418] p-5 sm:p-6 lg:p-7 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
 
                         {/* Left Side: Courthouse Icon & Message */}
                         <div className="flex items-center gap-4 text-left">
@@ -117,9 +124,9 @@ export function Proven({ data = defaultProvenData }: ProvenProps) {
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </FadeIn>
                 )}
-            </div>
+            </FadeIn>
         </section>
     );
 }

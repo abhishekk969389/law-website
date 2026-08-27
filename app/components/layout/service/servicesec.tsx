@@ -16,6 +16,8 @@ import {
 } from "lucide-react";
 import rawLawData from "@/app/data/lawData.json";
 import { ServiceSectionData, GlobalLawData } from "@/types/law";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
+import { motion } from "framer-motion";
 
 const defaultServiceSectionData = (rawLawData as GlobalLawData).serviceSection;
 
@@ -43,7 +45,7 @@ export function Servicesec({ data = defaultServiceSectionData }: ServicesecProps
       <div className="max-w-[1400px] mx-auto">
         
         {/* Top Centered Header */}
-        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
+        <FadeIn direction="up" delay={0.1} className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
           {/* Tagline Badge matching whychooseus & approachsec */}
           <div className="flex items-center justify-center gap-3 mb-4">
             <span className="w-8 sm:w-12 h-[1px] bg-[#D4A359]/60" />
@@ -55,7 +57,7 @@ export function Servicesec({ data = defaultServiceSectionData }: ServicesecProps
           </div>
 
           {/* Main Heading matching whychooseus.tsx */}
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-[56px] leading-[1.15] tracking-tight text-white mb-4">
+          <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.15] tracking-tight text-white mb-4">
             {heading?.line1}{" "}
             {heading?.line2Prefix && <span>{heading.line2Prefix}</span>}
             <span className="text-[#D4A359] italic font-serif font-medium">
@@ -69,66 +71,72 @@ export function Servicesec({ data = defaultServiceSectionData }: ServicesecProps
               {description}
             </p>
           )}
-        </div>
+        </FadeIn>
 
         {/* 8 Cards Grid (4 columns on lg screens) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        <StaggerContainer staggerChildren={0.1} delayChildren={0.2} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {items &&
             items.map((item) => {
               const IconComponent = iconMap[item.icon] || Scale;
 
               return (
-                <div
-                  key={item.id}
-                  className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] overflow-hidden hover:border-[#D4A359]/50 transition-all duration-300 shadow-xl flex flex-col justify-between"
-                >
-                  <div>
-                    {/* Top Image & Badge Wrapper */}
-                    <div className="relative w-full h-[190px]">
-                      {/* Image Container with overflow-hidden for hover zoom */}
-                      <div className="relative w-full h-full overflow-hidden bg-slate-900">
-                        <Image
-                          src={item.image || "/subbanner.svg"}
-                          alt={item.title}
-                          fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-500"
-                        />
+                <StaggerItem key={item.id}>
+                  <motion.div
+                    whileHover={{ y: -6, scale: 1.01 }}
+                    transition={{ duration: 0.25 }}
+                    className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] overflow-hidden hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl flex flex-col justify-between h-full cursor-pointer"
+                  >
+                    <div>
+                      {/* Top Image & Badge Wrapper */}
+                      <div className="relative w-full h-[190px]">
+                        {/* Image Container with overflow-hidden for hover zoom */}
+                        <div className="relative w-full h-full overflow-hidden bg-slate-900">
+                          <Image
+                            src={item.image || "/subbanner.svg"}
+                            alt={item.title}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-700"
+                          />
+                        </div>
+
+                        {/* Floating Gold Circle Icon Badge (outside overflow-hidden so it is unclipped) */}
+                        <motion.div
+                          whileHover={{ scale: 1.1, rotate: 6 }}
+                          className="w-13 h-13 sm:w-14 sm:h-14 rounded-full border-2 border-[#D4A359] bg-[#0A0E17] flex items-center justify-center text-[#D4A359] absolute -bottom-7 left-1/2 -translate-x-1/2 z-20 shadow-xl transition-transform duration-300"
+                        >
+                          <IconComponent className="w-6 h-6 stroke-[1.75]" />
+                        </motion.div>
                       </div>
 
-                      {/* Floating Gold Circle Icon Badge (outside overflow-hidden so it is unclipped) */}
-                      <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full border-2 border-[#D4A359] bg-[#0A0E17] flex items-center justify-center text-[#D4A359] absolute -bottom-7 left-1/2 -translate-x-1/2 z-20 shadow-xl group-hover:scale-110 transition-transform duration-300">
-                        <IconComponent className="w-6 h-6 stroke-[1.75]" />
+                      {/* Card Content Body */}
+                      <div className="pt-10 pb-4 px-5 text-center">
+                        {/* Card Title */}
+                        <h3 className="font-serif font-semibold text-white text-lg sm:text-xl text-center mb-2.5 group-hover:text-[#D4A359] transition-colors">
+                          {item.title}
+                        </h3>
+
+                        {/* Card Description */}
+                        <p className="text-slate-400 text-xs sm:text-sm leading-relaxed text-center min-h-[44px]">
+                          {item.description}
+                        </p>
                       </div>
                     </div>
 
-                    {/* Card Content Body */}
-                    <div className="pt-10 pb-4 px-5 text-center">
-                      {/* Card Title */}
-                      <h3 className="font-serif font-semibold text-white text-lg sm:text-xl text-center mb-2.5 group-hover:text-[#D4A359] transition-colors">
-                        {item.title}
-                      </h3>
-
-                      {/* Card Description */}
-                      <p className="text-slate-400 text-xs sm:text-sm leading-relaxed text-center min-h-[44px]">
-                        {item.description}
-                      </p>
+                    {/* Card Action Link */}
+                    <div className="pb-6 pt-2 px-5 text-center">
+                      <Link
+                        href={item.link || "/service"}
+                        className="inline-flex items-center justify-center gap-2 text-[#D4A359] text-xs font-semibold uppercase tracking-wider group-hover:gap-3 transition-all hover:underline"
+                      >
+                        <span>Learn More</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
                     </div>
-                  </div>
-
-                  {/* Card Action Link */}
-                  <div className="pb-6 pt-2 px-5 text-center">
-                    <Link
-                      href={item.link || "/service"}
-                      className="inline-flex items-center justify-center gap-2 text-[#D4A359] text-xs font-semibold uppercase tracking-wider group-hover:gap-3 transition-all hover:underline"
-                    >
-                      <span>Learn More</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </div>
-                </div>
+                  </motion.div>
+                </StaggerItem>
               );
             })}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

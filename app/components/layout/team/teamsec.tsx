@@ -6,6 +6,8 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import rawLawData from "@/app/data/lawData.json";
 import { TeamSectionData, GlobalLawData } from "@/types/law";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
+import { motion } from "framer-motion";
 
 const defaultTeamSectionData = (rawLawData as GlobalLawData).teamSection;
 
@@ -23,7 +25,7 @@ export function Teamsec({ data = defaultTeamSectionData }: TeamsecProps) {
       <div className="max-w-[1400px] mx-auto">
         
         {/* Top Centered Header */}
-        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+        <FadeIn direction="up" delay={0.1} className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
           {/* Overlapping Double Gold Circles Tagline Badge matching about.tsx / teams.tsx */}
           <div className="inline-flex items-center gap-2.5 mb-4">
             <div className="flex items-center -space-x-1.5">
@@ -36,7 +38,7 @@ export function Teamsec({ data = defaultTeamSectionData }: TeamsecProps) {
           </div>
 
           {/* Main Heading matching about.tsx typography */}
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-[56px] leading-[1.15] tracking-tight text-white mb-4">
+          <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.15] tracking-tight text-white mb-4">
             <span className="block text-white font-medium mb-1">{heading?.line1}</span>
             <span className="block text-white font-medium">
               {heading?.line2Prefix || ""}
@@ -52,51 +54,54 @@ export function Teamsec({ data = defaultTeamSectionData }: TeamsecProps) {
               {description}
             </p>
           )}
-        </div>
+        </FadeIn>
 
         {/* 8 Team Members Cards Grid (4 columns on lg screens) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        <StaggerContainer staggerChildren={0.1} delayChildren={0.2} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {members &&
             members.map((member) => {
               return (
-                <div
-                  key={member.id}
-                  className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] overflow-hidden hover:border-[#D4A359]/50 transition-all duration-300 shadow-xl flex flex-col justify-between"
-                >
-                  <Link href={member.link || "/team"} className="block">
-                    {/* Top Image Container */}
-                    <div className="relative w-full h-[280px] sm:h-[300px] overflow-hidden bg-slate-900">
-                      <Image
-                        src={member.image || "/about.svg"}
-                        alt={member.name}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
-
-                    {/* Card Content Body */}
-                    <div className="p-5 sm:p-6 text-left">
-                      {/* Member Role */}
-                      <span className="text-slate-400 text-xs uppercase tracking-wider font-medium block mb-2">
-                        {member.role}
-                      </span>
-
-                      {/* Small Gold Underline Accent */}
-                      <div className="w-10 h-[1.5px] bg-[#D4A359]/70 mb-3" />
-
-                      {/* Member Name & Arrow Icon */}
-                      <div className="flex items-center justify-between gap-2">
-                        <h3 className="font-serif font-semibold text-white text-lg sm:text-xl group-hover:text-[#D4A359] transition-colors">
-                          {member.name}
-                        </h3>
-                        <ArrowUpRight className="w-5 h-5 text-[#D4A359] shrink-0 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                <StaggerItem key={member.id}>
+                  <motion.div
+                    whileHover={{ y: -6, scale: 1.01 }}
+                    transition={{ duration: 0.25 }}
+                    className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] overflow-hidden hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl flex flex-col justify-between h-full cursor-pointer"
+                  >
+                    <Link href={member.link || "/team"} className="block">
+                      {/* Top Image Container */}
+                      <div className="relative w-full h-[280px] sm:h-[300px] overflow-hidden bg-slate-900">
+                        <Image
+                          src={member.image || "/about.svg"}
+                          alt={member.name}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-700"
+                        />
                       </div>
-                    </div>
-                  </Link>
-                </div>
+
+                      {/* Card Content Body */}
+                      <div className="p-5 sm:p-6 text-left">
+                        {/* Member Role */}
+                        <span className="text-slate-400 text-xs uppercase tracking-wider font-medium block mb-2">
+                          {member.role}
+                        </span>
+
+                        {/* Small Gold Underline Accent */}
+                        <div className="w-10 h-[1.5px] bg-[#D4A359]/70 mb-3" />
+
+                        {/* Member Name & Arrow Icon */}
+                        <div className="flex items-center justify-between gap-2">
+                          <h3 className="font-serif font-semibold text-white text-lg sm:text-xl group-hover:text-[#D4A359] transition-colors">
+                            {member.name}
+                          </h3>
+                          <ArrowUpRight className="w-5 h-5 text-[#D4A359] shrink-0 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                        </div>
+                      </div>
+                    </Link>
+                  </motion.div>
+                </StaggerItem>
               );
             })}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

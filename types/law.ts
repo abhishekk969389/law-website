@@ -763,6 +763,29 @@ export interface LegalDisclaimerSectionData {
   topics: LegalDisclaimerTopicItem[];
 }
 
+export interface SitemapLinkItem {
+  id: string;
+  label: string;
+  href: string;
+}
+
+export interface SitemapCategoryCard {
+  id: string;
+  title: string;
+  icon: string;
+  links: SitemapLinkItem[];
+}
+
+export interface SitemapSectionData {
+  tagline?: string;
+  heading?: {
+    line1?: string;
+    highlight?: string;
+    line2?: string;
+  };
+  categories: SitemapCategoryCard[];
+}
+
 export interface LawData {
   topbar: TopbarData;
   navbar: NavbarData;
@@ -794,6 +817,7 @@ export interface LawData {
   privacyPolicySubBanner?: SubBannerData;
   termsConditionSubBanner?: SubBannerData;
   legalDisclaimerSubBanner?: SubBannerData;
+  sitemapSubBanner?: SubBannerData;
   whyChooseUs?: WhyChooseUsData;
   team?: TeamData;
   ourApproachSection?: ApproachData;
@@ -822,6 +846,7 @@ export interface LawData {
   privacyPolicySection?: PrivacyPolicySectionData;
   termsConditionSection?: TermsConditionSectionData;
   legalDisclaimerSection?: LegalDisclaimerSectionData;
+  sitemapSection?: SitemapSectionData;
   counting?: CountingItem[];
   caseStudy?: CaseStudyData;
   testimonials?: TestimonialsData;
@@ -865,6 +890,7 @@ export type GlobalBookSectionData = BookSectionData;
 export type GlobalPrivacyPolicySectionData = PrivacyPolicySectionData;
 export type GlobalTermsConditionSectionData = TermsConditionSectionData;
 export type GlobalLegalDisclaimerSectionData = LegalDisclaimerSectionData;
+export type GlobalSitemapSectionData = SitemapSectionData;
 export type GlobalCountingItem = CountingItem;
 export type GlobalCaseStudyData = CaseStudyData;
 export type GlobalTestimonialsData = TestimonialsData;
@@ -907,6 +933,7 @@ declare global {
   type GlobalPrivacyPolicySectionData = PrivacyPolicySectionData;
   type GlobalTermsConditionSectionData = TermsConditionSectionData;
   type GlobalLegalDisclaimerSectionData = LegalDisclaimerSectionData;
+  type GlobalSitemapSectionData = SitemapSectionData;
   type GlobalCountingItem = CountingItem;
   type GlobalCaseStudyData = CaseStudyData;
   type GlobalTestimonialsData = TestimonialsData;
