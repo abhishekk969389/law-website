@@ -15,6 +15,7 @@ import {
   LucideIcon,
 } from "lucide-react";
 import { CaseStudyDetailItem } from "@/types/law";
+import { FadeIn } from "@/app/components/ui/animations";
 
 const iconMap: Record<string, LucideIcon> = {
   landmark: Landmark,
@@ -37,7 +38,7 @@ export function CaseStudyMain({ caseStudy }: CaseStudyMainProps) {
   return (
     <div className="space-y-10 sm:space-y-12">
       {/* 1. Hero Banner Card matching exact screenshot */}
-      <div className="rounded-2xl border border-slate-800/80 bg-[#0A0E17] overflow-hidden relative shadow-2xl">
+      <FadeIn direction="up" delay={0.1} duration={0.6} className="rounded-2xl border border-slate-800/80 bg-[#0A0E17] overflow-hidden relative shadow-2xl">
         {/* Top Hero Body */}
         <div className="relative p-5 sm:p-7 lg:p-8 pt-4 sm:pt-5 lg:pt-12 flex flex-col justify-start">
           {/* Background Image & Gradient Mask */}
@@ -113,31 +114,33 @@ export function CaseStudyMain({ caseStudy }: CaseStudyMainProps) {
             </div>
           </div>
         )}
-      </div>
+      </FadeIn>
 
       {/* 2. Content Article Body */}
       <div className="space-y-6 pt-2">
         {/* Subheading 1 */}
         {caseStudy.subheading1 && (
-          <h2 className="font-serif text-2xl sm:text-3xl text-white font-semibold italic tracking-tight">
-            {caseStudy.subheading1}
-          </h2>
+          <FadeIn direction="up" delay={0.2} duration={0.6}>
+            <h2 className="font-serif text-2xl sm:text-3xl text-white font-semibold italic tracking-tight">
+              {caseStudy.subheading1}
+            </h2>
+          </FadeIn>
         )}
 
         {/* Paragraphs 1 */}
         {caseStudy.paragraphs1 && caseStudy.paragraphs1.length > 0 && (
-          <div className="space-y-4">
+          <FadeIn direction="up" delay={0.25} duration={0.6} className="space-y-4">
             {caseStudy.paragraphs1.map((p, idx) => (
               <p key={idx} className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-light">
                 {p}
               </p>
             ))}
-          </div>
+          </FadeIn>
         )}
 
         {/* Quote Callout Box with Double Vertical Gold Accent Bars (||) */}
         {caseStudy.quote && (
-          <div className="flex items-stretch gap-3.5 sm:gap-8 my-8 py-2">
+          <FadeIn direction="up" delay={0.3} duration={0.6} className="flex items-stretch gap-3.5 sm:gap-8 my-8 py-2">
             {/* Double Vertical Gold Bars (||) */}
             <div className="flex items-stretch gap-1.5 shrink-0">
               <span className="w-[3px] bg-[#D4A359] rounded-sm block" />
@@ -147,23 +150,23 @@ export function CaseStudyMain({ caseStudy }: CaseStudyMainProps) {
             <p className="font-serif italic text-base sm:text-lg md:text-xl text-white font-medium leading-snug self-center">
               {caseStudy.quote}
             </p>
-          </div>
+          </FadeIn>
         )}
 
         {/* Paragraphs 2 */}
         {caseStudy.paragraphs2 && caseStudy.paragraphs2.length > 0 && (
-          <div className="space-y-4">
+          <FadeIn direction="up" delay={0.35} duration={0.6} className="space-y-4">
             {caseStudy.paragraphs2.map((p, idx) => (
               <p key={idx} className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-light">
                 {p}
               </p>
             ))}
-          </div>
+          </FadeIn>
         )}
 
         {/* Overview & Challenge Section */}
         {caseStudy.overviewHeading && (
-          <div className="space-y-4 pt-4">
+          <FadeIn direction="up" delay={0.4} duration={0.6} className="space-y-4 pt-4">
             <h2 className="font-serif text-2xl sm:text-3xl text-white font-semibold italic tracking-tight">
               {caseStudy.overviewHeading}
             </h2>
@@ -176,7 +179,7 @@ export function CaseStudyMain({ caseStudy }: CaseStudyMainProps) {
                 ))}
               </div>
             )}
-          </div>
+          </FadeIn>
         )}
       </div>
     </div>

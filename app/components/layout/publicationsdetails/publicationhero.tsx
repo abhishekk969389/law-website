@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { Calendar, Folder } from "lucide-react";
 import { PublicationDetailItem } from "@/types/law";
+import { FadeIn } from "@/app/components/ui/animations";
 
 interface PublicationHeroProps {
   publication: PublicationDetailItem;
@@ -13,7 +14,7 @@ export function PublicationHero({ publication }: PublicationHeroProps) {
   if (!publication) return null;
 
   return (
-    <div className="space-y-5 text-left select-none">
+    <FadeIn direction="up" delay={0.1} duration={0.6} className="space-y-5 text-left select-none">
       {/* 1. Hero Image */}
       <div className="relative w-full aspect-[16/9] sm:aspect-[21/10] rounded-2xl overflow-hidden bg-slate-900 border border-slate-800/80 shadow-2xl">
         <Image
@@ -50,7 +51,7 @@ export function PublicationHero({ publication }: PublicationHeroProps) {
           {publication.excerpt}
         </p>
       )}
-    </div>
+    </FadeIn>
   );
 }
 

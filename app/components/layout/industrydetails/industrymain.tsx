@@ -24,6 +24,7 @@ import {
   LucideIcon,
 } from "lucide-react";
 import { IndustryDetailItem } from "@/types/law";
+import { FadeIn } from "@/app/components/ui/animations";
 
 const iconMap: Record<string, LucideIcon> = {
   landmark: Landmark,
@@ -57,7 +58,7 @@ export function IndustryMain({ industry }: IndustryMainProps) {
   return (
     <div className="space-y-10 sm:space-y-12">
       {/* 1. Header Title & Intro Section */}
-      <div className="space-y-4">
+      <FadeIn direction="up" delay={0.1} duration={0.6} className="space-y-4">
         <div className="flex items-center gap-4">
           <div className="w-14 h-14 rounded-full border-2 border-[#D4A359] bg-[#0A0E17] flex items-center justify-center text-[#D4A359] shadow-xl shrink-0">
             <MainIcon className="w-7 h-7 stroke-[1.75]" />
@@ -80,10 +81,10 @@ export function IndustryMain({ industry }: IndustryMainProps) {
             {industry.introText}
           </p>
         )}
-      </div>
+      </FadeIn>
 
       {/* 2. Hero Image */}
-      <div className="relative w-full aspect-[16/9] sm:aspect-[21/9] rounded-2xl overflow-hidden border border-slate-800/80 shadow-2xl bg-slate-900">
+      <FadeIn direction="up" delay={0.15} duration={0.6} className="relative w-full aspect-[16/9] sm:aspect-[21/9] rounded-2xl overflow-hidden border border-slate-800/80 shadow-2xl bg-slate-900">
         <Image
           src={industry.heroImage || "/service1.svg"}
           alt={industry.title}
@@ -92,23 +93,23 @@ export function IndustryMain({ industry }: IndustryMainProps) {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B0E14]/40 via-transparent to-transparent" />
-      </div>
+      </FadeIn>
 
       {/* 3. Overview Section */}
-      <div className="space-y-2">
+      <FadeIn direction="up" delay={0.2} duration={0.6} className="space-y-2">
         <h2 className="font-serif text-2xl sm:text-2xl md:text-3xl text-white font-semibold tracking-tight">
           {industry.overviewHeading || "Overview"}
         </h2>
         <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
           {industry.overviewDescription}
         </p>
-      </div>
+      </FadeIn>
 
       <div className="border-b border-slate-800/80" />
 
       {/* 4. Our Services Section */}
       {industry.services && industry.services.length > 0 && (
-        <div className="space-y-4">
+        <FadeIn direction="up" delay={0.25} duration={0.6} className="space-y-4">
           <h2 className="font-serif text-2xl sm:text-3xl text-white font-semibold tracking-tight">
             {industry.servicesHeading || "Our Services"}
           </h2>
@@ -136,14 +137,14 @@ export function IndustryMain({ industry }: IndustryMainProps) {
               );
             })}
           </div>
-        </div>
+        </FadeIn>
       )}
 
       <div className="border-b border-slate-800/80" />
 
       {/* 5. Key Challenges We Address */}
       {industry.challenges && industry.challenges.length > 0 && (
-        <div className="space-y-4">
+        <FadeIn direction="up" delay={0.3} duration={0.6} className="space-y-4">
           <h2 className="font-serif text-2xl sm:text-3xl text-white font-semibold tracking-tight">
             {industry.challengesHeading || "Key Challenges We Address"}
           </h2>
@@ -155,12 +156,12 @@ export function IndustryMain({ industry }: IndustryMainProps) {
               </li>
             ))}
           </ul>
-        </div>
+        </FadeIn>
       )}
 
       {/* 6. Why Choose Us Section */}
       {industry.whyChooseUs && industry.whyChooseUs.length > 0 && (
-        <div className="space-y-6">
+        <FadeIn direction="up" delay={0.35} duration={0.6} className="space-y-6">
           <h2 className="font-serif text-2xl sm:text-3xl text-white font-semibold tracking-tight">
             {industry.whyChooseHeading || "Why Choose Us"}
           </h2>
@@ -186,7 +187,7 @@ export function IndustryMain({ industry }: IndustryMainProps) {
               );
             })}
           </div>
-        </div>
+        </FadeIn>
       )}
     </div>
   );

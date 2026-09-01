@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import rawLawData from "@/app/data/lawData.json";
 import { CaseStudySidebarData, CaseStudyDetailItem, GlobalLawData } from "@/types/law";
+import { FadeIn } from "@/app/components/ui/animations";
 
 export interface CaseStudySidebarProps {
   currentId?: string;
@@ -52,7 +53,7 @@ export function CaseStudySidebar({
     <aside className="space-y-8 sticky top-24">
       {/* 1. Case Study List Widget */}
       {listItems && listItems.length > 0 && (
-        <div className="rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-5 space-y-3 shadow-xl">
+        <FadeIn direction="up" delay={0.15} duration={0.6} className="rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-5 space-y-3 shadow-xl">
           <div className="px-1">
             <h3 className="font-serif text-xl md:text-2xl text-white font-semibold tracking-tight">
               {listHeading}
@@ -108,12 +109,12 @@ export function CaseStudySidebar({
               );
             })}
           </nav>
-        </div>
+        </FadeIn>
       )}
 
       {/* 2. Have Any Query? Feel Free To Contact Widget matching exact screenshot */}
       {contact && (
-        <div className="relative rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-6 sm:p-7 space-y-5 shadow-xl overflow-hidden text-left">
+        <FadeIn direction="up" delay={0.25} duration={0.6} className="relative rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-6 sm:p-7 space-y-5 shadow-xl overflow-hidden text-left">
           {/* Right Side Background Lady Justice / Watermark Artwork */}
           {contact.backgroundImage && (
             <div className="absolute right-0 top-0 bottom-0 w-[60%] opacity-30 pointer-events-none z-0">
@@ -230,7 +231,7 @@ export function CaseStudySidebar({
               </div>
             )}
           </div>
-        </div>
+        </FadeIn>
       )}
     </aside>
   );

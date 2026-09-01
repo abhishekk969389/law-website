@@ -15,6 +15,7 @@ import {
   LucideIcon,
 } from "lucide-react";
 import { CareerDetailItem, CareerSidebarData } from "@/types/law";
+import { FadeIn } from "@/app/components/ui/animations";
 
 interface CareerSidebarProps {
   career: CareerDetailItem;
@@ -72,7 +73,7 @@ export function CareerSidebar({ career, sidebarData }: CareerSidebarProps) {
     <aside className="space-y-6 sticky top-24 select-none text-left">
       
       {/* 1. Job Overview Card */}
-      <div className="rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-5 sm:p-6 shadow-xl space-y-4">
+      <FadeIn direction="up" delay={0.15} duration={0.6} className="rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-5 sm:p-6 shadow-xl space-y-4">
         <h3 className="font-serif text-xl sm:text-2xl text-white font-medium tracking-tight mb-3">
           {data?.overviewHeading || "Job Overview"}
         </h3>
@@ -98,10 +99,10 @@ export function CareerSidebar({ career, sidebarData }: CareerSidebarProps) {
             );
           })}
         </div>
-      </div>
+      </FadeIn>
 
       {/* 2. Apply for This Position Card */}
-      <div className="rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-5 sm:p-6 shadow-xl space-y-4">
+      <FadeIn direction="up" delay={0.25} duration={0.6} className="rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-5 sm:p-6 shadow-xl space-y-4">
         <div>
           <h3 className="font-serif text-xl sm:text-2xl text-white font-medium tracking-tight mb-1.5">
             {data?.applyHeading || "Apply for This Position"}
@@ -201,10 +202,10 @@ export function CareerSidebar({ career, sidebarData }: CareerSidebarProps) {
             </div>
           </form>
         )}
-      </div>
+      </FadeIn>
 
       {/* 3. Explore More Opportunities Card */}
-      <div className="rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-5 sm:p-6 shadow-xl space-y-3.5">
+      <FadeIn direction="up" delay={0.35} duration={0.6} className="rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-5 sm:p-6 shadow-xl space-y-3.5">
         <h3 className="font-serif text-xl sm:text-2xl text-white font-medium tracking-tight">
           {data?.exploreHeading || "Explore More Opportunities"}
         </h3>
@@ -220,7 +221,7 @@ export function CareerSidebar({ career, sidebarData }: CareerSidebarProps) {
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
-      </div>
+      </FadeIn>
 
     </aside>
   );

@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Calendar, PhoneCall } from "lucide-react";
 import rawLawData from "@/app/data/lawData.json";
 import { BlogSidebarData, GlobalLawData } from "@/types/law";
+import { FadeIn } from "@/app/components/ui/animations";
 
 interface BlogSidebarProps {
   currentId?: string;
@@ -25,7 +26,7 @@ export function BlogSidebar({ currentId, sidebarData }: BlogSidebarProps) {
     <aside className="w-full space-y-8 select-none">
       {/* 1. Recent Blogs Card */}
       {recentBlogs && recentBlogs.length > 0 && (
-        <div className="rounded-2xl sm:rounded-3xl bg-[#0C191B]/90 border border-slate-800/80 p-5 sm:p-6 shadow-xl space-y-5 text-left">
+        <FadeIn direction="up" delay={0.15} duration={0.6} className="rounded-2xl sm:rounded-3xl bg-[#0C191B]/90 border border-slate-800/80 p-5 sm:p-6 shadow-xl space-y-5 text-left">
           <h3 className="font-serif italic text-xl sm:text-2xl text-white font-normal mb-2">
             {recentHeading}
           </h3>
@@ -77,12 +78,12 @@ export function BlogSidebar({ currentId, sidebarData }: BlogSidebarProps) {
               );
             })}
           </div>
-        </div>
+        </FadeIn>
       )}
 
       {/* 2. Have You Any Query Feel Please Free Contact Widget */}
       {contact && (
-        <div className="relative rounded-2xl sm:rounded-3xl bg-[#0A0E17] border border-slate-800/80 p-6 sm:p-8 shadow-xl overflow-hidden text-center flex flex-col items-center justify-center min-h-[340px]">
+        <FadeIn direction="up" delay={0.25} duration={0.6} className="relative rounded-2xl sm:rounded-3xl bg-[#0A0E17] border border-slate-800/80 p-6 sm:p-8 shadow-xl overflow-hidden text-center flex flex-col items-center justify-center min-h-[340px]">
           {/* Background Image Overlay */}
           <div className="absolute inset-0 opacity-20 pointer-events-none z-0">
             <Image
@@ -125,7 +126,7 @@ export function BlogSidebar({ currentId, sidebarData }: BlogSidebarProps) {
               <span className="font-semibold">{contact.phone}</span>
             </a>
           )}
-        </div>
+        </FadeIn>
       )}
     </aside>
   );

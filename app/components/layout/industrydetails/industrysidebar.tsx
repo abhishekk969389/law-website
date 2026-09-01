@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 import rawLawData from "@/app/data/lawData.json";
 import { IndustryDetailSidebarData, IndustryDetailItem, GlobalLawData } from "@/types/law";
+import { FadeIn } from "@/app/components/ui/animations";
 
 const iconMap: Record<string, LucideIcon> = {
   landmark: Landmark,
@@ -59,7 +60,7 @@ export function IndustrySidebar({
     <aside className="space-y-8 sticky top-24">
       {/* 1. Industries Navigation List */}
       {allIndustries && allIndustries.length > 0 && (
-        <div className="rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-5 space-y-2 shadow-xl">
+        <FadeIn direction="up" delay={0.15} duration={0.6} className="rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-5 space-y-2 shadow-xl">
           <h3 className="font-serif text-xl md:text-2xl text-white font-semibold mb-4 px-1 tracking-tight">
             {industriesTitle}
           </h3>
@@ -102,12 +103,12 @@ export function IndustrySidebar({
               );
             })}
           </nav>
-        </div>
+        </FadeIn>
       )}
 
       {/* 2. Get in Touch Widget */}
       {getInTouch && (
-        <div className="rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-6 space-y-4 shadow-xl text-left">
+        <FadeIn direction="up" delay={0.25} duration={0.6} className="rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-6 space-y-4 shadow-xl text-left">
           <h3 className="font-serif text-xl md:text-2xl text-white font-semibold tracking-tight">
             {getInTouchTitle}
           </h3>
@@ -130,12 +131,12 @@ export function IndustrySidebar({
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
-        </div>
+        </FadeIn>
       )}
 
       {/* 3. Related Insights Widget */}
       {insights && insights.length > 0 && (
-        <div className="rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-5 space-y-4 shadow-xl">
+        <FadeIn direction="up" delay={0.35} duration={0.6} className="rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-5 space-y-4 shadow-xl">
           <h3 className="font-serif text-xl md:text-2xl text-white font-semibold mb-2 px-1 tracking-tight">
             {insightsTitle}
           </h3>
@@ -166,7 +167,7 @@ export function IndustrySidebar({
               </Link>
             ))}
           </div>
-        </div>
+        </FadeIn>
       )}
     </aside>
   );

@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 import { PenTool } from "lucide-react";
 import rawLawData from "@/app/data/lawData.json";

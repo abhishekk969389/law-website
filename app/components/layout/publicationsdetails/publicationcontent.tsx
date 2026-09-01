@@ -15,6 +15,7 @@ import {
   LucideIcon,
 } from "lucide-react";
 import { PublicationDetailItem } from "@/types/law";
+import { FadeIn } from "@/app/components/ui/animations";
 
 interface PublicationContentProps {
   publication: PublicationDetailItem;
@@ -46,7 +47,7 @@ export function PublicationContent({ publication }: PublicationContentProps) {
       
       {/* 1. Introduction Section */}
       {publication.introductionText && (
-        <div className="space-y-3.5">
+        <FadeIn direction="up" delay={0.15} duration={0.6} className="space-y-3.5">
           <h2 className="font-serif text-xl sm:text-2xl text-white font-medium tracking-tight">
             {publication.introductionHeading || "Introduction"}
           </h2>
@@ -60,12 +61,12 @@ export function PublicationContent({ publication }: PublicationContentProps) {
               </p>
             ))}
           </div>
-        </div>
+        </FadeIn>
       )}
 
       {/* 2. Key Highlights of the New Rules */}
       {publication.highlights && publication.highlights.length > 0 && (
-        <div className="space-y-6">
+        <FadeIn direction="up" delay={0.2} duration={0.6} className="space-y-6">
           <h2 className="font-serif text-xl sm:text-2xl text-white font-medium tracking-tight">
             {publication.highlightsHeading || "Key Highlights of the New Rules"}
           </h2>
@@ -95,12 +96,12 @@ export function PublicationContent({ publication }: PublicationContentProps) {
               );
             })}
           </div>
-        </div>
+        </FadeIn>
       )}
 
       {/* 3. Callout Box: What This Means for Your Business */}
       {publication.callout && (
-        <div className="rounded-2xl border border-[#D4A359]/60 bg-[#0A0E17]/90 p-5 sm:p-6 shadow-xl relative overflow-hidden">
+        <FadeIn direction="up" delay={0.25} duration={0.6} className="rounded-2xl border border-[#D4A359]/60 bg-[#0A0E17]/90 p-5 sm:p-6 shadow-xl relative overflow-hidden">
           <div className="flex items-start gap-4 sm:gap-5">
             {/* Left Gold Lightbulb Icon */}
             <div className="w-12 h-12 rounded-xl bg-[#D4A359]/10 text-[#D4A359] flex items-center justify-center shrink-0 mt-0.5">
@@ -117,19 +118,19 @@ export function PublicationContent({ publication }: PublicationContentProps) {
               </p>
             </div>
           </div>
-        </div>
+        </FadeIn>
       )}
 
       {/* 4. Conclusion Section */}
       {publication.conclusionText && (
-        <div className="space-y-3.5">
+        <FadeIn direction="up" delay={0.3} duration={0.6} className="space-y-3.5">
           <h2 className="font-serif text-xl sm:text-2xl text-white font-medium tracking-tight">
             {publication.conclusionHeading || "Conclusion"}
           </h2>
           <p className="text-slate-300 text-xs sm:text-sm md:text-base leading-relaxed font-light">
             {publication.conclusionText}
           </p>
-        </div>
+        </FadeIn>
       )}
 
     </div>

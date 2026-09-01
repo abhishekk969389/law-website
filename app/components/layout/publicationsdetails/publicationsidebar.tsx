@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { PublicationRecentPost, PublicationSidebarData } from "@/types/law";
+import { FadeIn } from "@/app/components/ui/animations";
 
 interface PublicationSidebarProps {
   currentId?: string;
@@ -21,7 +22,7 @@ export function PublicationSidebar({
 
   return (
     <aside className="sticky top-24 select-none text-left">
-      <div className="rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-5 sm:p-6 space-y-4 shadow-xl">
+      <FadeIn direction="up" delay={0.15} duration={0.6} className="rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-5 sm:p-6 space-y-4 shadow-xl">
         {/* Header */}
         <h3 className="font-serif text-xl sm:text-2xl text-white font-medium tracking-tight mb-2">
           {title}
@@ -66,7 +67,7 @@ export function PublicationSidebar({
             );
           })}
         </div>
-      </div>
+      </FadeIn>
     </aside>
   );
 }

@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { ArrowLeft, MapPin, Briefcase, Users, Clock } from "lucide-react";
 import { CareerDetailItem } from "@/types/law";
+import { FadeIn } from "@/app/components/ui/animations";
 
 interface CareerHeaderProps {
   career: CareerDetailItem;
@@ -13,7 +14,7 @@ export function CareerHeader({ career }: CareerHeaderProps) {
   if (!career) return null;
 
   return (
-    <div className="space-y-4 sm:space-y-5 text-left select-none pb-6 border-b border-slate-800/80">
+    <FadeIn direction="up" delay={0.1} duration={0.6} className="space-y-4 sm:space-y-5 text-left select-none pb-6 border-b border-slate-800/80">
       {/* 1. Back to Openings Link */}
       <div>
         <Link
@@ -64,7 +65,7 @@ export function CareerHeader({ career }: CareerHeaderProps) {
           </div>
         )}
       </div>
-    </div>
+    </FadeIn>
   );
 }
 
