@@ -14,6 +14,7 @@ import {
   CalendarPlus,
 } from "lucide-react";
 import { EventDetailItem } from "@/types/law";
+import { FadeIn } from "@/app/components/ui/animations";
 
 interface EventHeroProps {
   event: EventDetailItem;
@@ -31,7 +32,7 @@ export function EventHero({ event }: EventHeroProps) {
   };
 
   return (
-    <div className="rounded-2xl sm:rounded-3xl bg-[#0B0E14] border border-slate-800/80 p-5 sm:p-7 lg:p-8 shadow-2xl mb-8 sm:mb-10 text-left">
+    <FadeIn direction="up" delay={0.1} duration={0.6} className="rounded-2xl sm:rounded-3xl bg-[#0B0E14] border border-slate-800/80 p-5 sm:p-7 lg:p-8 shadow-2xl mb-8 sm:mb-10 text-left">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-center">
         {/* Left Column: Image & Badges */}
         <div className="lg:col-span-5 relative w-full aspect-[4/3] sm:aspect-[16/11] lg:aspect-square rounded-2xl overflow-hidden bg-slate-900 border border-slate-800/90 shadow-xl">
@@ -181,7 +182,7 @@ export function EventHero({ event }: EventHeroProps) {
           </div>
         </div>
       </div>
-    </div>
+    </FadeIn>
   );
 }
 

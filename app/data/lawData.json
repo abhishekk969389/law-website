@@ -2897,7 +2897,7 @@
     "assistance": {
       "title": "Need Immediate Assistance?",
       "description": "Our team is available to help you right away.",
-      "phone": "+1 222 333 44 55"
+      "phone": "+91 969 3893 502"
     },
     "formTitle": "Fill in your details",
     "formSubtitle": "Our team will get back to you shortly.",
@@ -3914,7 +3914,7 @@
       ]
     },
     "resources": {
-      "title": "Resources",
+      "title": "Useful Links",
       "links": [
         {
           "id": "1",
@@ -3988,7 +3988,7 @@
       "openingHours": "Sun - Friday, 09 am - 08 pm",
       "closedText": "Saturday Closed"
     },
-    "copyrightText": "©2021 Veritas All Rights Reserved."
+    "copyrightText": "©2026 Veritas Law Firm. All Rights Reserved. powered by Lestow"
   },
   "serviceDetails": [
     {
@@ -5297,8 +5297,8 @@
         "Please Free",
         "Contact"
       ],
-      "phone": "+1 222 333 44 55",
-      "phoneHref": "tel:+12223334455",
+      "phone": "+91 969 3893 502",
+      "phoneHref": "tel:+919693893502",
       "backgroundImage": "/testinomial.svg"
     }
   },

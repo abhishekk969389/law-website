@@ -18,6 +18,7 @@ import {
   LucideIcon,
 } from "lucide-react";
 import { EventDetailItem } from "@/types/law";
+import { FadeIn } from "@/app/components/ui/animations";
 
 interface EventContentProps {
   event: EventDetailItem;
@@ -54,7 +55,7 @@ export function EventContent({ event }: EventContentProps) {
       
       {/* 1. About the Event */}
       {event.aboutText && (
-        <div className="pb-6 sm:pb-8">
+        <FadeIn direction="up" delay={0.15} duration={0.6} className="pb-6 sm:pb-8">
           <div className="flex items-start gap-4 sm:gap-5">
             {/* Left Gold Outlined Icon Badge */}
             <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl border border-[#D4A359]/70 bg-[#070B12] text-[#D4A359] flex items-center justify-center shrink-0 shadow-md">
@@ -78,12 +79,12 @@ export function EventContent({ event }: EventContentProps) {
               </p>
             </div>
           </div>
-        </div>
+        </FadeIn>
       )}
 
       {/* 2. Key Takeaways */}
       {event.takeaways && event.takeaways.length > 0 && (
-        <div className="py-6 sm:py-8">
+        <FadeIn direction="up" delay={0.2} duration={0.6} className="py-6 sm:py-8">
           <div className="flex items-start gap-4 sm:gap-5">
             {/* Left Gold Outlined Icon Badge */}
             <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl border border-[#D4A359]/70 bg-[#070B12] text-[#D4A359] flex items-center justify-center shrink-0 shadow-md">
@@ -110,12 +111,12 @@ export function EventContent({ event }: EventContentProps) {
               </div>
             </div>
           </div>
-        </div>
+        </FadeIn>
       )}
 
       {/* 3. Agenda / Schedule */}
       {event.timeline && event.timeline.length > 0 && (
-        <div className="py-6 sm:py-8">
+        <FadeIn direction="up" delay={0.25} duration={0.6} className="py-6 sm:py-8">
           <div className="flex items-start gap-4 sm:gap-5">
             {/* Left Gold Outlined Icon Badge */}
             <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl border border-[#D4A359]/70 bg-[#070B12] text-[#D4A359] flex items-center justify-center shrink-0 shadow-md">
@@ -173,11 +174,11 @@ export function EventContent({ event }: EventContentProps) {
               </div>
             </div>
           </div>
-        </div>
+        </FadeIn>
       )}
 
       {/* 4. Venue Details */}
-      <div className="py-6 sm:py-8">
+      <FadeIn direction="up" delay={0.3} duration={0.6} className="py-6 sm:py-8">
         <div className="flex items-start gap-4 sm:gap-5">
           {/* Left Gold Outlined Icon Badge */}
           <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl border border-[#D4A359]/70 bg-[#070B12] text-[#D4A359] flex items-center justify-center shrink-0 shadow-md">
@@ -245,11 +246,11 @@ export function EventContent({ event }: EventContentProps) {
             </div>
           </div>
         </div>
-      </div>
+      </FadeIn>
 
       {/* 5. Who Should Attend */}
       {event.attendeesText && (
-        <div className="py-6 sm:py-8">
+        <FadeIn direction="up" delay={0.35} duration={0.6} className="py-6 sm:py-8">
           <div className="flex items-start gap-4 sm:gap-5">
             {/* Left Gold Outlined Icon Badge */}
             <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl border border-[#D4A359]/70 bg-[#070B12] text-[#D4A359] flex items-center justify-center shrink-0 shadow-md">
@@ -266,12 +267,12 @@ export function EventContent({ event }: EventContentProps) {
               </p>
             </div>
           </div>
-        </div>
+        </FadeIn>
       )}
 
       {/* 6. FAQs */}
       {faqs.length > 0 && (
-        <div className="pt-6 sm:pt-8">
+        <FadeIn direction="up" delay={0.4} duration={0.6} className="pt-6 sm:pt-8">
           <div className="flex items-start gap-4 sm:gap-5">
             {/* Left Gold Outlined Icon Badge */}
             <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl border border-[#D4A359]/70 bg-[#070B12] text-[#D4A359] flex items-center justify-center shrink-0 shadow-md">
@@ -324,7 +325,7 @@ export function EventContent({ event }: EventContentProps) {
               </div>
             </div>
           </div>
-        </div>
+        </FadeIn>
       )}
 
     </div>

@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { Calendar, ShieldCheck, FileText, Users, Award, Scale, BookOpen, CheckCircle2, LucideIcon } from "lucide-react";
 import { LegalDetailItem } from "@/types/law";
+import { FadeIn } from "@/app/components/ui/animations";
 
 interface LegalMainProps {
   article: LegalDetailItem;
@@ -25,7 +26,7 @@ export function LegalMain({ article }: LegalMainProps) {
   return (
     <article className="w-full text-left">
       {/* 1. Large Top Hero Image */}
-      <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] rounded-2xl sm:rounded-3xl overflow-hidden mb-6 bg-[#0B0E14] border border-slate-800/80 shadow-2xl">
+      <FadeIn direction="up" delay={0.1} duration={0.6} className="relative w-full aspect-[16/10] sm:aspect-[16/9] rounded-2xl sm:rounded-3xl overflow-hidden mb-6 bg-[#0B0E14] border border-slate-800/80 shadow-2xl">
         <Image
           src={article.image || "/about.svg"}
           alt={article.title}
@@ -34,10 +35,10 @@ export function LegalMain({ article }: LegalMainProps) {
           className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B0E14]/30 via-transparent to-transparent pointer-events-none" />
-      </div>
+      </FadeIn>
 
       {/* 2. Date • Category Meta Row */}
-      <div className="flex items-center gap-2.5 sm:gap-3 text-xs sm:text-sm mb-4 select-none flex-wrap">
+      <FadeIn direction="up" delay={0.15} duration={0.6} className="flex items-center gap-2.5 sm:gap-3 text-xs sm:text-sm mb-4 select-none flex-wrap">
         <div className="flex items-center gap-1.5 text-slate-300">
           <Calendar className="w-4 h-4 text-slate-400" />
           <span className="font-medium tracking-wide uppercase">{article.date}</span>
@@ -46,23 +47,27 @@ export function LegalMain({ article }: LegalMainProps) {
         <span className="text-[#D4A359] font-semibold tracking-wider uppercase">
           {article.category}
         </span>
-      </div>
+      </FadeIn>
 
       {/* 3. Main Title in Serif */}
-      <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl text-white font-normal leading-snug tracking-tight mb-4">
-        {article.title}
-      </h1>
+      <FadeIn direction="up" delay={0.2} duration={0.6}>
+        <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl text-white font-normal leading-snug tracking-tight mb-4">
+          {article.title}
+        </h1>
+      </FadeIn>
 
       {/* 4. Subtitle / Summary Paragraph */}
       {article.subtitle && (
-        <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-light mb-8">
-          {article.subtitle}
-        </p>
+        <FadeIn direction="up" delay={0.25} duration={0.6}>
+          <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-light mb-8">
+            {article.subtitle}
+          </p>
+        </FadeIn>
       )}
 
       {/* 5. Introduction Section */}
       {article.introParagraphs && article.introParagraphs.length > 0 && (
-        <div className="mb-8 sm:mb-10">
+        <FadeIn direction="up" delay={0.3} duration={0.6} className="mb-8 sm:mb-10">
           <h2 className="font-serif text-xl sm:text-2xl text-white font-semibold mb-3">
             {article.introHeading || "Introduction"}
           </h2>
@@ -76,12 +81,12 @@ export function LegalMain({ article }: LegalMainProps) {
               </p>
             ))}
           </div>
-        </div>
+        </FadeIn>
       )}
 
       {/* 6. Key Highlights of the New Rules */}
       {article.highlights && article.highlights.length > 0 && (
-        <div className="mb-8 sm:mb-10">
+        <FadeIn direction="up" delay={0.35} duration={0.6} className="mb-8 sm:mb-10">
           <h2 className="font-serif text-xl sm:text-2xl text-white font-semibold mb-6">
             {article.highlightsHeading || "Key Highlights of the New Rules"}
           </h2>
@@ -113,12 +118,12 @@ export function LegalMain({ article }: LegalMainProps) {
               );
             })}
           </div>
-        </div>
+        </FadeIn>
       )}
 
       {/* 7. Conclusion / What This Means for Your Business */}
       {article.conclusionParagraphs && article.conclusionParagraphs.length > 0 && (
-        <div className="mb-6">
+        <FadeIn direction="up" delay={0.4} duration={0.6} className="mb-6">
           <h2 className="font-serif text-xl sm:text-2xl text-white font-semibold mb-3">
             {article.conclusionHeading || "What This Means for Your Business"}
           </h2>
@@ -132,7 +137,7 @@ export function LegalMain({ article }: LegalMainProps) {
               </p>
             ))}
           </div>
-        </div>
+        </FadeIn>
       )}
     </article>
   );

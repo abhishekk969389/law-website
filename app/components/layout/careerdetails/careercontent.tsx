@@ -12,6 +12,7 @@ import {
   LucideIcon,
 } from "lucide-react";
 import { CareerDetailItem } from "@/types/law";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 
 interface CareerContentProps {
   career: CareerDetailItem;
@@ -34,7 +35,7 @@ export function CareerContent({ career }: CareerContentProps) {
       
       {/* 1. About the Role */}
       {career.aboutDescription && (
-        <div className="space-y-3.5">
+        <FadeIn direction="up" delay={0.15} duration={0.6} className="space-y-3.5">
           <h2 className="font-serif text-xl sm:text-2xl text-white font-medium tracking-tight flex items-center gap-2">
             <span className="text-[#D4A359] font-bold">|</span>
             <span>{career.aboutHeading || "About the Role"}</span>
@@ -42,12 +43,12 @@ export function CareerContent({ career }: CareerContentProps) {
           <p className="text-slate-300 text-xs sm:text-sm md:text-base leading-relaxed font-light">
             {career.aboutDescription}
           </p>
-        </div>
+        </FadeIn>
       )}
 
       {/* 2. Key Responsibilities */}
       {career.responsibilities && career.responsibilities.length > 0 && (
-        <div className="space-y-4">
+        <FadeIn direction="up" delay={0.2} duration={0.6} className="space-y-4">
           <h2 className="font-serif text-xl sm:text-2xl text-white font-medium tracking-tight flex items-center gap-2">
             <span className="text-[#D4A359] font-bold">|</span>
             <span>{career.responsibilitiesHeading || "Key Responsibilities"}</span>
@@ -60,12 +61,12 @@ export function CareerContent({ career }: CareerContentProps) {
               </li>
             ))}
           </ul>
-        </div>
+        </FadeIn>
       )}
 
       {/* 3. Qualifications & Skills */}
       {career.qualifications && career.qualifications.length > 0 && (
-        <div className="space-y-4">
+        <FadeIn direction="up" delay={0.25} duration={0.6} className="space-y-4">
           <h2 className="font-serif text-xl sm:text-2xl text-white font-medium tracking-tight flex items-center gap-2">
             <span className="text-[#D4A359] font-bold">|</span>
             <span>{career.qualificationsHeading || "Qualifications & Skills"}</span>
@@ -78,12 +79,12 @@ export function CareerContent({ career }: CareerContentProps) {
               </li>
             ))}
           </ul>
-        </div>
+        </FadeIn>
       )}
 
       {/* 4. Why Join Us? */}
       {career.whyJoinItems && career.whyJoinItems.length > 0 && (
-        <div className="space-y-6">
+        <FadeIn direction="up" delay={0.3} duration={0.6} className="space-y-6">
           <h2 className="font-serif text-xl sm:text-2xl text-white font-medium tracking-tight flex items-center gap-2">
             <span className="text-[#D4A359] font-bold">|</span>
             <span>{career.whyJoinHeading || "Why Join Us?"}</span>
@@ -113,7 +114,7 @@ export function CareerContent({ career }: CareerContentProps) {
               );
             })}
           </div>
-        </div>
+        </FadeIn>
       )}
 
     </div>

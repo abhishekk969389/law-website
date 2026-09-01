@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { Calendar } from "lucide-react";
 import { BlogDetailItem } from "@/types/law";
+import { FadeIn } from "@/app/components/ui/animations";
 
 interface BlogMainProps {
   blog: BlogDetailItem;
@@ -15,7 +16,7 @@ export function BlogMain({ blog }: BlogMainProps) {
   return (
     <article className="w-full text-left">
       {/* 1. Large Top Hero Image */}
-      <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] rounded-2xl sm:rounded-3xl overflow-hidden mb-6 bg-[#0B0E14] border border-slate-800/80 shadow-2xl">
+      <FadeIn direction="up" delay={0.1} duration={0.6} className="relative w-full aspect-[16/10] sm:aspect-[16/9] rounded-2xl sm:rounded-3xl overflow-hidden mb-6 bg-[#0B0E14] border border-slate-800/80 shadow-2xl">
         <Image
           src={blog.image || "/casedetail.svg"}
           alt={blog.title}
@@ -24,10 +25,10 @@ export function BlogMain({ blog }: BlogMainProps) {
           className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B0E14]/30 via-transparent to-transparent pointer-events-none" />
-      </div>
+      </FadeIn>
 
       {/* 2. Meta Details (Author, Category, Date) */}
-      <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-sm text-slate-300 font-light mb-4 flex-wrap select-none">
+      <FadeIn direction="up" delay={0.15} duration={0.6} className="flex items-center gap-3 sm:gap-4 text-xs sm:text-sm text-slate-300 font-light mb-4 flex-wrap select-none">
         <div>
           by <span className="text-[#D4A359] font-medium">{blog.author || "Zstal"}</span>
         </div>
@@ -40,16 +41,18 @@ export function BlogMain({ blog }: BlogMainProps) {
           <Calendar className="w-4 h-4 text-[#D4A359]" />
           <span>{blog.date}</span>
         </div>
-      </div>
+      </FadeIn>
 
       {/* 3. Main Title in Serif Italic */}
-      <h1 className="font-serif italic text-2xl sm:text-3xl md:text-4xl lg:text-[40px] text-white font-normal leading-snug tracking-tight mb-6">
-        {blog.title}
-      </h1>
+      <FadeIn direction="up" delay={0.2} duration={0.6}>
+        <h1 className="font-serif italic text-2xl sm:text-3xl md:text-4xl lg:text-[40px] text-white font-normal leading-snug tracking-tight mb-6">
+          {blog.title}
+        </h1>
+      </FadeIn>
 
       {/* 4. Paragraphs 1 */}
       {blog.paragraphs1 && blog.paragraphs1.length > 0 && (
-        <div className="space-y-4 mb-6">
+        <FadeIn direction="up" delay={0.25} duration={0.6} className="space-y-4 mb-6">
           {blog.paragraphs1.map((p, idx) => (
             <p
               key={idx}
@@ -58,12 +61,12 @@ export function BlogMain({ blog }: BlogMainProps) {
               {p}
             </p>
           ))}
-        </div>
+        </FadeIn>
       )}
 
       {/* 5. Quote Callout Box with Double Gold Bars (||) */}
       {blog.quoteText && (
-        <div className="flex items-stretch gap-4 my-6 sm:my-8 pl-1">
+        <FadeIn direction="up" delay={0.3} duration={0.6} className="flex items-stretch gap-4 my-6 sm:my-8 pl-1">
           <div className="flex items-center gap-[3px] shrink-0">
             <div className="w-[3px] h-full min-h-[44px] bg-[#D4A359] rounded-full" />
             <div className="w-[3px] h-full min-h-[44px] bg-[#D4A359] rounded-full" />
@@ -71,12 +74,12 @@ export function BlogMain({ blog }: BlogMainProps) {
           <p className="font-serif italic text-base sm:text-lg md:text-xl text-slate-100 font-normal leading-relaxed">
             {blog.quoteText}
           </p>
-        </div>
+        </FadeIn>
       )}
 
       {/* 6. Paragraphs 2 */}
       {blog.paragraphs2 && blog.paragraphs2.length > 0 && (
-        <div className="space-y-4 mb-8">
+        <FadeIn direction="up" delay={0.35} duration={0.6} className="space-y-4 mb-8">
           {blog.paragraphs2.map((p, idx) => (
             <p
               key={idx}
@@ -85,12 +88,12 @@ export function BlogMain({ blog }: BlogMainProps) {
               {p}
             </p>
           ))}
-        </div>
+        </FadeIn>
       )}
 
       {/* 7. Subheading & Subheading Paragraphs */}
       {blog.subheading && (
-        <div className="mt-8 pt-2">
+        <FadeIn direction="up" delay={0.4} duration={0.6} className="mt-8 pt-2">
           <h2 className="font-serif text-xl sm:text-2xl md:text-3xl text-white font-semibold mb-4 tracking-tight">
             {blog.subheading}
           </h2>
@@ -106,7 +109,7 @@ export function BlogMain({ blog }: BlogMainProps) {
               ))}
             </div>
           )}
-        </div>
+        </FadeIn>
       )}
     </article>
   );

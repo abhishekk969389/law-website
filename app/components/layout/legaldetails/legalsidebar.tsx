@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import rawLawData from "@/app/data/lawData.json";
 import { LegalSidebarData, GlobalLawData } from "@/types/law";
+import { FadeIn } from "@/app/components/ui/animations";
 
 interface LegalSidebarProps {
   currentId?: string;
@@ -23,7 +24,7 @@ export function LegalSidebar({ currentId, sidebarData }: LegalSidebarProps) {
     <aside className="w-full space-y-8 select-none">
       {/* Recent Posts Card */}
       {recentPosts && recentPosts.length > 0 && (
-        <div className="rounded-2xl sm:rounded-3xl bg-[#0B0E14] border border-slate-800/80 p-5 sm:p-6 shadow-xl space-y-5 text-left">
+        <FadeIn direction="up" delay={0.15} duration={0.6} className="rounded-2xl sm:rounded-3xl bg-[#0B0E14] border border-slate-800/80 p-5 sm:p-6 shadow-xl space-y-5 text-left">
           <h3 className="font-serif italic text-xl sm:text-2xl text-white font-normal mb-2">
             {recentHeading}
           </h3>
@@ -67,7 +68,7 @@ export function LegalSidebar({ currentId, sidebarData }: LegalSidebarProps) {
               );
             })}
           </div>
-        </div>
+        </FadeIn>
       )}
     </aside>
   );
