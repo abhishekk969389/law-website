@@ -79,6 +79,7 @@ export function Indsec({ data = defaultIndustrySectionData }: IndsecProps) {
           {items &&
             items.map((item) => {
               const IconComponent = iconMap[item.icon] || Scale;
+              const cardLink = item.link || (item.slug ? `/industries/${item.slug}` : `/industries/${item.id}`);
 
               return (
                 <StaggerItem key={item.id}>
@@ -89,7 +90,7 @@ export function Indsec({ data = defaultIndustrySectionData }: IndsecProps) {
                   >
                     <div>
                       {/* Top Image & Left Floating Badge Wrapper */}
-                      <div className="relative w-full h-[210px]">
+                      <Link href={cardLink} className="block relative w-full h-[210px]">
                         {/* Image Container with overflow-hidden for hover zoom */}
                         <div className="relative w-full h-full overflow-hidden bg-slate-900">
                           <Image
@@ -107,13 +108,15 @@ export function Indsec({ data = defaultIndustrySectionData }: IndsecProps) {
                         >
                           <IconComponent className="w-5 h-5 stroke-[1.75]" />
                         </motion.div>
-                      </div>
+                      </Link>
 
                       {/* Card Content Body */}
                       <div className="pt-9 pb-4 px-6 text-left">
                         {/* Card Title */}
                         <h3 className="font-serif font-semibold text-white text-xl sm:text-2xl text-left mb-3 group-hover:text-[#D4A359] transition-colors">
-                          {item.title}
+                          <Link href={cardLink}>
+                            {item.title}
+                          </Link>
                         </h3>
 
                         {/* Card Description */}
@@ -126,7 +129,7 @@ export function Indsec({ data = defaultIndustrySectionData }: IndsecProps) {
                     {/* Card Action Link */}
                     <div className="pb-6 pt-2 px-6 text-left">
                       <Link
-                        href={item.link || "/industries"}
+                        href={cardLink}
                         className="inline-flex items-center justify-start gap-2 text-[#D4A359] text-xs font-semibold uppercase tracking-wider group-hover:gap-3 transition-all hover:underline"
                       >
                         <span>Learn More</span>

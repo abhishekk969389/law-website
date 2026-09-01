@@ -339,11 +339,6 @@ export interface TeamMemberContactInfo {
   faxValue?: string;
 }
 
-export interface TeamMemberSkill {
-  name: string;
-  percentage?: number;
-}
-
 export interface TeamMemberEducation {
   degree: string;
   institution: string;
@@ -353,6 +348,35 @@ export interface TeamMemberEducation {
 export interface TeamAboutData {
   title?: string;
   paragraphs: string[];
+}
+
+export interface TeamMemberSkill {
+  name: string;
+  percentage?: number;
+  icon?: string;
+}
+
+export interface ActivitySkillItem {
+  id?: string;
+  name: string;
+  percentage: number;
+  icon?: string;
+}
+
+export interface AchievementItem {
+  id?: string;
+  title: string;
+  description: string;
+  icon?: string;
+}
+
+export interface TeamActivitiesData {
+  skillsTitle?: string;
+  skillsIcon?: string;
+  skills?: ActivitySkillItem[];
+  achievementsTitle?: string;
+  achievementsIcon?: string;
+  achievements?: AchievementItem[];
 }
 
 export interface TeamDetailItem {
@@ -365,13 +389,15 @@ export interface TeamDetailItem {
   shortBio: string;
   contactInfo: TeamMemberContactInfo;
   aboutMe?: TeamAboutData;
+  activities?: TeamActivitiesData;
   description?: string[];
-  skills?: TeamMemberSkill[];
+  skills?: TeamMemberSkill[] | ActivitySkillItem[];
   education?: TeamMemberEducation[];
   socials?: SocialLink[];
   practiceAreas?: string[];
   badgeText?: string;
 }
+
 
 
 export interface TeamData {
@@ -470,6 +496,7 @@ export interface IndustryItem {
   icon: string;
   image: string;
   link?: string;
+  slug?: string;
 }
 
 export interface IndustrySectionData {
@@ -481,6 +508,59 @@ export interface IndustrySectionData {
   };
   description?: string;
   items: IndustryItem[];
+}
+
+export interface IndustryDetailServiceItem {
+  id: string;
+  title: string;
+  description: string;
+  icon?: string;
+}
+
+export interface IndustryDetailWhyChooseItem {
+  id: string;
+  title: string;
+  description: string;
+  icon?: string;
+}
+
+export interface IndustryDetailInsightItem {
+  id: string;
+  title: string;
+  date: string;
+  image: string;
+  linkHref?: string;
+}
+
+export interface IndustryDetailSidebarData {
+  industriesTitle?: string;
+  getInTouchTitle?: string;
+  getInTouch?: {
+    text: string;
+    buttonText: string;
+    buttonHref: string;
+  };
+  insightsTitle?: string;
+  insights?: IndustryDetailInsightItem[];
+}
+
+export interface IndustryDetailItem {
+  id: string;
+  slug: string;
+  title: string;
+  icon?: string;
+  tagline?: string;
+  introText?: string;
+  heroImage: string;
+  overviewHeading?: string;
+  overviewDescription: string;
+  servicesHeading?: string;
+  services: IndustryDetailServiceItem[];
+  challengesHeading?: string;
+  challenges: string[];
+  whyChooseHeading?: string;
+  whyChooseUs: IndustryDetailWhyChooseItem[];
+  sidebarData?: IndustryDetailSidebarData;
 }
 
 export interface CaseStudySectionItem {
@@ -504,6 +584,60 @@ export interface CaseStudySectionData {
   items: CaseStudySectionItem[];
 }
 
+export interface CaseStudyMetaItem {
+  label: string;
+  value: string;
+  icon?: string;
+}
+
+export interface CaseStudyDetailItem {
+  id: string;
+  slug: string;
+  badge?: string;
+  title: {
+    whiteText: string;
+    goldText: string;
+  };
+  subtitle?: string;
+  introText?: string;
+  image: string;
+  meta: CaseStudyMetaItem[];
+  subheading1?: string;
+  paragraphs1: string[];
+  quote?: string;
+  paragraphs2?: string[];
+  overviewHeading?: string;
+  overviewParagraphs?: string[];
+  sidebarData?: CaseStudySidebarData;
+}
+
+export interface CaseStudySidebarContact {
+  heading?: string;
+  titleLines?: string[];
+  lastLinePrefix?: string;
+  highlightText?: string;
+  backgroundImage?: string;
+  phone: string;
+  email: string;
+  website: string;
+  address?: string;
+  addressLines?: string[];
+}
+
+export interface CaseStudySidebarItem {
+  id: string;
+  slug?: string;
+  title: string;
+  image: string;
+  linkHref?: string;
+}
+
+export interface CaseStudySidebarData {
+  listHeading?: string;
+  items?: CaseStudySidebarItem[];
+  contact?: CaseStudySidebarContact;
+}
+
 export interface BlogSectionItem {
   id: string;
   title: string;
@@ -524,8 +658,91 @@ export interface BlogSectionData {
   items: BlogSectionItem[];
 }
 
+export interface RecentBlogItem {
+  id: string;
+  slug?: string;
+  title: string;
+  author: string;
+  category?: string;
+  date: string;
+  image: string;
+  linkHref?: string;
+}
+
+export interface BlogSidebarContact {
+  heading?: string;
+  headingLines?: string[];
+  backgroundImage?: string;
+  phone: string;
+  phoneHref?: string;
+}
+
+export interface BlogSidebarData {
+  recentHeading?: string;
+  recentBlogs?: RecentBlogItem[];
+  contact?: BlogSidebarContact;
+}
+
+export interface BlogDetailItem {
+  id: string;
+  slug?: string;
+  title: string;
+  image: string;
+  author: string;
+  category?: string;
+  date: string;
+  commentsCount?: string;
+  paragraphs1?: string[];
+  quoteText?: string;
+  paragraphs2?: string[];
+  subheading?: string;
+  subheadingParagraphs?: string[];
+  sidebarData?: BlogSidebarData;
+}
+
+export interface LegalHighlightItem {
+  id?: string;
+  title: string;
+  description: string;
+  icon?: string;
+}
+
+export interface LegalRecentPost {
+  id: string;
+  slug?: string;
+  title: string;
+  date: string;
+  image: string;
+  link?: string;
+}
+
+export interface LegalSidebarData {
+  recentHeading?: string;
+  recentPosts: LegalRecentPost[];
+}
+
+export interface LegalDetailItem {
+  id: string;
+  slug?: string;
+  title: string;
+  bannerTitle?: string;
+  shortTitle?: string;
+  subtitle?: string;
+  image: string;
+  date: string;
+  category: string;
+  introHeading?: string;
+  introParagraphs?: string[];
+  highlightsHeading?: string;
+  highlights?: LegalHighlightItem[];
+  conclusionHeading?: string;
+  conclusionParagraphs?: string[];
+  sidebarData?: LegalSidebarData;
+}
+
 export interface LegalArticleItem {
   id: string;
+  slug?: string;
   badge?: string;
   date: string;
   category: string;
@@ -564,8 +781,85 @@ export interface MediaSectionData {
   items: MediaSectionItem[];
 }
 
+export interface EventDateBox {
+  day: string;
+  month: string;
+  year: string;
+}
+
+export interface EventTimelineItem {
+  time: string;
+  title: string;
+}
+
+export interface EventAmenityItem {
+  name: string;
+  icon?: string;
+}
+
+export interface EventFaqItem {
+  question: string;
+  answer: string;
+}
+
+export interface EventHeadings {
+  about?: {
+    line1: string;
+    highlight: string;
+  };
+  takeaways?: string;
+  agenda?: string;
+  venue?: string;
+  attendees?: string;
+  faqs?: string;
+  mapButtonText?: string;
+}
+
+export interface EventDetailLabels {
+  dateTime?: string;
+  venue?: string;
+  organizer?: string;
+  ticketPrice?: string;
+  eventType?: string;
+  language?: string;
+}
+
+export interface EventDetailItem {
+  id: string;
+  slug?: string;
+  badge?: string;
+  dateBox: EventDateBox;
+  title: string;
+  bannerTitle?: string;
+  shortTitle?: string;
+  description: string;
+  image: string;
+  dateTime: string;
+  venue: string;
+  venueAddress: string;
+  organizer: string;
+  ticketPrice: string;
+  priceBadge?: string;
+  eventType: string;
+  language: string;
+  registerText?: string;
+  registerLink?: string;
+  calendarText?: string;
+  labels?: EventDetailLabels;
+  headings?: EventHeadings;
+  aboutText?: string;
+  takeaways?: string[];
+  timeline?: EventTimelineItem[];
+  venueImage?: string;
+  mapUrl?: string;
+  amenities?: EventAmenityItem[];
+  attendeesText?: string;
+  faqs?: EventFaqItem[];
+}
+
 export interface EventSectionItem {
   id: string;
+  slug?: string;
   badge: string;
   day: string;
   month: string;
@@ -590,6 +884,7 @@ export interface EventSectionData {
 
 export interface PublicationSectionItem {
   id: string;
+  slug?: string;
   date: string;
   category: string;
   title: string;
@@ -602,6 +897,54 @@ export interface PublicationSectionData {
   title?: string;
   description?: string;
   items: PublicationSectionItem[];
+}
+
+export interface PublicationHighlightItem {
+  number: string;
+  icon?: string;
+  title: string;
+  description: string;
+}
+
+export interface PublicationCallout {
+  icon?: string;
+  title: string;
+  description: string;
+}
+
+export interface PublicationRecentPost {
+  id: string;
+  slug?: string;
+  title: string;
+  date: string;
+  image: string;
+  link?: string;
+}
+
+export interface PublicationSidebarData {
+  recentPostsTitle?: string;
+  recentPosts?: PublicationRecentPost[];
+}
+
+export interface PublicationDetailItem {
+  id: string;
+  slug?: string;
+  image: string;
+  date: string;
+  category: string;
+  title: string;
+  bannerTitle?: string;
+  shortTitle?: string;
+  excerpt: string;
+  introductionHeading?: string;
+  introductionText: string;
+  introductionParagraphs?: string[];
+  highlightsHeading?: string;
+  highlights: PublicationHighlightItem[];
+  callout?: PublicationCallout;
+  conclusionHeading?: string;
+  conclusionText: string;
+  sidebarData?: PublicationSidebarData;
 }
 
 export interface StayUpdatedData {
@@ -651,6 +994,7 @@ export interface ClientResourceSectionData {
 
 export interface JobPositionItem {
   id: string;
+  slug?: string;
   badge: string;
   icon: string;
   title: string;
@@ -663,6 +1007,67 @@ export interface CareerSectionData {
   title?: string;
   description?: string;
   items: JobPositionItem[];
+}
+
+export interface CareerWhyJoinItem {
+  icon?: string;
+  title: string;
+  description: string;
+}
+
+export interface CareerOverviewField {
+  label: string;
+  value: string;
+  icon?: string;
+}
+
+export interface CareerApplyForm {
+  fullNamePlaceholder?: string;
+  emailPlaceholder?: string;
+  phonePlaceholder?: string;
+  resumeLabel?: string;
+  resumeChooseText?: string;
+  resumeNoFileText?: string;
+  resumeNote?: string;
+  buttonText?: string;
+  securityText?: string;
+  successTitle?: string;
+  successText?: string;
+}
+
+export interface CareerSidebarData {
+  overviewHeading?: string;
+  overviewFields?: CareerOverviewField[];
+  applyHeading?: string;
+  applySubtitle?: string;
+  applyForm?: CareerApplyForm;
+  exploreHeading?: string;
+  exploreSubtitle?: string;
+  exploreButtonText?: string;
+  exploreButtonLink?: string;
+}
+
+export interface CareerDetailItem {
+  id: string;
+  slug?: string;
+  title: string;
+  bannerTitle?: string;
+  shortTitle?: string;
+  backText?: string;
+  backLink?: string;
+  location: string;
+  department: string;
+  experience: string;
+  employmentType: string;
+  aboutHeading?: string;
+  aboutDescription: string;
+  responsibilitiesHeading?: string;
+  responsibilities: string[];
+  qualificationsHeading?: string;
+  qualifications: string[];
+  whyJoinHeading?: string;
+  whyJoinItems: CareerWhyJoinItem[];
+  sidebarData?: CareerSidebarData;
 }
 
 export interface CareerCtaData {
@@ -899,6 +1304,18 @@ export interface LawData {
   services: ServicesData;
   serviceDetails?: ServiceDetailItem[];
   teamDetails?: TeamDetailItem[];
+  industryDetails?: IndustryDetailItem[];
+  industrySidebar?: IndustryDetailSidebarData;
+  caseStudyDetails?: CaseStudyDetailItem[];
+  caseStudySidebar?: CaseStudySidebarData;
+  blogDetails?: BlogDetailItem[];
+  blogSidebar?: BlogSidebarData;
+  legalDetails?: LegalDetailItem[];
+  legalSidebar?: LegalSidebarData;
+  eventDetails?: EventDetailItem[];
+  publicationDetails?: PublicationDetailItem[];
+  publicationSidebar?: PublicationSidebarData;
+  careerDetails?: CareerDetailItem[];
   subBanner?: SubBannerData;
   aboutSubBanner?: SubBannerData;
   whyChooseSubBanner?: SubBannerData;
@@ -976,7 +1393,12 @@ export type GlobalProvenApproachData = ProvenApproachData;
 export type GlobalServiceSectionData = ServiceSectionData;
 export type GlobalTeamSectionData = TeamSectionData;
 export type GlobalIndustrySectionData = IndustrySectionData;
+export type GlobalIndustryDetailItem = IndustryDetailItem;
 export type GlobalCaseStudySectionData = CaseStudySectionData;
+export type GlobalCaseStudyDetailItem = CaseStudyDetailItem;
+export type GlobalCaseStudySidebarData = CaseStudySidebarData;
+export type GlobalBlogDetailItem = BlogDetailItem;
+export type GlobalBlogSidebarData = BlogSidebarData;
 export type GlobalBlogSectionData = BlogSectionData;
 export type GlobalLegalSectionData = LegalSectionData;
 export type GlobalMediaSectionData = MediaSectionData;

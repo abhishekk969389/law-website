@@ -71,7 +71,7 @@ export function Legalsec({ data = defaultLegalSectionData }: LegalsecProps) {
                 {featured && (
                     <FadeIn direction="up" delay={0.2} className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] overflow-hidden hover:border-[#D4A359]/50 transition-all duration-300 shadow-xl grid grid-cols-1 lg:grid-cols-2 mb-8 lg:mb-10 cursor-pointer">
                         {/* Left Image Container */}
-                        <div className="relative w-full h-[260px] sm:h-[320px] lg:h-full overflow-hidden bg-slate-900 min-h-[260px]">
+                        <Link href={featured.link || `/legal/${featured.id}`} className="block relative w-full h-[260px] sm:h-[320px] lg:h-full overflow-hidden bg-slate-900 min-h-[260px]">
                             <Image
                                 src={featured.image || "/service3.svg"}
                                 alt={featured.title}
@@ -84,7 +84,7 @@ export function Legalsec({ data = defaultLegalSectionData }: LegalsecProps) {
                                     {featured.badge}
                                 </div>
                             )}
-                        </div>
+                        </Link>
 
                         {/* Right Text Content Body */}
                         <div className="p-6 sm:p-8 flex flex-col justify-between text-left">
@@ -98,7 +98,9 @@ export function Legalsec({ data = defaultLegalSectionData }: LegalsecProps) {
 
                                 {/* Title */}
                                 <h3 className="font-serif font-semibold text-white text-2xl sm:text-3xl mb-4 group-hover:text-[#D4A359] transition-colors leading-snug">
-                                    {featured.title}
+                                    <Link href={featured.link || `/legal/${featured.id}`}>
+                                        {featured.title}
+                                    </Link>
                                 </h3>
 
                                 {/* Description */}
@@ -110,7 +112,7 @@ export function Legalsec({ data = defaultLegalSectionData }: LegalsecProps) {
                             {/* Read More Link */}
                             <div>
                                 <Link
-                                    href={featured.link || "/legal"}
+                                    href={featured.link || `/legal/${featured.id}`}
                                     className="inline-flex items-center gap-2 text-[#D4A359] text-xs sm:text-sm font-semibold uppercase tracking-wider group-hover:gap-3 transition-all hover:underline"
                                 >
                                     <span>Read More</span>
@@ -133,14 +135,14 @@ export function Legalsec({ data = defaultLegalSectionData }: LegalsecProps) {
                                 >
                                     <div>
                                         {/* Top Image Container */}
-                                        <div className="relative w-full h-[190px] sm:h-[210px] overflow-hidden bg-slate-900">
+                                        <Link href={item.link || `/legal/${item.id}`} className="block relative w-full h-[190px] sm:h-[210px] overflow-hidden bg-slate-900">
                                             <Image
                                                 src={item.image || "/about.svg"}
                                                 alt={item.title}
                                                 fill
                                                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                                             />
-                                        </div>
+                                        </Link>
 
                                         {/* Card Content Body */}
                                         <div className="p-5 sm:p-6 text-left">
@@ -153,7 +155,9 @@ export function Legalsec({ data = defaultLegalSectionData }: LegalsecProps) {
 
                                             {/* Title */}
                                             <h3 className="font-serif font-semibold text-white text-lg sm:text-xl mb-3 group-hover:text-[#D4A359] transition-colors line-clamp-2 leading-snug">
-                                                {item.title}
+                                                <Link href={item.link || `/legal/${item.id}`}>
+                                                    {item.title}
+                                                </Link>
                                             </h3>
 
                                             {/* Description */}
@@ -166,7 +170,7 @@ export function Legalsec({ data = defaultLegalSectionData }: LegalsecProps) {
                                     {/* Card Action Link */}
                                     <div className="pb-6 pt-2 px-5 sm:px-6 text-left">
                                         <Link
-                                            href={item.link || "/legal"}
+                                            href={item.link || `/legal/${item.id}`}
                                             className="inline-flex items-center gap-2 text-[#D4A359] text-xs font-semibold uppercase tracking-wider group-hover:gap-3 transition-all hover:underline"
                                         >
                                             <span>Read More</span>

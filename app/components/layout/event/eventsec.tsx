@@ -64,7 +64,7 @@ export function Eventsec({ data = defaultEventSectionData }: EventsecProps) {
                   className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] overflow-hidden hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl grid grid-cols-1 sm:grid-cols-12 min-h-[220px] cursor-pointer h-full"
                 >
                   {/* Left Image & Badges Overlay Container */}
-                  <div className="relative sm:col-span-5 w-full h-[220px] sm:h-full overflow-hidden bg-slate-900 min-h-[200px]">
+                  <Link href={item.link || `/event/${item.slug || item.id}`} className="block relative sm:col-span-5 w-full h-[220px] sm:h-full overflow-hidden bg-slate-900 min-h-[200px]">
                     <Image
                       src={item.image || "/service3.svg"}
                       alt={item.title}
@@ -88,14 +88,16 @@ export function Eventsec({ data = defaultEventSectionData }: EventsecProps) {
                         {item.year}
                       </span>
                     </div>
-                  </div>
+                  </Link>
 
                   {/* Right Content Details Container */}
                   <div className="sm:col-span-7 p-5 sm:p-6 flex flex-col justify-between text-left">
                     <div>
                       {/* Title */}
                       <h3 className="font-serif font-semibold text-white text-lg sm:text-xl mb-2.5 group-hover:text-[#D4A359] transition-colors leading-snug line-clamp-2">
-                        {item.title}
+                        <Link href={item.link || `/event/${item.slug || item.id}`}>
+                          {item.title}
+                        </Link>
                       </h3>
 
                       {/* Gold Line Divider */}
@@ -117,7 +119,7 @@ export function Eventsec({ data = defaultEventSectionData }: EventsecProps) {
                     {/* View Details Action Link Button */}
                     <div>
                       <Link
-                        href={item.link || "/event"}
+                        href={item.link || `/event/${item.slug || item.id}`}
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#D4A359]/60 bg-transparent text-[#D4A359] text-xs font-semibold uppercase tracking-wider group-hover:bg-[#D4A359] group-hover:text-[#0A0E17] transition-all"
                       >
                         <span>VIEW DETAILS</span>

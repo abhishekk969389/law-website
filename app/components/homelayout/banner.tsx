@@ -84,7 +84,7 @@ export default function Banner({ data = defaultBannerData }: BannerProps) {
           <StaggerContainer delayChildren={0.6} staggerChildren={0.1} className="flex items-center divide-x divide-gray-700">
             {data.stats.map((stat, index) => (
               <StaggerItem key={index} className="px-3 sm:px-6 first:pl-0 flex flex-col justify-center">
-                <span className="text-[#D4A359] text-xl sm:text-3xl mb-1 font-serif">
+                <span className="text-[#D4A359] text-xl sm:text-3xl mb-1">
                   {stat.value}
                 </span>
                 <span className="text-gray-400 text-[10px] sm:text-xs md:text-sm tracking-wider uppercase">

@@ -95,7 +95,9 @@ export function Casestudysec({ data = defaultCaseStudySectionData }: Casestudyse
                     {/* Right Stacked Content: Title, Description, Link */}
                     <div className="flex flex-col flex-1 pl-1">
                       <h3 className="font-serif text-lg sm:text-xl font-medium text-white leading-snug mb-3 group-hover:text-[#E3C280] transition-colors">
-                        {item.title}
+                        <Link href={item.linkHref || `/casestudy/${item.id}`}>
+                          {item.title}
+                        </Link>
                       </h3>
 
                       <p className="text-gray-400 text-xs sm:text-sm font-light leading-relaxed mb-4">

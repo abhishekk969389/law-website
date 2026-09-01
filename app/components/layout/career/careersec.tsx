@@ -77,16 +77,22 @@ export function Careersec({ data = defaultCareerSectionData }: CareersecProps) {
 
                     <div>
                       {/* Header Row: Left Icon Box + Title & Location */}
+                      {/* Header Row: Left Icon Box + Title & Location */}
                       <div className="flex items-start gap-4 mb-4">
                         {/* Icon Box */}
-                        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl border border-slate-800 bg-[#060911] flex items-center justify-center shrink-0 shadow-md">
+                        <Link
+                          href={item.link || (item.slug ? `/career/${item.slug}` : `/career/${item.id}`)}
+                          className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl border border-slate-800 bg-[#060911] flex items-center justify-center shrink-0 shadow-md group-hover:border-[#D4A359]/50 transition-colors"
+                        >
                           <IconComponent className="w-6 h-6 text-[#D4A359]" />
-                        </div>
+                        </Link>
 
                         {/* Title & Location */}
                         <div>
                           <h3 className="font-serif font-semibold text-white text-lg sm:text-xl group-hover:text-[#D4A359] transition-colors leading-snug pr-16">
-                            {item.title}
+                            <Link href={item.link || (item.slug ? `/career/${item.slug}` : `/career/${item.id}`)}>
+                              {item.title}
+                            </Link>
                           </h3>
                           <div className="flex items-center gap-1.5 text-slate-400 text-xs sm:text-sm mt-1 font-medium">
                             <MapPin className="w-3.5 h-3.5 text-[#D4A359]" />
@@ -104,11 +110,11 @@ export function Careersec({ data = defaultCareerSectionData }: CareersecProps) {
                     {/* Apply Now Button */}
                     <div className="pt-2">
                       <Link
-                        href={item.link || "/career"}
-                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#B87B1D]/50 hover:bg-[#C88A23] text-white text-xs sm:text-sm font-semibold transition-all duration-200 w-fit cursor-pointer"
+                        href={item.link || (item.slug ? `/career/${item.slug}` : `/career/${item.id}`)}
+                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#B87B1D]/50 hover:bg-[#C88A23] text-white text-xs sm:text-sm font-semibold transition-all duration-200 w-fit cursor-pointer shadow-md group-hover:bg-[#D4A359] group-hover:text-[#0A0E17]"
                       >
                         <span>Apply Now</span>
-                        <ArrowRight className="w-4 h-4 text-white" />
+                        <ArrowRight className="w-4 h-4" />
                       </Link>
                     </div>
 

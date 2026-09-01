@@ -70,14 +70,17 @@ export function Pubsec({ data = defaultPublicationSectionData }: PubsecProps) {
                   className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] p-5 sm:p-6 overflow-hidden hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl flex flex-col sm:flex-row items-stretch gap-5 h-full cursor-pointer"
                 >
                   {/* Left Image Column */}
-                  <div className="relative w-full sm:w-[140px] h-[180px] sm:h-auto rounded-xl overflow-hidden bg-slate-900 shrink-0 min-h-[160px]">
+                  <Link
+                    href={item.link || "/publications"}
+                    className="block relative w-full sm:w-[140px] h-[180px] sm:h-auto rounded-xl overflow-hidden bg-slate-900 shrink-0 min-h-[160px]"
+                  >
                     <Image
                       src={item.image || "/service3.svg"}
                       alt={item.title}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
-                  </div>
+                  </Link>
 
                   {/* Right Details Column */}
                   <div className="flex-1 flex flex-col justify-between text-left">
@@ -92,7 +95,9 @@ export function Pubsec({ data = defaultPublicationSectionData }: PubsecProps) {
 
                       {/* Title */}
                       <h3 className="font-serif font-semibold text-white text-base sm:text-lg mb-2 group-hover:text-[#D4A359] transition-colors leading-snug line-clamp-3">
-                        {item.title}
+                        <Link href={item.link || "/publications"}>
+                          {item.title}
+                        </Link>
                       </h3>
 
                       {/* Description */}

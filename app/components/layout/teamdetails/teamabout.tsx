@@ -20,7 +20,7 @@ export function TeamAbout({ data, member }: TeamAboutProps) {
   const { title = "About Me", paragraphs } = aboutData;
 
   return (
-    <section className="relative w-full bg-[#0B0E14] text-white select-none px-4 sm:px-6 lg:px-8 mt-6 sm:mt-8">
+    <section className="relative w-full bg-[#0B0E14] text-white select-none px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1400px] mx-auto">
         <FadeIn direction="up" delay={0.1}>
           <div className="bg-[#070A11] border border-slate-800/80 rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-2xl relative overflow-hidden flex gap-5 sm:gap-8 items-stretch">
