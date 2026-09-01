@@ -2,6 +2,7 @@ import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import TeamDetailsSec from "@/app/components/layout/teamdetails/teamdetailssec";
 import TeamAbout from "@/app/components/layout/teamdetails/teamabout";
+import Activity from "@/app/components/layout/teamdetails/activity";
 import rawLawData from "@/app/data/lawData.json";
 import { GlobalLawData, TeamDetailItem } from "@/types/law";
 import { notFound } from "next/navigation";
@@ -105,6 +106,8 @@ export default async function TeamMemberDetailsPage({
       <SubBanner data={subBannerData} />
       <TeamDetailsSec member={member} />
       <TeamAbout member={member} />
+      <Activity member={member} />
     </main>
   );
 }
+

@@ -79,7 +79,7 @@ export function Blogsec({ data = defaultBlogSectionData }: BlogsecProps) {
                   className="flex flex-col bg-[#0C191B]/90 border border-white/10 rounded-3xl p-5 sm:p-6 transition-colors duration-300 hover:border-[#D4A359]/40 hover:shadow-[0_15px_35px_rgba(0,0,0,0.5)] group h-full cursor-pointer"
                 >
                   {/* Image Container */}
-                  <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-5 bg-slate-900">
+                  <Link href={item.linkHref || `/blog/${item.id}`} className="block relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-5 bg-slate-900">
                     <Image
                       src={item.image || "/about.svg"}
                       alt={item.title}
@@ -87,7 +87,7 @@ export function Blogsec({ data = defaultBlogSectionData }: BlogsecProps) {
                       className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0B0E14]/40 via-transparent to-transparent opacity-60" />
-                  </div>
+                  </Link>
 
                   {/* Meta Details (Author, Date, Comments) */}
                   <div className="flex items-center gap-3.5 text-xs text-gray-400 font-light mb-3 flex-wrap">
@@ -109,13 +109,15 @@ export function Blogsec({ data = defaultBlogSectionData }: BlogsecProps) {
 
                   {/* Blog Title */}
                   <h3 className="font-serif text-lg sm:text-xl font-medium text-white leading-snug mb-5 group-hover:text-[#E3C280] transition-colors line-clamp-2">
-                    {item.title}
+                    <Link href={item.linkHref || `/blog/${item.id}`}>
+                      {item.title}
+                    </Link>
                   </h3>
 
                   {/* Read More Link */}
                   <div className="mt-auto">
                     <Link
-                      href={item.linkHref || "/blog"}
+                      href={item.linkHref || `/blog/${item.id}`}
                       className="inline-flex items-center gap-2 text-[#D4A359] text-xs sm:text-sm font-medium hover:text-[#E3C280] transition-colors group/link"
                     >
                       <span>Read More</span>
