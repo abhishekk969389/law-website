@@ -56,7 +56,7 @@ export function EventContent({ event }: EventContentProps) {
       {/* 1. About the Event */}
       {event.aboutText && (
         <FadeIn direction="up" delay={0.15} duration={0.6} className="pb-6 sm:pb-8">
-          <div className="flex items-start gap-4 sm:gap-5">
+          <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-5">
             {/* Left Gold Outlined Icon Badge */}
             <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl border border-[#D4A359]/70 bg-[#070B12] text-[#D4A359] flex items-center justify-center shrink-0 shadow-md">
               <FileText className="w-5 h-5 stroke-[1.8]" />
@@ -85,7 +85,7 @@ export function EventContent({ event }: EventContentProps) {
       {/* 2. Key Takeaways */}
       {event.takeaways && event.takeaways.length > 0 && (
         <FadeIn direction="up" delay={0.2} duration={0.6} className="py-6 sm:py-8">
-          <div className="flex items-start gap-4 sm:gap-5">
+          <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-5">
             {/* Left Gold Outlined Icon Badge */}
             <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl border border-[#D4A359]/70 bg-[#070B12] text-[#D4A359] flex items-center justify-center shrink-0 shadow-md">
               <CheckCircle2 className="w-5 h-5 stroke-[1.8]" />
@@ -117,20 +117,37 @@ export function EventContent({ event }: EventContentProps) {
       {/* 3. Agenda / Schedule */}
       {event.timeline && event.timeline.length > 0 && (
         <FadeIn direction="up" delay={0.25} duration={0.6} className="py-6 sm:py-8">
-          <div className="flex items-start gap-4 sm:gap-5">
+          <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-5">
             {/* Left Gold Outlined Icon Badge */}
             <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl border border-[#D4A359]/70 bg-[#070B12] text-[#D4A359] flex items-center justify-center shrink-0 shadow-md">
               <Clock className="w-5 h-5 stroke-[1.8]" />
             </div>
 
             {/* Content */}
-            <div className="flex-1 min-w-0">
+            <div className="flex-1 min-w-0 w-full">
               <h2 className="font-serif text-xl sm:text-2xl text-white font-medium mb-6">
                 {headings?.agenda || "Agenda / Schedule"}
               </h2>
 
-              {/* Horizontal Timeline */}
-              <div className="overflow-x-auto pb-2 pt-1 scrollbar-thin">
+              {/* Vertical Timeline (Mobile only) */}
+              <div className="block md:hidden space-y-5 relative ml-2 before:absolute before:inset-0 before:ml-1 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-[#D4A359]/60 before:to-transparent">
+                {event.timeline.map((item, idx) => (
+                  <div key={idx} className="relative flex items-start gap-4 mb-5">
+                    <div className="absolute left-0 w-2.5 h-2.5 rounded-full bg-[#D4A359] border border-[#070B12] shadow-[0_0_8px_rgba(212,163,89,0.7)] mt-1.5 -translate-x-[4px]" />
+                    <div className="pl-6 flex-1">
+                      <div className="text-xs font-semibold text-[#D4A359] uppercase tracking-wide mb-1">
+                        {item.time}
+                      </div>
+                      <p className="text-slate-200 text-sm font-medium leading-snug">
+                        {item.title}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Horizontal Timeline (Desktop only) */}
+              <div className="hidden md:block overflow-x-auto pb-2 pt-1 scrollbar-thin w-full">
                 <div className="min-w-[720px]">
                   {/* Top Text Columns with vertical separators */}
                   <div
@@ -179,7 +196,7 @@ export function EventContent({ event }: EventContentProps) {
 
       {/* 4. Venue Details */}
       <FadeIn direction="up" delay={0.3} duration={0.6} className="py-6 sm:py-8">
-        <div className="flex items-start gap-4 sm:gap-5">
+        <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-5">
           {/* Left Gold Outlined Icon Badge */}
           <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl border border-[#D4A359]/70 bg-[#070B12] text-[#D4A359] flex items-center justify-center shrink-0 shadow-md">
             <MapPin className="w-5 h-5 stroke-[1.8]" />
@@ -191,10 +208,10 @@ export function EventContent({ event }: EventContentProps) {
               {headings?.venue || "Venue Details"}
             </h2>
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start sm:items-center">
               {/* Left: Venue Image & Info */}
-              <div className="lg:col-span-6 xl:col-span-6 flex items-center gap-4 sm:gap-5">
-                <div className="relative w-28 h-20 sm:w-36 sm:h-24 rounded-xl overflow-hidden bg-slate-900 border border-slate-800 shrink-0 shadow-md">
+              <div className="lg:col-span-6 xl:col-span-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5">
+                <div className="relative w-full sm:w-36 h-48 sm:h-24 rounded-xl overflow-hidden bg-slate-900 border border-slate-800 shrink-0 shadow-md">
                   <Image
                     src={event.venueImage || event.image || "/about.svg"}
                     alt={event.venue}
@@ -251,7 +268,7 @@ export function EventContent({ event }: EventContentProps) {
       {/* 5. Who Should Attend */}
       {event.attendeesText && (
         <FadeIn direction="up" delay={0.35} duration={0.6} className="py-6 sm:py-8">
-          <div className="flex items-start gap-4 sm:gap-5">
+          <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-5">
             {/* Left Gold Outlined Icon Badge */}
             <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl border border-[#D4A359]/70 bg-[#070B12] text-[#D4A359] flex items-center justify-center shrink-0 shadow-md">
               <Users className="w-5 h-5 stroke-[1.8]" />
@@ -273,7 +290,7 @@ export function EventContent({ event }: EventContentProps) {
       {/* 6. FAQs */}
       {faqs.length > 0 && (
         <FadeIn direction="up" delay={0.4} duration={0.6} className="pt-6 sm:pt-8">
-          <div className="flex items-start gap-4 sm:gap-5">
+          <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-5">
             {/* Left Gold Outlined Icon Badge */}
             <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl border border-[#D4A359]/70 bg-[#070B12] text-[#D4A359] flex items-center justify-center shrink-0 shadow-md">
               <HelpCircle className="w-5 h-5 stroke-[1.8]" />

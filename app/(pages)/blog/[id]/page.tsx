@@ -2,7 +2,7 @@ import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import BlogMain from "@/app/components/layout/blogdetails/blogmain";
 import BlogSidebar from "@/app/components/layout/blogdetails/blogsidebar";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { GlobalLawData, BlogDetailItem } from "@/types/law";
 import { notFound } from "next/navigation";
@@ -10,7 +10,7 @@ import { Metadata } from "next";
 
 function getBlogByIdOrSlug(id: string): BlogDetailItem | undefined {
   const globalData = ({}) as unknown as GlobalLawData;
-  const blogDetails = (getSectionData('BlogDetail', 'VeritasBlogDetail1')?.blogDetails || []) as BlogDetailItem[] | undefined;
+  const blogDetails = (lawData.categories.Veritas.sections.BlogDetail?.variants?.VeritasBlogDetail1?.blogDetails || []) as BlogDetailItem[] | undefined;
 
   if (!id || !blogDetails || !Array.isArray(blogDetails)) return undefined;
   const cleanId = id.trim().toLowerCase();
@@ -24,7 +24,7 @@ function getBlogByIdOrSlug(id: string): BlogDetailItem | undefined {
 
 function getAllBlogIds(): string[] {
   const globalData = ({}) as unknown as GlobalLawData;
-  const blogDetails = (getSectionData('BlogDetail', 'VeritasBlogDetail1')?.blogDetails || []) as BlogDetailItem[] | undefined;
+  const blogDetails = (lawData.categories.Veritas.sections.BlogDetail?.variants?.VeritasBlogDetail1?.blogDetails || []) as BlogDetailItem[] | undefined;
 
   if (!blogDetails || !Array.isArray(blogDetails)) return [];
 
@@ -70,7 +70,7 @@ export default async function BlogDetailsPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  const data = resolvePageData('blogs-detail');
+  
   const resolvedParams = await params;
   const blog = getBlogByIdOrSlug(resolvedParams.id);
 
@@ -79,7 +79,7 @@ export default async function BlogDetailsPage({
   }
 
   const globalData = ({}) as unknown as GlobalLawData;
-  const baseSubBanner = data.PageBanner?.blogSubBanner || data.SubBanner?.subBanner;
+  const baseSubBanner = lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1?.blogSubBanner;
 
   const subBannerData = {
     title: blog.title,

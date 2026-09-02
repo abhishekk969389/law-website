@@ -14,13 +14,13 @@ import {
   ArrowRight,
   LucideIcon,
 } from "lucide-react";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { ClientResourceSectionData, GlobalLawData } from "@/types/law";
 import { StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultClientCardsData = getSectionData('ClientResource', 'VeritasClientResource1')?.clientCards;
+const defaultClientCardsData = lawData.categories.Veritas.sections.ClientResource?.variants?.VeritasClientResource1?.clientCards;
 
 const iconMap: Record<string, LucideIcon> = {
   FileText,

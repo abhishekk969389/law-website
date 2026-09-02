@@ -2,7 +2,7 @@ import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import CaseStudyMain from "@/app/components/layout/casestudydetails/casestudymain";
 import CaseStudySidebar from "@/app/components/layout/casestudydetails/casestudysidebar";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { GlobalLawData, CaseStudyDetailItem } from "@/types/law";
 import { notFound } from "next/navigation";
@@ -10,7 +10,7 @@ import { Metadata } from "next";
 
 function getCaseStudyByIdOrSlug(id: string): CaseStudyDetailItem | undefined {
   const globalData = ({}) as unknown as GlobalLawData;
-  const caseStudyDetails = (getSectionData('CaseStudyDetail', 'VeritasCaseStudyDetail1')?.caseStudyDetails || []) as CaseStudyDetailItem[] | undefined;
+  const caseStudyDetails = (lawData.categories.Veritas.sections.CaseStudyDetail?.variants?.VeritasCaseStudyDetail1?.caseStudyDetails || []) as CaseStudyDetailItem[] | undefined;
 
   if (!id || !caseStudyDetails || !Array.isArray(caseStudyDetails)) return undefined;
   const cleanId = id.trim().toLowerCase();
@@ -24,7 +24,7 @@ function getCaseStudyByIdOrSlug(id: string): CaseStudyDetailItem | undefined {
 
 function getAllCaseStudyIds(): string[] {
   const globalData = ({}) as unknown as GlobalLawData;
-  const caseStudyDetails = (getSectionData('CaseStudyDetail', 'VeritasCaseStudyDetail1')?.caseStudyDetails || []) as CaseStudyDetailItem[] | undefined;
+  const caseStudyDetails = (lawData.categories.Veritas.sections.CaseStudyDetail?.variants?.VeritasCaseStudyDetail1?.caseStudyDetails || []) as CaseStudyDetailItem[] | undefined;
 
   if (!caseStudyDetails || !Array.isArray(caseStudyDetails)) return [];
 
@@ -72,7 +72,7 @@ export default async function CaseStudyDetailsPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  const data = resolvePageData('case-study-detail');
+  
   const resolvedParams = await params;
   const caseStudy = getCaseStudyByIdOrSlug(resolvedParams.id);
 
@@ -81,8 +81,8 @@ export default async function CaseStudyDetailsPage({
   }
 
   const globalData = ({}) as unknown as GlobalLawData;
-  const allCaseStudies = ((getSectionData('CaseStudyDetail', 'VeritasCaseStudyDetail1')?.caseStudyDetails || []) || []) as CaseStudyDetailItem[];
-  const baseSubBanner = data.PageBanner?.caseStudySubBanner || data.SubBanner?.subBanner;
+  const allCaseStudies = ((lawData.categories.Veritas.sections.CaseStudyDetail?.variants?.VeritasCaseStudyDetail1?.caseStudyDetails || []) || []) as CaseStudyDetailItem[];
+  const baseSubBanner = lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1?.caseStudySubBanner;
 
   const titleText = typeof caseStudy.title === "string"
     ? caseStudy.title

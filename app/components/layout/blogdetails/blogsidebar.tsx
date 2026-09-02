@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Calendar, PhoneCall } from "lucide-react";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { BlogSidebarData, GlobalLawData } from "@/types/law";
 import { FadeIn } from "@/app/components/ui/animations";
@@ -16,7 +16,7 @@ interface BlogSidebarProps {
 
 export function BlogSidebar({ currentId, sidebarData }: BlogSidebarProps) {
   const globalData = ({}) as unknown as GlobalLawData;
-  const defaultSidebar = getSectionData('Blog', 'VeritasBlog1')?.blogSidebar;
+  const defaultSidebar = lawData.categories.Veritas.sections.Blog?.variants?.VeritasBlog1?.blogSidebar;
 
   const data = sidebarData || defaultSidebar;
   const recentHeading = data?.recentHeading || "Recent Blogs";

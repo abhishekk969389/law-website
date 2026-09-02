@@ -12,13 +12,13 @@ import {
     Scale,
     LucideIcon,
 } from "lucide-react";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { WhyChooseUsData, GlobalLawData } from "@/types/law";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultWhyChooseUsData = getSectionData('WhyChooseUs', 'VeritasWhyChooseUs1')?.whyChooseUs;
+const defaultWhyChooseUsData = lawData.categories.Veritas.sections.WhyChooseUs?.variants?.VeritasWhyChooseUs1?.whyChooseUs;
 
 const iconMap: Record<string, LucideIcon> = {
     "user-star": UserCheck,

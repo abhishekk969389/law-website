@@ -1,7 +1,7 @@
 import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import Section from "@/app/components/layout/legaldisclimer/section";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { GlobalLawData } from "@/types/law";
 
@@ -11,10 +11,10 @@ export const metadata = {
 };
 
 export default function LegalDisclaimerPage() {
-  const data = resolvePageData('legal-disclaimer');
   
-  const legalDisclaimerSubBannerData = data.PageBanner?.legalDisclaimerSubBanner;
-  const legalDisclaimerSectionData = data.LegalDisclaimer?.legalDisclaimerSection;
+  
+  const legalDisclaimerSubBannerData = lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1?.legalDisclaimerSubBanner;
+  const legalDisclaimerSectionData = lawData.categories.Veritas.sections.LegalDisclaimer?.variants?.VeritasLegalDisclaimer1?.legalDisclaimerSection;
 
   return (
     <main className="min-h-screen bg-[#0B0E14] text-[#D4A359] pb-12 sm:pb-16 lg:pb-20">

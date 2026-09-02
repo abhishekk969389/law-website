@@ -12,13 +12,13 @@ import {
   Lock,
   ArrowRight,
 } from "lucide-react";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { BookSectionData, GlobalLawData } from "@/types/law";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultBookSectionData = getSectionData('Consultation', 'VeritasConsultation1')?.bookSection;
+const defaultBookSectionData = lawData.categories.Veritas.sections.Consultation?.variants?.VeritasConsultation1?.bookSection;
 
 export interface BooksecProps {
   data?: BookSectionData;

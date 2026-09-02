@@ -2,13 +2,13 @@
 
 import React, { useState } from "react";
 import { Mail, ArrowRight } from "lucide-react";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { StayUpdatedData, GlobalLawData } from "@/types/law";
 import { FadeIn } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultStayUpdatedData = getSectionData('StayUpdated', 'VeritasStayUpdated1')?.stayUpdated;
+const defaultStayUpdatedData = lawData.categories.Veritas.sections.StayUpdated?.variants?.VeritasStayUpdated1?.stayUpdated;
 
 export interface StayUpdatedProps {
   data?: StayUpdatedData;

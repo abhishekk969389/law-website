@@ -13,11 +13,11 @@ import {
   Trophy,
   Folder,
 } from "lucide-react";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { SitemapSectionData, GlobalLawData } from "@/types/law";
 
-const defaultSitemapSectionData = getSectionData('Sitemap', 'VeritasSitemap1')?.sitemapSection;
+const defaultSitemapSectionData = lawData.categories.Veritas.sections.Sitemap?.variants?.VeritasSitemap1?.sitemapSection;
 
 export interface SitemapsecProps {
   data?: SitemapSectionData;

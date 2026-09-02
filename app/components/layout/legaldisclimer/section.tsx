@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { LegalDisclaimerSectionData, GlobalLawData } from "@/types/law";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 
-const defaultLegalDisclaimerSectionData = getSectionData('LegalDisclaimer', 'VeritasLegalDisclaimer1')?.legalDisclaimerSection;
+const defaultLegalDisclaimerSectionData = lawData.categories.Veritas.sections.LegalDisclaimer?.variants?.VeritasLegalDisclaimer1?.legalDisclaimerSection;
 
 export interface SectionProps {
   data?: LegalDisclaimerSectionData;

@@ -11,13 +11,13 @@ import {
     Phone,
     LucideIcon,
 } from "lucide-react";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { ProvenApproachData, GlobalLawData } from "@/types/law";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultProvenData = getSectionData('OurApproach', 'VeritasOurApproach1')?.provenApproach;
+const defaultProvenData = lawData.categories.Veritas.sections.OurApproach?.variants?.VeritasOurApproach1?.provenApproach;
 
 const iconMap: Record<string, LucideIcon> = {
     users: Users,

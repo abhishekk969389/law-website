@@ -1,7 +1,7 @@
 import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import Legalsec from "@/app/components/layout/legal/legalsec";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { GlobalLawData } from "@/types/law";
 
@@ -11,10 +11,10 @@ export const metadata = {
 };
 
 export default function LegalPage() {
-  const data = resolvePageData('legal-updates');
   
-  const legalSubBannerData = data.PageBanner?.legalSubBanner;
-  const legalSectionData = data.LegalUpdates?.legalSection;
+  
+  const legalSubBannerData = lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1?.legalSubBanner;
+  const legalSectionData = lawData.categories.Veritas.sections.LegalUpdates?.variants?.VeritasLegalUpdates1?.legalSection;
 
   return (
     <main className="min-h-screen bg-[#0B0E14] text-white pb-12 sm:pb-16 lg:pb-20">

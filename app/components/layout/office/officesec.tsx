@@ -3,13 +3,13 @@
 import React from "react";
 import Image from "next/image";
 import { Building, MapPin, UserCheck, LucideIcon } from "lucide-react";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { OfficeSectionData, GlobalLawData } from "@/types/law";
 import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultOfficeSectionData = getSectionData('Offices', 'VeritasOffices1')?.officeSection;
+const defaultOfficeSectionData = lawData.categories.Veritas.sections.Offices?.variants?.VeritasOffices1?.officeSection;
 
 const iconMap: Record<string, LucideIcon> = {
   Building,

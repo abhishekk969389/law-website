@@ -2,7 +2,7 @@ import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import IndustryMain from "@/app/components/layout/industrydetails/industrymain";
 import IndustrySidebar from "@/app/components/layout/industrydetails/industrysidebar";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { GlobalLawData, IndustryDetailItem } from "@/types/law";
 import { notFound } from "next/navigation";
@@ -10,7 +10,7 @@ import { Metadata } from "next";
 
 function getIndustryByIdOrSlug(id: string): IndustryDetailItem | undefined {
   const globalData = ({}) as unknown as GlobalLawData;
-  const industryDetails = (getSectionData('IndustryDetail', 'VeritasIndustryDetail1')?.industryDetails || []) as IndustryDetailItem[] | undefined;
+  const industryDetails = (lawData.categories.Veritas.sections.IndustryDetail?.variants?.VeritasIndustryDetail1?.industryDetails || []) as IndustryDetailItem[] | undefined;
 
   if (!id || !industryDetails || !Array.isArray(industryDetails)) return undefined;
   const cleanId = id.trim().toLowerCase();
@@ -24,7 +24,7 @@ function getIndustryByIdOrSlug(id: string): IndustryDetailItem | undefined {
 
 function getAllIndustryIds(): string[] {
   const globalData = ({}) as unknown as GlobalLawData;
-  const industryDetails = (getSectionData('IndustryDetail', 'VeritasIndustryDetail1')?.industryDetails || []) as IndustryDetailItem[] | undefined;
+  const industryDetails = (lawData.categories.Veritas.sections.IndustryDetail?.variants?.VeritasIndustryDetail1?.industryDetails || []) as IndustryDetailItem[] | undefined;
 
   if (!industryDetails || !Array.isArray(industryDetails)) return [];
 
@@ -68,7 +68,7 @@ export default async function IndustryDetailsPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  const data = resolvePageData('industries-detail');
+  
   const resolvedParams = await params;
   const industry = getIndustryByIdOrSlug(resolvedParams.id);
 
@@ -77,8 +77,8 @@ export default async function IndustryDetailsPage({
   }
 
   const globalData = ({}) as unknown as GlobalLawData;
-  const allIndustries = ((getSectionData('IndustryDetail', 'VeritasIndustryDetail1')?.industryDetails || []) || []) as IndustryDetailItem[];
-  const baseSubBanner = data.PageBanner?.industriesSubBanner || data.SubBanner?.subBanner;
+  const allIndustries = ((lawData.categories.Veritas.sections.IndustryDetail?.variants?.VeritasIndustryDetail1?.industryDetails || []) || []) as IndustryDetailItem[];
+  const baseSubBanner = lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1?.industriesSubBanner;
 
   const subBannerData = {
     title: industry.title,

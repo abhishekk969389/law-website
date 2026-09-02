@@ -3,7 +3,7 @@ import SubBanner from "@/app/components/ui/subbanner";
 import Officesec from "@/app/components/layout/office/officesec";
 import Locationcard from "@/app/components/layout/office/locationcard";
 import Officecta from "@/app/components/layout/office/officecta";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { GlobalLawData } from "@/types/law";
 
@@ -13,12 +13,12 @@ export const metadata = {
 };
 
 export default function OfficePage() {
-  const data = resolvePageData('offices');
   
-  const officeSubBannerData = data.PageBanner?.officeSubBanner;
-  const officeSectionData = data.Offices?.officeSection;
-  const officeLocationsData = data.Offices?.officeLocations;
-  const officeCtaData = data.Offices?.officeCta;
+  
+  const officeSubBannerData = lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1?.officeSubBanner;
+  const officeSectionData = lawData.categories.Veritas.sections.Offices?.variants?.VeritasOffices1?.officeSection;
+  const officeLocationsData = lawData.categories.Veritas.sections.Offices?.variants?.VeritasOffices1?.officeLocations;
+  const officeCtaData = lawData.categories.Veritas.sections.Offices?.variants?.VeritasOffices1?.officeCta;
 
   return (
     <main className="min-h-screen bg-[#0B0E14] text-white pb-12 sm:pb-16 lg:pb-20">

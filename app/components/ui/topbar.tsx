@@ -1,13 +1,13 @@
 "use client";
 
 import React from "react";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { TopbarData, GlobalLawData } from "@/types/law";
 
 // Global data fallback from lawData.json
-const defaultTopbarData: TopbarData = getSectionData('Topbar', 'VeritasTopbar1')?.topbar;
+const defaultTopbarData: TopbarData = lawData.categories.Veritas.sections.Topbar?.variants?.VeritasTopbar1?.topbar;
 
 interface TopbarProps {
     data?: TopbarData;
