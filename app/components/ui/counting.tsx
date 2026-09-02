@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+
 import { Scale, Briefcase, Users, Award, ShieldCheck, LucideIcon } from "lucide-react";
 import { CountingItem, GlobalLawData } from "@/types/law";
 import lawData from "@/app/data/lawData-restructured.json";
@@ -51,7 +51,7 @@ export default function Counting({ data = defaultCountingData, className = "" }:
                 </motion.div>
 
                 {/* Counter Value */}
-                <div className="font-serif text-2xl sm:text-3xl lg:text-[38px] font-normal text-white tracking-tight leading-none mb-1 mt-0.5">
+                <div className="text-2xl sm:text-3xl lg:text-[38px] font-normal text-white tracking-tight leading-none mb-1 mt-0.5">
                   {item.value}
                 </div>
 
