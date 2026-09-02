@@ -121,7 +121,7 @@ export function Blogsec({ data = defaultBlogSectionData }: BlogsecProps) {
                       href={item.linkHref || `/blog/${item.id}`}
                       className="inline-flex items-center gap-2 text-[#D4A359] text-xs sm:text-sm font-medium hover:text-[#E3C280] transition-colors group/link"
                     >
-                      <span>Read More</span>
+                      <span>{item.linkText}</span>
                       <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
                     </Link>
                   </div>

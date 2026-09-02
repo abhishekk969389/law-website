@@ -646,6 +646,7 @@ export interface BlogSectionItem {
   commentsCount: string;
   image: string;
   linkHref: string;
+  linkText?: string;
 }
 
 export interface BlogSectionData {
@@ -750,6 +751,7 @@ export interface LegalArticleItem {
   description: string;
   image: string;
   link?: string;
+  linkText?: string;
 }
 
 export interface LegalSectionData {
@@ -891,6 +893,7 @@ export interface PublicationSectionItem {
   description: string;
   image: string;
   link?: string;
+  linkText?: string;
 }
 
 export interface PublicationSectionData {

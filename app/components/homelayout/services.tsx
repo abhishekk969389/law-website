@@ -137,7 +137,7 @@ export default function Services({ data = defaultServicesData }: ServicesProps) 
                       href={item.linkHref || `/service/${item.id || index + 1}`}
                       className="inline-flex items-center gap-2 text-[#D4A359] hover:text-[#E3C280] font-medium text-xs sm:text-sm tracking-wide transition-all group-hover:gap-3 mt-auto"
                     >
-                      <span>{item.linkText || "Learn More"}</span>
+                      <span>{item.linkText}</span>
                       <ArrowRight className="w-4 h-4 text-[#D4A359]" />
                     </Link>
                   </motion.div>
