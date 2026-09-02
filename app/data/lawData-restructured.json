@@ -1388,56 +1388,56 @@
                     "id": "1",
                     "name": "Abhishek kumar",
                     "role": "Founding Partner",
-                    "image": "/about.svg",
+                    "image": "/team/team1.jpg",
                     "link": "/team/abhishek-kumar"
                   },
                   {
                     "id": "2",
                     "name": "Kalal Singh",
                     "role": "Senior Partner",
-                    "image": "/casestudy1.svg",
+                    "image": "/team/team2.jpg",
                     "link": "/team/kalal-singh"
                   },
                   {
                     "id": "3",
                     "name": "Deepak Kumar",
                     "role": "Litigation Partner",
-                    "image": "/casestudy2.svg",
+                    "image": "/team/team3.jpg",
                     "link": "/team/deepak-kumar"
                   },
                   {
                     "id": "4",
                     "name": "Akash Kumar",
                     "role": "Corporate Counsel",
-                    "image": "/casestudy3.svg",
+                    "image": "/team/team1.jpg",
                     "link": "/team/akash-kumar"
                   },
                   {
                     "id": "5",
                     "name": "David Kapoor",
                     "role": "Tax Law Specialist",
-                    "image": "/casestudy4.svg",
+                    "image": "/team/team2.jpg",
                     "link": "/team/david-kapoor"
                   },
                   {
                     "id": "6",
                     "name": "Aman Prajapati",
                     "role": "Family Law Attorney",
-                    "image": "/about.svg",
+                    "image": "/team/team3.jpg",
                     "link": "/team/aman-prajapati"
                   },
                   {
                     "id": "7",
                     "name": "Mukesh Kumar",
                     "role": "Of Counsel",
-                    "image": "/casestudy1.svg",
+                    "image": "/team/team1.jpg",
                     "link": "/team/mukesh-kumar"
                   },
                   {
                     "id": "8",
                     "name": "Mohan Lal",
                     "role": "Associate Attorney",
-                    "image": "/casestudy2.svg",
+                    "image": "/team/team2.jpg",
                     "link": "/team/mohan-lal"
                   }
                 ]
@@ -1454,7 +1454,7 @@
                     "id": "1",
                     "name": "Abhishek Kumar",
                     "role": "Attorney & Legal Advisor",
-                    "image": "/about.svg",
+                    "image": "/team/team1.jpg",
                     "linkHref": "/team/abhishek-kumar",
                     "link": "/team/abhishek-kumar"
                   },
@@ -1462,7 +1462,7 @@
                     "id": "2",
                     "name": "Kalal Singh",
                     "role": "Senior Partner",
-                    "image": "/casestudy1.svg",
+                    "image": "/team/team2.jpg",
                     "linkHref": "/team/kalal-singh",
                     "link": "/team/kalal-singh"
                   },
@@ -1470,15 +1470,15 @@
                     "id": "3",
                     "name": "Deepak Kumar",
                     "role": "Litigation Partner",
-                    "image": "/casestudy2.svg",
+                    "image": "/team/team3.jpg",
                     "linkHref": "/team/deepak-kumar",
                     "link": "/team/deepak-kumar"
                   },
-                  {
+                  { 
                     "id": "4",
                     "name": "Suman Kumar",
                     "role": "Corporate Counsel",
-                    "image": "/casestudy3.svg",
+                    "image": "/team/team1.jpg",
                     "linkHref": "/team/suman-kumar",
                     "link": "/team/suman-kumar"
                   }
@@ -1905,7 +1905,51 @@
                       "description": "Assisting from land acquisition to final tenant leasing.",
                       "icon": "file-check"
                     }
-                  ]
+                  ],
+                  "sidebarData": {
+                    "getInTouch": {
+                      "text": "Our team is here to help you navigate legal challenges and achieve your business goals.",
+                      "buttonText": "Contact Us",
+                      "buttonHref": "/contactus"
+                    },
+                    "insights": [
+                      {
+                        "id": "1",
+                        "title": "New Corporate Governance Rules: What Businesses Need to Know",
+                        "date": "MAY 20, 2024",
+                        "image": "/casestudy1.svg",
+                        "linkHref": "/legal/corporate-governance-rules-2024"
+                      },
+                      {
+                        "id": "2",
+                        "title": "Recent Supreme Court Rulings and Their Impact",
+                        "date": "MAY 18, 2024",
+                        "image": "/service1.svg",
+                        "linkHref": "/legal/supreme-court-rulings"
+                      },
+                      {
+                        "id": "3",
+                        "title": "Essential Clauses Every Business Contract Must Have",
+                        "date": "MAY 10, 2024",
+                        "image": "/casestudy2.svg",
+                        "linkHref": "/legal/essential-contract-clauses"
+                      },
+                      {
+                        "id": "4",
+                        "title": "Data Privacy Compliance: A Guide for Businesses",
+                        "date": "MAY 05, 2024",
+                        "image": "/service4.svg",
+                        "linkHref": "/legal/data-privacy-compliance"
+                      },
+                      {
+                        "id": "5",
+                        "title": "Bail Laws in 2024: Key Changes Explained",
+                        "date": "APR 30, 2024",
+                        "image": "/casestudy3.svg",
+                        "linkHref": "/legal/bail-laws-2024-changes"
+                      }
+                    ]
+                  }
                 },
                 {
                   "id": "litigation-dispute",
@@ -1977,7 +2021,51 @@
                       "description": "Clear budgeting and strategic fee structures for litigation proceedings.",
                       "icon": "file-check"
                     }
-                  ]
+                  ],
+                  "sidebarData": {
+                    "getInTouch": {
+                      "text": "Our team is here to help you navigate legal challenges and achieve your business goals.",
+                      "buttonText": "Contact Us",
+                      "buttonHref": "/contactus"
+                    },
+                    "insights": [
+                      {
+                        "id": "1",
+                        "title": "New Corporate Governance Rules: What Businesses Need to Know",
+                        "date": "MAY 20, 2024",
+                        "image": "/casestudy1.svg",
+                        "linkHref": "/legal/corporate-governance-rules-2024"
+                      },
+                      {
+                        "id": "2",
+                        "title": "Recent Supreme Court Rulings and Their Impact",
+                        "date": "MAY 18, 2024",
+                        "image": "/service1.svg",
+                        "linkHref": "/legal/supreme-court-rulings"
+                      },
+                      {
+                        "id": "3",
+                        "title": "Essential Clauses Every Business Contract Must Have",
+                        "date": "MAY 10, 2024",
+                        "image": "/casestudy2.svg",
+                        "linkHref": "/legal/essential-contract-clauses"
+                      },
+                      {
+                        "id": "4",
+                        "title": "Data Privacy Compliance: A Guide for Businesses",
+                        "date": "MAY 05, 2024",
+                        "image": "/service4.svg",
+                        "linkHref": "/legal/data-privacy-compliance"
+                      },
+                      {
+                        "id": "5",
+                        "title": "Bail Laws in 2024: Key Changes Explained",
+                        "date": "APR 30, 2024",
+                        "image": "/casestudy3.svg",
+                        "linkHref": "/legal/bail-laws-2024-changes"
+                      }
+                    ]
+                  }
                 },
                 {
                   "id": "technology-media-telecom",
@@ -2049,7 +2137,51 @@
                       "description": "Swift contract turnarounds matching fast-paced tech cycles.",
                       "icon": "file-check"
                     }
-                  ]
+                  ],
+                  "sidebarData": {
+                    "getInTouch": {
+                      "text": "Our team is here to help you navigate legal challenges and achieve your business goals.",
+                      "buttonText": "Contact Us",
+                      "buttonHref": "/contactus"
+                    },
+                    "insights": [
+                      {
+                        "id": "1",
+                        "title": "New Corporate Governance Rules: What Businesses Need to Know",
+                        "date": "MAY 20, 2024",
+                        "image": "/casestudy1.svg",
+                        "linkHref": "/legal/corporate-governance-rules-2024"
+                      },
+                      {
+                        "id": "2",
+                        "title": "Recent Supreme Court Rulings and Their Impact",
+                        "date": "MAY 18, 2024",
+                        "image": "/service1.svg",
+                        "linkHref": "/legal/supreme-court-rulings"
+                      },
+                      {
+                        "id": "3",
+                        "title": "Essential Clauses Every Business Contract Must Have",
+                        "date": "MAY 10, 2024",
+                        "image": "/casestudy2.svg",
+                        "linkHref": "/legal/essential-contract-clauses"
+                      },
+                      {
+                        "id": "4",
+                        "title": "Data Privacy Compliance: A Guide for Businesses",
+                        "date": "MAY 05, 2024",
+                        "image": "/service4.svg",
+                        "linkHref": "/legal/data-privacy-compliance"
+                      },
+                      {
+                        "id": "5",
+                        "title": "Bail Laws in 2024: Key Changes Explained",
+                        "date": "APR 30, 2024",
+                        "image": "/casestudy3.svg",
+                        "linkHref": "/legal/bail-laws-2024-changes"
+                      }
+                    ]
+                  }
                 },
                 {
                   "id": "energy-environment",
@@ -2121,7 +2253,51 @@
                       "description": "Unlocking carbon offset opportunities and sustainable financing.",
                       "icon": "file-check"
                     }
-                  ]
+                  ],
+                  "sidebarData": {
+                    "getInTouch": {
+                      "text": "Our team is here to help you navigate legal challenges and achieve your business goals.",
+                      "buttonText": "Contact Us",
+                      "buttonHref": "/contactus"
+                    },
+                    "insights": [
+                      {
+                        "id": "1",
+                        "title": "New Corporate Governance Rules: What Businesses Need to Know",
+                        "date": "MAY 20, 2024",
+                        "image": "/casestudy1.svg",
+                        "linkHref": "/legal/corporate-governance-rules-2024"
+                      },
+                      {
+                        "id": "2",
+                        "title": "Recent Supreme Court Rulings and Their Impact",
+                        "date": "MAY 18, 2024",
+                        "image": "/service1.svg",
+                        "linkHref": "/legal/supreme-court-rulings"
+                      },
+                      {
+                        "id": "3",
+                        "title": "Essential Clauses Every Business Contract Must Have",
+                        "date": "MAY 10, 2024",
+                        "image": "/casestudy2.svg",
+                        "linkHref": "/legal/essential-contract-clauses"
+                      },
+                      {
+                        "id": "4",
+                        "title": "Data Privacy Compliance: A Guide for Businesses",
+                        "date": "MAY 05, 2024",
+                        "image": "/service4.svg",
+                        "linkHref": "/legal/data-privacy-compliance"
+                      },
+                      {
+                        "id": "5",
+                        "title": "Bail Laws in 2024: Key Changes Explained",
+                        "date": "APR 30, 2024",
+                        "image": "/casestudy3.svg",
+                        "linkHref": "/legal/bail-laws-2024-changes"
+                      }
+                    ]
+                  }
                 },
                 {
                   "id": "healthcare-life-sciences",
@@ -2193,7 +2369,51 @@
                       "description": "Rapid legal guidance for urgent hospital and regulatory emergencies.",
                       "icon": "file-check"
                     }
-                  ]
+                  ],
+                  "sidebarData": {
+                    "getInTouch": {
+                      "text": "Our team is here to help you navigate legal challenges and achieve your business goals.",
+                      "buttonText": "Contact Us",
+                      "buttonHref": "/contactus"
+                    },
+                    "insights": [
+                      {
+                        "id": "1",
+                        "title": "New Corporate Governance Rules: What Businesses Need to Know",
+                        "date": "MAY 20, 2024",
+                        "image": "/casestudy1.svg",
+                        "linkHref": "/legal/corporate-governance-rules-2024"
+                      },
+                      {
+                        "id": "2",
+                        "title": "Recent Supreme Court Rulings and Their Impact",
+                        "date": "MAY 18, 2024",
+                        "image": "/service1.svg",
+                        "linkHref": "/legal/supreme-court-rulings"
+                      },
+                      {
+                        "id": "3",
+                        "title": "Essential Clauses Every Business Contract Must Have",
+                        "date": "MAY 10, 2024",
+                        "image": "/casestudy2.svg",
+                        "linkHref": "/legal/essential-contract-clauses"
+                      },
+                      {
+                        "id": "4",
+                        "title": "Data Privacy Compliance: A Guide for Businesses",
+                        "date": "MAY 05, 2024",
+                        "image": "/service4.svg",
+                        "linkHref": "/legal/data-privacy-compliance"
+                      },
+                      {
+                        "id": "5",
+                        "title": "Bail Laws in 2024: Key Changes Explained",
+                        "date": "APR 30, 2024",
+                        "image": "/casestudy3.svg",
+                        "linkHref": "/legal/bail-laws-2024-changes"
+                      }
+                    ]
+                  }
                 },
                 {
                   "id": "retail-consumer-goods",
@@ -2265,7 +2485,51 @@
                       "description": "Fast-paced legal contract turnarounds supporting seasonal promotions.",
                       "icon": "file-check"
                     }
-                  ]
+                  ],
+                  "sidebarData": {
+                    "getInTouch": {
+                      "text": "Our team is here to help you navigate legal challenges and achieve your business goals.",
+                      "buttonText": "Contact Us",
+                      "buttonHref": "/contactus"
+                    },
+                    "insights": [
+                      {
+                        "id": "1",
+                        "title": "New Corporate Governance Rules: What Businesses Need to Know",
+                        "date": "MAY 20, 2024",
+                        "image": "/casestudy1.svg",
+                        "linkHref": "/legal/corporate-governance-rules-2024"
+                      },
+                      {
+                        "id": "2",
+                        "title": "Recent Supreme Court Rulings and Their Impact",
+                        "date": "MAY 18, 2024",
+                        "image": "/service1.svg",
+                        "linkHref": "/legal/supreme-court-rulings"
+                      },
+                      {
+                        "id": "3",
+                        "title": "Essential Clauses Every Business Contract Must Have",
+                        "date": "MAY 10, 2024",
+                        "image": "/casestudy2.svg",
+                        "linkHref": "/legal/essential-contract-clauses"
+                      },
+                      {
+                        "id": "4",
+                        "title": "Data Privacy Compliance: A Guide for Businesses",
+                        "date": "MAY 05, 2024",
+                        "image": "/service4.svg",
+                        "linkHref": "/legal/data-privacy-compliance"
+                      },
+                      {
+                        "id": "5",
+                        "title": "Bail Laws in 2024: Key Changes Explained",
+                        "date": "APR 30, 2024",
+                        "image": "/casestudy3.svg",
+                        "linkHref": "/legal/bail-laws-2024-changes"
+                      }
+                    ]
+                  }
                 },
                 {
                   "id": "education",
@@ -2337,7 +2601,51 @@
                       "description": "Guiding institutions from founding charter to ongoing operational compliance.",
                       "icon": "file-check"
                     }
-                  ]
+                  ],
+                  "sidebarData": {
+                    "getInTouch": {
+                      "text": "Our team is here to help you navigate legal challenges and achieve your business goals.",
+                      "buttonText": "Contact Us",
+                      "buttonHref": "/contactus"
+                    },
+                    "insights": [
+                      {
+                        "id": "1",
+                        "title": "New Corporate Governance Rules: What Businesses Need to Know",
+                        "date": "MAY 20, 2024",
+                        "image": "/casestudy1.svg",
+                        "linkHref": "/legal/corporate-governance-rules-2024"
+                      },
+                      {
+                        "id": "2",
+                        "title": "Recent Supreme Court Rulings and Their Impact",
+                        "date": "MAY 18, 2024",
+                        "image": "/service1.svg",
+                        "linkHref": "/legal/supreme-court-rulings"
+                      },
+                      {
+                        "id": "3",
+                        "title": "Essential Clauses Every Business Contract Must Have",
+                        "date": "MAY 10, 2024",
+                        "image": "/casestudy2.svg",
+                        "linkHref": "/legal/essential-contract-clauses"
+                      },
+                      {
+                        "id": "4",
+                        "title": "Data Privacy Compliance: A Guide for Businesses",
+                        "date": "MAY 05, 2024",
+                        "image": "/service4.svg",
+                        "linkHref": "/legal/data-privacy-compliance"
+                      },
+                      {
+                        "id": "5",
+                        "title": "Bail Laws in 2024: Key Changes Explained",
+                        "date": "APR 30, 2024",
+                        "image": "/casestudy3.svg",
+                        "linkHref": "/legal/bail-laws-2024-changes"
+                      }
+                    ]
+                  }
                 },
                 {
                   "id": "startups-venture-capital",
@@ -2409,7 +2717,51 @@
                       "description": "Supporting companies from garage startup to public market readiness.",
                       "icon": "file-check"
                     }
-                  ]
+                  ],
+                  "sidebarData": {
+                    "getInTouch": {
+                      "text": "Our team is here to help you navigate legal challenges and achieve your business goals.",
+                      "buttonText": "Contact Us",
+                      "buttonHref": "/contactus"
+                    },
+                    "insights": [
+                      {
+                        "id": "1",
+                        "title": "New Corporate Governance Rules: What Businesses Need to Know",
+                        "date": "MAY 20, 2024",
+                        "image": "/casestudy1.svg",
+                        "linkHref": "/legal/corporate-governance-rules-2024"
+                      },
+                      {
+                        "id": "2",
+                        "title": "Recent Supreme Court Rulings and Their Impact",
+                        "date": "MAY 18, 2024",
+                        "image": "/service1.svg",
+                        "linkHref": "/legal/supreme-court-rulings"
+                      },
+                      {
+                        "id": "3",
+                        "title": "Essential Clauses Every Business Contract Must Have",
+                        "date": "MAY 10, 2024",
+                        "image": "/casestudy2.svg",
+                        "linkHref": "/legal/essential-contract-clauses"
+                      },
+                      {
+                        "id": "4",
+                        "title": "Data Privacy Compliance: A Guide for Businesses",
+                        "date": "MAY 05, 2024",
+                        "image": "/service4.svg",
+                        "linkHref": "/legal/data-privacy-compliance"
+                      },
+                      {
+                        "id": "5",
+                        "title": "Bail Laws in 2024: Key Changes Explained",
+                        "date": "APR 30, 2024",
+                        "image": "/casestudy3.svg",
+                        "linkHref": "/legal/bail-laws-2024-changes"
+                      }
+                    ]
+                  }
                 }
               ]
             }
@@ -5088,24 +5440,24 @@
                   "items": [
                     {
                       "id": "1",
-                      "title": "Seamless Spreadsheet Import Expere",
-                      "date": "25 May 2021",
-                      "image": "/casestudy1.svg",
-                      "linkHref": "/blog/1"
+                      "title": "It's important to keep up with the latest changes in family law.",
+                      "date": "23 Sep, 2025",
+                      "image": "/about.svg",
+                      "linkHref": "/blog/latest-changes-family-law-1"
                     },
                     {
                       "id": "2",
-                      "title": "Online Environme Work Older",
-                      "date": "25 May 2021",
-                      "image": "/casestudy2.svg",
-                      "linkHref": "/blog/2"
+                      "title": "There have been significant modifications in family law.",
+                      "date": "24 Sep, 2025",
+                      "image": "/service1.svg",
+                      "linkHref": "/blog/significant-modifications-family-law-1"
                     },
                     {
                       "id": "3",
-                      "title": "Website Feels More Haunted House",
-                      "date": "25 May 2021",
-                      "image": "/casestudy3.svg",
-                      "linkHref": "/blog/3"
+                      "title": "It's crucial to be aware of the latest updates in family law.",
+                      "date": "25 Sep, 2025",
+                      "image": "/service2.svg",
+                      "linkHref": "/blog/crucial-updates-family-law-1"
                     }
                   ]
                 },
@@ -5725,7 +6077,7 @@
                   "name": "Abhishek Kumar",
                   "role": "Attorney & Legal Advisor",
                   "tagline": "EXPERIENCED ATTORNEYS",
-                  "image": "/about.svg",
+                  "image": "/team/lawyer_1_1788341018612.jpg",
                   "shortBio": "At Marvin McKinney, our team of dedicated attorneys brings together years of experience, diverse legal expertise, and a shared commitment to achieving the best outcomes for our clients. Each member of our team is passionate about upholding justice and delivering results-driven representation across a range of legal areas.",
                   "contactInfo": {
                     "experienceLabel": "Experience",
@@ -5805,7 +6157,7 @@
                   "name": "Kalal Singh",
                   "role": "Senior Partner",
                   "tagline": "EXPERIENCED ATTORNEYS",
-                  "image": "/casestudy1.svg",
+                  "image": "/team/lawyer_2_1788341033348.jpg",
                   "shortBio": "At Marvin McKinney, our team of dedicated attorneys brings together years of experience, diverse legal expertise, and a shared commitment to achieving the best outcomes for our clients. Each member of our team is passionate about upholding justice and delivering results-driven representation across a range of legal areas",
                   "contactInfo": {
                     "experienceLabel": "Experience",
@@ -5885,7 +6237,7 @@
                   "name": "Deepak Kumar",
                   "role": "Litigation Partner",
                   "tagline": "EXPERIENCED ATTORNEYS",
-                  "image": "/casestudy2.svg",
+                  "image": "/team/lawyer_3_1788341283647.jpg",
                   "shortBio": "At Marvin McKinney, our team of dedicated attorneys brings together years of experience, diverse legal expertise, and a shared commitment to achieving the best outcomes for our clients. Each member of our team is passionate about upholding justice and delivering results-driven representation across a range of legal areas",
                   "contactInfo": {
                     "experienceLabel": "Experience",
@@ -5965,7 +6317,7 @@
                   "name": "Akash Kumar",
                   "role": "Corporate Counsel",
                   "tagline": "EXPERIENCED ATTORNEYS",
-                  "image": "/casestudy3.svg",
+                  "image": "/team/lawyer_1_1788341018612.jpg",
                   "shortBio": "At Marvin McKinney, our team of dedicated attorneys brings together years of experience, diverse legal expertise, and a shared commitment to achieving the best outcomes for our clients. Each member of our team is passionate about upholding justice and delivering results-driven representation across a range of legal areas",
                   "contactInfo": {
                     "experienceLabel": "Experience",
@@ -6045,7 +6397,7 @@
                   "name": "David Kapoor",
                   "role": "Tax Law Specialist",
                   "tagline": "EXPERIENCED ATTORNEYS",
-                  "image": "/casestudy4.svg",
+                  "image": "/team/lawyer_2_1788341033348.jpg",
                   "shortBio": "At Marvin McKinney, our team of dedicated attorneys brings together years of experience, diverse legal expertise, and a shared commitment to achieving the best outcomes for our clients. Each member of our team is passionate about upholding justice and delivering results-driven representation across a range of legal areas",
                   "contactInfo": {
                     "experienceLabel": "Experience",
@@ -6125,7 +6477,7 @@
                   "name": "Aman Prajapati",
                   "role": "Family Law Attorney",
                   "tagline": "EXPERIENCED ATTORNEYS",
-                  "image": "/about.svg",
+                  "image": "/team/lawyer_3_1788341283647.jpg",
                   "shortBio": "At Marvin McKinney, our team of dedicated attorneys brings together years of experience, diverse legal expertise, and a shared commitment to achieving the best outcomes for our clients. Each member of our team is passionate about upholding justice and delivering results-driven representation across a range of legal areas",
                   "contactInfo": {
                     "experienceLabel": "Experience",
@@ -6205,7 +6557,7 @@
                   "name": "Mukesh Kumar",
                   "role": "Of Counsel",
                   "tagline": "EXPERIENCED ATTORNEYS",
-                  "image": "/casestudy1.svg",
+                  "image": "/team/lawyer_1_1788341018612.jpg",
                   "shortBio": "At Marvin McKinney, our team of dedicated attorneys brings together years of experience, diverse legal expertise, and a shared commitment to achieving the best outcomes for our clients. Each member of our team is passionate about upholding justice and delivering results-driven representation across a range of legal areas",
                   "contactInfo": {
                     "experienceLabel": "Experience",
@@ -6285,7 +6637,7 @@
                   "name": "Mohan Lal",
                   "role": "Associate Attorney",
                   "tagline": "EXPERIENCED ATTORNEYS",
-                  "image": "/casestudy2.svg",
+                  "image": "/team/lawyer_2_1788341033348.jpg",
                   "shortBio": "At Marvin McKinney, our team of dedicated attorneys brings together years of experience, diverse legal expertise, and a shared commitment to achieving the best outcomes for our clients. Each member of our team is passionate about upholding justice and delivering results-driven representation across a range of legal areas",
                   "contactInfo": {
                     "experienceLabel": "Experience",
