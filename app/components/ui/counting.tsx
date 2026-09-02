@@ -6,7 +6,49 @@ import { CountingItem, GlobalLawData } from "@/types/law";
 import lawData from "@/app/data/lawData-restructured.json";
 
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
-import { motion } from "framer-motion";
+import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
+import { useEffect, useRef } from "react";
+
+function AnimatedCounter({ valueStr }: { valueStr: string }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const match = valueStr.match(/^(\D*)(\d+(?:,\d+)*(?:\.\d+)?)(\D*)$/);
+
+  const prefix = match ? match[1] : "";
+  const numValue = match ? parseFloat(match[2].replace(/,/g, '')) : 0;
+  const suffix = match ? match[3] : "";
+
+  const motionValue = useMotionValue(0);
+  const springValue = useSpring(motionValue, {
+    damping: 50,
+    stiffness: 100,
+  });
+
+  const isInView = useInView(ref, { once: true, margin: "-10%" });
+
+  useEffect(() => {
+    if (isInView && match) {
+      motionValue.set(numValue);
+    }
+  }, [isInView, numValue, motionValue, match]);
+
+  useEffect(() => {
+    if (!match) return;
+    return springValue.on("change", (latest) => {
+      if (ref.current) {
+        const formattedNum = Math.floor(latest).toString();
+        const isPadded = match[2].startsWith('0') && match[2].length > 1;
+        const paddedNum = isPadded ? formattedNum.padStart(match[2].length, '0') : formattedNum;
+        ref.current.textContent = `${prefix}${paddedNum}${suffix}`;
+      }
+    });
+  }, [springValue, prefix, suffix, match]);
+
+  if (!match) {
+    return <span>{valueStr}</span>;
+  }
+
+  return <span ref={ref}>{prefix}0{suffix}</span>;
+}
 
 const defaultCountingData: CountingItem[] = lawData.categories.Veritas.sections.Counting?.variants?.VeritasCounting1?.counting || [];
 
@@ -52,7 +94,7 @@ export default function Counting({ data = defaultCountingData, className = "" }:
 
                 {/* Counter Value */}
                 <div className="text-2xl sm:text-3xl lg:text-[38px] font-normal text-white tracking-tight leading-none mb-1 mt-0.5">
-                  {item.value}
+                  <AnimatedCounter valueStr={item.value} />
                 </div>
 
                 {/* Counter Label */}
