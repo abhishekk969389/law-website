@@ -108,7 +108,7 @@ export function Mediasec({ data = defaultMediaSectionData }: MediasecProps) {
                     </div>
 
                     {/* Read More Link */}
-                    <div>
+                    {/* <div>
                       <Link
                         href={item.link || "/media"}
                         className="inline-flex items-center gap-2 text-[#D4A359] text-xs font-semibold uppercase tracking-wider group-hover:gap-3 transition-all hover:underline"
@@ -116,7 +116,7 @@ export function Mediasec({ data = defaultMediaSectionData }: MediasecProps) {
                         <span>Read More</span>
                         <ArrowRight className="w-4 h-4" />
                       </Link>
-                    </div>
+                    </div> */}
                   </div>
                 </motion.div>
               </StaggerItem>

@@ -98,7 +98,7 @@ export default async function LegalDetailsPage({
   return (
     <main className="min-h-screen bg-[#0B0E14] text-white">
       <SubBanner data={subBannerData} />
-      <section className="relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 mb-12 md:mb-17 lg:mb-20 select-none">
+      <section className="relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 mb-12 md:mb-16 select-none">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12">
             <div className="lg:col-span-8">
