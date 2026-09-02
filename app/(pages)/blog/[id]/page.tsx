@@ -2,14 +2,15 @@ import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import BlogMain from "@/app/components/layout/blogdetails/blogmain";
 import BlogSidebar from "@/app/components/layout/blogdetails/blogsidebar";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { GlobalLawData, BlogDetailItem } from "@/types/law";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
 function getBlogByIdOrSlug(id: string): BlogDetailItem | undefined {
-  const globalData = rawLawData as unknown as GlobalLawData;
-  const blogDetails = globalData.blogDetails as BlogDetailItem[] | undefined;
+  const globalData = ({}) as unknown as GlobalLawData;
+  const blogDetails = (getSectionData('BlogDetail', 'VeritasBlogDetail1')?.blogDetails || []) as BlogDetailItem[] | undefined;
 
   if (!id || !blogDetails || !Array.isArray(blogDetails)) return undefined;
   const cleanId = id.trim().toLowerCase();
@@ -22,8 +23,8 @@ function getBlogByIdOrSlug(id: string): BlogDetailItem | undefined {
 }
 
 function getAllBlogIds(): string[] {
-  const globalData = rawLawData as unknown as GlobalLawData;
-  const blogDetails = globalData.blogDetails as BlogDetailItem[] | undefined;
+  const globalData = ({}) as unknown as GlobalLawData;
+  const blogDetails = (getSectionData('BlogDetail', 'VeritasBlogDetail1')?.blogDetails || []) as BlogDetailItem[] | undefined;
 
   if (!blogDetails || !Array.isArray(blogDetails)) return [];
 
@@ -69,6 +70,7 @@ export default async function BlogDetailsPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
+  const data = resolvePageData('blogs-detail');
   const resolvedParams = await params;
   const blog = getBlogByIdOrSlug(resolvedParams.id);
 
@@ -76,8 +78,8 @@ export default async function BlogDetailsPage({
     notFound();
   }
 
-  const globalData = rawLawData as unknown as GlobalLawData;
-  const baseSubBanner = globalData.blogSubBanner || globalData.subBanner;
+  const globalData = ({}) as unknown as GlobalLawData;
+  const baseSubBanner = data.PageBanner?.blogSubBanner || data.SubBanner?.subBanner;
 
   const subBannerData = {
     title: blog.title,

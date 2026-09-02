@@ -2,10 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 import { BannerData, GlobalLawData } from '@/types/law';
-import rawLawData from '@/app/data/lawData.json';
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from '@/app/components/ui/animations';
 
-const defaultBannerData: BannerData = (rawLawData as GlobalLawData).banner;
+const defaultBannerData: BannerData = getSectionData('Banner', 'VeritasBanner1')?.banner;
 
 interface BannerProps {
   data?: BannerData;

@@ -1,7 +1,8 @@
 import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import Section from "@/app/components/layout/termscondition/section";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { GlobalLawData } from "@/types/law";
 
 export const metadata = {
@@ -10,9 +11,10 @@ export const metadata = {
 };
 
 export default function TermsConditionPage() {
-  const globalData = rawLawData as GlobalLawData;
-  const termsConditionSubBannerData = globalData.termsConditionSubBanner;
-  const termsConditionSectionData = globalData.termsConditionSection;
+  const data = resolvePageData('terms-and-conditions');
+  
+  const termsConditionSubBannerData = data.PageBanner?.termsConditionSubBanner;
+  const termsConditionSectionData = data.Terms?.termsConditionSection;
 
   return (
     <main className="min-h-screen bg-[#0B0E14] text-white pb-12 sm:pb-16 lg:pb-20">

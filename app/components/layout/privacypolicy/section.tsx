@@ -1,11 +1,12 @@
 "use client";
 
 import React from "react";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { PrivacyPolicySectionData, GlobalLawData } from "@/types/law";
 import { StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 
-const defaultPrivacyPolicySectionData = (rawLawData as GlobalLawData).privacyPolicySection;
+const defaultPrivacyPolicySectionData = getSectionData('PrivacyPolicy', 'VeritasPrivacyPolicy1')?.privacyPolicySection;
 
 export interface SectionProps {
   data?: PrivacyPolicySectionData;

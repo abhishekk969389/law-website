@@ -5,11 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight, ArrowUpRight, ArrowRight, Folder } from "lucide-react";
 import { CaseStudyData, GlobalLawData } from "@/types/law";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion, AnimatePresence } from "framer-motion";
 
-const defaultCaseStudyData: CaseStudyData = (rawLawData as GlobalLawData).caseStudy || {
+const defaultCaseStudyData: CaseStudyData = getSectionData('CaseStudy', 'VeritasCaseStudy1')?.caseStudy || {
     tagline: "CASE STUDY",
     heading: {
         line1: "Tailored For",

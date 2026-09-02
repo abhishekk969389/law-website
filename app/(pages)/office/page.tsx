@@ -3,7 +3,8 @@ import SubBanner from "@/app/components/ui/subbanner";
 import Officesec from "@/app/components/layout/office/officesec";
 import Locationcard from "@/app/components/layout/office/locationcard";
 import Officecta from "@/app/components/layout/office/officecta";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { GlobalLawData } from "@/types/law";
 
 export const metadata = {
@@ -12,11 +13,12 @@ export const metadata = {
 };
 
 export default function OfficePage() {
-  const globalData = rawLawData as GlobalLawData;
-  const officeSubBannerData = globalData.officeSubBanner;
-  const officeSectionData = globalData.officeSection;
-  const officeLocationsData = globalData.officeLocations;
-  const officeCtaData = globalData.officeCta;
+  const data = resolvePageData('offices');
+  
+  const officeSubBannerData = data.PageBanner?.officeSubBanner;
+  const officeSectionData = data.Offices?.officeSection;
+  const officeLocationsData = data.Offices?.officeLocations;
+  const officeCtaData = data.Offices?.officeCta;
 
   return (
     <main className="min-h-screen bg-[#0B0E14] text-white pb-12 sm:pb-16 lg:pb-20">

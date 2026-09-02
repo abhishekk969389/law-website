@@ -3,7 +3,8 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { LegalSidebarData, GlobalLawData } from "@/types/law";
 import { FadeIn } from "@/app/components/ui/animations";
 
@@ -13,8 +14,8 @@ interface LegalSidebarProps {
 }
 
 export function LegalSidebar({ currentId, sidebarData }: LegalSidebarProps) {
-  const globalData = rawLawData as unknown as GlobalLawData;
-  const defaultSidebar = globalData.legalSidebar;
+  const globalData = ({}) as unknown as GlobalLawData;
+  const defaultSidebar = getSectionData('LegalUpdates', 'VeritasLegalUpdates1')?.legalSidebar;
 
   const data = sidebarData || defaultSidebar;
   const recentHeading = data?.recentHeading || "Recent Posts";
@@ -30,7 +31,7 @@ export function LegalSidebar({ currentId, sidebarData }: LegalSidebarProps) {
           </h3>
 
           <div className="space-y-4">
-            {recentPosts.map((item) => {
+            {recentPosts.map((item: any) => {
               const isActive = currentId && (item.id === currentId || item.slug === currentId);
               const href = item.link || `/legal/${item.slug || item.id}`;
 

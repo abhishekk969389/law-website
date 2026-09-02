@@ -4,12 +4,13 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { TeamSectionData, GlobalLawData } from "@/types/law";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultTeamSectionData = (rawLawData as GlobalLawData).teamSection;
+const defaultTeamSectionData = getSectionData('Team', 'VeritasTeam1')?.teamSection;
 
 export interface TeamsecProps {
   data?: TeamSectionData;

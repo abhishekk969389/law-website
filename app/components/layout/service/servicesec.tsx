@@ -14,12 +14,13 @@ import {
   ArrowRight,
   LucideIcon,
 } from "lucide-react";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { ServiceSectionData, GlobalLawData } from "@/types/law";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultServiceSectionData = (rawLawData as GlobalLawData).serviceSection;
+const defaultServiceSectionData = getSectionData('Services', 'VeritasServices1')?.serviceSection;
 
 const iconMap: Record<string, LucideIcon> = {
   scale: Scale,

@@ -2,12 +2,13 @@
 
 import Image from "next/image";
 import { PenTool } from "lucide-react";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { AwardSectionData, GlobalLawData } from "@/types/law";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultAwardSectionData = (rawLawData as GlobalLawData).awardSection;
+const defaultAwardSectionData = getSectionData('AwardsRecognition', 'VeritasAwardsRecognition1')?.awardSection;
 
 export interface AwardsecProps {
     data?: AwardSectionData;

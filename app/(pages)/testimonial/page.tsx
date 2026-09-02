@@ -1,6 +1,7 @@
 import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { GlobalLawData } from "@/types/law";
 import Testimonials from "@/app/components/homelayout/testinomials";
 
@@ -10,8 +11,9 @@ export const metadata = {
 };
 
 export default function TestimonialPage() {
-  const globalData = rawLawData as GlobalLawData;
-  const testimonialSubBannerData = globalData.testimonialSubBanner;
+  const data = resolvePageData('home');
+  
+  const testimonialSubBannerData = data.PageBanner?.testimonialSubBanner;
 
   return (
     <main className="min-h-screen bg-[#0B0E14] text-white pb-12 sm:pb-16 lg:pb-20">

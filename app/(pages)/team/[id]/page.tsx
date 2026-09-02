@@ -3,14 +3,15 @@ import SubBanner from "@/app/components/ui/subbanner";
 import TeamDetailsSec from "@/app/components/layout/teamdetails/teamdetailssec";
 import TeamAbout from "@/app/components/layout/teamdetails/teamabout";
 import Activity from "@/app/components/layout/teamdetails/activity";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { GlobalLawData, TeamDetailItem } from "@/types/law";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
 function getTeamMemberById(id: string): TeamDetailItem | undefined {
-  const globalData = rawLawData as GlobalLawData;
-  const teamDetails = globalData.teamDetails as TeamDetailItem[] | undefined;
+  
+  const teamDetails = (getSectionData('TeamDetail', 'VeritasTeamDetail1')?.teamDetails || []) as TeamDetailItem[] | undefined;
 
   if (!teamDetails || !Array.isArray(teamDetails) || teamDetails.length === 0) {
     return undefined;
@@ -36,8 +37,8 @@ function getTeamMemberById(id: string): TeamDetailItem | undefined {
 }
 
 function getAllTeamMemberIds(): string[] {
-  const globalData = rawLawData as GlobalLawData;
-  const teamDetails = globalData.teamDetails as TeamDetailItem[] | undefined;
+  
+  const teamDetails = (getSectionData('TeamDetail', 'VeritasTeamDetail1')?.teamDetails || []) as TeamDetailItem[] | undefined;
 
   if (!teamDetails || !Array.isArray(teamDetails)) return ["1", "2", "3", "4", "5", "6", "7", "8"];
 
@@ -81,6 +82,7 @@ export default async function TeamMemberDetailsPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
+  const data = resolvePageData('team-detail');
   const resolvedParams = await params;
   const member = getTeamMemberById(resolvedParams.id);
 
@@ -88,8 +90,8 @@ export default async function TeamMemberDetailsPage({
     notFound();
   }
 
-  const globalData = rawLawData as GlobalLawData;
-  const baseSubBanner = globalData.teamDetailsSubBanner || globalData.teamSubBanner;
+  
+  const baseSubBanner = getSectionData('PageBanner', 'VeritasPageBanner1')?.teamDetailsSubBanner || data.PageBanner?.teamSubBanner;
 
   const subBannerData = {
     title: member.name,

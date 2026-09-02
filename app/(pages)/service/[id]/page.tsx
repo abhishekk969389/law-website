@@ -1,7 +1,8 @@
 import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import ServiceDetailsSec from "@/app/components/layout/servicedetails/servicedetailssec";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { GlobalLawData, ServiceDetailItem, ServiceSidebarContact, ServiceSidebarForm } from "@/types/law";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
@@ -22,8 +23,8 @@ const defaultSidebarForm: ServiceSidebarForm = {
 };
 
 function getServiceById(id: string): ServiceDetailItem | undefined {
-  const globalData = rawLawData as GlobalLawData;
-  const serviceDetails = globalData.serviceDetails as ServiceDetailItem[] | undefined;
+  
+  const serviceDetails = (getSectionData('ServiceDetail', 'VeritasServiceDetail1')?.serviceDetails || []) as ServiceDetailItem[] | undefined;
 
   if (!serviceDetails || !Array.isArray(serviceDetails) || serviceDetails.length === 0) {
     return undefined;
@@ -55,8 +56,8 @@ function getServiceById(id: string): ServiceDetailItem | undefined {
 }
 
 function getAllServiceIds(): string[] {
-  const globalData = rawLawData as GlobalLawData;
-  const serviceDetails = globalData.serviceDetails as ServiceDetailItem[] | undefined;
+  
+  const serviceDetails = (getSectionData('ServiceDetail', 'VeritasServiceDetail1')?.serviceDetails || []) as ServiceDetailItem[] | undefined;
   if (!serviceDetails || !Array.isArray(serviceDetails)) return ["1", "2", "3", "4", "5", "6", "7", "8"];
   const paramsList: string[] = [];
   serviceDetails.forEach((item) => {
@@ -93,6 +94,7 @@ export default async function ServiceDetailPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
+  const data = resolvePageData('services-detail');
   const resolvedParams = await params;
   const service = getServiceById(resolvedParams.id);
 

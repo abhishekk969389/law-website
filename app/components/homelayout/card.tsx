@@ -3,11 +3,12 @@
 import React from "react";
 import { UserCheck, ShieldCheck, Gavel, Landmark, LucideIcon } from "lucide-react";
 import { FeatureItem, GlobalLawData } from "@/types/law";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { StaggerContainer, StaggerItem, FadeIn } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultFeatures: FeatureItem[] = (rawLawData as GlobalLawData).features || [];
+const defaultFeatures: FeatureItem[] = getSectionData('Features', 'VeritasFeatures1')?.features || [];
 
 interface CardProps {
   data?: FeatureItem[];

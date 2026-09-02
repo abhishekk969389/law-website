@@ -4,14 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { PenTool, User, Calendar, MessageSquare, ArrowRight } from "lucide-react";
 import { BlogData, GlobalLawData } from "@/types/law";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const globalData = rawLawData as unknown as GlobalLawData;
+const globalData = ({}) as unknown as GlobalLawData;
 
 export default function Blog({ data }: { data?: any }) {
-  const blogSection = data || globalData.blogSection || globalData.blog;
+  const blogSection = data || getSectionData('Blog', 'VeritasBlog1')?.blogSection || getSectionData('Blog', 'VeritasBlog1')?.blog;
   if (!blogSection) return null;
 
   const {

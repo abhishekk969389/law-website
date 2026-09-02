@@ -5,12 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, PenTool } from "lucide-react";
 import Pagination from "@/app/components/ui/pagination";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { LegalSectionData, GlobalLawData } from "@/types/law";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultLegalSectionData = (rawLawData as GlobalLawData).legalSection;
+const defaultLegalSectionData = getSectionData('LegalUpdates', 'VeritasLegalUpdates1')?.legalSection;
 
 export interface LegalsecProps {
     data?: LegalSectionData;

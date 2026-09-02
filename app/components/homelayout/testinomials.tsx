@@ -4,11 +4,12 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, Star, Scale } from "lucide-react";
 import { TestimonialsData, GlobalLawData } from "@/types/law";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { FadeIn, ScaleIn } from "@/app/components/ui/animations";
 import { motion, AnimatePresence } from "framer-motion";
 
-const defaultTestimonialsData: TestimonialsData = (rawLawData as GlobalLawData).testimonials || {
+const defaultTestimonialsData: TestimonialsData = getSectionData('Testimonials', 'VeritasTestimonials1')?.testimonials || {
     tagline: "Client Testimonials",
     heading: "What Our Clients Say",
     image: "/testinomial.svg",

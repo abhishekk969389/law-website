@@ -10,7 +10,8 @@ import {
   Globe,
   MapPin,
 } from "lucide-react";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { CaseStudySidebarData, CaseStudyDetailItem, GlobalLawData } from "@/types/law";
 import { FadeIn } from "@/app/components/ui/animations";
 
@@ -20,8 +21,8 @@ export interface CaseStudySidebarProps {
   sidebarData?: CaseStudySidebarData;
 }
 
-const globalCaseStudySidebar = (rawLawData as unknown as GlobalLawData).caseStudySidebar;
-const defaultCaseStudyItems = (rawLawData as unknown as GlobalLawData).caseStudySection?.items || [];
+const globalCaseStudySidebar = (({}) as unknown as GlobalLawData).caseStudySidebar;
+const defaultCaseStudyItems = (({}) as unknown as GlobalLawData).caseStudySection?.items || [];
 
 export function CaseStudySidebar({
   currentId,

@@ -4,11 +4,12 @@ import React from "react";
 import Image from "next/image";
 import { ShieldCheck, User, Gavel, Lock, Users, LucideIcon } from "lucide-react";
 import { AboutData, GlobalLawData } from "@/types/law";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultAboutData: AboutData = (rawLawData as GlobalLawData).about;
+const defaultAboutData: AboutData = getSectionData('About', 'VeritasAbout1')?.about;
 
 interface AboutProps {
     data?: AboutData;

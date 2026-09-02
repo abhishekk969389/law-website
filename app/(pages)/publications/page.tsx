@@ -2,7 +2,8 @@ import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import Pubsec from "@/app/components/layout/publications/pubsec";
 import StayUpdated from "@/app/components/layout/publications/stayupdated";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { GlobalLawData } from "@/types/law";
 
 export const metadata = {
@@ -11,10 +12,11 @@ export const metadata = {
 };
 
 export default function PublicationsPage() {
-  const globalData = rawLawData as GlobalLawData;
-  const publicationsSubBannerData = globalData.publicationsSubBanner;
-  const publicationsSectionData = globalData.publicationsSection;
-  const stayUpdatedData = globalData.stayUpdated;
+  const data = resolvePageData('publications');
+  
+  const publicationsSubBannerData = data.PageBanner?.publicationsSubBanner;
+  const publicationsSectionData = data.Publications?.publicationsSection;
+  const stayUpdatedData = data.StayUpdated?.stayUpdated;
 
   return (
     <main className="min-h-screen bg-[#0B0E14] text-white pb-12 sm:pb-16 lg:pb-20">

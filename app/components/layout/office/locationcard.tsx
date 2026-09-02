@@ -2,12 +2,13 @@
 
 import React from "react";
 import { Phone, ArrowRight } from "lucide-react";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { OfficeLocationSectionData, GlobalLawData } from "@/types/law";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultOfficeLocationsData = (rawLawData as GlobalLawData).officeLocations;
+const defaultOfficeLocationsData = getSectionData('Offices', 'VeritasOffices1')?.officeLocations;
 
 // Custom Gold Architectural Vector SVG Monuments for Indian Cities
 const MonumentSvg: React.FC<{ icon?: string }> = ({ icon }) => {

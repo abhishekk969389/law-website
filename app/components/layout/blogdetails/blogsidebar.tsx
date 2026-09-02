@@ -4,7 +4,8 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Calendar, PhoneCall } from "lucide-react";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { BlogSidebarData, GlobalLawData } from "@/types/law";
 import { FadeIn } from "@/app/components/ui/animations";
 
@@ -14,8 +15,8 @@ interface BlogSidebarProps {
 }
 
 export function BlogSidebar({ currentId, sidebarData }: BlogSidebarProps) {
-  const globalData = rawLawData as unknown as GlobalLawData;
-  const defaultSidebar = globalData.blogSidebar;
+  const globalData = ({}) as unknown as GlobalLawData;
+  const defaultSidebar = getSectionData('Blog', 'VeritasBlog1')?.blogSidebar;
 
   const data = sidebarData || defaultSidebar;
   const recentHeading = data?.recentHeading || "Recent Blogs";
@@ -32,7 +33,7 @@ export function BlogSidebar({ currentId, sidebarData }: BlogSidebarProps) {
           </h3>
 
           <div className="space-y-4">
-            {recentBlogs.map((item) => {
+            {recentBlogs.map((item: any) => {
               const isActive = currentId && (item.id === currentId || item.slug === currentId);
               const href = item.linkHref || `/blog/${item.slug || item.id}`;
 
@@ -101,7 +102,7 @@ export function BlogSidebar({ currentId, sidebarData }: BlogSidebarProps) {
           {/* Title in Serif Italic */}
           <h3 className="font-serif italic text-2xl sm:text-3xl text-white font-normal leading-snug tracking-tight mb-8 relative z-10">
             {contact.headingLines && contact.headingLines.length > 0 ? (
-              contact.headingLines.map((line, idx) => (
+              contact.headingLines.map((line: any, idx: number) => (
                 <React.Fragment key={idx}>
                   {line}
                   <br />

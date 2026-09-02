@@ -2,7 +2,8 @@ import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import ApproachSec from "@/app/components/layout/ourapproach/approachsec";
 import Proven from "@/app/components/layout/ourapproach/proven";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { GlobalLawData } from "@/types/law";
 
 export const metadata = {
@@ -11,10 +12,11 @@ export const metadata = {
 };
 
 export default function OurApproachPage() {
-  const globalData = rawLawData as GlobalLawData;
-  const ourApproachSubBannerData = globalData.ourApproachSubBanner;
-  const ourApproachSectionData = globalData.ourApproachSection;
-  const provenApproachData = globalData.provenApproach;
+  const data = resolvePageData('our-approach');
+  
+  const ourApproachSubBannerData = data.PageBanner?.ourApproachSubBanner;
+  const ourApproachSectionData = data.OurApproach?.ourApproachSection;
+  const provenApproachData = data.OurApproach?.provenApproach;
 
   return (
     <main className="min-h-screen bg-[#08171B] text-white pb-12 sm:pb-16 lg:pb-20">

@@ -19,7 +19,8 @@ import {
   Rocket,
   LucideIcon,
 } from "lucide-react";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { IndustryDetailSidebarData, IndustryDetailItem, GlobalLawData } from "@/types/law";
 import { FadeIn } from "@/app/components/ui/animations";
 
@@ -42,7 +43,7 @@ export interface IndustrySidebarProps {
   sidebarData?: IndustryDetailSidebarData;
 }
 
-const globalSidebar = (rawLawData as unknown as GlobalLawData).industrySidebar;
+const globalSidebar = (({}) as unknown as GlobalLawData).industrySidebar;
 
 export function IndustrySidebar({
   currentId,

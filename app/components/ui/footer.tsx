@@ -12,11 +12,12 @@ import {
   Share2,
 } from "lucide-react";
 import { FooterData, GlobalLawData } from "@/types/law";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultFooterData: FooterData = (rawLawData as GlobalLawData).footer as FooterData;
+const defaultFooterData: FooterData = getSectionData('Footer', 'VeritasFooter1')?.footer as FooterData;
 
 interface FooterProps {
   data?: FooterData;

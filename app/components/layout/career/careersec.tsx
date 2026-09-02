@@ -13,12 +13,13 @@ import {
   ArrowRight,
   LucideIcon,
 } from "lucide-react";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { CareerSectionData, GlobalLawData } from "@/types/law";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultCareerSectionData = (rawLawData as GlobalLawData).careerSection;
+const defaultCareerSectionData = getSectionData('Careers', 'VeritasCareers1')?.careerSection;
 
 const iconMap: Record<string, LucideIcon> = {
   Scale,

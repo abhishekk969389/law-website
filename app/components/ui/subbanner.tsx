@@ -4,12 +4,13 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { SubBannerData, GlobalLawData } from "@/types/law";
 import { FadeIn } from "@/app/components/ui/animations";
 
 const defaultSubBannerData: SubBannerData =
-    (rawLawData as GlobalLawData).aboutSubBanner || {
+    getSectionData('PageBanner', 'VeritasPageBanner1')?.aboutSubBanner || {
         title: "About us",
         breadcrumbs: [
             { label: "Home", href: "/" },

@@ -4,12 +4,13 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { ChevronDown, ArrowUpRight, Menu, X } from "lucide-react";
 import { NavbarData, GlobalLawData } from "@/types/law";
 import { motion, AnimatePresence } from "framer-motion";
 
-const defaultNavbarData: NavbarData = (rawLawData as GlobalLawData).navbar;
+const defaultNavbarData: NavbarData = getSectionData('Header', 'VeritasHeader1')?.navbar;
 
 interface NavbarProps {
     data?: NavbarData;

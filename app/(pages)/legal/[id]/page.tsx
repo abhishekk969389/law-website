@@ -2,14 +2,15 @@ import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import LegalMain from "@/app/components/layout/legaldetails/legalmain";
 import LegalSidebar from "@/app/components/layout/legaldetails/legalsidebar";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { GlobalLawData, LegalDetailItem } from "@/types/law";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
 function getLegalByIdOrSlug(id: string): LegalDetailItem | undefined {
-  const globalData = rawLawData as unknown as GlobalLawData;
-  const legalDetails = globalData.legalDetails as LegalDetailItem[] | undefined;
+  const globalData = ({}) as unknown as GlobalLawData;
+  const legalDetails = (getSectionData('LegalUpdateDetail', 'VeritasLegalUpdateDetail1')?.legalDetails || []) as LegalDetailItem[] | undefined;
 
   if (!id || !legalDetails || !Array.isArray(legalDetails)) return undefined;
   const cleanId = id.trim().toLowerCase();
@@ -22,8 +23,8 @@ function getLegalByIdOrSlug(id: string): LegalDetailItem | undefined {
 }
 
 function getAllLegalIds(): string[] {
-  const globalData = rawLawData as unknown as GlobalLawData;
-  const legalDetails = globalData.legalDetails as LegalDetailItem[] | undefined;
+  const globalData = ({}) as unknown as GlobalLawData;
+  const legalDetails = (getSectionData('LegalUpdateDetail', 'VeritasLegalUpdateDetail1')?.legalDetails || []) as LegalDetailItem[] | undefined;
 
   if (!legalDetails || !Array.isArray(legalDetails)) return [];
 
@@ -70,6 +71,7 @@ export default async function LegalDetailsPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
+  const data = resolvePageData('legal-updates-detail');
   const resolvedParams = await params;
   const article = getLegalByIdOrSlug(resolvedParams.id);
 
@@ -77,8 +79,8 @@ export default async function LegalDetailsPage({
     notFound();
   }
 
-  const globalData = rawLawData as unknown as GlobalLawData;
-  const baseSubBanner = globalData.legalSubBanner || globalData.subBanner;
+  const globalData = ({}) as unknown as GlobalLawData;
+  const baseSubBanner = data.PageBanner?.legalSubBanner || data.SubBanner?.subBanner;
 
   const words = (article.title || "").trim().split(/\s+/);
   const shortTitle = article.bannerTitle || article.shortTitle || (words.length > 3 ? words.slice(0, 3).join(" ") : article.title);

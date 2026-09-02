@@ -2,12 +2,13 @@
 
 import React from "react";
 import { MapPin, Clock, Phone, Mail } from "lucide-react";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { ContactSectionData, GlobalLawData } from "@/types/law";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultContactSectionData = (rawLawData as GlobalLawData).contactSection;
+const defaultContactSectionData = getSectionData('Contact', 'VeritasContact1')?.contactSection;
 
 export interface ContactsecProps {
   data?: ContactSectionData;

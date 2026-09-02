@@ -3,12 +3,13 @@
 import React from "react";
 import Link from "next/link";
 import { Scale, Mail, ArrowRight } from "lucide-react";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { CareerCtaData, GlobalLawData } from "@/types/law";
 import { FadeIn } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultCareerCtaData = (rawLawData as GlobalLawData).careerCta;
+const defaultCareerCtaData = getSectionData('Careers', 'VeritasCareers1')?.careerCta;
 
 export interface CareerctaProps {
   data?: CareerCtaData;

@@ -1,11 +1,12 @@
 "use client";
 
 import React from "react";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { TermsConditionSectionData, GlobalLawData } from "@/types/law";
 import { StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 
-const defaultTermsConditionSectionData = (rawLawData as GlobalLawData).termsConditionSection;
+const defaultTermsConditionSectionData = getSectionData('Terms', 'VeritasTerms1')?.termsConditionSection;
 
 export interface SectionProps {
   data?: TermsConditionSectionData;

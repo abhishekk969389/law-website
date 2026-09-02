@@ -13,12 +13,13 @@ import {
   ArrowRight,
   LucideIcon,
 } from "lucide-react";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { IndustrySectionData, GlobalLawData } from "@/types/law";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultIndustrySectionData = (rawLawData as GlobalLawData).industrySection;
+const defaultIndustrySectionData = getSectionData('Industries', 'VeritasIndustries1')?.industrySection;
 
 const iconMap: Record<string, LucideIcon> = {
   landmark: Landmark,

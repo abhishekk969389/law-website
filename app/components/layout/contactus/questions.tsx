@@ -3,12 +3,13 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { User, Mail, Briefcase, Phone, Pencil, ArrowRight } from "lucide-react";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { QuestionsSectionData, GlobalLawData } from "@/types/law";
 import { FadeIn } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultQuestionsSectionData = (rawLawData as GlobalLawData).questionsSection;
+const defaultQuestionsSectionData = getSectionData('Consultation', 'VeritasConsultation1')?.questionsSection;
 
 export interface QuestionsProps {
   data?: QuestionsSectionData;

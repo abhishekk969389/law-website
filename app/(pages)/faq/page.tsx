@@ -1,6 +1,7 @@
 import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { GlobalLawData } from "@/types/law";
 import Faq from "@/app/components/homelayout/faq";
 
@@ -10,8 +11,9 @@ export const metadata = {
 };
 
 export default function FaqPage() {
-  const globalData = rawLawData as GlobalLawData;
-  const faqSubBannerData = globalData.faqSubBanner;
+  const data = resolvePageData('faqs');
+  
+  const faqSubBannerData = data.PageBanner?.faqSubBanner;
 
   return (
     <main className="min-h-screen bg-[#0C191B] text-white">

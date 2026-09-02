@@ -4,11 +4,12 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { Scale, Plus, Minus } from "lucide-react";
 import { FaqData, GlobalLawData } from "@/types/law";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion, AnimatePresence } from "framer-motion";
 
-const defaultFaqData: FaqData = (rawLawData as GlobalLawData).faq || {
+const defaultFaqData: FaqData = getSectionData('FAQ', 'VeritasFAQ1')?.faq || {
   tagline: "FAQ'S",
   heading: {
     line1: "Frequently Asked",

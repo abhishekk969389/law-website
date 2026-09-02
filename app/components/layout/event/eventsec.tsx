@@ -5,12 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { Calendar, MapPin, ChevronRight, PenTool } from "lucide-react";
 import Pagination from "@/app/components/ui/pagination";
-import rawLawData from "@/app/data/lawData.json";
+import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+
 import { EventSectionData, GlobalLawData } from "@/types/law";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultEventSectionData = (rawLawData as GlobalLawData).eventSection;
+const defaultEventSectionData = getSectionData('Events', 'VeritasEvents1')?.eventSection;
 
 export interface EventsecProps {
   data?: EventSectionData;
