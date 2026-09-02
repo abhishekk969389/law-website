@@ -34,7 +34,7 @@ export default function Banner({ data = defaultBannerData }: BannerProps) {
         <div className="w-full lg:w-3/5">
           {/* Tagline */}
           <FadeIn direction="right" delay={0.1} duration={0.6}>
-            <div className="inline-flex items-center gap-3 sm:gap-4 mb-4">
+            <div className="inline-flex items-center gap-3 sm:gap-4 mb-6">
               <span className="relative italic font-serif text-[#C5A45D] text-base sm:text-lg lg:text-xl">
                 {data.tagline}
                 {/* Bottom line */}
