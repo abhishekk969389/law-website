@@ -116,7 +116,7 @@ export function Legalsec({ data = defaultLegalSectionData }: LegalsecProps) {
                                     href={featured.link || `/legal/${featured.id}`}
                                     className="inline-flex items-center gap-2 text-[#D4A359] text-xs sm:text-sm font-semibold uppercase tracking-wider group-hover:gap-3 transition-all hover:underline"
                                 >
-                                    <span>Read More</span>
+                                    <span>{featured.linkText}</span>
                                     <ArrowRight className="w-4 h-4" />
                                 </Link>
                             </div>
@@ -174,7 +174,7 @@ export function Legalsec({ data = defaultLegalSectionData }: LegalsecProps) {
                                             href={item.link || `/legal/${item.id}`}
                                             className="inline-flex items-center gap-2 text-[#D4A359] text-xs font-semibold uppercase tracking-wider group-hover:gap-3 transition-all hover:underline"
                                         >
-                                            <span>Read More</span>
+                                            <span>{item.linkText}</span>
                                             <ArrowRight className="w-4 h-4" />
                                         </Link>
                                     </div>

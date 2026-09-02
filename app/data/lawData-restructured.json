@@ -1474,7 +1474,7 @@
                     "linkHref": "/team/deepak-kumar",
                     "link": "/team/deepak-kumar"
                   },
-                  { 
+                  {
                     "id": "4",
                     "name": "Suman Kumar",
                     "role": "Corporate Counsel",
@@ -3222,7 +3222,8 @@
                     "date": "23 Sep, 2025",
                     "commentsCount": "3 Comments",
                     "image": "/about.svg",
-                    "linkHref": "/blog/latest-changes-family-law-1"
+                    "linkHref": "/blog/latest-changes-family-law-1",
+                    "linkText": "Read More"
                   },
                   {
                     "id": "2",
@@ -3231,7 +3232,8 @@
                     "date": "24 Sep, 2025",
                     "commentsCount": "2 Comments",
                     "image": "/service1.svg",
-                    "linkHref": "/blog/significant-modifications-family-law-1"
+                    "linkHref": "/blog/significant-modifications-family-law-1",
+                    "linkText": "Read More"
                   },
                   {
                     "id": "3",
@@ -3240,7 +3242,8 @@
                     "date": "25 Sep, 2025",
                     "commentsCount": "4 Comments",
                     "image": "/service2.svg",
-                    "linkHref": "/blog/crucial-updates-family-law-1"
+                    "linkHref": "/blog/crucial-updates-family-law-1",
+                    "linkText": "Read More"
                   },
                   {
                     "id": "4",
@@ -3249,7 +3252,8 @@
                     "date": "23 Sep, 2025",
                     "commentsCount": "3 Comments",
                     "image": "/about.svg",
-                    "linkHref": "/blog/latest-changes-family-law-2"
+                    "linkHref": "/blog/latest-changes-family-law-2",
+                    "linkText": "Read More"
                   },
                   {
                     "id": "5",
@@ -3258,7 +3262,8 @@
                     "date": "24 Sep, 2025",
                     "commentsCount": "2 Comments",
                     "image": "/service1.svg",
-                    "linkHref": "/blog/significant-modifications-family-law-2"
+                    "linkHref": "/blog/significant-modifications-family-law-2",
+                    "linkText": "Read More"
                   },
                   {
                     "id": "6",
@@ -3267,7 +3272,8 @@
                     "date": "25 Sep, 2025",
                     "commentsCount": "4 Comments",
                     "image": "/service2.svg",
-                    "linkHref": "/blog/crucial-updates-family-law-2"
+                    "linkHref": "/blog/crucial-updates-family-law-2",
+                    "linkText": "Read More"
                   },
                   {
                     "id": "7",
@@ -3276,7 +3282,8 @@
                     "date": "26 Sep, 2025",
                     "commentsCount": "5 Comments",
                     "image": "/casestudy1.svg",
-                    "linkHref": "/blog/corporate-restructuring-ma-guidelines"
+                    "linkHref": "/blog/corporate-restructuring-ma-guidelines",
+                    "linkText": "Read More"
                   },
                   {
                     "id": "8",
@@ -3285,7 +3292,8 @@
                     "date": "27 Sep, 2025",
                     "commentsCount": "3 Comments",
                     "image": "/casestudy2.svg",
-                    "linkHref": "/blog/real-estate-laws-lease-agreements"
+                    "linkHref": "/blog/real-estate-laws-lease-agreements",
+                    "linkText": "Read More"
                   },
                   {
                     "id": "9",
@@ -3294,7 +3302,8 @@
                     "date": "28 Sep, 2025",
                     "commentsCount": "6 Comments",
                     "image": "/casestudy3.svg",
-                    "linkHref": "/blog/intellectual-property-digital-brand"
+                    "linkHref": "/blog/intellectual-property-digital-brand",
+                    "linkText": "Read More"
                   },
                   {
                     "id": "10",
@@ -3303,7 +3312,8 @@
                     "date": "29 Sep, 2025",
                     "commentsCount": "2 Comments",
                     "image": "/casestudy4.svg",
-                    "linkHref": "/blog/criminal-defense-strategies-trial-law"
+                    "linkHref": "/blog/criminal-defense-strategies-trial-law",
+                    "linkText": "Read More"
                   },
                   {
                     "id": "11",
@@ -3312,7 +3322,8 @@
                     "date": "30 Sep, 2025",
                     "commentsCount": "4 Comments",
                     "image": "/about.svg",
-                    "linkHref": "/blog/tax-regulation-updates-sme"
+                    "linkHref": "/blog/tax-regulation-updates-sme",
+                    "linkText": "Read More"
                   },
                   {
                     "id": "12",
@@ -3321,7 +3332,8 @@
                     "date": "01 Oct, 2025",
                     "commentsCount": "1 Comment",
                     "image": "/service1.svg",
-                    "linkHref": "/blog/labor-laws-employment-dispute-resolution"
+                    "linkHref": "/blog/labor-laws-employment-dispute-resolution",
+                    "linkText": "Read More"
                   }
                 ]
               },
@@ -3342,7 +3354,8 @@
                     "date": "23 Sep, 2025",
                     "commentsCount": "3 Comments",
                     "title": "It's important to keep up with the latest changes in family..",
-                    "linkHref": "/blog/1"
+                    "linkHref": "/blog/1",
+                    "linkText": "Read More"
                   },
                   {
                     "id": "2",
@@ -3351,7 +3364,8 @@
                     "date": "24 Sep, 2025",
                     "commentsCount": "2 Comments",
                     "title": "There have been significant modifications in family law.",
-                    "linkHref": "/blog/2"
+                    "linkHref": "/blog/2",
+                    "linkText": "Read More"
                   },
                   {
                     "id": "3",
@@ -3360,7 +3374,8 @@
                     "date": "26 Sep, 2025",
                     "commentsCount": "4 Comments",
                     "title": "It's crucial to be aware of the latest updates in family law.",
-                    "linkHref": "/blog/3"
+                    "linkHref": "/blog/3",
+                    "linkText": "Read More"
                   }
                 ]
               },

@@ -113,7 +113,7 @@ export function Pubsec({ data = defaultPublicationSectionData }: PubsecProps) {
                         href={item.link || "/publications"}
                         className="inline-flex items-center gap-2 text-[#D4A359] text-xs font-semibold uppercase tracking-wider group-hover:gap-3 transition-all hover:underline mt-auto"
                       >
-                        <span>Read More</span>
+                        <span>{item.linkText}</span>
                         <ArrowRight className="w-3.5 h-3.5" />
                       </Link>
                     </div>
