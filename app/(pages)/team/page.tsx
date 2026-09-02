@@ -1,7 +1,7 @@
 import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import Teamsec from "@/app/components/layout/team/teamsec";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { GlobalLawData } from "@/types/law";
 import Counting from "@/app/components/ui/counting";
@@ -12,10 +12,10 @@ export const metadata = {
 };
 
 export default function TeamPage() {
-  const data = resolvePageData('team');
   
-  const teamSubBannerData = data.PageBanner?.teamSubBanner;
-  const teamSectionData = data.Team?.teamSection;
+  
+  const teamSubBannerData = lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1?.teamSubBanner;
+  const teamSectionData = lawData.categories.Veritas.sections.Team?.variants?.VeritasTeam1?.teamSection;
 
   return (
     <main className="min-h-screen bg-[#0B0E14] text-white pb-12 sm:pb-16 lg:pb-20">

@@ -2,7 +2,7 @@ import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import Pubsec from "@/app/components/layout/publications/pubsec";
 import StayUpdated from "@/app/components/layout/publications/stayupdated";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { GlobalLawData } from "@/types/law";
 
@@ -12,11 +12,11 @@ export const metadata = {
 };
 
 export default function PublicationsPage() {
-  const data = resolvePageData('publications');
   
-  const publicationsSubBannerData = data.PageBanner?.publicationsSubBanner;
-  const publicationsSectionData = data.Publications?.publicationsSection;
-  const stayUpdatedData = data.StayUpdated?.stayUpdated;
+  
+  const publicationsSubBannerData = lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1?.publicationsSubBanner;
+  const publicationsSectionData = lawData.categories.Veritas.sections.Publications?.variants?.VeritasPublications1?.publicationsSection;
+  const stayUpdatedData = lawData.categories.Veritas.sections.StayUpdated?.variants?.VeritasStayUpdated1?.stayUpdated;
 
   return (
     <main className="min-h-screen bg-[#0B0E14] text-white pb-12 sm:pb-16 lg:pb-20">

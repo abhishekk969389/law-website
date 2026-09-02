@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { LegalSidebarData, GlobalLawData } from "@/types/law";
 import { FadeIn } from "@/app/components/ui/animations";
@@ -15,7 +15,7 @@ interface LegalSidebarProps {
 
 export function LegalSidebar({ currentId, sidebarData }: LegalSidebarProps) {
   const globalData = ({}) as unknown as GlobalLawData;
-  const defaultSidebar = getSectionData('LegalUpdates', 'VeritasLegalUpdates1')?.legalSidebar;
+  const defaultSidebar = lawData.categories.Veritas.sections.LegalUpdates?.variants?.VeritasLegalUpdates1?.legalSidebar;
 
   const data = sidebarData || defaultSidebar;
   const recentHeading = data?.recentHeading || "Recent Posts";

@@ -3,13 +3,13 @@
 import React from "react";
 import Image from "next/image";
 import { Scale } from "lucide-react";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { ClientSectionData, GlobalLawData } from "@/types/law";
 import { FadeIn } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultClientSectionData = getSectionData('ClientResource', 'VeritasClientResource1')?.clientSection;
+const defaultClientSectionData = lawData.categories.Veritas.sections.ClientResource?.variants?.VeritasClientResource1?.clientSection;
 
 export interface ClientsecProps {
   data?: ClientSectionData;

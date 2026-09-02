@@ -19,7 +19,7 @@ import {
   Rocket,
   LucideIcon,
 } from "lucide-react";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { IndustryDetailSidebarData, IndustryDetailItem, GlobalLawData } from "@/types/law";
 import { FadeIn } from "@/app/components/ui/animations";

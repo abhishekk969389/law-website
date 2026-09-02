@@ -5,12 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight, Scale, Car, Shield, FileText, ArrowRight, LucideIcon } from "lucide-react";
 import { ServicesData, GlobalLawData } from "@/types/law";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultServicesData: ServicesData = getSectionData('Services', 'VeritasServices1')?.services;
+const defaultServicesData: ServicesData = lawData.categories.Veritas.sections.Services?.variants?.VeritasServices1?.services;
 
 interface ServicesProps {
   data?: ServicesData;

@@ -3,13 +3,13 @@
 import React from "react";
 import Link from "next/link";
 import { Headphones, ArrowRight } from "lucide-react";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { OfficeCtaData, GlobalLawData } from "@/types/law";
 import { FadeIn } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultOfficeCtaData = getSectionData('Offices', 'VeritasOffices1')?.officeCta;
+const defaultOfficeCtaData = lawData.categories.Veritas.sections.Offices?.variants?.VeritasOffices1?.officeCta;
 
 export interface OfficectaProps {
   data?: OfficeCtaData;

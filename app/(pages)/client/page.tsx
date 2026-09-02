@@ -2,7 +2,7 @@ import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import Clientsec from "@/app/components/layout/client/clientsec";
 import Clientcard from "@/app/components/layout/client/clientcard";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { GlobalLawData } from "@/types/law";
 
@@ -12,11 +12,11 @@ export const metadata = {
 };
 
 export default function ClientPage() {
-  const data = resolvePageData('home');
   
-  const clientSubBannerData = data.PageBanner?.clientSubBanner;
-  const clientSectionData = data.ClientResource?.clientSection;
-  const clientCardsData = data.ClientResource?.clientCards;
+  
+  const clientSubBannerData = lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1?.clientSubBanner;
+  const clientSectionData = lawData.categories.Veritas.sections.ClientResource?.variants?.VeritasClientResource1?.clientSection;
+  const clientCardsData = lawData.categories.Veritas.sections.ClientResource?.variants?.VeritasClientResource1?.clientCards;
 
   return (
     <main className="min-h-screen bg-[#0B0E14] text-white pb-12 sm:pb-16 lg:pb-20">

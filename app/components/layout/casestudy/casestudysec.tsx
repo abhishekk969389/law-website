@@ -4,13 +4,13 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Folder, ArrowUpRight, ArrowRight } from "lucide-react";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { CaseStudySectionData, GlobalLawData } from "@/types/law";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultCaseStudySectionData = getSectionData('CaseStudy', 'VeritasCaseStudy1')?.caseStudySection;
+const defaultCaseStudySectionData = lawData.categories.Veritas.sections.CaseStudy?.variants?.VeritasCaseStudy1?.caseStudySection;
 
 export interface CasestudysecProps {
   data?: CaseStudySectionData;

@@ -1,6 +1,6 @@
 import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { GlobalLawData } from "@/types/law";
 import Testimonials from "@/app/components/homelayout/testinomials";
@@ -11,9 +11,9 @@ export const metadata = {
 };
 
 export default function TestimonialPage() {
-  const data = resolvePageData('home');
   
-  const testimonialSubBannerData = data.PageBanner?.testimonialSubBanner;
+  
+  const testimonialSubBannerData = lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1?.testimonialSubBanner;
 
   return (
     <main className="min-h-screen bg-[#0B0E14] text-white pb-12 sm:pb-16 lg:pb-20">

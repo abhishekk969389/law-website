@@ -5,13 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { PenTool, User, Calendar, MessageSquare, ArrowRight } from "lucide-react";
 import Pagination from "@/app/components/ui/pagination";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { BlogSectionData, GlobalLawData } from "@/types/law";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultBlogSectionData = getSectionData('Blog', 'VeritasBlog1')?.blogSection;
+const defaultBlogSectionData = lawData.categories.Veritas.sections.Blog?.variants?.VeritasBlog1?.blogSection;
 
 export interface BlogsecProps {
   data?: BlogSectionData;

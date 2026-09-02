@@ -1,7 +1,7 @@
 import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import Blogsec from "@/app/components/layout/blog/blogsec";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { GlobalLawData } from "@/types/law";
 
@@ -11,10 +11,10 @@ export const metadata = {
 };
 
 export default function BlogPage() {
-  const data = resolvePageData('blogs');
   
-  const blogSubBannerData = data.PageBanner?.blogSubBanner;
-  const blogSectionData = data.Blog?.blogSection;
+  
+  const blogSubBannerData = lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1?.blogSubBanner;
+  const blogSectionData = lawData.categories.Veritas.sections.Blog?.variants?.VeritasBlog1?.blogSection;
 
   return (
     <main className="min-h-screen bg-[#0C191B] text-white pb-12 sm:pb-16 lg:pb-20">

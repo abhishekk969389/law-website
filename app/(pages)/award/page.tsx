@@ -1,7 +1,7 @@
 import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import Awardsec from "@/app/components/layout/award/awardsec";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { GlobalLawData } from "@/types/law";
 
@@ -11,10 +11,10 @@ export const metadata = {
 };
 
 export default function AwardPage() {
-  const data = resolvePageData('home');
   
-  const awardSubBannerData = data.PageBanner?.awardSubBanner;
-  const awardSectionData = data.AwardsRecognition?.awardSection;
+  
+  const awardSubBannerData = lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1?.awardSubBanner;
+  const awardSectionData = lawData.categories.Veritas.sections.AwardsRecognition?.variants?.VeritasAwardsRecognition1?.awardSection;
 
   return (
     <main className="min-h-screen bg-[#0B0E14] text-white pb-12 sm:pb-16 lg:pb-20">

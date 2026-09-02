@@ -3,7 +3,7 @@ import SubBanner from "@/app/components/ui/subbanner";
 import CareerHeader from "@/app/components/layout/careerdetails/careerheader";
 import CareerContent from "@/app/components/layout/careerdetails/careercontent";
 import CareerSidebar from "@/app/components/layout/careerdetails/careersidebar";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { GlobalLawData, CareerDetailItem } from "@/types/law";
 import { notFound } from "next/navigation";
@@ -11,7 +11,7 @@ import { Metadata } from "next";
 
 function getCareerByIdOrSlug(id: string): CareerDetailItem | undefined {
   const globalData = ({}) as unknown as GlobalLawData;
-  const careers = (getSectionData('JobDetail', 'VeritasJobDetail1')?.careerDetails || []) as CareerDetailItem[] | undefined;
+  const careers = (lawData.categories.Veritas.sections.JobDetail?.variants?.VeritasJobDetail1?.careerDetails || []) as CareerDetailItem[] | undefined;
 
   if (!id || !careers || !Array.isArray(careers)) return undefined;
   const cleanId = id.trim().toLowerCase();
@@ -25,7 +25,7 @@ function getCareerByIdOrSlug(id: string): CareerDetailItem | undefined {
 
 function getAllCareerIds(): string[] {
   const globalData = ({}) as unknown as GlobalLawData;
-  const careers = (getSectionData('JobDetail', 'VeritasJobDetail1')?.careerDetails || []) as CareerDetailItem[] | undefined;
+  const careers = (lawData.categories.Veritas.sections.JobDetail?.variants?.VeritasJobDetail1?.careerDetails || []) as CareerDetailItem[] | undefined;
 
   if (!careers || !Array.isArray(careers)) return [];
 
@@ -69,7 +69,7 @@ export default async function CareerDetailsPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  const data = resolvePageData('careers-detail');
+  
   const resolvedParams = await params;
   const career = getCareerByIdOrSlug(resolvedParams.id);
 
@@ -78,7 +78,7 @@ export default async function CareerDetailsPage({
   }
 
   const globalData = ({}) as unknown as GlobalLawData;
-  const baseSubBanner = data.PageBanner?.careerSubBanner || data.SubBanner?.subBanner;
+  const baseSubBanner = lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1?.careerSubBanner;
 
   // Max 3 words for banner title
   const words = career.title ? career.title.trim().split(/\s+/) : [];

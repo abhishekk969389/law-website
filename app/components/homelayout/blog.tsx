@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { PenTool, User, Calendar, MessageSquare, ArrowRight } from "lucide-react";
 import { BlogData, GlobalLawData } from "@/types/law";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 const globalData = ({}) as unknown as GlobalLawData;
 
 export default function Blog({ data }: { data?: any }) {
-  const blogSection = data || getSectionData('Blog', 'VeritasBlog1')?.blogSection || getSectionData('Blog', 'VeritasBlog1')?.blog;
+  const blogSection = data || lawData.categories.Veritas.sections.Blog?.variants?.VeritasBlog1?.blogSection || lawData.categories.Veritas.sections.Blog?.variants?.VeritasBlog1?.blog;
   if (!blogSection) return null;
 
   const {

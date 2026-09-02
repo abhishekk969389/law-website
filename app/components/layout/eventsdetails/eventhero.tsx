@@ -87,21 +87,25 @@ export function EventHero({ event }: EventHeroProps) {
             {/* Meta Details List Card matching screenshot */}
             <div className="rounded-2xl bg-[#070B12]/80 border border-slate-800/80 p-5 sm:p-6 space-y-4 mb-6 text-sm">
               {/* 1. Date & Time */}
-              <div className="flex items-start gap-3 sm:gap-4">
-                <Calendar className="w-5 h-5 text-[#D4A359] shrink-0 mt-0.5" />
-                <span className="text-slate-300 font-medium w-28 sm:w-32 shrink-0">
-                  {event.labels?.dateTime || ""}
-                </span>
-                <span className="text-slate-200 font-normal flex-1">{event.dateTime}</span>
+              <div className="flex flex-col sm:flex-row items-start gap-1 sm:gap-4">
+                <div className="flex items-center gap-2.5 sm:gap-4 sm:w-36 shrink-0">
+                  <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4A359] shrink-0" />
+                  <span className="text-slate-300 font-medium text-xs sm:text-sm">
+                    {event.labels?.dateTime || ""}
+                  </span>
+                </div>
+                <span className="text-slate-200 font-normal flex-1 pl-6 sm:pl-0 text-sm">{event.dateTime}</span>
               </div>
 
               {/* 2. Venue */}
-              <div className="flex items-start gap-3 sm:gap-4">
-                <MapPin className="w-5 h-5 text-[#D4A359] shrink-0 mt-0.5" />
-                <span className="text-slate-300 font-medium w-28 sm:w-32 shrink-0">
-                  {event.labels?.venue || "Venue"}
-                </span>
-                <div className="flex-1">
+              <div className="flex flex-col sm:flex-row items-start gap-1 sm:gap-4">
+                <div className="flex items-center gap-2.5 sm:gap-4 sm:w-36 shrink-0">
+                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4A359] shrink-0" />
+                  <span className="text-slate-300 font-medium text-xs sm:text-sm">
+                    {event.labels?.venue || "Venue"}
+                  </span>
+                </div>
+                <div className="flex-1 pl-6 sm:pl-0 text-sm">
                   <span className="text-slate-200 font-normal">{event.venue}</span>
                   {event.venueAddress && (
                     <div className="text-slate-400 text-xs sm:text-sm font-light mt-0.5">
@@ -112,24 +116,28 @@ export function EventHero({ event }: EventHeroProps) {
               </div>
 
               {/* 3. Organizer */}
-              <div className="flex items-start gap-3 sm:gap-4">
-                <User className="w-5 h-5 text-[#D4A359] shrink-0 mt-0.5" />
-                <span className="text-slate-300 font-medium w-28 sm:w-32 shrink-0">
-                  {event.labels?.organizer || ""}
-                </span>
-                <span className="text-slate-200 font-normal flex-1">{event.organizer}</span>
+              <div className="flex flex-col sm:flex-row items-start gap-1 sm:gap-4">
+                <div className="flex items-center gap-2.5 sm:gap-4 sm:w-36 shrink-0">
+                  <User className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4A359] shrink-0" />
+                  <span className="text-slate-300 font-medium text-xs sm:text-sm">
+                    {event.labels?.organizer || ""}
+                  </span>
+                </div>
+                <span className="text-slate-200 font-normal flex-1 pl-6 sm:pl-0 text-sm">{event.organizer}</span>
               </div>
 
               {/* 4. Ticket Price */}
-              <div className="flex items-center gap-3 sm:gap-4">
-                <Ticket className="w-5 h-5 text-[#D4A359] shrink-0" />
-                <span className="text-slate-300 font-medium w-28 sm:w-32 shrink-0">
-                  {event.labels?.ticketPrice || "Ticket Price"}
-                </span>
-                <div className="flex-1 flex items-center gap-2.5 flex-wrap">
+              <div className="flex flex-col sm:flex-row items-start gap-1 sm:gap-4">
+                <div className="flex items-center gap-2.5 sm:gap-4 sm:w-36 shrink-0">
+                  <Ticket className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4A359] shrink-0" />
+                  <span className="text-slate-300 font-medium text-xs sm:text-sm">
+                    {event.labels?.ticketPrice || "Ticket Price"}
+                  </span>
+                </div>
+                <div className="flex-1 flex items-center gap-2.5 flex-wrap pl-6 sm:pl-0 text-sm">
                   <span className="text-slate-200 font-normal">{event.ticketPrice}</span>
                   {event.priceBadge && (
-                    <span className="border border-[#D4A359]/70 text-[#D4A359] text-xs font-normal px-2.5 py-0.5 rounded-md bg-[#D4A359]/5">
+                    <span className="border border-[#D4A359]/70 text-[#D4A359] text-[10px] sm:text-xs font-normal px-2 py-0.5 rounded-md bg-[#D4A359]/5">
                       {event.priceBadge}
                     </span>
                   )}
@@ -137,21 +145,25 @@ export function EventHero({ event }: EventHeroProps) {
               </div>
 
               {/* 5. Event Type */}
-              <div className="flex items-center gap-3 sm:gap-4">
-                <Globe className="w-5 h-5 text-[#D4A359] shrink-0" />
-                <span className="text-slate-300 font-medium w-28 sm:w-32 shrink-0">
-                  {event.labels?.eventType || "Event Type"}
-                </span>
-                <span className="text-slate-200 font-normal flex-1">{event.eventType}</span>
+              <div className="flex flex-col sm:flex-row items-start gap-1 sm:gap-4">
+                <div className="flex items-center gap-2.5 sm:gap-4 sm:w-36 shrink-0">
+                  <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4A359] shrink-0" />
+                  <span className="text-slate-300 font-medium text-xs sm:text-sm">
+                    {event.labels?.eventType || "Event Type"}
+                  </span>
+                </div>
+                <span className="text-slate-200 font-normal flex-1 pl-6 sm:pl-0 text-sm">{event.eventType}</span>
               </div>
 
               {/* 6. Language */}
-              <div className="flex items-center gap-3 sm:gap-4">
-                <Languages className="w-5 h-5 text-[#D4A359] shrink-0" />
-                <span className="text-slate-300 font-medium w-28 sm:w-32 shrink-0">
-                  {event.labels?.language || "Language"}
-                </span>
-                <span className="text-slate-200 font-normal flex-1">{event.language}</span>
+              <div className="flex flex-col sm:flex-row items-start gap-1 sm:gap-4">
+                <div className="flex items-center gap-2.5 sm:gap-4 sm:w-36 shrink-0">
+                  <Languages className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4A359] shrink-0" />
+                  <span className="text-slate-300 font-medium text-xs sm:text-sm">
+                    {event.labels?.language || "Language"}
+                  </span>
+                </div>
+                <span className="text-slate-200 font-normal flex-1 pl-6 sm:pl-0 text-sm">{event.language}</span>
               </div>
             </div>
           </div>
@@ -162,7 +174,7 @@ export function EventHero({ event }: EventHeroProps) {
             {event.registerText && (
               <Link
                 href={event.registerLink || "/contactus"}
-                className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md bg-gradient-to-r from-[#D4A359] to-[#E3C280] text-[#0A0E17] font-semibold text-sm hover:opacity-95 transition-all shadow-lg hover:scale-[1.02] active:scale-[0.98]"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md bg-gradient-to-r from-[#D4A359] to-[#E3C280] text-[#0A0E17] font-semibold text-sm hover:opacity-95 transition-all shadow-lg hover:scale-[1.02] active:scale-[0.98]"
               >
                 <span>{event.registerText}</span>
                 <ChevronRight className="w-4 h-4" />
@@ -173,7 +185,7 @@ export function EventHero({ event }: EventHeroProps) {
             {event.calendarText && (
               <button
                 onClick={handleAddToCalendar}
-                className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-5 py-3 rounded-md border border-slate-700 hover:border-[#D4A359] bg-[#0A0E17]/80 hover:bg-[#0A0E17] text-white font-medium text-sm transition-all shadow-md"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-md border border-slate-700 hover:border-[#D4A359] bg-[#0A0E17]/80 hover:bg-[#0A0E17] text-white font-medium text-sm transition-all shadow-md"
               >
                 <span>{event.calendarText}</span>
                 <CalendarPlus className="w-4 h-4 text-[#D4A359]" />

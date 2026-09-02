@@ -3,12 +3,12 @@
 import React from "react";
 import { Scale, Briefcase, Users, Award, ShieldCheck, LucideIcon } from "lucide-react";
 import { CountingItem, GlobalLawData } from "@/types/law";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultCountingData: CountingItem[] = getSectionData('Counting', 'VeritasCounting1')?.counting || [];
+const defaultCountingData: CountingItem[] = lawData.categories.Veritas.sections.Counting?.variants?.VeritasCounting1?.counting || [];
 
 interface CountingProps {
   data?: CountingItem[];

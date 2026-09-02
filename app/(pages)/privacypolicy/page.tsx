@@ -1,7 +1,7 @@
 import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import Section from "@/app/components/layout/privacypolicy/section";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { GlobalLawData } from "@/types/law";
 
@@ -11,10 +11,10 @@ export const metadata = {
 };
 
 export default function PrivacyPolicyPage() {
-  const data = resolvePageData('privacy-policy');
   
-  const privacyPolicySubBannerData = data.PageBanner?.privacyPolicySubBanner;
-  const privacyPolicySectionData = data.PrivacyPolicy?.privacyPolicySection;
+  
+  const privacyPolicySubBannerData = lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1?.privacyPolicySubBanner;
+  const privacyPolicySectionData = lawData.categories.Veritas.sections.PrivacyPolicy?.variants?.VeritasPrivacyPolicy1?.privacyPolicySection;
 
   return (
     <main className="min-h-screen bg-[#0B0E14] text-white pb-12 sm:pb-16 lg:pb-20">

@@ -2,7 +2,7 @@ import SubBanner from "@/app/components/ui/subbanner";
 import PublicationHero from "@/app/components/layout/publicationsdetails/publicationhero";
 import PublicationContent from "@/app/components/layout/publicationsdetails/publicationcontent";
 import PublicationSidebar from "@/app/components/layout/publicationsdetails/publicationsidebar";
-import { getSectionData, getDetailItem, resolvePageData, getAllItems } from "@/app/lib/getSiteData";
+import lawData from "@/app/data/lawData-restructured.json";
 
 import { GlobalLawData, PublicationDetailItem } from "@/types/law";
 import { notFound } from "next/navigation";
@@ -10,7 +10,7 @@ import { Metadata } from "next";
 
 function getPublicationByIdOrSlug(id: string): PublicationDetailItem | undefined {
   const globalData = ({}) as unknown as GlobalLawData;
-  const publications = (getSectionData('PublicationDetail', 'VeritasPublicationDetail1')?.publicationDetails || []) as PublicationDetailItem[] | undefined;
+  const publications = (lawData.categories.Veritas.sections.PublicationDetail?.variants?.VeritasPublicationDetail1?.publicationDetails || []) as PublicationDetailItem[] | undefined;
 
   if (!id || !publications || !Array.isArray(publications)) return undefined;
   const cleanId = id.trim().toLowerCase();
@@ -24,7 +24,7 @@ function getPublicationByIdOrSlug(id: string): PublicationDetailItem | undefined
 
 function getAllPublicationIds(): string[] {
   const globalData = ({}) as unknown as GlobalLawData;
-  const publications = (getSectionData('PublicationDetail', 'VeritasPublicationDetail1')?.publicationDetails || []) as PublicationDetailItem[] | undefined;
+  const publications = (lawData.categories.Veritas.sections.PublicationDetail?.variants?.VeritasPublicationDetail1?.publicationDetails || []) as PublicationDetailItem[] | undefined;
 
   if (!publications || !Array.isArray(publications)) return [];
 
@@ -68,7 +68,7 @@ export default async function PublicationDetailsPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  const data = resolvePageData('publications-detail');
+  
   const resolvedParams = await params;
   const publication = getPublicationByIdOrSlug(resolvedParams.id);
 
@@ -77,7 +77,7 @@ export default async function PublicationDetailsPage({
   }
 
   const globalData = ({}) as unknown as GlobalLawData;
-  const baseSubBanner = data.PageBanner?.publicationsSubBanner || data.SubBanner?.subBanner;
+  const baseSubBanner = lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1?.publicationsSubBanner;
 
   // Max 3 words for banner title
   const words = publication.title ? publication.title.trim().split(/\s+/) : [];
@@ -96,7 +96,7 @@ export default async function PublicationDetailsPage({
     backgroundImage: baseSubBanner?.backgroundImage || "/subbanner.svg",
   };
 
-  const sidebarData = publication.sidebarData || data.Publications?.publicationSidebar;
+  const sidebarData = publication.sidebarData || lawData.categories.Veritas.sections.Publications?.variants?.VeritasPublications1?.publicationSidebar;
 
   return (
     <main className="min-h-screen bg-[#0B0E14] text-white">
