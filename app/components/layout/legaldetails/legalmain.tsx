@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { Calendar, ShieldCheck, FileText, Users, Award, Scale, BookOpen, CheckCircle2, LucideIcon } from "lucide-react";
-import { LegalDetailItem } from "@/types/law";
+import { LegalDetailItem } from "@/app/data";
 import { FadeIn } from "@/app/components/ui/animations";
 
 interface LegalMainProps {
@@ -72,7 +72,7 @@ export function LegalMain({ article }: LegalMainProps) {
             {article.introHeading || "Introduction"}
           </h2>
           <div className="space-y-3.5">
-            {article.introParagraphs.map((p, idx) => (
+            {article.introParagraphs.map((p: any, idx: any) => (
               <p
                 key={idx}
                 className="text-slate-300 text-sm sm:text-base leading-relaxed font-light"
@@ -92,7 +92,7 @@ export function LegalMain({ article }: LegalMainProps) {
           </h2>
 
           <div className="space-y-4 sm:space-y-5">
-            {article.highlights.map((item, idx) => {
+            {article.highlights.map((item: any, idx: any) => {
               const IconComponent = (item.icon && iconMap[item.icon]) || BookOpen;
 
               return (
@@ -128,7 +128,7 @@ export function LegalMain({ article }: LegalMainProps) {
             {article.conclusionHeading || "What This Means for Your Business"}
           </h2>
           <div className="space-y-3.5">
-            {article.conclusionParagraphs.map((p, idx) => (
+            {article.conclusionParagraphs.map((p: any, idx: any) => (
               <p
                 key={idx}
                 className="text-slate-300 text-sm sm:text-base leading-relaxed font-light"

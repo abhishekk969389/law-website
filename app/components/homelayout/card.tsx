@@ -2,7 +2,7 @@
 
 import React from "react";
 import { UserCheck, ShieldCheck, Gavel, Landmark, LucideIcon } from "lucide-react";
-import { FeatureItem, GlobalLawData } from "@/types/law";
+import { FeatureItem, GlobalLawData } from "@/app/data";
 import lawData from "@/app/data/lawData-restructured.json";
 
 import { StaggerContainer, StaggerItem, FadeIn } from "@/app/components/ui/animations";

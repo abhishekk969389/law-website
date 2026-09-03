@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { ShieldCheck, User, Gavel, Lock, Users, LucideIcon } from "lucide-react";
-import { AboutData, GlobalLawData } from "@/types/law";
+import { AboutData, GlobalLawData } from "@/app/data";
 import lawData from "@/app/data/lawData-restructured.json";
 
 import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from "@/app/components/ui/animations";
@@ -169,7 +169,7 @@ export default function About({ data = defaultAboutData }: AboutProps) {
 
                         {/* 4 Feature Items Grid */}
                         <StaggerContainer staggerChildren={0.12} delayChildren={0.45} className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 relative">
-                            {foundation.items.map((item, idx) => {
+                            {foundation.items.map((item: any, idx: any) => {
                                 const IconComp = foundationIconMap[item.icon.toLowerCase()] || ShieldCheck;
 
                                 return (

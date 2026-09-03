@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { ProvenApproachData, GlobalLawData } from "@/types/law";
+import { ProvenApproachData, GlobalLawData } from "@/app/data";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
@@ -37,10 +37,10 @@ export function Proven({ data = defaultProvenData }: ProvenProps) {
     const { tagline, steps, bottomBanner } = data;
 
     return (
-        <section className="relative w-full bg-[#08171B] text-white  mt-8 sm:mt-10 md:mt-12 lg:mt-14 pb-16  select-none px-4 sm:px-6 lg:px-8">
+        <section className="relative max-w-[1400px] mx-auto w-full bg-[#08171B] text-white  mt-8 sm:mt-10 md:mt-12 lg:mt-14 pb-16  select-none px-4 sm:px-6 lg:px-8">
 
             {/* Outer Card Container with Gold/Slate Border Accent */}
-            <FadeIn direction="up" delay={0.1} className="max-w-[1400px] mx-auto rounded-3xl border border-[#D4A359]/35 bg-[#0A1C20]/90 px-6 sm:px-8 lg:px-12 pt-8 sm:pt-10 lg:pt-12 pb-4 sm:pb-6 shadow-2xl relative">
+            <FadeIn direction="up" delay={0.1} className="rounded-3xl border border-[#D4A359]/35 bg-[#0A1C20]/90 px-6 sm:px-8 lg:px-12 pt-8 sm:pt-10 lg:pt-12 pb-4 sm:pb-6 shadow-2xl relative">
 
                 {/* Top Tagline Header embedded directly on top border line */}
                 <div className="absolute -top-3 sm:-top-3.5 left-1/2 -translate-x-1/2 bg-[#08171B] py-1 px-4 sm:px-6 flex items-center gap-3 sm:gap-4 z-20">
@@ -54,7 +54,7 @@ export function Proven({ data = defaultProvenData }: ProvenProps) {
                 {/* 5 Process Steps Grid */}
                 <StaggerContainer staggerChildren={0.1} delayChildren={0.2} className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-0 divide-y sm:divide-y-0 lg:divide-x divide-slate-800/80">
                     {steps &&
-                        steps.map((step) => {
+                        steps.map((step: any) => {
                             const IconComponent = iconMap[step.icon] || Users;
 
                             return (

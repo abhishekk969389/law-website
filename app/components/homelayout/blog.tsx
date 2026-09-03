@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PenTool, User, Calendar, MessageSquare, ArrowRight } from "lucide-react";
-import { BlogData, GlobalLawData } from "@/types/law";
+import { BlogData, GlobalLawData } from "@/app/data";
 import lawData from "@/app/data/lawData-restructured.json";
 
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";

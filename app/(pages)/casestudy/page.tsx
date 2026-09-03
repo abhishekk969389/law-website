@@ -1,14 +1,7 @@
-import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import Casestudysec from "@/app/components/layout/casestudy/casestudysec";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { GlobalLawData } from "@/types/law";
-
-export const metadata = {
-  title: "Case Studies | Veritas Law Partners",
-  description: "Explore our recent case studies, legal victories, and client success stories.",
-};
 
 export default function CaseStudyPage() {
   

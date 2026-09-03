@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { Calendar } from "lucide-react";
-import { BlogDetailItem } from "@/types/law";
+import { BlogDetailItem } from "@/app/data";
 import { FadeIn } from "@/app/components/ui/animations";
 
 interface BlogMainProps {
@@ -53,7 +53,7 @@ export function BlogMain({ blog }: BlogMainProps) {
       {/* 4. Paragraphs 1 */}
       {blog.paragraphs1 && blog.paragraphs1.length > 0 && (
         <FadeIn direction="up" delay={0.25} duration={0.6} className="space-y-4 mb-6">
-          {blog.paragraphs1.map((p, idx) => (
+          {blog.paragraphs1.map((p: any, idx: any) => (
             <p
               key={idx}
               className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-light"
@@ -80,7 +80,7 @@ export function BlogMain({ blog }: BlogMainProps) {
       {/* 6. Paragraphs 2 */}
       {blog.paragraphs2 && blog.paragraphs2.length > 0 && (
         <FadeIn direction="up" delay={0.35} duration={0.6} className="space-y-4 mb-8">
-          {blog.paragraphs2.map((p, idx) => (
+          {blog.paragraphs2.map((p: any, idx: any) => (
             <p
               key={idx}
               className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-light"
@@ -99,7 +99,7 @@ export function BlogMain({ blog }: BlogMainProps) {
           </h2>
           {blog.subheadingParagraphs && blog.subheadingParagraphs.length > 0 && (
             <div className="space-y-4">
-              {blog.subheadingParagraphs.map((p, idx) => (
+              {blog.subheadingParagraphs.map((p: any, idx: any) => (
                 <p
                   key={idx}
                   className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-light"

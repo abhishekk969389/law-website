@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { IndustryDetailSidebarData, IndustryDetailItem, GlobalLawData } from "@/types/law";
+import { IndustryDetailSidebarData, IndustryDetailItem, GlobalLawData } from "@/app/data";
 import { FadeIn } from "@/app/components/ui/animations";
 
 const iconMap: Record<string, LucideIcon> = {
@@ -43,16 +43,16 @@ export interface IndustrySidebarProps {
   sidebarData?: IndustryDetailSidebarData;
 }
 
-const globalSidebar = (({}) as unknown as GlobalLawData).industrySidebar;
+const globalSidebar = (({}) as any).industrySidebar;
 
 export function IndustrySidebar({
   currentId,
   allIndustries = [],
   sidebarData,
 }: IndustrySidebarProps) {
-  const industriesTitle = sidebarData?.industriesTitle || globalSidebar?.industriesTitle || "Industries";
-  const getInTouchTitle = sidebarData?.getInTouchTitle || globalSidebar?.getInTouchTitle || "Get in Touch";
-  const insightsTitle = sidebarData?.insightsTitle || globalSidebar?.insightsTitle || "Related Insights";
+  const industriesTitle = (sidebarData as any)?.industriesTitle || globalSidebar?.industriesTitle || "Industries";
+  const getInTouchTitle = (sidebarData as any)?.getInTouchTitle || globalSidebar?.getInTouchTitle || "Get in Touch";
+  const insightsTitle = (sidebarData as any)?.insightsTitle || globalSidebar?.insightsTitle || "Related Insights";
 
   const getInTouch = sidebarData?.getInTouch || globalSidebar?.getInTouch;
   const insights = sidebarData?.insights || globalSidebar?.insights;
@@ -143,7 +143,7 @@ export function IndustrySidebar({
           </h3>
 
           <div className="divide-y divide-slate-800/60 space-y-4 pt-1">
-            {insights.map((insight) => (
+            {insights.map((insight: any) => (
               <Link
                 key={insight.id}
                 href={insight.linkHref || "/blog"}

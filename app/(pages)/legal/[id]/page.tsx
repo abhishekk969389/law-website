@@ -1,10 +1,9 @@
-import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import LegalMain from "@/app/components/layout/legaldetails/legalmain";
 import LegalSidebar from "@/app/components/layout/legaldetails/legalsidebar";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { GlobalLawData, LegalDetailItem } from "@/types/law";
+import { GlobalLawData, LegalDetailItem } from "@/app/data";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
@@ -83,7 +82,7 @@ export default async function LegalDetailsPage({
   const baseSubBanner = lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1?.legalSubBanner;
 
   const words = (article.title || "").trim().split(/\s+/);
-  const shortTitle = article.bannerTitle || article.shortTitle || (words.length > 3 ? words.slice(0, 3).join(" ") : article.title);
+  const shortTitle = (article as any).bannerTitle || (article as any).shortTitle || (words.length > 3 ? words.slice(0, 3).join(" ") : article.title);
 
   const subBannerData = {
     title: shortTitle,
@@ -107,7 +106,7 @@ export default async function LegalDetailsPage({
             <div className="lg:col-span-4">
               <LegalSidebar
                 currentId={article.id}
-                sidebarData={article.sidebarData}
+                sidebarData={(article as any).sidebarData}
               />
             </div>
           </div>

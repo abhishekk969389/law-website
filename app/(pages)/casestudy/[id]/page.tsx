@@ -4,7 +4,7 @@ import CaseStudyMain from "@/app/components/layout/casestudydetails/casestudymai
 import CaseStudySidebar from "@/app/components/layout/casestudydetails/casestudysidebar";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { GlobalLawData, CaseStudyDetailItem } from "@/types/law";
+import { GlobalLawData, CaseStudyDetailItem } from "@/app/data";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
@@ -111,7 +111,7 @@ export default async function CaseStudyDetailsPage({
               <CaseStudySidebar
                 currentId={caseStudy.id}
                 allCaseStudies={allCaseStudies}
-                sidebarData={caseStudy.sidebarData}
+                sidebarData={(caseStudy as any).sidebarData}
               />
             </div>
           </div>

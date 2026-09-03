@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
-import { BannerData, GlobalLawData } from '@/types/law';
+import { BannerData, GlobalLawData } from "@/app/data";
 import lawData from "@/app/data/lawData-restructured.json";
 
 import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from '@/app/components/ui/animations';
@@ -66,7 +66,7 @@ export default function Banner({ data = defaultBannerData }: BannerProps) {
 
           {/* Buttons */}
           <StaggerContainer delayChildren={0.45} staggerChildren={0.15} className="flex flex-col sm:flex-row gap-3.5 sm:gap-4 mb-10">
-            {data.buttons.map((button, index) => (
+            {data.buttons.map((button: any, index: any) => (
               <StaggerItem key={index}>
                 <a
                   href={button.href}
@@ -87,7 +87,7 @@ export default function Banner({ data = defaultBannerData }: BannerProps) {
 
           {/* Stats */}
           <StaggerContainer delayChildren={0.6} staggerChildren={0.1} className="flex items-center divide-x divide-gray-700">
-            {data.stats.map((stat, index) => (
+            {data.stats.map((stat: any, index: any) => (
               <StaggerItem key={index} className="px-3 sm:px-6 first:pl-0 flex flex-col justify-center">
                 <span className="text-[#D4A359] text-xl sm:text-3xl mb-1">
                   {stat.value}

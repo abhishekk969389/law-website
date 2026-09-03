@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { Calendar, Folder } from "lucide-react";
-import { PublicationDetailItem } from "@/types/law";
+import { PublicationDetailItem } from "@/app/data";
 import { FadeIn } from "@/app/components/ui/animations";
 
 interface PublicationHeroProps {

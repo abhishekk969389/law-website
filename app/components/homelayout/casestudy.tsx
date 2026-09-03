@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight, ArrowUpRight, ArrowRight, Folder } from "lucide-react";
-import { CaseStudyData, GlobalLawData } from "@/types/law";
+import { CaseStudyData, GlobalLawData } from "@/app/data";
 import lawData from "@/app/data/lawData-restructured.json";
 
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
@@ -166,7 +166,7 @@ export default function CaseStudy({ data = defaultCaseStudyData }: CaseStudyProp
 
                 {/* Carousel Pagination Dots */}
                 <div className="flex items-center justify-center gap-2.5 mt-10">
-                    {items.map((_, idx) => (
+                    {items.map((_: any, idx: any) => (
                         <button
                             key={idx}
                             onClick={() => setCurrentIndex(idx)}

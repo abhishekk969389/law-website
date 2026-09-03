@@ -10,7 +10,7 @@ import {
   Mail,
   Printer,
 } from "lucide-react";
-import { TeamDetailItem } from "@/types/law";
+import { TeamDetailItem } from "@/app/data";
 import { FadeIn } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
@@ -31,8 +31,7 @@ export function TeamDetailsSec({ member }: TeamDetailsSecProps) {
   } = member;
 
   return (
-    <section className="relative w-full bg-[#0B0E14] text-white mt-6 sm:mt-10 md:mt-12 lg:mt-14 select-none px-4 sm:px-6 lg:px-8 pb-12">
-      <div className="max-w-[1400px] mx-auto">
+    <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-6 sm:mt-10 md:mt-12 lg:mt-14 select-none px-4 sm:px-6 lg:px-8 pb-12">
 
         {/* TOP MAIN HERO CARD (MATCHING USER SCREENSHOT EXACTLY) */}
         <FadeIn direction="up" delay={0.1}>
@@ -206,8 +205,6 @@ export function TeamDetailsSec({ member }: TeamDetailsSecProps) {
             </div>
           </div>
         </FadeIn>
-
-      </div>
     </section>
   );
 }

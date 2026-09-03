@@ -14,7 +14,7 @@ import {
   Lightbulb,
   LucideIcon,
 } from "lucide-react";
-import { PublicationDetailItem } from "@/types/law";
+import { PublicationDetailItem } from "@/app/data";
 import { FadeIn } from "@/app/components/ui/animations";
 
 interface PublicationContentProps {
@@ -37,7 +37,7 @@ const iconMap: Record<string, LucideIcon> = {
 export function PublicationContent({ publication }: PublicationContentProps) {
   if (!publication) return null;
 
-  const introParagraphs = publication.introductionParagraphs || 
+  const introParagraphs = (publication as any).introductionParagraphs || 
     (publication.introductionText ? publication.introductionText.split("\n\n") : []);
 
   const CalloutIcon = (publication.callout?.icon && iconMap[publication.callout.icon]) || Lightbulb;
@@ -52,7 +52,7 @@ export function PublicationContent({ publication }: PublicationContentProps) {
             {publication.introductionHeading || "Introduction"}
           </h2>
           <div className="space-y-3">
-            {introParagraphs.map((para, idx) => (
+            {introParagraphs.map((para: any, idx: any) => (
               <p
                 key={idx}
                 className="text-slate-300 text-xs sm:text-sm md:text-base leading-relaxed font-light"
@@ -72,7 +72,7 @@ export function PublicationContent({ publication }: PublicationContentProps) {
           </h2>
 
           <div className="space-y-5">
-            {publication.highlights.map((item, idx) => {
+            {publication.highlights.map((item: any, idx: any) => {
               const IconComp = (item.icon && iconMap[item.icon]) || Users;
 
               return (

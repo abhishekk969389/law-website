@@ -1,10 +1,9 @@
-import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import IndustryMain from "@/app/components/layout/industrydetails/industrymain";
 import IndustrySidebar from "@/app/components/layout/industrydetails/industrysidebar";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { GlobalLawData, IndustryDetailItem } from "@/types/law";
+import { GlobalLawData, IndustryDetailItem } from "@/app/data";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 

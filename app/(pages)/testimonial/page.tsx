@@ -1,14 +1,6 @@
-import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import lawData from "@/app/data/lawData-restructured.json";
-
-import { GlobalLawData } from "@/types/law";
 import Testimonials from "@/app/components/homelayout/testinomials";
-
-export const metadata = {
-  title: "Testimonials | Veritas Law Partners",
-  description: "Read what our clients say about our legal services.",
-};
 
 export default function TestimonialPage() {
   

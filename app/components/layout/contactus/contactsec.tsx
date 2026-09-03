@@ -4,7 +4,7 @@ import React from "react";
 import { MapPin, Clock, Phone, Mail } from "lucide-react";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { ContactSectionData, GlobalLawData } from "@/types/law";
+import { ContactSectionData, GlobalLawData } from "@/app/data";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
@@ -20,8 +20,8 @@ export function Contactsec({ data = defaultContactSectionData }: ContactsecProps
   const { tagline, heading, visitUs, officeHours, contactInfo } = data;
 
   return (
-    <section className="relative w-full bg-[#0B0E14] text-white  mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      <div className="max-w-[1400px] mx-auto">
+    <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white  mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
+  
         
         {/* Centered Section Header matching site typography standard */}
         <FadeIn direction="up" delay={0.1} className="text-center max-w-3xl mx-auto mb-8">
@@ -77,7 +77,7 @@ export function Contactsec({ data = defaultContactSectionData }: ContactsecProps
               {/* Address Lines */}
               <div className="space-y-1 text-slate-300 text-sm sm:text-base leading-relaxed">
                 {visitUs?.addressLines &&
-                  visitUs.addressLines.map((line, idx) => (
+                  visitUs.addressLines.map((line: any, idx: any) => (
                     <p key={idx}>{line}</p>
                   ))}
               </div>
@@ -112,7 +112,7 @@ export function Contactsec({ data = defaultContactSectionData }: ContactsecProps
               {/* Hours Items */}
               <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed w-full">
                 {officeHours?.items &&
-                  officeHours.items.map((item, idx) => (
+                  officeHours.items.map((item: any, idx: any) => (
                     <div key={idx}>
                       <p className="text-slate-400 text-xs sm:text-sm font-medium">{item.days}</p>
                       <p className={item.isClosed ? "text-[#D4A359] font-medium" : "text-white font-medium"}>
@@ -151,7 +151,7 @@ export function Contactsec({ data = defaultContactSectionData }: ContactsecProps
 
               <div className="space-y-1 text-slate-300 text-sm sm:text-base mb-6">
                 {contactInfo?.phones &&
-                  contactInfo.phones.map((phone, idx) => (
+                  contactInfo.phones.map((phone: any, idx: any) => (
                     <a
                       key={idx}
                       href={`tel:${phone.replace(/\s+/g, "")}`}
@@ -176,7 +176,7 @@ export function Contactsec({ data = defaultContactSectionData }: ContactsecProps
 
                 <div className="space-y-1 text-slate-300 text-sm sm:text-base">
                   {contactInfo?.emails &&
-                    contactInfo.emails.map((email, idx) => (
+                    contactInfo.emails.map((email: any, idx: any) => (
                       <a
                         key={idx}
                         href={`mailto:${email}`}
@@ -192,8 +192,6 @@ export function Contactsec({ data = defaultContactSectionData }: ContactsecProps
           </StaggerItem>
 
         </StaggerContainer>
-
-      </div>
     </section>
   );
 }

@@ -1,15 +1,8 @@
-import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import Pubsec from "@/app/components/layout/publications/pubsec";
 import StayUpdated from "@/app/components/layout/publications/stayupdated";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { GlobalLawData } from "@/types/law";
-
-export const metadata = {
-  title: "Publications | Veritas Law Partners",
-  description: "Explore our research papers, legal articles, and published books.",
-};
 
 export default function PublicationsPage() {
   

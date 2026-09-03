@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { ServiceSectionData, GlobalLawData } from "@/types/law";
+import { ServiceSectionData, GlobalLawData } from "@/app/data";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
@@ -42,8 +42,8 @@ export function Servicesec({ data = defaultServiceSectionData }: ServicesecProps
   const { tagline, heading, description, items } = data;
 
   return (
-    <section className="relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      <div className="max-w-[1400px] mx-auto">
+    <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
+
         
         {/* Top Centered Header */}
         <FadeIn direction="up" delay={0.1} className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
@@ -77,7 +77,7 @@ export function Servicesec({ data = defaultServiceSectionData }: ServicesecProps
         {/* 8 Cards Grid (4 columns on lg screens) */}
         <StaggerContainer staggerChildren={0.1} delayChildren={0.2} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {items &&
-            items.map((item) => {
+            items.map((item: any) => {
               const IconComponent = iconMap[item.icon] || Scale;
 
               return (
@@ -140,7 +140,6 @@ export function Servicesec({ data = defaultServiceSectionData }: ServicesecProps
               );
             })}
         </StaggerContainer>
-      </div>
     </section>
   );
 }

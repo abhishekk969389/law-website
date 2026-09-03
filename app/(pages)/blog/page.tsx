@@ -3,12 +3,6 @@ import SubBanner from "@/app/components/ui/subbanner";
 import Blogsec from "@/app/components/layout/blog/blogsec";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { GlobalLawData } from "@/types/law";
-
-export const metadata = {
-  title: "Blog & News | Veritas Law Partners",
-  description: "Read our latest legal insights, articles, and firm updates.",
-};
 
 export default function BlogPage() {
   

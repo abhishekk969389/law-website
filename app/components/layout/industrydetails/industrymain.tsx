@@ -23,7 +23,7 @@ import {
   CheckCircle2,
   LucideIcon,
 } from "lucide-react";
-import { IndustryDetailItem } from "@/types/law";
+import { IndustryDetailItem } from "@/app/data";
 import { FadeIn } from "@/app/components/ui/animations";
 
 const iconMap: Record<string, LucideIcon> = {
@@ -114,7 +114,7 @@ export function IndustryMain({ industry }: IndustryMainProps) {
             {industry.servicesHeading || "Our Services"}
           </h2>
           <div className="divide-y divide-slate-800/60">
-            {industry.services.map((service) => {
+            {industry.services.map((service: any) => {
               const ServiceIcon = (service.icon && iconMap[service.icon]) || FileText;
 
               return (
@@ -149,7 +149,7 @@ export function IndustryMain({ industry }: IndustryMainProps) {
             {industry.challengesHeading || "Key Challenges We Address"}
           </h2>
           <ul className="space-y-3.5">
-            {industry.challenges.map((challenge, idx) => (
+            {industry.challenges.map((challenge: any, idx: any) => (
               <li key={idx} className="flex items-start gap-3 text-slate-300 text-sm sm:text-base">
                 <CheckCircle2 className="w-5 h-5 text-[#D4A359] shrink-0 mt-0.5" />
                 <span className="leading-snug">{challenge}</span>
@@ -166,7 +166,7 @@ export function IndustryMain({ industry }: IndustryMainProps) {
             {industry.whyChooseHeading || "Why Choose Us"}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
-            {industry.whyChooseUs.map((item) => {
+            {industry.whyChooseUs.map((item: any) => {
               const WhyIcon = (item.icon && iconMap[item.icon]) || Briefcase;
 
               return (

@@ -4,7 +4,7 @@ import React from "react";
 import lawData from "@/app/data/lawData-restructured.json";
 
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
-import { TopbarData, GlobalLawData } from "@/types/law";
+import { TopbarData, GlobalLawData } from "@/app/data";
 
 // Global data fallback from lawData.json
 const defaultTopbarData: TopbarData = lawData.categories.Veritas.sections.Topbar?.variants?.VeritasTopbar1?.topbar;
@@ -66,7 +66,7 @@ export function Topbar({ data = defaultTopbarData }: TopbarProps) {
                     {/* Social Links */}
                     {socialLinks && socialLinks.length > 0 && (
                         <div className="flex items-center gap-5 text-white font-bold">
-                            {socialLinks.map((link, index) => {
+                            {socialLinks.map((link: any, index: any) => {
                                 const platformLower = link.platform.toLowerCase();
                                 return (
                                     <a

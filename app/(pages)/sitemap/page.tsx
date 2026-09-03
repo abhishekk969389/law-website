@@ -1,14 +1,7 @@
-import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import Sitemapsec from "@/app/components/layout/sitemap/sitemapsec";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { GlobalLawData } from "@/types/law";
-
-export const metadata = {
-  title: "Sitemap | Veritas Law Partners",
-  description: "Overview and quick navigation to all practice areas, services, and pages across Veritas Law Partners website.",
-};
 
 export default function SitemapPage() {
   

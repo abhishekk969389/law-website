@@ -25,7 +25,7 @@ import {
   Briefcase,
   LucideIcon,
 } from "lucide-react";
-import { ServiceDetailItem } from "@/types/law";
+import { ServiceDetailItem } from "@/app/data";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
@@ -87,8 +87,7 @@ export function ServiceDetailsSec({ service }: ServiceDetailsSecProps) {
   };
 
   return (
-    <section className="relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 select-none px-4 sm:px-6 lg:px-8">
-      <div className="max-w-[1400px] mx-auto">
+    <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 select-none px-4 sm:px-6 lg:px-8">
         {/* Main Grid: Left Column (Main Content) & Right Column (Sidebar) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
 
@@ -132,7 +131,7 @@ export function ServiceDetailsSec({ service }: ServiceDetailsSecProps) {
                     {/* 3 Highlights Badges Row */}
                     {highlights && highlights.length > 0 && (
                       <div className="grid grid-cols-3 gap-2 sm:gap-4 border-t border-slate-800/80 pt-6 mt-2">
-                        {highlights.map((item, idx) => {
+                        {highlights.map((item: any, idx: any) => {
                           const HighlightIcon = iconMap[item.icon] || ShieldCheck;
                           return (
                             <div
@@ -190,7 +189,7 @@ export function ServiceDetailsSec({ service }: ServiceDetailsSecProps) {
                 {/* 4 Process Cards Grid */}
                 {about.processes && about.processes.length > 0 && (
                   <StaggerContainer staggerChildren={0.1} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 pt-4">
-                    {about.processes.map((proc) => {
+                    {about.processes.map((proc: any) => {
                       const ProcIcon = iconMap[proc.icon] || Search;
                       return (
                         <StaggerItem key={proc.id}>
@@ -242,7 +241,7 @@ export function ServiceDetailsSec({ service }: ServiceDetailsSecProps) {
 
                         {approach.benefits && approach.benefits.length > 0 && (
                           <ul className="space-y-2.5 pt-2">
-                            {approach.benefits.map((benefit, idx) => (
+                            {approach.benefits.map((benefit: any, idx: any) => (
                               <li key={idx} className="flex items-center gap-3 text-xs sm:text-sm text-slate-200">
                                 <div className="w-6 h-6 rounded-full border border-[#D99A28] flex items-center justify-center shrink-0">
                                   <Check className="w-4 h-4 text-[#D99A28]" />
@@ -405,7 +404,6 @@ export function ServiceDetailsSec({ service }: ServiceDetailsSecProps) {
           </div>
 
         </div>
-      </div>
     </section>
   );
 }

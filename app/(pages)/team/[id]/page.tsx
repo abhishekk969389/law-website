@@ -1,11 +1,10 @@
-import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import TeamDetailsSec from "@/app/components/layout/teamdetails/teamdetailssec";
 import TeamAbout from "@/app/components/layout/teamdetails/teamabout";
 import Activity from "@/app/components/layout/teamdetails/activity";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { GlobalLawData, TeamDetailItem } from "@/types/law";
+import { GlobalLawData, TeamDetailItem } from "@/app/data";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 

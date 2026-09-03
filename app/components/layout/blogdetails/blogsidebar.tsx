@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Calendar, PhoneCall } from "lucide-react";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { BlogSidebarData, GlobalLawData } from "@/types/law";
+import { BlogSidebarData, GlobalLawData } from "@/app/data";
 import { FadeIn } from "@/app/components/ui/animations";
 
 interface BlogSidebarProps {

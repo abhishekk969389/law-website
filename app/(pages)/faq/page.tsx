@@ -1,14 +1,6 @@
-import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import lawData from "@/app/data/lawData-restructured.json";
-
-import { GlobalLawData } from "@/types/law";
 import Faq from "@/app/components/homelayout/faq";
-
-export const metadata = {
-  title: "Frequently Asked Questions | Veritas Law Partners",
-  description: "Find answers to frequently asked legal questions.",
-};
 
 export default function FaqPage() {
   

@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { ApproachData, GlobalLawData } from "@/types/law";
+import { ApproachData, GlobalLawData } from "@/app/data";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
@@ -119,7 +119,7 @@ export function ApproachSec({ data = defaultApproachData }: ApproachSecProps) {
                         {/* 4 Feature Columns Row */}
                         <StaggerContainer staggerChildren={0.1} delayChildren={0.35} className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-5 pt-5 border-t border-slate-800/80">
                             {items &&
-                                items.map((item) => {
+                                items.map((item: any) => {
                                     const IconComponent = iconMap[item.icon] || Target;
 
                                     return (

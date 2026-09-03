@@ -1,15 +1,8 @@
-import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import Careersec from "@/app/components/layout/career/careersec";
 import Careercta from "@/app/components/layout/career/careercta";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { GlobalLawData } from "@/types/law";
-
-export const metadata = {
-  title: "Careers | Veritas Law Partners",
-  description: "Explore career opportunities and join our legal team.",
-};
 
 export default function CareerPage() {
   

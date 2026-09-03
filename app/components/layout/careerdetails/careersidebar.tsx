@@ -14,7 +14,7 @@ import {
   CheckCircle,
   LucideIcon,
 } from "lucide-react";
-import { CareerDetailItem, CareerSidebarData } from "@/types/law";
+import { CareerDetailItem, CareerSidebarData } from "@/app/data";
 import { FadeIn } from "@/app/components/ui/animations";
 
 interface CareerSidebarProps {
@@ -79,7 +79,7 @@ export function CareerSidebar({ career, sidebarData }: CareerSidebarProps) {
         </h3>
 
         <div className="space-y-4">
-          {overviewFields.map((field, idx) => {
+          {overviewFields.map((field: any, idx: any) => {
             const IconComp = (field.icon && overviewIconMap[field.icon]) || Briefcase;
 
             return (

@@ -1,14 +1,7 @@
-import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import Section from "@/app/components/layout/legaldisclimer/section";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { GlobalLawData } from "@/types/law";
-
-export const metadata = {
-  title: "Legal Disclaimer | Veritas Law Partners",
-  description: "Read our official legal disclaimer and regulatory compliance disclosures.",
-};
 
 export default function LegalDisclaimerPage() {
   

@@ -1,19 +1,11 @@
-import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import Officesec from "@/app/components/layout/office/officesec";
 import Locationcard from "@/app/components/layout/office/locationcard";
 import Officecta from "@/app/components/layout/office/officecta";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { GlobalLawData } from "@/types/law";
-
-export const metadata = {
-  title: "Our Offices | Veritas Law Partners",
-  description: "Find our office locations and contact details across India.",
-};
 
 export default function OfficePage() {
-  
   
   const officeSubBannerData = lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1?.officeSubBanner;
   const officeSectionData = lawData.categories.Veritas.sections.Offices?.variants?.VeritasOffices1?.officeSection;

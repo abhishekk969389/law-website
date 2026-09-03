@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { PublicationRecentPost, PublicationSidebarData } from "@/types/law";
+import { PublicationRecentPost, PublicationSidebarData } from "@/app/data";
 import { FadeIn } from "@/app/components/ui/animations";
 
 interface PublicationSidebarProps {
@@ -30,7 +30,7 @@ export function PublicationSidebar({
 
         {/* Post Items */}
         <div className="divide-y divide-slate-800/60 space-y-4 pt-1">
-          {recentPosts.map((post) => {
+          {recentPosts.map((post: any) => {
             const slug = post.slug || post.id;
             const isActive =
               currentId?.toLowerCase() === post.id.toLowerCase() ||

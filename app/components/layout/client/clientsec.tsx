@@ -5,24 +5,24 @@ import Image from "next/image";
 import { Scale } from "lucide-react";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { ClientSectionData, GlobalLawData } from "@/types/law";
+import { GlobalLawData } from "@/app/data";
 import { FadeIn } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultClientSectionData = lawData.categories.Veritas.sections.ClientResource?.variants?.VeritasClientResource1?.clientSection;
+const defaultany = lawData.categories.Veritas.sections.ClientResource?.variants?.VeritasClientResource1?.clientSection;
 
 export interface ClientsecProps {
-  data?: ClientSectionData;
+  data?: any;
 }
 
-export function Clientsec({ data = defaultClientSectionData }: ClientsecProps) {
+export function Clientsec({ data = defaultany }: ClientsecProps) {
   if (!data) return null;
 
   const { title, subheading, image } = data;
 
   return (
-    <section className="relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      <div className="max-w-[1400px] mx-auto">
+    <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
+  
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* Left Text Column matching reference screenshot */}
@@ -60,7 +60,6 @@ export function Clientsec({ data = defaultClientSectionData }: ClientsecProps) {
           </FadeIn>
 
         </div>
-      </div>
     </section>
   );
 }

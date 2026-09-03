@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { SitemapSectionData, GlobalLawData } from "@/types/law";
+import { SitemapSectionData, GlobalLawData } from "@/app/data";
 
 const defaultSitemapSectionData = lawData.categories.Veritas.sections.Sitemap?.variants?.VeritasSitemap1?.sitemapSection;
 
@@ -52,9 +52,8 @@ export function Sitemapsec({ data = defaultSitemapSectionData }: SitemapsecProps
   };
 
   return (
-    <section className="relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      <div className="max-w-[1400px] mx-auto">
-        
+    <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
+      
         {/* Header Tagline & Main Heading */}
         <div className="text-center max-w-3xl mx-auto mb-8">
           <div className="flex items-center justify-center gap-3 mb-3">
@@ -77,7 +76,7 @@ export function Sitemapsec({ data = defaultSitemapSectionData }: SitemapsecProps
         {/* 8 Category Cards Grid with Top Floating Overlapping Badge */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-14 sm:gap-y-16 mt-12 sm:mt-16">
           {categories &&
-            categories.map((card) => (
+            categories.map((card: any) => (
               <div
                 key={card.id}
                 className="group relative rounded-[22px] border border-slate-800/80 bg-[#070A11] p-6 sm:p-7 pb-8 text-center hover:border-[#D4A359]/50 transition-all duration-300 shadow-xl flex flex-col items-center hover:translate-y-[-4px]"
@@ -98,7 +97,7 @@ export function Sitemapsec({ data = defaultSitemapSectionData }: SitemapsecProps
                 {/* Bulleted Links List */}
                 <ul className="space-y-3.5 text-left w-full pl-1 sm:pl-2">
                   {card.links &&
-                    card.links.map((link) => (
+                    card.links.map((link: any) => (
                       <li key={link.id}>
                         <Link
                           href={link.href}
@@ -113,8 +112,6 @@ export function Sitemapsec({ data = defaultSitemapSectionData }: SitemapsecProps
               </div>
             ))}
         </div>
-
-      </div>
     </section>
   );
 }

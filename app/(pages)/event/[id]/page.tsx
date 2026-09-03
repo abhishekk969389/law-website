@@ -1,10 +1,9 @@
-import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import EventHero from "@/app/components/layout/eventsdetails/eventhero";
 import EventContent from "@/app/components/layout/eventsdetails/eventcontent";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { GlobalLawData, EventDetailItem } from "@/types/law";
+import { GlobalLawData, EventDetailItem } from "@/app/data";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
@@ -98,12 +97,9 @@ export default async function EventDetailsPage({
   return (
     <main className="min-h-screen bg-[#0B0E14] text-white">
       <SubBanner data={subBannerData} />
-      <section className="relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 mb-12 md:mb-17 lg:mb-20 select-none px-4 sm:px-6 lg:px-8">
-        <div className="max-w-[1400px] mx-auto space-y-8 sm:space-y-10">
-          {/* 1. Top Hero Card with Register Modal */}
+      <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 mb-12 md:mb-17 lg:mb-20 select-none px-4 sm:px-6 lg:px-8">
+        <div className=" space-y-8 sm:space-y-10">
           <EventHero event={event} />
-
-          {/* 2. Unified Event Sections & FAQs Card */}
           <EventContent event={event} />
         </div>
       </section>
