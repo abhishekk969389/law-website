@@ -61,17 +61,17 @@ export default function About({ data = defaultAboutData }: AboutProps) {
                                     {heading.line2}{" "}
                                     <span className="text-[#D4A359] italic font-serif">{heading.highlight}</span>
                                 </span>
-                            </h2>
+                               </h2>
                         </div>
                     </FadeIn>
 
                     {/* Top Right: Seal Badge & Description */}
                     <FadeIn direction="left" delay={0.2} className="flex items-center gap-6 lg:gap-8 max-w-lg shrink-0">
-                        {/* Circular Seal Stamp Image with subtle spin effect */}
+                        {/* Circular Seal Stamp Image with subtle scale effect on hover */}
                         <motion.div
-                            whileHover={{ rotate: 360 }}
-                            transition={{ duration: 10, ease: "linear", repeat: Infinity }}
-                            className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 shrink-0 flex items-center justify-center cursor-pointer"
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ duration: 0.3 }}
+                            className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 shrink-0 flex items-center justify-center cursor-pointer -translate-x-3 sm:-translate-x-5"
                         >
                             <Image
                                 src={seal.badgeImage || "/seal-badge.svg"}
@@ -84,14 +84,14 @@ export default function About({ data = defaultAboutData }: AboutProps) {
                         </motion.div>
 
                         {/* Vertical Divider */}
-                        <div className="h-24 w-[1px] bg-slate-800 shrink-0" />
+                        <div className="h-24 w-[1px] bg-slate-800 shrink-0 -translate-x-1.5 sm:-translate-x-2.5" />
 
                         {/* Seal Description Text with Golden Underline */}
                         <div>
-                            <p className="text-slate-200 text-sm md:text-[16px] leading-relaxed max-w-[280px]">
+                            <p className="text-slate-100 text-base sm:text-lg md:text-[19px] lg:text-[20px] font-normal leading-relaxed max-w-[340px]">
                                 {seal.description}
                             </p>
-                            <div className="w-10 h-[2px] bg-[#D4A359] mt-3" />
+                            <div className="w-14 h-[2px] bg-[#D4A359] mt-3.5" />
                         </div>
                     </FadeIn>
 

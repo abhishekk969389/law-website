@@ -11,33 +11,54 @@
     <path id="sealTopArc" d="M 28, 100 A 72,72 0 0,1 172, 100" fill="none" />
     <!-- Bottom Text Arc Path -->
     <path id="sealBottomArc" d="M 172, 100 A 72,72 0 0,1 28, 100" fill="none" />
+
+    <style>
+      @keyframes spinSealRing {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .seal-rotating-ring {
+        transform-origin: 100px 100px;
+        animation: spinSealRing 20s linear infinite;
+      }
+    </style>
   </defs>
 
-  <!-- Outer Solid Golden Circle Ring -->
-  <circle cx="100" cy="100" r="92" fill="none" stroke="url(#sealGoldGrad)" stroke-width="2" />
+  <!-- Outer Rotating Ring Group (Circles + Arched Text rotate continuously) -->
+  <g class="seal-rotating-ring">
+    <!-- Outer Solid Golden Circle Ring -->
+    <circle cx="100" cy="100" r="92" fill="none" stroke="url(#sealGoldGrad)" stroke-width="2" />
 
-  <!-- Inner Dotted Golden Circle Ring -->
-  <circle cx="100" cy="100" r="82" fill="none" stroke="url(#sealGoldGrad)" stroke-width="1.2" stroke-dasharray="3,4" stroke-opacity="0.85" />
+    <!-- Inner Dotted Golden Circle Ring -->
+    <circle cx="100" cy="100" r="82" fill="none" stroke="url(#sealGoldGrad)" stroke-width="1.2" stroke-dasharray="3,4" stroke-opacity="0.85" />
 
-  <!-- Top Arched Text -->
-  <text font-family="'Cinzel', 'Playfair Display', serif, sans-serif" font-size="14.5px" font-weight="700" letter-spacing="4px" fill="url(#sealGoldGrad)">
-    <textPath href="#sealTopArc" startOffset="50%" text-anchor="middle">
-      VERITAS LAW GROUP
-    </textPath>
-  </text>
+    <!-- Top Arched Text -->
+    <text font-family="'Cinzel', 'Playfair Display', serif, sans-serif" font-size="14.5px" font-weight="700" letter-spacing="4px" fill="url(#sealGoldGrad)">
+      <textPath href="#sealTopArc" startOffset="50%" text-anchor="middle">
+        VERITAS LAW GROUP
+      </textPath>
+    </text>
 
-  <!-- Bottom Arched Text -->
-  <text font-family="'Inter', sans-serif" font-size="12px" font-weight="600" letter-spacing="3.5px" fill="url(#sealGoldGrad)">
-    <textPath href="#sealBottomArc" startOffset="50%" text-anchor="middle">
-      DEDICATION • TRUST • RESULTS
-    </textPath>
-  </text>
+    <!-- Bottom Arched Text -->
+    <text font-family="'Inter', sans-serif" font-size="12px" font-weight="600" letter-spacing="3.5px" fill="url(#sealGoldGrad)">
+      <textPath href="#sealBottomArc" startOffset="50%" text-anchor="middle">
+        DEDICATION • TRUST • RESULTS
+      </textPath>
+    </text>
+  </g>
 
-  <!-- Center Golden Shield Emblem -->
-  <path d="M 100, 62 L 124, 73 C 124, 102 100, 122 100, 122 C 100, 122 76, 102 76, 73 Z" fill="none" stroke="url(#sealGoldGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Center Static Group (Shield + 'V.' does NOT rotate) -->
+  <g>
+    <!-- Center Golden Shield Emblem -->
+    <path d="M 100, 62 L 124, 73 C 124, 102 100, 122 100, 122 C 100, 122 76, 102 76, 73 Z" fill="none" stroke="url(#sealGoldGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
 
-  <!-- Center Letter 'V.' inside Shield -->
-  <text x="100" y="99" text-anchor="middle" dominant-baseline="central" font-family="'Cinzel', 'Playfair Display', 'Georgia', serif" font-size="24px" font-weight="bold" fill="url(#sealGoldGrad)">
-    V.
-  </text>
+    <!-- Center Letter 'V.' inside Shield -->
+    <text x="100" y="99" text-anchor="middle" dominant-baseline="central" font-family="'Cinzel', 'Playfair Display', 'Georgia', serif" font-size="24px" font-weight="bold" fill="url(#sealGoldGrad)">
+      V.
+    </text>
+  </g>
 </svg>

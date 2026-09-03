@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronLeft, ChevronRight, ArrowUpRight, ArrowRight, Folder } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Folder } from "lucide-react";
 import { CaseStudyData, GlobalLawData } from "@/app/data";
 import lawData from "@/app/data/lawData-restructured.json";
 
@@ -84,7 +84,7 @@ export default function CaseStudy({ data = defaultCaseStudyData }: CaseStudyProp
                             aria-label="Previous Case Study"
                             className="w-12 h-12 rounded-full border border-white/15 bg-white/5 hover:bg-[#D4A359] hover:text-[#0B0E14] hover:border-[#D4A359] flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm cursor-pointer"
                         >
-                            <ChevronLeft className="w-5 h-5" />
+                            <ArrowLeft className="w-5 h-5" />
                         </motion.button>
                         <motion.button
                             whileHover={{ scale: 1.1 }}
@@ -93,7 +93,7 @@ export default function CaseStudy({ data = defaultCaseStudyData }: CaseStudyProp
                             aria-label="Next Case Study"
                             className="w-12 h-12 rounded-full border border-white/15 bg-white/5 hover:bg-[#D4A359] hover:text-[#0B0E14] hover:border-[#D4A359] flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm cursor-pointer"
                         >
-                            <ChevronRight className="w-5 h-5" />
+                            <ArrowRight className="w-5 h-5" />
                         </motion.button>
                     </FadeIn>
                 </div>

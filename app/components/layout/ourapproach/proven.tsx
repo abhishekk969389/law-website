@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import {
     Users,
     Search,
@@ -37,10 +36,10 @@ export function Proven({ data = defaultProvenData }: ProvenProps) {
     const { tagline, steps, bottomBanner } = data;
 
     return (
-        <section className="relative max-w-[1400px] mx-auto w-full bg-[#08171B] text-white  mt-8 sm:mt-10 md:mt-12 lg:mt-14 pb-16  select-none px-4 sm:px-6 lg:px-8">
+        <section className="relative max-w-[1400px] mx-auto  w-full bg-[#08171B] text-white  mt-8 sm:mt-10 md:mt-12 lg:mt-14 pb-16  select-none px-4 sm:px-6 lg:px-8">
 
             {/* Outer Card Container with Gold/Slate Border Accent */}
-            <FadeIn direction="up" delay={0.1} className="rounded-3xl border border-[#D4A359]/35 bg-[#0A1C20]/90 px-6 sm:px-8 lg:px-12 pt-8 sm:pt-10 lg:pt-12 pb-4 sm:pb-6 shadow-2xl relative">
+            <FadeIn direction="up" delay={0.1} className="rounded-3xl border border-[#D4A359]/35 bg-[#08171B] px-6 sm:px-8 lg:px-12 pt-8 sm:pt-10 lg:pt-12 pb-4 sm:pb-6 shadow-2xl relative">
 
                 {/* Top Tagline Header embedded directly on top border line */}
                 <div className="absolute -top-3 sm:-top-3.5 left-1/2 -translate-x-1/2 bg-[#08171B] py-1 px-4 sm:px-6 flex items-center gap-3 sm:gap-4 z-20">
@@ -91,25 +90,25 @@ export function Proven({ data = defaultProvenData }: ProvenProps) {
                         })}
                 </StaggerContainer>
 
-                {/* Bottom Consultation Box (Overlapping Bottom Border Line: Reduced Space Above) */}
+
                 {bottomBanner && (
                     <FadeIn direction="up" delay={0.3} className="-mb-16 sm:-mb-18 lg:-mb-20 translate-y-3 sm:translate-y-4 relative z-20 mt-4 sm:mt-5 rounded-2xl border border-[#D4A359]/35 bg-[#061418] p-5 sm:p-6 lg:p-7 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
 
                         {/* Left Side: Courthouse Icon & Message */}
-                        <div className="flex items-center gap-4 text-left">
-                            <div className="w-12 h-12 rounded-full border border-[#D4A359]/60 bg-[#D4A359]/10 flex items-center justify-center p-2.5 text-[#D4A359] shrink-0">
-                                <Landmark className="w-5 h-5" />
+                        <div className="flex items-center gap-4 mx-12 text-left">
+                            <div className="w-16 h-16 rounded-full border border-[#D4A359]/60 bg-[#D4A359]/10 flex items-center justify-center p-2.5 text-[#D4A359] shrink-0">
+                                <Landmark className="w-8 h-8" />
                             </div>
                             <p className="text-slate-300 text-sm md:text-base font-serif leading-relaxed max-w-2xl">
                                 {bottomBanner.text}
                             </p>
                         </div>
 
-                        {/* Middle Vertical Divider (Desktop) */}
+
                         <div className="hidden md:block h-12 w-[1px] bg-slate-800 shrink-0 mx-2" />
 
-                        {/* Right Side: Phone Call Badge & Number */}
-                        <div className="flex items-center gap-4 shrink-0">
+
+                        <div className="flex items-center mx-12 gap-4 shrink-0">
                             <div className="w-12 h-12 rounded-full border border-[#D4A359]/60 bg-[#D4A359]/10 flex items-center justify-center p-2.5 text-[#D4A359] shrink-0">
                                 <Phone className="w-5 h-5" />
                             </div>
@@ -119,7 +118,7 @@ export function Proven({ data = defaultProvenData }: ProvenProps) {
                                 </span>
                                 <a
                                     href={bottomBanner.phoneHref || `tel:${bottomBanner.phoneNumber}`}
-                                    className="font-serif text-lg sm:text-xl lg:text-2xl font-bold text-white hover:text-[#D4A359] transition-colors whitespace-nowrap"
+                                    className="text-lg sm:text-xl lg:text-2xl font-bold text-white hover:text-[#D4A359] transition-colors whitespace-nowrap"
                                 >
                                     {bottomBanner.phoneNumber}
                                 </a>

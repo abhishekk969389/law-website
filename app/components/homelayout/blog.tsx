@@ -123,7 +123,7 @@ export default function Blog({ data }: { data?: any }) {
           <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }}>
             <Link
               href={buttonHref}
-              className="inline-flex items-center gap-3 px-8 py-3.5 rounded-xl border border-white/15 bg-white/5 hover:bg-[#D4A359] hover:text-[#0B0E14] hover:border-[#D4A359] text-white text-sm font-medium transition-all duration-300 backdrop-blur-sm group/btn"
+              className="inline-flex items-center gap-3 px-8 py-3.5 rounded-md border border-white/15 bg-white/5 hover:bg-[#D4A359] hover:text-[#0B0E14] hover:border-[#D4A359] text-white text-sm font-medium transition-all duration-300 backdrop-blur-sm group/btn"
             >
               <span>{buttonText}</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />

@@ -12,7 +12,6 @@ export default function OurApproachPage() {
   const provenApproachData = lawData.categories.Veritas.sections.OurApproach?.variants?.VeritasOurApproach1?.provenApproach;
 
   return (
-    //main section //
     <main className="min-h-screen bg-[#08171B] text-white pb-12 sm:pb-16 lg:pb-20">
       <SubBanner data={ourApproachSubBannerData} />
       <ApproachSec data={ourApproachSectionData} />

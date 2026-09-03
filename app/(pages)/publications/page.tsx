@@ -12,7 +12,6 @@ export default function PublicationsPage() {
   const stayUpdatedData = lawData.categories.Veritas.sections.StayUpdated?.variants?.VeritasStayUpdated1?.stayUpdated;
 
   return (
-    //main section //
     <main className="min-h-screen bg-[#0B0E14] text-white pb-12 sm:pb-16 lg:pb-20">
       <SubBanner data={publicationsSubBannerData} />
       <Pubsec data={publicationsSectionData} />

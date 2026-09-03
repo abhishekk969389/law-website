@@ -8,7 +8,6 @@ export default function TestimonialPage() {
   const testimonialSubBannerData = lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1?.testimonialSubBanner;
 
   return (
-    //main section //
     <main className="min-h-screen bg-[#0B0E14] text-white pb-12 sm:pb-16 lg:pb-20">
       <SubBanner data={testimonialSubBannerData} />
       <Testimonials/>

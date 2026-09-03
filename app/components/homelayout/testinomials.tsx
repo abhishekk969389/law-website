@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight, Star, Scale } from "lucide-react";
+import { ArrowLeft, ArrowRight, Star, Scale } from "lucide-react";
 import { TestimonialsData, GlobalLawData } from "@/app/data";
 import lawData from "@/app/data/lawData-restructured.json";
 
@@ -99,7 +99,7 @@ export default function Testimonials({ data = defaultTestimonialsData }: Testimo
                         </FadeIn>
 
                         {/* Testimonial Quote Box with Animated Transitions */}
-                        <FadeIn direction="up" delay={0.3} className="relative bg-[#0E131D]/90 border border-white/10 rounded-3xl p-6 sm:p-8 lg:p-10 backdrop-blur-md shadow-2xl overflow-hidden">
+                        <FadeIn direction="up" delay={0.3} className="relative pt-2 pb-4 overflow-hidden">
 
                             {/* Giant Faint Background Double Quote Marks Watermark */}
                             <div className="absolute left-[28%] top-1/2 -translate-y-1/2 flex gap-4 text-white/[0.05] font-serif text-[180px] sm:text-[220px] lg:text-[260px] leading-none select-none pointer-events-none z-0">
@@ -138,7 +138,7 @@ export default function Testimonials({ data = defaultTestimonialsData }: Testimo
                                     className="relative z-10"
                                 >
                                     {/* Quote Text */}
-                                    <p className="text-gray-200 text-sm sm:text-base lg:text-[17px] font-light leading-relaxed mb-8 max-w-xl">
+                                    <p className="text-gray-200 text-justify text-sm sm:text-base lg:text-[17px] font-light leading-relaxed mb-8 w-full">
                                         "{currentItem.quote}"
                                     </p>
 
@@ -146,8 +146,8 @@ export default function Testimonials({ data = defaultTestimonialsData }: Testimo
                                     <div className="flex items-center justify-between gap-4 pt-2">
 
                                         {/* Author Info */}
-                                        <div className="flex items-center gap-4">
-                                            <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden border border-white/15 shrink-0 bg-gray-800 shadow-md">
+                                        <div className="flex items-center gap-4 sm:gap-5">
+                                            <div className="relative w-16 h-16 sm:w-20 sm:h-20 lg:w-[84px] lg:h-[84px] rounded-full overflow-hidden border border-white/15 shrink-0 bg-gray-800 shadow-lg">
                                                 <Image
                                                     src={currentItem.authorAvatar || "/service1.svg"}
                                                     alt={currentItem.authorName}
@@ -180,7 +180,7 @@ export default function Testimonials({ data = defaultTestimonialsData }: Testimo
                                                 aria-label="Previous Testimonial"
                                                 className="w-12 h-12 rounded-full border border-white/15 bg-white/5 hover:bg-[#D4A359] hover:text-[#0B0E14] hover:border-[#D4A359] flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm cursor-pointer"
                                             >
-                                                <ChevronLeft className="w-5 h-5" />
+                                                <ArrowLeft className="w-5 h-5" />
                                             </motion.button>
                                             <motion.button
                                                 whileHover={{ scale: 1.1 }}
@@ -189,7 +189,7 @@ export default function Testimonials({ data = defaultTestimonialsData }: Testimo
                                                 aria-label="Next Testimonial"
                                                 className="w-12 h-12 rounded-full border border-white/15 bg-white/5 hover:bg-[#D4A359] hover:text-[#0B0E14] hover:border-[#D4A359] flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm cursor-pointer"
                                             >
-                                                <ChevronRight className="w-5 h-5" />
+                                                <ArrowRight className="w-5 h-5" />
                                             </motion.button>
                                         </div>
 
@@ -207,7 +207,7 @@ export default function Testimonials({ data = defaultTestimonialsData }: Testimo
                                 aria-label="Previous Testimonial"
                                 className="w-12 h-12 rounded-full border border-white/15 bg-white/5 hover:bg-[#D4A359] hover:text-[#0B0E14] hover:border-[#D4A359] flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm cursor-pointer"
                             >
-                                <ChevronLeft className="w-5 h-5" />
+                                <ArrowLeft className="w-5 h-5" />
                             </motion.button>
                             <motion.button
                                 whileHover={{ scale: 1.1 }}
@@ -216,7 +216,7 @@ export default function Testimonials({ data = defaultTestimonialsData }: Testimo
                                 aria-label="Next Testimonial"
                                 className="w-12 h-12 rounded-full border border-white/15 bg-white/5 hover:bg-[#D4A359] hover:text-[#0B0E14] hover:border-[#D4A359] flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm cursor-pointer"
                             >
-                                <ChevronRight className="w-5 h-5" />
+                                <ArrowRight className="w-5 h-5" />
                             </motion.button>
                         </div>
 
