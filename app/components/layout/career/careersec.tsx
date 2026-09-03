@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { CareerSectionData, GlobalLawData } from "@/types/law";
+import { CareerSectionData, GlobalLawData } from "@/app/data";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
@@ -40,8 +40,8 @@ export function Careersec({ data = defaultCareerSectionData }: CareersecProps) {
   const { title, description, items } = data;
 
   return (
-    <section className="relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      <div className="max-w-[1400px] mx-auto">
+    <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
+  
         
         {/* Top Left Header Section matching site typography standard */}
         <FadeIn direction="up" delay={0.1} className="text-left max-w-3xl mb-4 sm:mb-5">
@@ -61,7 +61,7 @@ export function Careersec({ data = defaultCareerSectionData }: CareersecProps) {
         {/* 6 Job Position Cards Grid (3 columns on md/lg screens, 2 rows total) */}
         <StaggerContainer staggerChildren={0.1} delayChildren={0.2} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {items &&
-            items.map((item) => {
+            items.map((item: any) => {
               const IconComponent = iconMap[item.icon] || Scale;
 
               return (
@@ -124,8 +124,6 @@ export function Careersec({ data = defaultCareerSectionData }: CareersecProps) {
               );
             })}
         </StaggerContainer>
-
-      </div>
     </section>
   );
 }

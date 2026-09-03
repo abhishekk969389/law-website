@@ -1,10 +1,9 @@
-import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import BlogMain from "@/app/components/layout/blogdetails/blogmain";
 import BlogSidebar from "@/app/components/layout/blogdetails/blogsidebar";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { GlobalLawData, BlogDetailItem } from "@/types/law";
+import { GlobalLawData, BlogDetailItem } from "@/app/data";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
@@ -103,7 +102,7 @@ export default async function BlogDetailsPage({
             <div className="lg:col-span-4">
               <BlogSidebar
                 currentId={blog.id}
-                sidebarData={blog.sidebarData}
+                sidebarData={(blog as any).sidebarData}
               />
             </div>
           </div>

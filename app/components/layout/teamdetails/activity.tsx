@@ -16,7 +16,7 @@ import {
   Building2,
   LucideIcon,
 } from "lucide-react";
-import { TeamDetailItem, TeamActivitiesData } from "@/types/law";
+import { TeamDetailItem, TeamActivitiesData } from "@/app/data";
 import { FadeIn } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
@@ -70,8 +70,8 @@ export function Activity({ data, member }: ActivityProps) {
     iconMap[achievementsIcon.toLowerCase()] || Trophy;
 
   return (
-    <section className="relative w-full bg-[#0B0E14] text-white select-none px-4 sm:px-6 lg:px-8 mt-10 md:mt-12">
-      <div className="max-w-[1400px] mx-auto">
+    <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white select-none px-4 sm:px-6 lg:px-8 mt-10 md:mt-12">
+
         <FadeIn direction="up" delay={0.1}>
           <div className="bg-[#070A11] border border-slate-800/80 rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-2xl relative overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
@@ -95,7 +95,7 @@ export function Activity({ data, member }: ActivityProps) {
 
                   {/* Skills Progress List */}
                   <div className="space-y-6 pt-2">
-                    {skills.map((skill, index) => {
+                    {skills.map((skill: any, index: any) => {
                       const SkillIconComponent =
                         iconMap[skill.icon?.toLowerCase() || ""] || FileText;
 
@@ -154,7 +154,7 @@ export function Activity({ data, member }: ActivityProps) {
 
                   {/* Achievements List */}
                   <div className="space-y-6 pt-2">
-                    {achievements.map((item, index) => {
+                    {achievements.map((item: any, index: any) => {
                       const AchievementIconComponent =
                         iconMap[item.icon?.toLowerCase() || ""] || Landmark;
                       const isLast = index === achievements.length - 1;
@@ -202,7 +202,6 @@ export function Activity({ data, member }: ActivityProps) {
             </div>
           </div>
         </FadeIn>
-      </div>
     </section>
   );
 }

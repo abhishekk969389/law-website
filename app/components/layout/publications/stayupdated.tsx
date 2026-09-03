@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Mail, ArrowRight } from "lucide-react";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { StayUpdatedData, GlobalLawData } from "@/types/law";
+import { StayUpdatedData, GlobalLawData } from "@/app/data";
 import { FadeIn } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
@@ -32,8 +32,7 @@ export function StayUpdated({ data = defaultStayUpdatedData }: StayUpdatedProps)
   };
 
   return (
-    <section className="relative w-full bg-[#0B0E14] text-white mt-6 sm:mt-8 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      <div className="max-w-[1400px] mx-auto">
+    <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-6 sm:mt-8 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
         <FadeIn direction="up" delay={0.1} className="group relative rounded-xl  border border-slate-800/80 bg-[#0A0E17] p-4 sm:p-5 md:p-6 shadow-xl overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-5 lg:gap-8 hover:border-[#D4A359]/40 transition-all duration-300">
           
           {/* Left Side: Mail Circle Icon + Text Info */}
@@ -89,7 +88,6 @@ export function StayUpdated({ data = defaultStayUpdatedData }: StayUpdatedProps)
           </form>
 
         </FadeIn>
-      </div>
     </section>
   );
 }

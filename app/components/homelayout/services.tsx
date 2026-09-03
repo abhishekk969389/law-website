@@ -4,13 +4,13 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight, Scale, Car, Shield, FileText, ArrowRight, LucideIcon } from "lucide-react";
-import { ServicesData, GlobalLawData } from "@/types/law";
+import { ServicesData, GlobalLawData } from "@/app/data";
 import lawData from "@/app/data/lawData-restructured.json";
 
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultServicesData: ServicesData = lawData.categories.Veritas.sections.Services?.variants?.VeritasServices1?.services;
+const defaultServicesData: any = lawData.categories.Veritas.sections.Services?.variants?.VeritasServices1?.services;
 
 interface ServicesProps {
   data?: ServicesData;
@@ -24,16 +24,25 @@ const serviceIconMap: Record<string, LucideIcon> = {
 };
 
 export default function Services({ data = defaultServicesData }: ServicesProps) {
-  const { tagline, heading, subheading, items } = data;
+  const { tagline, heading, subheading, items } = data as any;
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const safeItems = items || [];
+
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev === 0 ? items.length - 1 : prev - 1));
+    if (safeItems.length === 0) return;
+    setCurrentIndex((prev) => (prev === 0 ? safeItems.length - 1 : prev - 1));
   };
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev === items.length - 1 ? 0 : prev + 1));
+    if (safeItems.length === 0) return;
+    setCurrentIndex((prev) => (prev === safeItems.length - 1 ? 0 : prev + 1));
   };
+
+  const visibleCount = Math.min(safeItems.length, 4);
+  const visibleItems = safeItems.length > 0
+    ? Array.from({ length: visibleCount }, (_, i) => safeItems[(currentIndex + i) % safeItems.length])
+    : [];
 
   return (
     <section className="relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden">
@@ -85,8 +94,8 @@ export default function Services({ data = defaultServicesData }: ServicesProps) 
           </motion.button>
 
           {/* 4 Cards Grid with padding for side arrows */}
-          <StaggerContainer staggerChildren={0.12} delayChildren={0.2} className="w-full lg:px-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-4.5">
-            {items.map((item, index) => {
+          <StaggerContainer key={currentIndex} staggerChildren={0.08} delayChildren={0.1} className="w-full lg:px-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-4.5">
+            {visibleItems.map((item: any, index: any) => {
               const IconComp = serviceIconMap[item.icon.toLowerCase()] || Scale;
 
               return (
@@ -161,7 +170,7 @@ export default function Services({ data = defaultServicesData }: ServicesProps) 
 
         {/* Pagination Dots */}
         <div className="flex items-center justify-center gap-3 mt-8">
-          {items.map((_, idx) => (
+          {items.map((_: any, idx: any) => (
             <button
               key={idx}
               onClick={() => setCurrentIndex(idx)}

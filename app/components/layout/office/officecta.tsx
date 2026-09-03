@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Headphones, ArrowRight } from "lucide-react";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { OfficeCtaData, GlobalLawData } from "@/types/law";
+import { OfficeCtaData, GlobalLawData } from "@/app/data";
 import { FadeIn } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
@@ -21,8 +21,8 @@ export function Officecta({ data = defaultOfficeCtaData }: OfficectaProps) {
   const { tagline, title, subtitle, buttonText, buttonLink } = data;
 
   return (
-    <section className="relative w-full bg-[#0B0E14] text-white mt-6 sm:mt-8 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      <div className="max-w-[1400px] mx-auto">
+    <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-6 sm:mt-8 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
+ 
         <FadeIn direction="up" delay={0.1} className="group relative rounded-xl border border-slate-800/80 bg-[#0A0E17] p-5 sm:p-6 shadow-xl overflow-hidden flex flex-col sm:flex-row items-center justify-between gap-5 sm:gap-8 hover:border-[#D4A359]/40 transition-all duration-300">
           
           {/* Left Side: Headset Circle Icon + Tagline + Title + Subtitle */}
@@ -70,7 +70,6 @@ export function Officecta({ data = defaultOfficeCtaData }: OfficectaProps) {
           </div>
 
         </FadeIn>
-      </div>
     </section>
   );
 }

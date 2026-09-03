@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft, MapPin, Briefcase, Users, Clock } from "lucide-react";
-import { CareerDetailItem } from "@/types/law";
+import { CareerDetailItem } from "@/app/data";
 import { FadeIn } from "@/app/components/ui/animations";
 
 interface CareerHeaderProps {

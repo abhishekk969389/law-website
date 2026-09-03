@@ -7,7 +7,7 @@ import { Calendar, ArrowRight } from "lucide-react";
 import Pagination from "@/app/components/ui/pagination";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { PublicationSectionData, GlobalLawData } from "@/types/law";
+import { PublicationSectionData, GlobalLawData } from "@/app/data";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
@@ -37,8 +37,8 @@ export function Pubsec({ data = defaultPublicationSectionData }: PubsecProps) {
   };
 
   return (
-    <section className="relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      <div className="max-w-[1400px] mx-auto">
+    <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
+ 
         
         {/* Top Left Header Section matching reference screenshot */}
         <FadeIn id="pub-section-header" direction="up" delay={0.1} className="text-left max-w-3xl mb-8 sm:mb-10 lg:mb-12">
@@ -63,7 +63,7 @@ export function Pubsec({ data = defaultPublicationSectionData }: PubsecProps) {
         {/* 6 Publications Cards Grid (3 columns on md/lg screens, 2 rows total) */}
         <StaggerContainer key={currentPage} staggerChildren={0.12} delayChildren={0.2} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {displayedItems &&
-            displayedItems.map((item) => (
+            displayedItems.map((item: any) => (
               <StaggerItem key={item.id}>
                 <motion.div
                   whileHover={{ y: -5, scale: 1.01 }}
@@ -113,7 +113,7 @@ export function Pubsec({ data = defaultPublicationSectionData }: PubsecProps) {
                         href={item.link || "/publications"}
                         className="inline-flex items-center gap-2 text-[#D4A359] text-xs font-semibold uppercase tracking-wider group-hover:gap-3 transition-all hover:underline mt-auto"
                       >
-                        <span>{item.linkText}</span>
+                        <span>{item.linkText || "READ MORE"}</span>
                         <ArrowRight className="w-3.5 h-3.5" />
                       </Link>
                     </div>
@@ -133,7 +133,6 @@ export function Pubsec({ data = defaultPublicationSectionData }: PubsecProps) {
             />
           </FadeIn>
         )}
-      </div>
     </section>
   );
 }

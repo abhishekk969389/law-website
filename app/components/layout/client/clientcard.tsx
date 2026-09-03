@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { ClientResourceSectionData, GlobalLawData } from "@/types/law";
+import { ClientResourceSectionData, GlobalLawData } from "@/app/data";
 import { StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
@@ -43,13 +43,13 @@ export function Clientcard({ data = defaultClientCardsData }: ClientcardProps) {
   const { items } = data;
 
   return (
-    <section className="relative w-full bg-[#0B0E14] text-white  mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      <div className="max-w-[1400px] mx-auto">
-        
+    <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white  mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
+
+  
         {/* 8 Client Resource Cards Grid (4 columns on lg screens, 2 rows total) */}
         <StaggerContainer staggerChildren={0.1} delayChildren={0.1} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {items &&
-            items.map((item) => {
+            items.map((item: any) => {
               const IconComponent = iconMap[item.icon] || FileText;
 
               return (
@@ -94,8 +94,6 @@ export function Clientcard({ data = defaultClientCardsData }: ClientcardProps) {
               );
             })}
         </StaggerContainer>
-
-      </div>
     </section>
   );
 }

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { User, Mail, Briefcase, Phone, Pencil, ArrowRight } from "lucide-react";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { QuestionsSectionData, GlobalLawData } from "@/types/law";
+import { QuestionsSectionData, GlobalLawData } from "@/app/data";
 import { FadeIn } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
@@ -178,8 +178,8 @@ export function Questions({ data = defaultQuestionsSectionData }: QuestionsProps
       </section>
 
       {/* 2. Map Section (Clean background without image) */}
-      <FadeIn direction="up" delay={0.3} className="w-full bg-[#0B0E14] px-4 sm:px-6 lg:px-8 mt-8 sm:mt-10 md:mt-12 lg:mt-14">
-        <div className="max-w-[1400px] mx-auto">
+      <FadeIn direction="up" delay={0.3} className="max-w-[1400px] mx-auto w-full bg-[#0B0E14] px-4 sm:px-6 lg:px-8 mt-8 sm:mt-10 md:mt-12 lg:mt-14">
+        <div className="">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224356.85923192592!2d77.23701088488971!3d28.522404036526275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc03f!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1786345160037!5m2!1sen!2sin"
             width="100%"

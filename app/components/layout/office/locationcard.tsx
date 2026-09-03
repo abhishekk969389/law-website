@@ -4,7 +4,7 @@ import React from "react";
 import { Phone, ArrowRight } from "lucide-react";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { OfficeLocationSectionData, GlobalLawData } from "@/types/law";
+import { OfficeLocationSectionData, GlobalLawData } from "@/app/data";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
@@ -128,8 +128,8 @@ export function Locationcard({ data = defaultOfficeLocationsData }: Locationcard
   const { title, items } = data;
 
   return (
-    <section className="relative w-full bg-[#0B0E14] text-white mt-4 sm:mt-6 md:mt-8 lg:mt-10 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      <div className="max-w-[1400px] mx-auto">
+    <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-4 sm:mt-6 md:mt-8 lg:mt-10 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
+
         
         {/* Section Title */}
         <FadeIn direction="up" delay={0.1}>
@@ -141,7 +141,7 @@ export function Locationcard({ data = defaultOfficeLocationsData }: Locationcard
         {/* 8 Office Locations Cards Grid (3 columns on lg screens) */}
         <StaggerContainer staggerChildren={0.1} delayChildren={0.2} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {items &&
-            items.map((item) => (
+            items.map((item: any) => (
               <StaggerItem key={item.id}>
                 <motion.div
                   whileHover={{ y: -6, scale: 1.01 }}
@@ -208,8 +208,6 @@ export function Locationcard({ data = defaultOfficeLocationsData }: Locationcard
               </StaggerItem>
             ))}
         </StaggerContainer>
-
-      </div>
     </section>
   );
 }

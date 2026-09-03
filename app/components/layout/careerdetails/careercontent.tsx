@@ -11,7 +11,7 @@ import {
   Scale,
   LucideIcon,
 } from "lucide-react";
-import { CareerDetailItem } from "@/types/law";
+import { CareerDetailItem } from "@/app/data";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 
 interface CareerContentProps {
@@ -54,7 +54,7 @@ export function CareerContent({ career }: CareerContentProps) {
             <span>{career.responsibilitiesHeading || "Key Responsibilities"}</span>
           </h2>
           <ul className="space-y-3">
-            {career.responsibilities.map((item, idx) => (
+            {career.responsibilities.map((item: any, idx: any) => (
               <li key={idx} className="flex items-start gap-3 text-slate-300 text-xs sm:text-sm md:text-base font-light">
                 <CheckCircle2 className="w-5 h-5 text-[#D4A359] shrink-0 mt-0.5" />
                 <span className="leading-relaxed">{item}</span>
@@ -72,7 +72,7 @@ export function CareerContent({ career }: CareerContentProps) {
             <span>{career.qualificationsHeading || "Qualifications & Skills"}</span>
           </h2>
           <ul className="space-y-3">
-            {career.qualifications.map((item, idx) => (
+            {career.qualifications.map((item: any, idx: any) => (
               <li key={idx} className="flex items-start gap-3 text-slate-300 text-xs sm:text-sm md:text-base font-light">
                 <CheckCircle2 className="w-5 h-5 text-[#D4A359] shrink-0 mt-0.5" />
                 <span className="leading-relaxed">{item}</span>
@@ -91,7 +91,7 @@ export function CareerContent({ career }: CareerContentProps) {
           </h2>
 
           <div className="space-y-4 sm:space-y-5">
-            {career.whyJoinItems.map((item, idx) => {
+            {career.whyJoinItems.map((item: any, idx: any) => {
               const IconComp = (item.icon && iconMap[item.icon]) || Users;
 
               return (

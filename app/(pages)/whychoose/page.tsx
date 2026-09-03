@@ -1,15 +1,7 @@
-import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import WhyChooseUs from "@/app/components/layout/about/whychooseus";
 import lawData from "@/app/data/lawData-restructured.json";
-
-import { GlobalLawData } from "@/types/law";
 import Counting from "@/app/components/ui/counting";
-
-export const metadata = {
-    title: "Why Choose Us | Veritas Law Partners",
-    description: "Discover why clients trust Veritas Law Partners for their legal matters.",
-};
 
 export default function WhyChoosePage() {
   

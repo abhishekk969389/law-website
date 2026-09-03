@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { IndustrySectionData, GlobalLawData } from "@/types/law";
+import { IndustrySectionData, GlobalLawData } from "@/app/data";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
@@ -34,14 +34,13 @@ export interface IndsecProps {
   data?: IndustrySectionData;
 }
 
-export function Indsec({ data = defaultIndustrySectionData }: IndsecProps) {
+export function Indsec({ data = defaultIndustrySectionData as any }: IndsecProps) {
   if (!data) return null;
 
-  const { tagline, heading, description, items } = data;
+  const { tagline, heading, description, items } = data as any;
 
   return (
-    <section className="relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      <div className="max-w-[1400px] mx-auto">
+    <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
         
         {/* Top Centered Header */}
         <FadeIn direction="up" delay={0.1} className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
@@ -78,7 +77,7 @@ export function Indsec({ data = defaultIndustrySectionData }: IndsecProps) {
         {/* 6 Industry Cards Grid (3 columns on md/lg screens) */}
         <StaggerContainer staggerChildren={0.12} delayChildren={0.2} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {items &&
-            items.map((item) => {
+            items.map((item: any) => {
               const IconComponent = iconMap[item.icon] || Scale;
               const cardLink = item.link || (item.slug ? `/industries/${item.slug}` : `/industries/${item.id}`);
 
@@ -142,7 +141,6 @@ export function Indsec({ data = defaultIndustrySectionData }: IndsecProps) {
               );
             })}
         </StaggerContainer>
-      </div>
     </section>
   );
 }

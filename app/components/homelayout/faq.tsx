@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { Scale, Plus, Minus } from "lucide-react";
-import { FaqData, GlobalLawData } from "@/types/law";
+import { FaqData, GlobalLawData } from "@/app/data";
 import lawData from "@/app/data/lawData-restructured.json";
 
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
@@ -69,7 +69,7 @@ export default function Faq({ data = defaultFaqData }: FaqProps) {
 
           {/* Left Column: Accordion Questions */}
           <StaggerContainer staggerChildren={0.1} delayChildren={0.2} className="lg:col-span-6 space-y-4">
-            {items.map((item) => {
+            {items.map((item: any) => {
               const isOpen = openId === item.id;
               return (
                 <StaggerItem key={item.id}>

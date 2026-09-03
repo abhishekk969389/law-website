@@ -1,14 +1,6 @@
-import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import Eventsec from "@/app/components/layout/event/eventsec";
 import lawData from "@/app/data/lawData-restructured.json";
-
-import { GlobalLawData } from "@/types/law";
-
-export const metadata = {
-  title: "Events & Webinars | Veritas Law Partners",
-  description: "Join our upcoming legal seminars, workshops, and industry webinars.",
-};
 
 export default function EventPage() {
   

@@ -1,15 +1,8 @@
-import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import Contactsec from "@/app/components/layout/contactus/contactsec";
 import Questions from "@/app/components/layout/contactus/questions";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { GlobalLawData } from "@/types/law";
-
-export const metadata = {
-  title: "Contact Us | Veritas Law Partners",
-  description: "Get in touch with our legal team for expert consultation and advice.",
-};
 
 export default function ContactUsPage() {
   

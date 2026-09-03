@@ -3,13 +3,6 @@ import SubBanner from "@/app/components/ui/subbanner";
 import Awardsec from "@/app/components/layout/award/awardsec";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { GlobalLawData } from "@/types/law";
-
-export const metadata = {
-  title: "Awards & Recognition | Veritas Law Partners",
-  description: "Discover our prestigious awards, honors, and industry accolades.",
-};
-
 export default function AwardPage() {
   
   

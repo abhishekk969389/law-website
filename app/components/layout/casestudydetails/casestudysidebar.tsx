@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { CaseStudySidebarData, CaseStudyDetailItem, GlobalLawData } from "@/types/law";
+import { CaseStudySidebarData, CaseStudyDetailItem, GlobalLawData } from "@/app/data";
 import { FadeIn } from "@/app/components/ui/animations";
 
 export interface CaseStudySidebarProps {
@@ -21,8 +21,8 @@ export interface CaseStudySidebarProps {
   sidebarData?: CaseStudySidebarData;
 }
 
-const globalCaseStudySidebar = (({}) as unknown as GlobalLawData).caseStudySidebar;
-const defaultCaseStudyItems = (({}) as unknown as GlobalLawData).caseStudySection?.items || [];
+const globalCaseStudySidebar = (({}) as any).caseStudySidebar;
+const defaultCaseStudyItems = (({}) as any).caseStudySection?.items || [];
 
 export function CaseStudySidebar({
   currentId,
@@ -43,7 +43,7 @@ export function CaseStudySidebar({
   // Use provided case studies or fallback list
   const listItems = (allCaseStudies && allCaseStudies.length > 0)
     ? allCaseStudies
-    : defaultCaseStudyItems.map(item => ({
+    : defaultCaseStudyItems.map((item: any) => ({
         id: item.linkHref ? item.linkHref.split("/").pop() || item.id : item.id,
         slug: item.linkHref ? item.linkHref.split("/").pop() || item.id : item.id,
         title: item.title,
@@ -63,7 +63,7 @@ export function CaseStudySidebar({
           </div>
 
           <nav className="space-y-2.5">
-            {listItems.map((item) => {
+            {listItems.map((item: any) => {
               const slug = ("slug" in item && item.slug) ? item.slug : item.id;
               const isActive =
                 currentId?.toLowerCase() === item.id.toLowerCase() ||
@@ -134,7 +134,7 @@ export function CaseStudySidebar({
             <h3 className="font-serif text-2xl sm:text-3xl text-white font-semibold leading-snug tracking-tight">
               {contact.titleLines && contact.titleLines.length > 0 ? (
                 <>
-                  {contact.titleLines.map((line, idx) => (
+                  {contact.titleLines.map((line: any, idx: any) => (
                     <React.Fragment key={idx}>
                       {line}
                       <br />
@@ -210,7 +210,7 @@ export function CaseStudySidebar({
                 </div>
                 <span className="text-sm sm:text-base font-medium leading-snug">
                   {contact.addressLines && contact.addressLines.length > 0 ? (
-                    contact.addressLines.map((line, i) => (
+                    contact.addressLines.map((line: any, i: any) => (
                       <span key={i} className="block">{line}</span>
                     ))
                   ) : contact.address && contact.address.includes(",") ? (

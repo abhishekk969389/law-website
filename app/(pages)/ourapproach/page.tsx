@@ -1,15 +1,8 @@
-import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import ApproachSec from "@/app/components/layout/ourapproach/approachsec";
 import Proven from "@/app/components/layout/ourapproach/proven";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { GlobalLawData } from "@/types/law";
-
-export const metadata = {
-  title: "Our Approach | Veritas Law Partners",
-  description: "Learn about our strategic, client-centered approach to legal representation.",
-};
 
 export default function OurApproachPage() {
   

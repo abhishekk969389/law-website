@@ -17,7 +17,7 @@ import {
   Minus,
   LucideIcon,
 } from "lucide-react";
-import { EventDetailItem } from "@/types/law";
+import { EventDetailItem } from "@/app/data";
 import { FadeIn } from "@/app/components/ui/animations";
 
 interface EventContentProps {
@@ -98,7 +98,7 @@ export function EventContent({ event }: EventContentProps) {
               </h2>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-                {event.takeaways.map((item, idx) => (
+                {event.takeaways.map((item: any, idx: any) => (
                   <div key={idx} className="flex items-start gap-2.5 group">
                     <div className="w-5 h-5 rounded-full border border-[#D4A359]/80 bg-[#070B12] text-[#D4A359] flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
                       <CheckCircle2 className="w-3.5 h-3.5" />
@@ -131,7 +131,7 @@ export function EventContent({ event }: EventContentProps) {
 
               {/* Vertical Timeline (Mobile only) */}
               <div className="block md:hidden space-y-5 relative ml-2 before:absolute before:inset-0 before:ml-1 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-[#D4A359]/60 before:to-transparent">
-                {event.timeline.map((item, idx) => (
+                {event.timeline.map((item: any, idx: any) => (
                   <div key={idx} className="relative flex items-start gap-4 mb-5">
                     <div className="absolute left-0 w-2.5 h-2.5 rounded-full bg-[#D4A359] border border-[#070B12] shadow-[0_0_8px_rgba(212,163,89,0.7)] mt-1.5 -translate-x-[4px]" />
                     <div className="pl-6 flex-1">
@@ -154,7 +154,7 @@ export function EventContent({ event }: EventContentProps) {
                     className="grid divide-x divide-slate-800/90"
                     style={{ gridTemplateColumns: `repeat(${event.timeline.length}, minmax(0, 1fr))` }}
                   >
-                    {event.timeline.map((item, idx) => (
+                    {event.timeline.map((item: any, idx: any) => (
                       <div
                         key={idx}
                         className={`text-left ${idx === 0 ? "pr-4" : "px-4"}`}
@@ -180,7 +180,7 @@ export function EventContent({ event }: EventContentProps) {
                       className="grid relative z-10"
                       style={{ gridTemplateColumns: `repeat(${event.timeline.length}, minmax(0, 1fr))` }}
                     >
-                      {event.timeline.map((_, idx) => (
+                      {event.timeline.map((_: any, idx: any) => (
                         <div key={idx} className="flex justify-center">
                           <div className="w-2.5 h-2.5 rounded-full bg-[#D4A359] border border-[#070B12] shadow-[0_0_8px_rgba(212,163,89,0.7)]" />
                         </div>
@@ -242,7 +242,7 @@ export function EventContent({ event }: EventContentProps) {
               {event.amenities && event.amenities.length > 0 && (
                 <div className="lg:col-span-6 xl:col-span-6 lg:border-l lg:border-slate-800/90 lg:pl-6">
                   <div className="grid grid-cols-2 sm:grid-cols-4 divide-x divide-slate-800/90">
-                    {event.amenities.map((amenity, idx) => {
+                    {event.amenities.map((amenity: any, idx: any) => {
                       const IconComp = (amenity.icon && amenityIconMap[amenity.icon]) || Coffee;
 
                       return (
@@ -303,7 +303,7 @@ export function EventContent({ event }: EventContentProps) {
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 sm:gap-4">
-                {faqs.map((faq, idx) => {
+                {faqs.map((faq: any, idx: any) => {
                   const isOpen = openFaqIndex === idx;
 
                   return (

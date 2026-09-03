@@ -7,7 +7,7 @@ import { ArrowRight, PenTool } from "lucide-react";
 import Pagination from "@/app/components/ui/pagination";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { LegalSectionData, GlobalLawData } from "@/types/law";
+import { LegalSectionData, GlobalLawData } from "@/app/data";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
@@ -17,10 +17,10 @@ export interface LegalsecProps {
     data?: LegalSectionData;
 }
 
-export function Legalsec({ data = defaultLegalSectionData }: LegalsecProps) {
+export function Legalsec({ data = defaultLegalSectionData as any }: LegalsecProps) {
     if (!data) return null;
 
-    const { tagline, heading, subheading, featured, items = [] } = data;
+    const { tagline, heading, subheading, featured, items = [] } = data as any;
     const [currentPage, setCurrentPage] = React.useState(1);
     const itemsPerPage = 6;
     const totalPages = Math.max(1, Math.ceil(items.length / itemsPerPage));
@@ -37,8 +37,8 @@ export function Legalsec({ data = defaultLegalSectionData }: LegalsecProps) {
     };
 
     return (
-        <section className="relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-            <div className="max-w-[1400px] mx-auto">
+        <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
+        
 
                 {/* Top Centered Header Section matching blog.tsx design */}
                 <FadeIn id="legal-section-header" direction="up" delay={0.1} className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 lg:mb-12">
@@ -116,7 +116,7 @@ export function Legalsec({ data = defaultLegalSectionData }: LegalsecProps) {
                                     href={featured.link || `/legal/${featured.id}`}
                                     className="inline-flex items-center gap-2 text-[#D4A359] text-xs sm:text-sm font-semibold uppercase tracking-wider group-hover:gap-3 transition-all hover:underline"
                                 >
-                                    <span>{featured.linkText}</span>
+                                    <span>{(featured as any).linkText || "READ MORE"}</span>
                                     <ArrowRight className="w-4 h-4" />
                                 </Link>
                             </div>
@@ -127,7 +127,7 @@ export function Legalsec({ data = defaultLegalSectionData }: LegalsecProps) {
                 {/* 6 Grid Legal Articles (3 columns on md/lg screens, 2 rows total) */}
                 <StaggerContainer key={currentPage} staggerChildren={0.12} delayChildren={0.25} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                     {displayedItems &&
-                        displayedItems.map((item) => (
+                        displayedItems.map((item: any) => (
                             <StaggerItem key={item.id}>
                                 <motion.div
                                     whileHover={{ y: -6, scale: 1.01 }}
@@ -174,7 +174,7 @@ export function Legalsec({ data = defaultLegalSectionData }: LegalsecProps) {
                                             href={item.link || `/legal/${item.id}`}
                                             className="inline-flex items-center gap-2 text-[#D4A359] text-xs font-semibold uppercase tracking-wider group-hover:gap-3 transition-all hover:underline"
                                         >
-                                            <span>{item.linkText}</span>
+                                            <span>{(item as any).linkText || "READ MORE"}</span>
                                             <ArrowRight className="w-4 h-4" />
                                         </Link>
                                     </div>
@@ -193,7 +193,6 @@ export function Legalsec({ data = defaultLegalSectionData }: LegalsecProps) {
                         />
                     </FadeIn>
                 )}
-            </div>
         </section>
     );
 }

@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { BookSectionData, GlobalLawData } from "@/types/law";
+import { BookSectionData, GlobalLawData } from "@/app/data";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
@@ -97,8 +97,8 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
   };
 
   return (
-    <section className="relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      <div className="max-w-[1400px] mx-auto">
+    <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
+
         
         {/* Single Unified Outer Card Container */}
         <FadeIn direction="up" delay={0.1} className="group relative rounded-3xl border border-slate-800/80 bg-[#070A11] p-6 sm:p-10 lg:p-12 shadow-2xl overflow-hidden hover:border-[#D4A359]/30 transition-all duration-300">
@@ -135,7 +135,7 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
               {/* 4 Feature Items List */}
               <div className="space-y-6 sm:space-y-7">
                 {features &&
-                  features.map((item) => (
+                  features.map((item: any) => (
                     <div key={item.id} className="flex items-start gap-4 sm:gap-4.5">
                       <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-[#D4A359]/65 flex items-center justify-center bg-[#05080E] text-[#D4A359] shrink-0 shadow-[0_0_12px_rgba(212,163,89,0.15)]">
                         {getFeatureIcon(item.icon)}
@@ -277,7 +277,7 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
                         Select practice area
                       </option>
                       {practiceAreas &&
-                        practiceAreas.map((area, idx) => (
+                        practiceAreas.map((area: any, idx: any) => (
                           <option key={idx} value={area} className="bg-[#060911] text-white">
                             {area}
                           </option>
@@ -301,7 +301,7 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
                         Select consultation type
                       </option>
                       {consultationTypes &&
-                        consultationTypes.map((type, idx) => (
+                        consultationTypes.map((type: any, idx: any) => (
                           <option key={idx} value={type} className="bg-[#060911] text-white">
                             {type}
                           </option>
@@ -340,7 +340,7 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
                           Select preferred time
                         </option>
                         {preferredTimes &&
-                          preferredTimes.map((time, idx) => (
+                          preferredTimes.map((time: any, idx: any) => (
                             <option key={idx} value={time} className="bg-[#060911] text-white">
                               {time}
                             </option>
@@ -420,8 +420,6 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
 
           </div>
         </FadeIn>
-
-      </div>
     </section>
   );
 }

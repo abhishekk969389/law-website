@@ -13,7 +13,7 @@ import {
   ChevronRight,
   CalendarPlus,
 } from "lucide-react";
-import { EventDetailItem } from "@/types/law";
+import { EventDetailItem } from "@/app/data";
 import { FadeIn } from "@/app/components/ui/animations";
 
 interface EventHeroProps {

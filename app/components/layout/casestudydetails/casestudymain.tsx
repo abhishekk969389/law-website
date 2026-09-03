@@ -14,7 +14,7 @@ import {
   Briefcase,
   LucideIcon,
 } from "lucide-react";
-import { CaseStudyDetailItem } from "@/types/law";
+import { CaseStudyDetailItem } from "@/app/data";
 import { FadeIn } from "@/app/components/ui/animations";
 
 const iconMap: Record<string, LucideIcon> = {
@@ -91,7 +91,7 @@ export function CaseStudyMain({ caseStudy }: CaseStudyMainProps) {
         {caseStudy.meta && caseStudy.meta.length > 0 && (
           <div className="border-t border-slate-800/80 bg-[#060910] px-6 sm:px-10 py-6">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-              {caseStudy.meta.map((item, idx) => {
+              {caseStudy.meta.map((item: any, idx: any) => {
                 const MetaIcon = (item.icon && iconMap[item.icon]) || Landmark;
 
                 return (
@@ -130,7 +130,7 @@ export function CaseStudyMain({ caseStudy }: CaseStudyMainProps) {
         {/* Paragraphs 1 */}
         {caseStudy.paragraphs1 && caseStudy.paragraphs1.length > 0 && (
           <FadeIn direction="up" delay={0.25} duration={0.6} className="space-y-4">
-            {caseStudy.paragraphs1.map((p, idx) => (
+            {caseStudy.paragraphs1.map((p: any, idx: any) => (
               <p key={idx} className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-light">
                 {p}
               </p>
@@ -156,7 +156,7 @@ export function CaseStudyMain({ caseStudy }: CaseStudyMainProps) {
         {/* Paragraphs 2 */}
         {caseStudy.paragraphs2 && caseStudy.paragraphs2.length > 0 && (
           <FadeIn direction="up" delay={0.35} duration={0.6} className="space-y-4">
-            {caseStudy.paragraphs2.map((p, idx) => (
+            {caseStudy.paragraphs2.map((p: any, idx: any) => (
               <p key={idx} className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-light">
                 {p}
               </p>
@@ -172,7 +172,7 @@ export function CaseStudyMain({ caseStudy }: CaseStudyMainProps) {
             </h2>
             {caseStudy.overviewParagraphs && caseStudy.overviewParagraphs.length > 0 && (
               <div className="space-y-4">
-                {caseStudy.overviewParagraphs.map((p, idx) => (
+                {caseStudy.overviewParagraphs.map((p: any, idx: any) => (
                   <p key={idx} className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed font-light">
                     {p}
                   </p>

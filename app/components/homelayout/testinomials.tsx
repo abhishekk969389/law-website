@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, Star, Scale } from "lucide-react";
-import { TestimonialsData, GlobalLawData } from "@/types/law";
+import { TestimonialsData, GlobalLawData } from "@/app/data";
 import lawData from "@/app/data/lawData-restructured.json";
 
 import { FadeIn, ScaleIn } from "@/app/components/ui/animations";

@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import lawData from "@/app/data/lawData-restructured.json";
 
 import { ChevronDown, ArrowUpRight, Menu, X } from "lucide-react";
-import { NavbarData, GlobalLawData } from "@/types/law";
+import { NavbarData, GlobalLawData } from "@/app/data";
 import { motion, AnimatePresence } from "framer-motion";
 
 const defaultNavbarData: NavbarData = lawData.categories.Veritas.sections.Header?.variants?.VeritasHeader1?.navbar;
@@ -62,7 +62,7 @@ export function Navbar({ data = defaultNavbarData }: NavbarProps) {
 
                 {/* Center: Navigation Links (Desktop) */}
                 <nav className="hidden lg:flex items-center gap-3.5 lg:gap-4 xl:gap-7 2xl:gap-9 text-xs lg:text-[13.5px] xl:text-[15px] font-medium tracking-wide">
-                    {navLinks.map((link, idx) => {
+                    {navLinks.map((link: any, idx: any) => {
                         const isActive = isPathActive(link.href, link.dropdownItems);
                         const hasDropdown = link.hasDropdown;
                         const isDropdownOpen = activeDropdown === link.title;
@@ -118,7 +118,7 @@ export function Navbar({ data = defaultNavbarData }: NavbarProps) {
                                             transition={{ duration: 0.2, ease: "easeOut" }}
                                             className="absolute left-0 top-full mt-2 w-60 bg-[#0F141D] border border-slate-800 rounded-xl shadow-2xl py-2 z-50 overflow-hidden"
                                         >
-                                            {link.dropdownItems.map((dropItem, dropIdx) => (
+                                            {link.dropdownItems.map((dropItem: any, dropIdx: any) => (
                                                 <Link
                                                     key={dropIdx}
                                                     href={dropItem.href}
@@ -215,7 +215,7 @@ export function Navbar({ data = defaultNavbarData }: NavbarProps) {
                         </div>
 
                         <div className="flex flex-col space-y-2">
-                            {navLinks.map((link, idx) => {
+                            {navLinks.map((link: any, idx: any) => {
                                 const linkIsActive = isPathActive(link.href, link.dropdownItems);
                                 const isMobileDropdownOpen = mobileOpenDropdown === link.title;
 
@@ -256,7 +256,7 @@ export function Navbar({ data = defaultNavbarData }: NavbarProps) {
                                                     transition={{ duration: 0.2, ease: "easeInOut" }}
                                                     className="pl-4 space-y-1.5 border-l border-slate-800/80 ml-2 py-1 overflow-hidden"
                                                 >
-                                                    {link.dropdownItems.map((dropItem, dropIdx) => (
+                                                    {link.dropdownItems.map((dropItem: any, dropIdx: any) => (
                                                         <Link
                                                             key={dropIdx}
                                                             href={dropItem.href}

@@ -6,13 +6,6 @@ import Team from "@/app/components/layout/about/teams";
 import Counting from "@/app/components/ui/counting";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { GlobalLawData } from "@/types/law";
-
-export const metadata = {
-    title: "About Us | Veritas Law Partners",
-    description: "Learn more about Veritas Law Partners, our mission, values, and legal expertise.",
-};
-
 export default function AboutPage() {
   
     

@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Folder, ArrowUpRight, ArrowRight } from "lucide-react";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { CaseStudySectionData, GlobalLawData } from "@/types/law";
+import { CaseStudySectionData, GlobalLawData } from "@/app/data";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
@@ -22,8 +22,7 @@ export function Casestudysec({ data = defaultCaseStudySectionData }: Casestudyse
   const { tagline, heading, subheading, items } = data;
 
   return (
-    <section className="relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      <div className="max-w-[1400px] mx-auto">
+    <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
         
         {/* Header Section matching homelayout/casestudy.tsx */}
         <FadeIn direction="up" delay={0.1} className="max-w-3xl mb-10 sm:mb-12">
@@ -54,7 +53,7 @@ export function Casestudysec({ data = defaultCaseStudySectionData }: Casestudyse
         {/* 6 Case Study Cards Grid (3 columns on md/lg screens, 2 rows total) */}
         <StaggerContainer staggerChildren={0.12} delayChildren={0.2} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {items &&
-            items.map((item) => (
+            items.map((item: any) => (
               <StaggerItem key={item.id}>
                 <motion.div
                   whileHover={{ y: -6 }}
@@ -120,7 +119,6 @@ export function Casestudysec({ data = defaultCaseStudySectionData }: Casestudyse
               </StaggerItem>
             ))}
         </StaggerContainer>
-      </div>
     </section>
   );
 }

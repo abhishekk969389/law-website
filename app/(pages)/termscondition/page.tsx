@@ -1,14 +1,7 @@
-import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import Section from "@/app/components/layout/termscondition/section";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { GlobalLawData } from "@/types/law";
-
-export const metadata = {
-  title: "Terms & Conditions | Veritas Law Partners",
-  description: "Terms and Conditions governing your use of Veritas Law Partners legal website and services.",
-};
 
 export default function TermsConditionPage() {
   

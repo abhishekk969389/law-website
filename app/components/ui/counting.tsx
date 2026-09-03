@@ -2,7 +2,7 @@
 
 
 import { Scale, Briefcase, Users, Award, ShieldCheck, LucideIcon } from "lucide-react";
-import { CountingItem, GlobalLawData } from "@/types/law";
+import { CountingItem, GlobalLawData } from "@/app/data";
 import lawData from "@/app/data/lawData-restructured.json";
 
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";

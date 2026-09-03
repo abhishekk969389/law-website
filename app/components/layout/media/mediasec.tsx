@@ -7,7 +7,7 @@ import { ArrowRight, Calendar, PenTool } from "lucide-react";
 import Pagination from "@/app/components/ui/pagination";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { MediaSectionData, GlobalLawData } from "@/types/law";
+import { MediaSectionData, GlobalLawData } from "@/app/data";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
@@ -37,8 +37,8 @@ export function Mediasec({ data = defaultMediaSectionData }: MediasecProps) {
   };
 
   return (
-    <section className="relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      <div className="max-w-[1400px] mx-auto">
+    <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
+   
         
         {/* Top Centered Header Section matching blog & legal section design */}
         <FadeIn id="media-section-header" direction="up" delay={0.1} className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 lg:mb-12">
@@ -71,7 +71,7 @@ export function Mediasec({ data = defaultMediaSectionData }: MediasecProps) {
         {/* Media Coverage Cards Grid (2 columns on lg screens) */}
         <StaggerContainer key={currentPage} staggerChildren={0.12} delayChildren={0.1} className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {displayedItems &&
-            displayedItems.map((item) => (
+            displayedItems.map((item: any) => (
               <StaggerItem key={item.id}>
                 <motion.div
                   whileHover={{ y: -5, scale: 1.01 }}
@@ -133,7 +133,6 @@ export function Mediasec({ data = defaultMediaSectionData }: MediasecProps) {
             />
           </FadeIn>
         )}
-      </div>
     </section>
   );
 }

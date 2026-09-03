@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { WhyChooseUsData, GlobalLawData } from "@/types/law";
+import { WhyChooseUsData, GlobalLawData } from "@/app/data";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
@@ -85,7 +85,7 @@ export function WhyChooseUs({ data = defaultWhyChooseUsData }: WhyChooseUsProps)
                             {/* 6 Feature Cards Grid */}
                             <StaggerContainer staggerChildren={0.1} delayChildren={0.35} className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
                                 {items &&
-                                    items.map((item) => {
+                                    items.map((item: any) => {
                                         const IconComponent = iconMap[item.icon] || UserCheck;
 
                                         return (

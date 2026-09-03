@@ -3,12 +3,6 @@ import SubBanner from "@/app/components/ui/subbanner";
 import Booksec from "@/app/components/layout/bookcons/booksec";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { GlobalLawData } from "@/types/law";
-
-export const metadata = {
-  title: "Book Consultation | Veritas Law Partners",
-  description: "Schedule a legal consultation with our expert attorneys.",
-};
 
 export default function BookConsPage() {
   

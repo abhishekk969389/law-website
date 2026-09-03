@@ -2,7 +2,7 @@
 
 import React from "react";
 import { User } from "lucide-react";
-import { TeamAboutData, TeamDetailItem } from "@/types/law";
+import { TeamAboutData, TeamDetailItem } from "@/app/data";
 import { FadeIn } from "@/app/components/ui/animations";
 
 export interface TeamAboutProps {
@@ -20,8 +20,8 @@ export function TeamAbout({ data, member }: TeamAboutProps) {
   const { title = "About Me", paragraphs } = aboutData;
 
   return (
-    <section className="relative w-full bg-[#0B0E14] text-white select-none px-4 sm:px-6 lg:px-8">
-      <div className="max-w-[1400px] mx-auto">
+    <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white select-none px-4 sm:px-6 lg:px-8">
+  
         <FadeIn direction="up" delay={0.1}>
           <div className="bg-[#070A11] border border-slate-800/80 rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-2xl relative overflow-hidden flex gap-5 sm:gap-8 items-stretch">
             
@@ -47,7 +47,7 @@ export function TeamAbout({ data, member }: TeamAboutProps) {
 
               {/* Paragraphs from JSON */}
               <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed font-sans max-w-5xl">
-                {paragraphs.map((paragraph, index) => (
+                {paragraphs.map((paragraph: any, index: any) => (
                   <p key={index}>{paragraph}</p>
                 ))}
               </div>
@@ -56,7 +56,6 @@ export function TeamAbout({ data, member }: TeamAboutProps) {
 
           </div>
         </FadeIn>
-      </div>
     </section>
   );
 }

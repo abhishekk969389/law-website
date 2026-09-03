@@ -1,15 +1,8 @@
-import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import Teamsec from "@/app/components/layout/team/teamsec";
 import lawData from "@/app/data/lawData-restructured.json";
-
-import { GlobalLawData } from "@/types/law";
 import Counting from "@/app/components/ui/counting";
 
-export const metadata = {
-  title: "Our Team | Veritas Law Partners",
-  description: "Meet our experienced attorneys and legal professionals.",
-};
 
 export default function TeamPage() {
   

@@ -6,7 +6,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { TeamData, GlobalLawData } from "@/types/law";
+import { TeamData, GlobalLawData } from "@/app/data";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
@@ -54,7 +54,7 @@ export function Team({ data = defaultTeamData }: TeamProps) {
         {/* 4 Team Member Cards Grid */}
         <StaggerContainer staggerChildren={0.12} delayChildren={0.2} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6 lg:gap-6">
           {members &&
-            members.map((member) => (
+            members.map((member: any) => (
               <StaggerItem key={member.id}>
                 <motion.div
                   whileHover={{ y: -6, scale: 1.01 }}

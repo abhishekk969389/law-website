@@ -6,7 +6,7 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { SubBannerData, GlobalLawData } from "@/types/law";
+import { SubBannerData, GlobalLawData } from "@/app/data";
 import { FadeIn } from "@/app/components/ui/animations";
 
 const defaultSubBannerData: SubBannerData =
@@ -114,7 +114,7 @@ export function SubBanner({
                                     aria-label="Breadcrumb"
                                     className="flex items-center flex-wrap gap-2 text-xs sm:text-sm md:text-base font-medium"
                                 >
-                                    {breadcrumbs.map((item, index) => {
+                                    {breadcrumbs.map((item: any, index: any) => {
                                         const isLast = index === breadcrumbs.length - 1;
                                         const isActive = item.isActive || isLast;
 

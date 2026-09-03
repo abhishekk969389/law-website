@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Building, MapPin, UserCheck, LucideIcon } from "lucide-react";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { OfficeSectionData, GlobalLawData } from "@/types/law";
+import { OfficeSectionData, GlobalLawData } from "@/app/data";
 import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
@@ -27,8 +27,8 @@ export function Officesec({ data = defaultOfficeSectionData }: OfficesecProps) {
   const { tagline, heading, description, stats, quote, image } = data;
 
   return (
-    <section className="relative w-full bg-[#0B0E14] text-white  mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      <div className="max-w-[1400px] mx-auto">
+    <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white  mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
+  
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
@@ -74,7 +74,7 @@ export function Officesec({ data = defaultOfficeSectionData }: OfficesecProps) {
             {/* 3 Stat Items Row */}
             <StaggerContainer staggerChildren={0.12} delayChildren={0.35} className="flex flex-wrap items-center gap-6 sm:gap-8 pt-4">
               {stats &&
-                stats.map((stat, idx) => {
+                stats.map((stat: any, idx: any) => {
                   const IconComponent = iconMap[stat.icon] || Building;
 
                   return (
@@ -144,8 +144,6 @@ export function Officesec({ data = defaultOfficeSectionData }: OfficesecProps) {
           </FadeIn>
 
         </div>
-
-      </div>
     </section>
   );
 }

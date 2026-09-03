@@ -1,9 +1,8 @@
-import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import ServiceDetailsSec from "@/app/components/layout/servicedetails/servicedetailssec";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { GlobalLawData, ServiceDetailItem, ServiceSidebarContact, ServiceSidebarForm } from "@/types/law";
+import { GlobalLawData, ServiceDetailItem, ServiceSidebarContact, ServiceSidebarForm } from "@/app/data";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
@@ -50,8 +49,8 @@ function getServiceById(id: string): ServiceDetailItem | undefined {
 
   return {
     ...target,
-    sidebarContact: target.sidebarContact || defaultSidebarContact,
-    sidebarForm: target.sidebarForm || defaultSidebarForm,
+    sidebarContact: (target as any).sidebarContact || defaultSidebarContact,
+    sidebarForm: (target as any).sidebarForm || defaultSidebarForm,
   };
 }
 

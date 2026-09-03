@@ -1,14 +1,6 @@
-import React from "react";
 import SubBanner from "@/app/components/ui/subbanner";
 import Section from "@/app/components/layout/privacypolicy/section";
 import lawData from "@/app/data/lawData-restructured.json";
-
-import { GlobalLawData } from "@/types/law";
-
-export const metadata = {
-  title: "Privacy Policy | Veritas Law Partners",
-  description: "Read our privacy policy regarding how we collect, use, and protect your personal information.",
-};
 
 export default function PrivacyPolicyPage() {
   

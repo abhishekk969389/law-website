@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { LegalSidebarData, GlobalLawData } from "@/types/law";
+import { LegalSidebarData, GlobalLawData } from "@/app/data";
 import { FadeIn } from "@/app/components/ui/animations";
 
 interface LegalSidebarProps {
