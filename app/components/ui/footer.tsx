@@ -105,12 +105,12 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
               </Link>
             </div>
 
-            <p className="text-[#a2b6c5] text-sm leading-relaxed mb-6 max-w-sm font-normal">
+            <p className="text-[#a2b6c5] text-sm md:text-[12px] lg:text-[16px] leading-relaxed mb-6 max-w-sm font-normal">
               {brand.description}
             </p>
 
             <div>
-              <h5 className="text-[#D4A359] text-lg font-bold mb-3">
+              <h5 className="text-[#D4A359] text-lg lg:text-xl font-bold mb-3">
                 {brand.followUsText}
               </h5>
               <div className="flex items-center gap-3.5">
@@ -152,17 +152,17 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
 
           {/* Column 2: Quick Links */}
           <StaggerItem className="lg:col-span-2">
-            <h5 className="text-lg font-bold text-[#D4A359] mb-4">
+            <h5 className="text-lg lg:text-xl font-bold text-[#D4A359] mb-4">
               {popularCases?.title}
             </h5>
-            <ul className="space-y-2.5">
+            <ul className="space-y-2.5 lg:space-y-3">
               {(popularCases?.links || []).map((link: any) => (
                 <li key={link.id}>
                   <Link
                     href={link.linkHref}
-                    className="text-slate-100 hover:text-[#D4A359] text-sm font-semibold flex items-center gap-2 transition-colors"
+                    className="text-slate-100 hover:text-[#D4A359] text-sm lg:text-[15.5px] font-semibold flex items-center gap-2 transition-colors"
                   >
-                    <span className="text-[#D4A359] text-base font-bold leading-none">•</span>
+                    <span className="text-[#D4A359] text-base lg:text-lg font-bold leading-none">•</span>
                     <span>{link.title}</span>
                   </Link>
                 </li>
@@ -172,10 +172,10 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
 
           {/* Column 3: Resources */}
           <StaggerItem className="lg:col-span-2">
-            <h5 className="text-lg font-bold text-[#D4A359] mb-4">
+            <h5 className="text-lg lg:text-xl font-bold text-[#D4A359] mb-4">
               {resources?.title || "Resources"}
             </h5>
-            <ul className="space-y-2.5">
+            <ul className="space-y-2.5 lg:space-y-3">
               {(resources?.links || [
                 { id: "1", title: "Legal Advice", linkHref: "/resources/legal-advice" },
                 { id: "2", title: "Privacy Policy", linkHref: "/privacy-policy" },
@@ -185,9 +185,9 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
                 <li key={link.id}>
                   <Link
                     href={link.linkHref}
-                    className="text-slate-100 hover:text-[#D4A359] text-sm font-semibold flex items-center gap-2 transition-colors"
+                    className="text-slate-100 hover:text-[#D4A359] text-sm lg:text-[15.5px] font-semibold flex items-center gap-2 transition-colors"
                   >
-                    <span className="text-[#D4A359] text-base font-bold leading-none">•</span>
+                    <span className="text-[#D4A359] text-base lg:text-lg font-bold leading-none">•</span>
                     <span>{link.title}</span>
                   </Link>
                 </li>
@@ -197,7 +197,7 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
 
           {/* Column 4: Recent News */}
           <StaggerItem className="lg:col-span-2">
-            <h5 className="text-lg font-bold text-[#D4A359] mb-4">
+            <h5 className="text-lg lg:text-xl font-bold text-[#D4A359] mb-4">
               {recentNews?.title}
             </h5>
             <div className="space-y-3.5">
@@ -207,7 +207,7 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
                   href={item.linkHref}
                   className="flex items-center gap-3 group"
                 >
-                  <div className="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-white/10 bg-gray-800">
+                  <div className="relative w-12 h-12 lg:w-14 lg:h-14 rounded-lg overflow-hidden shrink-0 border border-white/10 bg-gray-800">
                     <Image
                       src={item.image}
                       alt={item.title}
@@ -216,10 +216,10 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
                     />
                   </div>
                   <div>
-                    <h6 className="text-sm font-bold text-white group-hover:text-[#D4A359] transition-colors leading-snug line-clamp-2">
+                    <h6 className="text-sm lg:text-[15px] font-bold text-white group-hover:text-[#D4A359] transition-colors leading-snug line-clamp-2">
                       {item.title}
                     </h6>
-                    <div className="flex items-center gap-1.5 text-xs text-[#D4A359] mt-1 font-medium">
+                    <div className="flex items-center gap-1.5 text-xs lg:text-[13px] text-[#D4A359] mt-1 font-medium">
                       <Calendar className="w-3.5 h-3.5 text-[#D4A359]" />
                       <span>{item.date}</span>
                     </div>
@@ -232,35 +232,35 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
           {/* Column 5: Contact Us & Opening Hours */}
           <StaggerItem className="lg:col-span-3 lg:justify-self-end space-y-4">
             <div>
-              <h5 className="text-lg font-bold text-[#D4A359] mb-3">
+              <h5 className="text-lg lg:text-xl font-bold text-[#D4A359] mb-3">
                 {contact.title}
               </h5>
-              <div className="space-y-2.5 text-sm text-slate-200 font-medium">
+              <div className="space-y-2.5 lg:space-y-3 text-sm lg:text-[15.5px] text-slate-200 font-medium">
                 <div className="flex items-center gap-2.5">
-                  <Phone className="w-4 h-4 text-[#D4A359] shrink-0" />
+                  <Phone className="w-4 h-4 lg:w-4.5 lg:h-4.5 text-[#D4A359] shrink-0" />
                   <span>{contact.phone}</span>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <Mail className="w-4 h-4 text-[#D4A359] shrink-0" />
+                  <Mail className="w-4 h-4 lg:w-4.5 lg:h-4.5 text-[#D4A359] shrink-0" />
                   <span>{contact.email}</span>
                 </div>
                 <div className="flex items-start gap-2.5">
-                  <MapPin className="w-4 h-4 text-[#D4A359] shrink-0 mt-0.5" />
+                  <MapPin className="w-4 h-4 lg:w-4.5 lg:h-4.5 text-[#D4A359] shrink-0 mt-0.5" />
                   <span>{contact.address}</span>
                 </div>
               </div>
             </div>
 
             <div>
-              <h5 className="text-lg font-bold text-[#D4A359] mb-2.5">
+              <h5 className="text-lg lg:text-xl font-bold text-[#D4A359] mb-2.5">
                 {contact.openingHoursTitle}
               </h5>
-              <div className="space-y-1.5 text-sm text-slate-200 font-medium">
+              <div className="space-y-1.5 text-sm lg:text-[15.5px] text-slate-200 font-medium">
                 <div className="flex items-center gap-2.5">
-                  <Clock className="w-4 h-4 text-[#D4A359] shrink-0" />
+                  <Clock className="w-4 h-4 lg:w-4.5 lg:h-4.5 text-[#D4A359] shrink-0" />
                   <span className="whitespace-nowrap">{contact.openingHours}</span>
                 </div>
-                <p className="text-[#D4A359] text-sm font-bold pl-6 mt-1.5 whitespace-nowrap">{contact.closedText}</p>
+                <p className="text-[#D4A359] text-sm lg:text-[15.5px] font-bold pl-6 mt-1.5 whitespace-nowrap">{contact.closedText}</p>
               </div>
             </div>
           </StaggerItem>

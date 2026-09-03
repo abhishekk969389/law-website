@@ -915,21 +915,21 @@
                 "backgroundImage": "/subbanner.svg"
               },
               "eventSubBanner": {
-                "title": "Events & Webinars",
+                "title": "Events",
                 "breadcrumbs": [
                   {
                     "label": "Home",
                     "href": "/"
                   },
                   {
-                    "label": "Events & Webinars",
+                    "label": "Events",
                     "isActive": true
                   }
                 ],
                 "backgroundImage": "/subbanner.svg"
               },
               "publicationsSubBanner": {
-                "title": "Publications",
+                "title": "Publication",
                 "subtitle": "Articles, Legal Papers, Books & Research Publications",
                 "breadcrumbs": [
                   {
@@ -937,7 +937,7 @@
                     "href": "/"
                   },
                   {
-                    "label": "Publications",
+                    "label": "Publication",
                     "href": "/publications",
                     "isActive": true
                   }
@@ -945,7 +945,7 @@
                 "backgroundImage": "/subbanner.svg"
               },
               "awardSubBanner": {
-                "title": "Awards & Recognition",
+                "title": "Awards",
                 "subtitle": "Honors, Accolades & Industry Recognition",
                 "breadcrumbs": [
                   {
@@ -953,7 +953,7 @@
                     "href": "/"
                   },
                   {
-                    "label": "Award",
+                    "label": "Awards",
                     "href": "/award",
                     "isActive": true
                   }
@@ -1262,7 +1262,7 @@
                     "title": "Car Accidents Law",
                     "description": "Aggressive legal representation for injured victims to recover maximum compensation.",
                     "icon": "car",
-                    "image": "/service1.svg",
+                    "image": "/services/ser1.svg",
                     "link": "/service/car-accidents-law"
                   },
                   {
@@ -1270,7 +1270,7 @@
                     "title": "Criminal Defense",
                     "description": "Aggressive defense for your rights and freedom. We fight for the best possible outcome.",
                     "icon": "handshake",
-                    "image": "/service2.svg",
+                    "image": "/services/ser3.svg",
                     "link": "/service/criminal-defense"
                   },
                   {
@@ -1278,7 +1278,7 @@
                     "title": "DUI Defense",
                     "description": "Experienced representation for DUI/DWI charges and license restoration.",
                     "icon": "scale",
-                    "image": "/service1.svg",
+                    "image": "/services/ser4.svg",
                     "link": "/service/dui-defense"
                   },
                   {
@@ -1286,7 +1286,7 @@
                     "title": "Domestic Violence",
                     "description": "Compassionate legal support and protection when you need it most.",
                     "icon": "shield",
-                    "image": "/service4.svg",
+                    "image": "/services/ser5.svg",
                     "link": "/service/domestic-violence"
                   },
                   {
@@ -1294,7 +1294,7 @@
                     "title": "Simple Possession",
                     "description": "Legal assistance for simple possession charges with a focus on the future.",
                     "icon": "file-text",
-                    "image": "/service5.svg",
+                    "image": "/services/ser6.svg",
                     "link": "/service/simple-possession"
                   },
                   {
@@ -1302,7 +1302,7 @@
                     "title": "Corporate Law",
                     "description": "Strategic legal counsel for business operations, compliance, and dispute resolution.",
                     "icon": "building",
-                    "image": "/casestudy1.svg",
+                    "image": "/services/ser7.svg",
                     "link": "/service/corporate-law"
                   },
                   {
@@ -1335,7 +1335,7 @@
                   {
                     "id": "1",
                     "icon": "car",
-                    "image": "/service1.svg",
+                    "image": "/services/ser1.svg",
                     "title": "Car Accidents Law",
                     "description": "Aggressive legal representation for injured victims to recover maximum compensation.",
                     "linkText": "Learn More",
@@ -1344,7 +1344,7 @@
                   {
                     "id": "2",
                     "icon": "handcuffs",
-                    "image": "/service2.svg",
+                    "image": "/services/ser3.svg",
                     "title": "Criminal Defense",
                     "description": "Aggressive defense for your rights and freedom. We fight for the best possible outcome.",
                     "linkText": "Learn More",
@@ -1353,7 +1353,7 @@
                   {
                     "id": "3",
                     "icon": "shield",
-                    "image": "/service1.svg",
+                    "image": "/services/ser4.svg",
                     "title": "DUI Defense",
                     "description": "Experienced representation for DUI/DWI charges and license restoration.",
                     "linkText": "Learn More",
@@ -1362,8 +1362,17 @@
                   {
                     "id": "4",
                     "icon": "fileText",
-                    "image": "/service5.svg",
+                    "image": "/services/ser5.svg",
                     "title": "Domestic Violence",
+                    "description": "Compassionate legal support and protection when you need it most.",
+                    "linkText": "Learn More",
+                    "linkHref": "/service/domestic-violence"
+                  },
+                  {
+                    "id": "5",
+                    "icon": "fileText",
+                    "image": "/services/ser6.svg",
+                    "title": "Corporate Law",
                     "description": "Compassionate legal support and protection when you need it most.",
                     "linkText": "Learn More",
                     "linkHref": "/service/domestic-violence"
@@ -1504,7 +1513,7 @@
                     "title": "Banking & Financial Services",
                     "description": "We advise banks, financial institutions, and fintech companies on regulatory compliance, risk management, transactions, and dispute resolution.",
                     "icon": "landmark",
-                    "image": "/about.svg",
+                    "image": "/industry/ind1.svg",
                     "link": "/industries/banking-financial"
                   },
                   {
@@ -1512,7 +1521,7 @@
                     "title": "Corporate & Commercial",
                     "description": "From mergers and acquisitions to corporate governance and commercial contracts, we help businesses navigate complex legal landscapes and achieve their goals.",
                     "icon": "building",
-                    "image": "/service1.svg",
+                    "image": "/industry/ind2.svg",
                     "link": "/industries/corporate-commercial"
                   },
                   {
@@ -1520,7 +1529,7 @@
                     "title": "Real Estate & Construction",
                     "description": "We provide end-to-end legal support for real estate transactions, construction projects, property disputes, and regulatory approvals.",
                     "icon": "construction",
-                    "image": "/service2.svg",
+                    "image": "/industry/ind3.svg",
                     "link": "/industries/real-estate-construction"
                   },
                   {
@@ -1528,7 +1537,7 @@
                     "title": "Litigation & Dispute Resolution",
                     "description": "Our litigators represent clients in complex commercial disputes, arbitration, and alternative dispute resolution with a focus on favorable outcomes.",
                     "icon": "scale",
-                    "image": "/service1.svg",
+                    "image": "/law1.svg",
                     "link": "/industries/litigation-dispute"
                   },
                   {
@@ -1536,7 +1545,7 @@
                     "title": "Technology, Media & Telecom",
                     "description": "We help technology, media, and telecom companies with regulatory compliance, data protection, intellectual property, and commercial agreements.",
                     "icon": "shield",
-                    "image": "/service4.svg",
+                    "image": "/industry/ind4.svg",
                     "link": "/industries/technology-media-telecom"
                   },
                   {
@@ -1544,7 +1553,7 @@
                     "title": "Energy & Environment",
                     "description": "We support energy and environmental projects with regulatory compliance, risk assessment, and sustainable business practices.",
                     "icon": "leaf",
-                    "image": "/service5.svg",
+                    "image": "/industry/ind5.svg",
                     "link": "/industries/energy-environment"
                   }
                 ]
@@ -1610,7 +1619,7 @@
                   "icon": "landmark",
                   "tagline": "Specialized Financial Legal Advisory",
                   "introText": "We advise banks, financial institutions, and fintech companies on regulatory compliance, risk management, transactions, and dispute resolution. Our in-depth knowledge of the financial sector enables us to deliver practical, strategic, and effective legal solutions.",
-                  "heroImage": "/service1.svg",
+                  "heroImage": "/industry/ind1.svg",
                   "overviewHeading": "Overview",
                   "overviewDescription": "The banking and financial services industry operates in a highly regulated environment that requires constant vigilance and adaptability. We provide comprehensive legal support to help institutions navigate complex regulations, manage risks, and achieve their business objectives while maintaining compliance and governance standards.",
                   "servicesHeading": "Our Services",
@@ -1733,7 +1742,7 @@
                   "icon": "building",
                   "tagline": "Strategic Commercial Counsel & Operations",
                   "introText": "From mergers and acquisitions to corporate governance and commercial contracts, we help businesses navigate complex legal landscapes and achieve strategic corporate objectives.",
-                  "heroImage": "/service2.svg",
+                  "heroImage": "/industry/ind2.svg",
                   "overviewHeading": "Overview",
                   "overviewDescription": "Corporate and commercial entities require agile legal counsel to navigate rapidly changing economic conditions, regulatory shifts, and contractual complexities. Our team provides end-to-end support for business growth, risk management, and international operations.",
                   "servicesHeading": "Our Services",
@@ -1842,7 +1851,7 @@
                   "icon": "construction",
                   "tagline": "Comprehensive Property & Project Legal Support",
                   "introText": "We provide end-to-end legal support for real estate transactions, construction projects, property disputes, and complex land acquisitions.",
-                  "heroImage": "/service5.svg",
+                  "heroImage": "/industry/ind3.svg",
                   "overviewHeading": "Overview",
                   "overviewDescription": "Real estate development and construction demand rigorous legal oversight across land titles, zoning permits, construction contracts, and financing structures. We safeguard developer, investor, and contractor interests at every development stage.",
                   "servicesHeading": "Our Services",
@@ -1958,7 +1967,7 @@
                   "icon": "scale",
                   "tagline": "Formidable Courtroom Defense & Arbitration",
                   "introText": "Our seasoned litigators represent clients in high-stakes commercial disputes, international arbitration, and trial court proceedings to achieve decisive results.",
-                  "heroImage": "/about.svg",
+                  "heroImage": "/law1.svg",
                   "overviewHeading": "Overview",
                   "overviewDescription": "When dispute arises, effective legal advocacy is paramount to safeguarding commercial assets and corporate reputation. Our litigation practice combines rigorous legal research, persuasive advocacy, and strategic negotiation tactics.",
                   "servicesHeading": "Our Services",
@@ -2074,7 +2083,7 @@
                   "icon": "shield",
                   "tagline": "Next-Gen Tech, Privacy & Digital Regulatory Legal Counsel",
                   "introText": "We help tech, media, and telecom pioneers manage data protection laws, software licensing, artificial intelligence compliance, and IP strategy.",
-                  "heroImage": "/service4.svg",
+                  "heroImage": "/industry/ind4.svg",
                   "overviewHeading": "Overview",
                   "overviewDescription": "The tech and media ecosystem moves rapidly, presenting novel regulatory hurdles around data privacy, IP enforcement, SaaS contracts, and telecom licensing. We provide forward-looking counsel for digital innovators.",
                   "servicesHeading": "Our Services",
@@ -2190,7 +2199,7 @@
                   "icon": "leaf",
                   "tagline": "Sustainable Energy, Power & ESG Governance",
                   "introText": "We guide renewable energy developers, power utilities, and industrial clients through environmental compliance, ESG frameworks, and energy project financing.",
-                  "heroImage": "/service5.svg",
+                  "heroImage": "/industry/ind5.svg",
                   "overviewHeading": "Overview",
                   "overviewDescription": "Energy transition and environmental sustainability represent major legal shifts for businesses worldwide. We counsel renewable energy, oil & gas, and manufacturing clients on regulatory clearances, carbon credits, and environmental dispute resolution.",
                   "servicesHeading": "Our Services",
@@ -2784,7 +2793,7 @@
                     "number": "01",
                     "title": "Maximum Compensation For Car Accident Victim",
                     "description": "We secured a six-figure settlement for a client injured in a severe car accident caused by a negligent driver.",
-                    "image": "/casestudy1.svg",
+                    "image": "/services/ser6.svg",
                     "linkText": "View Case Study",
                     "linkHref": "/casestudy/car-accident-victim"
                   },
@@ -2793,7 +2802,7 @@
                     "number": "02",
                     "title": "Dismissal Of Charges In A DUI Case",
                     "description": "Our strategic defense led to a complete dismissal of DUI charges, protecting our client's license and future.",
-                    "image": "/casestudy2.svg",
+                    "image": "/services/ser7.svg",
                     "linkText": "View Case Study",
                     "linkHref": "/casestudy/dui-dismissal"
                   },
@@ -2802,7 +2811,7 @@
                     "number": "03",
                     "title": "Reduced Penalties In Reckless Driving Case",
                     "description": "We negotiated significantly reduced penalties and fines for a client charged with reckless driving.",
-                    "image": "/casestudy3.svg",
+                    "image": "/blog/blog1.svg",
                     "linkText": "View Case Study",
                     "linkHref": "/casestudy/reckless-driving"
                   },
@@ -2928,7 +2937,7 @@
                   },
                   "subtitle": "We secured a six-figure settlement for a client injured in a severe car accident caused by a negligent driver.",
                   "introText": "We secured a six-figure settlement for a client injured in a severe car accident caused by a negligent driver.",
-                  "image": "/casedetail.svg",
+                  "image": "/services/ser6.svg",
                   "meta": [
                     {
                       "label": "Practice Area",
@@ -2975,7 +2984,7 @@
                   },
                   "subtitle": "Strategic defense led to complete dismissal of DUI charges, preserving license and record.",
                   "introText": "Our defense team launched an immediate investigation into breathalyzer calibration logs and field sobriety procedures.",
-                  "image": "/casestudy2.svg",
+                  "image": "/services/ser7.svg",
                   "meta": [
                     {
                       "label": "Practice Area",
@@ -3022,7 +3031,7 @@
                   },
                   "subtitle": "Negotiated reduced penalties and preserved driving record for a professional driver.",
                   "introText": "Strategic negotiation and traffic telemetry analysis secured a non-moving violation plea.",
-                  "image": "/casestudy3.svg",
+                  "image": "/blog/blog1.svg",
                   "meta": [
                     {
                       "label": "Practice Area",
@@ -3221,7 +3230,7 @@
                     "author": "Jonson",
                     "date": "23 Sep, 2025",
                     "commentsCount": "3 Comments",
-                    "image": "/about.svg",
+                    "image": "/blog/blog1.svg",
                     "linkHref": "/blog/latest-changes-family-law-1",
                     "linkText": "Read More"
                   },
@@ -3231,7 +3240,7 @@
                     "author": "Jonson",
                     "date": "24 Sep, 2025",
                     "commentsCount": "2 Comments",
-                    "image": "/service1.svg",
+                    "image": "/blog/blog2.svg",
                     "linkHref": "/blog/significant-modifications-family-law-1",
                     "linkText": "Read More"
                   },
@@ -3241,7 +3250,7 @@
                     "author": "Jonson",
                     "date": "25 Sep, 2025",
                     "commentsCount": "4 Comments",
-                    "image": "/service2.svg",
+                    "image": "/blog/blog3.svg",
                     "linkHref": "/blog/crucial-updates-family-law-1",
                     "linkText": "Read More"
                   },
@@ -3251,7 +3260,7 @@
                     "author": "Jonson",
                     "date": "23 Sep, 2025",
                     "commentsCount": "3 Comments",
-                    "image": "/about.svg",
+                    "image": "/blog/blog2.svg",
                     "linkHref": "/blog/latest-changes-family-law-2",
                     "linkText": "Read More"
                   },
@@ -3261,7 +3270,7 @@
                     "author": "Jonson",
                     "date": "24 Sep, 2025",
                     "commentsCount": "2 Comments",
-                    "image": "/service1.svg",
+                    "image": "/blog/blog3.svg",
                     "linkHref": "/blog/significant-modifications-family-law-2",
                     "linkText": "Read More"
                   },
@@ -3271,7 +3280,7 @@
                     "author": "Jonson",
                     "date": "25 Sep, 2025",
                     "commentsCount": "4 Comments",
-                    "image": "/service2.svg",
+                    "image": "/blog/blog1.svg",
                     "linkHref": "/blog/crucial-updates-family-law-2",
                     "linkText": "Read More"
                   },
@@ -3281,7 +3290,7 @@
                     "author": "Sophia Martinez",
                     "date": "26 Sep, 2025",
                     "commentsCount": "5 Comments",
-                    "image": "/casestudy1.svg",
+                    "image": "/blog/blog3.svg",
                     "linkHref": "/blog/corporate-restructuring-ma-guidelines",
                     "linkText": "Read More"
                   },
@@ -3291,7 +3300,7 @@
                     "author": "Michael Thompson",
                     "date": "27 Sep, 2025",
                     "commentsCount": "3 Comments",
-                    "image": "/casestudy2.svg",
+                    "image": "/blog/blog2.svg",
                     "linkHref": "/blog/real-estate-laws-lease-agreements",
                     "linkText": "Read More"
                   },
@@ -3301,7 +3310,7 @@
                     "author": "Emily Roberts",
                     "date": "28 Sep, 2025",
                     "commentsCount": "6 Comments",
-                    "image": "/casestudy3.svg",
+                    "image": "/blog/blog1.svg",
                     "linkHref": "/blog/intellectual-property-digital-brand",
                     "linkText": "Read More"
                   },
@@ -3311,7 +3320,7 @@
                     "author": "Jonathan Pierce",
                     "date": "29 Sep, 2025",
                     "commentsCount": "2 Comments",
-                    "image": "/casestudy4.svg",
+                    "image": "/blog/blog1.svg",
                     "linkHref": "/blog/criminal-defense-strategies-trial-law",
                     "linkText": "Read More"
                   },
@@ -3321,7 +3330,7 @@
                     "author": "David Kapoor",
                     "date": "30 Sep, 2025",
                     "commentsCount": "4 Comments",
-                    "image": "/about.svg",
+                    "image": "/blog/blog2.svg",
                     "linkHref": "/blog/tax-regulation-updates-sme",
                     "linkText": "Read More"
                   },
@@ -3331,7 +3340,7 @@
                     "author": "Richard Hamilton",
                     "date": "01 Oct, 2025",
                     "commentsCount": "1 Comment",
-                    "image": "/service1.svg",
+                    "image": "/blog/blog3.svg",
                     "linkHref": "/blog/labor-laws-employment-dispute-resolution",
                     "linkText": "Read More"
                   }
@@ -3389,7 +3398,7 @@
                     "author": "Jonson",
                     "category": "Attorney",
                     "date": "23 Sep, 2025",
-                    "image": "/about.svg",
+                    "image": "/blog/blog1.svg",
                     "linkHref": "/blog/latest-changes-family-law-1"
                   },
                   {
@@ -3399,7 +3408,7 @@
                     "author": "Jonson",
                     "category": "Attorney",
                     "date": "24 Sep, 2025",
-                    "image": "/service1.svg",
+                    "image": "/blog/blog2.svg",
                     "linkHref": "/blog/significant-modifications-family-law-1"
                   },
                   {
@@ -3409,7 +3418,7 @@
                     "author": "Jonson",
                     "category": "Attorney",
                     "date": "25 Sep, 2025",
-                    "image": "/service2.svg",
+                    "image": "/blog/blog3.svg",
                     "linkHref": "/blog/crucial-updates-family-law-1"
                   },
                   {
@@ -3419,7 +3428,7 @@
                     "author": "Jonson",
                     "category": "Attorney",
                     "date": "23 Sep, 2025",
-                    "image": "/about.svg",
+                    "image": "/blog/blog2.svg",
                     "linkHref": "/blog/latest-changes-family-law-2"
                   },
                   {
@@ -3429,7 +3438,7 @@
                     "author": "Jonson",
                     "category": "Attorney",
                     "date": "24 Sep, 2025",
-                    "image": "/service1.svg",
+                    "image": "/blog/blog3.svg",
                     "linkHref": "/blog/significant-modifications-family-law-2"
                   }
                 ],
@@ -3466,7 +3475,7 @@
                   "category": "CORPORATE LAW",
                   "title": "New Corporate Governance Rules: What Businesses Need to Know",
                   "description": "A comprehensive overview of the newly introduced corporate governance rules and their impact on businesses. Understand your responsibilities and stay compliant.",
-                  "image": "/subbanner.svg",
+                  "image": "/services/ser6.svg",
                   "link": "/legal/corporate-governance-rules-2024"
                 },
                 "items": [
@@ -3476,7 +3485,7 @@
                     "category": "LITIGATION",
                     "title": "Recent Supreme Court Rulings and Their Impact",
                     "description": "Key takeaways from recent Supreme Court decisions and how they may impact ongoing and future cases.",
-                    "image": "/about.svg",
+                    "image": "/services/ser7.svg",
                     "link": "/legal/supreme-court-rulings"
                   },
                   {
@@ -3485,7 +3494,7 @@
                     "category": "CONTRACT LAW",
                     "title": "Essential Clauses Every Business Contract Must Have",
                     "description": "Learn about the crucial contract clauses that protect your business interests and minimize legal risks.",
-                    "image": "/service1.svg",
+                    "image": "/blog/blog1.svg",
                     "link": "/legal/essential-contract-clauses"
                   },
                   {
@@ -3494,7 +3503,7 @@
                     "category": "DATA PRIVACY",
                     "title": "Data Privacy Compliance: A Guide for Businesses",
                     "description": "Understand the latest data privacy regulations and steps your business should take to ensure compliance.",
-                    "image": "/service4.svg",
+                    "image": "/blog/blog2.svg",
                     "link": "/legal/data-privacy-compliance"
                   },
                   {
@@ -3503,7 +3512,7 @@
                     "category": "CRIMINAL LAW",
                     "title": "Bail Laws in 2024: Key Changes Explained",
                     "description": "An overview of the recent amendments in bail laws and what they mean for defendants and legal practitioners.",
-                    "image": "/service2.svg",
+                    "image": "/blog/blog3.svg",
                     "link": "/legal/bail-laws-2024-changes"
                   },
                   {
@@ -3512,7 +3521,7 @@
                     "category": "EMPLOYMENT LAW",
                     "title": "Workplace Policies You Need to Update in 2024",
                     "description": "Important workplace policy updates businesses should implement to stay compliant with current laws.",
-                    "image": "/service5.svg",
+                    "image": "/services/ser6.svg",
                     "link": "/legal/workplace-policies-update"
                   },
                   {
@@ -3521,7 +3530,7 @@
                     "category": "FAMILY LAW",
                     "title": "Understanding Child Custody Laws in Modern Times",
                     "description": "A guide to child custody laws and how courts determine the best interests of the child in today's world.",
-                    "image": "/casestudy1.svg",
+                    "image": "/services/ser7.svg",
                     "link": "/legal/child-custody-laws"
                   },
                   {
@@ -3530,7 +3539,7 @@
                     "category": "TAXATION",
                     "title": "GST Compliance Updates for Financial Year 2024-25",
                     "description": "Essential GST updates and statutory compliance checklists for Indian corporates and startups.",
-                    "image": "/casestudy2.svg",
+                    "image": "/blog/blog1.svg",
                     "link": "/legal/gst-compliance-updates"
                   },
                   {
@@ -3539,7 +3548,7 @@
                     "category": "INTELLECTUAL PROPERTY",
                     "title": "Trademark Protection Strategies in Digital Marketplaces",
                     "description": "How e-commerce sellers and brand owners can safeguard their trademarks against online infringement.",
-                    "image": "/casestudy3.svg",
+                    "image": "/blog/blog2.svg",
                     "link": "/legal/trademark-protection-digital"
                   },
                   {
@@ -3548,7 +3557,7 @@
                     "category": "REAL ESTATE",
                     "title": "RERA Judgments: Standardizing Real Estate Lease Standards",
                     "description": "Analyzing key RERA rulings on builder-buyer agreements and delayed possession compensation.",
-                    "image": "/casestudy4.svg",
+                    "image": "/blog/blog3.svg",
                     "link": "/legal/rera-judgments-real-estate"
                   },
                   {
@@ -3557,7 +3566,7 @@
                     "category": "BANKING & FINANCE",
                     "title": "NCLT Insolvency Proceedings: Rights of Financial Creditors",
                     "description": "Understanding the priority of financial creditors during corporate insolvency resolution processes.",
-                    "image": "/about.svg",
+                    "image": "/services/ser6.svg",
                     "link": "/legal/nclt-insolvency-proceedings"
                   },
                   {
@@ -3566,7 +3575,7 @@
                     "category": "ENVIRONMENTAL LAW",
                     "title": "ESG Disclosure Mandates for Listed Companies",
                     "description": "SEBI's new Business Responsibility and Sustainability Reporting (BRSR) norms explained.",
-                    "image": "/service1.svg",
+                    "image": "/services/ser7.svg",
                     "link": "/legal/esg-disclosure-mandates"
                   },
                   {
@@ -3575,7 +3584,7 @@
                     "category": "CYBER LAW",
                     "title": "Cybercrime Prevention and Incident Response Plans",
                     "description": "Legal guidelines for enterprise cyber incident reporting and mitigating ransomware liabilities.",
-                    "image": "/service1.svg",
+                    "image": "/blog/blog1.svg",
                     "link": "/legal/cybercrime-prevention-incident-response"
                   }
                 ]
@@ -3588,7 +3597,7 @@
                     "slug": "corporate-governance-rules-2024",
                     "title": "New Corporate Governance Rules: What Businesses Need to Know",
                     "date": "MAY 20, 2024",
-                    "image": "/about.svg",
+                    "image": "/services/ser6.svg",
                     "link": "/legal/corporate-governance-rules-2024"
                   },
                   {
@@ -3596,7 +3605,7 @@
                     "slug": "supreme-court-rulings",
                     "title": "Recent Supreme Court Rulings and Their Impact",
                     "date": "MAY 15, 2024",
-                    "image": "/casedetail.svg",
+                    "image": "/services/ser7.svg",
                     "link": "/legal/supreme-court-rulings"
                   },
                   {
@@ -3604,7 +3613,7 @@
                     "slug": "essential-contract-clauses",
                     "title": "Essential Clauses Every Business Contract Must Have",
                     "date": "MAY 10, 2024",
-                    "image": "/service1.svg",
+                    "image": "/blog/blog1.svg",
                     "link": "/legal/essential-contract-clauses"
                   },
                   {
@@ -3612,7 +3621,7 @@
                     "slug": "data-privacy-compliance",
                     "title": "Data Privacy Compliance: A Guide for Businesses",
                     "date": "MAY 05, 2024",
-                    "image": "/service4.svg",
+                    "image": "/blog/blog2.svg",
                     "link": "/legal/data-privacy-compliance"
                   },
                   {
@@ -3620,7 +3629,7 @@
                     "slug": "bail-laws-2024-changes",
                     "title": "Bail Laws in 2024: Key Changes Explained",
                     "date": "APR 30, 2024",
-                    "image": "/service2.svg",
+                    "image": "/blog/blog3.svg",
                     "link": "/legal/bail-laws-2024-changes"
                   }
                 ]
@@ -3863,7 +3872,7 @@
                     "category": "CORPORATE LAW",
                     "title": "New Corporate Governance Rules: What Businesses Need to Know",
                     "description": "A comprehensive overview of the newly introduced corporate governance rules and their impact on businesses.",
-                    "image": "/service1.svg",
+                    "image": "/services/ser6.svg",
                     "link": "/publications/corporate-governance-rules",
                     "slug": "corporate-governance-rules"
                   },
@@ -3873,7 +3882,7 @@
                     "category": "LITIGATION",
                     "title": "Recent Supreme Court Rulings and Their Impact",
                     "description": "Key takeaways from recent Supreme Court decisions and how they may impact ongoing and future cases.",
-                    "image": "/about.svg",
+                    "image": "/services/ser7.svg",
                     "link": "/publications/supreme-court-rulings",
                     "slug": "supreme-court-rulings"
                   },
@@ -3883,7 +3892,7 @@
                     "category": "CONTRACT LAW",
                     "title": "Essential Clauses Every Business Contract Must Have",
                     "description": "Learn about the crucial contract clauses that protect your business interests and minimize legal risks.",
-                    "image": "/service4.svg",
+                    "image": "/blog/blog1.svg",
                     "link": "/publications/essential-contract-clauses",
                     "slug": "essential-contract-clauses"
                   },
@@ -3893,7 +3902,7 @@
                     "category": "DATA PRIVACY",
                     "title": "Data Privacy Compliance: A Guide for Businesses",
                     "description": "Understand the latest data privacy regulations and steps your business should take to ensure compliance.",
-                    "image": "/service5.svg",
+                    "image": "/blog/blog2.svg",
                     "link": "/publications/data-privacy-guide",
                     "slug": "data-privacy-guide"
                   },
@@ -3903,7 +3912,7 @@
                     "category": "CRIMINAL LAW",
                     "title": "Bail Laws in 2024: Key Changes Explained",
                     "description": "An overview of the recent amendments in bail laws and what they mean for defendants and legal practitioners.",
-                    "image": "/service2.svg",
+                    "image": "/blog/blog3.svg",
                     "link": "/publications/bail-laws-2024",
                     "slug": "bail-laws-2024"
                   },
@@ -3913,7 +3922,7 @@
                     "category": "FAMILY LAW",
                     "title": "Understanding Child Custody Laws in Modern Times",
                     "description": "A guide to child custody laws and how courts determine the best interests of the child in today's world.",
-                    "image": "/casestudy1.svg",
+                    "image": "/services/ser6.svg",
                     "link": "/publications/child-custody-laws",
                     "slug": "child-custody-laws"
                   },
@@ -3923,7 +3932,7 @@
                     "category": "REAL ESTATE",
                     "title": "Commercial Real Estate Leases: Tenant Rights and Drafting Guide",
                     "description": "Essential legal considerations when negotiating commercial real estate leases and property rights.",
-                    "image": "/casestudy2.svg",
+                    "image": "/services/ser7.svg",
                     "link": "/publications/commercial-real-estate-leases",
                     "slug": "commercial-real-estate-leases"
                   },
@@ -3933,7 +3942,7 @@
                     "category": "TAXATION",
                     "title": "Corporate Tax Structuring and Cross-Border Transaction Insights",
                     "description": "Strategies for corporate tax optimization and double taxation avoidance agreement compliance.",
-                    "image": "/casestudy3.svg",
+                    "image": "/blog/blog1.svg",
                     "link": "/publications/corporate-tax-structuring",
                     "slug": "corporate-tax-structuring"
                   },
@@ -3943,7 +3952,7 @@
                     "category": "ARBITRATION",
                     "title": "Commercial Dispute Resolution through International Arbitration",
                     "description": "A guide to enforcing international arbitral awards and resolving cross-border contract conflicts.",
-                    "image": "/casestudy4.svg",
+                    "image": "/blog/blog2.svg",
                     "link": "/publications/international-arbitration-guide",
                     "slug": "international-arbitration-guide"
                   },
@@ -3953,7 +3962,7 @@
                     "category": "FINANCE & BANKING",
                     "title": "Regulatory Framework for Fintech and Digital Payment Platforms",
                     "description": "Understanding RBI regulations and compliance protocols for emerging financial technology ventures.",
-                    "image": "/about.svg",
+                    "image": "/blog/blog3.svg",
                     "link": "/publications/fintech-digital-payment-regulations",
                     "slug": "fintech-digital-payment-regulations"
                   },
@@ -3963,7 +3972,7 @@
                     "category": "LABOR & EMPLOYMENT",
                     "title": "Managing Executive Severance and Non-Compete Agreements",
                     "description": "Legal enforceability of non-compete clauses, non-solicitation covenants, and executive exit terms.",
-                    "image": "/service1.svg",
+                    "image": "/services/ser6.svg",
                     "link": "/publications/executive-severance-non-compete",
                     "slug": "executive-severance-non-compete"
                   },
@@ -3973,7 +3982,7 @@
                     "category": "CYBERSECURITY",
                     "title": "Enterprise Ransomware Defense and Statutory Data Breach Reporting",
                     "description": "Steps organizations must take upon discovering a cybersecurity breach under CERT-In guidelines.",
-                    "image": "/service1.svg",
+                    "image": "/services/ser7.svg",
                     "link": "/publications/enterprise-cybersecurity-defense",
                     "slug": "enterprise-cybersecurity-defense"
                   }
@@ -3987,7 +3996,7 @@
                     "slug": "corporate-governance-rules",
                     "title": "New Corporate Governance Rules: What Businesses Need to Know",
                     "date": "MAY 20, 2024",
-                    "image": "/casestudy1.svg",
+                    "image": "/services/ser6.svg",
                     "link": "/publications/corporate-governance-rules"
                   },
                   {
@@ -3995,7 +4004,7 @@
                     "slug": "supreme-court-rulings",
                     "title": "Recent Supreme Court Rulings and Their Impact",
                     "date": "MAY 15, 2024",
-                    "image": "/about.svg",
+                    "image": "/services/ser7.svg",
                     "link": "/publications/supreme-court-rulings"
                   },
                   {
@@ -4003,7 +4012,7 @@
                     "slug": "essential-contract-clauses",
                     "title": "Essential Clauses Every Business Contract Must Have",
                     "date": "MAY 10, 2024",
-                    "image": "/service4.svg",
+                    "image": "/blog/blog1.svg",
                     "link": "/publications/essential-contract-clauses"
                   },
                   {
@@ -4011,7 +4020,7 @@
                     "slug": "data-privacy-guide",
                     "title": "Data Privacy Compliance: A Guide for Businesses",
                     "date": "MAY 05, 2024",
-                    "image": "/service5.svg",
+                    "image": "/blog/blog2.svg",
                     "link": "/publications/data-privacy-guide"
                   },
                   {
@@ -4019,7 +4028,7 @@
                     "slug": "bail-laws-2024",
                     "title": "Bail Laws in 2024: Key Changes Explained",
                     "date": "APR 30, 2024",
-                    "image": "/service2.svg",
+                    "image": "/blog/blog3.svg",
                     "link": "/publications/bail-laws-2024"
                   }
                 ]
@@ -5258,26 +5267,26 @@
                 "items": [
                   {
                     "id": "1",
-                    "quote": "I was struggling with family law for months before I found abc. They not only provided me with the solution I needed, but they also educated me on how to prevent the issue from happening again. Their team is incredibly knowledgeable and patient, and they always go the extra mile to ensure customer satisfaction. I am so grateful for their help and would recommend them to anyone.",
+                    "quote": "I was struggling with family law for months before I found abc. They not only provided me with the solution I needed, but they also educated me on how to prevent the issue from happening again. Their team is incredibly knowledgeable and patient, and they always go the extra mile to ensure customer satisfaction. I am so grateful for their help and would recommend them to anyone I was struggling with family law for months before.",
                     "authorName": "William Hazelip",
                     "authorRole": "Ui/Ux Designer",
-                    "authorAvatar": "/service1.svg",
+                    "authorAvatar": "/team/team1.jpg",
                     "rating": 5
                   },
                   {
                     "id": "2",
-                    "quote": "Veritas Law Partners handled our complex business litigation with exceptional diligence and professionalism. Their strategic insight secured a victory beyond our expectations. Truly a top-tier legal team.",
+                    "quote": "Veritas Law Partners handled our complex business litigation with exceptional diligence and professionalism. Their strategic insight secured a victory beyond our expectations. Truly a top-tier legal team I was struggling with family law for months before I found abc. They not only provided me with the solution I needed, but they also educated me on how to prevent the issue from happening again. Their team is incredibly knowledgeable and patient.",
                     "authorName": "Sarah Jenkins",
                     "authorRole": "Corporate Executive",
-                    "authorAvatar": "/service2.svg",
+                    "authorAvatar": "/team/team2.jpg",
                     "rating": 5
                   },
                   {
                     "id": "3",
-                    "quote": "Prompt, compassionate, and fiercely defensive of our rights. They stood by us every step of the way and made an overwhelming process seamless and reassuring.",
+                    "quote": "Prompt, compassionate, and fiercely defensive of our rights. They stood by us every step of the way and made an overwhelming process seamless and reassuring I was struggling with family law for months before I found abc. They not only provided me with the solution I needed, but they also educated me on how to prevent the issue from happening again. Their team is incredibly knowledgeable and patient, and they always.",
                     "authorName": "Michael Ross",
                     "authorRole": "Small Business Owner",
-                    "authorAvatar": "/service1.svg",
+                    "authorAvatar": "/team/team3.jpg",
                     "rating": 5
                   }
                 ]
@@ -5459,21 +5468,21 @@
                       "id": "1",
                       "title": "It's important to keep up with the latest changes in family law.",
                       "date": "23 Sep, 2025",
-                      "image": "/about.svg",
+                      "image": "/blog/blog1.svg",
                       "linkHref": "/blog/latest-changes-family-law-1"
                     },
                     {
                       "id": "2",
                       "title": "There have been significant modifications in family law.",
                       "date": "24 Sep, 2025",
-                      "image": "/service1.svg",
+                      "image": "/blog/blog2.svg",
                       "linkHref": "/blog/significant-modifications-family-law-1"
                     },
                     {
                       "id": "3",
                       "title": "It's crucial to be aware of the latest updates in family law.",
                       "date": "25 Sep, 2025",
-                      "image": "/service2.svg",
+                      "image": "/blog/blog3.svg",
                       "linkHref": "/blog/crucial-updates-family-law-1"
                     }
                   ]
@@ -5505,7 +5514,7 @@
                     "line2": "Law"
                   },
                   "subtitle": "We provide aggressive legal representation for individuals injured in car accidents. Our goal is to help you recover the compensation you deserve so you can focus on your recovery.",
-                  "headerImage": "/service1.svg",
+                  "headerImage": "/services/ser1.svg",
                   "highlights": [
                     {
                       "id": "h1",
@@ -5599,7 +5608,7 @@
                     "line2": "Law"
                   },
                   "subtitle": "Aggressive defense for your rights and freedom. We fight relentlessly for the best possible outcome in state and federal courts.",
-                  "headerImage": "/service2.svg",
+                  "headerImage": "/services/ser3.svg",
                   "highlights": [
                     {
                       "id": "h1",
@@ -5669,7 +5678,7 @@
                     "line2": "Law"
                   },
                   "subtitle": "Experienced legal representation for DUI/DWI charges, breathalyzer challenges, and driver's license restoration.",
-                  "headerImage": "/service1.svg",
+                  "headerImage": "/services/ser4.svg",
                   "highlights": [
                     {
                       "id": "h1",
@@ -5739,7 +5748,7 @@
                     "line2": "Law"
                   },
                   "subtitle": "Compassionate legal support, emergency protective orders, and defense representation during sensitive family matters.",
-                  "headerImage": "/service4.svg",
+                  "headerImage": "/services/ser5.svg",
                   "highlights": [
                     {
                       "id": "h1",
@@ -5809,7 +5818,7 @@
                     "line2": "Law"
                   },
                   "subtitle": "Strategic legal assistance for possession charges with a focus on pre-trial diversion and record protection.",
-                  "headerImage": "/service5.svg",
+                  "headerImage": "/services/ser6.svg",
                   "highlights": [
                     {
                       "id": "h1",
@@ -5879,7 +5888,7 @@
                     "line2": "Law"
                   },
                   "subtitle": "Comprehensive legal advisory for enterprise formation, contract negotiations, compliance, and business litigation.",
-                  "headerImage": "/service2.svg",
+                  "headerImage": "/services/ser7.svg",
                   "highlights": [
                     {
                       "id": "h1",
@@ -5949,7 +5958,7 @@
                     "line2": "Law"
                   },
                   "subtitle": "Dedicated legal guidance for divorce, child custody agreements, spousal support, and marital property division.",
-                  "headerImage": "/service1.svg",
+                  "headerImage": "/casestudy2.svg",
                   "highlights": [
                     {
                       "id": "h1",
@@ -6019,7 +6028,7 @@
                     "line2": "Law"
                   },
                   "subtitle": "Relentless legal advocacy for victims of negligence to recover medical costs, lost income, and pain & suffering.",
-                  "headerImage": "/service4.svg",
+                  "headerImage": "/casestudy3.svg",
                   "highlights": [
                     {
                       "id": "h1",
@@ -6740,7 +6749,7 @@
                   "id": "latest-changes-family-law-1",
                   "slug": "latest-changes-family-law-1",
                   "title": "latest changes in family law.",
-                  "image": "/about.svg",
+                  "image": "/blog/blog1.svg",
                   "author": "Jonson",
                   "category": "Attorney",
                   "date": "23 Sep, 2025",
@@ -6764,7 +6773,7 @@
                   "id": "significant-modifications-family-law-1",
                   "slug": "significant-modifications-family-law-1",
                   "title": "modifications in family law.",
-                  "image": "/service1.svg",
+                  "image": "/blog/blog2.svg",
                   "author": "Jonson",
                   "category": "Attorney",
                   "date": "24 Sep, 2025",
@@ -6788,7 +6797,7 @@
                   "id": "crucial-updates-family-law-1",
                   "slug": "crucial-updates-family-law-1",
                   "title": "latest updates in family law.",
-                  "image": "/service2.svg",
+                  "image": "/blog/blog3.svg",
                   "author": "Jonson",
                   "category": "Attorney",
                   "date": "25 Sep, 2025",
@@ -6812,7 +6821,7 @@
                   "id": "latest-changes-family-law-2",
                   "slug": "latest-changes-family-law-2",
                   "title": "latest changes in family law.",
-                  "image": "/about.svg",
+                  "image": "/blog/blog2.svg",
                   "author": "Jonson",
                   "category": "Attorney",
                   "date": "23 Sep, 2025",
@@ -6836,7 +6845,7 @@
                   "id": "significant-modifications-family-law-2",
                   "slug": "significant-modifications-family-law-2",
                   "title": "modifications in family law.",
-                  "image": "/service1.svg",
+                  "image": "/blog/blog3.svg",
                   "author": "Jonson",
                   "category": "Attorney",
                   "date": "24 Sep, 2025",
@@ -6860,7 +6869,7 @@
                   "id": "crucial-updates-family-law-2",
                   "slug": "crucial-updates-family-law-2",
                   "title": "latest updates in family law.",
-                  "image": "/service2.svg",
+                  "image": "/blog/blog1.svg",
                   "author": "Jonson",
                   "category": "Attorney",
                   "date": "25 Sep, 2025",
@@ -6884,7 +6893,7 @@
                   "id": "corporate-restructuring-ma-guidelines",
                   "slug": "corporate-restructuring-ma-guidelines",
                   "title": "Restructuring and M&A Guidelines.",
-                  "image": "/casestudy1.svg",
+                  "image": "/blog/blog3.svg",
                   "author": "Sophia Martinez",
                   "category": "Attorney",
                   "date": "26 Sep, 2025",
@@ -6908,7 +6917,7 @@
                   "id": "real-estate-laws-lease-agreements",
                   "slug": "real-estate-laws-lease-agreements",
                   "title": "Commercial Lease Agreements.",
-                  "image": "/casestudy2.svg",
+                  "image": "/blog/blog2.svg",
                   "author": "Michael Thompson",
                   "category": "Attorney",
                   "date": "27 Sep, 2025",
@@ -6932,7 +6941,7 @@
                   "id": "intellectual-property-digital-brand",
                   "slug": "intellectual-property-digital-brand",
                   "title": "Protecting Your Digital Brand.",
-                  "image": "/casestudy3.svg",
+                  "image": "/blog/blog1.svg",
                   "author": "Emily Roberts",
                   "category": "Attorney",
                   "date": "28 Sep, 2025",
@@ -6956,7 +6965,7 @@
                   "id": "criminal-defense-strategies-trial-law",
                   "slug": "criminal-defense-strategies-trial-law",
                   "title": "Defense Strategies and Trial Law.",
-                  "image": "/casestudy4.svg",
+                  "image": "/blog/blog1.svg",
                   "author": "Jonathan Pierce",
                   "category": "Attorney",
                   "date": "29 Sep, 2025",
@@ -6980,7 +6989,7 @@
                   "id": "tax-regulation-updates-sme",
                   "slug": "tax-regulation-updates-sme",
                   "title": "Small and Medium Enterprises.",
-                  "image": "/about.svg",
+                  "image": "/blog/blog2.svg",
                   "author": "David Kapoor",
                   "category": "Attorney",
                   "date": "30 Sep, 2025",
@@ -7004,7 +7013,7 @@
                   "id": "labor-laws-employment-dispute-resolution",
                   "slug": "labor-laws-employment-dispute-resolution",
                   "title": "Contract Dispute Resolution.",
-                  "image": "/service1.svg",
+                  "image": "/blog/blog3.svg",
                   "author": "Richard Hamilton",
                   "category": "Attorney",
                   "date": "01 Oct, 2025",
@@ -7037,7 +7046,7 @@
                   "slug": "corporate-governance-rules-2024",
                   "title": "New Corporate Governance Rules: What Businesses Need to Know",
                   "subtitle": "A comprehensive overview of the newly introduced corporate governance rules and their impact on businesses. Understand your responsibilities and stay compliant.",
-                  "image": "/about.svg",
+                  "image": "/services/ser6.svg",
                   "date": "MAY 20, 2024",
                   "category": "CORPORATE LAW",
                   "introHeading": "Introduction",
@@ -7082,7 +7091,7 @@
                   "slug": "supreme-court-rulings",
                   "title": "Recent Supreme Court Rulings and Their Impact",
                   "subtitle": "Key takeaways from recent Supreme Court decisions and how they may impact ongoing and future cases.",
-                  "image": "/about.svg",
+                  "image": "/services/ser7.svg",
                   "date": "MAY 15, 2024",
                   "category": "LITIGATION",
                   "introHeading": "Introduction",
@@ -7127,7 +7136,7 @@
                   "slug": "essential-contract-clauses",
                   "title": "Essential Clauses Every Business Contract Must Have",
                   "subtitle": "Learn about the crucial contract clauses that protect your business interests and minimize legal risks.",
-                  "image": "/service1.svg",
+                  "image": "/blog/blog1.svg",
                   "date": "MAY 10, 2024",
                   "category": "CONTRACT LAW",
                   "introHeading": "Introduction",
@@ -7172,7 +7181,7 @@
                   "slug": "data-privacy-compliance",
                   "title": "Data Privacy Compliance A Guide for Businesses",
                   "subtitle": "Understand the latest data privacy regulations and steps your business should take to ensure compliance.",
-                  "image": "/service4.svg",
+                  "image": "/blog/blog2.svg",
                   "date": "MAY 05, 2024",
                   "category": "DATA PRIVACY",
                   "introHeading": "Introduction",
@@ -7217,7 +7226,7 @@
                   "slug": "bail-laws-2024-changes",
                   "title": "Bail Laws 2024 Key Changes Explained",
                   "subtitle": "An overview of the recent amendments in bail laws and what they mean for defendants and legal practitioners.",
-                  "image": "/service2.svg",
+                  "image": "blog/blog3.svg",
                   "date": "APR 30, 2024",
                   "category": "CRIMINAL LAW",
                   "introHeading": "Introduction",
@@ -7262,7 +7271,7 @@
                   "slug": "workplace-policies-update",
                   "title": "Workplace Policies Update in 2024",
                   "subtitle": "Important workplace policy updates businesses should implement to stay compliant with current laws.",
-                  "image": "/service5.svg",
+                  "image": "/services/ser6.svg",
                   "date": "APR 25, 2024",
                   "category": "EMPLOYMENT LAW",
                   "introHeading": "Introduction",
@@ -7307,7 +7316,7 @@
                   "slug": "child-custody-laws",
                   "title": "Understanding Child Custody Laws in Modern Times",
                   "subtitle": "A guide to child custody laws and how courts determine the best interests of the child in today's world.",
-                  "image": "/casestudy1.svg",
+                  "image": "/services/ser7.svg",
                   "date": "APR 20, 2024",
                   "category": "FAMILY LAW",
                   "introHeading": "Introduction",
@@ -7352,7 +7361,7 @@
                   "slug": "gst-compliance-updates",
                   "title": "GST Compliance Updates for Financial Year 2024-25",
                   "subtitle": "Essential GST updates and statutory compliance checklists for Indian corporates and startups.",
-                  "image": "/casestudy2.svg",
+                  "image": "/blog/blog1.svg",
                   "date": "APR 15, 2024",
                   "category": "TAXATION",
                   "introHeading": "Introduction",
@@ -7397,7 +7406,7 @@
                   "slug": "trademark-protection-digital",
                   "title": "Trademark Protection Strategies in Digital Marketplaces",
                   "subtitle": "How e-commerce sellers and brand owners can safeguard their trademarks against online infringement.",
-                  "image": "/casestudy3.svg",
+                  "image": "/blog/blog2.svg",
                   "date": "APR 10, 2024",
                   "category": "INTELLECTUAL PROPERTY",
                   "introHeading": "Introduction",
@@ -7442,7 +7451,7 @@
                   "slug": "rera-judgments-real-estate",
                   "title": "RERA Judgments Standardizing Real Estate Lease Standards",
                   "subtitle": "Analyzing key RERA rulings on builder-buyer agreements and delayed possession compensation.",
-                  "image": "/casestudy4.svg",
+                  "image": "/blog/blog3.svg",
                   "date": "APR 05, 2024",
                   "category": "REAL ESTATE",
                   "introHeading": "Introduction",
@@ -7487,7 +7496,7 @@
                   "slug": "nclt-insolvency-proceedings",
                   "title": "NCLT Insolvency Proceedings Rights of Financial Creditors",
                   "subtitle": "Understanding the priority of financial creditors during corporate insolvency resolution processes.",
-                  "image": "/about.svg",
+                  "image": "/services/ser6.svg",
                   "date": "MAR 30, 2024",
                   "category": "BANKING & FINANCE",
                   "introHeading": "Introduction",
@@ -7532,7 +7541,7 @@
                   "slug": "esg-disclosure-mandates",
                   "title": "ESG Disclosure Mandates for Listed Companies",
                   "subtitle": "SEBI's new Business Responsibility and Sustainability Reporting (BRSR) norms explained.",
-                  "image": "/service1.svg",
+                  "image": "/services/ser7.svg",
                   "date": "MAR 25, 2024",
                   "category": "ENVIRONMENTAL LAW",
                   "introHeading": "Introduction",
@@ -7577,7 +7586,7 @@
                   "slug": "cybercrime-prevention-incident-response",
                   "title": "Cybercrime Prevention Incident Response Plans",
                   "subtitle": "Legal guidelines for enterprise cyber incident reporting and mitigating ransomware liabilities.",
-                  "image": "/service1.svg",
+                  "image": "/blog/blog1.svg",
                   "date": "MAR 20, 2024",
                   "category": "CYBER LAW",
                   "introHeading": "Introduction",
@@ -8329,7 +8338,7 @@
                 {
                   "id": "corporate-governance-rules",
                   "slug": "corporate-governance-rules",
-                  "image": "/casestudy1.svg",
+                  "image": "/services/ser6.svg",
                   "date": "MAY 20, 2024",
                   "category": "CORPORATE LAW",
                   "title": "New Corporate Governance Rules: What Businesses Need to Know",
@@ -8379,7 +8388,7 @@
                         "slug": "corporate-governance-rules",
                         "title": "New Corporate Governance Rules: What Businesses Need to Know",
                         "date": "MAY 20, 2024",
-                        "image": "/casestudy1.svg",
+                        "image": "/services/ser6.svg",
                         "link": "/publications/corporate-governance-rules"
                       },
                       {
@@ -8387,7 +8396,7 @@
                         "slug": "supreme-court-rulings",
                         "title": "Recent Supreme Court Rulings and Their Impact",
                         "date": "MAY 15, 2024",
-                        "image": "/about.svg",
+                        "image": "/services/ser7.svg",
                         "link": "/publications/supreme-court-rulings"
                       },
                       {
@@ -8395,7 +8404,7 @@
                         "slug": "essential-contract-clauses",
                         "title": "Essential Clauses Every Business Contract Must Have",
                         "date": "MAY 10, 2024",
-                        "image": "/service4.svg",
+                        "image": "/blog/blog1.svg",
                         "link": "/publications/essential-contract-clauses"
                       },
                       {
@@ -8403,7 +8412,7 @@
                         "slug": "data-privacy-guide",
                         "title": "Data Privacy Compliance: A Guide for Businesses",
                         "date": "MAY 05, 2024",
-                        "image": "/service5.svg",
+                        "image": "/blog/blog2.svg",
                         "link": "/publications/data-privacy-guide"
                       },
                       {
@@ -8411,7 +8420,7 @@
                         "slug": "bail-laws-2024",
                         "title": "Bail Laws in 2024: Key Changes Explained",
                         "date": "APR 30, 2024",
-                        "image": "/service2.svg",
+                        "image": "/blog/blog3.svg",
                         "link": "/publications/bail-laws-2024"
                       }
                     ]
@@ -8420,7 +8429,7 @@
                 {
                   "id": "supreme-court-rulings",
                   "slug": "supreme-court-rulings",
-                  "image": "/about.svg",
+                  "image": "/services/ser7.svg",
                   "date": "MAY 15, 2024",
                   "category": "LITIGATION",
                   "title": "Recent Supreme Court Rulings and Their Impact",
@@ -8470,7 +8479,7 @@
                         "slug": "corporate-governance-rules",
                         "title": "New Corporate Governance Rules: What Businesses Need to Know",
                         "date": "MAY 20, 2024",
-                        "image": "/casestudy1.svg",
+                        "image": "/services/ser6.svg",
                         "link": "/publications/corporate-governance-rules"
                       },
                       {
@@ -8478,7 +8487,7 @@
                         "slug": "supreme-court-rulings",
                         "title": "Recent Supreme Court Rulings and Their Impact",
                         "date": "MAY 15, 2024",
-                        "image": "/about.svg",
+                        "image": "/services/ser7.svg",
                         "link": "/publications/supreme-court-rulings"
                       },
                       {
@@ -8486,7 +8495,7 @@
                         "slug": "essential-contract-clauses",
                         "title": "Essential Clauses Every Business Contract Must Have",
                         "date": "MAY 10, 2024",
-                        "image": "/service4.svg",
+                        "image": "/blog/blog1.svg",
                         "link": "/publications/essential-contract-clauses"
                       },
                       {
@@ -8494,7 +8503,7 @@
                         "slug": "data-privacy-guide",
                         "title": "Data Privacy Compliance: A Guide for Businesses",
                         "date": "MAY 05, 2024",
-                        "image": "/service5.svg",
+                        "image": "/blog/blog2.svg",
                         "link": "/publications/data-privacy-guide"
                       },
                       {
@@ -8502,7 +8511,7 @@
                         "slug": "bail-laws-2024",
                         "title": "Bail Laws in 2024: Key Changes Explained",
                         "date": "APR 30, 2024",
-                        "image": "/service2.svg",
+                        "image": "/blog/blog3.svg",
                         "link": "/publications/bail-laws-2024"
                       }
                     ]
@@ -8511,7 +8520,7 @@
                 {
                   "id": "essential-contract-clauses",
                   "slug": "essential-contract-clauses",
-                  "image": "/service4.svg",
+                  "image": "/blog/blog1.svg",
                   "date": "MAY 10, 2024",
                   "category": "CONTRACT LAW",
                   "title": "Essential Clauses Every Business Contract Must Have",
@@ -8561,7 +8570,7 @@
                         "slug": "corporate-governance-rules",
                         "title": "New Corporate Governance Rules: What Businesses Need to Know",
                         "date": "MAY 20, 2024",
-                        "image": "/casestudy1.svg",
+                        "image": "/services/ser6.svg",
                         "link": "/publications/corporate-governance-rules"
                       },
                       {
@@ -8569,7 +8578,7 @@
                         "slug": "supreme-court-rulings",
                         "title": "Recent Supreme Court Rulings and Their Impact",
                         "date": "MAY 15, 2024",
-                        "image": "/about.svg",
+                        "image": "/services/ser7.svg",
                         "link": "/publications/supreme-court-rulings"
                       },
                       {
@@ -8577,7 +8586,7 @@
                         "slug": "essential-contract-clauses",
                         "title": "Essential Clauses Every Business Contract Must Have",
                         "date": "MAY 10, 2024",
-                        "image": "/service4.svg",
+                        "image": "/blog/blog1.svg",
                         "link": "/publications/essential-contract-clauses"
                       },
                       {
@@ -8585,7 +8594,7 @@
                         "slug": "data-privacy-guide",
                         "title": "Data Privacy Compliance: A Guide for Businesses",
                         "date": "MAY 05, 2024",
-                        "image": "/service5.svg",
+                        "image": "/blog/blog2.svg",
                         "link": "/publications/data-privacy-guide"
                       },
                       {
@@ -8593,7 +8602,7 @@
                         "slug": "bail-laws-2024",
                         "title": "Bail Laws in 2024: Key Changes Explained",
                         "date": "APR 30, 2024",
-                        "image": "/service2.svg",
+                        "image": "/blog/blog3.svg",
                         "link": "/publications/bail-laws-2024"
                       }
                     ]
@@ -8602,7 +8611,7 @@
                 {
                   "id": "data-privacy-guide",
                   "slug": "data-privacy-guide",
-                  "image": "/service5.svg",
+                  "image": "/blog/blog2.svg",
                   "date": "MAY 05, 2024",
                   "category": "DATA PRIVACY",
                   "title": "Data Privacy Compliance: A Guide for Businesses",
@@ -8652,7 +8661,7 @@
                         "slug": "corporate-governance-rules",
                         "title": "New Corporate Governance Rules: What Businesses Need to Know",
                         "date": "MAY 20, 2024",
-                        "image": "/casestudy1.svg",
+                        "image": "/services/ser6.svg",
                         "link": "/publications/corporate-governance-rules"
                       },
                       {
@@ -8660,7 +8669,7 @@
                         "slug": "supreme-court-rulings",
                         "title": "Recent Supreme Court Rulings and Their Impact",
                         "date": "MAY 15, 2024",
-                        "image": "/about.svg",
+                        "image": "/services/ser7.svg",
                         "link": "/publications/supreme-court-rulings"
                       },
                       {
@@ -8668,7 +8677,7 @@
                         "slug": "essential-contract-clauses",
                         "title": "Essential Clauses Every Business Contract Must Have",
                         "date": "MAY 10, 2024",
-                        "image": "/service4.svg",
+                        "image": "/blog/blog1.svg",
                         "link": "/publications/essential-contract-clauses"
                       },
                       {
@@ -8676,7 +8685,7 @@
                         "slug": "data-privacy-guide",
                         "title": "Data Privacy Compliance: A Guide for Businesses",
                         "date": "MAY 05, 2024",
-                        "image": "/service5.svg",
+                        "image": "/blog/blog2.svg",
                         "link": "/publications/data-privacy-guide"
                       },
                       {
@@ -8684,7 +8693,7 @@
                         "slug": "bail-laws-2024",
                         "title": "Bail Laws in 2024: Key Changes Explained",
                         "date": "APR 30, 2024",
-                        "image": "/service2.svg",
+                        "image": "/blog/blog3.svg",
                         "link": "/publications/bail-laws-2024"
                       }
                     ]
@@ -8693,7 +8702,7 @@
                 {
                   "id": "bail-laws-2024",
                   "slug": "bail-laws-2024",
-                  "image": "/service2.svg",
+                  "image": "/blog/blog3.svg",
                   "date": "APR 30, 2024",
                   "category": "CRIMINAL LAW",
                   "title": "Bail Laws in 2024: Key Changes Explained",
@@ -8743,7 +8752,7 @@
                         "slug": "corporate-governance-rules",
                         "title": "New Corporate Governance Rules: What Businesses Need to Know",
                         "date": "MAY 20, 2024",
-                        "image": "/casestudy1.svg",
+                        "image": "/services/ser6.svg",
                         "link": "/publications/corporate-governance-rules"
                       },
                       {
@@ -8751,7 +8760,7 @@
                         "slug": "supreme-court-rulings",
                         "title": "Recent Supreme Court Rulings and Their Impact",
                         "date": "MAY 15, 2024",
-                        "image": "/about.svg",
+                        "image": "/services/ser7.svg",
                         "link": "/publications/supreme-court-rulings"
                       },
                       {
@@ -8759,7 +8768,7 @@
                         "slug": "essential-contract-clauses",
                         "title": "Essential Clauses Every Business Contract Must Have",
                         "date": "MAY 10, 2024",
-                        "image": "/service4.svg",
+                        "image": "/blog/blog1.svg",
                         "link": "/publications/essential-contract-clauses"
                       },
                       {
@@ -8767,7 +8776,7 @@
                         "slug": "data-privacy-guide",
                         "title": "Data Privacy Compliance: A Guide for Businesses",
                         "date": "MAY 05, 2024",
-                        "image": "/service5.svg",
+                        "image": "/blog/blog2.svg",
                         "link": "/publications/data-privacy-guide"
                       },
                       {
@@ -8775,7 +8784,7 @@
                         "slug": "bail-laws-2024",
                         "title": "Bail Laws in 2024: Key Changes Explained",
                         "date": "APR 30, 2024",
-                        "image": "/service2.svg",
+                        "image": "/blog/blog3.svg",
                         "link": "/publications/bail-laws-2024"
                       }
                     ]
@@ -8784,7 +8793,7 @@
                 {
                   "id": "child-custody-laws",
                   "slug": "child-custody-laws",
-                  "image": "/casestudy1.svg",
+                  "image": "/services/ser6.svg",
                   "date": "APR 20, 2024",
                   "category": "FAMILY LAW",
                   "title": "Understanding Child Custody Laws in Modern Times",
@@ -8834,7 +8843,7 @@
                         "slug": "corporate-governance-rules",
                         "title": "New Corporate Governance Rules: What Businesses Need to Know",
                         "date": "MAY 20, 2024",
-                        "image": "/casestudy1.svg",
+                        "image": "/services/ser6.svg",
                         "link": "/publications/corporate-governance-rules"
                       },
                       {
@@ -8842,7 +8851,7 @@
                         "slug": "supreme-court-rulings",
                         "title": "Recent Supreme Court Rulings and Their Impact",
                         "date": "MAY 15, 2024",
-                        "image": "/about.svg",
+                        "image": "/services/ser7.svg",
                         "link": "/publications/supreme-court-rulings"
                       },
                       {
@@ -8850,7 +8859,7 @@
                         "slug": "essential-contract-clauses",
                         "title": "Essential Clauses Every Business Contract Must Have",
                         "date": "MAY 10, 2024",
-                        "image": "/service4.svg",
+                        "image": "/blog/blog1.svg",
                         "link": "/publications/essential-contract-clauses"
                       },
                       {
@@ -8858,7 +8867,7 @@
                         "slug": "data-privacy-guide",
                         "title": "Data Privacy Compliance: A Guide for Businesses",
                         "date": "MAY 05, 2024",
-                        "image": "/service5.svg",
+                        "image": "/blog/blog2.svg",
                         "link": "/publications/data-privacy-guide"
                       },
                       {
@@ -8866,7 +8875,7 @@
                         "slug": "bail-laws-2024",
                         "title": "Bail Laws in 2024: Key Changes Explained",
                         "date": "APR 30, 2024",
-                        "image": "/service2.svg",
+                        "image": "/blog/blog3.svg",
                         "link": "/publications/bail-laws-2024"
                       }
                     ]
@@ -8875,7 +8884,7 @@
                 {
                   "id": "commercial-real-estate-leases",
                   "slug": "commercial-real-estate-leases",
-                  "image": "/casestudy2.svg",
+                  "image": "/services/ser7.svg",
                   "date": "APR 15, 2024",
                   "category": "REAL ESTATE",
                   "title": "Commercial Real Estate Leases: Tenant Rights and Drafting Guide",
@@ -8925,7 +8934,7 @@
                         "slug": "corporate-governance-rules",
                         "title": "New Corporate Governance Rules: What Businesses Need to Know",
                         "date": "MAY 20, 2024",
-                        "image": "/casestudy1.svg",
+                        "image": "/services/ser6.svg",
                         "link": "/publications/corporate-governance-rules"
                       },
                       {
@@ -8933,7 +8942,7 @@
                         "slug": "supreme-court-rulings",
                         "title": "Recent Supreme Court Rulings and Their Impact",
                         "date": "MAY 15, 2024",
-                        "image": "/about.svg",
+                        "image": "/services/ser7.svg",
                         "link": "/publications/supreme-court-rulings"
                       },
                       {
@@ -8941,7 +8950,7 @@
                         "slug": "essential-contract-clauses",
                         "title": "Essential Clauses Every Business Contract Must Have",
                         "date": "MAY 10, 2024",
-                        "image": "/service4.svg",
+                        "image": "/blog/blog1.svg",
                         "link": "/publications/essential-contract-clauses"
                       },
                       {
@@ -8949,7 +8958,7 @@
                         "slug": "data-privacy-guide",
                         "title": "Data Privacy Compliance: A Guide for Businesses",
                         "date": "MAY 05, 2024",
-                        "image": "/service5.svg",
+                        "image": "/blog/blog2.svg",
                         "link": "/publications/data-privacy-guide"
                       },
                       {
@@ -8957,7 +8966,7 @@
                         "slug": "bail-laws-2024",
                         "title": "Bail Laws in 2024: Key Changes Explained",
                         "date": "APR 30, 2024",
-                        "image": "/service2.svg",
+                        "image": "/blog/blog3.svg",
                         "link": "/publications/bail-laws-2024"
                       }
                     ]
@@ -8966,7 +8975,7 @@
                 {
                   "id": "corporate-tax-structuring",
                   "slug": "corporate-tax-structuring",
-                  "image": "/casestudy3.svg",
+                  "image": "/blog/blog1.svg",
                   "date": "APR 10, 2024",
                   "category": "TAXATION",
                   "title": "Corporate Tax Structuring and Cross-Border Transaction Insights",
@@ -9016,7 +9025,7 @@
                         "slug": "corporate-governance-rules",
                         "title": "New Corporate Governance Rules: What Businesses Need to Know",
                         "date": "MAY 20, 2024",
-                        "image": "/casestudy1.svg",
+                        "image": "/services/ser6.svg",
                         "link": "/publications/corporate-governance-rules"
                       },
                       {
@@ -9024,7 +9033,7 @@
                         "slug": "supreme-court-rulings",
                         "title": "Recent Supreme Court Rulings and Their Impact",
                         "date": "MAY 15, 2024",
-                        "image": "/about.svg",
+                        "image": "/services/ser7.svg",
                         "link": "/publications/supreme-court-rulings"
                       },
                       {
@@ -9032,7 +9041,7 @@
                         "slug": "essential-contract-clauses",
                         "title": "Essential Clauses Every Business Contract Must Have",
                         "date": "MAY 10, 2024",
-                        "image": "/service4.svg",
+                        "image": "/blog/blog1.svg",
                         "link": "/publications/essential-contract-clauses"
                       },
                       {
@@ -9040,7 +9049,7 @@
                         "slug": "data-privacy-guide",
                         "title": "Data Privacy Compliance: A Guide for Businesses",
                         "date": "MAY 05, 2024",
-                        "image": "/service5.svg",
+                        "image": "/blog/blog2.svg",
                         "link": "/publications/data-privacy-guide"
                       },
                       {
@@ -9048,7 +9057,7 @@
                         "slug": "bail-laws-2024",
                         "title": "Bail Laws in 2024: Key Changes Explained",
                         "date": "APR 30, 2024",
-                        "image": "/service2.svg",
+                        "image": "/blog/blog3.svg",
                         "link": "/publications/bail-laws-2024"
                       }
                     ]
@@ -9057,7 +9066,7 @@
                 {
                   "id": "international-arbitration-guide",
                   "slug": "international-arbitration-guide",
-                  "image": "/casestudy4.svg",
+                  "image": "/blog/blog2.svg",
                   "date": "APR 05, 2024",
                   "category": "ARBITRATION",
                   "title": "Commercial Dispute Resolution through International Arbitration",
@@ -9107,7 +9116,7 @@
                         "slug": "corporate-governance-rules",
                         "title": "New Corporate Governance Rules: What Businesses Need to Know",
                         "date": "MAY 20, 2024",
-                        "image": "/casestudy1.svg",
+                        "image": "/services/ser6.svg",
                         "link": "/publications/corporate-governance-rules"
                       },
                       {
@@ -9115,7 +9124,7 @@
                         "slug": "supreme-court-rulings",
                         "title": "Recent Supreme Court Rulings and Their Impact",
                         "date": "MAY 15, 2024",
-                        "image": "/about.svg",
+                        "image": "/services/ser7.svg",
                         "link": "/publications/supreme-court-rulings"
                       },
                       {
@@ -9123,7 +9132,7 @@
                         "slug": "essential-contract-clauses",
                         "title": "Essential Clauses Every Business Contract Must Have",
                         "date": "MAY 10, 2024",
-                        "image": "/service4.svg",
+                        "image": "/blog/blog1.svg",
                         "link": "/publications/essential-contract-clauses"
                       },
                       {
@@ -9131,7 +9140,7 @@
                         "slug": "data-privacy-guide",
                         "title": "Data Privacy Compliance: A Guide for Businesses",
                         "date": "MAY 05, 2024",
-                        "image": "/service5.svg",
+                        "image": "/blog/blog2.svg",
                         "link": "/publications/data-privacy-guide"
                       },
                       {
@@ -9139,7 +9148,7 @@
                         "slug": "bail-laws-2024",
                         "title": "Bail Laws in 2024: Key Changes Explained",
                         "date": "APR 30, 2024",
-                        "image": "/service2.svg",
+                        "image": "/blog/blog3.svg",
                         "link": "/publications/bail-laws-2024"
                       }
                     ]
@@ -9148,7 +9157,7 @@
                 {
                   "id": "fintech-digital-payment-regulations",
                   "slug": "fintech-digital-payment-regulations",
-                  "image": "/about.svg",
+                  "image": "/blog/blog3.svg",
                   "date": "MAR 30, 2024",
                   "category": "FINANCE & BANKING",
                   "title": "Regulatory Framework for Fintech and Digital Payment Platforms",
@@ -9198,7 +9207,7 @@
                         "slug": "corporate-governance-rules",
                         "title": "New Corporate Governance Rules: What Businesses Need to Know",
                         "date": "MAY 20, 2024",
-                        "image": "/casestudy1.svg",
+                        "image": "/services/ser6.svg",
                         "link": "/publications/corporate-governance-rules"
                       },
                       {
@@ -9206,7 +9215,7 @@
                         "slug": "supreme-court-rulings",
                         "title": "Recent Supreme Court Rulings and Their Impact",
                         "date": "MAY 15, 2024",
-                        "image": "/about.svg",
+                        "image": "/services/ser7.svg",
                         "link": "/publications/supreme-court-rulings"
                       },
                       {
@@ -9214,7 +9223,7 @@
                         "slug": "essential-contract-clauses",
                         "title": "Essential Clauses Every Business Contract Must Have",
                         "date": "MAY 10, 2024",
-                        "image": "/service4.svg",
+                        "image": "/blog/blog1.svg",
                         "link": "/publications/essential-contract-clauses"
                       },
                       {
@@ -9222,7 +9231,7 @@
                         "slug": "data-privacy-guide",
                         "title": "Data Privacy Compliance: A Guide for Businesses",
                         "date": "MAY 05, 2024",
-                        "image": "/service5.svg",
+                        "image": "/blog/blog2.svg",
                         "link": "/publications/data-privacy-guide"
                       },
                       {
@@ -9230,7 +9239,7 @@
                         "slug": "bail-laws-2024",
                         "title": "Bail Laws in 2024: Key Changes Explained",
                         "date": "APR 30, 2024",
-                        "image": "/service2.svg",
+                        "image": "/blog/blog3.svg",
                         "link": "/publications/bail-laws-2024"
                       }
                     ]
@@ -9239,7 +9248,7 @@
                 {
                   "id": "executive-severance-non-compete",
                   "slug": "executive-severance-non-compete",
-                  "image": "/service1.svg",
+                  "image": "/services/ser6.svg",
                   "date": "MAR 25, 2024",
                   "category": "LABOR & EMPLOYMENT",
                   "title": "Managing Executive Severance and Non-Compete Agreements",
@@ -9289,7 +9298,7 @@
                         "slug": "corporate-governance-rules",
                         "title": "New Corporate Governance Rules: What Businesses Need to Know",
                         "date": "MAY 20, 2024",
-                        "image": "/casestudy1.svg",
+                        "image": "/services/ser6.svg",
                         "link": "/publications/corporate-governance-rules"
                       },
                       {
@@ -9297,7 +9306,7 @@
                         "slug": "supreme-court-rulings",
                         "title": "Recent Supreme Court Rulings and Their Impact",
                         "date": "MAY 15, 2024",
-                        "image": "/about.svg",
+                        "image": "/services/ser7.svg",
                         "link": "/publications/supreme-court-rulings"
                       },
                       {
@@ -9305,7 +9314,7 @@
                         "slug": "essential-contract-clauses",
                         "title": "Essential Clauses Every Business Contract Must Have",
                         "date": "MAY 10, 2024",
-                        "image": "/service4.svg",
+                        "image": "/blog/blog1.svg",
                         "link": "/publications/essential-contract-clauses"
                       },
                       {
@@ -9313,7 +9322,7 @@
                         "slug": "data-privacy-guide",
                         "title": "Data Privacy Compliance: A Guide for Businesses",
                         "date": "MAY 05, 2024",
-                        "image": "/service5.svg",
+                        "image": "/blog/blog2.svg",
                         "link": "/publications/data-privacy-guide"
                       },
                       {
@@ -9321,7 +9330,7 @@
                         "slug": "bail-laws-2024",
                         "title": "Bail Laws in 2024: Key Changes Explained",
                         "date": "APR 30, 2024",
-                        "image": "/service2.svg",
+                        "image": "/blog/blog3.svg",
                         "link": "/publications/bail-laws-2024"
                       }
                     ]
@@ -9330,7 +9339,7 @@
                 {
                   "id": "enterprise-cybersecurity-defense",
                   "slug": "enterprise-cybersecurity-defense",
-                  "image": "/service1.svg",
+                  "image": "/services/ser7.svg",
                   "date": "MAR 20, 2024",
                   "category": "CYBERSECURITY",
                   "title": "Enterprise Ransomware Defense and Statutory Data Breach Reporting",
@@ -9380,7 +9389,7 @@
                         "slug": "corporate-governance-rules",
                         "title": "New Corporate Governance Rules: What Businesses Need to Know",
                         "date": "MAY 20, 2024",
-                        "image": "/casestudy1.svg",
+                        "image": "/services/ser6.svg",
                         "link": "/publications/corporate-governance-rules"
                       },
                       {
@@ -9388,7 +9397,7 @@
                         "slug": "supreme-court-rulings",
                         "title": "Recent Supreme Court Rulings and Their Impact",
                         "date": "MAY 15, 2024",
-                        "image": "/about.svg",
+                        "image": "/services/ser7.svg",
                         "link": "/publications/supreme-court-rulings"
                       },
                       {
@@ -9396,7 +9405,7 @@
                         "slug": "essential-contract-clauses",
                         "title": "Essential Clauses Every Business Contract Must Have",
                         "date": "MAY 10, 2024",
-                        "image": "/service4.svg",
+                        "image": "/blog/blog1.svg",
                         "link": "/publications/essential-contract-clauses"
                       },
                       {
@@ -9404,7 +9413,7 @@
                         "slug": "data-privacy-guide",
                         "title": "Data Privacy Compliance: A Guide for Businesses",
                         "date": "MAY 05, 2024",
-                        "image": "/service5.svg",
+                        "image": "/blog/blog2.svg",
                         "link": "/publications/data-privacy-guide"
                       },
                       {
@@ -9412,7 +9421,7 @@
                         "slug": "bail-laws-2024",
                         "title": "Bail Laws in 2024: Key Changes Explained",
                         "date": "APR 30, 2024",
-                        "image": "/service2.svg",
+                        "image": "/blog/blog3.svg",
                         "link": "/publications/bail-laws-2024"
                       }
                     ]
