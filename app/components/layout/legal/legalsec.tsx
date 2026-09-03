@@ -70,57 +70,58 @@ export function Legalsec({ data = defaultLegalSectionData as any }: LegalsecProp
 
                 {/* Top Featured Article Card */}
                 {featured && (
-                    <FadeIn direction="up" delay={0.2} className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] overflow-hidden hover:border-[#D4A359]/50 transition-all duration-300 shadow-xl grid grid-cols-1 lg:grid-cols-2 mb-8 lg:mb-10 cursor-pointer">
-                        {/* Left Image Container */}
-                        <Link href={featured.link || `/legal/${featured.id}`} className="block relative w-full h-[260px] sm:h-[320px] lg:h-full overflow-hidden bg-slate-900 min-h-[260px]">
-                            <Image
-                                src={featured.image || "/service3.svg"}
-                                alt={featured.title}
-                                fill
-                                className="object-cover group-hover:scale-105 transition-transform duration-700"
-                            />
-                            {/* Gold FEATURED Badge */}
-                            {featured.badge && (
-                                <div className="absolute top-4 left-4 z-10 px-3.5 py-1.5 bg-[#D4A359] text-[#0A0E17] font-bold text-xs uppercase tracking-wider rounded-md shadow-lg">
-                                    {featured.badge}
+                    <FadeIn direction="up" delay={0.2} className="mb-8 lg:mb-10">
+                        <Link href={featured.link || `/legal/${featured.id}`} className="block">
+                            <div className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] overflow-hidden hover:border-[#D4A359]/50 transition-all duration-300 shadow-xl grid grid-cols-1 lg:grid-cols-2 cursor-pointer">
+                                {/* Left Image Container */}
+                                <div className="block relative w-full h-[260px] sm:h-[320px] lg:h-full overflow-hidden bg-slate-900 min-h-[260px]">
+                                    <Image
+                                        src={featured.image || "/service3.svg"}
+                                        alt={featured.title}
+                                        fill
+                                        className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                    />
+                                    {/* Gold FEATURED Badge */}
+                                    {featured.badge && (
+                                        <div className="absolute top-4 left-4 z-10 px-3.5 py-1.5 bg-[#D4A359] text-[#0A0E17] font-bold text-xs uppercase tracking-wider rounded-md shadow-lg">
+                                            {featured.badge}
+                                        </div>
+                                    )}
                                 </div>
-                            )}
+
+                                {/* Right Text Content Body */}
+                                <div className="p-6 sm:p-8 flex flex-col justify-between text-left">
+                                    <div>
+                                        {/* Date • Category */}
+                                        <div className="text-slate-400 text-xs font-semibold tracking-wider uppercase mb-3">
+                                            <span>{featured.date}</span>
+                                            <span className="mx-2">•</span>
+                                            <span className="text-[#D4A359]">{featured.category}</span>
+                                        </div>
+
+                                        {/* Title */}
+                                        <h3 className="font-serif font-semibold text-white text-2xl sm:text-3xl mb-4 group-hover:text-[#D4A359] transition-colors leading-snug">
+                                            {featured.title}
+                                        </h3>
+
+                                        {/* Description */}
+                                        <p className="text-slate-400 text-sm sm:text-base leading-relaxed mb-6">
+                                            {featured.description}
+                                        </p>
+                                    </div>
+
+                                    {/* Read More Link */}
+                                    <div>
+                                        <div
+                                            className="inline-flex items-center gap-2 text-[#D4A359] text-xs sm:text-sm font-semibold uppercase tracking-wider group-hover:gap-3 transition-all group-hover:underline"
+                                        >
+                                            <span>{(data as any).buttonText || (featured as any).linkText || ""}</span>
+                                            <ArrowRight className="w-4 h-4" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </Link>
-
-                        {/* Right Text Content Body */}
-                        <div className="p-6 sm:p-8 flex flex-col justify-between text-left">
-                            <div>
-                                {/* Date • Category */}
-                                <div className="text-slate-400 text-xs font-semibold tracking-wider uppercase mb-3">
-                                    <span>{featured.date}</span>
-                                    <span className="mx-2">•</span>
-                                    <span className="text-[#D4A359]">{featured.category}</span>
-                                </div>
-
-                                {/* Title */}
-                                <h3 className="font-serif font-semibold text-white text-2xl sm:text-3xl mb-4 group-hover:text-[#D4A359] transition-colors leading-snug">
-                                    <Link href={featured.link || `/legal/${featured.id}`}>
-                                        {featured.title}
-                                    </Link>
-                                </h3>
-
-                                {/* Description */}
-                                <p className="text-slate-400 text-sm sm:text-base leading-relaxed mb-6">
-                                    {featured.description}
-                                </p>
-                            </div>
-
-                            {/* Read More Link */}
-                            <div>
-                                <Link
-                                    href={featured.link || `/legal/${featured.id}`}
-                                    className="inline-flex items-center gap-2 text-[#D4A359] text-xs sm:text-sm font-semibold uppercase tracking-wider group-hover:gap-3 transition-all hover:underline"
-                                >
-                                    <span>{(featured as any).linkText || "READ MORE"}</span>
-                                    <ArrowRight className="w-4 h-4" />
-                                </Link>
-                            </div>
-                        </div>
                     </FadeIn>
                 )}
 
@@ -129,56 +130,55 @@ export function Legalsec({ data = defaultLegalSectionData as any }: LegalsecProp
                     {displayedItems &&
                         displayedItems.map((item: any) => (
                             <StaggerItem key={item.id}>
-                                <motion.div
-                                    whileHover={{ y: -6, scale: 1.01 }}
-                                    transition={{ duration: 0.25 }}
-                                    className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] overflow-hidden hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl flex flex-col justify-between h-full cursor-pointer"
-                                >
-                                    <div>
-                                        {/* Top Image Container */}
-                                        <Link href={item.link || `/legal/${item.id}`} className="block relative w-full h-[190px] sm:h-[210px] overflow-hidden bg-slate-900">
-                                            <Image
-                                                src={item.image || "/about.svg"}
-                                                alt={item.title}
-                                                fill
-                                                className="object-cover group-hover:scale-105 transition-transform duration-700"
-                                            />
-                                        </Link>
-
-                                        {/* Card Content Body */}
-                                        <div className="p-5 sm:p-6 text-left">
-                                            {/* Date • Category */}
-                                            <div className="text-xs font-semibold tracking-wider uppercase mb-2">
-                                                <span className="text-slate-400">{item.date}</span>
-                                                <span className="text-slate-600 mx-2">•</span>
-                                                <span className="text-[#D4A359]">{item.category}</span>
+                                <Link href={item.link || `/legal/${item.id}`} className="block h-full">
+                                    <motion.div
+                                        whileHover={{ y: -6, scale: 1.01 }}
+                                        transition={{ duration: 0.25 }}
+                                        className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] overflow-hidden hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl flex flex-col justify-between h-full cursor-pointer"
+                                    >
+                                        <div>
+                                            {/* Top Image Container */}
+                                            <div className="block relative w-full h-[190px] sm:h-[210px] overflow-hidden bg-slate-900">
+                                                <Image
+                                                    src={item.image || "/about.svg"}
+                                                    alt={item.title}
+                                                    fill
+                                                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                                />
                                             </div>
 
-                                            {/* Title */}
-                                            <h3 className="font-serif font-semibold text-white text-lg sm:text-xl mb-3 group-hover:text-[#D4A359] transition-colors line-clamp-2 leading-snug">
-                                                <Link href={item.link || `/legal/${item.id}`}>
+                                            {/* Card Content Body */}
+                                            <div className="p-5 sm:p-6 text-left">
+                                                {/* Date • Category */}
+                                                <div className="text-xs font-semibold tracking-wider uppercase mb-2">
+                                                    <span className="text-slate-400">{item.date}</span>
+                                                    <span className="text-slate-600 mx-2">•</span>
+                                                    <span className="text-[#D4A359]">{item.category}</span>
+                                                </div>
+
+                                                {/* Title */}
+                                                <h3 className="font-serif font-semibold text-white text-lg sm:text-xl mb-3 group-hover:text-[#D4A359] transition-colors line-clamp-2 leading-snug">
                                                     {item.title}
-                                                </Link>
-                                            </h3>
+                                                </h3>
 
-                                            {/* Description */}
-                                            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4 line-clamp-3 min-h-[56px]">
-                                                {item.description}
-                                            </p>
+                                                {/* Description */}
+                                                <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4 line-clamp-3 min-h-[56px]">
+                                                    {item.description}
+                                                </p>
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    {/* Card Action Link */}
-                                    <div className="pb-6 pt-2 px-5 sm:px-6 text-left">
-                                        <Link
-                                            href={item.link || `/legal/${item.id}`}
-                                            className="inline-flex items-center gap-2 text-[#D4A359] text-xs font-semibold uppercase tracking-wider group-hover:gap-3 transition-all hover:underline"
-                                        >
-                                            <span>{(item as any).linkText || "READ MORE"}</span>
-                                            <ArrowRight className="w-4 h-4" />
-                                        </Link>
-                                    </div>
-                                </motion.div>
+                                        {/* Card Action Link */}
+                                        <div className="pb-6 pt-2 px-5 sm:px-6 text-left">
+                                            <div
+                                                className="inline-flex items-center gap-2 text-[#D4A359] text-xs font-semibold uppercase tracking-wider group-hover:gap-3 transition-all group-hover:underline"
+                                            >
+                                                <span>{(data as any).buttonText || (item as any).linkText || ""}</span>
+                                                <ArrowRight className="w-4 h-4" />
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                </Link>
                             </StaggerItem>
                         ))}
                 </StaggerContainer>

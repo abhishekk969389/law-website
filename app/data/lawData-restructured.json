@@ -2871,7 +2871,7 @@
                     "title": "Dedicated Criminal Defense with a Human Touch",
                     "description": "We provide aggressive defense while ensuring our clients feel heard, supported, and confident throughout the process.",
                     "linkText": "View Case Study",
-                    "linkHref": "/case-study/1"
+                    "linkHref": "/casestudy/car-accident-victim"
                   },
                   {
                     "id": "2",
@@ -2880,7 +2880,7 @@
                     "title": "A Family's Fight for Justice: Their Legal Odyssey",
                     "description": "From complex disputes to emotional challenges, we stood by the family and delivered the justice they deserved.",
                     "linkText": "View Case Study",
-                    "linkHref": "/case-study/2"
+                    "linkHref": "/casestudy/dui-dismissal"
                   },
                   {
                     "id": "3",
@@ -2889,7 +2889,7 @@
                     "title": "Defending Justice: A Family's Legal Journey",
                     "description": "We successfully defended our client's rights and secured a favorable outcome in a complex legal battle.",
                     "linkText": "View Case Study",
-                    "linkHref": "/case-study/3"
+                    "linkHref": "/casestudy/reckless-driving"
                   },
                   {
                     "id": "4",
@@ -2898,7 +2898,7 @@
                     "title": "Strategic Corporate Defense & Dispute Resolution",
                     "description": "Delivering expert legal representation to navigate high-stakes litigation and protect organizational integrity.",
                     "linkText": "View Case Study",
-                    "linkHref": "/case-study/4"
+                    "linkHref": "/casestudy/wrongful-conviction"
                   },
                   {
                     "id": "5",
@@ -2907,7 +2907,7 @@
                     "title": "Strategic Corporate Defense & Dispute Resolution",
                     "description": "Delivering expert legal representation to navigate high-stakes litigation and protect organizational integrity.",
                     "linkText": "View Case Study",
-                    "linkHref": "/case-study/4"
+                    "linkHref": "/casestudy/insurance-claim-maximized"
                   }
                 ]
               }
@@ -3458,6 +3458,7 @@
                   "highlight": "Updates"
                 },
                 "subheading": "Stay informed with the latest legal insights, case updates, and important changes that matter to you.",
+                "buttonText": "Read More",
                 "featured": {
                   "id": "feat-1",
                   "badge": "FEATURED",
@@ -3854,6 +3855,7 @@
               "publicationsSection": {
                 "title": "Publications",
                 "description": "Explore our collection of articles, guides, and insights on legal developments, industry trends, and practical solutions for your business and personal needs.",
+                "buttonText": "Read More",
                 "items": [
                   {
                     "id": "1",

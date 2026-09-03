@@ -1,9 +1,13 @@
 import siteData from './lawData-restructured.json';
 
-export type SectionProps<T = unknown> = {
+export interface SectionProps<T = unknown> {
   data?: T;
   className?: string;
-};
+  contentClassName?: string;
+  variant?: string;
+  isEditable?: boolean;
+  onUpdate?: (newData: Partial<T>) => void;
+}
 
 export const rawSiteData = siteData.categories.Veritas.sections;
 

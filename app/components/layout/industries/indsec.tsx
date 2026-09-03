@@ -83,60 +83,59 @@ export function Indsec({ data = defaultIndustrySectionData as any }: IndsecProps
 
               return (
                 <StaggerItem key={item.id}>
-                  <motion.div
-                    whileHover={{ y: -6, scale: 1.01 }}
-                    transition={{ duration: 0.25 }}
-                    className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] overflow-hidden hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl flex flex-col justify-between h-full cursor-pointer"
-                  >
-                    <div>
-                      {/* Top Image & Left Floating Badge Wrapper */}
-                      <Link href={cardLink} className="block relative w-full h-[210px]">
-                        {/* Image Container with overflow-hidden for hover zoom */}
-                        <div className="relative w-full h-full overflow-hidden bg-slate-900">
-                          <Image
-                            src={item.image || "/about.svg"}
-                            alt={item.title}
-                            fill
-                            className="object-cover group-hover:scale-105 transition-transform duration-700"
-                          />
+                  <Link href={cardLink} className="block h-full">
+                    <motion.div
+                      whileHover={{ y: -6, scale: 1.01 }}
+                      transition={{ duration: 0.25 }}
+                      className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] overflow-hidden hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl flex flex-col justify-between h-full cursor-pointer"
+                    >
+                      <div>
+                        {/* Top Image & Left Floating Badge Wrapper */}
+                        <div className="block relative w-full h-[210px]">
+                          {/* Image Container with overflow-hidden for hover zoom */}
+                          <div className="relative w-full h-full overflow-hidden bg-slate-900">
+                            <Image
+                              src={item.image || "/about.svg"}
+                              alt={item.title}
+                              fill
+                              className="object-cover group-hover:scale-105 transition-transform duration-700"
+                            />
+                          </div>
+
+                          {/* Floating Gold Circle Icon Badge (aligned left) */}
+                          <motion.div
+                            whileHover={{ scale: 1.1, rotate: 6 }}
+                            className="w-12 h-12 rounded-full border-2 border-[#D4A359] bg-[#0A0E17] flex items-center justify-center text-[#D4A359] absolute -bottom-6 left-6 z-20 shadow-xl transition-transform duration-300"
+                          >
+                            <IconComponent className="w-5 h-5 stroke-[1.75]" />
+                          </motion.div>
                         </div>
 
-                        {/* Floating Gold Circle Icon Badge (aligned left) */}
-                        <motion.div
-                          whileHover={{ scale: 1.1, rotate: 6 }}
-                          className="w-12 h-12 rounded-full border-2 border-[#D4A359] bg-[#0A0E17] flex items-center justify-center text-[#D4A359] absolute -bottom-6 left-6 z-20 shadow-xl transition-transform duration-300"
-                        >
-                          <IconComponent className="w-5 h-5 stroke-[1.75]" />
-                        </motion.div>
-                      </Link>
-
-                      {/* Card Content Body */}
-                      <div className="pt-9 pb-4 px-6 text-left">
-                        {/* Card Title */}
-                        <h3 className="font-serif font-semibold text-white text-xl sm:text-2xl text-left mb-3 group-hover:text-[#D4A359] transition-colors">
-                          <Link href={cardLink}>
+                        {/* Card Content Body */}
+                        <div className="pt-9 pb-4 px-6 text-left">
+                          {/* Card Title */}
+                          <h3 className="font-serif font-semibold text-white text-xl sm:text-2xl text-left mb-3 group-hover:text-[#D4A359] transition-colors">
                             {item.title}
-                          </Link>
-                        </h3>
+                          </h3>
 
-                        {/* Card Description */}
-                        <p className="text-slate-400 text-xs sm:text-sm leading-relaxed text-left min-h-[56px]">
-                          {item.description}
-                        </p>
+                          {/* Card Description */}
+                          <p className="text-slate-400 text-xs sm:text-sm leading-relaxed text-left min-h-[56px]">
+                            {item.description}
+                          </p>
+                        </div>
                       </div>
-                    </div>
 
-                    {/* Card Action Link */}
-                    <div className="pb-6 pt-2 px-6 text-left">
-                      <Link
-                        href={cardLink}
-                        className="inline-flex items-center justify-start gap-2 text-[#D4A359] text-xs font-semibold uppercase tracking-wider group-hover:gap-3 transition-all hover:underline"
-                      >
-                        <span>Learn More</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
-                    </div>
-                  </motion.div>
+                      {/* Card Action Link */}
+                      <div className="pb-6 pt-2 px-6 text-left">
+                        <div
+                          className="inline-flex items-center justify-start gap-2 text-[#D4A359] text-xs font-semibold uppercase tracking-wider group-hover:gap-3 transition-all group-hover:underline"
+                        >
+                          <span>Learn More</span>
+                          <ArrowRight className="w-4 h-4" />
+                        </div>
+                      </div>
+                    </motion.div>
+                  </Link>
                 </StaggerItem>
               );
             })}

@@ -10,6 +10,7 @@ export default function WhyChoosePage() {
     const whyChooseUsData = lawData.categories.Veritas.sections.WhyChooseUs?.variants?.VeritasWhyChooseUs1?.whyChooseUs;
 
     return (
+        //main section //
         <main className="min-h-screen bg-[#0B0E14] text-white pb-12 sm:pb-16 lg:pb-20">
             <SubBanner data={whyChooseSubBannerData} />
             <WhyChooseUs data={whyChooseUsData} />
