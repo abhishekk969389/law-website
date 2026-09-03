@@ -59,76 +59,78 @@ export function Eventsec({ data = defaultEventSectionData }: EventsecProps) {
           {items &&
             items.map((item: any) => (
               <StaggerItem key={item.id}>
-                <motion.div
-                  whileHover={{ y: -5, scale: 1.01 }}
-                  transition={{ duration: 0.25 }}
-                  className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] overflow-hidden hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl grid grid-cols-1 sm:grid-cols-12 min-h-[220px] cursor-pointer h-full"
+                <Link
+                  href={item.link || `/event/${item.slug || item.id}`}
+                  className="block h-full"
                 >
-                  {/* Left Image & Badges Overlay Container */}
-                  <Link href={item.link || `/event/${item.slug || item.id}`} className="block relative sm:col-span-5 w-full h-[220px] sm:h-full overflow-hidden bg-slate-900 min-h-[200px]">
-                    <Image
-                      src={item.image || "/service3.svg"}
-                      alt={item.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
-                    {/* Top-Left Category Badge */}
-                    <div className="absolute top-3 left-3 z-10 px-2.5 py-1 bg-[#070B12]/85 backdrop-blur-md border border-slate-700/60 text-white font-bold text-[10px] uppercase tracking-wider rounded">
-                      {item.badge}
+                  <motion.div
+                    whileHover={{ y: -5, scale: 1.01 }}
+                    transition={{ duration: 0.25 }}
+                    className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] overflow-hidden hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl grid grid-cols-1 sm:grid-cols-12 min-h-[220px] cursor-pointer h-full"
+                  >
+                    {/* Left Image & Badges Overlay Container */}
+                    <div className="relative sm:col-span-5 w-full h-[220px] sm:h-full overflow-hidden bg-slate-900 min-h-[200px]">
+                      <Image
+                        src={item.image || "/service3.svg"}
+                        alt={item.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-700"
+                      />
+                      {/* Top-Left Category Badge */}
+                      <div className="absolute top-3 left-3 z-10 px-2.5 py-1 bg-[#070B12]/85 backdrop-blur-md border border-slate-700/60 text-white font-bold text-[10px] uppercase tracking-wider rounded">
+                        {item.badge}
+                      </div>
+
+                      {/* Bottom-Left Date Overlay Badge */}
+                      <div className="absolute bottom-3 left-3 z-10 w-14 h-16 bg-[#070B12]/90 backdrop-blur-md border border-[#D4A359]/60 rounded-lg flex flex-col items-center justify-center text-center p-1 shadow-lg">
+                        <span className="text-xl font-bold text-white font-serif leading-none">
+                          {item.day}
+                        </span>
+                        <span className="text-[10px] font-bold text-[#D4A359] uppercase tracking-wider leading-tight mt-0.5">
+                          {item.month}
+                        </span>
+                        <span className="text-[9px] font-semibold text-slate-400 leading-none">
+                          {item.year}
+                        </span>
+                      </div>
                     </div>
 
-                    {/* Bottom-Left Date Overlay Badge */}
-                    <div className="absolute bottom-3 left-3 z-10 w-14 h-16 bg-[#070B12]/90 backdrop-blur-md border border-[#D4A359]/60 rounded-lg flex flex-col items-center justify-center text-center p-1 shadow-lg">
-                      <span className="text-xl font-bold text-white font-serif leading-none">
-                        {item.day}
-                      </span>
-                      <span className="text-[10px] font-bold text-[#D4A359] uppercase tracking-wider leading-tight mt-0.5">
-                        {item.month}
-                      </span>
-                      <span className="text-[9px] font-semibold text-slate-400 leading-none">
-                        {item.year}
-                      </span>
-                    </div>
-                  </Link>
-
-                  {/* Right Content Details Container */}
-                  <div className="sm:col-span-7 p-5 sm:p-6 flex flex-col justify-between text-left">
-                    <div>
-                      {/* Title */}
-                      <h3 className="font-serif font-semibold text-white text-lg sm:text-xl mb-2.5 group-hover:text-[#D4A359] transition-colors leading-snug line-clamp-2">
-                        <Link href={item.link || `/event/${item.slug || item.id}`}>
+                    {/* Right Content Details Container */}
+                    <div className="sm:col-span-7 p-5 sm:p-6 flex flex-col justify-between text-left">
+                      <div>
+                        {/* Title */}
+                        <h3 className="font-serif font-semibold text-white text-lg sm:text-xl mb-2.5 group-hover:text-[#D4A359] transition-colors leading-snug line-clamp-2">
                           {item.title}
-                        </Link>
-                      </h3>
+                        </h3>
 
-                      {/* Gold Line Divider */}
-                      <div className="w-8 h-[1.5px] bg-[#D4A359]/80 mb-3.5" />
+                        {/* Gold Line Divider */}
+                        <div className="w-8 h-[1.5px] bg-[#D4A359]/80 mb-3.5" />
 
-                      {/* Date & Time Row */}
-                      <div className="flex items-center gap-2 text-slate-300 text-xs sm:text-sm font-medium mb-2">
-                        <Calendar className="w-4 h-4 text-[#D4A359] shrink-0" />
-                        <span>{item.fullDate} | {item.time}</span>
+                        {/* Date & Time Row */}
+                        <div className="flex items-center gap-2 text-slate-300 text-xs sm:text-sm font-medium mb-2">
+                          <Calendar className="w-4 h-4 text-[#D4A359] shrink-0" />
+                          <span>{item.fullDate} | {item.time}</span>
+                        </div>
+
+                        {/* Location Row */}
+                        <div className="flex items-center gap-2 text-slate-400 text-xs sm:text-sm font-medium mb-5">
+                          <MapPin className="w-4 h-4 text-[#D4A359] shrink-0" />
+                          <span className="line-clamp-1">{item.location}</span>
+                        </div>
                       </div>
 
-                      {/* Location Row */}
-                      <div className="flex items-center gap-2 text-slate-400 text-xs sm:text-sm font-medium mb-5">
-                        <MapPin className="w-4 h-4 text-[#D4A359] shrink-0" />
-                        <span className="line-clamp-1">{item.location}</span>
+                      {/* View Details Action Link Button */}
+                      <div>
+                        <div
+                          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#D4A359]/60 bg-transparent text-[#D4A359] text-xs font-semibold uppercase tracking-wider group-hover:bg-[#D4A359] group-hover:text-[#0A0E17] transition-all"
+                        >
+                          <span>VIEW DETAILS</span>
+                          <ChevronRight className="w-4 h-4" />
+                        </div>
                       </div>
                     </div>
-
-                    {/* View Details Action Link Button */}
-                    <div>
-                      <Link
-                        href={item.link || `/event/${item.slug || item.id}`}
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#D4A359]/60 bg-transparent text-[#D4A359] text-xs font-semibold uppercase tracking-wider group-hover:bg-[#D4A359] group-hover:text-[#0A0E17] transition-all"
-                      >
-                        <span>VIEW DETAILS</span>
-                        <ChevronRight className="w-4 h-4" />
-                      </Link>
-                    </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
+                </Link>
               </StaggerItem>
             ))}
         </StaggerContainer>

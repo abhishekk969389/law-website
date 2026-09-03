@@ -10,6 +10,7 @@ export default function LegalDisclaimerPage() {
   const legalDisclaimerSectionData = lawData.categories.Veritas.sections.LegalDisclaimer?.variants?.VeritasLegalDisclaimer1?.legalDisclaimerSection;
 
   return (
+    //main section //
     <main className="min-h-screen bg-[#0B0E14] text-[#D4A359] pb-12 sm:pb-16 lg:pb-20">
       <SubBanner data={legalDisclaimerSubBannerData} />
       <Section data={legalDisclaimerSectionData} />

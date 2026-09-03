@@ -65,60 +65,61 @@ export function Pubsec({ data = defaultPublicationSectionData }: PubsecProps) {
           {displayedItems &&
             displayedItems.map((item: any) => (
               <StaggerItem key={item.id}>
-                <motion.div
-                  whileHover={{ y: -5, scale: 1.01 }}
-                  transition={{ duration: 0.25 }}
-                  className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] p-5 sm:p-6 overflow-hidden hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl flex flex-col sm:flex-row items-stretch gap-5 h-full cursor-pointer"
+                <Link
+                  href={item.link || "/publications"}
+                  className="block h-full"
                 >
-                  {/* Left Image Column */}
-                  <Link
-                    href={item.link || "/publications"}
-                    className="block relative w-full sm:w-[140px] h-[180px] sm:h-auto rounded-xl overflow-hidden bg-slate-900 shrink-0 min-h-[160px]"
+                  <motion.div
+                    whileHover={{ y: -5, scale: 1.01 }}
+                    transition={{ duration: 0.25 }}
+                    className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] p-5 sm:p-6 overflow-hidden hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl flex flex-col sm:flex-row items-stretch gap-5 h-full cursor-pointer"
                   >
-                    <Image
-                      src={item.image || "/service3.svg"}
-                      alt={item.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
-                  </Link>
+                    {/* Left Image Column */}
+                    <div
+                      className="block relative w-full sm:w-[140px] h-[180px] sm:h-auto rounded-xl overflow-hidden bg-slate-900 shrink-0 min-h-[160px]"
+                    >
+                      <Image
+                        src={item.image || "/service3.svg"}
+                        alt={item.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-700"
+                      />
+                    </div>
 
-                  {/* Right Details Column */}
-                  <div className="flex-1 flex flex-col justify-between text-left">
-                    <div>
-                      {/* Meta Row: Date & Category */}
-                      <div className="flex items-center gap-1.5 text-[11px] font-semibold tracking-wider uppercase mb-2">
-                        <Calendar className="w-3.5 h-3.5 text-[#D4A359]" />
-                        <span className="text-slate-400">{item.date}</span>
-                        <span className="text-slate-600">•</span>
-                        <span className="text-[#D4A359]">{item.category}</span>
+                    {/* Right Details Column */}
+                    <div className="flex-1 flex flex-col justify-between text-left">
+                      <div>
+                        {/* Meta Row: Date & Category */}
+                        <div className="flex items-center gap-1.5 text-[11px] font-semibold tracking-wider uppercase mb-2">
+                          <Calendar className="w-3.5 h-3.5 text-[#D4A359]" />
+                          <span className="text-slate-400">{item.date}</span>
+                          <span className="text-slate-600">•</span>
+                          <span className="text-[#D4A359]">{item.category}</span>
+                        </div>
+
+                        {/* Title */}
+                        <h3 className="font-serif font-semibold text-white text-base sm:text-lg mb-2 group-hover:text-[#D4A359] transition-colors leading-snug line-clamp-3">
+                          {item.title}
+                        </h3>
+
+                        {/* Description */}
+                        <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4 line-clamp-3 min-h-[48px]">
+                          {item.description}
+                        </p>
                       </div>
 
-                      {/* Title */}
-                      <h3 className="font-serif font-semibold text-white text-base sm:text-lg mb-2 group-hover:text-[#D4A359] transition-colors leading-snug line-clamp-3">
-                        <Link href={item.link || "/publications"}>
-                          {item.title}
-                        </Link>
-                      </h3>
-
-                      {/* Description */}
-                      <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4 line-clamp-3 min-h-[48px]">
-                        {item.description}
-                      </p>
+                      {/* Read More Action Link */}
+                      <div>
+                        <div
+                          className="inline-flex items-center gap-2 text-[#D4A359] text-xs font-semibold uppercase tracking-wider group-hover:gap-3 transition-all group-hover:underline mt-auto"
+                        >
+                          <span>{(data as any).buttonText || (item as any).linkText || ""}</span>
+                          <ArrowRight className="w-3.5 h-3.5" />
+                        </div>
+                      </div>
                     </div>
-
-                    {/* Read More Action Link */}
-                    <div>
-                      <Link
-                        href={item.link || "/publications"}
-                        className="inline-flex items-center gap-2 text-[#D4A359] text-xs font-semibold uppercase tracking-wider group-hover:gap-3 transition-all hover:underline mt-auto"
-                      >
-                        <span>{item.linkText || "READ MORE"}</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </Link>
-                    </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
+                </Link>
               </StaggerItem>
             ))}
         </StaggerContainer>

@@ -66,60 +66,60 @@ export function Careersec({ data = defaultCareerSectionData }: CareersecProps) {
 
               return (
                 <StaggerItem key={item.id}>
-                  <motion.div
-                    whileHover={{ y: -6, scale: 1.01 }}
-                    transition={{ duration: 0.25 }}
-                    className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] p-6 sm:p-7 overflow-hidden hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl flex flex-col justify-between min-h-[300px] cursor-pointer h-full"
+                  <Link
+                    href={item.link || (item.slug ? `/career/${item.slug}` : `/career/${item.id}`)}
+                    className="block h-full"
                   >
-                    {/* Top-Right Employment Type Badge */}
-                    <div className="absolute top-6 right-6 px-3 py-1 rounded-md border border-[#D4A359]/60 text-[#D4A359] text-[11px] font-semibold uppercase tracking-wider bg-[#070B12]/80">
-                      {item.badge || "Full Time"}
-                    </div>
+                    <motion.div
+                      whileHover={{ y: -6, scale: 1.01 }}
+                      transition={{ duration: 0.25 }}
+                      className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] p-6 sm:p-7 overflow-hidden hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl flex flex-col justify-between min-h-[300px] cursor-pointer h-full"
+                    >
+                      {/* Top-Right Employment Type Badge */}
+                      <div className="absolute top-6 right-6 px-3 py-1 rounded-md border border-[#D4A359]/60 text-[#D4A359] text-[11px] font-semibold uppercase tracking-wider bg-[#070B12]/80">
+                        {item.badge || "Full Time"}
+                      </div>
 
-                    <div>
-                      {/* Header Row: Left Icon Box + Title & Location */}
-                      {/* Header Row: Left Icon Box + Title & Location */}
-                      <div className="flex items-start gap-4 mb-4">
-                        {/* Icon Box */}
-                        <Link
-                          href={item.link || (item.slug ? `/career/${item.slug}` : `/career/${item.id}`)}
-                          className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl border border-slate-800 bg-[#060911] flex items-center justify-center shrink-0 shadow-md group-hover:border-[#D4A359]/50 transition-colors"
-                        >
-                          <IconComponent className="w-6 h-6 text-[#D4A359]" />
-                        </Link>
-
-                        {/* Title & Location */}
-                        <div>
-                          <h3 className="font-serif font-semibold text-white text-lg sm:text-xl group-hover:text-[#D4A359] transition-colors leading-snug pr-16">
-                            <Link href={item.link || (item.slug ? `/career/${item.slug}` : `/career/${item.id}`)}>
-                              {item.title}
-                            </Link>
-                          </h3>
-                          <div className="flex items-center gap-1.5 text-slate-400 text-xs sm:text-sm mt-1 font-medium">
-                            <MapPin className="w-3.5 h-3.5 text-[#D4A359]" />
-                            <span>{item.location}</span>
+                      <div>
+                        {/* Header Row: Left Icon Box + Title & Location */}
+                        <div className="flex items-start gap-4 mb-4">
+                          {/* Icon Box */}
+                          <div
+                            className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl border border-slate-800 bg-[#060911] flex items-center justify-center shrink-0 shadow-md group-hover:border-[#D4A359]/50 transition-colors"
+                          >
+                            <IconComponent className="w-6 h-6 text-[#D4A359]" />
                           </div>
+
+                          {/* Title & Location */}
+                          <div>
+                            <h3 className="font-serif font-semibold text-white text-lg sm:text-xl group-hover:text-[#D4A359] transition-colors leading-snug pr-16">
+                              {item.title}
+                            </h3>
+                            <div className="flex items-center gap-1.5 text-slate-400 text-xs sm:text-sm mt-1 font-medium">
+                              <MapPin className="w-3.5 h-3.5 text-[#D4A359]" />
+                              <span>{item.location}</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Description Excerpt */}
+                        <p className="text-slate-400 text-xs sm:text-sm leading-relaxed my-4 flex-1 line-clamp-3">
+                          {item.description}
+                        </p>
+                      </div>
+
+                      {/* Apply Now Button */}
+                      <div className="pt-2">
+                        <div
+                          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#B87B1D]/50 text-white text-xs sm:text-sm font-semibold transition-all duration-200 w-fit shadow-md group-hover:bg-[#D4A359] group-hover:text-[#0A0E17]"
+                        >
+                          <span>Apply Now</span>
+                          <ArrowRight className="w-4 h-4" />
                         </div>
                       </div>
 
-                      {/* Description Excerpt */}
-                      <p className="text-slate-400 text-xs sm:text-sm leading-relaxed my-4 flex-1 line-clamp-3">
-                        {item.description}
-                      </p>
-                    </div>
-
-                    {/* Apply Now Button */}
-                    <div className="pt-2">
-                      <Link
-                        href={item.link || (item.slug ? `/career/${item.slug}` : `/career/${item.id}`)}
-                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#B87B1D]/50 hover:bg-[#C88A23] text-white text-xs sm:text-sm font-semibold transition-all duration-200 w-fit cursor-pointer shadow-md group-hover:bg-[#D4A359] group-hover:text-[#0A0E17]"
-                      >
-                        <span>Apply Now</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
-                    </div>
-
-                  </motion.div>
+                    </motion.div>
+                  </Link>
                 </StaggerItem>
               );
             })}

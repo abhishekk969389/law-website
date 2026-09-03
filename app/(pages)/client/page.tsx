@@ -13,6 +13,7 @@ export default function ClientPage() {
   const clientCardsData = lawData.categories.Veritas.sections.ClientResource?.variants?.VeritasClientResource1?.clientCards;
 
   return (
+    //main section //
     <main className="min-h-screen bg-[#0B0E14] text-white pb-12 sm:pb-16 lg:pb-20">
       <SubBanner data={clientSubBannerData} />
       <Clientsec data={clientSectionData as any} />

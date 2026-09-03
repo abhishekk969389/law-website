@@ -74,58 +74,57 @@ export function Blogsec({ data = defaultBlogSectionData }: BlogsecProps) {
           {displayedItems &&
             displayedItems.map((item: any) => (
               <StaggerItem key={item.id}>
-                <motion.div
-                  whileHover={{ y: -6, scale: 1.01 }}
-                  transition={{ duration: 0.25 }}
-                  className="flex flex-col bg-[#0C191B]/90 border border-white/10 rounded-3xl p-5 sm:p-6 transition-colors duration-300 hover:border-[#D4A359]/40 hover:shadow-[0_15px_35px_rgba(0,0,0,0.5)] group h-full cursor-pointer"
-                >
-                  {/* Image Container */}
-                  <Link href={item.linkHref || `/blog/${item.id}`} className="block relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-5 bg-slate-900">
-                    <Image
-                      src={item.image || "/about.svg"}
-                      alt={item.title}
-                      fill
-                      className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0B0E14]/40 via-transparent to-transparent opacity-60" />
-                  </Link>
+                <Link href={item.linkHref || `/blog/${item.id}`} className="block h-full">
+                  <motion.div
+                    whileHover={{ y: -6, scale: 1.01 }}
+                    transition={{ duration: 0.25 }}
+                    className="flex flex-col bg-[#0C191B]/90 border border-white/10 rounded-3xl p-5 sm:p-6 transition-colors duration-300 hover:border-[#D4A359]/40 hover:shadow-[0_15px_35px_rgba(0,0,0,0.5)] group h-full cursor-pointer"
+                  >
+                    {/* Image Container */}
+                    <div className="block relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-5 bg-slate-900">
+                      <Image
+                        src={item.image || "/about.svg"}
+                        alt={item.title}
+                        fill
+                        className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0B0E14]/40 via-transparent to-transparent opacity-60" />
+                    </div>
 
-                  {/* Meta Details (Author, Date, Comments) */}
-                  <div className="flex items-center gap-3.5 text-xs text-gray-400 font-light mb-3 flex-wrap">
-                    <div className="flex items-center gap-1.5">
-                      <User className="w-3.5 h-3.5 text-[#D4A359]" />
-                      <span>By {item.author}</span>
+                    {/* Meta Details (Author, Date, Comments) */}
+                    <div className="flex items-center gap-3.5 text-xs text-gray-400 font-light mb-3 flex-wrap">
+                      <div className="flex items-center gap-1.5">
+                        <User className="w-3.5 h-3.5 text-[#D4A359]" />
+                        <span>By {item.author}</span>
+                      </div>
+                      <span className="text-gray-600">|</span>
+                      <div className="flex items-center gap-1.5">
+                        <Calendar className="w-3.5 h-3.5 text-[#D4A359]" />
+                        <span>{item.date}</span>
+                      </div>
+                      <span className="text-gray-600">|</span>
+                      <div className="flex items-center gap-1.5">
+                        <MessageSquare className="w-3.5 h-3.5 text-[#D4A359]" />
+                        <span>{item.commentsCount}</span>
+                      </div>
                     </div>
-                    <span className="text-gray-600">|</span>
-                    <div className="flex items-center gap-1.5">
-                      <Calendar className="w-3.5 h-3.5 text-[#D4A359]" />
-                      <span>{item.date}</span>
-                    </div>
-                    <span className="text-gray-600">|</span>
-                    <div className="flex items-center gap-1.5">
-                      <MessageSquare className="w-3.5 h-3.5 text-[#D4A359]" />
-                      <span>{item.commentsCount}</span>
-                    </div>
-                  </div>
 
-                  {/* Blog Title */}
-                  <h3 className="font-serif text-lg sm:text-xl font-medium text-white leading-snug mb-5 group-hover:text-[#E3C280] transition-colors line-clamp-2">
-                    <Link href={item.linkHref || `/blog/${item.id}`}>
+                    {/* Blog Title */}
+                    <h3 className="font-serif text-lg sm:text-xl font-medium text-white leading-snug mb-5 group-hover:text-[#E3C280] transition-colors line-clamp-2">
                       {item.title}
-                    </Link>
-                  </h3>
+                    </h3>
 
-                  {/* Read More Link */}
-                  <div className="mt-auto">
-                    <Link
-                      href={item.linkHref || `/blog/${item.id}`}
-                      className="inline-flex items-center gap-2 text-[#D4A359] text-xs sm:text-sm font-medium hover:text-[#E3C280] transition-colors group/link"
-                    >
-                      <span>{item.linkText}</span>
-                      <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
-                    </Link>
-                  </div>
-                </motion.div>
+                    {/* Read More Link */}
+                    <div className="mt-auto">
+                      <div
+                        className="inline-flex items-center gap-2 text-[#D4A359] text-xs sm:text-sm font-medium hover:text-[#E3C280] transition-colors group/link"
+                      >
+                        <span>{item.linkText}</span>
+                        <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+                      </div>
+                    </div>
+                  </motion.div>
+                </Link>
               </StaggerItem>
             ))}
         </StaggerContainer>

@@ -10,19 +10,21 @@ import lawData from "@/app/data/lawData-restructured.json";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion, AnimatePresence } from "framer-motion";
 
-const defaultCaseStudyData: CaseStudyData = lawData.categories.Veritas.sections.CaseStudy?.variants?.VeritasCaseStudy1?.caseStudy || {
-    tagline: "CASE STUDY",
-    heading: {
-        line1: "Tailored For",
-        highlight: "Legal",
-        line2: "Practices In Injury Law And Traffic Defense",
-    },
-    subheading: "Explore how our strategic legal solutions have delivered real results and made a difference in our clients' lives.",
-    items: [],
-};
+const defaultCaseStudyData: any =
+    (lawData.categories.Veritas.sections.CaseStudy?.variants?.VeritasCaseStudy1 as any)?.caseStudySection ||
+    (lawData.categories.Veritas.sections.CaseStudy?.variants?.VeritasCaseStudy1 as any)?.caseStudy || {
+        tagline: "CASE STUDY",
+        heading: {
+            line1: "Tailored For",
+            highlight: "Legal",
+            line2: "Practices In Injury Law And Traffic Defense",
+        },
+        subheading: "Explore how our strategic legal solutions have delivered real results and made a difference in our clients' lives.",
+        items: [],
+    };
 
 interface CaseStudyProps {
-    data?: CaseStudyData;
+    data?: any;
 }
 
 export default function CaseStudy({ data = defaultCaseStudyData }: CaseStudyProps) {
@@ -98,70 +100,89 @@ export default function CaseStudy({ data = defaultCaseStudyData }: CaseStudyProp
 
                 {/* Case Study Cards Grid */}
                 <StaggerContainer key={currentIndex} staggerChildren={0.12} delayChildren={0.1} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-                    {visibleItems.map((item) => (
-                        <StaggerItem key={item.id}>
-                            <motion.div
-                                whileHover={{ y: -6 }}
-                                transition={{ duration: 0.25 }}
-                                className="flex flex-col group cursor-pointer"
-                            >
+                    {visibleItems.map((item: any) => {
+                        const slugMap: Record<string, string> = {
+                            "1": "car-accident-victim",
+                            "2": "dui-dismissal",
+                            "3": "reckless-driving",
+                            "4": "wrongful-conviction",
+                            "5": "insurance-claim-maximized",
+                            "6": "traffic-ticket-dismissed",
+                        };
 
-                                {/* Image Card Container with Floating Button */}
-                                <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-6 shadow-lg">
-                                    <Image
-                                        src={item.image}
-                                        alt={item.title}
-                                        fill
-                                        className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-[#0B0E14]/40 via-transparent to-transparent opacity-60" />
+                        const detailHref =
+                            (item.linkHref && !item.linkHref.startsWith("/case-study/"))
+                                ? item.linkHref
+                                : item.slug
+                                    ? `/casestudy/${item.slug}`
+                                    : (item.id && slugMap[item.id])
+                                        ? `/casestudy/${slugMap[item.id]}`
+                                        : `/casestudy/${item.id || "car-accident-victim"}`;
 
-                                    {/* Floating Arrow Badge (Dark Maroon/Brown Button) */}
-                                    <Link
-                                        href={item.linkHref}
-                                        className="absolute bottom-3.5 right-3.5 w-11 h-11 rounded-xl bg-[#422222]/90 backdrop-blur-md border border-white/10 flex items-center justify-center text-white transition-all duration-300 group-hover:bg-[#D4A359] group-hover:text-[#0B0E14]"
-                                    >
-                                        <ArrowUpRight className="w-5 h-5 stroke-[2]" />
-                                    </Link>
-                                </div>
+                        return (
+                            <StaggerItem key={item.id}>
+                                <Link href={detailHref} className="block h-full">
+                                <motion.div
+                                    whileHover={{ y: -6 }}
+                                    transition={{ duration: 0.25 }}
+                                    className="flex flex-col group cursor-pointer h-full"
+                                >
+                                    {/* Image Card Container with Floating Button */}
+                                    <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-6 shadow-lg">
+                                        <Image
+                                            src={item.image}
+                                            alt={item.title}
+                                            fill
+                                            className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-[#0B0E14]/40 via-transparent to-transparent opacity-60" />
 
-                                {/* Below Image Content Alignment */}
-                                <div className="flex items-stretch gap-4 sm:gap-5">
-                                    {/* Outlined Number */}
-                                    <span
-                                        className="text-5xl sm:text-6xl lg:text-[64px] font-normal text-transparent leading-none select-none shrink-0 pt-1 tracking-tighter"
-                                        style={{ WebkitTextStroke: "1.5px rgba(255, 255, 255, 0.45)" }}
-                                    >
-                                        {item.number}
-                                    </span>
-
-                                    {/* Continuous Vertical Gold Line */}
-                                    <div className="w-[1.5px] bg-[#D4A359]/70 shrink-0 self-stretch my-1" />
-
-                                    {/* Right Stacked Content: Title, Description, Link */}
-                                    <div className="flex flex-col flex-1 pl-1">
-                                        <h3 className="font-serif text-lg sm:text-xl font-medium text-white leading-snug mb-3 group-hover:text-[#E3C280] transition-colors">
-                                            {item.title}
-                                        </h3>
-
-                                        <p className="text-gray-400 text-xs sm:text-sm font-light leading-relaxed mb-4">
-                                            {item.description}
-                                        </p>
-
-                                        <div className="mt-auto pt-1">
-                                            <Link
-                                                href={item.linkHref}
-                                                className="inline-flex items-center gap-2 text-[#D4A359] text-xs sm:text-sm font-medium hover:text-[#E3C280] transition-colors group/link"
-                                            >
-                                                <span>{item.linkText}</span>
-                                                <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
-                                            </Link>
+                                        {/* Floating Arrow Badge (Dark Maroon/Brown Button) */}
+                                        <div
+                                            className="absolute bottom-3.5 right-3.5 w-11 h-11 rounded-xl bg-[#422222]/90 backdrop-blur-md border border-white/10 flex items-center justify-center text-white transition-all duration-300 group-hover:bg-[#D4A359] group-hover:text-[#0B0E14]"
+                                        >
+                                            <ArrowUpRight className="w-5 h-5 stroke-[2]" />
                                         </div>
                                     </div>
-                                </div>
-                            </motion.div>
+
+                                    {/* Below Image Content Alignment */}
+                                    <div className="flex items-stretch gap-4 sm:gap-5">
+                                        {/* Outlined Number */}
+                                        <span
+                                            className="text-5xl sm:text-6xl lg:text-[64px] font-normal text-transparent leading-none select-none shrink-0 pt-1 tracking-tighter"
+                                            style={{ WebkitTextStroke: "1.5px rgba(255, 255, 255, 0.45)" }}
+                                        >
+                                            {item.number}
+                                        </span>
+
+                                        {/* Continuous Vertical Gold Line */}
+                                        <div className="w-[1.5px] bg-[#D4A359]/70 shrink-0 self-stretch my-1" />
+
+                                        {/* Right Stacked Content: Title, Description, Link */}
+                                        <div className="flex flex-col flex-1 pl-1">
+                                            <h3 className="font-serif text-lg sm:text-xl font-medium text-white leading-snug mb-3 group-hover:text-[#E3C280] transition-colors">
+                                                {item.title}
+                                            </h3>
+
+                                            <p className="text-gray-400 text-xs sm:text-sm font-light leading-relaxed mb-4">
+                                                {item.description}
+                                            </p>
+
+                                            <div className="mt-auto pt-1">
+                                                <div
+                                                    className="inline-flex items-center gap-2 text-[#D4A359] text-xs sm:text-sm font-medium hover:text-[#E3C280] transition-colors group/link"
+                                                >
+                                                    <span>{item.linkText}</span>
+                                                    <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            </Link>
                         </StaggerItem>
-                    ))}
+                    );
+                })}
                 </StaggerContainer>
 
                 {/* Carousel Pagination Dots */}
