@@ -76,41 +76,50 @@ export function Sitemapsec({ data = defaultSitemapSectionData }: SitemapsecProps
         {/* 8 Category Cards Grid with Top Floating Overlapping Badge */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-14 sm:gap-y-16 mt-12 sm:mt-16">
           {categories &&
-            categories.map((card: any) => (
-              <div
-                key={card.id}
-                className="group relative rounded-[22px] border border-slate-800/80 bg-[#070A11] p-6 sm:p-7 pb-8 text-center hover:border-[#D4A359]/50 transition-all duration-300 shadow-xl flex flex-col items-center hover:translate-y-[-4px]"
-              >
-                {/* Overlapping Floating Circle Badge at Top Border */}
-                <div className="-mt-12 sm:-mt-14 mb-5 w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-[#D4A359] bg-[#070A11] flex items-center justify-center text-[#D4A359] shadow-[0_0_18px_rgba(212,163,89,0.25)] shrink-0 group-hover:scale-105 transition-transform">
-                  {getCategoryIcon(card.icon)}
+            categories.map((card: any) => {
+              const categoryHref = card.href || (card.links && card.links[0]?.href) || "/";
+              return (
+                <div
+                  key={card.id}
+                  className="group relative rounded-[22px] border border-slate-800/80 bg-[#070A11] p-6 sm:p-7 pb-8 text-center hover:border-[#D4A359]/50 transition-all duration-300 shadow-xl flex flex-col items-center hover:translate-y-[-4px]"
+                >
+                  {/* Overlapping Floating Circle Badge at Top Border */}
+                  <Link
+                    href={categoryHref}
+                    aria-label={card.title}
+                    className="-mt-12 sm:-mt-14 mb-5 w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-[#D4A359] bg-[#070A11] flex items-center justify-center text-[#D4A359] shadow-[0_0_18px_rgba(212,163,89,0.25)] shrink-0 group-hover:scale-105 transition-transform cursor-pointer"
+                  >
+                    {getCategoryIcon(card.icon)}
+                  </Link>
+
+                  {/* Category Title */}
+                  <h3 className="font-semibold text-white text-base sm:text-lg tracking-wider uppercase mb-3">
+                    <Link href={categoryHref} className="hover:text-[#D4A359] transition-colors">
+                      {card.title}
+                    </Link>
+                  </h3>
+
+                  {/* Gold Underline Accent */}
+                  <div className="sm:w-38 h-[1px] bg-[#D4A359] mb-6 mx-auto" />
+
+                  {/* Bulleted Links List */}
+                  <ul className="space-y-3.5 text-left w-full pl-1 sm:pl-2">
+                    {card.links &&
+                      card.links.map((link: any) => (
+                        <li key={link.id}>
+                          <Link
+                            href={link.href}
+                            className="flex items-center gap-3 text-slate-300 hover:text-[#D4A359] text-xs sm:text-sm font-medium transition-colors group/link"
+                          >
+                            <span className="w-2 h-2 rounded-full bg-[#D4A359] shrink-0 group-hover/link:scale-125 transition-transform" />
+                            <span className="hover:underline leading-snug">{link.label}</span>
+                          </Link>
+                        </li>
+                      ))}
+                  </ul>
                 </div>
-
-                {/* Category Title */}
-                <h3 className="font-semibold text-white text-base sm:text-lg tracking-wider uppercase mb-3">
-                  {card.title}
-                </h3>
-
-                {/* Gold Underline Accent */}
-                <div className="sm:w-38 h-[1px] bg-[#D4A359] mb-6 mx-auto" />
-
-                {/* Bulleted Links List */}
-                <ul className="space-y-3.5 text-left w-full pl-1 sm:pl-2">
-                  {card.links &&
-                    card.links.map((link: any) => (
-                      <li key={link.id}>
-                        <Link
-                          href={link.href}
-                          className="flex items-center gap-3 text-slate-300 hover:text-[#D4A359] text-xs sm:text-sm font-medium transition-colors"
-                        >
-                          <span className="w-2 h-2 rounded-full bg-[#D4A359] shrink-0" />
-                          <span className="hover:underline leading-snug">{link.label}</span>
-                        </Link>
-                      </li>
-                    ))}
-                </ul>
-              </div>
-            ))}
+              );
+            })}
         </div>
     </section>
   );
