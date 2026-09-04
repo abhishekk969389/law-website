@@ -46,10 +46,9 @@ export function PublicationSidebar({
               >
                 {/* Thumbnail Image */}
                 <div className="relative w-16 h-16 sm:w-20 sm:h-16 rounded-xl overflow-hidden shrink-0 bg-slate-900 border border-slate-800 shadow-sm">
-                  <Image
-                    src={post.image || "/service1.svg"}
+                  <Image src={post.image || "/service1.svg"}
                     alt={post.title}
-                    fill
+                    fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>

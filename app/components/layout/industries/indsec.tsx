@@ -94,10 +94,9 @@ export function Indsec({ data = defaultIndustrySectionData as any }: IndsecProps
                         <div className="block relative w-full h-[210px]">
                           {/* Image Container with overflow-hidden for hover zoom */}
                           <div className="relative w-full h-full overflow-hidden bg-slate-900">
-                            <Image
-                              src={item.image || "/about.svg"}
+                            <Image src={item.image || "/about.svg"}
                               alt={item.title}
-                              fill
+                              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                               className="object-cover group-hover:scale-105 transition-transform duration-700"
                             />
                           </div>

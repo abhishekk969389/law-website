@@ -154,10 +154,9 @@ export function ServiceDetailsSec({ service }: ServiceDetailsSecProps) {
                     <div className="relative w-full max-w-[390px] md:max-w-none h-[280px] sm:h-[340px] md:h-[380px] lg:h-[500px] rounded-xl bg-[#090D16] group shadow-2xl">
                        {/* Image Container */}
                       <div className="relative w-full h-full rounded-lg overflow-hidden bg-slate-900">
-                        <Image
-                          src={headerImage || "/service1.svg"}
+                        <Image src={headerImage || "/service1.svg"}
                           alt={`${title.line1} ${title.line2}`}
-                          fill
+                          fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           priority
                           className="object-cover group-hover:scale-105 transition-transform duration-700"
                         />
@@ -220,10 +219,9 @@ export function ServiceDetailsSec({ service }: ServiceDetailsSecProps) {
 
                       {/* Left Lady Justice / Approach Image */}
                       <div className="md:col-span-5 relative w-full h-[220px] sm:h-[260px] md:h-[280px] rounded-xl overflow-hidden border border-slate-800 shadow-lg">
-                        <Image
-                          src={approach.image || "/about-img.svg"}
+                        <Image src={approach.image || "/about-img.svg"}
                           alt={approach.title}
-                          fill
+                          fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           className="object-cover"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />

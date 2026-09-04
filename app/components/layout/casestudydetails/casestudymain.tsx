@@ -43,10 +43,9 @@ export function CaseStudyMain({ caseStudy }: CaseStudyMainProps) {
         <div className="relative p-5 sm:p-7 lg:p-8 pt-4 sm:pt-5 lg:pt-12 flex flex-col justify-start">
           {/* Background Image & Gradient Mask */}
           <div className="absolute inset-0 z-0">
-            <Image
-              src={caseStudy.image || "/casestudy1.svg"}
+            <Image src={caseStudy.image || "/casestudy1.svg"}
               alt={typeof caseStudy.title === "string" ? caseStudy.title : caseStudy.title?.whiteText || "Case Study"}
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               priority
               className="object-cover object-right sm:object-center"
             />

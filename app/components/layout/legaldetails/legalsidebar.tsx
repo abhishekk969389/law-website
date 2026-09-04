@@ -47,10 +47,9 @@ export function LegalSidebar({ currentId, sidebarData }: LegalSidebarProps) {
                 >
                   {/* Left Thumbnail Image */}
                   <div className="relative w-16 h-16 sm:w-18 sm:h-18 rounded-xl overflow-hidden shrink-0 bg-slate-900 border border-white/10 shadow-md">
-                    <Image
-                      src={item.image || "/about.svg"}
+                    <Image src={item.image || "/about.svg"}
                       alt={item.title}
-                      fill
+                      fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>

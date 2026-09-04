@@ -63,10 +63,9 @@ export function Casestudysec({ data = defaultCaseStudySectionData }: Casestudyse
                   >
                     {/* Image Card Container with Floating Button */}
                     <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-6 shadow-lg bg-slate-900">
-                      <Image
-                        src={item.image || "/casestudy1.svg"}
+                      <Image src={item.image || "/casestudy1.svg"}
                         alt={item.title}
-                        fill
+                        fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#0B0E14]/40 via-transparent to-transparent opacity-60" />

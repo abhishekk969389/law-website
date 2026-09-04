@@ -15,10 +15,9 @@ export default function NotFound() {
       {/* Left Side: Lady Justice Artwork / Statue Overlay */}
       <div className="absolute left-0 bottom-0 top-0 w-1/3 max-w-[450px] hidden lg:block pointer-events-none z-10 opacity-70">
         <div className="relative w-full h-full">
-          <Image
-            src="/about.svg"
+          <Image src="/about.svg"
             alt="Lady Justice"
-            fill
+            fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover object-left opacity-25 mix-blend-luminosity filter contrast-125"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#070A11]/80 to-[#070A11]" />
@@ -28,10 +27,9 @@ export default function NotFound() {
       {/* Right Side: Law Courthouse Columns Overlay */}
       <div className="absolute right-0 bottom-0 top-0 w-1/3 max-w-[450px] hidden lg:block pointer-events-none z-10 opacity-70">
         <div className="relative w-full h-full">
-          <Image
-            src="/footerimg.svg"
+          <Image src="/footerimg.svg"
             alt="Courthouse Pillars"
-            fill
+            fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover object-right opacity-25 mix-blend-luminosity filter contrast-125"
           />
           <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#070A11]/80 to-[#070A11]" />

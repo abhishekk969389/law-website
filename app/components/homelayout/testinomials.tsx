@@ -51,10 +51,9 @@ export default function Testimonials({ data = defaultTestimonialsData }: Testimo
                     {/* Left Column: Featured Image with Badge */}
                     <FadeIn direction="right" delay={0.1} className="lg:col-span-5 relative pr-4 lg:pr-6">
                         <div className="relative w-full aspect-square rounded-[32px] overflow-hidden shadow-2xl border border-white/10 group">
-                            <Image
-                                src={image || "/testinomial.svg"}
+                            <Image src={image || "/testinomial.svg"}
                                 alt="Client Testimonials"
-                                fill
+                                fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                                 priority
                             />
@@ -68,10 +67,9 @@ export default function Testimonials({ data = defaultTestimonialsData }: Testimo
                                 transition={{ duration: 10, ease: "linear", repeat: Infinity }}
                                 className="relative w-full h-full rounded-full overflow-hidden cursor-pointer"
                             >
-                                <Image
-                                    src="/seal-badge.svg"
+                                <Image src="/seal-badge.svg"
                                     alt="Best Lawyer Seal Badge"
-                                    fill
+                                    fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     className="object-contain"
                                 />
                             </motion.div>
@@ -148,10 +146,9 @@ export default function Testimonials({ data = defaultTestimonialsData }: Testimo
                                         {/* Author Info */}
                                         <div className="flex items-center gap-4 sm:gap-5">
                                             <div className="relative w-16 h-16 sm:w-20 sm:h-20 lg:w-[84px] lg:h-[84px] rounded-full overflow-hidden border border-white/15 shrink-0 bg-gray-800 shadow-lg">
-                                                <Image
-                                                    src={currentItem.authorAvatar || "/service1.svg"}
+                                                <Image src={currentItem.authorAvatar || "/service1.svg"}
                                                     alt={currentItem.authorName}
-                                                    fill
+                                                    fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                                     className="object-cover"
                                                 />
                                             </div>

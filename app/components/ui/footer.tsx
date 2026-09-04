@@ -44,10 +44,9 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
 
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <Image
-          src={backgroundImage || "/footerimg.svg"}
+        <Image src={backgroundImage || "/footerimg.svg"}
           alt="Footer Background"
-          fill
+          fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover object-center opacity-95"
           priority
         />
@@ -208,10 +207,9 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
                   className="flex items-center gap-3 group"
                 >
                   <div className="relative w-12 h-12 lg:w-14 lg:h-14 rounded-lg overflow-hidden shrink-0 border border-white/10 bg-gray-800">
-                    <Image
-                      src={item.image}
+                    <Image src={item.image}
                       alt={item.title}
-                      fill
+                      fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>

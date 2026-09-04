@@ -78,10 +78,9 @@ export function Pubsec({ data = defaultPublicationSectionData }: PubsecProps) {
                     <div
                       className="block relative w-full sm:w-[140px] h-[180px] sm:h-auto rounded-xl overflow-hidden bg-slate-900 shrink-0 min-h-[160px]"
                     >
-                      <Image
-                        src={item.image || "/service3.svg"}
+                      <Image src={item.image || "/service3.svg"}
                         alt={item.title}
-                        fill
+                        fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-cover group-hover:scale-105 transition-transform duration-700"
                       />
                     </div>

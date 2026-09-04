@@ -49,10 +49,9 @@ export function BlogSidebar({ currentId, sidebarData }: BlogSidebarProps) {
                 >
                   {/* Left Thumbnail Image */}
                   <div className="relative w-16 h-16 sm:w-18 sm:h-18 rounded-xl overflow-hidden shrink-0 bg-slate-900 border border-white/10 shadow-md">
-                    <Image
-                      src={item.image || "/about.svg"}
+                    <Image src={item.image || "/about.svg"}
                       alt={item.title}
-                      fill
+                      fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
@@ -87,10 +86,9 @@ export function BlogSidebar({ currentId, sidebarData }: BlogSidebarProps) {
         <FadeIn direction="up" delay={0.25} duration={0.6} className="relative rounded-2xl sm:rounded-3xl bg-[#0A0E17] border border-slate-800/80 p-6 sm:p-8 shadow-xl overflow-hidden text-center flex flex-col items-center justify-center min-h-[340px]">
           {/* Background Image Overlay */}
           <div className="absolute inset-0 opacity-20 pointer-events-none z-0">
-            <Image
-              src={contact.backgroundImage || "/testinomial.svg"}
+            <Image src={contact.backgroundImage || "/testinomial.svg"}
               alt="Consultation Background"
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover filter contrast-125"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0E17] via-[#0A0E17]/80 to-[#0A0E17]/50" />

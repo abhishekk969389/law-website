@@ -64,10 +64,9 @@ export function Team({ data = defaultTeamData }: TeamProps) {
                   <Link href={member.linkHref || `/team/${member.id}`} className="flex flex-col h-full w-full">
                     {/* Member Portrait Image */}
                     <div className="relative w-full h-[280px] sm:h-[320px] lg:h-[340px] overflow-hidden bg-slate-900">
-                      <Image
-                        src={member.image || "/casestudy1.svg"}
+                      <Image src={member.image || "/casestudy1.svg"}
                         alt={member.name}
-                        fill
+                        fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         priority
                         className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                       />

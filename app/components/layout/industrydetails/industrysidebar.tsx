@@ -150,10 +150,9 @@ export function IndustrySidebar({
                 className="flex items-center gap-3.5 pt-4 first:pt-0 group cursor-pointer"
               >
                 <div className="relative w-20 h-16 rounded-xl overflow-hidden shrink-0 bg-slate-900 border border-slate-800">
-                  <Image
-                    src={insight.image || "/service1.svg"}
+                  <Image src={insight.image || "/service1.svg"}
                     alt={insight.title}
-                    fill
+                    fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>

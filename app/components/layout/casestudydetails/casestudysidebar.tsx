@@ -85,10 +85,9 @@ export function CaseStudySidebar({
                 >
                   {/* Image Thumbnail */}
                   <div className="relative w-20 h-20 rounded-xl overflow-hidden shrink-0 bg-slate-900 border border-slate-800">
-                    <Image
-                      src={item.image || "/casestudy1.svg"}
+                    <Image src={item.image || "/casestudy1.svg"}
                       alt={titleText}
-                      fill
+                      fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
@@ -119,10 +118,9 @@ export function CaseStudySidebar({
           {/* Right Side Background Lady Justice / Watermark Artwork */}
           {contact.backgroundImage && (
             <div className="absolute right-0 top-0 bottom-0 w-[60%] opacity-30 pointer-events-none z-0">
-              <Image
-                src={contact.backgroundImage}
+              <Image src={contact.backgroundImage}
                 alt="Lady Justice Background"
-                fill
+                fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover object-right filter brightness-75 contrast-125"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-[#0A0E17] via-[#0A0E17]/20 to-transparent" />

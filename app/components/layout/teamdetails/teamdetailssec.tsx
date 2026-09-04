@@ -178,10 +178,9 @@ export function TeamDetailsSec({ member }: TeamDetailsSecProps) {
 
                   {/* Main Profile Image Box */}
                   <div className="relative w-full h-[380px] sm:h-[460px] md:h-[500px] lg:h-[530px] rounded-3xl overflow-hidden bg-slate-900 shadow-2xl border border-slate-800/80 group z-10">
-                    <Image
-                      src={image || "/about.svg"}
+                    <Image src={image || "/about.svg"}
                       alt={name}
-                      fill
+                      fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       priority
                       className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                     />

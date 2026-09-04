@@ -70,10 +70,9 @@ export function Eventsec({ data = defaultEventSectionData }: EventsecProps) {
                   >
                     {/* Left Image & Badges Overlay Container */}
                     <div className="relative sm:col-span-5 w-full h-[220px] sm:h-full overflow-hidden bg-slate-900 min-h-[200px]">
-                      <Image
-                        src={item.image || "/service3.svg"}
+                      <Image src={item.image || "/service3.svg"}
                         alt={item.title}
-                        fill
+                        fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-cover group-hover:scale-105 transition-transform duration-700"
                       />
                       {/* Top-Left Category Badge */}

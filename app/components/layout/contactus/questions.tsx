@@ -45,10 +45,9 @@ export function Questions({ data = defaultQuestionsSectionData }: QuestionsProps
       {/* 1. Questions Form Block (with background image overlay) */}
       <section className="relative w-full  mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden px-4 sm:px-6 lg:px-8">
         {/* Background Image with Overlay */}
-        <Image
-          src={image || "/bannerbg.svg"}
+        <Image src={image || "/bannerbg.svg"}
           alt="Background"
-          fill
+          fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover object-center opacity-35"
           priority
         />

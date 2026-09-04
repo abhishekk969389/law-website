@@ -75,10 +75,9 @@ export function Legalsec({ data = defaultLegalSectionData as any }: LegalsecProp
                             <div className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] overflow-hidden hover:border-[#D4A359]/50 transition-all duration-300 shadow-xl grid grid-cols-1 lg:grid-cols-2 cursor-pointer">
                                 {/* Left Image Container */}
                                 <div className="block relative w-full h-[260px] sm:h-[320px] lg:h-full overflow-hidden bg-slate-900 min-h-[260px]">
-                                    <Image
-                                        src={featured.image || "/service3.svg"}
+                                    <Image src={featured.image || "/service3.svg"}
                                         alt={featured.title}
-                                        fill
+                                        fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                         className="object-cover group-hover:scale-105 transition-transform duration-700"
                                     />
                                     {/* Gold FEATURED Badge */}
@@ -139,10 +138,9 @@ export function Legalsec({ data = defaultLegalSectionData as any }: LegalsecProp
                                         <div>
                                             {/* Top Image Container */}
                                             <div className="block relative w-full h-[190px] sm:h-[210px] overflow-hidden bg-slate-900">
-                                                <Image
-                                                    src={item.image || "/about.svg"}
+                                                <Image src={item.image || "/about.svg"}
                                                     alt={item.title}
-                                                    fill
+                                                    fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                                                 />
                                             </div>

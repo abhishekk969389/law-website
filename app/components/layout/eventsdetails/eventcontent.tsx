@@ -212,10 +212,9 @@ export function EventContent({ event }: EventContentProps) {
               {/* Left: Venue Image & Info */}
               <div className="lg:col-span-6 xl:col-span-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5">
                 <div className="relative w-full sm:w-36 h-48 sm:h-24 rounded-xl overflow-hidden bg-slate-900 border border-slate-800 shrink-0 shadow-md">
-                  <Image
-                    src={event.venueImage || event.image || "/about.svg"}
+                  <Image src={event.venueImage || event.image || "/about.svg"}
                     alt={event.venue}
-                    fill
+                    fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover"
                   />
                 </div>

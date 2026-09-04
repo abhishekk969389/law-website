@@ -66,10 +66,9 @@ export function Awardsec({ data = defaultAwardSectionData }: AwardsecProps) {
                                 >
                                     {/* Top Image Box for SVG Logo Emblem */}
                                     <div className="relative w-[150px] h-[150px] sm:w-[160px] sm:h-[160px] flex items-center justify-center my-auto transition-transform duration-500 group-hover:scale-105">
-                                        <Image
-                                            src={item.logo}
+                                        <Image src={item.logo}
                                             alt={item.organization}
-                                            fill
+                                            fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                             className="object-contain"
                                         />
                                     </div>

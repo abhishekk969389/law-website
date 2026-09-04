@@ -36,10 +36,9 @@ export function EventHero({ event }: EventHeroProps) {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-center">
         {/* Left Column: Image & Badges */}
         <div className="lg:col-span-5 relative w-full aspect-[4/3] sm:aspect-[16/11] lg:aspect-square rounded-2xl overflow-hidden bg-slate-900 border border-slate-800/90 shadow-xl">
-          <Image
-            src={event.image || "/about.svg"}
+          <Image src={event.image || "/about.svg"}
             alt={event.title}
-            fill
+            fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority
             className="object-cover object-center"
           />

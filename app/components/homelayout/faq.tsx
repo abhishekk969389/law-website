@@ -127,10 +127,9 @@ export default function Faq({ data = defaultFaqData }: FaqProps) {
           {/* Right Column: Featured Image */}
           <FadeIn direction="left" delay={0.3} className="lg:col-span-6 relative">
             <div className="relative w-full aspect-square sm:aspect-[4/3] lg:aspect-square rounded-[32px] overflow-hidden shadow-2xl border border-white/10 group">
-              <Image
-                src={image || "/testinomial.svg"}
+              <Image src={image || "/testinomial.svg"}
                 alt="Frequently Asked Questions"
-                fill
+                fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 priority
               />

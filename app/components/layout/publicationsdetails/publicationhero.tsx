@@ -17,10 +17,9 @@ export function PublicationHero({ publication }: PublicationHeroProps) {
     <FadeIn direction="up" delay={0.1} duration={0.6} className="space-y-5 text-left select-none">
       {/* 1. Hero Image */}
       <div className="relative w-full aspect-[16/9] sm:aspect-[21/10] rounded-2xl overflow-hidden bg-slate-900 border border-slate-800/80 shadow-2xl">
-        <Image
-          src={publication.image || "/service1.svg"}
+        <Image src={publication.image || "/service1.svg"}
           alt={publication.title}
-          fill
+          fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           priority
           className="object-cover object-center"
         />
