@@ -66,19 +66,19 @@ export default function Banner({ data = defaultBannerData }: BannerProps) {
           {/* Buttons */}
           <StaggerContainer delayChildren={0.45} staggerChildren={0.15} className="flex flex-col sm:flex-row gap-3.5 sm:gap-4 mb-10">
             {data.buttons.map((button: any, index: any) => (
-              <StaggerItem key={index}>
+              <StaggerItem key={index} className="w-full sm:w-auto">
                 <a
                   href={button.href}
                   className={`
-                    inline-flex items-center justify-center w-full sm:w-auto px-6 sm:px-8 py-3.5 text-xs sm:text-sm font-medium transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 rounded-lg
+                    inline-flex items-center justify-center w-full sm:w-auto px-6 sm:px-8 py-3.5 text-xs sm:text-sm font-medium transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 rounded-lg text-center
                     ${button.variant === 'primary'
                       ? 'bg-[#E5B562] text-[#0B0E14] hover:bg-[#D4A359] shadow-md'
                       : 'border border-[#D4A359] text-white hover:bg-[#D4A359]/10'
                     }
                   `}
                 >
-                  {button.text}
-                  <ArrowUpRight className="ml-2 w-4 h-4 text-[#0B0E14]" />
+                  <span>{button.text}</span>
+                  <ArrowUpRight className={`ml-2 w-4 h-4 shrink-0 ${button.variant === 'primary' ? 'text-[#0B0E14]' : 'text-[#D4A359]'}`} />
                 </a>
               </StaggerItem>
             ))}
