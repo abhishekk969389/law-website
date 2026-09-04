@@ -4735,7 +4735,8 @@
                         "label": "Our Approach",
                         "href": "/ourapproach"
                       }
-                    ]
+                    ],
+                    "href": "/about"
                   },
                   {
                     "id": "2",
@@ -4750,7 +4751,7 @@
                       {
                         "id": "2-2",
                         "label": "Services Detail",
-                        "href": "/service"
+                        "href": "/service/car-accidents-law"
                       },
                       {
                         "id": "2-3",
@@ -4760,9 +4761,10 @@
                       {
                         "id": "2-4",
                         "label": "Industry Detail",
-                        "href": "/industries"
+                        "href": "/industries/banking-financial"
                       }
-                    ]
+                    ],
+                    "href": "/service"
                   },
                   {
                     "id": "3",
@@ -4777,7 +4779,7 @@
                       {
                         "id": "3-2",
                         "label": "Team Detail",
-                        "href": "/team"
+                        "href": "/team/abhishek-kumar"
                       },
                       {
                         "id": "3-3",
@@ -4787,9 +4789,10 @@
                       {
                         "id": "3-4",
                         "label": "Job Detail",
-                        "href": "/career"
+                        "href": "/career/senior-associate-corporate-law"
                       }
-                    ]
+                    ],
+                    "href": "/team"
                   },
                   {
                     "id": "4",
@@ -4804,9 +4807,10 @@
                       {
                         "id": "4-2",
                         "label": "Case Study Detail",
-                        "href": "/casestudy"
+                        "href": "/casestudy/car-accident-victim"
                       }
-                    ]
+                    ],
+                    "href": "/casestudy"
                   },
                   {
                     "id": "5",
@@ -4821,7 +4825,7 @@
                       {
                         "id": "5-2",
                         "label": "Blog Detail",
-                        "href": "/blog"
+                        "href": "/blog/latest-changes-family-law-1"
                       },
                       {
                         "id": "5-3",
@@ -4831,14 +4835,15 @@
                       {
                         "id": "5-4",
                         "label": "Legal Updates Detail",
-                        "href": "/legal"
+                        "href": "/legal/corporate-governance-rules-2024"
                       },
                       {
                         "id": "5-5",
                         "label": "Client Resources",
                         "href": "/client"
                       }
-                    ]
+                    ],
+                    "href": "/blog"
                   },
                   {
                     "id": "6",
@@ -4858,7 +4863,7 @@
                       {
                         "id": "6-3",
                         "label": "Events Detail",
-                        "href": "/event"
+                        "href": "/event/recent-developments-corporate-law"
                       },
                       {
                         "id": "6-4",
@@ -4868,9 +4873,10 @@
                       {
                         "id": "6-5",
                         "label": "Publications Detail",
-                        "href": "/publications"
+                        "href": "/publications/corporate-governance-rules"
                       }
-                    ]
+                    ],
+                    "href": "/media"
                   },
                   {
                     "id": "7",
@@ -4887,7 +4893,8 @@
                         "label": "Testimonials",
                         "href": "/testimonial"
                       }
-                    ]
+                    ],
+                    "href": "/award"
                   },
                   {
                     "id": "8",
@@ -4914,7 +4921,8 @@
                         "label": "Legal Disclaimer",
                         "href": "/legaldisclimer"
                       }
-                    ]
+                    ],
+                    "href": "/faq"
                   }
                 ]
               }
@@ -5396,8 +5404,8 @@
                     },
                     {
                       "id": "3",
-                      "title": "News & Media",
-                      "linkHref": "/media"
+                      "title": "News & Blogs",
+                      "linkHref": "/blog"
                     },
                     {
                       "id": "4",
