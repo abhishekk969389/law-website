@@ -27,10 +27,9 @@ export function LegalMain({ article }: LegalMainProps) {
     <article className="w-full text-left">
       {/* 1. Large Top Hero Image */}
       <FadeIn direction="up" delay={0.1} duration={0.6} className="relative w-full aspect-[16/10] sm:aspect-[16/9] rounded-2xl sm:rounded-3xl overflow-hidden mb-6 bg-[#0B0E14] border border-slate-800/80 shadow-2xl">
-        <Image
-          src={article.image || "/about.svg"}
+        <Image src={article.image || "/about.svg"}
           alt={article.title}
-          fill
+          fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           priority
           className="object-cover object-center"
         />

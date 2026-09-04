@@ -85,10 +85,9 @@ export function IndustryMain({ industry }: IndustryMainProps) {
 
       {/* 2. Hero Image */}
       <FadeIn direction="up" delay={0.15} duration={0.6} className="relative w-full aspect-[16/9] sm:aspect-[21/9] rounded-2xl overflow-hidden border border-slate-800/80 shadow-2xl bg-slate-900">
-        <Image
-          src={industry.heroImage || "/service1.svg"}
+        <Image src={industry.heroImage || "/service1.svg"}
           alt={industry.title}
-          fill
+          fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           priority
           className="object-cover"
         />

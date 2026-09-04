@@ -125,10 +125,9 @@ export function WhyChooseUs({ data = defaultWhyChooseUsData }: WhyChooseUsProps)
                         <div className="relative w-full h-full min-h-[420px] sm:min-h-[480px] lg:min-h-[540px] rounded-2xl p-3 border-2 border-[#C99A2E]/70 bg-[#0E131C] shadow-2xl overflow-hidden group">
                             {/* Inner Gold Border Accent */}
                             <div className="relative w-full h-full rounded-xl overflow-hidden border border-[#C99A2E]/40">
-                                <Image
-                                    src={image || "/subbanner.svg"}
+                                <Image src={image || "/subbanner.svg"}
                                     alt="Why Choose Us"
-                                    fill
+                                    fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     priority
                                     className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                                 />

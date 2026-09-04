@@ -108,10 +108,9 @@ export default function Services({ data = defaultServicesData }: ServicesProps) 
                     >
                       {/* Top Image Container */}
                       <div className="relative rounded-[14px] overflow-hidden w-full h-[175px] sm:h-[190px] bg-[#090C12]">
-                        <Image
-                          src={item.image || "/service-1.svg"}
+                        <Image src={item.image || "/service-1.svg"}
                           alt={item.title}
-                          fill
+                          fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           className="object-cover scale-[1.22] sm:scale-[1.20] transition-transform duration-700 group-hover:scale-135"
                         />
                         {/* Subtle Overlay */}

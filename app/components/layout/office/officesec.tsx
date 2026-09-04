@@ -114,10 +114,9 @@ export function Officesec({ data = defaultOfficeSectionData }: OfficesecProps) {
             <div className="relative rounded-2xl border border-slate-800/80 bg-[#070A11] p-8 sm:p-10 overflow-hidden shadow-2xl min-h-[380px] sm:min-h-[440px] flex flex-col justify-between group hover:border-[#D4A359]/40 transition-all duration-300">
               
               {/* Background Image of Lady Justice statue & Law Books */}
-              <Image
-                src={image && image !== "/about.svg" ? image : "/testinomial.svg"}
+              <Image src={image && image !== "/about.svg" ? image : "/testinomial.svg"}
                 alt="Delivering excellence across India"
-                fill
+                fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover object-right opacity-45 transition-transform duration-700 group-hover:scale-105"
                 priority
               />

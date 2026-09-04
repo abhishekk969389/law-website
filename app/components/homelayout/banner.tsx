@@ -17,10 +17,9 @@ export default function Banner({ data = defaultBannerData }: BannerProps) {
     <section className="relative w-full flex items-center bg-[#0B0E14] overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src={data.backgroundImage || '/bannerbg.svg'}
+        <Image src={data.backgroundImage || '/bannerbg.svg'}
           alt="Lady Justice"
-          fill
+          fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover object-center opacity-80"
           priority
         />

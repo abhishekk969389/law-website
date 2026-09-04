@@ -67,10 +67,9 @@ export function SubBanner({
             {/* Subbanner Background Image Container */}
             <div className="relative w-full h-[200px] sm:h-[240px] md:h-[280px] lg:h-[300px]">
                 {/* Render subbanner.svg as background photoO */}
-                <Image
-                    src={bgImage}
+                <Image src={bgImage}
                     alt={title}
-                    fill
+                    fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     priority
                     className="object-cover object-center"
                 />

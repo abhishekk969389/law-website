@@ -71,10 +71,9 @@ export function Teamsec({ data = defaultTeamSectionData }: TeamsecProps) {
                     <Link href={member.link || (member.name ? `/team/${member.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}` : `/team/${member.id}`)} className="block">
                       {/* Top Image Container */}
                       <div className="relative w-full h-[280px] sm:h-[300px] overflow-hidden bg-slate-900">
-                        <Image
-                          src={member.image || "/about.svg"}
+                        <Image src={member.image || "/about.svg"}
                           alt={member.name}
-                          fill
+                          fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           className="object-cover group-hover:scale-105 transition-transform duration-700"
                         />
                       </div>

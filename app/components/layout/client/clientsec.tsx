@@ -50,10 +50,9 @@ export function Clientsec({ data = defaultany }: ClientsecProps) {
           {/* Right Image Frame matching reference screenshot */}
           <FadeIn direction="left" delay={0.25} className="lg:col-span-6">
             <div className="relative w-full h-[320px] sm:h-[400px] lg:h-[440px] rounded-2xl overflow-hidden border border-[#D4A359]/50 shadow-2xl bg-slate-900 group">
-              <Image
-                src={image || "/about.svg"}
+              <Image src={image || "/about.svg"}
                 alt={title || "Client Resources"}
-                fill
+                fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
             </div>

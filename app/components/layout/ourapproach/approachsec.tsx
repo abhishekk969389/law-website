@@ -41,10 +41,9 @@ export function ApproachSec({ data = defaultApproachData }: ApproachSecProps) {
 
                 {/* Right Side Photo */}
                 <div className="absolute inset-0 z-0">
-                    <Image
-                        src={image || "/subbanner.svg"}
+                    <Image src={image || "/subbanner.svg"}
                         alt="Our Approach"
-                        fill
+                        fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         priority
                         className="object-cover object-right"
                     />
