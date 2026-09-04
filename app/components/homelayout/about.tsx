@@ -168,35 +168,39 @@ export default function About({ data = defaultAboutData }: AboutProps) {
                         </FadeIn>
 
                         {/* 4 Feature Items Grid */}
-                        <StaggerContainer staggerChildren={0.12} delayChildren={0.45} className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 relative">
+                        <StaggerContainer staggerChildren={0.12} delayChildren={0.45} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 relative">
                             {foundation.items.map((item: any, idx: any) => {
                                 const IconComp = foundationIconMap[item.icon.toLowerCase()] || ShieldCheck;
 
                                 return (
-                                    <StaggerItem key={item.id || idx} className="relative lg:pr-4">
+                                    <StaggerItem key={item.id || idx} className="relative lg:pr-4 bg-[#0E141E]/40 sm:bg-transparent p-4 sm:p-0 rounded-2xl sm:rounded-none border border-slate-800/50 sm:border-none">
                                         {/* Vertical Divider for desktop */}
                                         {idx < foundation.items.length - 1 && (
                                             <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-24 bg-slate-800" />
                                         )}
 
-                                        {/* Icon Badge */}
-                                        <motion.div
-                                            whileHover={{ scale: 1.1, rotate: 6 }}
-                                            transition={{ type: "spring", stiffness: 300 }}
-                                            className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#131C1B] border border-[#1F302D] flex items-center justify-center text-[#D4A359] mb-4 shadow-sm group hover:border-[#D4A359]/50 transition-colors cursor-pointer"
-                                        >
-                                            <IconComp className="w-7 h-7 sm:w-8 sm:h-8" />
-                                        </motion.div>
+                                        <div className="flex sm:block items-start gap-4 sm:gap-0">
+                                            {/* Icon Badge */}
+                                            <motion.div
+                                                whileHover={{ scale: 1.1, rotate: 6 }}
+                                                transition={{ type: "spring", stiffness: 300 }}
+                                                className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#131C1B] border border-[#1F302D] flex items-center justify-center text-[#D4A359] mb-0 sm:mb-4 shrink-0 shadow-sm group hover:border-[#D4A359]/50 transition-colors cursor-pointer"
+                                            >
+                                                <IconComp className="w-6 h-6 sm:w-8 sm:h-8" />
+                                            </motion.div>
 
-                                        {/* Feature Title */}
-                                        <h4 className="text-white font-semibold text-xs sm:text-sm mb-1">
-                                            {item.title}
-                                        </h4>
+                                            <div>
+                                                {/* Feature Title */}
+                                                <h4 className="text-white font-semibold text-sm sm:text-sm mb-1">
+                                                    {item.title}
+                                                </h4>
 
-                                        {/* Feature Subtitle */}
-                                        <p className="text-slate-400 text-[11px] text-xs sm:text-sm leading-normal">
-                                            {item.description}
-                                        </p>
+                                                {/* Feature Subtitle */}
+                                                <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                                                    {item.description}
+                                                </p>
+                                            </div>
+                                        </div>
                                     </StaggerItem>
                                 );
                             })}
