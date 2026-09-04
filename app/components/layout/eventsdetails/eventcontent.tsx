@@ -130,11 +130,11 @@ export function EventContent({ event }: EventContentProps) {
               </h2>
 
               {/* Vertical Timeline (Mobile only) */}
-              <div className="block md:hidden space-y-5 relative ml-2 before:absolute before:inset-0 before:ml-1 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-[#D4A359]/60 before:to-transparent">
+              <div className="block md:hidden space-y-5 relative before:absolute before:left-3 before:top-0 before:bottom-0 before:w-0.5 before:-translate-x-1/2 before:bg-gradient-to-b before:from-transparent before:via-[#D4A359]/60 before:to-transparent">
                 {event.timeline.map((item: any, idx: any) => (
-                  <div key={idx} className="relative flex items-start gap-4 mb-5">
-                    <div className="absolute left-0 w-2.5 h-2.5 rounded-full bg-[#D4A359] border border-[#070B12] shadow-[0_0_8px_rgba(212,163,89,0.7)] mt-1.5 -translate-x-[4px]" />
-                    <div className="pl-6 flex-1">
+                  <div key={idx} className="relative flex items-start mb-5">
+                    <div className="absolute left-3 top-1.5 w-3 h-3 rounded-full bg-[#D4A359] border-2 border-[#0B0E14] -translate-x-1/2 shadow-[0_0_8px_rgba(212,163,89,0.8)] z-10" />
+                    <div className="pl-8 flex-1">
                       <div className="text-xs font-semibold text-[#D4A359] uppercase tracking-wide mb-1">
                         {item.time}
                       </div>

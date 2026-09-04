@@ -803,7 +803,7 @@
                 "backgroundImage": "/subbanner.svg"
               },
               "servicesSubBanner": {
-                "title": "Our Services",
+                "title": "Services",
                 "subtitle": "Comprehensive & Strategic Legal Solutions",
                 "breadcrumbs": [
                   {
@@ -4227,7 +4227,7 @@
                     "id": "1",
                     "badge": "Full Time",
                     "icon": "Scale",
-                    "title": "Senior Associate – Corporate Law",
+                    "title": "Senior Associate",
                     "location": "Mumbai, India",
                     "description": "Handle corporate advisory, due diligence, mergers & acquisitions, and compliance matters for leading national and international clients.",
                     "link": "/career/senior-associate-corporate-law",
@@ -4237,7 +4237,7 @@
                     "id": "2",
                     "badge": "Full Time",
                     "icon": "Gavel",
-                    "title": "Associate – Litigation",
+                    "title": "Associate Litigation",
                     "location": "Delhi, India",
                     "description": "Represent clients in civil, commercial, and criminal litigation matters before various courts and tribunals.",
                     "link": "/career/associate-litigation",
