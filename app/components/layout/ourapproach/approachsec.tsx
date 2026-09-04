@@ -68,11 +68,11 @@ export function ApproachSec({ data = defaultApproachData }: ApproachSecProps) {
 
                 {/* Foreground Content */}
                 <div className="relative z-20 max-w-[1400px] mx-auto w-full px-4 sm:px-6 lg:px-8 mt-8 sm:mt-10 md:mt-12 lg:mt-14 pb-8 sm:pb-10">
-                    <div className="max-w-2xl lg:max-w-xl xl:max-w-2xl">
+                    <div className="max-w-2xl lg:max-w-xl xl:max-w-2xl mx-auto md:mx-0">
 
                         {/* Tagline Badge */}
                         <FadeIn direction="up" delay={0.1}>
-                            <div className="flex items-center gap-3 mb-3">
+                            <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
                                 <span className="w-8 h-[1px] bg-[#D4A359]/60" />
                                 <Scale className="w-4 h-4 text-[#D4A359] shrink-0" />
                                 <span className="text-[#D4A359] text-xs md:text-lg font-semibold tracking-widest uppercase">
@@ -84,7 +84,7 @@ export function ApproachSec({ data = defaultApproachData }: ApproachSecProps) {
 
                         {/* Main Heading matching About section & whychooseus typography */}
                         <FadeIn direction="up" delay={0.2}>
-                            <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.15] tracking-tight mb-4">
+                            <h2 className="font-serif text-2xl sm:text-3xl md:text-5xl lg:text-[56px] leading-[1.15] tracking-tight mb-4 text-center md:text-left">
                                 <span className="block text-white font-medium mb-1">
                                     {heading.line1}
                                 </span>
@@ -99,7 +99,7 @@ export function ApproachSec({ data = defaultApproachData }: ApproachSecProps) {
 
                         {/* Gold Ornate Line Divider */}
                         <FadeIn direction="up" delay={0.25}>
-                            <div className="flex items-center gap-4 my-4 max-w-md">
+                            <div className="flex items-center gap-4 my-4 max-w-md mx-auto md:mx-0">
                                 <div className="h-[1px] bg-slate-800 flex-1" />
                                 <span className="text-[#D4A359] text-sm sm:text-base md:text-lg font-medium leading-none drop-shadow-[0_0_6px_rgba(212,163,89,0.4)]">
                                     ❖
@@ -110,13 +110,13 @@ export function ApproachSec({ data = defaultApproachData }: ApproachSecProps) {
 
                         {/* Subheading / Description */}
                         <FadeIn direction="up" delay={0.3}>
-                            <p className="text-slate-300 text-sm md:text-base lg:text-lg leading-relaxed mb-6 font-normal">
+                            <p className="text-slate-300 text-sm md:text-base lg:text-lg leading-relaxed mb-6 font-normal text-center md:text-left">
                                 {description}
                             </p>
                         </FadeIn>
 
                         {/* 4 Feature Columns Row */}
-                        <StaggerContainer staggerChildren={0.1} delayChildren={0.35} className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-5 pt-5 border-t border-slate-800/80">
+                        <StaggerContainer staggerChildren={0.1} delayChildren={0.35} className="grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-6 sm:gap-4 md:gap-5 pt-5 border-t border-slate-800/80">
                             {items &&
                                 items.map((item: any) => {
                                     const IconComponent = iconMap[item.icon] || Target;
@@ -130,13 +130,13 @@ export function ApproachSec({ data = defaultApproachData }: ApproachSecProps) {
                                                 {/* Circle Icon Badge */}
                                                 <motion.div
                                                     whileHover={{ scale: 1.1, rotate: 6 }}
-                                                    className="w-11 h-11 rounded-full border border-[#D4A359]/60 flex items-center justify-center mb-2.5 p-2 group-hover:border-[#D4A359] group-hover:bg-[#D4A359]/10 transition-all duration-300"
+                                                    className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-[#D4A359]/60 flex items-center justify-center mb-2.5 p-2 group-hover:border-[#D4A359] group-hover:bg-[#D4A359]/10 transition-all duration-300"
                                                 >
                                                     <IconComponent className="w-5 h-5 text-[#D4A359]" />
                                                 </motion.div>
 
                                                 {/* Feature Title */}
-                                                <h3 className="font-serif font-semibold text-white text-base md:text-lg mb-1 group-hover:text-[#D4A359] transition-colors">
+                                                <h3 className="font-serif font-semibold text-white text-sm sm:text-base md:text-lg mb-1 group-hover:text-[#D4A359] transition-colors">
                                                     {item.title}
                                                 </h3>
 
