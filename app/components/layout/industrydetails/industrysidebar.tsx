@@ -43,7 +43,7 @@ export interface IndustrySidebarProps {
   sidebarData?: IndustryDetailSidebarData;
 }
 
-const globalSidebar = (({}) as any).industrySidebar;
+const globalSidebar = (lawData.categories?.Veritas?.sections?.Industries?.variants?.VeritasIndustries1 as any)?.industrySidebar;
 
 export function IndustrySidebar({
   currentId,
