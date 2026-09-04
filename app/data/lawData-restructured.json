@@ -3231,7 +3231,7 @@
                     "date": "23 Sep, 2025",
                     "commentsCount": "3 Comments",
                     "image": "/blog/blog1.svg",
-                    "linkHref": "/blog/latest-changes-family-law-1",
+                    "linkHref": "/blog/latest-changes-family-law",
                     "linkText": "Read More"
                   },
                   {
@@ -3241,7 +3241,7 @@
                     "date": "24 Sep, 2025",
                     "commentsCount": "2 Comments",
                     "image": "/blog/blog2.svg",
-                    "linkHref": "/blog/significant-modifications-family-law-1",
+                    "linkHref": "/blog/significant-modifications-family-law",
                     "linkText": "Read More"
                   },
                   {
@@ -3251,7 +3251,7 @@
                     "date": "25 Sep, 2025",
                     "commentsCount": "4 Comments",
                     "image": "/blog/blog3.svg",
-                    "linkHref": "/blog/crucial-updates-family-law-1",
+                    "linkHref": "/blog/crucial-updates-family-law",
                     "linkText": "Read More"
                   },
                   {
@@ -3261,7 +3261,7 @@
                     "date": "23 Sep, 2025",
                     "commentsCount": "3 Comments",
                     "image": "/blog/blog2.svg",
-                    "linkHref": "/blog/latest-changes-family-law-2",
+                    "linkHref": "/blog/modern-family-law-updates",
                     "linkText": "Read More"
                   },
                   {
@@ -3271,7 +3271,7 @@
                     "date": "24 Sep, 2025",
                     "commentsCount": "2 Comments",
                     "image": "/blog/blog3.svg",
-                    "linkHref": "/blog/significant-modifications-family-law-2",
+                    "linkHref": "/blog/family-law-modifications-overview",
                     "linkText": "Read More"
                   },
                   {
@@ -3281,7 +3281,7 @@
                     "date": "25 Sep, 2025",
                     "commentsCount": "4 Comments",
                     "image": "/blog/blog1.svg",
-                    "linkHref": "/blog/crucial-updates-family-law-2",
+                    "linkHref": "/blog/essential-family-law-updates",
                     "linkText": "Read More"
                   },
                   {
@@ -3363,7 +3363,7 @@
                     "date": "23 Sep, 2025",
                     "commentsCount": "3 Comments",
                     "title": "It's important to keep up with the latest changes in family..",
-                    "linkHref": "/blog/1",
+                    "linkHref": "/blog/latest-changes-family-law",
                     "linkText": "Read More"
                   },
                   {
@@ -3373,7 +3373,7 @@
                     "date": "24 Sep, 2025",
                     "commentsCount": "2 Comments",
                     "title": "There have been significant modifications in family law.",
-                    "linkHref": "/blog/2",
+                    "linkHref": "/blog/significant-modifications-family-law",
                     "linkText": "Read More"
                   },
                   {
@@ -3383,7 +3383,7 @@
                     "date": "26 Sep, 2025",
                     "commentsCount": "4 Comments",
                     "title": "It's crucial to be aware of the latest updates in family law.",
-                    "linkHref": "/blog/3",
+                    "linkHref": "/blog/crucial-updates-family-law",
                     "linkText": "Read More"
                   }
                 ]
@@ -3393,53 +3393,53 @@
                 "recentBlogs": [
                   {
                     "id": "1",
-                    "slug": "latest-changes-family-law-1",
+                    "slug": "latest-changes-family-law",
                     "title": "latest changes in family law.",
                     "author": "Jonson",
                     "category": "Attorney",
                     "date": "23 Sep, 2025",
                     "image": "/blog/blog1.svg",
-                    "linkHref": "/blog/latest-changes-family-law-1"
+                    "linkHref": "/blog/latest-changes-family-law"
                   },
                   {
                     "id": "2",
-                    "slug": "significant-modifications-family-law-1",
+                    "slug": "significant-modifications-family-law",
                     "title": "modifications in family law.",
                     "author": "Jonson",
                     "category": "Attorney",
                     "date": "24 Sep, 2025",
                     "image": "/blog/blog2.svg",
-                    "linkHref": "/blog/significant-modifications-family-law-1"
+                    "linkHref": "/blog/significant-modifications-family-law"
                   },
                   {
                     "id": "3",
-                    "slug": "crucial-updates-family-law-1",
+                    "slug": "crucial-updates-family-law",
                     "title": "latest updates in family law.",
                     "author": "Jonson",
                     "category": "Attorney",
                     "date": "25 Sep, 2025",
                     "image": "/blog/blog3.svg",
-                    "linkHref": "/blog/crucial-updates-family-law-1"
+                    "linkHref": "/blog/crucial-updates-family-law"
                   },
                   {
                     "id": "4",
-                    "slug": "latest-changes-family-law-2",
+                    "slug": "modern-family-law-updates",
                     "title": "latest changes in family law.",
                     "author": "Jonson",
                     "category": "Attorney",
                     "date": "23 Sep, 2025",
                     "image": "/blog/blog2.svg",
-                    "linkHref": "/blog/latest-changes-family-law-2"
+                    "linkHref": "/blog/modern-family-law-updates"
                   },
                   {
                     "id": "5",
-                    "slug": "significant-modifications-family-law-2",
+                    "slug": "family-law-modifications-overview",
                     "title": "modifications in family law.",
                     "author": "Jonson",
                     "category": "Attorney",
                     "date": "24 Sep, 2025",
                     "image": "/blog/blog3.svg",
-                    "linkHref": "/blog/significant-modifications-family-law-2"
+                    "linkHref": "/blog/family-law-modifications-overview"
                   }
                 ],
                 "contact": {
@@ -4825,7 +4825,7 @@
                       {
                         "id": "5-2",
                         "label": "Blog Detail",
-                        "href": "/blog/latest-changes-family-law-1"
+                        "href": "/blog/latest-changes-family-law"
                       },
                       {
                         "id": "5-3",
@@ -5477,21 +5477,21 @@
                       "title": "It's important to keep up with the latest changes in family law.",
                       "date": "23 Sep, 2025",
                       "image": "/blog/blog1.svg",
-                      "linkHref": "/blog/latest-changes-family-law-1"
+                      "linkHref": "/blog/latest-changes-family-law"
                     },
                     {
                       "id": "2",
                       "title": "There have been significant modifications in family law.",
                       "date": "24 Sep, 2025",
                       "image": "/blog/blog2.svg",
-                      "linkHref": "/blog/significant-modifications-family-law-1"
+                      "linkHref": "/blog/significant-modifications-family-law"
                     },
                     {
                       "id": "3",
                       "title": "It's crucial to be aware of the latest updates in family law.",
                       "date": "25 Sep, 2025",
                       "image": "/blog/blog3.svg",
-                      "linkHref": "/blog/crucial-updates-family-law-1"
+                      "linkHref": "/blog/crucial-updates-family-law"
                     }
                   ]
                 },
@@ -6754,8 +6754,8 @@
             "VeritasBlogDetail1": {
               "blogDetails": [
                 {
-                  "id": "latest-changes-family-law-1",
-                  "slug": "latest-changes-family-law-1",
+                  "id": "latest-changes-family-law",
+                  "slug": "latest-changes-family-law",
                   "title": "latest changes in family law.",
                   "image": "/blog/blog1.svg",
                   "author": "Jonson",
@@ -6778,8 +6778,8 @@
                   ]
                 },
                 {
-                  "id": "significant-modifications-family-law-1",
-                  "slug": "significant-modifications-family-law-1",
+                  "id": "significant-modifications-family-law",
+                  "slug": "significant-modifications-family-law",
                   "title": "modifications in family law.",
                   "image": "/blog/blog2.svg",
                   "author": "Jonson",
@@ -6802,8 +6802,8 @@
                   ]
                 },
                 {
-                  "id": "crucial-updates-family-law-1",
-                  "slug": "crucial-updates-family-law-1",
+                  "id": "crucial-updates-family-law",
+                  "slug": "crucial-updates-family-law",
                   "title": "latest updates in family law.",
                   "image": "/blog/blog3.svg",
                   "author": "Jonson",
@@ -6826,8 +6826,8 @@
                   ]
                 },
                 {
-                  "id": "latest-changes-family-law-2",
-                  "slug": "latest-changes-family-law-2",
+                  "id": "modern-family-law-updates",
+                  "slug": "modern-family-law-updates",
                   "title": "latest changes in family law.",
                   "image": "/blog/blog2.svg",
                   "author": "Jonson",
@@ -6850,8 +6850,8 @@
                   ]
                 },
                 {
-                  "id": "significant-modifications-family-law-2",
-                  "slug": "significant-modifications-family-law-2",
+                  "id": "family-law-modifications-overview",
+                  "slug": "family-law-modifications-overview",
                   "title": "modifications in family law.",
                   "image": "/blog/blog3.svg",
                   "author": "Jonson",
@@ -6874,8 +6874,8 @@
                   ]
                 },
                 {
-                  "id": "crucial-updates-family-law-2",
-                  "slug": "crucial-updates-family-law-2",
+                  "id": "essential-family-law-updates",
+                  "slug": "essential-family-law-updates",
                   "title": "latest updates in family law.",
                   "image": "/blog/blog1.svg",
                   "author": "Jonson",
