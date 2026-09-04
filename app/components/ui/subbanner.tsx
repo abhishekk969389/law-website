@@ -66,7 +66,7 @@ export function SubBanner({
         <section className="relative w-full overflow-hidden select-none bg-[#0B0E14]">
             {/* Subbanner Background Image Container */}
             <div className="relative w-full h-[200px] sm:h-[240px] md:h-[280px] lg:h-[300px]">
-                {/* Render subbanner.svg as background photo */}
+                {/* Render subbanner.svg as background photoO */}
                 <Image
                     src={bgImage}
                     alt={title}
