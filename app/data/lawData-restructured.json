@@ -4526,7 +4526,35 @@
                   "Morning (9:00 AM - 12:00 PM)",
                   "Afternoon (12:00 PM - 4:00 PM)",
                   "Evening (4:00 PM - 7:00 PM)"
-                ]
+                ],
+                "form": {
+                  "firstNameLabel": "First Name",
+                  "firstNamePlaceholder": "Enter your first name",
+                  "lastNameLabel": "Last Name",
+                  "lastNamePlaceholder": "Enter your last name",
+                  "emailLabel": "Email Address",
+                  "emailPlaceholder": "Enter your email address",
+                  "phoneLabel": "Phone Number",
+                  "phonePlaceholder": "Enter your phone number",
+                  "practiceAreaLabel": "Practice Area",
+                  "practiceAreaPlaceholder": "Select practice area",
+                  "consultationTypeLabel": "Consultation Type",
+                  "consultationTypePlaceholder": "Select consultation type",
+                  "preferredDateLabel": "Preferred Date",
+                  "preferredTimeLabel": "Preferred Time",
+                  "preferredTimePlaceholder": "Select preferred time",
+                  "messageLabel": "Briefly describe your legal concern",
+                  "messagePlaceholder": "Share details about your case or legal concern",
+                  "agreeTermsText": "I agree to the",
+                  "privacyPolicyText": "Privacy Policy",
+                  "privacyPolicyUrl": "/privacy",
+                  "termsServiceText": "Terms of Service",
+                  "termsServiceUrl": "/terms",
+                  "submitButtonText": "Book My Consultation",
+                  "securityNote": "Your information is safe and confidential.",
+                  "agreeTermsAlert": "Please agree to the Privacy Policy and Terms of Service.",
+                  "successAlert": "Thank you! Your consultation booking request has been submitted."
+                }
               }
             }
           }

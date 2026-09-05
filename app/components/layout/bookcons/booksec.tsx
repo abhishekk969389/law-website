@@ -37,6 +37,7 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
     practiceAreas,
     consultationTypes,
     preferredTimes,
+    form,
   } = data;
 
   const [formData, setFormData] = useState({
@@ -64,10 +65,10 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.agreeTerms) {
-      alert("Please agree to the Privacy Policy and Terms of Service.");
+      alert(form?.agreeTermsAlert || "Please agree to the Privacy Policy and Terms of Service.");
       return;
     }
-    alert("Thank you! Your consultation booking request has been submitted.");
+    alert(form?.successAlert || "Thank you! Your consultation booking request has been submitted.");
     setFormData({
       firstName: "",
       lastName: "",
@@ -199,7 +200,7 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                     <div>
                       <label className="block text-xs sm:text-sm font-medium text-slate-300 mb-1.5">
-                        First Name <span className="text-[#D4A359]">*</span>
+                        {form?.firstNameLabel || "First Name"} <span className="text-[#D4A359]">*</span>
                       </label>
                       <input
                         type="text"
@@ -207,14 +208,14 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
                         value={formData.firstName}
                         onChange={handleChange}
                         required
-                        placeholder="Enter your first name"
+                        placeholder={form?.firstNamePlaceholder || "Enter your first name"}
                         className="w-full rounded-lg border border-slate-800 bg-[#060911] px-4 py-3 text-white placeholder-slate-500 text-sm focus:border-[#D4A359]/70 outline-none transition-colors"
                       />
                     </div>
 
                     <div>
                       <label className="block text-xs sm:text-sm font-medium text-slate-300 mb-1.5">
-                        Last Name <span className="text-[#D4A359]">*</span>
+                        {form?.lastNameLabel || "Last Name"} <span className="text-[#D4A359]">*</span>
                       </label>
                       <input
                         type="text"
@@ -222,7 +223,7 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
                         value={formData.lastName}
                         onChange={handleChange}
                         required
-                        placeholder="Enter your last name"
+                        placeholder={form?.lastNamePlaceholder || "Enter your last name"}
                         className="w-full rounded-lg border border-slate-800 bg-[#060911] px-4 py-3 text-white placeholder-slate-500 text-sm focus:border-[#D4A359]/70 outline-none transition-colors"
                       />
                     </div>
@@ -232,7 +233,7 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                     <div>
                       <label className="block text-xs sm:text-sm font-medium text-slate-300 mb-1.5">
-                        Email Address <span className="text-[#D4A359]">*</span>
+                        {form?.emailLabel || "Email Address"} <span className="text-[#D4A359]">*</span>
                       </label>
                       <input
                         type="email"
@@ -240,14 +241,14 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        placeholder="Enter your email address"
+                        placeholder={form?.emailPlaceholder || "Enter your email address"}
                         className="w-full rounded-lg border border-slate-800 bg-[#060911] px-4 py-3 text-white placeholder-slate-500 text-sm focus:border-[#D4A359]/70 outline-none transition-colors"
                       />
                     </div>
 
                     <div>
                       <label className="block text-xs sm:text-sm font-medium text-slate-300 mb-1.5">
-                        Phone Number <span className="text-[#D4A359]">*</span>
+                        {form?.phoneLabel || "Phone Number"} <span className="text-[#D4A359]">*</span>
                       </label>
                       <input
                         type="tel"
@@ -255,7 +256,7 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
                         value={formData.phone}
                         onChange={handleChange}
                         required
-                        placeholder="Enter your phone number"
+                        placeholder={form?.phonePlaceholder || "Enter your phone number"}
                         className="w-full rounded-lg border border-slate-800 bg-[#060911] px-4 py-3 text-white placeholder-slate-500 text-sm focus:border-[#D4A359]/70 outline-none transition-colors"
                       />
                     </div>
@@ -264,7 +265,7 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
                   {/* Row 3: Practice Area */}
                   <div>
                     <label className="block text-xs sm:text-sm font-medium text-slate-300 mb-1.5">
-                      Practice Area <span className="text-[#D4A359]">*</span>
+                      {form?.practiceAreaLabel || "Practice Area"} <span className="text-[#D4A359]">*</span>
                     </label>
                     <select
                       name="practiceArea"
@@ -274,7 +275,7 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
                       className="w-full rounded-lg border border-slate-800 bg-[#060911] px-4 py-3 text-white text-sm focus:border-[#D4A359]/70 outline-none transition-colors cursor-pointer"
                     >
                       <option value="" disabled className="bg-[#060911] text-slate-400">
-                        Select practice area
+                        {form?.practiceAreaPlaceholder || "Select practice area"}
                       </option>
                       {practiceAreas &&
                         practiceAreas.map((area: any, idx: any) => (
@@ -288,7 +289,7 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
                   {/* Row 4: Consultation Type */}
                   <div>
                     <label className="block text-xs sm:text-sm font-medium text-slate-300 mb-1.5">
-                      Consultation Type <span className="text-[#D4A359]">*</span>
+                      {form?.consultationTypeLabel || "Consultation Type"} <span className="text-[#D4A359]">*</span>
                     </label>
                     <select
                       name="consultationType"
@@ -298,7 +299,7 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
                       className="w-full rounded-lg border border-slate-800 bg-[#060911] px-4 py-3 text-white text-sm focus:border-[#D4A359]/70 outline-none transition-colors cursor-pointer"
                     >
                       <option value="" disabled className="bg-[#060911] text-slate-400">
-                        Select consultation type
+                        {form?.consultationTypePlaceholder || "Select consultation type"}
                       </option>
                       {consultationTypes &&
                         consultationTypes.map((type: any, idx: any) => (
@@ -313,7 +314,7 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                     <div>
                       <label className="block text-xs sm:text-sm font-medium text-slate-300 mb-1.5">
-                        Preferred Date
+                        {form?.preferredDateLabel || "Preferred Date"}
                       </label>
                       <div className="relative">
                         <input
@@ -328,7 +329,7 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
 
                     <div>
                       <label className="block text-xs sm:text-sm font-medium text-slate-300 mb-1.5">
-                        Preferred Time
+                        {form?.preferredTimeLabel || "Preferred Time"}
                       </label>
                       <select
                         name="preferredTime"
@@ -337,7 +338,7 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
                         className="w-full rounded-lg border border-slate-800 bg-[#060911] px-4 py-3 text-white text-sm focus:border-[#D4A359]/70 outline-none transition-colors cursor-pointer"
                       >
                         <option value="" disabled className="bg-[#060911] text-slate-400">
-                          Select preferred time
+                          {form?.preferredTimePlaceholder || "Select preferred time"}
                         </option>
                         {preferredTimes &&
                           preferredTimes.map((time: any, idx: any) => (
@@ -352,7 +353,7 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
                   {/* Row 6: Briefly describe your legal concern */}
                   <div>
                     <label className="block text-xs sm:text-sm font-medium text-slate-300 mb-1.5">
-                      Briefly describe your legal concern <span className="text-[#D4A359]">*</span>
+                      {form?.messageLabel || "Briefly describe your legal concern"} <span className="text-[#D4A359]">*</span>
                     </label>
                     <div className="relative">
                       <textarea
@@ -362,7 +363,7 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
                         required
                         maxLength={500}
                         rows={4}
-                        placeholder="Share details about your case or legal concern"
+                        placeholder={form?.messagePlaceholder || "Share details about your case or legal concern"}
                         className="w-full rounded-lg border border-slate-800 bg-[#060911] px-4 py-3 text-white placeholder-slate-500 text-sm focus:border-[#D4A359]/70 outline-none transition-colors resize-none pb-7"
                       />
                       <span className="absolute bottom-2.5 right-3 text-xs text-slate-500">
@@ -382,13 +383,13 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
                       className="mt-1 rounded border-slate-800 bg-[#060911] text-[#D4A359] focus:ring-0 cursor-pointer accent-[#D4A359]"
                     />
                     <label htmlFor="agreeTerms" className="text-xs sm:text-sm text-slate-400 cursor-pointer leading-normal">
-                      I agree to the{" "}
-                      <Link href="/privacy" className="text-[#D4A359] hover:underline font-medium">
-                        Privacy Policy
+                      {form?.agreeTermsText || "I agree to the"}{" "}
+                      <Link href={form?.privacyPolicyUrl || "/privacy"} className="text-[#D4A359] hover:underline font-medium">
+                        {form?.privacyPolicyText || "Privacy Policy"}
                       </Link>{" "}
                       and{" "}
-                      <Link href="/terms" className="text-[#D4A359] hover:underline font-medium">
-                        Terms of Service
+                      <Link href={form?.termsServiceUrl || "/terms"} className="text-[#D4A359] hover:underline font-medium">
+                        {form?.termsServiceText || "Terms of Service"}
                       </Link>
                       .
                     </label>
@@ -400,7 +401,7 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
                       type="submit"
                       className="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#B87B1D] to-[#D4A359] hover:from-[#C88A23] hover:to-[#E3B46A] text-white font-serif font-medium text-base sm:text-lg flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all duration-200 cursor-pointer"
                     >
-                      <span>Book My Consultation</span>
+                      <span>{form?.submitButtonText || "Book My Consultation"}</span>
                       <ArrowRight className="w-5 h-5 text-white" />
                     </button>
                   </div>
@@ -409,7 +410,7 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
                   <div className="text-center pt-1">
                     <p className="text-slate-400 text-xs flex items-center justify-center gap-1.5">
                       <Lock className="w-3.5 h-3.5 text-[#D4A359]" />
-                      <span>Your information is safe and confidential.</span>
+                      <span>{form?.securityNote || "Your information is safe and confidential."}</span>
                     </p>
                   </div>
 
