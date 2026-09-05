@@ -3,58 +3,76 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {
-  ChevronRight,
-  PhoneCall,
-  Mail,
-  Globe,
-  MapPin,
-} from "lucide-react";
+import { ChevronRight, PhoneCall, Mail, Globe, MapPin } from "lucide-react";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { CaseStudySidebarData, CaseStudyDetailItem, GlobalLawData } from "@/app/data";
+import {
+  CaseStudySidebarData,
+  CaseStudyDetailItem,
+  GlobalLawData,
+} from "@/app/data";
 import { FadeIn } from "@/app/components/ui/animations";
 
 export interface CaseStudySidebarProps {
   currentId?: string;
-  allCaseStudies?: (CaseStudyDetailItem | { id: string; slug?: string; title: string | { whiteText: string; goldText: string }; image: string })[];
+  allCaseStudies?: (
+    | CaseStudyDetailItem
+    | {
+        id: string;
+        slug?: string;
+        title: string | { whiteText: string; goldText: string };
+        image: string;
+      }
+  )[];
   sidebarData?: CaseStudySidebarData;
 }
 
-const globalCaseStudySidebar = (({}) as any).caseStudySidebar;
-const defaultCaseStudyItems = (({}) as any).caseStudySection?.items || [];
+const globalCaseStudySidebar = ({} as any).caseStudySidebar;
+const defaultCaseStudyItems = ({} as any).caseStudySection?.items || [];
 
 export function CaseStudySidebar({
   currentId,
   allCaseStudies = [],
   sidebarData,
 }: CaseStudySidebarProps) {
-  const contact = sidebarData?.contact || globalCaseStudySidebar?.contact || {
-    heading: "Have Any Query? Feel Free To",
-    highlightText: "Contact",
-    phone: "+1 222 333 44 55",
-    email: "info@veritas.com",
-    website: "www.veritas.com",
-    address: "123 Legal Street, New York, USA",
-  };
+  const contact = sidebarData?.contact ||
+    globalCaseStudySidebar?.contact || {
+      heading: "Have Any Query? Feel Free To",
+      highlightText: "Contact",
+      phone: "+1 222 333 44 55",
+      email: "info@veritas.com",
+      website: "www.veritas.com",
+      address: "123 Legal Street, New York, USA",
+    };
 
-  const listHeading = sidebarData?.listHeading || globalCaseStudySidebar?.listHeading || "Case Study List";
+  const listHeading =
+    sidebarData?.listHeading ||
+    globalCaseStudySidebar?.listHeading ||
+    "Case Study List";
 
-  // Use provided case studies or fallback list
-  const listItems = (allCaseStudies && allCaseStudies.length > 0)
-    ? allCaseStudies
-    : defaultCaseStudyItems.map((item: any) => ({
-        id: item.linkHref ? item.linkHref.split("/").pop() || item.id : item.id,
-        slug: item.linkHref ? item.linkHref.split("/").pop() || item.id : item.id,
-        title: item.title,
-        image: item.image,
-      }));
+  const listItems =
+    allCaseStudies && allCaseStudies.length > 0
+      ? allCaseStudies
+      : defaultCaseStudyItems.map((item: any) => ({
+          id: item.linkHref
+            ? item.linkHref.split("/").pop() || item.id
+            : item.id,
+          slug: item.linkHref
+            ? item.linkHref.split("/").pop() || item.id
+            : item.id,
+          title: item.title,
+          image: item.image,
+        }));
 
   return (
     <aside className="space-y-8 sticky top-24">
-      {/* 1. Case Study List Widget */}
       {listItems && listItems.length > 0 && (
-        <FadeIn direction="up" delay={0.15} duration={0.6} className="rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-5 space-y-3 shadow-xl">
+        <FadeIn
+          direction="up"
+          delay={0.15}
+          duration={0.6}
+          className="rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-5 space-y-3 shadow-xl"
+        >
           <div className="px-1">
             <h3 className="font-serif text-xl md:text-2xl text-white font-semibold tracking-tight">
               {listHeading}
@@ -64,14 +82,15 @@ export function CaseStudySidebar({
 
           <nav className="space-y-2.5">
             {listItems.map((item: any) => {
-              const slug = ("slug" in item && item.slug) ? item.slug : item.id;
+              const slug = "slug" in item && item.slug ? item.slug : item.id;
               const isActive =
                 currentId?.toLowerCase() === item.id.toLowerCase() ||
                 currentId?.toLowerCase() === slug.toLowerCase();
 
-              const titleText = typeof item.title === "string"
-                ? item.title
-                : `${item.title.whiteText} ${item.title.goldText}`;
+              const titleText =
+                typeof item.title === "string"
+                  ? item.title
+                  : `${item.title.whiteText} ${item.title.goldText}`;
 
               return (
                 <Link
@@ -85,9 +104,11 @@ export function CaseStudySidebar({
                 >
                   {/* Image Thumbnail */}
                   <div className="relative w-20 h-20 rounded-xl overflow-hidden shrink-0 bg-slate-900 border border-slate-800">
-                    <Image src={item.image || "/casestudy1.svg"}
+                    <Image
+                      src={item.image || "/casestudy1.svg"}
                       alt={titleText}
-                      fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
@@ -114,13 +135,20 @@ export function CaseStudySidebar({
 
       {/* 2. Have Any Query? Feel Free To Contact Widget matching exact screenshot */}
       {contact && (
-        <FadeIn direction="up" delay={0.25} duration={0.6} className="relative rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-6 sm:p-7 space-y-5 shadow-xl overflow-hidden text-left">
+        <FadeIn
+          direction="up"
+          delay={0.25}
+          duration={0.6}
+          className="relative rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-6 sm:p-7 space-y-5 shadow-xl overflow-hidden text-left"
+        >
           {/* Right Side Background Lady Justice / Watermark Artwork */}
           {contact.backgroundImage && (
             <div className="absolute right-0 top-0 bottom-0 w-[60%] opacity-30 pointer-events-none z-0">
-              <Image src={contact.backgroundImage}
+              <Image
+                src={contact.backgroundImage}
                 alt="Lady Justice Background"
-                fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover object-right filter brightness-75 contrast-125"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-[#0A0E17] via-[#0A0E17]/20 to-transparent" />
@@ -139,12 +167,16 @@ export function CaseStudySidebar({
                     </React.Fragment>
                   ))}
                   {contact.lastLinePrefix}
-                  <span className="text-[#D4A359]">{contact.highlightText || ""}</span>
+                  <span className="text-[#D4A359]">
+                    {contact.highlightText || ""}
+                  </span>
                 </>
               ) : (
                 <>
                   {contact.heading}{" "}
-                  <span className="text-[#D4A359]">{contact.highlightText || ""}</span>
+                  <span className="text-[#D4A359]">
+                    {contact.highlightText || ""}
+                  </span>
                 </>
               )}
             </h3>
@@ -200,32 +232,36 @@ export function CaseStudySidebar({
               </a>
             )}
 
-            {/* Address */}
             {(contact.addressLines || contact.address) && (
               <div className="flex items-start gap-4 text-slate-200">
                 <div className="w-11 h-11 rounded-full border border-[#D4A359]/70 bg-[#0A0E17]/90 text-[#D4A359] flex items-center justify-center shrink-0 shadow-md mt-0.5">
                   <MapPin className="w-5 h-5 stroke-[1.75]" />
                 </div>
                 <span className="text-sm sm:text-base font-medium leading-snug">
-                  {contact.addressLines && contact.addressLines.length > 0 ? (
-                    contact.addressLines.map((line: any, i: any) => (
-                      <span key={i} className="block">{line}</span>
-                    ))
-                  ) : contact.address && contact.address.includes(",") ? (
-                    (() => {
-                      const firstComma = contact.address.indexOf(",");
-                      const line1 = contact.address.slice(0, firstComma + 1);
-                      const line2 = contact.address.slice(firstComma + 1).trim();
-                      return (
-                        <>
-                          <span className="block">{line1}</span>
-                          <span className="block">{line2}</span>
-                        </>
-                      );
-                    })()
-                  ) : (
-                    contact.address || null
-                  )}
+                  {contact.addressLines && contact.addressLines.length > 0
+                    ? contact.addressLines.map((line: any, i: any) => (
+                        <span key={i} className="block">
+                          {line}
+                        </span>
+                      ))
+                    : contact.address && contact.address.includes(",")
+                      ? (() => {
+                          const firstComma = contact.address.indexOf(",");
+                          const line1 = contact.address.slice(
+                            0,
+                            firstComma + 1,
+                          );
+                          const line2 = contact.address
+                            .slice(firstComma + 1)
+                            .trim();
+                          return (
+                            <>
+                              <span className="block">{line1}</span>
+                              <span className="block">{line2}</span>
+                            </>
+                          );
+                        })()
+                      : contact.address || null}
                 </span>
               </div>
             )}

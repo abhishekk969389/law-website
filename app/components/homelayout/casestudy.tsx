@@ -7,199 +7,220 @@ import { ArrowLeft, ArrowRight, ArrowUpRight, Folder } from "lucide-react";
 import { CaseStudyData, GlobalLawData } from "@/app/data";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
+import {
+  FadeIn,
+  StaggerContainer,
+  StaggerItem,
+} from "@/app/components/ui/animations";
 import { motion, AnimatePresence } from "framer-motion";
 
-const defaultCaseStudyData: any =
-    (lawData.categories.Veritas.sections.CaseStudy?.variants?.VeritasCaseStudy1 as any)?.caseStudySection ||
-    (lawData.categories.Veritas.sections.CaseStudy?.variants?.VeritasCaseStudy1 as any)?.caseStudy || {
-        tagline: "CASE STUDY",
-        heading: {
-            line1: "Tailored For",
-            highlight: "Legal",
-            line2: "Practices In Injury Law And Traffic Defense",
-        },
-        subheading: "Explore how our strategic legal solutions have delivered real results and made a difference in our clients' lives.",
-        items: [],
-    };
+const defaultCaseStudyData: any = (
+  lawData.categories.Veritas.sections.CaseStudy?.variants
+    ?.VeritasCaseStudy1 as any
+)?.caseStudySection ||
+  (
+    lawData.categories.Veritas.sections.CaseStudy?.variants
+      ?.VeritasCaseStudy1 as any
+  )?.caseStudy || {
+    tagline: "CASE STUDY",
+    heading: {
+      line1: "Tailored For",
+      highlight: "Legal",
+      line2: "Practices In Injury Law And Traffic Defense",
+    },
+    subheading:
+      "Explore how our strategic legal solutions have delivered real results and made a difference in our clients' lives.",
+    items: [],
+  };
 
 interface CaseStudyProps {
-    data?: any;
+  data?: any;
 }
 
-export default function CaseStudy({ data = defaultCaseStudyData }: CaseStudyProps) {
-    const { tagline, heading, subheading, items } = data;
-    const [currentIndex, setCurrentIndex] = useState(0);
+export default function CaseStudy({
+  data = defaultCaseStudyData,
+}: CaseStudyProps) {
+  const { tagline, heading, subheading, items } = data;
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-    const prevSlide = () => {
-        setCurrentIndex((prev) => (prev === 0 ? items.length - 1 : prev - 1));
-    };
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev === 0 ? items.length - 1 : prev - 1));
+  };
 
-    const nextSlide = () => {
-        setCurrentIndex((prev) => (prev === items.length - 1 ? 0 : prev + 1));
-    };
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev === items.length - 1 ? 0 : prev + 1));
+  };
 
-    // Get 3 visible items cyclically for smooth desktop carousel
-    const visibleItems = items.length > 0
-        ? Array.from({ length: Math.min(3, items.length) }, (_, i) => items[(currentIndex + i) % items.length])
-        : [];
+  const visibleItems =
+    items.length > 0
+      ? Array.from(
+          { length: Math.min(3, items.length) },
+          (_, i) => items[(currentIndex + i) % items.length],
+        )
+      : [];
 
-    return (
-        <section className="relative w-full bg-[#0B151E] text-white py-10 sm:py-12 md:py-14 mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden">
-            <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-
-                {/* Section Header */}
-                <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-10 sm:mb-12 gap-6">
-
-                    {/* Header Left: Tagline, Title & Subheading */}
-                    <FadeIn direction="up" delay={0.1} className="max-w-3xl">
-                        {/* Tag Badge */}
-                        <div className="flex items-center gap-2 mb-3">
-                            <Folder className="w-6 h-6 text-[#D4A359]" />
-                            <span className="text-[#D4A359] text-xs md:text-lg font-semibold tracking-widest uppercase">
-                                {tagline}
-                            </span>
-                            <span className="w-12 h-[1px] bg-[#D4A359]/60 ml-1" />
-                        </div>
-
-                        {/* Main Heading */}
-                        <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.2] tracking-tight text-white mb-4">
-                            <span className="font-medium">{heading.line1}</span>{" "}
-                            <span className="text-[#D4A359] italic font-serif">{heading.highlight}</span>{" "}
-                            <span className="font-medium">{heading.line2}</span>
-                        </h2>
-
-                        {/* Subheading */}
-                        <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl">
-                            {subheading}
-                        </p>
-                    </FadeIn>
-
-                    {/* Navigation Controls (Top Right) */}
-                    <FadeIn direction="left" delay={0.2} className="flex items-center gap-3 self-end lg:self-auto mb-1">
-                        <motion.button
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
-                            onClick={prevSlide}
-                            aria-label="Previous Case Study"
-                            className="w-12 h-12 rounded-full border border-white/15 bg-white/5 hover:bg-[#D4A359] hover:text-[#0B0E14] hover:border-[#D4A359] flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm cursor-pointer"
-                        >
-                            <ArrowLeft className="w-5 h-5" />
-                        </motion.button>
-                        <motion.button
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
-                            onClick={nextSlide}
-                            aria-label="Next Case Study"
-                            className="w-12 h-12 rounded-full border border-white/15 bg-white/5 hover:bg-[#D4A359] hover:text-[#0B0E14] hover:border-[#D4A359] flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm cursor-pointer"
-                        >
-                            <ArrowRight className="w-5 h-5" />
-                        </motion.button>
-                    </FadeIn>
-                </div>
-
-                {/* Case Study Cards Grid */}
-                <StaggerContainer key={currentIndex} staggerChildren={0.12} delayChildren={0.1} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-                    {visibleItems.map((item: any) => {
-                        const slugMap: Record<string, string> = {
-                            "1": "car-accident-victim",
-                            "2": "dui-dismissal",
-                            "3": "reckless-driving",
-                            "4": "wrongful-conviction",
-                            "5": "insurance-claim-maximized",
-                            "6": "traffic-ticket-dismissed",
-                        };
-
-                        const detailHref =
-                            (item.linkHref && !item.linkHref.startsWith("/case-study/"))
-                                ? item.linkHref
-                                : item.slug
-                                    ? `/casestudy/${item.slug}`
-                                    : (item.id && slugMap[item.id])
-                                        ? `/casestudy/${slugMap[item.id]}`
-                                        : `/casestudy/${item.id || "car-accident-victim"}`;
-
-                        return (
-                            <StaggerItem key={item.id}>
-                                <Link href={detailHref} className="block h-full">
-                                <motion.div
-                                    whileHover={{ y: -6 }}
-                                    transition={{ duration: 0.25 }}
-                                    className="flex flex-col group cursor-pointer h-full"
-                                >
-                                    {/* Image Card Container with Floating Button */}
-                                    <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-6 shadow-lg">
-                                        <Image src={item.image}
-                                            alt={item.title}
-                                            fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                            className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-[#0B0E14]/40 via-transparent to-transparent opacity-60" />
-
-                                        {/* Floating Arrow Badge (Dark Maroon/Brown Button) */}
-                                        <div
-                                            className="absolute bottom-3.5 right-3.5 w-11 h-11 rounded-xl bg-[#422222]/90 backdrop-blur-md border border-white/10 flex items-center justify-center text-white transition-all duration-300 group-hover:bg-[#D4A359] group-hover:text-[#0B0E14]"
-                                        >
-                                            <ArrowUpRight className="w-5 h-5 stroke-[2]" />
-                                        </div>
-                                    </div>
-
-                                    {/* Below Image Content Alignment */}
-                                    <div className="flex items-stretch gap-4 sm:gap-5">
-                                        {/* Outlined Number */}
-                                        <span
-                                            className="text-5xl sm:text-6xl lg:text-[64px] font-normal text-transparent leading-none select-none shrink-0 pt-1 tracking-tighter"
-                                            style={{ WebkitTextStroke: "1.5px rgba(255, 255, 255, 0.45)" }}
-                                        >
-                                            {item.number}
-                                        </span>
-
-                                        {/* Continuous Vertical Gold Line */}
-                                        <div className="w-[1.5px] bg-[#D4A359]/70 shrink-0 self-stretch my-1" />
-
-                                        {/* Right Stacked Content: Title, Description, Link */}
-                                        <div className="flex flex-col flex-1 pl-1">
-                                            <h3 className="font-serif text-lg sm:text-xl font-medium text-white leading-snug mb-3 group-hover:text-[#E3C280] transition-colors">
-                                                {item.title}
-                                            </h3>
-
-                                            <p className="text-gray-400 text-xs sm:text-sm font-light leading-relaxed mb-4">
-                                                {item.description}
-                                            </p>
-
-                                            <div className="mt-auto pt-1">
-                                                <div
-                                                    className="inline-flex items-center gap-2 text-[#D4A359] text-xs sm:text-sm font-medium hover:text-[#E3C280] transition-colors group/link"
-                                                >
-                                                    <span>{item.linkText}</span>
-                                                    <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </motion.div>
-                            </Link>
-                        </StaggerItem>
-                    );
-                })}
-                </StaggerContainer>
-
-                {/* Carousel Pagination Dots */}
-                <div className="flex items-center justify-center gap-2.5 mt-10">
-                    {items.map((_: any, idx: any) => (
-                        <button
-                            key={idx}
-                            onClick={() => setCurrentIndex(idx)}
-                            aria-label={`Go to slide ${idx + 1}`}
-                            className={`transition-all duration-300 rounded-full cursor-pointer ${idx === currentIndex
-                                ? "w-3 h-3 bg-[#D4A359] shadow-[0_0_8px_rgba(212,163,89,0.6)]"
-                                : "w-2.5 h-2.5 border border-gray-600 bg-transparent hover:border-gray-400"
-                                }`}
-                        />
-                    ))}
-                </div>
-
+  return (
+    <section className="relative w-full bg-[#0B151E] text-white py-10 sm:py-12 md:py-14 mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {}
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-10 sm:mb-12 gap-6">
+          {}
+          <FadeIn
+            direction="up"
+            delay={0.1}
+            className="max-w-3xl text-center md:text-left flex flex-col items-center md:items-start"
+          >
+            {}
+            <div className="flex items-center gap-2 mb-3 justify-center md:justify-start">
+              <Folder className="w-6 h-6 text-[#D4A359]" />
+              <span className="text-[#D4A359] text-xs md:text-lg font-semibold tracking-widest uppercase">
+                {tagline}
+              </span>
+              <span className="w-12 h-[1px] bg-[#D4A359]/60 ml-1" />
             </div>
-        </section>
-    );
+
+            {}
+            <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.2] tracking-tight text-white mb-4 text-center md:text-left">
+              <span className="font-medium">{heading.line1}</span>{" "}
+              <span className="text-[#D4A359] italic font-serif">
+                {heading.highlight}
+              </span>{" "}
+              <span className="font-medium">{heading.line2}</span>
+            </h2>
+
+            {}
+            <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl text-center md:text-left">
+              {subheading}
+            </p>
+          </FadeIn>
+
+          {}
+          <FadeIn
+            direction="left"
+            delay={0.2}
+            className="flex items-center gap-3 justify-center md:justify-start self-center md:self-end lg:self-auto mb-1"
+          >
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={prevSlide}
+              aria-label="Previous Case Study"
+              className="w-12 h-12 rounded-full border border-white/15 bg-white/5 hover:bg-[#D4A359] hover:text-[#0B0E14] hover:border-[#D4A359] flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm cursor-pointer"
+            >
+              <ArrowLeft className="w-5 h-5" />
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={nextSlide}
+              aria-label="Next Case Study"
+              className="w-12 h-12 rounded-full border border-white/15 bg-white/5 hover:bg-[#D4A359] hover:text-[#0B0E14] hover:border-[#D4A359] flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm cursor-pointer"
+            >
+              <ArrowRight className="w-5 h-5" />
+            </motion.button>
+          </FadeIn>
+        </div>
+
+        {}
+        <StaggerContainer
+          key={currentIndex}
+          staggerChildren={0.12}
+          delayChildren={0.1}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10"
+        >
+          {visibleItems.map((item: any) => {
+            const slugMap: Record<string, string> = {
+              "1": "car-accident-victim",
+              "2": "dui-dismissal",
+              "3": "reckless-driving",
+              "4": "wrongful-conviction",
+              "5": "insurance-claim-maximized",
+              "6": "traffic-ticket-dismissed",
+            };
+
+            const detailHref =
+              item.linkHref && !item.linkHref.startsWith("/case-study/")
+                ? item.linkHref
+                : item.slug
+                  ? `/casestudy/${item.slug}`
+                  : item.id && slugMap[item.id]
+                    ? `/casestudy/${slugMap[item.id]}`
+                    : `/casestudy/${item.id || "car-accident-victim"}`;
+
+            return (
+              <StaggerItem key={item.id}>
+                <Link href={detailHref} className="block h-full">
+                  <motion.div
+                    whileHover={{ y: -6 }}
+                    transition={{ duration: 0.25 }}
+                    className="flex flex-col group cursor-pointer h-full"
+                  >
+                    <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-6 shadow-lg">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0B0E14]/40 via-transparent to-transparent opacity-60" />
+
+                      <div className="absolute bottom-3.5 right-3.5 w-11 h-11 rounded-xl bg-[#422222]/90 backdrop-blur-md border border-white/10 flex items-center justify-center text-white transition-all duration-300 group-hover:bg-[#D4A359] group-hover:text-[#0B0E14]">
+                        <ArrowUpRight className="w-5 h-5 stroke-[2]" />
+                      </div>
+                    </div>
+
+                    <div className="flex items-stretch gap-4 sm:gap-5">
+                      <span
+                        className="text-5xl sm:text-6xl lg:text-[64px] font-normal text-transparent leading-none select-none shrink-0 pt-1 tracking-tighter"
+                        style={{
+                          WebkitTextStroke: "1.5px rgba(255, 255, 255, 0.45)",
+                        }}
+                      >
+                        {item.number}
+                      </span>
+
+                      <div className="w-[1.5px] bg-[#D4A359]/70 shrink-0 self-stretch my-1" />
+
+                      <div className="flex flex-col flex-1 pl-1">
+                        <h3 className="font-serif text-lg sm:text-xl font-medium text-white leading-snug mb-3 group-hover:text-[#E3C280] transition-colors">
+                          {item.title}
+                        </h3>
+
+                        <p className="text-gray-400 text-xs sm:text-sm font-light leading-relaxed mb-4">
+                          {item.description}
+                        </p>
+
+                        <div className="mt-auto pt-1">
+                          <div className="inline-flex items-center gap-2 text-[#D4A359] text-xs sm:text-sm font-medium hover:text-[#E3C280] transition-colors group/link">
+                            <span>{item.linkText}</span>
+                            <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                </Link>
+              </StaggerItem>
+            );
+          })}
+        </StaggerContainer>
+
+        <div className="flex items-center justify-center gap-2.5 mt-10">
+          {items.map((_: any, idx: any) => (
+            <button
+              key={idx}
+              onClick={() => setCurrentIndex(idx)}
+              aria-label={`Go to slide ${idx + 1}`}
+              className={`transition-all duration-300 rounded-full cursor-pointer ${
+                idx === currentIndex
+                  ? "w-3 h-3 bg-[#D4A359] shadow-[0_0_8px_rgba(212,163,89,0.6)]"
+                  : "w-2.5 h-2.5 border border-gray-600 bg-transparent hover:border-gray-400"
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }

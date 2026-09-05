@@ -2,14 +2,27 @@ import SubBanner from "@/app/components/ui/subbanner";
 import ServiceDetailsSec from "@/app/components/layout/servicedetails/servicedetailssec";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { GlobalLawData, ServiceDetailItem, ServiceSidebarContact, ServiceSidebarForm } from "@/app/data";
+import {
+  GlobalLawData,
+  ServiceDetailItem,
+  ServiceSidebarContact,
+  ServiceSidebarForm,
+} from "@/app/data";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
 const defaultSidebarContact: ServiceSidebarContact = {
   title: "Contact Info",
-  phone: { label: "Contact Phone", value: "+012 (345) 56 998", href: "tel:+01234556998" },
-  email: { label: "Contact Mail", value: "support@gmail.com", href: "mailto:support@gmail.com" },
+  phone: {
+    label: "Contact Phone",
+    value: "+012 (345) 56 998",
+    href: "tel:+01234556998",
+  },
+  email: {
+    label: "Contact Mail",
+    value: "support@gmail.com",
+    href: "mailto:support@gmail.com",
+  },
   location: { label: "Office Location", value: "59 Main Street, USA" },
 };
 
@@ -22,10 +35,15 @@ const defaultSidebarForm: ServiceSidebarForm = {
 };
 
 function getServiceById(id: string): ServiceDetailItem | undefined {
-  
-  const serviceDetails = (lawData.categories.Veritas.sections.ServiceDetail?.variants?.VeritasServiceDetail1?.serviceDetails || []) as ServiceDetailItem[] | undefined;
+  const serviceDetails = (lawData.categories.Veritas.sections.ServiceDetail
+    ?.variants?.VeritasServiceDetail1?.serviceDetails || []) as
+    ServiceDetailItem[] | undefined;
 
-  if (!serviceDetails || !Array.isArray(serviceDetails) || serviceDetails.length === 0) {
+  if (
+    !serviceDetails ||
+    !Array.isArray(serviceDetails) ||
+    serviceDetails.length === 0
+  ) {
     return undefined;
   }
 
@@ -35,7 +53,7 @@ function getServiceById(id: string): ServiceDetailItem | undefined {
     (item) =>
       item.id === id ||
       item.id.toLowerCase() === cleanId ||
-      (item.slug && item.slug.toLowerCase() === cleanId)
+      (item.slug && item.slug.toLowerCase() === cleanId),
   );
 
   if (!found) {
@@ -55,9 +73,11 @@ function getServiceById(id: string): ServiceDetailItem | undefined {
 }
 
 function getAllServiceIds(): string[] {
-  
-  const serviceDetails = (lawData.categories.Veritas.sections.ServiceDetail?.variants?.VeritasServiceDetail1?.serviceDetails || []) as ServiceDetailItem[] | undefined;
-  if (!serviceDetails || !Array.isArray(serviceDetails)) return ["1", "2", "3", "4", "5", "6", "7", "8"];
+  const serviceDetails = (lawData.categories.Veritas.sections.ServiceDetail
+    ?.variants?.VeritasServiceDetail1?.serviceDetails || []) as
+    ServiceDetailItem[] | undefined;
+  if (!serviceDetails || !Array.isArray(serviceDetails))
+    return ["1", "2", "3", "4", "5", "6", "7", "8"];
   const paramsList: string[] = [];
   serviceDetails.forEach((item) => {
     if (item.slug) paramsList.push(item.slug);
@@ -93,7 +113,6 @@ export default async function ServiceDetailPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  
   const resolvedParams = await params;
   const service = getServiceById(resolvedParams.id);
 
@@ -106,7 +125,10 @@ export default async function ServiceDetailPage({
     breadcrumbs: [
       { label: "Home", href: "/" },
       { label: "Our Services", href: "/service" },
-      { label: `${service.title.line1} ${service.title.line2}`, isActive: true },
+      {
+        label: `${service.title.line1} ${service.title.line2}`,
+        isActive: true,
+      },
     ],
     backgroundImage: "/subbanner.svg",
   };

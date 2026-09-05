@@ -57,7 +57,7 @@ export function IndustryMain({ industry }: IndustryMainProps) {
 
   return (
     <div className="space-y-10 sm:space-y-12">
-      {/* 1. Header Title & Intro Section */}
+      {}
       <FadeIn direction="up" delay={0.1} duration={0.6} className="space-y-4">
         <div className="flex items-center gap-4">
           <div className="w-14 h-14 rounded-full border-2 border-[#D4A359] bg-[#0A0E17] flex items-center justify-center text-[#D4A359] shadow-xl shrink-0">
@@ -68,14 +68,14 @@ export function IndustryMain({ industry }: IndustryMainProps) {
           </h1>
         </div>
 
-        {/* Decorative Gold Divider Accent */}
+        {}
         <div className="flex items-center gap-2 pt-1 pb-2">
           <span className="h-[2px] w-12 bg-[#D4A359]" />
           <span className="w-2 h-2 rotate-45 border border-[#D4A359] bg-[#D4A359]/30" />
           <span className="h-[2px] w-24 bg-slate-800" />
         </div>
 
-        {/* Intro Text */}
+        {}
         {industry.introText && (
           <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-3xl">
             {industry.introText}
@@ -83,18 +83,25 @@ export function IndustryMain({ industry }: IndustryMainProps) {
         )}
       </FadeIn>
 
-      {/* 2. Hero Image */}
-      <FadeIn direction="up" delay={0.15} duration={0.6} className="relative w-full aspect-[16/9] sm:aspect-[21/9] rounded-2xl overflow-hidden border border-slate-800/80 shadow-2xl bg-slate-900">
-        <Image src={industry.heroImage || "/service1.svg"}
+      {}
+      <FadeIn
+        direction="up"
+        delay={0.15}
+        duration={0.6}
+        className="relative w-full aspect-[16/9] sm:aspect-[21/9] rounded-2xl overflow-hidden border border-slate-800/80 shadow-2xl bg-slate-900"
+      >
+        <Image
+          src={industry.heroImage || "/service1.svg"}
           alt={industry.title}
-          fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           priority
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B0E14]/40 via-transparent to-transparent" />
       </FadeIn>
 
-      {/* 3. Overview Section */}
+      {}
       <FadeIn direction="up" delay={0.2} duration={0.6} className="space-y-2">
         <h2 className="font-serif text-2xl sm:text-2xl md:text-3xl text-white font-semibold tracking-tight">
           {industry.overviewHeading || "Overview"}
@@ -106,15 +113,21 @@ export function IndustryMain({ industry }: IndustryMainProps) {
 
       <div className="border-b border-slate-800/80" />
 
-      {/* 4. Our Services Section */}
+      {}
       {industry.services && industry.services.length > 0 && (
-        <FadeIn direction="up" delay={0.25} duration={0.6} className="space-y-4">
+        <FadeIn
+          direction="up"
+          delay={0.25}
+          duration={0.6}
+          className="space-y-4"
+        >
           <h2 className="font-serif text-2xl sm:text-3xl text-white font-semibold tracking-tight">
             {industry.servicesHeading || "Our Services"}
           </h2>
           <div className="divide-y divide-slate-800/60">
             {industry.services.map((service: any) => {
-              const ServiceIcon = (service.icon && iconMap[service.icon]) || FileText;
+              const ServiceIcon =
+                (service.icon && iconMap[service.icon]) || FileText;
 
               return (
                 <div
@@ -141,7 +154,7 @@ export function IndustryMain({ industry }: IndustryMainProps) {
 
       <div className="border-b border-slate-800/80" />
 
-      {/* 5. Key Challenges We Address */}
+      {}
       {industry.challenges && industry.challenges.length > 0 && (
         <FadeIn direction="up" delay={0.3} duration={0.6} className="space-y-4">
           <h2 className="font-serif text-2xl sm:text-3xl text-white font-semibold tracking-tight">
@@ -149,7 +162,10 @@ export function IndustryMain({ industry }: IndustryMainProps) {
           </h2>
           <ul className="space-y-3.5">
             {industry.challenges.map((challenge: any, idx: any) => (
-              <li key={idx} className="flex items-start gap-3 text-slate-300 text-sm sm:text-base">
+              <li
+                key={idx}
+                className="flex items-start gap-3 text-slate-300 text-sm sm:text-base"
+              >
                 <CheckCircle2 className="w-5 h-5 text-[#D4A359] shrink-0 mt-0.5" />
                 <span className="leading-snug">{challenge}</span>
               </li>
@@ -158,9 +174,14 @@ export function IndustryMain({ industry }: IndustryMainProps) {
         </FadeIn>
       )}
 
-      {/* 6. Why Choose Us Section */}
+      {}
       {industry.whyChooseUs && industry.whyChooseUs.length > 0 && (
-        <FadeIn direction="up" delay={0.35} duration={0.6} className="space-y-6">
+        <FadeIn
+          direction="up"
+          delay={0.35}
+          duration={0.6}
+          className="space-y-6"
+        >
           <h2 className="font-serif text-2xl sm:text-3xl text-white font-semibold tracking-tight">
             {industry.whyChooseHeading || "Why Choose Us"}
           </h2>

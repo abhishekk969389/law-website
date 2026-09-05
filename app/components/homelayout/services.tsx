@@ -3,14 +3,29 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronLeft, ChevronRight, Scale, Car, Shield, FileText, ArrowRight, LucideIcon } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Scale,
+  Car,
+  Shield,
+  FileText,
+  ArrowRight,
+  LucideIcon,
+} from "lucide-react";
 import { ServicesData, GlobalLawData } from "@/app/data";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
+import {
+  FadeIn,
+  StaggerContainer,
+  StaggerItem,
+} from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultServicesData: any = lawData.categories.Veritas.sections.Services?.variants?.VeritasServices1?.services;
+const defaultServicesData: any =
+  lawData.categories.Veritas.sections.Services?.variants?.VeritasServices1
+    ?.services;
 
 interface ServicesProps {
   data?: ServicesData;
@@ -23,7 +38,9 @@ const serviceIconMap: Record<string, LucideIcon> = {
   filetext: FileText,
 };
 
-export default function Services({ data = defaultServicesData }: ServicesProps) {
+export default function Services({
+  data = defaultServicesData,
+}: ServicesProps) {
   const { tagline, heading, subheading, items } = data as any;
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -40,18 +57,24 @@ export default function Services({ data = defaultServicesData }: ServicesProps) 
   };
 
   const visibleCount = Math.min(safeItems.length, 4);
-  const visibleItems = safeItems.length > 0
-    ? Array.from({ length: visibleCount }, (_, i) => safeItems[(currentIndex + i) % safeItems.length])
-    : [];
+  const visibleItems =
+    safeItems.length > 0
+      ? Array.from(
+          { length: visibleCount },
+          (_, i) => safeItems[(currentIndex + i) % safeItems.length],
+        )
+      : [];
 
   return (
     <section className="relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-
-        {/* Section Header */}
-        <FadeIn direction="up" delay={0.1} className="text-center max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-9">
-
-          {/* Top Tagline with Balance Scale icon */}
+        {}
+        <FadeIn
+          direction="up"
+          delay={0.1}
+          className="text-center max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-9"
+        >
+          {}
           <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 max-w-full overflow-hidden">
             <span className="w-6 sm:w-12 h-[1px] bg-[#D4A359]/60 shrink" />
             <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
@@ -63,26 +86,28 @@ export default function Services({ data = defaultServicesData }: ServicesProps) 
             <span className="w-6 sm:w-12 h-[1px] bg-[#D4A359]/60 shrink" />
           </div>
 
-          {/* Main Heading */}
+          {}
           <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.2] tracking-tight mb-4">
-            <span className="block text-white font-medium">{heading.line1}</span>
+            <span className="block text-white font-medium">
+              {heading.line1}
+            </span>
             <span className="block text-white font-medium">
               {heading.line2}{" "}
-              <span className="text-[#D4A359] italic font-serif">{heading.highlight}</span>
+              <span className="text-[#D4A359] italic font-serif">
+                {heading.highlight}
+              </span>
             </span>
           </h2>
 
-          {/* Subheading Description */}
+          {}
           <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-[620px] mx-auto">
             {subheading}
           </p>
-
         </FadeIn>
 
-        {/* Cards Carousel Container with Arrows inside max-w-[1400px] */}
+        {}
         <div className="relative flex items-center w-full">
-
-          {/* Left Arrow Button */}
+          {}
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -93,31 +118,39 @@ export default function Services({ data = defaultServicesData }: ServicesProps) 
             <ChevronLeft className="w-5 h-5 text-[#D4A359]" />
           </motion.button>
 
-          {/* 4 Cards Grid with padding for side arrows */}
-          <StaggerContainer key={currentIndex} staggerChildren={0.08} delayChildren={0.1} className="w-full lg:px-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-4.5">
+          {}
+          <StaggerContainer
+            key={currentIndex}
+            staggerChildren={0.08}
+            delayChildren={0.1}
+            className="w-full lg:px-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-4.5"
+          >
             {visibleItems.map((item: any, index: any) => {
               const IconComp = serviceIconMap[item.icon.toLowerCase()] || Scale;
 
               return (
                 <StaggerItem key={item.id || index}>
-                  <Link href={item.linkHref || `/service/${item.id || index + 1}`} className="block h-full">
+                  <Link
+                    href={item.linkHref || `/service/${item.id || index + 1}`}
+                    className="block h-full"
+                  >
                     <motion.div
                       whileHover={{ y: -6, scale: 1.01 }}
                       transition={{ duration: 0.25 }}
                       className="bg-[#090C12] border border-slate-800/60 rounded-[18px] p-3 pt-3 pb-6 flex flex-col items-center text-center relative group hover:border-[#D4A359]/40 transition-all duration-300 shadow-xl h-full cursor-pointer"
                     >
-                      {/* Top Image Container */}
                       <div className="relative rounded-[14px] overflow-hidden w-full h-[175px] sm:h-[190px] bg-[#090C12]">
-                        <Image src={item.image || "/service-1.svg"}
+                        <Image
+                          src={item.image || "/service-1.svg"}
                           alt={item.title}
-                          fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           className="object-cover scale-[1.22] sm:scale-[1.20] transition-transform duration-700 group-hover:scale-135"
                         />
-                        {/* Subtle Overlay */}
+
                         <div className="absolute inset-0 bg-gradient-to-t from-[#090C12]/80 via-transparent to-transparent opacity-50" />
                       </div>
 
-                      {/* Overlapping Circular Icon Badge */}
                       <motion.div
                         whileHover={{ scale: 1.1, rotate: 8 }}
                         transition={{ type: "spring", stiffness: 300 }}
@@ -126,23 +159,17 @@ export default function Services({ data = defaultServicesData }: ServicesProps) 
                         <IconComp className="w-6 h-6 sm:w-7 sm:h-7 text-[#D4A359]" />
                       </motion.div>
 
-                      {/* Card Title */}
                       <h3 className="text-white font-serif font-medium text-lg sm:text-xl mb-2 tracking-tight group-hover:text-[#D4A359] transition-colors cursor-pointer">
                         {item.title}
                       </h3>
 
-                      {/* Small Golden Underline */}
                       <div className="w-9 h-[2px] bg-[#D4A359]/80 mb-3" />
 
-                      {/* Description */}
                       <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-[220px] mb-6 flex-grow">
                         {item.description}
                       </p>
 
-                      {/* Learn More Action Button */}
-                      <div
-                        className="inline-flex items-center gap-2 text-[#D4A359] hover:text-[#E3C280] font-medium text-xs sm:text-sm tracking-wide transition-all group-hover:gap-3 mt-auto"
-                      >
+                      <div className="inline-flex items-center gap-2 text-[#D4A359] hover:text-[#E3C280] font-medium text-xs sm:text-sm tracking-wide transition-all group-hover:gap-3 mt-auto">
                         <span>{item.linkText}</span>
                         <ArrowRight className="w-4 h-4 text-[#D4A359]" />
                       </div>
@@ -153,7 +180,6 @@ export default function Services({ data = defaultServicesData }: ServicesProps) 
             })}
           </StaggerContainer>
 
-          {/* Right Arrow Button */}
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -163,24 +189,22 @@ export default function Services({ data = defaultServicesData }: ServicesProps) 
           >
             <ChevronRight className="w-5 h-5 text-[#D4A359]" />
           </motion.button>
-
         </div>
 
-        {/* Pagination Dots */}
         <div className="flex items-center justify-center gap-3 mt-8">
           {items.map((_: any, idx: any) => (
             <button
               key={idx}
               onClick={() => setCurrentIndex(idx)}
               aria-label={`Go to slide ${idx + 1}`}
-              className={`transition-all duration-300 rounded-full cursor-pointer ${idx === currentIndex
+              className={`transition-all duration-300 rounded-full cursor-pointer ${
+                idx === currentIndex
                   ? "w-3 h-3 bg-[#D4A359]"
                   : "w-3 h-3 border-2 border-slate-600/90 bg-transparent hover:border-[#D4A359]"
-                }`}
+              }`}
             />
           ))}
         </div>
-
       </div>
     </section>
   );

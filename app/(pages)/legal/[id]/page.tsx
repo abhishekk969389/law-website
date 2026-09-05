@@ -8,8 +8,10 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
 function getLegalByIdOrSlug(id: string): LegalDetailItem | undefined {
-  const globalData = ({}) as unknown as GlobalLawData;
-  const legalDetails = (lawData.categories.Veritas.sections.LegalUpdateDetail?.variants?.VeritasLegalUpdateDetail1?.legalDetails || []) as LegalDetailItem[] | undefined;
+  const globalData = {} as unknown as GlobalLawData;
+  const legalDetails = (lawData.categories.Veritas.sections.LegalUpdateDetail
+    ?.variants?.VeritasLegalUpdateDetail1?.legalDetails || []) as
+    LegalDetailItem[] | undefined;
 
   if (!id || !legalDetails || !Array.isArray(legalDetails)) return undefined;
   const cleanId = id.trim().toLowerCase();
@@ -17,13 +19,15 @@ function getLegalByIdOrSlug(id: string): LegalDetailItem | undefined {
   return legalDetails.find(
     (item) =>
       item.id.toLowerCase() === cleanId ||
-      (item.slug && item.slug.toLowerCase() === cleanId)
+      (item.slug && item.slug.toLowerCase() === cleanId),
   );
 }
 
 function getAllLegalIds(): string[] {
-  const globalData = ({}) as unknown as GlobalLawData;
-  const legalDetails = (lawData.categories.Veritas.sections.LegalUpdateDetail?.variants?.VeritasLegalUpdateDetail1?.legalDetails || []) as LegalDetailItem[] | undefined;
+  const globalData = {} as unknown as GlobalLawData;
+  const legalDetails = (lawData.categories.Veritas.sections.LegalUpdateDetail
+    ?.variants?.VeritasLegalUpdateDetail1?.legalDetails || []) as
+    LegalDetailItem[] | undefined;
 
   if (!legalDetails || !Array.isArray(legalDetails)) return [];
 
@@ -52,7 +56,8 @@ export async function generateMetadata({
   if (!article) {
     return {
       title: "Legal Insights | Veritas Law Partners",
-      description: "Comprehensive legal insights and regulatory updates from Veritas Law Partners.",
+      description:
+        "Comprehensive legal insights and regulatory updates from Veritas Law Partners.",
     };
   }
 
@@ -70,7 +75,6 @@ export default async function LegalDetailsPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  
   const resolvedParams = await params;
   const article = getLegalByIdOrSlug(resolvedParams.id);
 
@@ -78,11 +82,16 @@ export default async function LegalDetailsPage({
     notFound();
   }
 
-  const globalData = ({}) as unknown as GlobalLawData;
-  const baseSubBanner = lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1?.legalSubBanner;
+  const globalData = {} as unknown as GlobalLawData;
+  const baseSubBanner =
+    lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1
+      ?.legalSubBanner;
 
   const words = (article.title || "").trim().split(/\s+/);
-  const shortTitle = (article as any).bannerTitle || (article as any).shortTitle || (words.length > 3 ? words.slice(0, 3).join(" ") : article.title);
+  const shortTitle =
+    (article as any).bannerTitle ||
+    (article as any).shortTitle ||
+    (words.length > 3 ? words.slice(0, 3).join(" ") : article.title);
 
   const subBannerData = {
     title: shortTitle,

@@ -8,22 +8,27 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
 function getIndustryByIdOrSlug(id: string): IndustryDetailItem | undefined {
-  const globalData = ({}) as unknown as GlobalLawData;
-  const industryDetails = (lawData.categories.Veritas.sections.IndustryDetail?.variants?.VeritasIndustryDetail1?.industryDetails || []) as IndustryDetailItem[] | undefined;
+  const globalData = {} as unknown as GlobalLawData;
+  const industryDetails = (lawData.categories.Veritas.sections.IndustryDetail
+    ?.variants?.VeritasIndustryDetail1?.industryDetails || []) as
+    IndustryDetailItem[] | undefined;
 
-  if (!id || !industryDetails || !Array.isArray(industryDetails)) return undefined;
+  if (!id || !industryDetails || !Array.isArray(industryDetails))
+    return undefined;
   const cleanId = id.trim().toLowerCase();
 
   return industryDetails.find(
     (item) =>
       item.id.toLowerCase() === cleanId ||
-      (item.slug && item.slug.toLowerCase() === cleanId)
+      (item.slug && item.slug.toLowerCase() === cleanId),
   );
 }
 
 function getAllIndustryIds(): string[] {
-  const globalData = ({}) as unknown as GlobalLawData;
-  const industryDetails = (lawData.categories.Veritas.sections.IndustryDetail?.variants?.VeritasIndustryDetail1?.industryDetails || []) as IndustryDetailItem[] | undefined;
+  const globalData = {} as unknown as GlobalLawData;
+  const industryDetails = (lawData.categories.Veritas.sections.IndustryDetail
+    ?.variants?.VeritasIndustryDetail1?.industryDetails || []) as
+    IndustryDetailItem[] | undefined;
 
   if (!industryDetails || !Array.isArray(industryDetails)) return [];
 
@@ -58,7 +63,9 @@ export async function generateMetadata({
 
   return {
     title: `${industry.title} - Industries | Veritas Law Partners`,
-    description: industry.introText || `${industry.title} legal counsel and services at Veritas Law Partners.`,
+    description:
+      industry.introText ||
+      `${industry.title} legal counsel and services at Veritas Law Partners.`,
   };
 }
 
@@ -67,7 +74,6 @@ export default async function IndustryDetailsPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  
   const resolvedParams = await params;
   const industry = getIndustryByIdOrSlug(resolvedParams.id);
 
@@ -75,9 +81,14 @@ export default async function IndustryDetailsPage({
     notFound();
   }
 
-  const globalData = ({}) as unknown as GlobalLawData;
-  const allIndustries = ((lawData.categories.Veritas.sections.IndustryDetail?.variants?.VeritasIndustryDetail1?.industryDetails || []) || []) as IndustryDetailItem[];
-  const baseSubBanner = lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1?.industriesSubBanner;
+  const globalData = {} as unknown as GlobalLawData;
+  const allIndustries = (lawData.categories.Veritas.sections.IndustryDetail
+    ?.variants?.VeritasIndustryDetail1?.industryDetails ||
+    [] ||
+    []) as IndustryDetailItem[];
+  const baseSubBanner =
+    lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1
+      ?.industriesSubBanner;
 
   const subBannerData = {
     title: industry.title,

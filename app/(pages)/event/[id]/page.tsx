@@ -8,8 +8,10 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
 function getEventByIdOrSlug(id: string): EventDetailItem | undefined {
-  const globalData = ({}) as unknown as GlobalLawData;
-  const eventDetails = (lawData.categories.Veritas.sections.EventDetail?.variants?.VeritasEventDetail1?.eventDetails || []) as EventDetailItem[] | undefined;
+  const globalData = {} as unknown as GlobalLawData;
+  const eventDetails = (lawData.categories.Veritas.sections.EventDetail
+    ?.variants?.VeritasEventDetail1?.eventDetails || []) as
+    EventDetailItem[] | undefined;
 
   if (!id || !eventDetails || !Array.isArray(eventDetails)) return undefined;
   const cleanId = id.trim().toLowerCase();
@@ -17,13 +19,15 @@ function getEventByIdOrSlug(id: string): EventDetailItem | undefined {
   return eventDetails.find(
     (item) =>
       item.id.toLowerCase() === cleanId ||
-      (item.slug && item.slug.toLowerCase() === cleanId)
+      (item.slug && item.slug.toLowerCase() === cleanId),
   );
 }
 
 function getAllEventIds(): string[] {
-  const globalData = ({}) as unknown as GlobalLawData;
-  const eventDetails = (lawData.categories.Veritas.sections.EventDetail?.variants?.VeritasEventDetail1?.eventDetails || []) as EventDetailItem[] | undefined;
+  const globalData = {} as unknown as GlobalLawData;
+  const eventDetails = (lawData.categories.Veritas.sections.EventDetail
+    ?.variants?.VeritasEventDetail1?.eventDetails || []) as
+    EventDetailItem[] | undefined;
 
   if (!eventDetails || !Array.isArray(eventDetails)) return [];
 
@@ -70,7 +74,6 @@ export default async function EventDetailsPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  
   const resolvedParams = await params;
   const event = getEventByIdOrSlug(resolvedParams.id);
 
@@ -78,11 +81,16 @@ export default async function EventDetailsPage({
     notFound();
   }
 
-  const globalData = ({}) as unknown as GlobalLawData;
-  const baseSubBanner = lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1?.eventSubBanner;
+  const globalData = {} as unknown as GlobalLawData;
+  const baseSubBanner =
+    lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1
+      ?.eventSubBanner;
 
   const words = (event.title || "").trim().split(/\s+/);
-  const shortTitle = event.bannerTitle || event.shortTitle || (words.length > 3 ? words.slice(0, 3).join(" ") : event.title);
+  const shortTitle =
+    event.bannerTitle ||
+    event.shortTitle ||
+    (words.length > 3 ? words.slice(0, 3).join(" ") : event.title);
 
   const subBannerData = {
     title: shortTitle,

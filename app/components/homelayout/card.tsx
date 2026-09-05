@@ -1,14 +1,26 @@
 "use client";
 
 import React from "react";
-import { UserCheck, ShieldCheck, Gavel, Landmark, LucideIcon } from "lucide-react";
+import {
+  UserCheck,
+  ShieldCheck,
+  Gavel,
+  Landmark,
+  LucideIcon,
+} from "lucide-react";
 import { FeatureItem, GlobalLawData } from "@/app/data";
 import lawData from "@/app/data/lawData-restructured.json";
 
-import { StaggerContainer, StaggerItem, FadeIn } from "@/app/components/ui/animations";
+import {
+  StaggerContainer,
+  StaggerItem,
+  FadeIn,
+} from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultFeatures: FeatureItem[] = lawData.categories.Veritas.sections.Features?.variants?.VeritasFeatures1?.features || [];
+const defaultFeatures: FeatureItem[] =
+  lawData.categories.Veritas.sections.Features?.variants?.VeritasFeatures1
+    ?.features || [];
 
 interface CardProps {
   data?: FeatureItem[];
@@ -23,9 +35,17 @@ const iconMap: Record<string, LucideIcon> = {
 
 export default function Card({ data = defaultFeatures }: CardProps) {
   return (
-    <FadeIn delay={0.2} duration={0.6} className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-20 mt-10 sm:-mt-12 md:-mt-14">
+    <FadeIn
+      delay={0.2}
+      duration={0.6}
+      className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-20 mt-10 sm:-mt-12 md:-mt-14"
+    >
       <div className="bg-[#0B0E14]/95 backdrop-blur-md border border-[#D4A359]/30 rounded-3xl lg:rounded-full px-6 py-6 lg:px-8 lg:py-7 shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
-        <StaggerContainer staggerChildren={0.1} delayChildren={0.1} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0 items-center">
+        <StaggerContainer
+          staggerChildren={0.1}
+          delayChildren={0.1}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0 items-center"
+        >
           {data.map((item, index) => {
             const IconComponent = iconMap[item.icon.toLowerCase()] || UserCheck;
 
@@ -36,12 +56,12 @@ export default function Card({ data = defaultFeatures }: CardProps) {
                   transition={{ duration: 0.2 }}
                   className="flex items-center gap-4 lg:px-6 lg:first:pl-2 lg:last:pr-2 relative group cursor-pointer"
                 >
-                  {/* Vertical Divider for desktop */}
+                  {}
                   {index < data.length - 1 && (
                     <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-12 bg-slate-800/80" />
                   )}
 
-                  {/* Icon Wrapper */}
+                  {}
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ type: "spring", stiffness: 300 }}
@@ -50,7 +70,7 @@ export default function Card({ data = defaultFeatures }: CardProps) {
                     <IconComponent className="w-8 h-8 lg:w-10 lg:h-10 text-[#D4A359] transition-transform duration-300 group-hover:scale-110" />
                   </motion.div>
 
-                  {/* Text Content */}
+                  {}
                   <div>
                     <h3 className="text-white font-semibold text-sm lg:text-base tracking-tight mb-0.5 group-hover:text-[#D4A359] transition-colors duration-300">
                       {item.title}

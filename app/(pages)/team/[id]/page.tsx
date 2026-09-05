@@ -9,8 +9,8 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
 function getTeamMemberById(id: string): TeamDetailItem | undefined {
-  
-  const teamDetails = (lawData.categories.Veritas.sections.TeamDetail?.variants?.VeritasTeamDetail1?.teamDetails || []) as TeamDetailItem[] | undefined;
+  const teamDetails = (lawData.categories.Veritas.sections.TeamDetail?.variants
+    ?.VeritasTeamDetail1?.teamDetails || []) as TeamDetailItem[] | undefined;
 
   if (!teamDetails || !Array.isArray(teamDetails) || teamDetails.length === 0) {
     return undefined;
@@ -22,7 +22,7 @@ function getTeamMemberById(id: string): TeamDetailItem | undefined {
     (item) =>
       item.id === id ||
       item.id.toLowerCase() === cleanId ||
-      (item.slug && item.slug.toLowerCase() === cleanId)
+      (item.slug && item.slug.toLowerCase() === cleanId),
   );
 
   if (!found) {
@@ -36,10 +36,11 @@ function getTeamMemberById(id: string): TeamDetailItem | undefined {
 }
 
 function getAllTeamMemberIds(): string[] {
-  
-  const teamDetails = (lawData.categories.Veritas.sections.TeamDetail?.variants?.VeritasTeamDetail1?.teamDetails || []) as TeamDetailItem[] | undefined;
+  const teamDetails = (lawData.categories.Veritas.sections.TeamDetail?.variants
+    ?.VeritasTeamDetail1?.teamDetails || []) as TeamDetailItem[] | undefined;
 
-  if (!teamDetails || !Array.isArray(teamDetails)) return ["1", "2", "3", "4", "5", "6", "7", "8"];
+  if (!teamDetails || !Array.isArray(teamDetails))
+    return ["1", "2", "3", "4", "5", "6", "7", "8"];
 
   const paramsList: string[] = [];
   teamDetails.forEach((item) => {
@@ -72,7 +73,9 @@ export async function generateMetadata({
 
   return {
     title: `${member.name} - ${member.role} | Veritas Law Partners`,
-    description: member.shortBio || `${member.name} - ${member.role} at Veritas Law Partners.`,
+    description:
+      member.shortBio ||
+      `${member.name} - ${member.role} at Veritas Law Partners.`,
   };
 }
 
@@ -81,7 +84,6 @@ export default async function TeamMemberDetailsPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  
   const resolvedParams = await params;
   const member = getTeamMemberById(resolvedParams.id);
 
@@ -89,8 +91,11 @@ export default async function TeamMemberDetailsPage({
     notFound();
   }
 
-  
-  const baseSubBanner = lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1?.teamDetailsSubBanner || lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1?.teamSubBanner;
+  const baseSubBanner =
+    lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1
+      ?.teamDetailsSubBanner ||
+    lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1
+      ?.teamSubBanner;
 
   const subBannerData = {
     title: member.name,
@@ -111,4 +116,3 @@ export default async function TeamMemberDetailsPage({
     </main>
   );
 }
-

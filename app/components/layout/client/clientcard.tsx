@@ -20,7 +20,9 @@ import { ClientResourceSectionData, GlobalLawData } from "@/app/data";
 import { StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultClientCardsData = lawData.categories.Veritas.sections.ClientResource?.variants?.VeritasClientResource1?.clientCards;
+const defaultClientCardsData =
+  lawData.categories.Veritas.sections.ClientResource?.variants
+    ?.VeritasClientResource1?.clientCards;
 
 const iconMap: Record<string, LucideIcon> = {
   FileText,
@@ -44,57 +46,57 @@ export function Clientcard({ data = defaultClientCardsData }: ClientcardProps) {
 
   return (
     <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white  mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
+      {}
+      <StaggerContainer
+        staggerChildren={0.1}
+        delayChildren={0.1}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8"
+      >
+        {items &&
+          items.map((item: any) => {
+            const IconComponent = iconMap[item.icon] || FileText;
 
-  
-        {/* 8 Client Resource Cards Grid (4 columns on lg screens, 2 rows total) */}
-        <StaggerContainer staggerChildren={0.1} delayChildren={0.1} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-          {items &&
-            items.map((item: any) => {
-              const IconComponent = iconMap[item.icon] || FileText;
+            return (
+              <StaggerItem key={item.id}>
+                <Link href={item.link || "/client"} className="block h-full">
+                  <motion.div
+                    whileHover={{ y: -6, scale: 1.01 }}
+                    transition={{ duration: 0.25 }}
+                    className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] p-6 sm:p-7 flex flex-col justify-between hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl min-h-[250px] cursor-pointer h-full"
+                  >
+                    {}
+                    <div>
+                      <motion.div
+                        whileHover={{ scale: 1.1, rotate: 6 }}
+                        className="w-13 h-13 sm:w-14 sm:h-14 rounded-full border border-[#D4A359]/60 flex items-center justify-center mb-5 bg-[#070B12] shrink-0 shadow-[0_0_12px_rgba(212,163,89,0.12)]"
+                      >
+                        <IconComponent className="w-6 h-6 text-[#D4A359]" />
+                      </motion.div>
 
-              return (
-                <StaggerItem key={item.id}>
-                  <Link href={item.link || "/client"} className="block h-full">
-                    <motion.div
-                      whileHover={{ y: -6, scale: 1.01 }}
-                      transition={{ duration: 0.25 }}
-                      className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] p-6 sm:p-7 flex flex-col justify-between hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl min-h-[250px] cursor-pointer h-full"
-                    >
-                      {/* Top Circle Icon Container */}
-                      <div>
-                        <motion.div
-                          whileHover={{ scale: 1.1, rotate: 6 }}
-                          className="w-13 h-13 sm:w-14 sm:h-14 rounded-full border border-[#D4A359]/60 flex items-center justify-center mb-5 bg-[#070B12] shrink-0 shadow-[0_0_12px_rgba(212,163,89,0.12)]"
-                        >
-                          <IconComponent className="w-6 h-6 text-[#D4A359]" />
-                        </motion.div>
+                      {}
+                      <h3 className="font-serif font-semibold text-white text-lg sm:text-xl mb-2 group-hover:text-[#D4A359] transition-colors leading-snug">
+                        {item.title}
+                      </h3>
 
-                        {/* Title */}
-                        <h3 className="font-serif font-semibold text-white text-lg sm:text-xl mb-2 group-hover:text-[#D4A359] transition-colors leading-snug">
-                          {item.title}
-                        </h3>
+                      {}
+                      <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
+                        {item.description}
+                      </p>
+                    </div>
 
-                        {/* Description */}
-                        <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
-                          {item.description}
-                        </p>
+                    {}
+                    <div>
+                      <div className="inline-flex items-center gap-2 text-[#D4A359] text-xs sm:text-sm font-semibold group-hover:gap-3 transition-all group-hover:underline mt-auto">
+                        <span>{item.actionText}</span>
+                        <ArrowRight className="w-4 h-4" />
                       </div>
-
-                      {/* Action Link */}
-                      <div>
-                        <div
-                          className="inline-flex items-center gap-2 text-[#D4A359] text-xs sm:text-sm font-semibold group-hover:gap-3 transition-all group-hover:underline mt-auto"
-                        >
-                          <span>{item.actionText}</span>
-                          <ArrowRight className="w-4 h-4" />
-                        </div>
-                      </div>
-                    </motion.div>
-                  </Link>
-                </StaggerItem>
-              );
-            })}
-        </StaggerContainer>
+                    </div>
+                  </motion.div>
+                </Link>
+              </StaggerItem>
+            );
+          })}
+      </StaggerContainer>
     </section>
   );
 }

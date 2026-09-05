@@ -8,16 +8,17 @@ import { motion } from "framer-motion";
 export default function NotFound() {
   return (
     <main className="relative w-full min-h-[calc(100vh-130px)] bg-[#070A11] text-white flex flex-col items-center justify-center overflow-hidden select-none py-6">
-      
       {/* Background Subtle Radial Gradient & Ambient Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#111A2E]/50 via-[#070A11] to-[#070A11] pointer-events-none z-0" />
 
       {/* Left Side: Lady Justice Artwork / Statue Overlay */}
       <div className="absolute left-0 bottom-0 top-0 w-1/3 max-w-[450px] hidden lg:block pointer-events-none z-10 opacity-70">
         <div className="relative w-full h-full">
-          <Image src="/about.svg"
+          <Image
+            src="/about.svg"
             alt="Lady Justice"
-            fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover object-left opacity-25 mix-blend-luminosity filter contrast-125"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#070A11]/80 to-[#070A11]" />
@@ -27,16 +28,17 @@ export default function NotFound() {
       {/* Right Side: Law Courthouse Columns Overlay */}
       <div className="absolute right-0 bottom-0 top-0 w-1/3 max-w-[450px] hidden lg:block pointer-events-none z-10 opacity-70">
         <div className="relative w-full h-full">
-          <Image src="/footerimg.svg"
+          <Image
+            src="/footerimg.svg"
             alt="Courthouse Pillars"
-            fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover object-right opacity-25 mix-blend-luminosity filter contrast-125"
           />
           <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#070A11]/80 to-[#070A11]" />
         </div>
       </div>
       <div className="relative z-20 flex-1 flex flex-col items-center justify-center text-center px-4 sm:px-6 py-4 max-w-4xl mx-auto my-auto">
-        
         <motion.div
           initial={{ opacity: 0, y: -15 }}
           animate={{ opacity: 1, y: 0 }}
@@ -77,9 +79,15 @@ export default function NotFound() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-[80px] sm:text-[110px] md:text-[140px] lg:text-[160px] font-semibold leading-none tracking-tight flex items-center justify-center gap-1 select-none"
         >
-          <span className="text-white drop-shadow-[0_10px_25px_rgba(255,255,255,0.1)]">4</span>
-          <span className="text-[#D4A359] drop-shadow-[0_10px_30px_rgba(212,163,89,0.35)]">0</span>
-          <span className="text-white drop-shadow-[0_10px_25px_rgba(255,255,255,0.1)]">4</span>
+          <span className="text-white drop-shadow-[0_10px_25px_rgba(255,255,255,0.1)]">
+            4
+          </span>
+          <span className="text-[#D4A359] drop-shadow-[0_10px_30px_rgba(212,163,89,0.35)]">
+            0
+          </span>
+          <span className="text-white drop-shadow-[0_10px_25px_rgba(255,255,255,0.1)]">
+            4
+          </span>
         </motion.h1>
 
         <motion.div
@@ -101,7 +109,8 @@ export default function NotFound() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="text-slate-300 text-xs sm:text-sm md:text-base max-w-md sm:max-w-lg mx-auto leading-relaxed mb-5 sm:mb-6 font-light"
         >
-          The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+          The page you are looking for might have been removed, had its name
+          changed, or is temporarily unavailable.
         </motion.p>
 
         <motion.div
@@ -118,9 +127,7 @@ export default function NotFound() {
             <ArrowRight className="w-4 h-4 text-[#D4A359] transition-transform duration-300 group-hover:translate-x-1.5" />
           </Link>
         </motion.div>
-
       </div>
-
     </main>
   );
 }

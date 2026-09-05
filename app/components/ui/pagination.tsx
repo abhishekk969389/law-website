@@ -31,7 +31,7 @@ export function Pagination({
 
   return (
     <div className="flex items-center justify-center gap-2 sm:gap-2.5 mt-10 sm:mt-12 lg:mt-14 select-none">
-      {/* Previous Arrow Button */}
+      {}
       <button
         onClick={() => handlePageClick(activePage - 1)}
         disabled={activePage === 1}
@@ -45,7 +45,6 @@ export function Pagination({
         <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 text-slate-400 group-hover:text-[#D4A359]" />
       </button>
 
-      {/* Page Numbers */}
       {pagesArray.map((pageNum) => (
         <button
           key={pageNum}
@@ -60,7 +59,6 @@ export function Pagination({
         </button>
       ))}
 
-      {/* Next Arrow Button */}
       <button
         onClick={() => handlePageClick(activePage + 1)}
         disabled={activePage === totalPages}

@@ -9,8 +9,9 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
 function getCareerByIdOrSlug(id: string): CareerDetailItem | undefined {
-  const globalData = ({}) as unknown as GlobalLawData;
-  const careers = (lawData.categories.Veritas.sections.JobDetail?.variants?.VeritasJobDetail1?.careerDetails || []) as CareerDetailItem[] | undefined;
+  const globalData = {} as unknown as GlobalLawData;
+  const careers = (lawData.categories.Veritas.sections.JobDetail?.variants
+    ?.VeritasJobDetail1?.careerDetails || []) as CareerDetailItem[] | undefined;
 
   if (!id || !careers || !Array.isArray(careers)) return undefined;
   const cleanId = id.trim().toLowerCase();
@@ -18,13 +19,14 @@ function getCareerByIdOrSlug(id: string): CareerDetailItem | undefined {
   return careers.find(
     (item) =>
       item.id.toLowerCase() === cleanId ||
-      (item.slug && item.slug.toLowerCase() === cleanId)
+      (item.slug && item.slug.toLowerCase() === cleanId),
   );
 }
 
 function getAllCareerIds(): string[] {
-  const globalData = ({}) as unknown as GlobalLawData;
-  const careers = (lawData.categories.Veritas.sections.JobDetail?.variants?.VeritasJobDetail1?.careerDetails || []) as CareerDetailItem[] | undefined;
+  const globalData = {} as unknown as GlobalLawData;
+  const careers = (lawData.categories.Veritas.sections.JobDetail?.variants
+    ?.VeritasJobDetail1?.careerDetails || []) as CareerDetailItem[] | undefined;
 
   if (!careers || !Array.isArray(careers)) return [];
 
@@ -53,13 +55,16 @@ export async function generateMetadata({
   if (!career) {
     return {
       title: "Career Details | Veritas Law Partners",
-      description: "Explore legal career opportunities at Veritas Law Partners.",
+      description:
+        "Explore legal career opportunities at Veritas Law Partners.",
     };
   }
 
   return {
     title: `${career.title} - Careers | Veritas Law Partners`,
-    description: career.aboutDescription || `${career.title} career opportunity at Veritas Law Partners.`,
+    description:
+      career.aboutDescription ||
+      `${career.title} career opportunity at Veritas Law Partners.`,
   };
 }
 
@@ -68,7 +73,6 @@ export default async function CareerDetailsPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  
   const resolvedParams = await params;
   const career = getCareerByIdOrSlug(resolvedParams.id);
 
@@ -76,8 +80,10 @@ export default async function CareerDetailsPage({
     notFound();
   }
 
-  const globalData = ({}) as unknown as GlobalLawData;
-  const baseSubBanner = lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1?.careerSubBanner;
+  const globalData = {} as unknown as GlobalLawData;
+  const baseSubBanner =
+    lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1
+      ?.careerSubBanner;
 
   // Max 3 words for banner title
   const words = career.title ? career.title.trim().split(/\s+/) : [];
@@ -109,12 +115,8 @@ export default async function CareerDetailsPage({
               <CareerContent career={career} />
             </div>
             <div className="lg:col-span-4">
-              <CareerSidebar
-                career={career}
-                sidebarData={sidebarData}
-              />
+              <CareerSidebar career={career} sidebarData={sidebarData} />
             </div>
-
           </div>
         </div>
       </section>

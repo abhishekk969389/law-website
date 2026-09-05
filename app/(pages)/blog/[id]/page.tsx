@@ -8,8 +8,9 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
 function getBlogByIdOrSlug(id: string): BlogDetailItem | undefined {
-  const globalData = ({}) as unknown as GlobalLawData;
-  const blogDetails = (lawData.categories.Veritas.sections.BlogDetail?.variants?.VeritasBlogDetail1?.blogDetails || []) as BlogDetailItem[] | undefined;
+  const globalData = {} as unknown as GlobalLawData;
+  const blogDetails = (lawData.categories.Veritas.sections.BlogDetail?.variants
+    ?.VeritasBlogDetail1?.blogDetails || []) as BlogDetailItem[] | undefined;
 
   if (!id || !blogDetails || !Array.isArray(blogDetails)) return undefined;
   const cleanId = id.trim().toLowerCase();
@@ -17,13 +18,14 @@ function getBlogByIdOrSlug(id: string): BlogDetailItem | undefined {
   return blogDetails.find(
     (item) =>
       item.id.toLowerCase() === cleanId ||
-      (item.slug && item.slug.toLowerCase() === cleanId)
+      (item.slug && item.slug.toLowerCase() === cleanId),
   );
 }
 
 function getAllBlogIds(): string[] {
-  const globalData = ({}) as unknown as GlobalLawData;
-  const blogDetails = (lawData.categories.Veritas.sections.BlogDetail?.variants?.VeritasBlogDetail1?.blogDetails || []) as BlogDetailItem[] | undefined;
+  const globalData = {} as unknown as GlobalLawData;
+  const blogDetails = (lawData.categories.Veritas.sections.BlogDetail?.variants
+    ?.VeritasBlogDetail1?.blogDetails || []) as BlogDetailItem[] | undefined;
 
   if (!blogDetails || !Array.isArray(blogDetails)) return [];
 
@@ -52,7 +54,8 @@ export async function generateMetadata({
   if (!blog) {
     return {
       title: "Blog Details | Veritas Law Partners",
-      description: "Legal insights, articles and updates from Veritas Law Partners.",
+      description:
+        "Legal insights, articles and updates from Veritas Law Partners.",
     };
   }
 
@@ -69,7 +72,6 @@ export default async function BlogDetailsPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  
   const resolvedParams = await params;
   const blog = getBlogByIdOrSlug(resolvedParams.id);
 
@@ -77,8 +79,10 @@ export default async function BlogDetailsPage({
     notFound();
   }
 
-  const globalData = ({}) as unknown as GlobalLawData;
-  const baseSubBanner = lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1?.blogSubBanner;
+  const globalData = {} as unknown as GlobalLawData;
+  const baseSubBanner =
+    lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1
+      ?.blogSubBanner;
 
   const subBannerData = {
     title: blog.title,

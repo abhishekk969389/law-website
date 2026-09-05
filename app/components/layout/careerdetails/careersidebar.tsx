@@ -71,16 +71,21 @@ export function CareerSidebar({ career, sidebarData }: CareerSidebarProps) {
 
   return (
     <aside className="space-y-6 sticky top-24 select-none text-left">
-      
-      {/* 1. Job Overview Card */}
-      <FadeIn direction="up" delay={0.15} duration={0.6} className="rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-5 sm:p-6 shadow-xl space-y-4">
+      {}
+      <FadeIn
+        direction="up"
+        delay={0.15}
+        duration={0.6}
+        className="rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-5 sm:p-6 shadow-xl space-y-4"
+      >
         <h3 className="font-serif text-xl sm:text-2xl text-white font-medium tracking-tight mb-3">
           {data?.overviewHeading || "Job Overview"}
         </h3>
 
         <div className="space-y-4">
           {overviewFields.map((field: any, idx: any) => {
-            const IconComp = (field.icon && overviewIconMap[field.icon]) || Briefcase;
+            const IconComp =
+              (field.icon && overviewIconMap[field.icon]) || Briefcase;
 
             return (
               <div key={idx} className="flex items-start gap-3.5">
@@ -101,14 +106,20 @@ export function CareerSidebar({ career, sidebarData }: CareerSidebarProps) {
         </div>
       </FadeIn>
 
-      {/* 2. Apply for This Position Card */}
-      <FadeIn direction="up" delay={0.25} duration={0.6} className="rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-5 sm:p-6 shadow-xl space-y-4">
+      {}
+      <FadeIn
+        direction="up"
+        delay={0.25}
+        duration={0.6}
+        className="rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-5 sm:p-6 shadow-xl space-y-4"
+      >
         <div>
           <h3 className="font-serif text-xl sm:text-2xl text-white font-medium tracking-tight mb-1.5">
             {data?.applyHeading || "Apply for This Position"}
           </h3>
           <p className="text-xs sm:text-sm text-slate-400 font-light leading-relaxed">
-            {data?.applySubtitle || "Share your details and resume and our team will get in touch."}
+            {data?.applySubtitle ||
+              "Share your details and resume and our team will get in touch."}
           </p>
         </div>
 
@@ -119,12 +130,13 @@ export function CareerSidebar({ career, sidebarData }: CareerSidebarProps) {
               Application Submitted!
             </h4>
             <p className="text-xs text-slate-300 font-light">
-              Thank you for applying. Our talent acquisition team will review your profile.
+              Thank you for applying. Our talent acquisition team will review
+              your profile.
             </p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-3.5 pt-1">
-            {/* Full Name */}
+            {}
             <div>
               <input
                 type="text"
@@ -136,7 +148,7 @@ export function CareerSidebar({ career, sidebarData }: CareerSidebarProps) {
               />
             </div>
 
-            {/* Email Address */}
+            {}
             <div>
               <input
                 type="email"
@@ -148,7 +160,7 @@ export function CareerSidebar({ career, sidebarData }: CareerSidebarProps) {
               />
             </div>
 
-            {/* Phone Number */}
+            {}
             <div>
               <input
                 type="tel"
@@ -159,7 +171,7 @@ export function CareerSidebar({ career, sidebarData }: CareerSidebarProps) {
               />
             </div>
 
-            {/* Upload Resume File Input */}
+            {}
             <div className="space-y-1">
               <label className="text-xs text-slate-300 font-medium block">
                 {applyForm?.resumeLabel || "Upload Resume"}
@@ -184,7 +196,7 @@ export function CareerSidebar({ career, sidebarData }: CareerSidebarProps) {
               </div>
             </div>
 
-            {/* Submit Button */}
+            {}
             <button
               type="submit"
               className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-md bg-gradient-to-r from-[#D4A359] to-[#E3C280] text-[#0A0E17] font-semibold text-xs sm:text-sm hover:opacity-95 transition-all shadow-lg hover:scale-[1.01] active:scale-[0.99] cursor-pointer mt-2"
@@ -193,24 +205,31 @@ export function CareerSidebar({ career, sidebarData }: CareerSidebarProps) {
               <ArrowRight className="w-4 h-4" />
             </button>
 
-            {/* Security Note */}
+            {}
             <div className="flex items-center justify-center gap-1.5 text-[11px] text-slate-400 pt-1">
               <Lock className="w-3 h-3 text-[#D4A359] shrink-0" />
               <span>
-                {applyForm?.securityText || "Your information is secure and will only be used for this application."}
+                {applyForm?.securityText ||
+                  "Your information is secure and will only be used for this application."}
               </span>
             </div>
           </form>
         )}
       </FadeIn>
 
-      {/* 3. Explore More Opportunities Card */}
-      <FadeIn direction="up" delay={0.35} duration={0.6} className="rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-5 sm:p-6 shadow-xl space-y-3.5">
+      {}
+      <FadeIn
+        direction="up"
+        delay={0.35}
+        duration={0.6}
+        className="rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-5 sm:p-6 shadow-xl space-y-3.5"
+      >
         <h3 className="font-serif text-xl sm:text-2xl text-white font-medium tracking-tight">
           {data?.exploreHeading || "Explore More Opportunities"}
         </h3>
         <p className="text-xs sm:text-sm text-slate-400 font-light leading-relaxed">
-          {data?.exploreSubtitle || "View all open positions across departments."}
+          {data?.exploreSubtitle ||
+            "View all open positions across departments."}
         </p>
         <div className="pt-1">
           <Link
@@ -222,7 +241,6 @@ export function CareerSidebar({ career, sidebarData }: CareerSidebarProps) {
           </Link>
         </div>
       </FadeIn>
-
     </aside>
   );
 }

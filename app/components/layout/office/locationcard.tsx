@@ -5,17 +5,28 @@ import { Phone, ArrowRight } from "lucide-react";
 import lawData from "@/app/data/lawData-restructured.json";
 
 import { OfficeLocationSectionData, GlobalLawData } from "@/app/data";
-import { FadeIn, StaggerContainer, StaggerItem } from "@/app/components/ui/animations";
+import {
+  FadeIn,
+  StaggerContainer,
+  StaggerItem,
+} from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultOfficeLocationsData = lawData.categories.Veritas.sections.Offices?.variants?.VeritasOffices1?.officeLocations;
+const defaultOfficeLocationsData =
+  lawData.categories.Veritas.sections.Offices?.variants?.VeritasOffices1
+    ?.officeLocations;
 
-// Custom Gold Architectural Vector SVG Monuments for Indian Cities
 const MonumentSvg: React.FC<{ icon?: string }> = ({ icon }) => {
   switch (icon) {
-    case "india-gate": // Delhi - India Gate Arch
+    case "india-gate":
       return (
-        <svg className="w-12 h-12 text-[#D4A359]" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <svg
+          className="w-12 h-12 text-[#D4A359]"
+          viewBox="0 0 64 64"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        >
           <path d="M12 56V18H52V56" />
           <path d="M8 18H56V14H8V18Z" />
           <path d="M16 14L20 8H44L48 14" />
@@ -26,9 +37,15 @@ const MonumentSvg: React.FC<{ icon?: string }> = ({ icon }) => {
         </svg>
       );
 
-    case "gateway-of-india": // Mumbai - Gateway of India
+    case "gateway-of-india":
       return (
-        <svg className="w-12 h-12 text-[#D4A359]" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <svg
+          className="w-12 h-12 text-[#D4A359]"
+          viewBox="0 0 64 64"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        >
           <path d="M10 56V20H54V56" />
           <path d="M6 20H58V16H6V20Z" />
           <path d="M22 56V32C22 26.4772 26.4772 22 32 22C37.5228 22 42 26.4772 42 32V56" />
@@ -40,9 +57,15 @@ const MonumentSvg: React.FC<{ icon?: string }> = ({ icon }) => {
         </svg>
       );
 
-    case "vidhana-soudha": // Bengaluru - Palace / Dome
+    case "vidhana-soudha":
       return (
-        <svg className="w-12 h-12 text-[#D4A359]" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <svg
+          className="w-12 h-12 text-[#D4A359]"
+          viewBox="0 0 64 64"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        >
           <path d="M32 8C26 14 26 22 26 22H38C38 22 38 14 32 8Z" />
           <path d="M32 4V8" />
           <path d="M10 56V28H54V56" />
@@ -54,9 +77,15 @@ const MonumentSvg: React.FC<{ icon?: string }> = ({ icon }) => {
         </svg>
       );
 
-    case "charminar": // Hyderabad - Charminar 4 Towers
+    case "charminar":
       return (
-        <svg className="w-12 h-12 text-[#D4A359]" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <svg
+          className="w-12 h-12 text-[#D4A359]"
+          viewBox="0 0 64 64"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        >
           <path d="M12 56V12L16 8L20 12V56" />
           <path d="M44 56V12L48 8L52 12V56" />
           <path d="M20 24H44V56H20V24Z" />
@@ -68,9 +97,15 @@ const MonumentSvg: React.FC<{ icon?: string }> = ({ icon }) => {
         </svg>
       );
 
-    case "hawa-mahal": // Jaipur - Hawa Mahal Windows Palace
+    case "hawa-mahal":
       return (
-        <svg className="w-12 h-12 text-[#D4A359]" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <svg
+          className="w-12 h-12 text-[#D4A359]"
+          viewBox="0 0 64 64"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        >
           <path d="M14 56V16L32 6L50 16V56" />
           <path d="M20 22H26M38 22H44" />
           <path d="M20 32H26M38 32H44" />
@@ -82,9 +117,15 @@ const MonumentSvg: React.FC<{ icon?: string }> = ({ icon }) => {
         </svg>
       );
 
-    case "howrah-bridge": // Kolkata - Howrah Bridge Suspension
+    case "howrah-bridge":
       return (
-        <svg className="w-12 h-12 text-[#D4A359]" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <svg
+          className="w-12 h-12 text-[#D4A359]"
+          viewBox="0 0 64 64"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        >
           <path d="M8 52H56" strokeWidth="2" />
           <path d="M14 52V18L24 30L32 14L40 30L50 18V52" />
           <path d="M14 18H50" />
@@ -94,9 +135,15 @@ const MonumentSvg: React.FC<{ icon?: string }> = ({ icon }) => {
         </svg>
       );
 
-    case "ahmedabad": // Ahmedabad - Jali Arch / Mosque Dome
+    case "ahmedabad":
       return (
-        <svg className="w-12 h-12 text-[#D4A359]" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <svg
+          className="w-12 h-12 text-[#D4A359]"
+          viewBox="0 0 64 64"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        >
           <path d="M16 56V26C16 17.1634 23.1634 10 32 10C40.8366 10 48 17.1634 48 26V56" />
           <path d="M24 56V34C24 29.5817 27.5817 26 32 26C36.4183 26 40 29.5817 40 34V56" />
           <path d="M10 56H54" strokeWidth="2" />
@@ -105,9 +152,15 @@ const MonumentSvg: React.FC<{ icon?: string }> = ({ icon }) => {
         </svg>
       );
 
-    default: // Chandigarh / General Landmark Pillar
+    default:
       return (
-        <svg className="w-12 h-12 text-[#D4A359]" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <svg
+          className="w-12 h-12 text-[#D4A359]"
+          viewBox="0 0 64 64"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        >
           <path d="M26 56V24L32 10L38 24V56" />
           <path d="M20 56V32L26 24M44 56V32L38 24" />
           <path d="M32 10V56" />
@@ -122,43 +175,47 @@ export interface LocationcardProps {
   data?: OfficeLocationSectionData;
 }
 
-export function Locationcard({ data = defaultOfficeLocationsData }: LocationcardProps) {
+export function Locationcard({
+  data = defaultOfficeLocationsData,
+}: LocationcardProps) {
   if (!data) return null;
 
   const { title, items } = data;
 
   return (
     <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-4 sm:mt-6 md:mt-8 lg:mt-10 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
+      {}
+      <FadeIn direction="up" delay={0.1}>
+        <h2 className="font-serif text-2xl sm:text-2xl md:text-4xl text-white mb-6 font-medium text-center md:text-left">
+          {title || "Our Office Locations"}
+        </h2>
+      </FadeIn>
 
-        
-        {/* Section Title */}
-        <FadeIn direction="up" delay={0.1}>
-          <h2 className="font-serif text-2xl sm:text-2xl md:text-4xl text-white mb-6 font-medium">
-            {title || "Our Office Locations"}
-          </h2>
-        </FadeIn>
-
-        {/* 8 Office Locations Cards Grid (3 columns on lg screens) */}
-        <StaggerContainer staggerChildren={0.1} delayChildren={0.2} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {items &&
-            items.map((item: any) => (
-              <StaggerItem key={item.id}>
-                <motion.div
-                  whileHover={{ y: -6, scale: 1.01 }}
-                  transition={{ duration: 0.25 }}
-                  className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] p-6 sm:p-7 flex flex-col justify-between hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl min-h-[260px] cursor-pointer h-full"
-                >
-                  {/* Top Section: Left Monument Box + City Title & Address + Right Phone Circle Badge */}
-                  <div>
-                    <div className="flex items-start justify-between gap-4">
-                      {/* Left: Dark Container Box for Monument Icon + City & Address */}
-                      <div className="flex items-start gap-4 flex-1">
-                        {/* Dark Square Box for Monument Vector Icon */}
-                        <div className="w-16 h-16 sm:w-18 sm:h-18 rounded-2xl border border-slate-800 bg-[#060911] flex items-center justify-center shrink-0 shadow-md p-2.5">
+      {}
+      <StaggerContainer
+        staggerChildren={0.1}
+        delayChildren={0.2}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+      >
+        {items &&
+          items.map((item: any) => (
+            <StaggerItem key={item.id}>
+              <motion.div
+                whileHover={{ y: -6, scale: 1.01 }}
+                transition={{ duration: 0.25 }}
+                className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] p-6 sm:p-7 flex flex-col justify-between hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl min-h-[260px] cursor-pointer h-full"
+              >
+                {}
+                <div>
+                  <div className="flex items-start justify-between gap-4">
+                    {}
+                    <div className="flex items-start gap-4 flex-1">
+                      {}
+                      <div className="w-16 h-16 sm:w-18 sm:h-18 rounded-2xl border border-slate-800 bg-[#060911] flex items-center justify-center shrink-0 shadow-md p-2.5">
                         <MonumentSvg icon={item.icon} />
                       </div>
 
-                      {/* City Title & Address */}
+                      {}
                       <div className="flex-1">
                         <h3 className="font-serif font-semibold text-white text-lg sm:text-xl group-hover:text-[#D4A359] transition-colors leading-snug">
                           {item.city}
@@ -169,7 +226,7 @@ export function Locationcard({ data = defaultOfficeLocationsData }: Locationcard
                       </div>
                     </div>
 
-                    {/* Right: Phone Icon Circle Badge */}
+                    {}
                     <a
                       href={`tel:${item.phone.replace(/\s+/g, "")}`}
                       className="w-10 h-10 rounded-full border border-[#D4A359]/60 flex items-center justify-center bg-[#070B12] text-[#D4A359] hover:bg-[#D4A359] hover:text-[#0A0E17] transition-all shrink-0 shadow-[0_0_10px_rgba(212,163,89,0.1)] mt-1"
@@ -179,11 +236,9 @@ export function Locationcard({ data = defaultOfficeLocationsData }: Locationcard
                     </a>
                   </div>
 
-                  {/* Divider Line */}
                   <div className="w-full h-[1px] bg-slate-800/60 my-4 sm:my-5" />
                 </div>
 
-                {/* Bottom Action Section: Get Directions Link & Phone Number */}
                 <div>
                   <a
                     href={item.directionsLink || "#"}
@@ -195,7 +250,6 @@ export function Locationcard({ data = defaultOfficeLocationsData }: Locationcard
                     <ArrowRight className="w-4 h-4" />
                   </a>
 
-                  {/* Phone Number */}
                   <a
                     href={`tel:${item.phone.replace(/\s+/g, "")}`}
                     className="text-white hover:text-[#D4A359] font-medium text-sm sm:text-base block transition-colors"
@@ -203,11 +257,10 @@ export function Locationcard({ data = defaultOfficeLocationsData }: Locationcard
                     {item.phone}
                   </a>
                 </div>
-
-                </motion.div>
-              </StaggerItem>
-            ))}
-        </StaggerContainer>
+              </motion.div>
+            </StaggerItem>
+          ))}
+      </StaggerContainer>
     </section>
   );
 }

@@ -17,13 +17,17 @@ import lawData from "@/app/data/lawData-restructured.json";
 
 import { SitemapSectionData, GlobalLawData } from "@/app/data";
 
-const defaultSitemapSectionData = lawData.categories.Veritas.sections.Sitemap?.variants?.VeritasSitemap1?.sitemapSection;
+const defaultSitemapSectionData =
+  lawData.categories.Veritas.sections.Sitemap?.variants?.VeritasSitemap1
+    ?.sitemapSection;
 
 export interface SitemapsecProps {
   data?: SitemapSectionData;
 }
 
-export function Sitemapsec({ data = defaultSitemapSectionData }: SitemapsecProps) {
+export function Sitemapsec({
+  data = defaultSitemapSectionData,
+}: SitemapsecProps) {
   if (!data) return null;
 
   const { tagline, heading, categories } = data;
@@ -53,74 +57,83 @@ export function Sitemapsec({ data = defaultSitemapSectionData }: SitemapsecProps
 
   return (
     <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      
-        {/* Header Tagline & Main Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-8">
-          <div className="flex items-center justify-center gap-3 mb-3">
-            <span className="w-12 h-[1px] bg-[#D4A359]/60" />
-            <div className="flex items-center gap-2">
-              <Scale className="w-6 h-6 text-[#D4A359]" />
-              <span className="text-[#D4A359] text-xs md:text-lg font-semibold tracking-widest uppercase">
-                {tagline || "EXPLORE"}
-              </span>
-            </div>
-            <span className="w-12 h-[1px] bg-[#D4A359]/60" />
+      {}
+      <div className="text-center max-w-3xl mx-auto mb-8">
+        <div className="flex items-center justify-center gap-3 mb-3">
+          <span className="w-12 h-[1px] bg-[#D4A359]/60" />
+          <div className="flex items-center gap-2">
+            <Scale className="w-6 h-6 text-[#D4A359]" />
+            <span className="text-[#D4A359] text-xs md:text-lg font-semibold tracking-widest uppercase">
+              {tagline || "EXPLORE"}
+            </span>
           </div>
-
-          <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.15] tracking-tight mb-4">
-            <span className="text-white font-medium">{heading?.line1 || "Explore"}</span>{" "}
-            <span className="text-[#D4A359] italic font-serif">{heading?.highlight || ""}</span>
-          </h2>
+          <span className="w-12 h-[1px] bg-[#D4A359]/60" />
         </div>
 
-        {/* 8 Category Cards Grid with Top Floating Overlapping Badge */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-14 sm:gap-y-16 mt-12 sm:mt-16">
-          {categories &&
-            categories.map((card: any) => {
-              const categoryHref = card.href || (card.links && card.links[0]?.href) || "/";
-              return (
-                <div
-                  key={card.id}
-                  className="group relative rounded-[22px] border border-slate-800/80 bg-[#070A11] p-6 sm:p-7 pb-8 text-center hover:border-[#D4A359]/50 transition-all duration-300 shadow-xl flex flex-col items-center hover:translate-y-[-4px]"
+        <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.15] tracking-tight mb-4">
+          <span className="text-white font-medium">
+            {heading?.line1 || "Explore"}
+          </span>{" "}
+          <span className="text-[#D4A359] italic font-serif">
+            {heading?.highlight || ""}
+          </span>
+        </h2>
+      </div>
+
+      {}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-14 sm:gap-y-16 mt-12 sm:mt-16">
+        {categories &&
+          categories.map((card: any) => {
+            const categoryHref =
+              card.href || (card.links && card.links[0]?.href) || "/";
+            return (
+              <div
+                key={card.id}
+                className="group relative rounded-[22px] border border-slate-800/80 bg-[#070A11] p-6 sm:p-7 pb-8 text-center hover:border-[#D4A359]/50 transition-all duration-300 shadow-xl flex flex-col items-center hover:translate-y-[-4px]"
+              >
+                {}
+                <Link
+                  href={categoryHref}
+                  aria-label={card.title}
+                  className="-mt-12 sm:-mt-14 mb-5 w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-[#D4A359] bg-[#070A11] flex items-center justify-center text-[#D4A359] shadow-[0_0_18px_rgba(212,163,89,0.25)] shrink-0 group-hover:scale-105 transition-transform cursor-pointer"
                 >
-                  {/* Overlapping Floating Circle Badge at Top Border */}
+                  {getCategoryIcon(card.icon)}
+                </Link>
+
+                {}
+                <h3 className="font-semibold text-white text-base sm:text-lg tracking-wider uppercase mb-3">
                   <Link
                     href={categoryHref}
-                    aria-label={card.title}
-                    className="-mt-12 sm:-mt-14 mb-5 w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-[#D4A359] bg-[#070A11] flex items-center justify-center text-[#D4A359] shadow-[0_0_18px_rgba(212,163,89,0.25)] shrink-0 group-hover:scale-105 transition-transform cursor-pointer"
+                    className="hover:text-[#D4A359] transition-colors"
                   >
-                    {getCategoryIcon(card.icon)}
+                    {card.title}
                   </Link>
+                </h3>
 
-                  {/* Category Title */}
-                  <h3 className="font-semibold text-white text-base sm:text-lg tracking-wider uppercase mb-3">
-                    <Link href={categoryHref} className="hover:text-[#D4A359] transition-colors">
-                      {card.title}
-                    </Link>
-                  </h3>
+                {}
+                <div className="sm:w-38 h-[1px] bg-[#D4A359] mb-6 mx-auto" />
 
-                  {/* Gold Underline Accent */}
-                  <div className="sm:w-38 h-[1px] bg-[#D4A359] mb-6 mx-auto" />
-
-                  {/* Bulleted Links List */}
-                  <ul className="space-y-3.5 text-left w-full pl-1 sm:pl-2">
-                    {card.links &&
-                      card.links.map((link: any) => (
-                        <li key={link.id}>
-                          <Link
-                            href={link.href}
-                            className="flex items-center gap-3 text-slate-300 hover:text-[#D4A359] text-xs sm:text-sm font-medium transition-colors group/link"
-                          >
-                            <span className="w-2 h-2 rounded-full bg-[#D4A359] shrink-0 group-hover/link:scale-125 transition-transform" />
-                            <span className="hover:underline leading-snug">{link.label}</span>
-                          </Link>
-                        </li>
-                      ))}
-                  </ul>
-                </div>
-              );
-            })}
-        </div>
+                {}
+                <ul className="space-y-3.5 text-left w-full pl-1 sm:pl-2">
+                  {card.links &&
+                    card.links.map((link: any) => (
+                      <li key={link.id}>
+                        <Link
+                          href={link.href}
+                          className="flex items-center gap-3 text-slate-300 hover:text-[#D4A359] text-xs sm:text-sm font-medium transition-colors group/link"
+                        >
+                          <span className="w-2 h-2 rounded-full bg-[#D4A359] shrink-0 group-hover/link:scale-125 transition-transform" />
+                          <span className="hover:underline leading-snug">
+                            {link.label}
+                          </span>
+                        </Link>
+                      </li>
+                    ))}
+                </ul>
+              </div>
+            );
+          })}
+      </div>
     </section>
   );
 }

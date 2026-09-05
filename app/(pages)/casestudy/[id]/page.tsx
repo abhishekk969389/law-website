@@ -9,22 +9,27 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
 function getCaseStudyByIdOrSlug(id: string): CaseStudyDetailItem | undefined {
-  const globalData = ({}) as unknown as GlobalLawData;
-  const caseStudyDetails = (lawData.categories.Veritas.sections.CaseStudyDetail?.variants?.VeritasCaseStudyDetail1?.caseStudyDetails || []) as CaseStudyDetailItem[] | undefined;
+  const globalData = {} as unknown as GlobalLawData;
+  const caseStudyDetails = (lawData.categories.Veritas.sections.CaseStudyDetail
+    ?.variants?.VeritasCaseStudyDetail1?.caseStudyDetails || []) as
+    CaseStudyDetailItem[] | undefined;
 
-  if (!id || !caseStudyDetails || !Array.isArray(caseStudyDetails)) return undefined;
+  if (!id || !caseStudyDetails || !Array.isArray(caseStudyDetails))
+    return undefined;
   const cleanId = id.trim().toLowerCase();
 
   return caseStudyDetails.find(
     (item) =>
       item.id.toLowerCase() === cleanId ||
-      (item.slug && item.slug.toLowerCase() === cleanId)
+      (item.slug && item.slug.toLowerCase() === cleanId),
   );
 }
 
 function getAllCaseStudyIds(): string[] {
-  const globalData = ({}) as unknown as GlobalLawData;
-  const caseStudyDetails = (lawData.categories.Veritas.sections.CaseStudyDetail?.variants?.VeritasCaseStudyDetail1?.caseStudyDetails || []) as CaseStudyDetailItem[] | undefined;
+  const globalData = {} as unknown as GlobalLawData;
+  const caseStudyDetails = (lawData.categories.Veritas.sections.CaseStudyDetail
+    ?.variants?.VeritasCaseStudyDetail1?.caseStudyDetails || []) as
+    CaseStudyDetailItem[] | undefined;
 
   if (!caseStudyDetails || !Array.isArray(caseStudyDetails)) return [];
 
@@ -57,13 +62,17 @@ export async function generateMetadata({
     };
   }
 
-  const titleText = typeof caseStudy.title === "string"
-    ? caseStudy.title
-    : `${caseStudy.title.whiteText}${caseStudy.title.goldText}`;
+  const titleText =
+    typeof caseStudy.title === "string"
+      ? caseStudy.title
+      : `${caseStudy.title.whiteText}${caseStudy.title.goldText}`;
 
   return {
     title: `${titleText} - Case Study | Veritas Law Partners`,
-    description: caseStudy.introText || caseStudy.subtitle || `${titleText} legal case study at Veritas Law Partners.`,
+    description:
+      caseStudy.introText ||
+      caseStudy.subtitle ||
+      `${titleText} legal case study at Veritas Law Partners.`,
   };
 }
 
@@ -72,7 +81,6 @@ export default async function CaseStudyDetailsPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  
   const resolvedParams = await params;
   const caseStudy = getCaseStudyByIdOrSlug(resolvedParams.id);
 
@@ -80,13 +88,19 @@ export default async function CaseStudyDetailsPage({
     notFound();
   }
 
-  const globalData = ({}) as unknown as GlobalLawData;
-  const allCaseStudies = ((lawData.categories.Veritas.sections.CaseStudyDetail?.variants?.VeritasCaseStudyDetail1?.caseStudyDetails || []) || []) as CaseStudyDetailItem[];
-  const baseSubBanner = lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1?.caseStudySubBanner;
+  const globalData = {} as unknown as GlobalLawData;
+  const allCaseStudies = (lawData.categories.Veritas.sections.CaseStudyDetail
+    ?.variants?.VeritasCaseStudyDetail1?.caseStudyDetails ||
+    [] ||
+    []) as CaseStudyDetailItem[];
+  const baseSubBanner =
+    lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1
+      ?.caseStudySubBanner;
 
-  const titleText = typeof caseStudy.title === "string"
-    ? caseStudy.title
-    : `${caseStudy.title.whiteText}${caseStudy.title.goldText}`;
+  const titleText =
+    typeof caseStudy.title === "string"
+      ? caseStudy.title
+      : `${caseStudy.title.whiteText}${caseStudy.title.goldText}`;
 
   const subBannerData = {
     title: titleText,

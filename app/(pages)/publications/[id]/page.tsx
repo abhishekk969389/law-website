@@ -8,9 +8,13 @@ import { GlobalLawData, PublicationDetailItem } from "@/app/data";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
-function getPublicationByIdOrSlug(id: string): PublicationDetailItem | undefined {
-  const globalData = ({}) as unknown as GlobalLawData;
-  const publications = (lawData.categories.Veritas.sections.PublicationDetail?.variants?.VeritasPublicationDetail1?.publicationDetails || []) as PublicationDetailItem[] | undefined;
+function getPublicationByIdOrSlug(
+  id: string,
+): PublicationDetailItem | undefined {
+  const globalData = {} as unknown as GlobalLawData;
+  const publications = (lawData.categories.Veritas.sections.PublicationDetail
+    ?.variants?.VeritasPublicationDetail1?.publicationDetails || []) as
+    PublicationDetailItem[] | undefined;
 
   if (!id || !publications || !Array.isArray(publications)) return undefined;
   const cleanId = id.trim().toLowerCase();
@@ -18,13 +22,15 @@ function getPublicationByIdOrSlug(id: string): PublicationDetailItem | undefined
   return publications.find(
     (item) =>
       item.id.toLowerCase() === cleanId ||
-      (item.slug && item.slug.toLowerCase() === cleanId)
+      (item.slug && item.slug.toLowerCase() === cleanId),
   );
 }
 
 function getAllPublicationIds(): string[] {
-  const globalData = ({}) as unknown as GlobalLawData;
-  const publications = (lawData.categories.Veritas.sections.PublicationDetail?.variants?.VeritasPublicationDetail1?.publicationDetails || []) as PublicationDetailItem[] | undefined;
+  const globalData = {} as unknown as GlobalLawData;
+  const publications = (lawData.categories.Veritas.sections.PublicationDetail
+    ?.variants?.VeritasPublicationDetail1?.publicationDetails || []) as
+    PublicationDetailItem[] | undefined;
 
   if (!publications || !Array.isArray(publications)) return [];
 
@@ -59,7 +65,9 @@ export async function generateMetadata({
 
   return {
     title: `${publication.title} | Veritas Law Partners`,
-    description: publication.excerpt || `${publication.title} - Publication by Veritas Law Partners.`,
+    description:
+      publication.excerpt ||
+      `${publication.title} - Publication by Veritas Law Partners.`,
   };
 }
 
@@ -68,7 +76,6 @@ export default async function PublicationDetailsPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  
   const resolvedParams = await params;
   const publication = getPublicationByIdOrSlug(resolvedParams.id);
 
@@ -76,8 +83,10 @@ export default async function PublicationDetailsPage({
     notFound();
   }
 
-  const globalData = ({}) as unknown as GlobalLawData;
-  const baseSubBanner = lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1?.publicationsSubBanner;
+  const globalData = {} as unknown as GlobalLawData;
+  const baseSubBanner =
+    lawData.categories.Veritas.sections.PageBanner?.variants?.VeritasPageBanner1
+      ?.publicationsSubBanner;
 
   // Max 3 words for banner title
   const words = publication.title ? publication.title.trim().split(/\s+/) : [];
@@ -96,7 +105,10 @@ export default async function PublicationDetailsPage({
     backgroundImage: baseSubBanner?.backgroundImage || "/subbanner.svg",
   };
 
-  const sidebarData = publication.sidebarData || lawData.categories.Veritas.sections.Publications?.variants?.VeritasPublications1?.publicationSidebar;
+  const sidebarData =
+    publication.sidebarData ||
+    lawData.categories.Veritas.sections.Publications?.variants
+      ?.VeritasPublications1?.publicationSidebar;
 
   return (
     <main className="min-h-screen bg-[#0B0E14] text-white">
@@ -104,7 +116,6 @@ export default async function PublicationDetailsPage({
       <section className="relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 mb-12 md:mb-16 lg:mb-20 select-none">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12">
-  
             <div className="lg:col-span-8 space-y-6 sm:space-y-8">
               <PublicationHero publication={publication} />
               <PublicationContent publication={publication} />

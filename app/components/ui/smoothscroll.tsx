@@ -20,9 +20,8 @@ function GlobalScrollEffects() {
   const pathname = usePathname();
 
   useEffect(() => {
-    // Select elements that should animate based on our CSS rules
     const elements = document.querySelectorAll(
-      "section h1, section h2, section h3, section h4, section p, section img, section .group, section button, .scroll-reveal, .animate-section"
+      "section h1, section h2, section h3, section h4, section p, section img, section .group, section button, .scroll-reveal, .animate-section",
     );
 
     const observer = new IntersectionObserver(
@@ -36,14 +35,13 @@ function GlobalScrollEffects() {
       },
       {
         threshold: 0.05,
-        rootMargin: "0px 0px -50px 0px", // Trigger slightly before it comes fully into view
-      }
+        rootMargin: "0px 0px -50px 0px",
+      },
     );
 
     elements.forEach((el, index) => {
       const rect = el.getBoundingClientRect();
 
-      // Add stagger delay based on DOM order loosely, for elements close together
       const staggerIndex = index % 5;
       if (staggerIndex === 1) el.classList.add("delay-100");
       if (staggerIndex === 2) el.classList.add("delay-200");
@@ -51,7 +49,6 @@ function GlobalScrollEffects() {
       if (staggerIndex === 4) el.classList.add("delay-400");
 
       if (rect.top < window.innerHeight && rect.bottom > 0) {
-        // If already in viewport on load, show it
         setTimeout(() => {
           el.classList.add("is-visible");
         }, 50);

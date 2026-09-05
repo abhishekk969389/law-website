@@ -9,7 +9,9 @@ import { OfficeCtaData, GlobalLawData } from "@/app/data";
 import { FadeIn } from "@/app/components/ui/animations";
 import { motion } from "framer-motion";
 
-const defaultOfficeCtaData = lawData.categories.Veritas.sections.Offices?.variants?.VeritasOffices1?.officeCta;
+const defaultOfficeCtaData =
+  lawData.categories.Veritas.sections.Offices?.variants?.VeritasOffices1
+    ?.officeCta;
 
 export interface OfficectaProps {
   data?: OfficeCtaData;
@@ -22,54 +24,55 @@ export function Officecta({ data = defaultOfficeCtaData }: OfficectaProps) {
 
   return (
     <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-6 sm:mt-8 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
- 
-        <FadeIn direction="up" delay={0.1} className="group relative rounded-xl border border-slate-800/80 bg-[#0A0E17] p-5 sm:p-6 shadow-xl overflow-hidden flex flex-col sm:flex-row items-center justify-between gap-5 sm:gap-8 hover:border-[#D4A359]/40 transition-all duration-300">
-          
-          {/* Left Side: Headset Circle Icon + Tagline + Title + Subtitle */}
-          <div className="flex mx-8 flex-col sm:flex-row items-center text-center sm:text-left gap-4 sm:gap-5">
-            {/* Gold Headset Circle Icon Box */}
-            <motion.div
-              whileHover={{ scale: 1.1, rotate: 6 }}
-              className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-[#D4A359]/60 flex items-center justify-center bg-[#070B12] text-[#D4A359] shrink-0 shadow-[0_0_12px_rgba(212,163,89,0.15)]"
+      <FadeIn
+        direction="up"
+        delay={0.1}
+        className="group relative rounded-xl border border-slate-800/80 bg-[#0A0E17] p-5 sm:p-6 shadow-xl overflow-hidden flex flex-col sm:flex-row items-center justify-between gap-5 sm:gap-8 hover:border-[#D4A359]/40 transition-all duration-300"
+      >
+        {}
+        <div className="flex mx-8 flex-col sm:flex-row items-center text-center sm:text-left gap-4 sm:gap-5">
+          {}
+          <motion.div
+            whileHover={{ scale: 1.1, rotate: 6 }}
+            className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-[#D4A359]/60 flex items-center justify-center bg-[#070B12] text-[#D4A359] shrink-0 shadow-[0_0_12px_rgba(212,163,89,0.15)]"
+          >
+            <Headphones className="w-6 h-6 sm:w-7 sm:h-7 text-[#D4A359]" />
+          </motion.div>
+
+          {}
+          <div>
+            {}
+            <span className="text-[#D4A359] text-[11px] sm:text-xs font-semibold tracking-widest uppercase block mb-1">
+              {tagline || "NEED ASSISTANCE?"}
+            </span>
+
+            {}
+            <h3 className="font-serif font-semibold text-white text-lg sm:text-xl lg:text-2xl leading-snug mb-1">
+              {title || "We'll connect you with the right expert."}
+            </h3>
+
+            {}
+            {subtitle && (
+              <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                {subtitle}
+              </p>
+            )}
+          </div>
+        </div>
+
+        {}
+        <div className="shrink-0 mx-8 w-full sm:w-auto">
+          <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+            <Link
+              href={buttonLink || "/contact"}
+              className="inline-flex items-center justify-center gap-2 h-11 px-6 sm:px-7 rounded-lg border border-[#D4A359]/80 bg-transparent text-[#D4A359] hover:bg-[#D4A359] hover:text-[#0A0E17] text-xs sm:text-sm font-semibold transition-all duration-200 w-full sm:w-auto cursor-pointer"
             >
-              <Headphones className="w-6 h-6 sm:w-7 sm:h-7 text-[#D4A359]" />
-            </motion.div>
-
-            {/* Content Text */}
-            <div>
-              {/* Tagline Badge */}
-              <span className="text-[#D4A359] text-[11px] sm:text-xs font-semibold tracking-widest uppercase block mb-1">
-                {tagline || "NEED ASSISTANCE?"}
-              </span>
-
-              {/* Main Title */}
-              <h3 className="font-serif font-semibold text-white text-lg sm:text-xl lg:text-2xl leading-snug mb-1">
-                {title || "We'll connect you with the right expert."}
-              </h3>
-
-              {/* Subtitle Description */}
-              {subtitle && (
-                <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                  {subtitle}
-                </p>
-              )}
-            </div>
-          </div>
-
-          {/* Right Side: Outlined Gold Button */}
-          <div className="shrink-0 mx-8 w-full sm:w-auto">
-            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-              <Link
-                href={buttonLink || "/contact"}
-                className="inline-flex items-center justify-center gap-2 h-11 px-6 sm:px-7 rounded-lg border border-[#D4A359]/80 bg-transparent text-[#D4A359] hover:bg-[#D4A359] hover:text-[#0A0E17] text-xs sm:text-sm font-semibold transition-all duration-200 w-full sm:w-auto cursor-pointer"
-              >
-                <span>{buttonText || "Contact Us"}</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </motion.div>
-          </div>
-
-        </FadeIn>
+              <span>{buttonText || "Contact Us"}</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </motion.div>
+        </div>
+      </FadeIn>
     </section>
   );
 }
