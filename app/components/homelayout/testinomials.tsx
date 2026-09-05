@@ -188,7 +188,7 @@ export default function Testimonials({
                     </div>
 
                     { }
-                    <div className="hidden sm:flex items-center gap-3 shrink-0 relative z-20">
+                    <div className="hidden sm:flex items-center gap-3 shrink-0 relative z-20 pr-2">
                       <motion.button
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
@@ -214,7 +214,7 @@ export default function Testimonials({
             </FadeIn>
 
             { }
-            <div className="flex sm:hidden items-center justify-center gap-4 mt-6">
+            <div className="flex sm:hidden items-center justify-center gap-4 mt-6 ">
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}

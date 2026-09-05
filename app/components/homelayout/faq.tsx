@@ -74,12 +74,12 @@ export default function Faq({ data = defaultFaqData }: FaqProps) {
         </FadeIn>
 
         { }
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
           { }
           <StaggerContainer
             staggerChildren={0.1}
             delayChildren={0.2}
-            className="lg:col-span-6 space-y-4"
+            className="lg:col-span-6 space-y-3"
           >
             {items.map((item: any) => {
               const isOpen = openId === item.id;
@@ -93,7 +93,7 @@ export default function Faq({ data = defaultFaqData }: FaqProps) {
                   >
                     <button
                       onClick={() => toggleAccordion(item.id)}
-                      className="w-full px-5 sm:px-6 py-4.5 flex items-center justify-between gap-4 text-left transition-colors cursor-pointer"
+                      className="w-full px-5 sm:px-6 py-4 flex items-center justify-between gap-4 text-left transition-colors cursor-pointer"
                     >
                       <span
                         className={`font-medium text-base sm:text-lg leading-snug transition-colors ${isOpen
@@ -143,9 +143,9 @@ export default function Faq({ data = defaultFaqData }: FaqProps) {
           <FadeIn
             direction="left"
             delay={0.3}
-            className="lg:col-span-6 relative"
+            className="lg:col-span-6 relative h-full flex flex-col"
           >
-            <div className="relative w-full aspect-square sm:aspect-[4/3] lg:aspect-square rounded-[32px] overflow-hidden shadow-2xl border border-white/10 group">
+            <div className="relative w-full h-[340px] sm:h-[420px] lg:h-full min-h-[340px] rounded-[32px] overflow-hidden shadow-2xl border border-white/10 group">
               <Image
                 src={image || "/testinomial.svg"}
                 alt="Frequently Asked Questions"
