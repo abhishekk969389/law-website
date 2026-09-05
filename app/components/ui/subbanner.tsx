@@ -65,9 +65,9 @@ export function SubBanner({
 
   return (
     <section className="relative w-full overflow-hidden select-none bg-[#0B0E14]">
-      {}
+      { }
       <div className="relative w-full h-[200px] sm:h-[240px] md:h-[280px] lg:h-[300px]">
-        {}
+        { }
         <Image
           src={bgImage}
           alt={title}
@@ -77,12 +77,12 @@ export function SubBanner({
           className="object-cover object-center"
         />
 
-        {}
+        { }
         <div
           className="absolute inset-0 z-[5] pointer-events-none"
           style={{ filter: "drop-shadow(14px 0 20px rgba(0, 0, 0, 0.95))" }}
         >
-          {}
+          { }
           <div
             className="block md:hidden w-full h-full bg-[#0B0E14]/90 backdrop-blur-[1px]"
             style={{
@@ -90,7 +90,7 @@ export function SubBanner({
             }}
           />
 
-          {}
+          { }
           <div
             className="hidden md:block w-full h-full bg-[#0B0E14]/85 backdrop-blur-[2px]"
             style={{
@@ -99,22 +99,22 @@ export function SubBanner({
           />
         </div>
 
-        {}
+        { }
         <div className="relative z-10 max-w-[1400px] mx-auto h-full px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
           <div className="max-w-[70%] sm:max-w-md md:max-w-xl">
-            {}
+            { }
             <FadeIn direction="right" delay={0.1}>
               <h1 className="text-2xl sm:text-2xl md:text-4xl lg:text-6xl font-bold font-serif text-white tracking-tight leading-tight mb-2 sm:mb-3 md:mb-4">
                 {renderFormattedTitle(title)}
               </h1>
             </FadeIn>
 
-            {}
+            { }
             {breadcrumbs && breadcrumbs.length > 0 && (
               <FadeIn direction="right" delay={0.25}>
                 <nav
                   aria-label="Breadcrumb"
-                  className="flex items-center flex-wrap gap-2 text-xs sm:text-sm md:text-base font-medium"
+                  className="flex items-center flex-wrap gap-2 text-sm sm:text-sm md:text-base font-medium"
                 >
                   {breadcrumbs.map((item: any, index: any) => {
                     const isLast = index === breadcrumbs.length - 1;

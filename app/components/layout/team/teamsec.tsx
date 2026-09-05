@@ -28,24 +28,24 @@ export function Teamsec({ data = defaultTeamSectionData }: TeamsecProps) {
 
   return (
     <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      {}
+      { }
       <FadeIn
         direction="up"
         delay={0.1}
         className="text-center max-w-3xl mx-auto mb-8 sm:mb-10"
       >
-        {}
+        { }
         <div className="inline-flex items-center gap-2.5 mb-4">
           <div className="flex items-center -space-x-1.5">
             <span className="w-3.5 h-3.5 rounded-full border border-[#D4A359]" />
             <span className="w-3.5 h-3.5 rounded-full border border-[#D4A359]" />
           </div>
-          <span className="text-[#D4A359] text-xs md:text-lg font-semibold tracking-widest uppercase">
+          <span className="text-[#D4A359] text-sm md:text-lg font-semibold tracking-widest uppercase">
             {tagline}
           </span>
         </div>
 
-        {}
+        { }
         <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.15] tracking-tight text-white mb-4">
           <span className="block text-white font-medium mb-1">
             {heading?.line1}
@@ -58,7 +58,7 @@ export function Teamsec({ data = defaultTeamSectionData }: TeamsecProps) {
           </span>
         </h2>
 
-        {}
+        { }
         {description && (
           <p className="text-slate-300 text-sm md:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto">
             {description}
@@ -66,7 +66,7 @@ export function Teamsec({ data = defaultTeamSectionData }: TeamsecProps) {
         )}
       </FadeIn>
 
-      {}
+      { }
       <StaggerContainer
         staggerChildren={0.1}
         delayChildren={0.2}
@@ -101,7 +101,7 @@ export function Teamsec({ data = defaultTeamSectionData }: TeamsecProps) {
                     </div>
 
                     <div className="p-5 sm:p-6 text-left">
-                      <span className="text-slate-400 text-xs uppercase tracking-wider font-medium block mb-2">
+                      <span className="text-slate-400 text-sm uppercase tracking-wider font-medium block mb-2">
                         {member.role}
                       </span>
 

@@ -184,14 +184,14 @@ export function Locationcard({
 
   return (
     <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-4 sm:mt-6 md:mt-8 lg:mt-10 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      {}
+      { }
       <FadeIn direction="up" delay={0.1}>
         <h2 className="font-serif text-2xl sm:text-2xl md:text-4xl text-white mb-6 font-medium text-center md:text-left">
           {title || "Our Office Locations"}
         </h2>
       </FadeIn>
 
-      {}
+      { }
       <StaggerContainer
         staggerChildren={0.1}
         delayChildren={0.2}
@@ -205,28 +205,28 @@ export function Locationcard({
                 transition={{ duration: 0.25 }}
                 className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] p-6 sm:p-7 flex flex-col justify-between hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl min-h-[260px] cursor-pointer h-full"
               >
-                {}
+                { }
                 <div>
                   <div className="flex items-start justify-between gap-4">
-                    {}
+                    { }
                     <div className="flex items-start gap-4 flex-1">
-                      {}
+                      { }
                       <div className="w-16 h-16 sm:w-18 sm:h-18 rounded-2xl border border-slate-800 bg-[#060911] flex items-center justify-center shrink-0 shadow-md p-2.5">
                         <MonumentSvg icon={item.icon} />
                       </div>
 
-                      {}
+                      { }
                       <div className="flex-1">
                         <h3 className="font-serif font-semibold text-white text-lg sm:text-xl group-hover:text-[#D4A359] transition-colors leading-snug">
                           {item.city}
                         </h3>
-                        <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mt-1.5">
+                        <p className="text-slate-400 text-sm sm:text-sm leading-relaxed mt-1.5">
                           {item.address}
                         </p>
                       </div>
                     </div>
 
-                    {}
+                    { }
                     <a
                       href={`tel:${item.phone.replace(/\s+/g, "")}`}
                       className="w-10 h-10 rounded-full border border-[#D4A359]/60 flex items-center justify-center bg-[#070B12] text-[#D4A359] hover:bg-[#D4A359] hover:text-[#0A0E17] transition-all shrink-0 shadow-[0_0_10px_rgba(212,163,89,0.1)] mt-1"
@@ -244,7 +244,7 @@ export function Locationcard({
                     href={item.directionsLink || "#"}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-[#D4A359] text-xs sm:text-sm font-semibold hover:underline group-hover:gap-2.5 transition-all mb-1"
+                    className="inline-flex items-center gap-1.5 text-[#D4A359] text-sm sm:text-sm font-semibold hover:underline group-hover:gap-2.5 transition-all mb-1"
                   >
                     <span>Get Directions</span>
                     <ArrowRight className="w-4 h-4" />

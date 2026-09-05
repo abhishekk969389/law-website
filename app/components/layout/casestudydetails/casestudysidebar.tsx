@@ -18,11 +18,11 @@ export interface CaseStudySidebarProps {
   allCaseStudies?: (
     | CaseStudyDetailItem
     | {
-        id: string;
-        slug?: string;
-        title: string | { whiteText: string; goldText: string };
-        image: string;
-      }
+      id: string;
+      slug?: string;
+      title: string | { whiteText: string; goldText: string };
+      image: string;
+    }
   )[];
   sidebarData?: CaseStudySidebarData;
 }
@@ -37,13 +37,13 @@ export function CaseStudySidebar({
 }: CaseStudySidebarProps) {
   const contact = sidebarData?.contact ||
     globalCaseStudySidebar?.contact || {
-      heading: "Have Any Query? Feel Free To",
-      highlightText: "Contact",
-      phone: "+1 222 333 44 55",
-      email: "info@veritas.com",
-      website: "www.veritas.com",
-      address: "123 Legal Street, New York, USA",
-    };
+    heading: "Have Any Query? Feel Free To",
+    highlightText: "Contact",
+    phone: "+1 222 333 44 55",
+    email: "info@veritas.com",
+    website: "www.veritas.com",
+    address: "123 Legal Street, New York, USA",
+  };
 
   const listHeading =
     sidebarData?.listHeading ||
@@ -54,15 +54,15 @@ export function CaseStudySidebar({
     allCaseStudies && allCaseStudies.length > 0
       ? allCaseStudies
       : defaultCaseStudyItems.map((item: any) => ({
-          id: item.linkHref
-            ? item.linkHref.split("/").pop() || item.id
-            : item.id,
-          slug: item.linkHref
-            ? item.linkHref.split("/").pop() || item.id
-            : item.id,
-          title: item.title,
-          image: item.image,
-        }));
+        id: item.linkHref
+          ? item.linkHref.split("/").pop() || item.id
+          : item.id,
+        slug: item.linkHref
+          ? item.linkHref.split("/").pop() || item.id
+          : item.id,
+        title: item.title,
+        image: item.image,
+      }));
 
   return (
     <aside className="space-y-8 sticky top-24">
@@ -96,11 +96,10 @@ export function CaseStudySidebar({
                 <Link
                   key={item.id}
                   href={`/casestudy/${slug}`}
-                  className={`flex items-center gap-3.5 p-3 rounded-xl text-sm transition-all duration-200 group border ${
-                    isActive
+                  className={`flex items-center gap-3.5 p-3 rounded-xl text-sm transition-all duration-200 group border ${isActive
                       ? "bg-[#131926] border-[#D4A359]/70 text-[#D4A359] font-medium shadow-md"
                       : "border-transparent text-slate-300 hover:text-white hover:bg-slate-800/40"
-                  }`}
+                    }`}
                 >
                   {/* Image Thumbnail */}
                   <div className="relative w-20 h-20 rounded-xl overflow-hidden shrink-0 bg-slate-900 border border-slate-800">
@@ -114,17 +113,16 @@ export function CaseStudySidebar({
                   </div>
 
                   {/* Title */}
-                  <span className="text-xs sm:text-sm font-semibold leading-snug line-clamp-2 flex-1 group-hover:text-[#D4A359] transition-colors">
+                  <span className="text-sm sm:text-sm font-semibold leading-snug line-clamp-2 flex-1 group-hover:text-[#D4A359] transition-colors">
                     {titleText}
                   </span>
 
                   {/* Chevron Right */}
                   <ChevronRight
-                    className={`w-4 h-4 shrink-0 transition-transform duration-200 ${
-                      isActive
+                    className={`w-4 h-4 shrink-0 transition-transform duration-200 ${isActive
                         ? "text-[#D4A359] translate-x-0.5"
                         : "text-slate-500 group-hover:text-[#D4A359] group-hover:translate-x-0.5"
-                    }`}
+                      }`}
                   />
                 </Link>
               );
@@ -240,27 +238,27 @@ export function CaseStudySidebar({
                 <span className="text-sm sm:text-base font-medium leading-snug">
                   {contact.addressLines && contact.addressLines.length > 0
                     ? contact.addressLines.map((line: any, i: any) => (
-                        <span key={i} className="block">
-                          {line}
-                        </span>
-                      ))
+                      <span key={i} className="block">
+                        {line}
+                      </span>
+                    ))
                     : contact.address && contact.address.includes(",")
                       ? (() => {
-                          const firstComma = contact.address.indexOf(",");
-                          const line1 = contact.address.slice(
-                            0,
-                            firstComma + 1,
-                          );
-                          const line2 = contact.address
-                            .slice(firstComma + 1)
-                            .trim();
-                          return (
-                            <>
-                              <span className="block">{line1}</span>
-                              <span className="block">{line2}</span>
-                            </>
-                          );
-                        })()
+                        const firstComma = contact.address.indexOf(",");
+                        const line1 = contact.address.slice(
+                          0,
+                          firstComma + 1,
+                        );
+                        const line2 = contact.address
+                          .slice(firstComma + 1)
+                          .trim();
+                        return (
+                          <>
+                            <span className="block">{line1}</span>
+                            <span className="block">{line2}</span>
+                          </>
+                        );
+                      })()
                       : contact.address || null}
                 </span>
               </div>

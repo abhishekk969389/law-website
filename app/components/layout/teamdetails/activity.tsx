@@ -74,10 +74,10 @@ export function Activity({ data, member }: ActivityProps) {
       <FadeIn direction="up" delay={0.1}>
         <div className="bg-[#070A11] border border-slate-800/80 rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-2xl relative overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-            {}
+            { }
             {skills.length > 0 && (
               <div className="lg:border-r lg:border-slate-800/80 lg:pr-8 xl:pr-12 space-y-8">
-                {}
+                { }
                 <div>
                   <div className="flex items-center gap-4 mb-2">
                     <div className="w-12 h-12 rounded-full border border-[#D4A359] text-[#D4A359] flex items-center justify-center shrink-0">
@@ -87,11 +87,11 @@ export function Activity({ data, member }: ActivityProps) {
                       {skillsTitle}
                     </h2>
                   </div>
-                  {}
+                  { }
                   <div className="w-12 h-[2px] bg-[#D4A359] ml-16" />
                 </div>
 
-                {}
+                { }
                 <div className="space-y-6 pt-2">
                   {skills.map((skill: any, index: any) => {
                     const SkillIconComponent =
@@ -101,22 +101,22 @@ export function Activity({ data, member }: ActivityProps) {
                       <div key={skill.id || index} className="space-y-2.5">
                         <div className="flex items-center justify-between gap-4">
                           <div className="flex items-center gap-3.5">
-                            {}
+                            { }
                             <div className="w-11 h-11 rounded-xl bg-[#0A0F1D] border border-slate-800/90 flex items-center justify-center text-[#D4A359] shrink-0 shadow-inner">
                               <SkillIconComponent className="w-5 h-5 stroke-[1.75]" />
                             </div>
-                            {}
+                            { }
                             <span className="text-white text-sm sm:text-base font-sans font-medium tracking-wide">
                               {skill.name}
                             </span>
                           </div>
-                          {}
+                          { }
                           <span className="text-slate-300 text-sm sm:text-base font-sans font-medium">
                             {skill.percentage}%
                           </span>
                         </div>
 
-                        {}
+                        { }
                         <div className="w-full bg-[#111726] h-2.5 rounded-full overflow-hidden border border-slate-800/60 p-[1px]">
                           <motion.div
                             initial={{ width: 0 }}
@@ -161,9 +161,8 @@ export function Activity({ data, member }: ActivityProps) {
                     return (
                       <div
                         key={item.id || index}
-                        className={`flex items-start gap-4 sm:gap-5 ${
-                          !isLast ? "border-b border-slate-800/60 pb-6" : ""
-                        }`}
+                        className={`flex items-start gap-4 sm:gap-5 ${!isLast ? "border-b border-slate-800/60 pb-6" : ""
+                          }`}
                       >
                         <div className="relative w-14 h-16 sm:w-16 sm:h-18 flex items-center justify-center shrink-0 mt-0.5">
                           <svg
@@ -185,7 +184,7 @@ export function Activity({ data, member }: ActivityProps) {
                           <h3 className="font-serif text-lg sm:text-xl text-white font-medium tracking-wide leading-snug hover:text-[#D4A359] transition-colors">
                             {item.title}
                           </h3>
-                          <p className="text-slate-400 text-xs sm:text-sm md:text-base leading-relaxed font-sans">
+                          <p className="text-slate-400 text-sm sm:text-sm md:text-base leading-relaxed font-sans">
                             {item.description}
                           </p>
                         </div>

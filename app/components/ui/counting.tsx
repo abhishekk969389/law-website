@@ -106,9 +106,8 @@ export default function Counting({
             return (
               <StaggerItem
                 key={item.id || index}
-                className={`flex flex-col items-center justify-center text-center px-3 py-2 lg:py-1 ${
-                  index !== 0 ? "pt-4 md:pt-2 lg:pt-1" : ""
-                }`}
+                className={`flex flex-col items-center justify-center text-center px-3 py-2 lg:py-1 ${index !== 0 ? "pt-4 md:pt-2 lg:pt-1" : ""
+                  }`}
               >
                 <motion.div
                   whileHover={{ scale: 1.1, y: -2 }}
@@ -125,7 +124,7 @@ export default function Counting({
                   <AnimatedCounter valueStr={item.value} />
                 </div>
 
-                <p className="text-gray-400 text-xs md:text-lg font-light tracking-wide leading-tight">
+                <p className="text-gray-400 min-h-10 text-sm md:text-lg font-light tracking-wide leading-tight">
                   {item.label}
                 </p>
               </StaggerItem>

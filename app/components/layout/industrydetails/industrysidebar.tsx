@@ -78,7 +78,7 @@ export function IndustrySidebar({
 
   return (
     <aside className="space-y-8 sticky top-24">
-      {}
+      { }
       {allIndustries && allIndustries.length > 0 && (
         <FadeIn
           direction="up"
@@ -103,28 +103,25 @@ export function IndustrySidebar({
                 <Link
                   key={ind.id}
                   href={`/industries/${slug}`}
-                  className={`flex items-center justify-between px-4 py-3.5 rounded-xl text-sm transition-all duration-200 group ${
-                    isActive
+                  className={`flex items-center justify-between px-4 py-3.5 rounded-xl text-sm transition-all duration-200 group ${isActive
                       ? "bg-[#131926] border border-[#D4A359]/70 text-[#D4A359] font-medium shadow-md"
                       : "text-slate-300 hover:text-white hover:bg-slate-800/40 border border-transparent"
-                  }`}
+                    }`}
                 >
                   <div className="flex items-center gap-3">
                     <IconComponent
-                      className={`w-4 h-4 shrink-0 stroke-[1.75] ${
-                        isActive
+                      className={`w-4 h-4 shrink-0 stroke-[1.75] ${isActive
                           ? "text-[#D4A359]"
                           : "text-slate-400 group-hover:text-[#D4A359]"
-                      }`}
+                        }`}
                     />
                     <span className="truncate max-w-[200px]">{ind.title}</span>
                   </div>
                   <ChevronRight
-                    className={`w-4 h-4 shrink-0 transition-transform duration-200 ${
-                      isActive
+                    className={`w-4 h-4 shrink-0 transition-transform duration-200 ${isActive
                         ? "text-[#D4A359] translate-x-0.5"
                         : "text-slate-500 group-hover:text-white group-hover:translate-x-0.5"
-                    }`}
+                      }`}
                   />
                 </Link>
               );
@@ -148,7 +145,7 @@ export function IndustrySidebar({
             <div className="w-12 h-12 rounded-full border-2 border-[#D4A359] bg-[#0F1420] flex items-center justify-center text-[#D4A359] shrink-0 shadow-lg">
               <Headphones className="w-6 h-6 stroke-[1.75]" />
             </div>
-            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            <p className="text-slate-300 text-sm sm:text-sm leading-relaxed">
               {getInTouch.text}
             </p>
           </div>
@@ -156,7 +153,7 @@ export function IndustrySidebar({
           <div className="pt-2">
             <Link
               href={getInTouch.buttonHref || "/contactus"}
-              className="inline-flex items-center gap-2 rounded-xl border border-[#D4A359] px-5 py-2.5 text-[#D4A359] hover:bg-[#D4A359] hover:text-black font-semibold text-xs uppercase tracking-wider transition-all duration-300 shadow-md group"
+              className="inline-flex items-center gap-2 rounded-xl border border-[#D4A359] px-5 py-2.5 text-[#D4A359] hover:bg-[#D4A359] hover:text-black font-semibold text-sm uppercase tracking-wider transition-all duration-300 shadow-md group"
             >
               <span>{getInTouch.buttonText || "Contact Us"}</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -193,7 +190,7 @@ export function IndustrySidebar({
                   />
                 </div>
                 <div className="space-y-1">
-                  <h4 className="text-xs sm:text-sm font-semibold text-white group-hover:text-[#D4A359] line-clamp-2 leading-snug transition-colors">
+                  <h4 className="text-sm sm:text-sm font-semibold text-white group-hover:text-[#D4A359] line-clamp-2 leading-snug transition-colors">
                     {insight.title}
                   </h4>
                   <p className="text-[11px] text-slate-400 font-mono uppercase tracking-wider">

@@ -50,26 +50,26 @@ export function Blogsec({ data = defaultBlogSectionData }: BlogsecProps) {
 
   return (
     <section className="max-w-[1400px] mx-auto relative w-full text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      {}
+      { }
       <FadeIn
         id="blog-section-header"
         direction="up"
         delay={0.1}
         className="text-center max-w-3xl mx-auto mb-8 sm:mb-10"
       >
-        {}
+        { }
         <div className="flex items-center justify-center gap-3 mb-3">
           <span className="w-12 h-[1px] bg-[#D4A359]/60" />
           <div className="flex items-center gap-2">
             <PenTool className="w-4 h-4 text-[#D4A359]" />
-            <span className="text-[#D4A359] text-xs md:text-lg font-semibold tracking-widest uppercase">
+            <span className="text-[#D4A359] text-sm md:text-lg font-semibold tracking-widest uppercase">
               {tagline}
             </span>
           </div>
           <span className="w-12 h-[1px] bg-[#D4A359]/60" />
         </div>
 
-        {}
+        { }
         <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.15] tracking-tight mb-4">
           <span className="text-white font-medium">{heading?.line1}</span>{" "}
           <span className="text-[#D4A359] italic font-serif">
@@ -77,7 +77,7 @@ export function Blogsec({ data = defaultBlogSectionData }: BlogsecProps) {
           </span>
         </h2>
 
-        {}
+        { }
         {subheading && (
           <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-[620px] mx-auto">
             {subheading}
@@ -85,12 +85,12 @@ export function Blogsec({ data = defaultBlogSectionData }: BlogsecProps) {
         )}
       </FadeIn>
 
-      {}
+      { }
       <StaggerContainer
         key={currentPage}
         staggerChildren={0.12}
         delayChildren={0.1}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
       >
         {displayedItems &&
           displayedItems.map((item: any) => (
@@ -115,7 +115,7 @@ export function Blogsec({ data = defaultBlogSectionData }: BlogsecProps) {
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0B0E14]/40 via-transparent to-transparent opacity-60" />
                   </div>
 
-                  <div className="flex items-center gap-3.5 text-xs text-gray-400 font-light mb-3 flex-wrap">
+                  <div className="flex items-center gap-3.5 text-sm text-gray-400 font-light mb-3 flex-wrap">
                     <div className="flex items-center gap-1.5">
                       <User className="w-3.5 h-3.5 text-[#D4A359]" />
                       <span>By {item.author}</span>
@@ -137,7 +137,7 @@ export function Blogsec({ data = defaultBlogSectionData }: BlogsecProps) {
                   </h3>
 
                   <div className="mt-auto">
-                    <div className="inline-flex items-center gap-2 text-[#D4A359] text-xs sm:text-sm font-medium hover:text-[#E3C280] transition-colors group/link">
+                    <div className="inline-flex items-center gap-2 text-[#D4A359] text-sm sm:text-sm font-medium hover:text-[#E3C280] transition-colors group/link">
                       <span>{item.linkText}</span>
                       <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
                     </div>

@@ -27,7 +27,7 @@ export function BlogSidebar({ currentId, sidebarData }: BlogSidebarProps) {
 
   return (
     <aside className="w-full space-y-8 select-none">
-      {}
+      { }
       {recentBlogs && recentBlogs.length > 0 && (
         <FadeIn
           direction="up"
@@ -49,11 +49,10 @@ export function BlogSidebar({ currentId, sidebarData }: BlogSidebarProps) {
                 <Link
                   key={item.id}
                   href={href}
-                  className={`flex items-center gap-4 group p-2 rounded-2xl transition-all duration-300 ${
-                    isActive
+                  className={`flex items-center gap-4 group p-2 rounded-2xl transition-all duration-300 ${isActive
                       ? "bg-white/5 border border-[#D4A359]/30"
                       : "hover:bg-white/[0.03]"
-                  }`}
+                    }`}
                 >
                   <div className="relative w-16 h-16 sm:w-18 sm:h-18 rounded-xl overflow-hidden shrink-0 bg-slate-900 border border-white/10 shadow-md">
                     <Image
@@ -66,7 +65,7 @@ export function BlogSidebar({ currentId, sidebarData }: BlogSidebarProps) {
                   </div>
 
                   <div className="flex-1 min-w-0">
-                    <div className="text-xs text-slate-400 font-light flex items-center gap-1.5 flex-wrap mb-1">
+                    <div className="text-sm text-slate-400 font-light flex items-center gap-1.5 flex-wrap mb-1">
                       <span>by</span>
                       <span className="text-[#D4A359] font-medium">
                         {item.author || "Zstal"}
@@ -79,7 +78,7 @@ export function BlogSidebar({ currentId, sidebarData }: BlogSidebarProps) {
                       {item.title}
                     </h4>
 
-                    <div className="flex items-center gap-1.5 text-xs text-slate-400 font-light mt-1">
+                    <div className="flex items-center gap-1.5 text-sm text-slate-400 font-light mt-1">
                       <Calendar className="w-3.5 h-3.5 text-[#D4A359]" />
                       <span>{item.date}</span>
                     </div>

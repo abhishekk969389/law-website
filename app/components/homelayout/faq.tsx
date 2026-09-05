@@ -41,25 +41,25 @@ export default function Faq({ data = defaultFaqData }: FaqProps) {
   return (
     <section className="relative w-full bg-[#0C191B] text-white pt-2 lg:pt-4 pb-12 sm:pb-16 lg:pb-20 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {}
+        { }
         <FadeIn
           direction="up"
           delay={0.1}
           className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 lg:mb-12"
         >
-          {}
+          { }
           <div className="flex items-center justify-center gap-3 mb-3">
             <span className="w-12 h-[1px] bg-[#D4A359]/60" />
             <div className="flex items-center gap-2">
               <Scale className="w-6 h-6 text-[#D4A359]" />
-              <span className="text-[#D4A359] text-xs md:text-lg font-semibold tracking-widest uppercase">
+              <span className="text-[#D4A359] text-sm md:text-lg font-semibold tracking-widest uppercase">
                 {tagline}
               </span>
             </div>
             <span className="w-12 h-[1px] bg-[#D4A359]/60" />
           </div>
 
-          {}
+          { }
           <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.15] tracking-tight mb-4">
             <span className="text-white font-medium">{heading.line1}</span>{" "}
             <span className="text-[#D4A359] italic font-serif">
@@ -67,15 +67,15 @@ export default function Faq({ data = defaultFaqData }: FaqProps) {
             </span>
           </h2>
 
-          {}
+          { }
           <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-[620px] mx-auto">
             {subheading}
           </p>
         </FadeIn>
 
-        {}
+        { }
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          {}
+          { }
           <StaggerContainer
             staggerChildren={0.1}
             delayChildren={0.2}
@@ -86,22 +86,20 @@ export default function Faq({ data = defaultFaqData }: FaqProps) {
               return (
                 <StaggerItem key={item.id}>
                   <div
-                    className={`rounded-2xl border transition-colors duration-300 overflow-hidden ${
-                      isOpen
+                    className={`rounded-2xl border transition-colors duration-300 overflow-hidden ${isOpen
                         ? "bg-[#0C191B]/95 border-[#D4A359]/40 shadow-lg"
                         : "bg-[#0C191B]/90 border-white/10 hover:border-white/20"
-                    }`}
+                      }`}
                   >
                     <button
                       onClick={() => toggleAccordion(item.id)}
                       className="w-full px-5 sm:px-6 py-4.5 flex items-center justify-between gap-4 text-left transition-colors cursor-pointer"
                     >
                       <span
-                        className={`font-medium text-base sm:text-lg leading-snug transition-colors ${
-                          isOpen
+                        className={`font-medium text-base sm:text-lg leading-snug transition-colors ${isOpen
                             ? "text-[#D4A359]"
                             : "text-white hover:text-[#E3C280]"
-                        }`}
+                          }`}
                       >
                         {item.question}
                       </span>

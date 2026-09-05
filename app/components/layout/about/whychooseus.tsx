@@ -50,20 +50,20 @@ export function WhyChooseUs({
     <section className="relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
-          {}
+          { }
           <div className="lg:col-span-7 flex flex-col justify-between text-center md:text-left items-center md:items-start">
             <div>
-              {}
+              { }
               <FadeIn direction="up" delay={0.1}>
                 <div className="flex items-center gap-3 mb-3 justify-center md:justify-start">
                   <span className="w-8 h-[2px] bg-[#D4A359]" />
-                  <span className="text-[#D4A359] text-xs md:text-lg font-semibold tracking-widest uppercase">
+                  <span className="text-[#D4A359] text-sm md:text-lg font-semibold tracking-widest uppercase">
                     {tagline}
                   </span>
                 </div>
               </FadeIn>
 
-              {}
+              { }
               <FadeIn direction="up" delay={0.2}>
                 <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.15] tracking-tight mb-4 text-center md:text-left">
                   <span className="text-white font-medium block sm:inline">
@@ -78,7 +78,7 @@ export function WhyChooseUs({
                 </h2>
               </FadeIn>
 
-              {}
+              { }
               <FadeIn direction="up" delay={0.25}>
                 <div className="flex items-center gap-4 my-6 max-w-md">
                   <div className="h-[1px] bg-slate-800 flex-1" />
@@ -87,14 +87,14 @@ export function WhyChooseUs({
                 </div>
               </FadeIn>
 
-              {}
+              { }
               <FadeIn direction="up" delay={0.3}>
                 <p className="text-slate-300 text-sm md:text-lg leading-relaxed mb-8 max-w-2xl font-normal">
                   {description}
                 </p>
               </FadeIn>
 
-              {}
+              { }
               <StaggerContainer
                 staggerChildren={0.1}
                 delayChildren={0.35}
@@ -111,7 +111,7 @@ export function WhyChooseUs({
                           transition={{ duration: 0.2 }}
                           className="bg-[#0E131C] border border-slate-800/80 rounded-xl p-5 text-center flex flex-col items-center group hover:border-[#D4A359]/60 hover:bg-[#121824] transition-colors duration-300 shadow-lg h-full cursor-pointer"
                         >
-                          {}
+                          { }
                           <motion.div
                             whileHover={{ scale: 1.1, rotate: 6 }}
                             className="w-14 h-14 rounded-full border border-[#D4A359]/60 flex items-center justify-center mb-4 p-3 group-hover:border-[#D4A359] group-hover:bg-[#D4A359]/10 transition-all duration-300"
@@ -119,13 +119,13 @@ export function WhyChooseUs({
                             <IconComponent className="w-6 h-6 text-[#D4A359]" />
                           </motion.div>
 
-                          {}
+                          { }
                           <h3 className="font-serif font-semibold text-white text-lg md:text-xl mb-2 group-hover:text-[#D4A359] transition-colors">
                             {item.title}
                           </h3>
 
-                          {}
-                          <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                          { }
+                          <p className="text-slate-300 text-sm sm:text-sm leading-relaxed">
                             {item.description}
                           </p>
                         </motion.div>
@@ -136,14 +136,14 @@ export function WhyChooseUs({
             </div>
           </div>
 
-          {}
+          { }
           <FadeIn
             direction="left"
             delay={0.3}
             className="lg:col-span-5 flex items-center justify-center"
           >
             <div className="relative w-full h-full min-h-[420px] sm:min-h-[480px] lg:min-h-[540px] rounded-2xl p-3 border-2 border-[#C99A2E]/70 bg-[#0E131C] shadow-2xl overflow-hidden group">
-              {}
+              { }
               <div className="relative w-full h-full rounded-xl overflow-hidden border border-[#C99A2E]/40">
                 <Image
                   src={image || "/subbanner.svg"}

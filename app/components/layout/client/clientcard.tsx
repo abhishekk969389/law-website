@@ -46,7 +46,7 @@ export function Clientcard({ data = defaultClientCardsData }: ClientcardProps) {
 
   return (
     <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white  mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      {}
+      { }
       <StaggerContainer
         staggerChildren={0.1}
         delayChildren={0.1}
@@ -64,7 +64,7 @@ export function Clientcard({ data = defaultClientCardsData }: ClientcardProps) {
                     transition={{ duration: 0.25 }}
                     className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] p-6 sm:p-7 flex flex-col justify-between hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl min-h-[250px] cursor-pointer h-full"
                   >
-                    {}
+                    { }
                     <div>
                       <motion.div
                         whileHover={{ scale: 1.1, rotate: 6 }}
@@ -73,20 +73,20 @@ export function Clientcard({ data = defaultClientCardsData }: ClientcardProps) {
                         <IconComponent className="w-6 h-6 text-[#D4A359]" />
                       </motion.div>
 
-                      {}
+                      { }
                       <h3 className="font-serif font-semibold text-white text-lg sm:text-xl mb-2 group-hover:text-[#D4A359] transition-colors leading-snug">
                         {item.title}
                       </h3>
 
-                      {}
-                      <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
+                      { }
+                      <p className="text-slate-400 text-sm sm:text-sm leading-relaxed mb-6">
                         {item.description}
                       </p>
                     </div>
 
-                    {}
+                    { }
                     <div>
-                      <div className="inline-flex items-center gap-2 text-[#D4A359] text-xs sm:text-sm font-semibold group-hover:gap-3 transition-all group-hover:underline mt-auto">
+                      <div className="inline-flex items-center gap-2 text-[#D4A359] text-sm sm:text-sm font-semibold group-hover:gap-3 transition-all group-hover:underline mt-auto">
                         <span>{item.actionText}</span>
                         <ArrowRight className="w-4 h-4" />
                       </div>

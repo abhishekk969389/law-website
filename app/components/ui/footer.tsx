@@ -39,7 +39,7 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
 
   return (
     <footer className="relative w-full bg-[#0C191B] text-white pt-6 md:pt-8 overflow-hidden">
-      {}
+      { }
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Image
           src={backgroundImage || "/footerimg.svg"}
@@ -53,7 +53,7 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
       </div>
 
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {}
+        { }
         <FadeIn
           direction="up"
           delay={0.1}
@@ -62,7 +62,7 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
           <div>
             <div className="flex items-center gap-2 mb-2">
               <span className="w-8 h-[1px] bg-[#D4A359]" />
-              <span className="text-[#D4A359] text-xs sm:text-sm font-semibold tracking-wider uppercase">
+              <span className="text-[#D4A359] text-sm sm:text-sm font-semibold tracking-wider uppercase">
                 {newsletter.tagline}
               </span>
             </div>
@@ -92,13 +92,13 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
           </form>
         </FadeIn>
 
-        {}
+        { }
         <StaggerContainer
           staggerChildren={0.1}
           delayChildren={0.2}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-6 py-7"
         >
-          {}
+          { }
           <StaggerItem className="lg:col-span-3">
             <div className="mb-4">
               <Link href="/" className="inline-block">
@@ -141,7 +141,7 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
                       </svg>
                     )}
                     {social.name === "Behance" && (
-                      <span className="font-bold text-xs sm:text-sm text-[#D4A359]">
+                      <span className="font-bold text-sm sm:text-sm text-[#D4A359]">
                         Bē
                       </span>
                     )}
@@ -153,17 +153,17 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
                     {!["Facebook", "Twitter", "Behance", "Youtube"].includes(
                       social.name,
                     ) && (
-                      <span className="font-bold text-xs sm:text-sm">
-                        {social.name.charAt(0)}
-                      </span>
-                    )}
+                        <span className="font-bold text-sm sm:text-sm">
+                          {social.name.charAt(0)}
+                        </span>
+                      )}
                   </motion.a>
                 ))}
               </div>
             </div>
           </StaggerItem>
 
-          {}
+          { }
           <StaggerItem className="lg:col-span-2">
             <h5 className="text-lg lg:text-xl font-bold text-[#D4A359] mb-4">
               {popularCases?.title}
@@ -185,7 +185,7 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
             </ul>
           </StaggerItem>
 
-          {}
+          { }
           <StaggerItem className="lg:col-span-2">
             <h5 className="text-lg lg:text-xl font-bold text-[#D4A359] mb-4">
               {resources?.title || "Resources"}
@@ -222,7 +222,7 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
             </ul>
           </StaggerItem>
 
-          {}
+          { }
           <StaggerItem className="lg:col-span-2">
             <h5 className="text-lg lg:text-xl font-bold text-[#D4A359] mb-4">
               {recentNews?.title}
@@ -247,7 +247,7 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
                     <h6 className="text-sm lg:text-[15px] font-bold text-white group-hover:text-[#D4A359] transition-colors leading-snug line-clamp-2">
                       {item.title}
                     </h6>
-                    <div className="flex items-center gap-1.5 text-xs lg:text-[13px] text-[#D4A359] mt-1 font-medium">
+                    <div className="flex items-center gap-1.5 text-sm lg:text-[13px] text-[#D4A359] mt-1 font-medium">
                       <Calendar className="w-3.5 h-3.5 text-[#D4A359]" />
                       <span>{item.date}</span>
                     </div>
@@ -257,7 +257,7 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
             </div>
           </StaggerItem>
 
-          {}
+          { }
           <StaggerItem className="lg:col-span-3 lg:justify-self-end space-y-4">
             <div>
               <h5 className="text-lg lg:text-xl font-bold text-[#D4A359] mb-3">
@@ -299,7 +299,7 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
         </StaggerContainer>
       </div>
 
-      {}
+      { }
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pb-6 pt-3 relative z-10">
         <div className="w-full bg-[#E5B562]/80 text-[#0B0E14] font-semibold text-sm sm:text-base text-center py-4 px-4 shadow-md">
           {copyrightText}

@@ -46,26 +46,26 @@ export function Legalsec({
 
   return (
     <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      {}
+      { }
       <FadeIn
         id="legal-section-header"
         direction="up"
         delay={0.1}
         className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 lg:mb-12"
       >
-        {}
+        { }
         <div className="flex items-center justify-center gap-3 mb-3">
           <span className="w-12 h-[1px] bg-[#D4A359]/60" />
           <div className="flex items-center gap-2">
             <PenTool className="w-4 h-4 text-[#D4A359]" />
-            <span className="text-[#D4A359] text-xs md:text-lg font-semibold tracking-widest uppercase">
+            <span className="text-[#D4A359] text-sm md:text-lg font-semibold tracking-widest uppercase">
               {tagline}
             </span>
           </div>
           <span className="w-12 h-[1px] bg-[#D4A359]/60" />
         </div>
 
-        {}
+        { }
         <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.15] tracking-tight mb-4">
           <span className="text-white font-medium">{heading?.line1}</span>{" "}
           <span className="text-[#D4A359] italic font-serif">
@@ -73,7 +73,7 @@ export function Legalsec({
           </span>
         </h2>
 
-        {}
+        { }
         {subheading && (
           <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-[620px] mx-auto">
             {subheading}
@@ -81,7 +81,7 @@ export function Legalsec({
         )}
       </FadeIn>
 
-      {}
+      { }
       {featured && (
         <FadeIn direction="up" delay={0.2} className="mb-8 lg:mb-10">
           <Link
@@ -99,7 +99,7 @@ export function Legalsec({
                 />
 
                 {featured.badge && (
-                  <div className="absolute top-4 left-4 z-10 px-3.5 py-1.5 bg-[#D4A359] text-[#0A0E17] font-bold text-xs uppercase tracking-wider rounded-md shadow-lg">
+                  <div className="absolute top-4 left-4 z-10 px-3.5 py-1.5 bg-[#D4A359] text-[#0A0E17] font-bold text-sm uppercase tracking-wider rounded-md shadow-lg">
                     {featured.badge}
                   </div>
                 )}
@@ -107,7 +107,7 @@ export function Legalsec({
 
               <div className="p-6 sm:p-8 flex flex-col justify-between text-left">
                 <div>
-                  <div className="text-slate-400 text-xs font-semibold tracking-wider uppercase mb-3">
+                  <div className="text-slate-400 text-sm font-semibold tracking-wider uppercase mb-3">
                     <span>{featured.date}</span>
                     <span className="mx-2">•</span>
                     <span className="text-[#D4A359]">{featured.category}</span>
@@ -123,7 +123,7 @@ export function Legalsec({
                 </div>
 
                 <div>
-                  <div className="inline-flex items-center gap-2 text-[#D4A359] text-xs sm:text-sm font-semibold uppercase tracking-wider group-hover:gap-3 transition-all group-hover:underline">
+                  <div className="inline-flex items-center gap-2 text-[#D4A359] text-sm sm:text-sm font-semibold uppercase tracking-wider group-hover:gap-3 transition-all group-hover:underline">
                     <span>
                       {(data as any).buttonText ||
                         (featured as any).linkText ||
@@ -142,7 +142,7 @@ export function Legalsec({
         key={currentPage}
         staggerChildren={0.12}
         delayChildren={0.25}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
       >
         {displayedItems &&
           displayedItems.map((item: any) => (
@@ -168,7 +168,7 @@ export function Legalsec({
                     </div>
 
                     <div className="p-5 sm:p-6 text-left">
-                      <div className="text-xs font-semibold tracking-wider uppercase mb-2">
+                      <div className="text-sm font-semibold tracking-wider uppercase mb-2">
                         <span className="text-slate-400">{item.date}</span>
                         <span className="text-slate-600 mx-2">•</span>
                         <span className="text-[#D4A359]">{item.category}</span>
@@ -178,14 +178,14 @@ export function Legalsec({
                         {item.title}
                       </h3>
 
-                      <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4 line-clamp-3 min-h-[56px]">
+                      <p className="text-slate-400 text-sm sm:text-sm leading-relaxed mb-4 line-clamp-3 min-h-[56px]">
                         {item.description}
                       </p>
                     </div>
                   </div>
 
                   <div className="pb-6 pt-2 px-5 sm:px-6 text-left">
-                    <div className="inline-flex items-center gap-2 text-[#D4A359] text-xs font-semibold uppercase tracking-wider group-hover:gap-3 transition-all group-hover:underline">
+                    <div className="inline-flex items-center gap-2 text-[#D4A359] text-sm font-semibold uppercase tracking-wider group-hover:gap-3 transition-all group-hover:underline">
                       <span>
                         {(data as any).buttonText ||
                           (item as any).linkText ||

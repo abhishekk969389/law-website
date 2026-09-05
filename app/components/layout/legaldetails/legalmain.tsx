@@ -35,7 +35,7 @@ export function LegalMain({ article }: LegalMainProps) {
 
   return (
     <article className="w-full text-left">
-      {}
+      { }
       <FadeIn
         direction="up"
         delay={0.1}
@@ -53,12 +53,12 @@ export function LegalMain({ article }: LegalMainProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B0E14]/30 via-transparent to-transparent pointer-events-none" />
       </FadeIn>
 
-      {}
+      { }
       <FadeIn
         direction="up"
         delay={0.15}
         duration={0.6}
-        className="flex items-center gap-2.5 sm:gap-3 text-xs sm:text-sm mb-4 select-none flex-wrap"
+        className="flex items-center gap-2.5 sm:gap-3 text-sm sm:text-sm mb-4 select-none flex-wrap"
       >
         <div className="flex items-center gap-1.5 text-slate-300">
           <Calendar className="w-4 h-4 text-slate-400" />
@@ -72,14 +72,14 @@ export function LegalMain({ article }: LegalMainProps) {
         </span>
       </FadeIn>
 
-      {}
+      { }
       <FadeIn direction="up" delay={0.2} duration={0.6}>
         <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl text-white font-normal leading-snug tracking-tight mb-4">
           {article.title}
         </h1>
       </FadeIn>
 
-      {}
+      { }
       {article.subtitle && (
         <FadeIn direction="up" delay={0.25} duration={0.6}>
           <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-light mb-8">
@@ -88,7 +88,7 @@ export function LegalMain({ article }: LegalMainProps) {
         </FadeIn>
       )}
 
-      {}
+      { }
       {article.introParagraphs && article.introParagraphs.length > 0 && (
         <FadeIn
           direction="up"
@@ -112,7 +112,7 @@ export function LegalMain({ article }: LegalMainProps) {
         </FadeIn>
       )}
 
-      {}
+      { }
       {article.highlights && article.highlights.length > 0 && (
         <FadeIn
           direction="up"
@@ -134,17 +134,17 @@ export function LegalMain({ article }: LegalMainProps) {
                   key={item.id || idx}
                   className="flex items-start gap-4 sm:gap-5 group p-2 rounded-2xl transition-colors duration-200"
                 >
-                  {}
+                  { }
                   <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full border border-[#D4A359]/70 bg-[#0F1420] text-[#D4A359] flex items-center justify-center shrink-0 shadow-md group-hover:scale-105 group-hover:border-[#E3C280] transition-all">
                     <IconComponent className="w-5 h-5 stroke-[1.8]" />
                   </div>
 
-                  {}
+                  { }
                   <div className="flex-1">
                     <h3 className="text-white font-semibold text-sm sm:text-base mb-1 group-hover:text-[#D4A359] transition-colors">
                       {item.title}
                     </h3>
-                    <p className="text-slate-300 text-xs sm:text-sm leading-relaxed font-light">
+                    <p className="text-slate-300 text-sm sm:text-sm leading-relaxed font-light">
                       {item.description}
                     </p>
                   </div>
@@ -155,7 +155,7 @@ export function LegalMain({ article }: LegalMainProps) {
         </FadeIn>
       )}
 
-      {}
+      { }
       {article.conclusionParagraphs &&
         article.conclusionParagraphs.length > 0 && (
           <FadeIn direction="up" delay={0.4} duration={0.6} className="mb-6">

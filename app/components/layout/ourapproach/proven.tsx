@@ -43,13 +43,13 @@ export function Proven({ data = defaultProvenData }: ProvenProps) {
 
   return (
     <section className="relative max-w-[1400px] mx-auto  w-full bg-[#08171B] text-white  mt-8 sm:mt-10 md:mt-12 lg:mt-14 pb-16  select-none px-4 sm:px-6 lg:px-8">
-      {}
+      { }
       <FadeIn
         direction="up"
         delay={0.1}
         className="rounded-3xl border border-[#D4A359]/35 bg-[#08171B] px-6 sm:px-8 lg:px-12 pt-8 sm:pt-10 lg:pt-12 pb-4 sm:pb-6 shadow-2xl relative"
       >
-        {}
+        { }
         <div className="absolute -top-3 sm:-top-3.5 left-1/2 -translate-x-1/2 bg-[#08171B] py-1 px-3 sm:px-6 flex items-center gap-2 sm:gap-4 z-20 max-w-[92%] sm:max-w-none">
           <span className="w-4 sm:w-16 h-[1.5px] bg-[#D4A359] shrink-0" />
           <span className="text-[#D4A359] text-[11px] sm:text-sm font-semibold tracking-[0.15em] sm:tracking-[0.2em] uppercase whitespace-nowrap">
@@ -58,7 +58,7 @@ export function Proven({ data = defaultProvenData }: ProvenProps) {
           <span className="w-4 sm:w-16 h-[1.5px] bg-[#D4A359] shrink-0" />
         </div>
 
-        {}
+        { }
         <StaggerContainer
           staggerChildren={0.1}
           delayChildren={0.2}
@@ -74,7 +74,7 @@ export function Proven({ data = defaultProvenData }: ProvenProps) {
                     whileHover={{ y: -4 }}
                     className="flex flex-col items-center text-center px-3 sm:px-4 lg:px-5 py-4 lg:py-0 relative group cursor-pointer"
                   >
-                    {}
+                    { }
                     <div className="flex items-center justify-center gap-3 mb-2">
                       <span className="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-slate-600/50 select-none">
                         {step.stepNumber}
@@ -87,13 +87,13 @@ export function Proven({ data = defaultProvenData }: ProvenProps) {
                       </motion.div>
                     </div>
 
-                    {}
+                    { }
                     <h3 className="font-serif font-semibold text-white text-base sm:text-lg lg:text-xl mt-3 mb-2 min-h-0 lg:min-h-[48px] flex items-center justify-center group-hover:text-[#D4A359] transition-colors">
                       {step.title}
                     </h3>
 
-                    {}
-                    <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-xs">
+                    { }
+                    <p className="text-slate-400 text-sm sm:text-sm leading-relaxed max-w-xs">
                       {step.description}
                     </p>
                   </motion.div>
@@ -108,12 +108,12 @@ export function Proven({ data = defaultProvenData }: ProvenProps) {
             delay={0.3}
             className="-mb-16 sm:-mb-18 lg:-mb-20 translate-y-3 sm:translate-y-4 relative z-20 mt-4 sm:mt-5 rounded-2xl border border-[#D4A359]/35 bg-[#061418] p-4 sm:p-6 lg:p-7 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl"
           >
-            {}
+            { }
             <div className="flex items-center gap-3 sm:gap-4 mx-0 md:mx-6 lg:mx-12 text-left w-full md:w-auto">
               <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full border border-[#D4A359]/60 bg-[#D4A359]/10 flex items-center justify-center p-2.5 text-[#D4A359] shrink-0">
                 <Landmark className="w-6 h-6 sm:w-8 sm:h-8" />
               </div>
-              <p className="text-slate-300 text-xs sm:text-sm md:text-base font-serif leading-relaxed max-w-2xl">
+              <p className="text-slate-300 text-sm sm:text-sm md:text-base font-serif leading-relaxed max-w-2xl">
                 {bottomBanner.text}
               </p>
             </div>
@@ -125,7 +125,7 @@ export function Proven({ data = defaultProvenData }: ProvenProps) {
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <div className="text-left">
-                <span className="text-slate-400 text-[10px] sm:text-xs uppercase tracking-wider block mb-0.5 font-medium">
+                <span className="text-slate-400 text-[10px] sm:text-sm uppercase tracking-wider block mb-0.5 font-medium">
                   {bottomBanner.callText}
                 </span>
                 <a

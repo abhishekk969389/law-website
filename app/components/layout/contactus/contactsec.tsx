@@ -29,46 +29,46 @@ export function Contactsec({
 
   return (
     <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white  mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      {}
+      { }
       <FadeIn
         direction="up"
         delay={0.1}
         className="text-center max-w-3xl mx-auto mb-8"
       >
-        {}
+        { }
         <div className="flex items-center justify-center gap-3 mb-3">
           <span className="w-12 h-[1px] bg-[#D4A359]/60" />
-          <span className="text-[#D4A359] text-xs md:text-lg font-semibold tracking-widest uppercase">
+          <span className="text-[#D4A359] text-sm md:text-lg font-semibold tracking-widest uppercase">
             {tagline || "OUR CONTACTS"}
           </span>
           <span className="w-12 h-[1px] bg-[#D4A359]/60" />
         </div>
 
-        {}
+        { }
         <h2 className="font-serif text-2xl sm:text-2xl md:text-4xl lg:text-[50px] leading-[1.2] tracking-tight text-white mb-3">
           {heading || "We're Here To Help You"}
         </h2>
 
-        {}
+        { }
         <div className="w-14 h-[2px] bg-[#D4A359] mx-auto relative flex items-center justify-center mt-4">
           <span className="w-1.5 h-1.5 bg-[#D4A359] rotate-45 absolute" />
         </div>
       </FadeIn>
 
-      {}
+      { }
       <StaggerContainer
         staggerChildren={0.12}
         delayChildren={0.2}
         className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8"
       >
-        {}
+        { }
         <StaggerItem>
           <motion.div
             whileHover={{ y: -6, scale: 1.01 }}
             transition={{ duration: 0.25 }}
             className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] p-8 sm:p-10 flex flex-col items-center text-center hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl min-h-[360px] justify-start h-full cursor-pointer"
           >
-            {}
+            { }
             <motion.div
               whileHover={{ scale: 1.1, rotate: 6 }}
               className="w-16 h-16 sm:w-18 sm:h-18 rounded-full border border-[#D4A359]/60 flex items-center justify-center bg-[#070B12] text-[#D4A359] mb-5 shrink-0 shadow-[0_0_15px_rgba(212,163,89,0.15)] group-hover:scale-105 transition-transform"
@@ -76,15 +76,15 @@ export function Contactsec({
               <MapPin className="w-7 h-7 sm:w-8 sm:h-8 text-[#D4A359]" />
             </motion.div>
 
-            {}
+            { }
             <h3 className="font-serif font-semibold text-white text-xl sm:text-2xl mb-2">
               {visitUs?.title || "Visit Us"}
             </h3>
 
-            {}
+            { }
             <span className="w-8 h-[1px] bg-[#D4A359]/60 mb-6" />
 
-            {}
+            { }
             <div className="space-y-1 text-slate-300 text-sm sm:text-base leading-relaxed">
               {visitUs?.addressLines &&
                 visitUs.addressLines.map((line: any, idx: any) => (
@@ -94,14 +94,14 @@ export function Contactsec({
           </motion.div>
         </StaggerItem>
 
-        {}
+        { }
         <StaggerItem>
           <motion.div
             whileHover={{ y: -6, scale: 1.01 }}
             transition={{ duration: 0.25 }}
             className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] p-8 sm:p-10 flex flex-col items-center text-center hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl min-h-[360px] justify-start h-full cursor-pointer"
           >
-            {}
+            { }
             <motion.div
               whileHover={{ scale: 1.1, rotate: 6 }}
               className="w-16 h-16 sm:w-18 sm:h-18 rounded-full border border-[#D4A359]/60 flex items-center justify-center bg-[#070B12] text-[#D4A359] mb-5 shrink-0 shadow-[0_0_15px_rgba(212,163,89,0.15)] group-hover:scale-105 transition-transform"
@@ -109,20 +109,20 @@ export function Contactsec({
               <Clock className="w-7 h-7 sm:w-8 sm:h-8 text-[#D4A359]" />
             </motion.div>
 
-            {}
+            { }
             <h3 className="font-serif font-semibold text-white text-xl sm:text-2xl mb-2">
               {officeHours?.title || "Office Hours"}
             </h3>
 
-            {}
+            { }
             <span className="w-8 h-[1px] bg-[#D4A359]/60 mb-6" />
 
-            {}
+            { }
             <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed w-full">
               {officeHours?.items &&
                 officeHours.items.map((item: any, idx: any) => (
                   <div key={idx}>
-                    <p className="text-slate-400 text-xs sm:text-sm font-medium">
+                    <p className="text-slate-400 text-sm sm:text-sm font-medium">
                       {item.days}
                     </p>
                     <p
@@ -140,14 +140,14 @@ export function Contactsec({
           </motion.div>
         </StaggerItem>
 
-        {}
+        { }
         <StaggerItem>
           <motion.div
             whileHover={{ y: -6, scale: 1.01 }}
             transition={{ duration: 0.25 }}
             className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] p-8 sm:p-10 flex flex-col items-center text-center hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl min-h-[360px] justify-start h-full cursor-pointer"
           >
-            {}
+            { }
             <motion.div
               whileHover={{ scale: 1.1, rotate: 6 }}
               className="w-16 h-16 sm:w-18 sm:h-18 rounded-full border border-[#D4A359]/60 flex items-center justify-center bg-[#070B12] text-[#D4A359] mb-5 shrink-0 shadow-[0_0_15px_rgba(212,163,89,0.15)] group-hover:scale-105 transition-transform"
@@ -155,12 +155,12 @@ export function Contactsec({
               <Phone className="w-7 h-7 sm:w-8 sm:h-8 text-[#D4A359]" />
             </motion.div>
 
-            {}
+            { }
             <h3 className="font-serif font-semibold text-white text-xl sm:text-2xl mb-2">
               {contactInfo?.callTitle || "Call Us"}
             </h3>
 
-            {}
+            { }
             <span className="w-8 h-[1px] bg-[#D4A359]/60 mb-4" />
 
             <div className="space-y-1 text-slate-300 text-sm sm:text-base mb-6">

@@ -44,24 +44,24 @@ export function Pubsec({ data = defaultPublicationSectionData }: PubsecProps) {
 
   return (
     <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      {}
+      { }
       <FadeIn
         id="pub-section-header"
         direction="up"
         delay={0.1}
         className="text-center md:text-left max-w-3xl mb-8 sm:mb-10 lg:mb-12 flex flex-col items-center md:items-start"
       >
-        {}
+        { }
         <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.15] tracking-tight text-white mb-3 text-center md:text-left">
           {title || "Publications"}
         </h2>
 
-        {}
+        { }
         <div className="w-12 h-[2px] bg-[#D4A359] mb-4 flex items-center mx-auto md:mx-0">
           <span className="w-1.5 h-1.5 bg-[#D4A359] rotate-45 mx-auto" />
         </div>
 
-        {}
+        { }
         {description && (
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed max-w-2xl text-center md:text-left">
             {description}
@@ -69,7 +69,7 @@ export function Pubsec({ data = defaultPublicationSectionData }: PubsecProps) {
         )}
       </FadeIn>
 
-      {}
+      { }
       <StaggerContainer
         key={currentPage}
         staggerChildren={0.12}
@@ -88,7 +88,7 @@ export function Pubsec({ data = defaultPublicationSectionData }: PubsecProps) {
                   transition={{ duration: 0.25 }}
                   className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] p-5 sm:p-6 overflow-hidden hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl flex flex-col sm:flex-row items-stretch gap-5 h-full cursor-pointer"
                 >
-                  {}
+                  { }
                   <div className="block relative w-full sm:w-[140px] h-[180px] sm:h-auto rounded-xl overflow-hidden bg-slate-900 shrink-0 min-h-[160px]">
                     <Image
                       src={item.image || "/service3.svg"}
@@ -99,10 +99,10 @@ export function Pubsec({ data = defaultPublicationSectionData }: PubsecProps) {
                     />
                   </div>
 
-                  {}
+                  { }
                   <div className="flex-1 flex flex-col justify-between text-left">
                     <div>
-                      {}
+                      { }
                       <div className="flex items-center gap-1.5 text-[11px] font-semibold tracking-wider uppercase mb-2">
                         <Calendar className="w-3.5 h-3.5 text-[#D4A359]" />
                         <span className="text-slate-400">{item.date}</span>
@@ -110,20 +110,20 @@ export function Pubsec({ data = defaultPublicationSectionData }: PubsecProps) {
                         <span className="text-[#D4A359]">{item.category}</span>
                       </div>
 
-                      {}
+                      { }
                       <h3 className="font-serif font-semibold text-white text-base sm:text-lg mb-2 group-hover:text-[#D4A359] transition-colors leading-snug line-clamp-3">
                         {item.title}
                       </h3>
 
-                      {}
-                      <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4 line-clamp-3 min-h-[48px]">
+                      { }
+                      <p className="text-slate-400 text-sm sm:text-sm leading-relaxed mb-4 line-clamp-3 min-h-[48px]">
                         {item.description}
                       </p>
                     </div>
 
-                    {}
+                    { }
                     <div>
-                      <div className="inline-flex items-center gap-2 text-[#D4A359] text-xs font-semibold uppercase tracking-wider group-hover:gap-3 transition-all group-hover:underline mt-auto">
+                      <div className="inline-flex items-center gap-2 text-[#D4A359] text-sm font-semibold uppercase tracking-wider group-hover:gap-3 transition-all group-hover:underline mt-auto">
                         <span>
                           {(data as any).buttonText ||
                             (item as any).linkText ||
@@ -139,7 +139,7 @@ export function Pubsec({ data = defaultPublicationSectionData }: PubsecProps) {
           ))}
       </StaggerContainer>
 
-      {}
+      { }
       {totalPages > 1 && (
         <FadeIn direction="up" delay={0.4}>
           <Pagination

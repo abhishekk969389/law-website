@@ -18,14 +18,14 @@ export function TeamDetailsSec({ member }: TeamDetailsSecProps) {
 
   return (
     <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-6 sm:mt-10 md:mt-12 lg:mt-14 select-none px-4 sm:px-6 lg:px-8 pb-12">
-      {}
+      { }
       <FadeIn direction="up" delay={0.1}>
         <div className="bg-[#070A11] rounded-3xl shadow-2xl relative overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            {}
+            { }
             <div className="lg:col-span-7 flex flex-col justify-between h-full space-y-6">
               <div>
-                {}
+                { }
                 <div className="flex items-center gap-3.5 mb-6">
                   <svg
                     className="w-8 h-8 text-[#D4A359] shrink-0"
@@ -44,40 +44,40 @@ export function TeamDetailsSec({ member }: TeamDetailsSecProps) {
                     <path d="M19 10v11" />
                     <path d="M2 10l10-7 10 7" />
                   </svg>
-                  <span className="text-[#D4A359] text-xs md:text-lg font-semibold tracking-[0.18em] uppercase font-sans">
+                  <span className="text-[#D4A359] text-sm md:text-lg font-semibold tracking-[0.18em] uppercase font-sans">
                     {tagline || "EXPERIENCED ATTORNEYS"}
                   </span>
                   <div className="w-32 sm:w-48 md:w-64 lg:w-80 h-[1.5px] bg-gradient-to-r from-transparent via-[#D4A359]/70 to-[#D4A359] ml-1" />
                 </div>
 
-                {}
+                { }
                 <h1 className="font-serif text-2xl sm:text-2xl md:text-4xl lg:text-5xl font-medium text-white tracking-tight leading-[1.1] mb-2 sm:mb-3">
                   {name}
                 </h1>
 
-                {}
+                { }
                 <p className="text-[#D4A359] font-serif text-lg sm:text-xl md:text-2xl font-medium tracking-wide">
                   {role}
                 </p>
 
-                {}
+                { }
                 <div className="w-14 h-[2px] bg-[#D4A359] my-2" />
 
-                {}
+                { }
                 <p className="text-slate-300 text-sm sm:mt-4 md:mt-6 sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8 font-sans max-w-2xl">
                   {shortBio}
                 </p>
               </div>
 
-              {}
+              { }
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 pt-2">
-                {}
+                { }
                 <div className="bg-[#0A0F1D] border border-slate-800/90 hover:border-[#D4A359]/50 rounded-2xl p-4 sm:p-5 flex items-center gap-4 transition-all duration-300 shadow-md group">
                   <div className="w-12 h-12 rounded-full bg-[#111726] border border-[#D4A359]/40 flex items-center justify-center text-[#D4A359] shrink-0 group-hover:scale-105 transition-transform">
                     <Award className="w-6 h-6 stroke-[1.75]" />
                   </div>
                   <div>
-                    <p className="text-slate-400 text-xs sm:text-sm font-medium">
+                    <p className="text-slate-400 text-sm sm:text-sm font-medium">
                       {contactInfo?.experienceLabel || "Experience"}
                     </p>
                     <p className="text-white text-sm sm:text-base font-bold font-serif">
@@ -86,13 +86,13 @@ export function TeamDetailsSec({ member }: TeamDetailsSecProps) {
                   </div>
                 </div>
 
-                {}
+                { }
                 <div className="bg-[#0A0F1D] border border-slate-800/90 hover:border-[#D4A359]/50 rounded-2xl p-4 sm:p-5 flex items-center gap-4 transition-all duration-300 shadow-md group">
                   <div className="w-12 h-12 rounded-full bg-[#111726] border border-[#D4A359]/40 flex items-center justify-center text-[#D4A359] shrink-0 group-hover:scale-105 transition-transform">
                     <Phone className="w-6 h-6 stroke-[1.75]" />
                   </div>
                   <div>
-                    <p className="text-slate-400 text-xs sm:text-sm font-medium">
+                    <p className="text-slate-400 text-sm sm:text-sm font-medium">
                       {contactInfo?.phoneLabel || "Phone"}
                     </p>
                     {contactInfo?.phoneValue ? (
@@ -118,7 +118,7 @@ export function TeamDetailsSec({ member }: TeamDetailsSecProps) {
                     <Mail className="w-6 h-6 stroke-[1.75]" />
                   </div>
                   <div className="overflow-hidden">
-                    <p className="text-slate-400 text-xs sm:text-sm font-medium">
+                    <p className="text-slate-400 text-sm sm:text-sm font-medium">
                       {contactInfo?.emailLabel || "Email"}
                     </p>
                     {contactInfo?.emailValue ? (
@@ -127,7 +127,7 @@ export function TeamDetailsSec({ member }: TeamDetailsSecProps) {
                           contactInfo.emailHref ||
                           `mailto:${contactInfo.emailValue}`
                         }
-                        className="text-white text-xs sm:text-sm md:text-base font-bold hover:text-[#D4A359] transition-colors truncate block"
+                        className="text-white text-sm sm:text-sm md:text-base font-bold hover:text-[#D4A359] transition-colors truncate block"
                       >
                         {contactInfo.emailValue}
                       </a>
@@ -144,7 +144,7 @@ export function TeamDetailsSec({ member }: TeamDetailsSecProps) {
                     <Printer className="w-6 h-6 stroke-[1.75]" />
                   </div>
                   <div>
-                    <p className="text-slate-400 text-xs sm:text-sm font-medium">
+                    <p className="text-slate-400 text-sm sm:text-sm font-medium">
                       {contactInfo?.faxLabel || "Fax"}
                     </p>
                     <p className="text-white text-sm sm:text-base font-bold">

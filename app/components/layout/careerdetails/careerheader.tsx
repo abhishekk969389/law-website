@@ -20,25 +20,25 @@ export function CareerHeader({ career }: CareerHeaderProps) {
       duration={0.6}
       className="space-y-4 sm:space-y-5 text-left select-none pb-6 border-b border-slate-800/80"
     >
-      {}
+      { }
       <div>
         <Link
           href={career.backLink || "/career"}
-          className="inline-flex items-center gap-2 text-xs sm:text-sm md:text-lg font-medium text-[#D4A359] hover:text-[#E3C280] transition-colors"
+          className="inline-flex items-center gap-2 text-sm sm:text-sm md:text-lg font-medium text-[#D4A359] hover:text-[#E3C280] transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>{career.backText || "Back to All Openings"}</span>
         </Link>
       </div>
 
-      {}
+      { }
       <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-medium text-white leading-[1.2] tracking-tight">
         {career.title}
       </h1>
 
-      {}
-      <div className="flex items-center gap-4 sm:gap-6 flex-wrap text-xs sm:text-sm text-slate-300 pt-1">
-        {}
+      { }
+      <div className="flex items-center gap-4 sm:gap-6 flex-wrap text-sm sm:text-sm text-slate-300 pt-1">
+        { }
         {career.location && (
           <div className="flex items-center gap-1.5">
             <MapPin className="w-4 h-4 text-[#D4A359] shrink-0" />
@@ -46,7 +46,7 @@ export function CareerHeader({ career }: CareerHeaderProps) {
           </div>
         )}
 
-        {}
+        { }
         {career.department && (
           <div className="flex items-center gap-1.5">
             <Briefcase className="w-4 h-4 text-[#D4A359] shrink-0" />
@@ -54,7 +54,7 @@ export function CareerHeader({ career }: CareerHeaderProps) {
           </div>
         )}
 
-        {}
+        { }
         {career.experience && (
           <div className="flex items-center gap-1.5">
             <Users className="w-4 h-4 text-[#D4A359] shrink-0" />
@@ -62,7 +62,7 @@ export function CareerHeader({ career }: CareerHeaderProps) {
           </div>
         )}
 
-        {}
+        { }
         {career.employmentType && (
           <div className="flex items-center gap-1.5">
             <Clock className="w-4 h-4 text-[#D4A359] shrink-0" />

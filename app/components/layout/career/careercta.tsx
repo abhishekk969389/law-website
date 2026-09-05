@@ -29,9 +29,9 @@ export function Careercta({ data = defaultCareerCtaData }: CareerctaProps) {
         delay={0.1}
         className="group relative rounded-xl border border-slate-800/80 bg-[#0A0E17] p-4 sm:p-5 md:p-6 shadow-xl overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-5 lg:gap-8 hover:border-[#D4A359]/40 transition-all duration-300"
       >
-        {}
+        { }
         <div className="flex mx-8 flex-col sm:flex-row items-center text-center sm:text-left gap-3.5 sm:gap-4.5">
-          {}
+          { }
           <motion.div
             whileHover={{ scale: 1.1, rotate: 6 }}
             className="w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center shrink-0"
@@ -39,40 +39,40 @@ export function Careercta({ data = defaultCareerCtaData }: CareerctaProps) {
             <Scale className="w-8 h-8 sm:w-9 sm:h-9 text-[#D4A359]" />
           </motion.div>
 
-          {}
+          { }
           <div>
             <h3 className="font-serif font-semibold text-white text-lg sm:text-xl leading-snug mb-0.5">
               {title || "Don't see the right role?"}
             </h3>
             {subtitle && (
-              <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+              <p className="text-slate-400 text-sm sm:text-sm leading-relaxed">
                 {subtitle}
               </p>
             )}
           </div>
         </div>
 
-        {}
+        { }
         <div className="flex flex-col mx-8 sm:flex-row items-center gap-4 sm:gap-6 shrink-0 w-full sm:w-auto justify-center">
-          {}
+          { }
           <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
             <Link
               href={buttonLink || "/contact"}
-              className="inline-flex items-center justify-center gap-2 h-10 sm:h-11 px-5 sm:px-6 rounded-lg border border-[#D4A359]/80 bg-transparent text-[#D4A359] hover:bg-[#D4A359] hover:text-[#0A0E17] text-xs sm:text-sm font-semibold transition-all duration-200 w-full sm:w-auto cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 h-10 sm:h-11 px-5 sm:px-6 rounded-lg border border-[#D4A359]/80 bg-transparent text-[#D4A359] hover:bg-[#D4A359] hover:text-[#0A0E17] text-sm sm:text-sm font-semibold transition-all duration-200 w-full sm:w-auto cursor-pointer"
             >
               <span>{buttonText || "Submit Your Resume"}</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>
 
-          {}
+          { }
           <span className="hidden sm:block w-[1px] h-8 bg-slate-800" />
 
-          {}
+          { }
           {email && (
             <a
               href={`mailto:${email}`}
-              className="inline-flex items-center gap-2.5 text-[#D4A359] hover:underline text-xs sm:text-sm font-medium transition-colors"
+              className="inline-flex items-center gap-2.5 text-[#D4A359] hover:underline text-sm sm:text-sm font-medium transition-colors"
             >
               <Mail className="w-4 h-4 text-[#D4A359] shrink-0" />
               <span>{email}</span>

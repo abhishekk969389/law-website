@@ -49,24 +49,24 @@ export function Indsec({
 
   return (
     <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      {}
+      { }
       <FadeIn
         direction="up"
         delay={0.1}
         className="text-center max-w-3xl mx-auto mb-8 sm:mb-10"
       >
-        {}
+        { }
         <div className="inline-flex items-center gap-2.5 mb-4">
           <div className="flex items-center -space-x-1.5">
             <span className="w-3.5 h-3.5 rounded-full border border-[#D4A359]" />
             <span className="w-3.5 h-3.5 rounded-full border border-[#D4A359]" />
           </div>
-          <span className="text-[#D4A359] text-xs md:text-lg font-semibold tracking-widest uppercase">
+          <span className="text-[#D4A359] text-sm md:text-lg font-semibold tracking-widest uppercase">
             {tagline}
           </span>
         </div>
 
-        {}
+        { }
         <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.15] tracking-tight text-white mb-4">
           <span className="block text-white font-medium mb-1">
             {heading?.line1}
@@ -79,7 +79,7 @@ export function Indsec({
           </span>
         </h2>
 
-        {}
+        { }
         {description && (
           <p className="text-slate-300 text-sm md:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto">
             {description}
@@ -87,11 +87,11 @@ export function Indsec({
         )}
       </FadeIn>
 
-      {}
+      { }
       <StaggerContainer
         staggerChildren={0.12}
         delayChildren={0.2}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
       >
         {items &&
           items.map((item: any) => {
@@ -135,14 +135,14 @@ export function Indsec({
                           {item.title}
                         </h3>
 
-                        <p className="text-slate-400 text-xs sm:text-sm leading-relaxed text-left min-h-[56px]">
+                        <p className="text-slate-400 text-sm sm:text-sm leading-relaxed text-left min-h-[56px]">
                           {item.description}
                         </p>
                       </div>
                     </div>
 
                     <div className="pb-6 pt-2 px-6 text-left">
-                      <div className="inline-flex items-center justify-start gap-2 text-[#D4A359] text-xs font-semibold uppercase tracking-wider group-hover:gap-3 transition-all group-hover:underline">
+                      <div className="inline-flex items-center justify-start gap-2 text-[#D4A359] text-sm font-semibold uppercase tracking-wider group-hover:gap-3 transition-all group-hover:underline">
                         <span>Learn More</span>
                         <ArrowRight className="w-4 h-4" />
                       </div>

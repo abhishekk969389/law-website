@@ -51,23 +51,23 @@ export function Servicesec({
 
   return (
     <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      {}
+      { }
       <FadeIn
         direction="up"
         delay={0.1}
         className="text-center max-w-3xl mx-auto mb-6 sm:mb-8"
       >
-        {}
+        { }
         <div className="flex items-center justify-center gap-3 mb-4">
           <span className="w-8 sm:w-12 h-[1px] bg-[#D4A359]/60" />
           <Scale className="w-4 h-4 text-[#D4A359] shrink-0" />
-          <span className="text-[#D4A359] text-xs md:text-lg font-semibold tracking-widest uppercase">
+          <span className="text-[#D4A359] text-sm md:text-lg font-semibold tracking-widest uppercase">
             {tagline}
           </span>
           <span className="w-8 sm:w-12 h-[1px] bg-[#D4A359]/60" />
         </div>
 
-        {}
+        { }
         <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.15] tracking-tight text-white mb-4">
           {heading?.line1}{" "}
           {heading?.line2Prefix && <span>{heading.line2Prefix}</span>}
@@ -76,7 +76,7 @@ export function Servicesec({
           </span>
         </h2>
 
-        {}
+        { }
         {description && (
           <p className="text-slate-300 text-sm md:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto">
             {description}
@@ -84,7 +84,7 @@ export function Servicesec({
         )}
       </FadeIn>
 
-      {}
+      { }
       <StaggerContainer
         staggerChildren={0.1}
         delayChildren={0.2}
@@ -130,14 +130,14 @@ export function Servicesec({
                           {item.title}
                         </h3>
 
-                        <p className="text-slate-400 text-xs sm:text-sm leading-relaxed text-center min-h-[44px]">
+                        <p className="text-slate-400 text-sm sm:text-sm leading-relaxed text-center min-h-[44px]">
                           {item.description}
                         </p>
                       </div>
                     </div>
 
                     <div className="pb-6 pt-2 px-5 text-center">
-                      <div className="inline-flex items-center justify-center gap-2 text-[#D4A359] text-xs font-semibold uppercase tracking-wider group-hover:gap-3 transition-all group-hover:underline">
+                      <div className="inline-flex items-center justify-center gap-2 text-[#D4A359] text-sm font-semibold uppercase tracking-wider group-hover:gap-3 transition-all group-hover:underline">
                         <span>Learn More</span>
                         <ArrowRight className="w-4 h-4" />
                       </div>

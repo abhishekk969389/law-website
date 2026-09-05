@@ -4182,18 +4182,18 @@
                   {
                     "id": "5",
                     "icon": "Download",
-                    "title": "Forms & Templates",
+                    "title": "Contact Us",
                     "description": "Downloadable legal forms and templates for your convenience.",
-                    "actionText": "Download Now",
-                    "link": "/client"
+                    "actionText": "View Now",
+                    "link": "/contactus"
                   },
                   {
                     "id": "6",
                     "icon": "Bookmark",
-                    "title": "Checklists",
+                    "title": "Case Consultation",
                     "description": "Practical checklists to help you stay prepared and compliant.",
-                    "actionText": "View Checklists",
-                    "link": "/client"
+                    "actionText": "Book Now",
+                    "link": "/bookcons"
                   },
                   {
                     "id": "7",

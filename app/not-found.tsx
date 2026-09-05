@@ -97,7 +97,7 @@ export default function NotFound() {
           className="flex items-center justify-center gap-3 my-2 sm:my-3 w-full max-w-md"
         >
           <span className="flex-1 h-[1px] bg-gradient-to-r from-transparent via-[#D4A359]/50 to-[#D4A359]" />
-          <span className="text-[#D4A359] text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase whitespace-nowrap">
+          <span className="text-[#D4A359] text-sm sm:text-sm font-semibold tracking-[0.2em] uppercase whitespace-nowrap">
             PAGE NOT FOUND
           </span>
           <span className="flex-1 h-[1px] bg-gradient-to-l from-transparent via-[#D4A359]/50 to-[#D4A359]" />
@@ -107,7 +107,7 @@ export default function NotFound() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-slate-300 text-xs sm:text-sm md:text-base max-w-md sm:max-w-lg mx-auto leading-relaxed mb-5 sm:mb-6 font-light"
+          className="text-slate-300 text-sm sm:text-sm md:text-base max-w-md sm:max-w-lg mx-auto leading-relaxed mb-5 sm:mb-6 font-light"
         >
           The page you are looking for might have been removed, had its name
           changed, or is temporarily unavailable.
@@ -120,7 +120,7 @@ export default function NotFound() {
         >
           <Link
             href="/"
-            className="group relative inline-flex items-center gap-2.5 bg-[#070A11]/90 border border-[#D4A359] text-white hover:text-[#D4A359] px-6 py-3 sm:px-7 sm:py-3.5 rounded-xl font-medium text-xs sm:text-sm transition-all duration-300 shadow-[0_0_20px_rgba(212,163,89,0.15)] hover:shadow-[0_0_30px_rgba(212,163,89,0.35)] hover:bg-[#D4A359]/10 active:scale-95"
+            className="group relative inline-flex items-center gap-2.5 bg-[#070A11]/90 border border-[#D4A359] text-white hover:text-[#D4A359] px-6 py-3 sm:px-7 sm:py-3.5 rounded-xl font-medium text-sm sm:text-sm transition-all duration-300 shadow-[0_0_20px_rgba(212,163,89,0.15)] hover:shadow-[0_0_30px_rgba(212,163,89,0.35)] hover:bg-[#D4A359]/10 active:scale-95"
           >
             <Home className="w-4 h-4 text-[#D4A359] transition-transform duration-300 group-hover:scale-110" />
             <span className="tracking-wide">Back To Home</span>

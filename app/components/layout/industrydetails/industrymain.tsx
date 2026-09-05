@@ -57,7 +57,7 @@ export function IndustryMain({ industry }: IndustryMainProps) {
 
   return (
     <div className="space-y-10 sm:space-y-12">
-      {}
+      { }
       <FadeIn direction="up" delay={0.1} duration={0.6} className="space-y-4">
         <div className="flex items-center gap-4">
           <div className="w-14 h-14 rounded-full border-2 border-[#D4A359] bg-[#0A0E17] flex items-center justify-center text-[#D4A359] shadow-xl shrink-0">
@@ -68,14 +68,14 @@ export function IndustryMain({ industry }: IndustryMainProps) {
           </h1>
         </div>
 
-        {}
+        { }
         <div className="flex items-center gap-2 pt-1 pb-2">
           <span className="h-[2px] w-12 bg-[#D4A359]" />
           <span className="w-2 h-2 rotate-45 border border-[#D4A359] bg-[#D4A359]/30" />
           <span className="h-[2px] w-24 bg-slate-800" />
         </div>
 
-        {}
+        { }
         {industry.introText && (
           <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-3xl">
             {industry.introText}
@@ -83,7 +83,7 @@ export function IndustryMain({ industry }: IndustryMainProps) {
         )}
       </FadeIn>
 
-      {}
+      { }
       <FadeIn
         direction="up"
         delay={0.15}
@@ -101,7 +101,7 @@ export function IndustryMain({ industry }: IndustryMainProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B0E14]/40 via-transparent to-transparent" />
       </FadeIn>
 
-      {}
+      { }
       <FadeIn direction="up" delay={0.2} duration={0.6} className="space-y-2">
         <h2 className="font-serif text-2xl sm:text-2xl md:text-3xl text-white font-semibold tracking-tight">
           {industry.overviewHeading || "Overview"}
@@ -113,7 +113,7 @@ export function IndustryMain({ industry }: IndustryMainProps) {
 
       <div className="border-b border-slate-800/80" />
 
-      {}
+      { }
       {industry.services && industry.services.length > 0 && (
         <FadeIn
           direction="up"
@@ -141,7 +141,7 @@ export function IndustryMain({ industry }: IndustryMainProps) {
                     <h3 className="font-serif text-lg sm:text-xl font-semibold text-white group-hover:text-[#D4A359] transition-colors duration-300">
                       {service.title}
                     </h3>
-                    <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                    <p className="text-slate-400 text-sm sm:text-sm leading-relaxed">
                       {service.description}
                     </p>
                   </div>
@@ -154,7 +154,7 @@ export function IndustryMain({ industry }: IndustryMainProps) {
 
       <div className="border-b border-slate-800/80" />
 
-      {}
+      { }
       {industry.challenges && industry.challenges.length > 0 && (
         <FadeIn direction="up" delay={0.3} duration={0.6} className="space-y-4">
           <h2 className="font-serif text-2xl sm:text-3xl text-white font-semibold tracking-tight">
@@ -174,7 +174,7 @@ export function IndustryMain({ industry }: IndustryMainProps) {
         </FadeIn>
       )}
 
-      {}
+      { }
       {industry.whyChooseUs && industry.whyChooseUs.length > 0 && (
         <FadeIn
           direction="up"
@@ -200,7 +200,7 @@ export function IndustryMain({ industry }: IndustryMainProps) {
                   <h4 className="font-serif text-base font-semibold text-white mb-2 group-hover:text-[#D4A359] transition-colors">
                     {item.title}
                   </h4>
-                  <p className="text-slate-400 text-xs leading-relaxed">
+                  <p className="text-slate-400 text-sm leading-relaxed">
                     {item.description}
                   </p>
                 </div>

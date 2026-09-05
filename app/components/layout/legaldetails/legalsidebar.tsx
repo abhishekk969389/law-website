@@ -25,7 +25,7 @@ export function LegalSidebar({ currentId, sidebarData }: LegalSidebarProps) {
 
   return (
     <aside className="w-full space-y-8 select-none">
-      {}
+      { }
       {recentPosts && recentPosts.length > 0 && (
         <FadeIn
           direction="up"
@@ -47,11 +47,10 @@ export function LegalSidebar({ currentId, sidebarData }: LegalSidebarProps) {
                 <Link
                   key={item.id}
                   href={href}
-                  className={`flex items-center gap-4 group p-2 rounded-2xl transition-all duration-300 ${
-                    isActive
+                  className={`flex items-center gap-4 group p-2 rounded-2xl transition-all duration-300 ${isActive
                       ? "bg-white/5 border border-[#D4A359]/30"
                       : "hover:bg-white/[0.03]"
-                  }`}
+                    }`}
                 >
                   <div className="relative w-16 h-16 sm:w-18 sm:h-18 rounded-xl overflow-hidden shrink-0 bg-slate-900 border border-white/10 shadow-md">
                     <Image
@@ -64,7 +63,7 @@ export function LegalSidebar({ currentId, sidebarData }: LegalSidebarProps) {
                   </div>
 
                   <div className="flex-1 min-w-0">
-                    <h4 className="font-serif text-xs sm:text-sm text-white group-hover:text-[#D4A359] font-medium leading-snug line-clamp-2 transition-colors">
+                    <h4 className="font-serif text-sm sm:text-sm text-white group-hover:text-[#D4A359] font-medium leading-snug line-clamp-2 transition-colors">
                       {item.title}
                     </h4>
 

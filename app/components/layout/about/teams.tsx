@@ -29,24 +29,24 @@ export function Team({ data = defaultTeamData }: TeamProps) {
   return (
     <section className="relative w-full text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        {}
+        { }
         <FadeIn
           direction="up"
           delay={0.1}
           className="text-center max-w-4xl mx-auto mb-8 sm:mb-8 md:mb-10"
         >
-          {}
+          { }
           <div className="flex items-center justify-center gap-2.5 mb-3">
             <div className="flex -space-x-1.5">
               <span className="w-3.5 h-3.5 rounded-full border border-[#D4A359]" />
               <span className="w-3.5 h-3.5 rounded-full border border-[#D4A359]" />
             </div>
-            <span className="text-[#D4A359] text-xs md:text-lg font-semibold tracking-widest uppercase">
+            <span className="text-[#D4A359] text-sm md:text-lg font-semibold tracking-widest uppercase">
               {tagline}
             </span>
           </div>
 
-          {}
+          { }
           <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.15] tracking-tight">
             <span className="block text-white font-medium mb-1">
               {heading.line1}
@@ -60,7 +60,7 @@ export function Team({ data = defaultTeamData }: TeamProps) {
           </h2>
         </FadeIn>
 
-        {}
+        { }
         <StaggerContainer
           staggerChildren={0.12}
           delayChildren={0.2}
@@ -93,7 +93,7 @@ export function Team({ data = defaultTeamData }: TeamProps) {
 
                     <div className="p-5 sm:p-6 flex flex-col justify-between flex-1">
                       <div>
-                        <p className="text-slate-400 text-xs sm:text-sm font-medium tracking-wide mb-2 group-hover:text-slate-300 transition-colors">
+                        <p className="text-slate-400 text-sm sm:text-sm font-medium tracking-wide mb-2 group-hover:text-slate-300 transition-colors">
                           {member.role}
                         </p>
 

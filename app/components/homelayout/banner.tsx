@@ -21,7 +21,7 @@ interface BannerProps {
 export default function Banner({ data = defaultBannerData }: BannerProps) {
   return (
     <section className="relative w-full flex items-center bg-[#0B0E14] overflow-hidden">
-      {}
+      { }
       <div className="absolute inset-0 z-0">
         <Image
           src={data.backgroundImage || "/bannerbg.svg"}
@@ -31,27 +31,27 @@ export default function Banner({ data = defaultBannerData }: BannerProps) {
           className="object-cover object-center opacity-80"
           priority
         />
-        {}
+        { }
         <div className="absolute inset-0 bg-gradient-to-r from-[#0B0E14] via-[#0B0E14]/90 to-transparent/30" />
       </div>
 
       <div className="relative z-10 max-w-[1400px] mx-auto w-full px-4 sm:px-6 lg:px-8 pt-10 md:pt-14 lg:pt-16 pb-2 sm:pb-8 md:pb-20 lg:pb-28 flex flex-col lg:flex-row items-start justify-between">
-        {}
+        { }
         <div className="w-full lg:w-3/5 text-center md:text-left flex flex-col items-center md:items-start">
-          {}
+          { }
           <FadeIn direction="right" delay={0.1} duration={0.6}>
             <div className="inline-flex items-center justify-center md:justify-start gap-3 sm:gap-4 mb-6">
               <span className="relative italic font-serif text-[#C5A45D] text-base sm:text-lg lg:text-xl">
                 {data.tagline}
-                {}
+                { }
                 <span className="absolute -bottom-1.5 -left-1 sm:-left-2 w-[60%] h-[1px] bg-gradient-to-r from-[#C5A45D]/20 via-[#C5A45D] to-transparent" />
               </span>
-              {}
+              { }
               <div className="h-[1px] w-12 sm:w-20 bg-gradient-to-r from-[#C5A45D] to-[#C5A45D]/20" />
             </div>
           </FadeIn>
 
-          {}
+          { }
           <FadeIn direction="up" delay={0.2} duration={0.7}>
             <h1 className="font-serif text-[28px] xs:text-3xl sm:text-4xl md:text-5xl lg:text-[65px] mb-6 leading-[1.2] lg:leading-none text-center md:text-left">
               <span className="block text-white">{data.heading.line1}</span>
@@ -62,14 +62,14 @@ export default function Banner({ data = defaultBannerData }: BannerProps) {
             </h1>
           </FadeIn>
 
-          {}
+          { }
           <FadeIn direction="up" delay={0.35} duration={0.7}>
             <p className="text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl max-w-xl mb-8 sm:mb-10 leading-relaxed text-center md:text-left">
               {data.subheading}
             </p>
           </FadeIn>
 
-          {}
+          { }
           <StaggerContainer
             delayChildren={0.45}
             staggerChildren={0.15}
@@ -80,11 +80,10 @@ export default function Banner({ data = defaultBannerData }: BannerProps) {
                 <a
                   href={button.href}
                   className={`
-                    inline-flex items-center justify-center w-full sm:w-auto px-6 sm:px-8 py-3.5 text-xs sm:text-sm font-medium transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 rounded-lg text-center
-                    ${
-                      button.variant === "primary"
-                        ? "bg-[#E5B562] text-[#0B0E14] hover:bg-[#D4A359] shadow-md"
-                        : "border border-[#D4A359] text-white hover:bg-[#D4A359]/10"
+                    inline-flex items-center justify-center w-full sm:w-auto px-6 sm:px-8 py-3.5 text-sm sm:text-sm font-medium transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 rounded-lg text-center
+                    ${button.variant === "primary"
+                      ? "bg-[#E5B562] text-[#0B0E14] hover:bg-[#D4A359] shadow-md"
+                      : "border border-[#D4A359] text-white hover:bg-[#D4A359]/10"
                     }
                   `}
                 >
@@ -110,7 +109,7 @@ export default function Banner({ data = defaultBannerData }: BannerProps) {
                 <span className="text-[#D4A359] text-xl sm:text-3xl mb-1">
                   {stat.value}
                 </span>
-                <span className="text-gray-400 text-[10px] sm:text-xs md:text-sm tracking-wider uppercase">
+                <span className="text-gray-400 text-[10px] sm:text-sm md:text-sm tracking-wider uppercase">
                   {stat.label}
                 </span>
               </StaggerItem>

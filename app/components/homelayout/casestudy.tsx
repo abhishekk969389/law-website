@@ -22,16 +22,16 @@ const defaultCaseStudyData: any = (
     lawData.categories.Veritas.sections.CaseStudy?.variants
       ?.VeritasCaseStudy1 as any
   )?.caseStudy || {
-    tagline: "CASE STUDY",
-    heading: {
-      line1: "Tailored For",
-      highlight: "Legal",
-      line2: "Practices In Injury Law And Traffic Defense",
-    },
-    subheading:
-      "Explore how our strategic legal solutions have delivered real results and made a difference in our clients' lives.",
-    items: [],
-  };
+  tagline: "CASE STUDY",
+  heading: {
+    line1: "Tailored For",
+    highlight: "Legal",
+    line2: "Practices In Injury Law And Traffic Defense",
+  },
+  subheading:
+    "Explore how our strategic legal solutions have delivered real results and made a difference in our clients' lives.",
+  items: [],
+};
 
 interface CaseStudyProps {
   data?: any;
@@ -54,32 +54,32 @@ export default function CaseStudy({
   const visibleItems =
     items.length > 0
       ? Array.from(
-          { length: Math.min(3, items.length) },
-          (_, i) => items[(currentIndex + i) % items.length],
-        )
+        { length: Math.min(3, items.length) },
+        (_, i) => items[(currentIndex + i) % items.length],
+      )
       : [];
 
   return (
     <section className="relative w-full bg-[#0B151E] text-white py-10 sm:py-12 md:py-14 mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {}
+        { }
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-10 sm:mb-12 gap-6">
-          {}
+          { }
           <FadeIn
             direction="up"
             delay={0.1}
             className="max-w-3xl text-center md:text-left flex flex-col items-center md:items-start"
           >
-            {}
+            { }
             <div className="flex items-center gap-2 mb-3 justify-center md:justify-start">
               <Folder className="w-6 h-6 text-[#D4A359]" />
-              <span className="text-[#D4A359] text-xs md:text-lg font-semibold tracking-widest uppercase">
+              <span className="text-[#D4A359] text-sm md:text-lg font-semibold tracking-widest uppercase">
                 {tagline}
               </span>
               <span className="w-12 h-[1px] bg-[#D4A359]/60 ml-1" />
             </div>
 
-            {}
+            { }
             <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.2] tracking-tight text-white mb-4 text-center md:text-left">
               <span className="font-medium">{heading.line1}</span>{" "}
               <span className="text-[#D4A359] italic font-serif">
@@ -88,17 +88,17 @@ export default function CaseStudy({
               <span className="font-medium">{heading.line2}</span>
             </h2>
 
-            {}
+            { }
             <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl text-center md:text-left">
               {subheading}
             </p>
           </FadeIn>
 
-          {}
+          { }
           <FadeIn
             direction="left"
             delay={0.2}
-            className="flex items-center gap-3 justify-center md:justify-start self-center md:self-end lg:self-auto mb-1"
+            className="sm:flex hidden items-center gap-3 justify-center md:justify-start self-center md:self-end lg:self-auto mb-1"
           >
             <motion.button
               whileHover={{ scale: 1.1 }}
@@ -121,12 +121,12 @@ export default function CaseStudy({
           </FadeIn>
         </div>
 
-        {}
+        { }
         <StaggerContainer
           key={currentIndex}
           staggerChildren={0.12}
-          delayChildren={0.1}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10"
+            delayChildren={0.1}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10"
         >
           {visibleItems.map((item: any) => {
             const slugMap: Record<string, string> = {
@@ -153,7 +153,7 @@ export default function CaseStudy({
                   <motion.div
                     whileHover={{ y: -6 }}
                     transition={{ duration: 0.25 }}
-                    className="flex flex-col group cursor-pointer h-full"
+                    className="flex flex-col   group cursor-pointer h-full"
                   >
                     <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-6 shadow-lg">
                       <Image
@@ -187,12 +187,12 @@ export default function CaseStudy({
                           {item.title}
                         </h3>
 
-                        <p className="text-gray-400 text-xs sm:text-sm font-light leading-relaxed mb-4">
+                        <p className="text-gray-400 text-sm sm:text-sm font-light leading-relaxed mb-4">
                           {item.description}
                         </p>
 
                         <div className="mt-auto pt-1">
-                          <div className="inline-flex items-center gap-2 text-[#D4A359] text-xs sm:text-sm font-medium hover:text-[#E3C280] transition-colors group/link">
+                          <div className="inline-flex items-center gap-2 text-[#D4A359] text-sm sm:text-sm font-medium hover:text-[#E3C280] transition-colors group/link">
                             <span>{item.linkText}</span>
                             <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
                           </div>
@@ -206,17 +206,16 @@ export default function CaseStudy({
           })}
         </StaggerContainer>
 
-        <div className="flex items-center justify-center gap-2.5 mt-10">
+        <div className="sm:flex hidden items-center justify-center gap-2.5 mt-10">
           {items.map((_: any, idx: any) => (
             <button
               key={idx}
               onClick={() => setCurrentIndex(idx)}
               aria-label={`Go to slide ${idx + 1}`}
-              className={`transition-all duration-300 rounded-full cursor-pointer ${
-                idx === currentIndex
+              className={`transition-all duration-300 rounded-full cursor-pointer ${idx === currentIndex
                   ? "w-3 h-3 bg-[#D4A359] shadow-[0_0_8px_rgba(212,163,89,0.6)]"
                   : "w-2.5 h-2.5 border border-gray-600 bg-transparent hover:border-gray-400"
-              }`}
+                }`}
             />
           ))}
         </div>

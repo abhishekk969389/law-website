@@ -60,33 +60,33 @@ export default function Services({
   const visibleItems =
     safeItems.length > 0
       ? Array.from(
-          { length: visibleCount },
-          (_, i) => safeItems[(currentIndex + i) % safeItems.length],
-        )
+        { length: visibleCount },
+        (_, i) => safeItems[(currentIndex + i) % safeItems.length],
+      )
       : [];
 
   return (
     <section className="relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {}
+        { }
         <FadeIn
           direction="up"
           delay={0.1}
           className="text-center max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-9"
         >
-          {}
+          { }
           <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 max-w-full overflow-hidden">
             <span className="w-6 sm:w-12 h-[1px] bg-[#D4A359]/60 shrink" />
             <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
               <Scale className="w-5 h-5 sm:w-6 sm:h-6 text-[#D4A359]" />
-              <span className="text-[#D4A359] text-[11px] sm:text-xs md:text-lg font-semibold tracking-wider sm:tracking-widest uppercase">
+              <span className="text-[#D4A359] text-[11px] sm:text-sm md:text-lg font-semibold tracking-wider sm:tracking-widest uppercase">
                 {tagline}
               </span>
             </div>
             <span className="w-6 sm:w-12 h-[1px] bg-[#D4A359]/60 shrink" />
           </div>
 
-          {}
+          { }
           <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.2] tracking-tight mb-4">
             <span className="block text-white font-medium">
               {heading.line1}
@@ -99,15 +99,15 @@ export default function Services({
             </span>
           </h2>
 
-          {}
+          { }
           <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-[620px] mx-auto">
             {subheading}
           </p>
         </FadeIn>
 
-        {}
+        { }
         <div className="relative flex items-center w-full">
-          {}
+          { }
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -118,7 +118,7 @@ export default function Services({
             <ChevronLeft className="w-5 h-5 text-[#D4A359]" />
           </motion.button>
 
-          {}
+          { }
           <StaggerContainer
             key={currentIndex}
             staggerChildren={0.08}
@@ -165,11 +165,11 @@ export default function Services({
 
                       <div className="w-9 h-[2px] bg-[#D4A359]/80 mb-3" />
 
-                      <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-[220px] mb-6 flex-grow">
+                      <p className="text-slate-300 text-sm sm:text-sm leading-relaxed max-w-[220px] mb-6 flex-grow">
                         {item.description}
                       </p>
 
-                      <div className="inline-flex items-center gap-2 text-[#D4A359] hover:text-[#E3C280] font-medium text-xs sm:text-sm tracking-wide transition-all group-hover:gap-3 mt-auto">
+                      <div className="inline-flex items-center gap-2 text-[#D4A359] hover:text-[#E3C280] font-medium text-sm sm:text-sm tracking-wide transition-all group-hover:gap-3 mt-auto">
                         <span>{item.linkText}</span>
                         <ArrowRight className="w-4 h-4 text-[#D4A359]" />
                       </div>
@@ -191,17 +191,16 @@ export default function Services({
           </motion.button>
         </div>
 
-        <div className="flex items-center justify-center gap-3 mt-8">
+        <div className="hidden md:flex items-center justify-center gap-3 mt-8">
           {items.map((_: any, idx: any) => (
             <button
               key={idx}
               onClick={() => setCurrentIndex(idx)}
               aria-label={`Go to slide ${idx + 1}`}
-              className={`transition-all duration-300 rounded-full cursor-pointer ${
-                idx === currentIndex
+              className={`transition-all duration-300 rounded-full cursor-pointer ${idx === currentIndex
                   ? "w-3 h-3 bg-[#D4A359]"
                   : "w-3 h-3 border-2 border-slate-600/90 bg-transparent hover:border-[#D4A359]"
-              }`}
+                }`}
             />
           ))}
         </div>

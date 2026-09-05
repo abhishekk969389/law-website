@@ -30,25 +30,25 @@ export function Eventsec({ data = defaultEventSectionData }: EventsecProps) {
 
   return (
     <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      {}
+      { }
       <FadeIn
         direction="up"
         delay={0.1}
         className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 lg:mb-12"
       >
-        {}
+        { }
         <div className="flex items-center justify-center gap-3 mb-3">
           <span className="w-12 h-[1px] bg-[#D4A359]/60" />
           <div className="flex items-center gap-2">
             <PenTool className="w-4 h-4 text-[#D4A359]" />
-            <span className="text-[#D4A359] text-xs md:text-lg font-semibold tracking-widest uppercase">
+            <span className="text-[#D4A359] text-sm md:text-lg font-semibold tracking-widest uppercase">
               {tagline || "UPCOMING EVENTS"}
             </span>
           </div>
           <span className="w-12 h-[1px] bg-[#D4A359]/60" />
         </div>
 
-        {}
+        { }
         <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.15] tracking-tight mb-4">
           <span className="text-white font-medium">
             {heading?.line1 || "Legal Events &"}
@@ -58,7 +58,7 @@ export function Eventsec({ data = defaultEventSectionData }: EventsecProps) {
           </span>
         </h2>
 
-        {}
+        { }
         {subheading && (
           <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-[620px] mx-auto">
             {subheading}
@@ -66,7 +66,7 @@ export function Eventsec({ data = defaultEventSectionData }: EventsecProps) {
         )}
       </FadeIn>
 
-      {}
+      { }
       <StaggerContainer
         staggerChildren={0.12}
         delayChildren={0.2}
@@ -118,21 +118,21 @@ export function Eventsec({ data = defaultEventSectionData }: EventsecProps) {
 
                       <div className="w-8 h-[1.5px] bg-[#D4A359]/80 mb-3.5" />
 
-                      <div className="flex items-center gap-2 text-slate-300 text-xs sm:text-sm font-medium mb-2">
+                      <div className="flex items-center gap-2 text-slate-300 text-sm sm:text-sm font-medium mb-2">
                         <Calendar className="w-4 h-4 text-[#D4A359] shrink-0" />
                         <span>
                           {item.fullDate} | {item.time}
                         </span>
                       </div>
 
-                      <div className="flex items-center gap-2 text-slate-400 text-xs sm:text-sm font-medium mb-5">
+                      <div className="flex items-center gap-2 text-slate-400 text-sm sm:text-sm font-medium mb-5">
                         <MapPin className="w-4 h-4 text-[#D4A359] shrink-0" />
                         <span className="line-clamp-1">{item.location}</span>
                       </div>
                     </div>
 
                     <div>
-                      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#D4A359]/60 bg-transparent text-[#D4A359] text-xs font-semibold uppercase tracking-wider group-hover:bg-[#D4A359] group-hover:text-[#0A0E17] transition-all">
+                      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#D4A359]/60 bg-transparent text-[#D4A359] text-sm font-semibold uppercase tracking-wider group-hover:bg-[#D4A359] group-hover:text-[#0A0E17] transition-all">
                         <span>VIEW DETAILS</span>
                         <ChevronRight className="w-4 h-4" />
                       </div>

@@ -47,9 +47,9 @@ export function Questions({
 
   return (
     <div className="w-full bg-[#0B0E14] text-white select-none">
-      {}
+      { }
       <section className="relative w-full  mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden px-4 sm:px-6 lg:px-8">
-        {}
+        { }
         <Image
           src={image || "/bannerbg.svg"}
           alt="Background"
@@ -61,22 +61,22 @@ export function Questions({
         <div className="absolute inset-0 bg-[#0B0E14]/75 backdrop-blur-[1px]" />
 
         <div className="max-w-4xl mx-auto relative z-10">
-          {}
+          { }
           <FadeIn
             direction="up"
             delay={0.1}
             className="text-center max-w-3xl mx-auto mb-10 sm:mb-12"
           >
-            {}
+            { }
             <div className="flex items-center justify-center gap-3 mb-3">
               <span className="w-12 h-[1px] bg-[#D4A359]/60" />
-              <span className="text-[#D4A359] text-xs md:text-lg font-semibold tracking-widest uppercase">
+              <span className="text-[#D4A359] text-sm md:text-lg font-semibold tracking-widest uppercase">
                 {tagline || "HAVE ANY QUESTION?"}
               </span>
               <span className="w-12 h-[1px] bg-[#D4A359]/60" />
             </div>
 
-            {}
+            { }
             <h2 className="font-serif text-2xl sm:text-2xl md:text-4xl lg:text-[50px] leading-[1.2] tracking-tight text-white mb-3">
               {headingLine1 || "Have Be Any Question?"} <br />
               <span className="text-white font-normal">
@@ -84,18 +84,18 @@ export function Questions({
               </span>
             </h2>
 
-            {}
+            { }
             <div className="w-14 h-[2px] bg-[#D4A359] mx-auto relative flex items-center justify-center mt-4">
               <span className="w-1.5 h-1.5 bg-[#D4A359] rotate-45 absolute" />
             </div>
           </FadeIn>
 
-          {}
+          { }
           <FadeIn direction="up" delay={0.25}>
             <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
-              {}
+              { }
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-                {}
+                { }
                 <div className="relative rounded-xl border border-slate-800/90 bg-[#060911]/90 flex items-center px-4 py-3.5 focus-within:border-[#D4A359]/60 transition-colors shadow-inner">
                   <User className="w-5 h-5 text-[#D4A359] shrink-0 mr-3" />
                   <input
@@ -109,7 +109,7 @@ export function Questions({
                   />
                 </div>
 
-                {}
+                { }
                 <div className="relative rounded-xl border border-slate-800/90 bg-[#060911]/90 flex items-center px-4 py-3.5 focus-within:border-[#D4A359]/60 transition-colors shadow-inner">
                   <Mail className="w-5 h-5 text-[#D4A359] shrink-0 mr-3" />
                   <input
@@ -124,9 +124,9 @@ export function Questions({
                 </div>
               </div>
 
-              {}
+              { }
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-                {}
+                { }
                 <div className="relative rounded-xl border border-slate-800/90 bg-[#060911]/90 flex items-center px-4 py-3.5 focus-within:border-[#D4A359]/60 transition-colors shadow-inner">
                   <Briefcase className="w-5 h-5 text-[#D4A359] shrink-0 mr-3" />
                   <input
@@ -141,7 +141,7 @@ export function Questions({
                   />
                 </div>
 
-                {}
+                { }
                 <div className="relative rounded-xl border border-slate-800/90 bg-[#060911]/90 flex items-center px-4 py-3.5 focus-within:border-[#D4A359]/60 transition-colors shadow-inner">
                   <Phone className="w-5 h-5 text-[#D4A359] shrink-0 mr-3" />
                   <input
@@ -157,7 +157,7 @@ export function Questions({
                 </div>
               </div>
 
-              {}
+              { }
               <div className="relative rounded-xl border border-slate-800/90 bg-[#060911]/90 flex items-start px-4 py-3.5 focus-within:border-[#D4A359]/60 transition-colors shadow-inner">
                 <Pencil className="w-5 h-5 text-[#D4A359] shrink-0 mr-3 mt-1" />
                 <textarea
@@ -173,7 +173,7 @@ export function Questions({
                 />
               </div>
 
-              {}
+              { }
               <div className="pt-4 text-center">
                 <motion.button
                   whileHover={{ scale: 1.03 }}
@@ -190,7 +190,7 @@ export function Questions({
         </div>
       </section>
 
-      {}
+      { }
       <FadeIn
         direction="up"
         delay={0.3}
