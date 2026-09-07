@@ -26,7 +26,13 @@ export interface MediasecProps {
 export function Mediasec({ data = defaultMediaSectionData }: MediasecProps) {
   if (!data) return null;
 
-  const { tagline, heading, subheading, buttonText, items = [] } = (data || {}) as any;
+  const {
+    tagline,
+    heading,
+    subheading,
+    buttonText,
+    items = [],
+  } = (data || {}) as any;
   const [currentPage, setCurrentPage] = React.useState(1);
   const itemsPerPage = 6;
   const totalPages = Math.max(1, Math.ceil(items.length / itemsPerPage));
@@ -44,14 +50,12 @@ export function Mediasec({ data = defaultMediaSectionData }: MediasecProps) {
 
   return (
     <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-
       <FadeIn
         id="media-section-header"
         direction="up"
         delay={0.1}
         className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 lg:mb-12"
       >
-   
         <div className="flex items-center justify-center gap-3 mb-3">
           <span className="w-12 h-[1px] bg-[#D4A359]/60" />
           <div className="flex items-center gap-2">
@@ -104,15 +108,12 @@ export function Mediasec({ data = defaultMediaSectionData }: MediasecProps) {
                   </div>
                   <div className="hidden sm:block w-[1px] bg-slate-800/80 self-stretch my-1 shrink-0" />
 
-         
                   <div className="flex flex-col justify-between flex-1 text-left">
                     <div>
-                
                       <h3 className="font-serif font-semibold text-white text-lg sm:text-xl mb-3 group-hover:text-[#D4A359] transition-colors leading-snug line-clamp-2">
                         {item.title}
                       </h3>
 
-              
                       <div className="flex items-center gap-2 text-slate-400 text-sm sm:text-sm font-medium mb-3">
                         <Calendar className="w-4 h-4 text-[#D4A359]" />
                         <span>{item.date}</span>
@@ -121,7 +122,9 @@ export function Mediasec({ data = defaultMediaSectionData }: MediasecProps) {
 
                     <div className="pt-1">
                       <div className="inline-flex items-center gap-2 text-[#D4A359] text-sm sm:text-base font-medium group-hover:gap-3 transition-all duration-300">
-                        <span>{item.linkText || buttonText || "Read More"}</span>
+                        <span>
+                          {item.linkText || buttonText || "Read More"}
+                        </span>
                         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                       </div>
                     </div>
@@ -132,7 +135,7 @@ export function Mediasec({ data = defaultMediaSectionData }: MediasecProps) {
           ))}
       </StaggerContainer>
 
-      { }
+      {}
       {totalPages > 1 && (
         <FadeIn direction="up" delay={0.4}>
           <Pagination

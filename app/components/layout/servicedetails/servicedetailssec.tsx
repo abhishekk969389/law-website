@@ -92,23 +92,17 @@ export function ServiceDetailsSec({ service }: ServiceDetailsSecProps) {
 
   return (
     <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 select-none px-4 sm:px-6 lg:px-8">
-     
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
-       
         <div className="lg:col-span-8 space-y-8 md:space-y-10">
-         
           <FadeIn direction="up" delay={0.1}>
             <div className="bg-[#070A11] rounded-2xl relative overflow-hidden shadow-2xl">
               <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10 items-center">
-               
                 <div className="md:col-span-7 flex flex-col justify-between h-full">
                   <div>
-                   
                     <div className="flex items-center gap-2 mb-3 text-[#D4A359]">
                       <MainIcon className="w-10 h-10 sm:w-12 sm:h-12 stroke-[1.5]" />
                     </div>
 
-                   
                     <h1 className="font-serif text-2xl sm:text-2xl md:text-4xl lg:text-5xl leading-tight font-medium text-white tracking-tight">
                       <span>{title.line1}</span>
                       <span className="block text-[#D4A359] italic font-serif mt-1">
@@ -116,20 +110,17 @@ export function ServiceDetailsSec({ service }: ServiceDetailsSecProps) {
                       </span>
                     </h1>
 
-                   
                     <div className="flex items-center gap-4 my-5 w-full">
                       <span className="flex-1 h-[1px] bg-[#D4A359]/50" />
                       <Scale className="w-5 h-5 text-[#D4A359] shrink-0 stroke-[1.75]" />
                       <span className="flex-1 h-[1px] bg-[#D4A359]/50" />
                     </div>
 
-                   
                     <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
                       {subtitle}
                     </p>
                   </div>
 
-                 
                   {highlights && highlights.length > 0 && (
                     <div className="grid grid-cols-3 gap-2 sm:gap-4 border-t border-slate-800/80 pt-6 mt-2">
                       {highlights.map((item: any, idx: any) => {
@@ -150,10 +141,8 @@ export function ServiceDetailsSec({ service }: ServiceDetailsSecProps) {
                   )}
                 </div>
 
-               
                 <div className="md:col-span-5 flex justify-center">
                   <div className="relative w-full max-w-[390px] md:max-w-none h-[280px] sm:h-[340px] md:h-[380px] lg:h-[500px] rounded-xl bg-[#090D16] group shadow-2xl">
-                   
                     <div className="relative w-full h-full rounded-lg overflow-hidden bg-slate-900">
                       <Image
                         src={headerImage || "/service1.svg"}

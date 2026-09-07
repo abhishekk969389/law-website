@@ -29,13 +29,11 @@ export function Team({ data = defaultTeamData }: TeamProps) {
   return (
     <section className="relative w-full text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-    
         <FadeIn
           direction="up"
           delay={0.1}
           className="text-center max-w-4xl mx-auto mb-8 sm:mb-8 md:mb-10"
         >
-      
           <div className="flex items-center justify-center gap-2.5 mb-3">
             <div className="flex -space-x-1.5">
               <span className="w-3.5 h-3.5 rounded-full border border-[#D4A359]" />
@@ -46,7 +44,6 @@ export function Team({ data = defaultTeamData }: TeamProps) {
             </span>
           </div>
 
-      
           <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.15] tracking-tight">
             <span className="block text-white font-medium mb-1">
               {heading.line1}
@@ -60,7 +57,6 @@ export function Team({ data = defaultTeamData }: TeamProps) {
           </h2>
         </FadeIn>
 
-    
         <StaggerContainer
           staggerChildren={0.12}
           delayChildren={0.2}

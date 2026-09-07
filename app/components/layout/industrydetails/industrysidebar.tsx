@@ -78,7 +78,6 @@ export function IndustrySidebar({
 
   return (
     <aside className="space-y-8 sticky top-24">
-    
       {allIndustries && allIndustries.length > 0 && (
         <FadeIn
           direction="up"
@@ -103,25 +102,28 @@ export function IndustrySidebar({
                 <Link
                   key={ind.id}
                   href={`/industries/${slug}`}
-                  className={`flex items-center justify-between px-4 py-3.5 rounded-xl text-sm transition-all duration-200 group ${isActive
+                  className={`flex items-center justify-between px-4 py-3.5 rounded-xl text-sm transition-all duration-200 group ${
+                    isActive
                       ? "bg-[#131926] border border-[#D4A359]/70 text-[#D4A359] font-medium shadow-md"
                       : "text-slate-300 hover:text-white hover:bg-slate-800/40 border border-transparent"
-                    }`}
+                  }`}
                 >
                   <div className="flex items-center gap-3">
                     <IconComponent
-                      className={`w-4 h-4 shrink-0 stroke-[1.75] ${isActive
+                      className={`w-4 h-4 shrink-0 stroke-[1.75] ${
+                        isActive
                           ? "text-[#D4A359]"
                           : "text-slate-400 group-hover:text-[#D4A359]"
-                        }`}
+                      }`}
                     />
                     <span className="truncate max-w-[200px]">{ind.title}</span>
                   </div>
                   <ChevronRight
-                    className={`w-4 h-4 shrink-0 transition-transform duration-200 ${isActive
+                    className={`w-4 h-4 shrink-0 transition-transform duration-200 ${
+                      isActive
                         ? "text-[#D4A359] translate-x-0.5"
                         : "text-slate-500 group-hover:text-white group-hover:translate-x-0.5"
-                      }`}
+                    }`}
                   />
                 </Link>
               );

@@ -71,7 +71,6 @@ export function CareerSidebar({ career, sidebarData }: CareerSidebarProps) {
 
   return (
     <aside className="space-y-6 sticky top-24 select-none text-left">
-     
       <FadeIn
         direction="up"
         delay={0.15}
@@ -106,7 +105,6 @@ export function CareerSidebar({ career, sidebarData }: CareerSidebarProps) {
         </div>
       </FadeIn>
 
-     
       <FadeIn
         direction="up"
         delay={0.25}
@@ -136,7 +134,6 @@ export function CareerSidebar({ career, sidebarData }: CareerSidebarProps) {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-3.5 pt-1">
-           
             <div>
               <input
                 type="text"
@@ -148,7 +145,6 @@ export function CareerSidebar({ career, sidebarData }: CareerSidebarProps) {
               />
             </div>
 
-           
             <div>
               <input
                 type="email"
@@ -160,7 +156,6 @@ export function CareerSidebar({ career, sidebarData }: CareerSidebarProps) {
               />
             </div>
 
-           
             <div>
               <input
                 type="tel"
@@ -171,7 +166,6 @@ export function CareerSidebar({ career, sidebarData }: CareerSidebarProps) {
               />
             </div>
 
-           
             <div className="space-y-1">
               <label className="text-sm text-slate-300 font-medium block">
                 {applyForm?.resumeLabel || "Upload Resume"}
@@ -196,7 +190,6 @@ export function CareerSidebar({ career, sidebarData }: CareerSidebarProps) {
               </div>
             </div>
 
-           
             <button
               type="submit"
               className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-md bg-gradient-to-r from-[#D4A359] to-[#E3C280] text-[#0A0E17] font-semibold text-sm sm:text-sm hover:opacity-95 transition-all shadow-lg hover:scale-[1.01] active:scale-[0.99] cursor-pointer mt-2"
@@ -205,7 +198,6 @@ export function CareerSidebar({ career, sidebarData }: CareerSidebarProps) {
               <ArrowRight className="w-4 h-4" />
             </button>
 
-           
             <div className="flex items-center justify-center gap-1.5 text-[11px] text-slate-400 pt-1">
               <Lock className="w-3 h-3 text-[#D4A359] shrink-0" />
               <span>
@@ -217,7 +209,6 @@ export function CareerSidebar({ career, sidebarData }: CareerSidebarProps) {
         )}
       </FadeIn>
 
-     
       <FadeIn
         direction="up"
         delay={0.35}

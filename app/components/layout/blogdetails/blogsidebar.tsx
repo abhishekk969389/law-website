@@ -27,7 +27,6 @@ export function BlogSidebar({ currentId, sidebarData }: BlogSidebarProps) {
 
   return (
     <aside className="w-full space-y-8 select-none">
-      
       {recentBlogs && recentBlogs.length > 0 && (
         <FadeIn
           direction="up"
@@ -49,10 +48,11 @@ export function BlogSidebar({ currentId, sidebarData }: BlogSidebarProps) {
                 <Link
                   key={item.id}
                   href={href}
-                  className={`flex items-center gap-4 group p-2 rounded-2xl transition-all duration-300 ${isActive
+                  className={`flex items-center gap-4 group p-2 rounded-2xl transition-all duration-300 ${
+                    isActive
                       ? "bg-white/5 border border-[#D4A359]/30"
                       : "hover:bg-white/[0.03]"
-                    }`}
+                  }`}
                 >
                   <div className="relative w-16 h-16 sm:w-18 sm:h-18 rounded-xl overflow-hidden shrink-0 bg-slate-900 border border-white/10 shadow-md">
                     <Image

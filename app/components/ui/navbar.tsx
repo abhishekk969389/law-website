@@ -53,7 +53,6 @@ export function Navbar({ data = defaultNavbarData }: NavbarProps) {
   return (
     <header className="w-full bg-[#0B0E14] text-white border-b border-slate-800/80">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-20 md:h-24 flex items-center justify-between">
-   
         <div className="flex items-center">
           <Link href="/" className="flex items-center shrink-0">
             <Image
@@ -65,11 +64,10 @@ export function Navbar({ data = defaultNavbarData }: NavbarProps) {
               className="h-12 sm:h-14 md:h-16 lg:h-[72px] w-auto object-contain"
             />
           </Link>
-     
+
           <div className="hidden sm:block h-10 md:h-12 w-[1px] bg-slate-700/70 mx-6 md:mx-8" />
         </div>
 
-   
         <nav className="hidden lg:flex items-center gap-3.5 lg:gap-4 xl:gap-7 2xl:gap-9 text-sm lg:text-[13.5px] xl:text-[15px] font-medium tracking-wide">
           {navLinks.map((link: any, idx: any) => {
             const isActive = isPathActive(link.href, link.dropdownItems);
@@ -89,10 +87,11 @@ export function Navbar({ data = defaultNavbarData }: NavbarProps) {
                   <button
                     type="button"
                     onClick={(e) => e.preventDefault()}
-                    className={`relative flex items-center gap-1 transition-colors duration-200 py-1 cursor-default outline-none ${isActive
+                    className={`relative flex items-center gap-1 transition-colors duration-200 py-1 cursor-default outline-none ${
+                      isActive
                         ? "text-[#D4A359] font-medium"
                         : "text-white/90 hover:text-[#D4A359]"
-                      }`}
+                    }`}
                   >
                     <span>{link.title}</span>
                     <ChevronDown
@@ -105,10 +104,11 @@ export function Navbar({ data = defaultNavbarData }: NavbarProps) {
                 ) : (
                   <Link
                     href={link.href}
-                    className={`relative flex items-center gap-1 transition-colors duration-200 py-1 ${isActive
+                    className={`relative flex items-center gap-1 transition-colors duration-200 py-1 ${
+                      isActive
                         ? "text-[#D4A359] font-medium"
                         : "text-white/90 hover:text-[#D4A359]"
-                      }`}
+                    }`}
                   >
                     <span>{link.title}</span>
                     {isActive && (
@@ -194,8 +194,6 @@ export function Navbar({ data = defaultNavbarData }: NavbarProps) {
             data-lenis-prevent-touch
             className="lg:hidden bg-[#0B0E14] border-b border-slate-800 px-5 pt-3 pb-6 space-y-4 max-h-[calc(100vh-90px)] overflow-y-auto shadow-2xl z-50 overscroll-contain touch-pan-y"
           >
-          
-
             <div className="flex flex-col space-y-2">
               {navLinks.map((link: any, idx: any) => {
                 const linkIsActive = isPathActive(
@@ -210,10 +208,11 @@ export function Navbar({ data = defaultNavbarData }: NavbarProps) {
                       <button
                         type="button"
                         onClick={() => toggleMobileDropdown(link.title)}
-                        className={`py-2.5 text-base font-medium flex items-center justify-between w-full text-left transition-colors cursor-pointer ${linkIsActive
+                        className={`py-2.5 text-base font-medium flex items-center justify-between w-full text-left transition-colors cursor-pointer ${
+                          linkIsActive
                             ? "text-[#D4A359]"
                             : "text-slate-200 hover:text-[#D4A359]"
-                          }`}
+                        }`}
                       >
                         <span>{link.title}</span>
                         <ChevronDown
@@ -224,10 +223,11 @@ export function Navbar({ data = defaultNavbarData }: NavbarProps) {
                       <Link
                         href={link.href}
                         onClick={() => setMobileMenuOpen(false)}
-                        className={`py-2.5 text-base font-medium flex items-center justify-between ${linkIsActive
+                        className={`py-2.5 text-base font-medium flex items-center justify-between ${
+                          linkIsActive
                             ? "text-[#D4A359]"
                             : "text-slate-200 hover:text-[#D4A359]"
-                          }`}
+                        }`}
                       >
                         <span>{link.title}</span>
                       </Link>

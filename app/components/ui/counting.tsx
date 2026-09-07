@@ -106,8 +106,9 @@ export default function Counting({
             return (
               <StaggerItem
                 key={item.id || index}
-                className={`flex flex-col items-center justify-center text-center px-3 py-2 lg:py-1 ${index !== 0 ? "pt-4 md:pt-2 lg:pt-1" : ""
-                  }`}
+                className={`flex flex-col items-center justify-center text-center px-3 py-2 lg:py-1 ${
+                  index !== 0 ? "pt-4 md:pt-2 lg:pt-1" : ""
+                }`}
               >
                 <motion.div
                   whileHover={{ scale: 1.1, y: -2 }}

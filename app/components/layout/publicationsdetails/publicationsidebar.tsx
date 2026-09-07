@@ -28,12 +28,12 @@ export function PublicationSidebar({
         duration={0.6}
         className="rounded-2xl bg-[#0A0E17] border border-slate-800/80 p-5 sm:p-6 space-y-4 shadow-xl"
       >
-        { }
+        {}
         <h3 className="font-serif text-xl sm:text-2xl text-white font-medium tracking-tight mb-2">
           {title}
         </h3>
 
-        { }
+        {}
         <div className="divide-y divide-slate-800/60 space-y-4 pt-1">
           {recentPosts.map((post: any) => {
             const slug = post.slug || post.id;
@@ -45,8 +45,9 @@ export function PublicationSidebar({
               <Link
                 key={post.id}
                 href={`/publications/${slug}`}
-                className={`flex items-center gap-3.5 pt-4 first:pt-0 group cursor-pointer ${isActive ? "opacity-75 pointer-events-none" : ""
-                  }`}
+                className={`flex items-center gap-3.5 pt-4 first:pt-0 group cursor-pointer ${
+                  isActive ? "opacity-75 pointer-events-none" : ""
+                }`}
               >
                 <div className="relative w-16 h-16 sm:w-20 sm:h-16 rounded-xl overflow-hidden shrink-0 bg-slate-900 border border-slate-800 shadow-sm">
                   <Image

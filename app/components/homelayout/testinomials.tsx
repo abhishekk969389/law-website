@@ -51,7 +51,6 @@ export default function Testimonials({
     <section className="relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-  
           <FadeIn
             direction="right"
             delay={0.1}
@@ -69,7 +68,6 @@ export default function Testimonials({
               <div className="absolute inset-0 bg-gradient-to-t from-[#0B0E14]/40 via-transparent to-transparent opacity-60" />
             </div>
 
-    
             <div className="absolute -right-3 sm:-right-5 lg:-right-6 top-1/2 -translate-y-1/2 w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 rounded-full bg-[#0B0E14] p-2 flex items-center justify-center z-20 shadow-2xl">
               <motion.div
                 whileHover={{ rotate: 360 }}
@@ -87,9 +85,7 @@ export default function Testimonials({
             </div>
           </FadeIn>
 
-  
           <div className="lg:col-span-7 flex flex-col justify-center text-center md:text-left items-center md:items-start">
-    
             <FadeIn direction="up" delay={0.1}>
               <div className="flex items-center gap-2 mb-3 justify-center md:justify-start">
                 <span className="text-[#D4A359] text-sm sm:text-sm md:text-lg font-semibold tracking-widest uppercase">
@@ -99,25 +95,21 @@ export default function Testimonials({
               </div>
             </FadeIn>
 
-    
             <FadeIn direction="up" delay={0.2}>
               <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.2] tracking-tight text-white mb-4 text-center md:text-left">
                 {heading}
               </h2>
             </FadeIn>
 
-    
             <FadeIn
               direction="up"
               delay={0.3}
               className="relative pt-2 pb-4 overflow-hidden"
             >
-      
               <div className="absolute left-[28%] top-1/2 -translate-y-1/2 flex gap-4 text-white/[0.05] font-serif text-[180px] sm:text-[220px] lg:text-[260px] leading-none select-none pointer-events-none z-0">
                 ””
               </div>
 
-      
               <div className="absolute -right-4 -bottom-8 text-white/[0.08] pointer-events-none z-0">
                 <svg
                   viewBox="0 0 200 200"
@@ -138,7 +130,6 @@ export default function Testimonials({
                 </svg>
               </div>
 
-      
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentIndex}
@@ -148,14 +139,11 @@ export default function Testimonials({
                   transition={{ duration: 0.35, ease: "easeOut" }}
                   className="relative z-10"
                 >
-          
                   <p className="text-gray-200 text-justify text-sm sm:text-base lg:text-[17px] font-light leading-relaxed mb-8 w-full">
                     "{currentItem.quote}"
                   </p>
 
-          
                   <div className="flex items-center justify-between gap-4 pt-2">
-            
                     <div className="flex items-center gap-4 sm:gap-5">
                       <div className="relative w-16 h-16 sm:w-20 sm:h-20 lg:w-[84px] lg:h-[84px] rounded-full overflow-hidden border border-white/15 shrink-0 bg-gray-800 shadow-lg">
                         <Image
@@ -173,7 +161,7 @@ export default function Testimonials({
                         <p className="text-gray-400 text-sm sm:text-sm font-light mb-1.5">
                           {currentItem.authorRole}
                         </p>
-                
+
                         <div className="flex items-center gap-1">
                           {Array.from({ length: currentItem.rating || 5 }).map(
                             (_, i) => (
@@ -187,7 +175,6 @@ export default function Testimonials({
                       </div>
                     </div>
 
-            
                     <div className="hidden sm:flex items-center gap-3 shrink-0 relative z-20 pr-2">
                       <motion.button
                         whileHover={{ scale: 1.1 }}
@@ -213,7 +200,6 @@ export default function Testimonials({
               </AnimatePresence>
             </FadeIn>
 
-    
             <div className="flex sm:hidden items-center justify-center gap-4 mt-6 ">
               <motion.button
                 whileHover={{ scale: 1.1 }}
