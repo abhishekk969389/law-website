@@ -29,12 +29,12 @@ export function Section({
         {data.topics.map((topic: any) => (
           <StaggerItem key={topic.id}>
             <div className="space-y-3 sm:space-y-4">
-              {}
+            
               <h3 className="font-serif text-[#D4A359] text-left text-xl sm:text-2xl lg:text-[26px] font-semibold tracking-tight">
                 {topic.title}
               </h3>
 
-              {}
+            
               <div className="space-y-3.5 sm:space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed font-sans">
                 {topic.paragraphs.map((paragraph: any, idx: any) => (
                   <p key={idx}>{paragraph}</p>

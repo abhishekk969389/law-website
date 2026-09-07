@@ -53,7 +53,7 @@ export function Navbar({ data = defaultNavbarData }: NavbarProps) {
   return (
     <header className="w-full bg-[#0B0E14] text-white border-b border-slate-800/80">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-20 md:h-24 flex items-center justify-between">
-        { }
+   
         <div className="flex items-center">
           <Link href="/" className="flex items-center shrink-0">
             <Image
@@ -65,11 +65,11 @@ export function Navbar({ data = defaultNavbarData }: NavbarProps) {
               className="h-12 sm:h-14 md:h-16 lg:h-[72px] w-auto object-contain"
             />
           </Link>
-          { }
+     
           <div className="hidden sm:block h-10 md:h-12 w-[1px] bg-slate-700/70 mx-6 md:mx-8" />
         </div>
 
-        { }
+   
         <nav className="hidden lg:flex items-center gap-3.5 lg:gap-4 xl:gap-7 2xl:gap-9 text-sm lg:text-[13.5px] xl:text-[15px] font-medium tracking-wide">
           {navLinks.map((link: any, idx: any) => {
             const isActive = isPathActive(link.href, link.dropdownItems);

@@ -27,7 +27,7 @@ export function BlogSidebar({ currentId, sidebarData }: BlogSidebarProps) {
 
   return (
     <aside className="w-full space-y-8 select-none">
-      { }
+      
       {recentBlogs && recentBlogs.length > 0 && (
         <FadeIn
           direction="up"

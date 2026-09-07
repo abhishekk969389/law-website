@@ -31,13 +31,13 @@ export function Casestudysec({
 
   return (
     <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      { }
+     
       <FadeIn
         direction="up"
         delay={0.1}
         className="max-w-3xl mb-10 sm:mb-12 text-center md:text-left flex flex-col items-center md:items-start"
       >
-        { }
+       
         <div className="flex items-center gap-2 mb-3 justify-center md:justify-start">
           <Folder className="w-4 h-4 text-[#D4A359]" />
           <span className="text-[#D4A359] text-sm md:text-lg font-semibold tracking-widest uppercase">
@@ -46,7 +46,7 @@ export function Casestudysec({
           <span className="w-12 h-[1px] bg-[#D4A359]/60 ml-1" />
         </div>
 
-        { }
+       
         <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.15] tracking-tight text-white mb-4 text-center md:text-left">
           <span className="font-medium">{heading?.line1}</span>{" "}
           <span className="text-[#D4A359] italic font-serif">
@@ -55,7 +55,7 @@ export function Casestudysec({
           <span className="font-medium">{heading?.line2}</span>
         </h2>
 
-        { }
+       
         {subheading && (
           <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl text-center md:text-left">
             {subheading}
@@ -63,7 +63,7 @@ export function Casestudysec({
         )}
       </FadeIn>
 
-      { }
+     
       <StaggerContainer
         staggerChildren={0.12}
         delayChildren={0.2}

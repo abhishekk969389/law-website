@@ -15,7 +15,7 @@ export function BlogMain({ blog }: BlogMainProps) {
 
   return (
     <article className="w-full text-left">
-      { }
+
       <FadeIn
         direction="up"
         delay={0.1}
@@ -33,7 +33,7 @@ export function BlogMain({ blog }: BlogMainProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B0E14]/30 via-transparent to-transparent pointer-events-none" />
       </FadeIn>
 
-      { }
+
       <FadeIn
         direction="up"
         delay={0.15}
@@ -57,14 +57,14 @@ export function BlogMain({ blog }: BlogMainProps) {
         </div>
       </FadeIn>
 
-      { }
+
       <FadeIn direction="up" delay={0.2} duration={0.6}>
         <h1 className="font-serif italic text-2xl sm:text-3xl md:text-4xl lg:text-[40px] text-white font-normal leading-snug tracking-tight mb-6">
           {blog.title}
         </h1>
       </FadeIn>
 
-      { }
+
       {blog.paragraphs1 && blog.paragraphs1.length > 0 && (
         <FadeIn
           direction="up"
@@ -83,7 +83,7 @@ export function BlogMain({ blog }: BlogMainProps) {
         </FadeIn>
       )}
 
-      { }
+
       {blog.quoteText && (
         <FadeIn
           direction="up"
@@ -101,7 +101,7 @@ export function BlogMain({ blog }: BlogMainProps) {
         </FadeIn>
       )}
 
-      { }
+
       {blog.paragraphs2 && blog.paragraphs2.length > 0 && (
         <FadeIn
           direction="up"
@@ -120,7 +120,7 @@ export function BlogMain({ blog }: BlogMainProps) {
         </FadeIn>
       )}
 
-      { }
+
       {blog.subheading && (
         <FadeIn direction="up" delay={0.4} duration={0.6} className="mt-8 pt-2">
           <h2 className="font-serif text-xl sm:text-2xl md:text-3xl text-white font-semibold mb-4 tracking-tight">

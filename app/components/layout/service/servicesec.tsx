@@ -51,13 +51,13 @@ export function Servicesec({
 
   return (
     <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      { }
+   
       <FadeIn
         direction="up"
         delay={0.1}
         className="text-center max-w-3xl mx-auto mb-6 sm:mb-8"
       >
-        { }
+     
         <div className="flex items-center justify-center gap-3 mb-4">
           <span className="w-8 sm:w-12 h-[1px] bg-[#D4A359]/60" />
           <Scale className="w-4 h-4 text-[#D4A359] shrink-0" />
@@ -67,7 +67,7 @@ export function Servicesec({
           <span className="w-8 sm:w-12 h-[1px] bg-[#D4A359]/60" />
         </div>
 
-        { }
+     
         <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.15] tracking-tight text-white mb-4">
           {heading?.line1}{" "}
           {heading?.line2Prefix && <span>{heading.line2Prefix}</span>}
@@ -76,7 +76,7 @@ export function Servicesec({
           </span>
         </h2>
 
-        { }
+     
         {description && (
           <p className="text-slate-300 text-sm md:text-base lg:text-lg leading-relaxed max-w-2xl mx-auto">
             {description}
@@ -84,7 +84,7 @@ export function Servicesec({
         )}
       </FadeIn>
 
-      { }
+   
       <StaggerContainer
         staggerChildren={0.1}
         delayChildren={0.2}

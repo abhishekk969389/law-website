@@ -25,7 +25,7 @@ export function LegalSidebar({ currentId, sidebarData }: LegalSidebarProps) {
 
   return (
     <aside className="w-full space-y-8 select-none">
-      { }
+    
       {recentPosts && recentPosts.length > 0 && (
         <FadeIn
           direction="up"

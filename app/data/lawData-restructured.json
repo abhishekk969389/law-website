@@ -2829,7 +2829,7 @@
                     "number": "05",
                     "title": "Insurance Claim Maximized For Injured Motorist",
                     "description": "We fought back against the insurance company and secured the maximum payout for our injured client.",
-                    "image": "/about.svg",
+                    "image": "/blog/blog2.svg",
                     "linkText": "View Case Study",
                     "linkHref": "/casestudy/insurance-claim-maximized"
                   },
@@ -3125,7 +3125,7 @@
                   },
                   "subtitle": "Fought insurance bad faith to secure a seven-figure settlement for an injured motorist.",
                   "introText": "When insurers offered low-ball settlements, we litigated aggressively to compel full policy limit payout.",
-                  "image": "/about.svg",
+                  "image": "/blog/blog2.svg",
                   "meta": [
                     {
                       "label": "Practice Area",
@@ -3653,107 +3653,111 @@
                     "logo": "/media-lallantop.svg",
                     "title": "What the Latest Tax Amendments Mean for Individuals and Businesses",
                     "date": "10 Sep, 2024",
-                    "link": "/media/tax-amendments-2024"
+                    "link": "https://www.thelallantop.com/",
+                    "linkText": "Read More",
+                    "slug": "tax-amendments-2024"
                   },
                   {
                     "id": "2",
                     "logo": "/media-newsindia.svg",
                     "title": "Upcoming Webinar: Navigating Legal Challenges in 2024",
                     "date": "05 Sep, 2024",
-                    "link": "/media/webinar-legal-challenges"
+                    "link": "https://www.ndtv.com/india",
+                    "linkText": "Read More",
+                    "slug": "webinar-legal-challenges"
                   },
                   {
                     "id": "3",
                     "logo": "/media-indiatv.svg",
                     "title": "Changes in Arbitration Laws: What You Need to Know",
                     "date": "01 Sep, 2024",
-                    "link": "/media/arbitration-laws-changes"
+                    "link": "http://indiatvnews.com/",
+                    "linkText": "Read More",
+                    "slug": "arbitration-laws-changes"
                   },
                   {
                     "id": "4",
                     "logo": "/media-aajtak.svg",
                     "title": "New Labour Code Updates: Key Compliance Highlights",
                     "date": "28 Aug, 2024",
-                    "link": "/media/labour-code-updates"
+                    "link": "https://www.aajtak.in/",
+                    "linkText": "Read More",
+                    "slug": "labour-code-updates"
                   },
                   {
                     "id": "5",
-                    "logo": "/media-economictimes.svg",
+                    "logo": "/media-lallantop.svg",
                     "title": "RBI Announces New Guidelines for Digital Transactions",
                     "date": "25 Aug, 2024",
-                    "link": "/media/rbi-digital-transactions-guidelines"
+                    "link": "https://www.thelallantop.com/",
+                    "linkText": "Read More",
+                    "slug": "rbi-digital-transactions-guidelines"
                   },
                   {
                     "id": "6",
-                    "logo": "/media-businessstandard.svg",
+                    "logo": "/media-lallantop.svg",
                     "title": "Insolvency and Bankruptcy Code Amendments Explained",
                     "date": "22 Aug, 2024",
-                    "link": "/media/ibc-amendments-explained"
+                    "link": "https://www.thelallantop.com/",
+                    "linkText": "Read More",
+                    "slug": "ibc-amendments-explained"
                   },
                   {
                     "id": "7",
                     "logo": "/media-lallantop.svg",
                     "title": "Corporate Law Amendments 2024: Key Compliance Insights",
                     "date": "18 Aug, 2024",
-                    "link": "/media/corporate-law-amendments-2024"
+                    "link": "https://www.thelallantop.com/",
+                    "linkText": "Read More",
+                    "slug": "corporate-law-amendments-2024"
                   },
                   {
                     "id": "8",
                     "logo": "/media-newsindia.svg",
                     "title": "Intellectual Property Protection in the Era of Artificial Intelligence",
                     "date": "14 Aug, 2024",
-                    "link": "/media/ip-protection-ai-era"
+                    "link": "https://www.ndtv.com/india",
+                    "linkText": "Read More",
+                    "slug": "ip-protection-ai-era"
                   },
                   {
                     "id": "9",
                     "logo": "/media-indiatv.svg",
                     "title": "Veritas Law Partners Named Top Corporate Advisory Firm 2024",
                     "date": "10 Aug, 2024",
-                    "link": "/media/top-corporate-advisory-firm-2024"
+                    "link": "http://indiatvnews.com/",
+                    "linkText": "Read More",
+                    "slug": "top-corporate-advisory-firm-2024"
                   },
                   {
                     "id": "10",
                     "logo": "/media-aajtak.svg",
                     "title": "Real Estate Regulatory Framework: Protecting Homebuyers' Rights",
                     "date": "05 Aug, 2024",
-                    "link": "/media/rera-framework-homebuyers-rights"
+                    "link": "https://www.aajtak.in/",
+                    "linkText": "Read More",
+                    "slug": "rera-framework-homebuyers-rights"
                   },
                   {
                     "id": "11",
-                    "logo": "/media-economictimes.svg",
+                    "logo": "/media-lallantop.svg",
                     "title": "SEBI Compliance Requirements for Listed Companies Updated",
                     "date": "01 Aug, 2024",
-                    "link": "/media/sebi-compliance-listed-companies"
+                    "link": "/https://www.thelallantop.com/",
+                    "linkText": "Read More",
+                    "slug": "sebi-compliance-listed-companies"
                   },
                   {
                     "id": "12",
-                    "logo": "/media-businessstandard.svg",
+                    "logo": "/media-indiatv.svg",
                     "title": "Understanding Cross-Border Mergers: Legal and Financial Tax Impact",
                     "date": "28 Jul, 2024",
-                    "link": "/media/cross-border-mergers-legal-tax"
-                  },
-                  {
-                    "id": "13",
-                    "logo": "/media-lallantop.svg",
-                    "title": "Digital Personal Data Protection Act 2023: Corporate Playbook",
-                    "date": "22 Jul, 2024",
-                    "link": "/media/dpdp-act-corporate-playbook"
-                  },
-                  {
-                    "id": "14",
-                    "logo": "/media-newsindia.svg",
-                    "title": "ESG Regulations and Sustainable Finance Frameworks for Indian Business",
-                    "date": "18 Jul, 2024",
-                    "link": "/media/esg-regulations-sustainable-finance"
-                  },
-                  {
-                    "id": "15",
-                    "logo": "/media-indiatv.svg",
-                    "title": "Navigating Dispute Resolution in High-Stakes Commercial Contracts",
-                    "date": "12 Jul, 2024",
-                    "link": "/media/dispute-resolution-commercial-contracts"
+                    "link": "http://indiatvnews.com/",
+                    "linkText": "Read More",
+                    "slug": "cross-border-mergers-legal-tax"
                   }
-                ]
+                ],
+                "buttonText": "Read More"
               }
             }
           }
@@ -4288,7 +4292,7 @@
               "careerCta": {
                 "title": "Don't see the right role?",
                 "subtitle": "We're always looking for talented individuals. Share your resume with us.",
-                "buttonText": "Submit Your Resume",
+                "buttonText": "Send Your Resume Here",
                 "buttonLink": "/contact",
                 "email": "careers@yourlawfirm.com"
               }
@@ -4402,7 +4406,7 @@
                 "title": "We'll connect you with the right expert.",
                 "subtitle": "Our team is ready to help you with your legal needs.",
                 "buttonText": "Contact Us",
-                "buttonLink": "/contact"
+                "buttonLink": "/contactus"
               }
             }
           }
@@ -4547,9 +4551,9 @@
                   "messagePlaceholder": "Share details about your case or legal concern",
                   "agreeTermsText": "I agree to the",
                   "privacyPolicyText": "Privacy Policy",
-                  "privacyPolicyUrl": "/privacy",
+                  "privacyPolicyUrl": "/privacypolicy",
                   "termsServiceText": "Terms of Service",
-                  "termsServiceUrl": "/terms",
+                  "termsServiceUrl": "/termscondition",
                   "submitButtonText": "Book My Consultation",
                   "securityNote": "Your information is safe and confidential.",
                   "agreeTermsAlert": "Please agree to the Privacy Policy and Terms of Service.",
@@ -7262,7 +7266,7 @@
                   "slug": "bail-laws-2024-changes",
                   "title": "Bail Laws 2024 Key Changes Explained",
                   "subtitle": "An overview of the recent amendments in bail laws and what they mean for defendants and legal practitioners.",
-                  "image": "blog/blog3.svg",
+                  "image": "/blog/blog3.svg",
                   "date": "APR 30, 2024",
                   "category": "CRIMINAL LAW",
                   "introHeading": "Introduction",
@@ -7692,8 +7696,7 @@
                   "priceBadge": "Inclusive of GST",
                   "eventType": "Offline",
                   "language": "English",
-                  "registerText": "Register Now",
-                  "calendarText": "Add to Calendar",
+                  "registerText": "Enquiry Now",
                   "aboutText": "This seminar will provide in-depth insights into recent amendments, landmark judgments, and compliance challenges in corporate law. The session is designed for legal professionals, in-house counsels, and business leaders who want to stay ahead in the evolving legal landscape.",
                   "takeaways": [
                     "Understanding recent statutory amendments",
@@ -7725,7 +7728,7 @@
                       "title": "Panel Discussion & Q&A"
                     }
                   ],
-                  "venueImage": "/about.svg",
+                  "venueImage": "/industry/ind1.svg",
                   "mapUrl": "https://www.google.com/maps/search/?api=1&query=The+Claridges+12+Dr+APJ+Abdul+Kalam+Road+New+Delhi+110011",
                   "amenities": [
                     {
@@ -7808,8 +7811,7 @@
                   "priceBadge": "Inclusive of GST",
                   "eventType": "Offline Workshop",
                   "language": "English",
-                  "registerText": "Register Now",
-                  "calendarText": "Add to Calendar",
+                  "registerText": "Enquiry Now",
                   "aboutText": "This masterclass is curated for practicing advocates, corporate counsels, and arbitrators seeking practical guidance on institutional arbitration rules, expedited procedures, and interim relief mechanisms.",
                   "takeaways": [
                     "Mastering Section 9 and Section 17 interim relief applications",
@@ -7840,7 +7842,7 @@
                       "title": "Interactive Case Studies & Q&A"
                     }
                   ],
-                  "venueImage": "/service1.svg",
+                  "venueImage": "/industry/ind2.svg",
                   "mapUrl": "https://www.google.com/maps/search/?api=1&query=India+Habitat+Centre+Lodhi+Road+New+Delhi+110003",
                   "amenities": [
                     {
@@ -7923,8 +7925,7 @@
                   "priceBadge": "Inclusive of GST",
                   "eventType": "Live Virtual Webinar",
                   "language": "English",
-                  "registerText": "Register Now",
-                  "calendarText": "Add to Calendar",
+                  "registerText": "Enquiry Now",
                   "aboutText": "Equip your business with actionable compliance roadmaps for the DPDP Act 2023. Learn penalty mitigation, data fiduciary duties, and privacy audits.",
                   "takeaways": [
                     "Understanding Data Principal rights and Data Fiduciary obligations",
@@ -7955,7 +7956,7 @@
                       "title": "Live Audience Q&A & Closing Remarks"
                     }
                   ],
-                  "venueImage": "/service2.svg",
+                  "venueImage": "/industry/ind1.svg",
                   "mapUrl": "https://zoom.us",
                   "amenities": [
                     {
@@ -8038,8 +8039,7 @@
                   "priceBadge": "Inclusive of GST",
                   "eventType": "In-Person Full-Day Conference",
                   "language": "English",
-                  "registerText": "Register Now",
-                  "calendarText": "Add to Calendar",
+                  "registerText": "Enquiry Now",
                   "aboutText": "Comprehensive conference covering negotiation dynamics in share purchase agreements, NCLT merger schemes, and Section 56 anti-abuse tax provisions.",
                   "takeaways": [
                     "Structuring cross-border asset and share acquisition transactions",
@@ -8074,7 +8074,7 @@
                       "title": "High Tea & Wrap Up"
                     }
                   ],
-                  "venueImage": "/casestudy1.svg",
+                  "venueImage": "/industry/ind2.svg",
                   "mapUrl": "https://www.google.com/maps/search/?api=1&query=Taj+Mahal+Palace+Apollo+Bunder+Colaba+Mumbai+400001",
                   "amenities": [
                     {
@@ -8157,8 +8157,7 @@
                   "priceBadge": "Inclusive of GST",
                   "eventType": "In-Person Seminar",
                   "language": "English",
-                  "registerText": "Register Now",
-                  "calendarText": "Add to Calendar",
+                  "registerText": "Enquiry Now",
                   "aboutText": "Understanding how the Indian Patent Office and international jurisdictions evaluate computer-related inventions and AI co-authorship.",
                   "takeaways": [
                     "Copyright ownership in generative AI outputs",
@@ -8188,7 +8187,7 @@
                       "title": "Panel Discussion & Lunch"
                     }
                   ],
-                  "venueImage": "/casestudy2.svg",
+                  "venueImage": "/industry/ind1.svg",
                   "mapUrl": "https://www.google.com/maps/search/?api=1&query=The+Leela+Palace+Old+Airport+Road+Kodihalli+Bengaluru+560008",
                   "amenities": [
                     {
@@ -8271,8 +8270,7 @@
                   "priceBadge": "Inclusive of GST",
                   "eventType": "Executive Roundtable",
                   "language": "English",
-                  "registerText": "Register Now",
-                  "calendarText": "Add to Calendar",
+                  "registerText": "Enquiry Now",
                   "aboutText": "An executive dialogue on multi-jurisdictional insolvency resolution, NCLT coordination, and distressed asset acquisitions in India.",
                   "takeaways": [
                     "Navigating cross-border asset tracking and overseas creditor claims",
@@ -8302,7 +8300,7 @@
                       "title": "Open Floor Discussion & Wrap Up"
                     }
                   ],
-                  "venueImage": "/casestudy3.svg",
+                  "venueImage": "/industry/ind2.svg",
                   "mapUrl": "https://www.google.com/maps/search/?api=1&query=ITC+Grand+Chola+63+Mount+Road+Guindy+Chennai+600032",
                   "amenities": [
                     {
@@ -10083,6 +10081,1454 @@
                     "exploreSubtitle": "View all open positions across departments.",
                     "exploreButtonText": "View All Openings",
                     "exploreButtonLink": "/career"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "MediaDetail": {
+          "variants": {
+            "VeritasMediaDetail1": {
+              "mediaDetails": [
+                {
+                  "id": "tax-amendments-2024",
+                  "slug": "tax-amendments-2024",
+                  "title": "What the Latest Tax Amendments Mean for Individuals and Businesses",
+                  "date": "10 Sep, 2024",
+                  "source": "The Lallantop",
+                  "logo": "/media-lallantop.svg",
+                  "image": "/blog/blog1.svg",
+                  "category": "TAXATION & FISCAL POLICY",
+                  "excerpt": "A comprehensive breakdown of newly proposed direct tax amendments and their immediate compliance and financial planning implications for taxpayers.",
+                  "introductionHeading": "Media Coverage & Legal Analysis",
+                  "introductionText": "In an exclusive feature published by The Lallantop, Veritas Law Partners provided in-depth legal commentary on the newly released taxation amendments. The latest regulatory fiscal updates introduce substantial adjustments to capital gains classifications, corporate tax withholding obligations, and procedural assessment timelines.\n\nOur taxation group highlighted the critical need for proactive compliance and timely balance sheet adjustments ahead of the upcoming statutory deadlines.",
+                  "highlightsHeading": "Key Regulatory Provisions & Legal Takeaways",
+                  "highlights": [
+                    {
+                      "number": "01.",
+                      "icon": "scale",
+                      "title": "Reclassification of Capital Gains",
+                      "description": "Standardized holding periods across listed equities, unlisted shares, and immovable properties with revised rate structures."
+                    },
+                    {
+                      "number": "02.",
+                      "icon": "file-text",
+                      "title": "Corporate Withholding & Cross-Border TDS",
+                      "description": "Stricter reporting standards for cross-border software royalties, management fees, and digital service withholdings."
+                    },
+                    {
+                      "number": "03.",
+                      "icon": "shield",
+                      "title": "Assessment Reopening Windows",
+                      "description": "Narrowed time limits for reassessments, fostering enhanced certainty and reduced litigation backlogs for corporations."
+                    },
+                    {
+                      "number": "04.",
+                      "icon": "users",
+                      "title": "Individual & HNI Compliance Protocols",
+                      "description": "Strategic advisory considerations for family trusts, foreign asset disclosures, and high-net-worth estate planning."
+                    }
+                  ],
+                  "quote": {
+                    "text": "Timely compliance and transparent structural planning remain the foremost shields against regulatory penal liabilities under the revised tax architecture.",
+                    "author": "Veritas Law Partners Tax Practice Desk"
+                  },
+                  "conclusionHeading": "Conclusion & Strategic Outlook",
+                  "conclusionText": "As regulatory scrutiny tightens across corporate and private wealth sectors, corporations and individual taxpayers must conduct comprehensive audits of their compliance postures. Veritas Law Partners continues to advise clients nationwide on sustainable, risk-mitigated fiscal structures.",
+                  "sidebarData": {
+                    "recentPostsTitle": "Recent Media Features",
+                    "recentPosts": [
+                      {
+                        "id": "webinar-legal-challenges",
+                        "slug": "webinar-legal-challenges",
+                        "title": "Upcoming Webinar: Navigating Legal Challenges in 2024",
+                        "date": "05 Sep, 2024",
+                        "image": "/blog/blog2.svg",
+                        "logo": "/media-newsindia.svg",
+                        "link": "/media/webinar-legal-challenges"
+                      },
+                      {
+                        "id": "arbitration-laws-changes",
+                        "slug": "arbitration-laws-changes",
+                        "title": "Changes in Arbitration Laws: What You Need to Know",
+                        "date": "01 Sep, 2024",
+                        "image": "/blog/blog3.svg",
+                        "logo": "/media-indiatv.svg",
+                        "link": "/media/arbitration-laws-changes"
+                      },
+                      {
+                        "id": "labour-code-updates",
+                        "slug": "labour-code-updates",
+                        "title": "New Labour Code Updates: Key Compliance Highlights",
+                        "date": "28 Aug, 2024",
+                        "image": "/services/ser6.svg",
+                        "logo": "/media-aajtak.svg",
+                        "link": "/media/labour-code-updates"
+                      },
+                      {
+                        "id": "rbi-digital-transactions-guidelines",
+                        "slug": "rbi-digital-transactions-guidelines",
+                        "title": "RBI Announces New Guidelines for Digital Transactions",
+                        "date": "25 Aug, 2024",
+                        "image": "/services/ser7.svg",
+                        "logo": "/media-economictimes.svg",
+                        "link": "/media/rbi-digital-transactions-guidelines"
+                      },
+                      {
+                        "id": "ibc-amendments-explained",
+                        "slug": "ibc-amendments-explained",
+                        "title": "Insolvency and Bankruptcy Code Amendments Explained",
+                        "date": "22 Aug, 2024",
+                        "image": "/casestudy2.svg",
+                        "logo": "/media-businessstandard.svg",
+                        "link": "/media/ibc-amendments-explained"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "webinar-legal-challenges",
+                  "slug": "webinar-legal-challenges",
+                  "title": "Upcoming Webinar: Navigating Legal Challenges in 2024",
+                  "date": "05 Sep, 2024",
+                  "source": "News India",
+                  "logo": "/media-newsindia.svg",
+                  "image": "/blog/blog2.svg",
+                  "category": "CORPORATE GOVERNANCE",
+                  "excerpt": "Veritas Law Partners announces a nationwide legal briefing session addressing cross-border contracts, AI liabilities, and regulatory risks for modern enterprises.",
+                  "introductionHeading": "Event Announcement & Industry Context",
+                  "introductionText": "Reported by News India, Veritas Law Partners is convening a specialized national symposium and webinar focusing on the emerging legal hurdles confronting Indian corporations in 2024 and beyond.\n\nFrom evolving ESG reporting norms to cross-border jurisdiction friction, the webinar brings together senior litigators and corporate advisory partners to impart actionable risk mitigation methodologies.",
+                  "highlightsHeading": "Core Session Themes & Agenda",
+                  "highlights": [
+                    {
+                      "number": "01.",
+                      "icon": "building",
+                      "title": "Corporate Compliance in Volatile Markets",
+                      "description": "Practical approaches to navigating overlapping regulatory mandates from SEBI, RBI, and the Ministry of Corporate Affairs."
+                    },
+                    {
+                      "number": "02.",
+                      "icon": "lock",
+                      "title": "Data Privacy & Algorithmic Liability",
+                      "description": "Operationalizing the Digital Personal Data Protection Act and safeguarding proprietary business algorithms."
+                    },
+                    {
+                      "number": "03.",
+                      "icon": "scale",
+                      "title": "Commercial Dispute Prevention",
+                      "description": "Structuring robust multi-tier dispute resolution clauses to bypass prolonged and costly court litigation."
+                    },
+                    {
+                      "number": "04.",
+                      "icon": "file-text",
+                      "title": "Cross-Border M&A Due Diligence",
+                      "description": "Critical considerations in executing international mergers and adhering to foreign investment clearances."
+                    }
+                  ],
+                  "quote": {
+                    "text": "Anticipating legal headwinds before they manifest as court notices is the hallmark of modern corporate legal stewardship.",
+                    "author": "Senior Partners, Veritas Law Partners"
+                  },
+                  "conclusionHeading": "Registration & Participation Details",
+                  "conclusionText": "The interactive briefing session is open to general counsels, chief legal officers, startup founders, and compliance executives. Attendees will receive practical toolkits and executive briefing whitepapers.",
+                  "sidebarData": {
+                    "recentPostsTitle": "Recent Media Features",
+                    "recentPosts": [
+                      {
+                        "id": "tax-amendments-2024",
+                        "slug": "tax-amendments-2024",
+                        "title": "What the Latest Tax Amendments Mean for Individuals and Businesses",
+                        "date": "10 Sep, 2024",
+                        "image": "/blog/blog1.svg",
+                        "logo": "/media-lallantop.svg",
+                        "link": "/media/tax-amendments-2024"
+                      },
+                      {
+                        "id": "arbitration-laws-changes",
+                        "slug": "arbitration-laws-changes",
+                        "title": "Changes in Arbitration Laws: What You Need to Know",
+                        "date": "01 Sep, 2024",
+                        "image": "/blog/blog3.svg",
+                        "logo": "/media-indiatv.svg",
+                        "link": "/media/arbitration-laws-changes"
+                      },
+                      {
+                        "id": "labour-code-updates",
+                        "slug": "labour-code-updates",
+                        "title": "New Labour Code Updates: Key Compliance Highlights",
+                        "date": "28 Aug, 2024",
+                        "image": "/services/ser6.svg",
+                        "logo": "/media-aajtak.svg",
+                        "link": "/media/labour-code-updates"
+                      },
+                      {
+                        "id": "rbi-digital-transactions-guidelines",
+                        "slug": "rbi-digital-transactions-guidelines",
+                        "title": "RBI Announces New Guidelines for Digital Transactions",
+                        "date": "25 Aug, 2024",
+                        "image": "/services/ser7.svg",
+                        "logo": "/media-economictimes.svg",
+                        "link": "/media/rbi-digital-transactions-guidelines"
+                      },
+                      {
+                        "id": "ibc-amendments-explained",
+                        "slug": "ibc-amendments-explained",
+                        "title": "Insolvency and Bankruptcy Code Amendments Explained",
+                        "date": "22 Aug, 2024",
+                        "image": "/casestudy2.svg",
+                        "logo": "/media-businessstandard.svg",
+                        "link": "/media/ibc-amendments-explained"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "arbitration-laws-changes",
+                  "slug": "arbitration-laws-changes",
+                  "title": "Changes in Arbitration Laws: What You Need to Know",
+                  "date": "01 Sep, 2024",
+                  "source": "India TV",
+                  "logo": "/media-indiatv.svg",
+                  "image": "/blog/blog3.svg",
+                  "category": "DISPUTE RESOLUTION",
+                  "excerpt": "India TV features analysis from our senior dispute resolution team on the latest judicial pronouncements and statutory reforms in Indian arbitration.",
+                  "introductionHeading": "Arbitration Landscape Evolution",
+                  "introductionText": "India TV's legal segment highlighted key reforms modernizing the Arbitration and Conciliation framework in India. Veritas Law Partners contributed crucial perspectives on how recent Supreme Court judgments are enforcing strict timelines and curbing court interference in arbitral awards.\n\nThese pivotal shifts mark a significant move toward positioning India as an institutional arbitration hub for global commerce.",
+                  "highlightsHeading": "Major Legislative & Judicial Developments",
+                  "highlights": [
+                    {
+                      "number": "01.",
+                      "icon": "scale",
+                      "title": "Strict Limitations on Judicial Review",
+                      "description": "Courts reaffirm the principle of minimal intervention under Section 34, protecting arbitral award finality."
+                    },
+                    {
+                      "number": "02.",
+                      "icon": "shield",
+                      "title": "Emergency Arbitrator Recognition",
+                      "description": "Enhanced institutional backing for interim relief and emergency arbitrator decrees across commercial hubs."
+                    },
+                    {
+                      "number": "03.",
+                      "icon": "file-text",
+                      "title": "Fast-Track Arbitral Proceedings",
+                      "description": "Strict statutory 12-month disposal caps enforcing rapid evidence recording and cost allocation against delays."
+                    },
+                    {
+                      "number": "04.",
+                      "icon": "users",
+                      "title": "Institutional Arbitration Preference",
+                      "description": "Transitioning away from ad-hoc mechanisms to accredited arbitral institutions with predefined administrative rules."
+                    }
+                  ],
+                  "quote": {
+                    "text": "Enforcing arbitral autonomy and predictability is essential for sustaining international investor confidence in India's commercial ecosystem.",
+                    "author": "Veritas Dispute Resolution Desk"
+                  },
+                  "conclusionHeading": "Implications for Contract Drafting",
+                  "conclusionText": "Commercial entities must revisit their arbitration agreements to designate specialized arbitral seats and incorporate expedited rules, ensuring robust conflict containment.",
+                  "sidebarData": {
+                    "recentPostsTitle": "Recent Media Features",
+                    "recentPosts": [
+                      {
+                        "id": "tax-amendments-2024",
+                        "slug": "tax-amendments-2024",
+                        "title": "What the Latest Tax Amendments Mean for Individuals and Businesses",
+                        "date": "10 Sep, 2024",
+                        "image": "/blog/blog1.svg",
+                        "logo": "/media-lallantop.svg",
+                        "link": "/media/tax-amendments-2024"
+                      },
+                      {
+                        "id": "webinar-legal-challenges",
+                        "slug": "webinar-legal-challenges",
+                        "title": "Upcoming Webinar: Navigating Legal Challenges in 2024",
+                        "date": "05 Sep, 2024",
+                        "image": "/blog/blog2.svg",
+                        "logo": "/media-newsindia.svg",
+                        "link": "/media/webinar-legal-challenges"
+                      },
+                      {
+                        "id": "labour-code-updates",
+                        "slug": "labour-code-updates",
+                        "title": "New Labour Code Updates: Key Compliance Highlights",
+                        "date": "28 Aug, 2024",
+                        "image": "/services/ser6.svg",
+                        "logo": "/media-aajtak.svg",
+                        "link": "/media/labour-code-updates"
+                      },
+                      {
+                        "id": "rbi-digital-transactions-guidelines",
+                        "slug": "rbi-digital-transactions-guidelines",
+                        "title": "RBI Announces New Guidelines for Digital Transactions",
+                        "date": "25 Aug, 2024",
+                        "image": "/services/ser7.svg",
+                        "logo": "/media-economictimes.svg",
+                        "link": "/media/rbi-digital-transactions-guidelines"
+                      },
+                      {
+                        "id": "ibc-amendments-explained",
+                        "slug": "ibc-amendments-explained",
+                        "title": "Insolvency and Bankruptcy Code Amendments Explained",
+                        "date": "22 Aug, 2024",
+                        "image": "/casestudy2.svg",
+                        "logo": "/media-businessstandard.svg",
+                        "link": "/media/ibc-amendments-explained"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "labour-code-updates",
+                  "slug": "labour-code-updates",
+                  "title": "New Labour Code Updates: Key Compliance Highlights",
+                  "date": "28 Aug, 2024",
+                  "source": "Aaj Tak",
+                  "logo": "/media-aajtak.svg",
+                  "image": "/services/ser6.svg",
+                  "category": "EMPLOYMENT & LABOUR LAW",
+                  "excerpt": "Aaj Tak features Veritas Law Partners' expert commentary on the four new Labour Codes and workplace compliance mandates.",
+                  "introductionHeading": "Labor Reforms Under the Spotlight",
+                  "introductionText": "In an analytical feature on Aaj Tak, Veritas Law Partners unpacked the far-reaching workplace reforms introduced under the consolidation of 29 central labor laws into four simplified codes: Wages, Social Security, Industrial Relations, and Occupational Safety.\n\nEmployers across industrial, technology, and service sectors are actively recalibrating payroll architectures, leave policies, and employment covenants to align with the new regulatory framework.",
+                  "highlightsHeading": "Essential Compliance Highlights",
+                  "highlights": [
+                    {
+                      "number": "01.",
+                      "icon": "file-text",
+                      "title": "Unified Definition of Wages",
+                      "description": "Mandatory requirement that basic pay constitute at least 50% of the total cost-to-company compensation package."
+                    },
+                    {
+                      "number": "02.",
+                      "icon": "users",
+                      "title": "Social Security for Gig Workers",
+                      "description": "Inclusion of platform and gig workers under state welfare funds and health safety nets."
+                    },
+                    {
+                      "number": "03.",
+                      "icon": "shield",
+                      "title": "Occupational Safety Mandates",
+                      "description": "Comprehensive health checkups, gender-neutral night shifts with safety provisions, and modernized workplace safety protocols."
+                    },
+                    {
+                      "number": "04.",
+                      "icon": "building",
+                      "title": "Fixed-Term Employment Formalization",
+                      "description": "Statutory recognition of fixed-term contracts with proportional gratuity and leave entitlements."
+                    }
+                  ],
+                  "quote": {
+                    "text": "The new codes balance worker welfare with corporate ease of doing business, demanding thorough HR and legal audit across enterprise workforces.",
+                    "author": "Labour & Employment Practice Lead"
+                  },
+                  "conclusionHeading": "Preparing for Implementation",
+                  "conclusionText": "Human resource teams and corporate legal counsel should initiate wage restructuring simulations and update employee contracts to guarantee seamless transition.",
+                  "sidebarData": {
+                    "recentPostsTitle": "Recent Media Features",
+                    "recentPosts": [
+                      {
+                        "id": "tax-amendments-2024",
+                        "slug": "tax-amendments-2024",
+                        "title": "What the Latest Tax Amendments Mean for Individuals and Businesses",
+                        "date": "10 Sep, 2024",
+                        "image": "/blog/blog1.svg",
+                        "logo": "/media-lallantop.svg",
+                        "link": "/media/tax-amendments-2024"
+                      },
+                      {
+                        "id": "webinar-legal-challenges",
+                        "slug": "webinar-legal-challenges",
+                        "title": "Upcoming Webinar: Navigating Legal Challenges in 2024",
+                        "date": "05 Sep, 2024",
+                        "image": "/blog/blog2.svg",
+                        "logo": "/media-newsindia.svg",
+                        "link": "/media/webinar-legal-challenges"
+                      },
+                      {
+                        "id": "arbitration-laws-changes",
+                        "slug": "arbitration-laws-changes",
+                        "title": "Changes in Arbitration Laws: What You Need to Know",
+                        "date": "01 Sep, 2024",
+                        "image": "/blog/blog3.svg",
+                        "logo": "/media-indiatv.svg",
+                        "link": "/media/arbitration-laws-changes"
+                      },
+                      {
+                        "id": "rbi-digital-transactions-guidelines",
+                        "slug": "rbi-digital-transactions-guidelines",
+                        "title": "RBI Announces New Guidelines for Digital Transactions",
+                        "date": "25 Aug, 2024",
+                        "image": "/services/ser7.svg",
+                        "logo": "/media-economictimes.svg",
+                        "link": "/media/rbi-digital-transactions-guidelines"
+                      },
+                      {
+                        "id": "ibc-amendments-explained",
+                        "slug": "ibc-amendments-explained",
+                        "title": "Insolvency and Bankruptcy Code Amendments Explained",
+                        "date": "22 Aug, 2024",
+                        "image": "/casestudy2.svg",
+                        "logo": "/media-businessstandard.svg",
+                        "link": "/media/ibc-amendments-explained"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "rbi-digital-transactions-guidelines",
+                  "slug": "rbi-digital-transactions-guidelines",
+                  "title": "RBI Announces New Guidelines for Digital Transactions",
+                  "date": "25 Aug, 2024",
+                  "source": "The Economic Times",
+                  "logo": "/media-economictimes.svg",
+                  "image": "/services/ser7.svg",
+                  "category": "FINTECH & BANKING",
+                  "excerpt": "The Economic Times quotes Veritas Law Partners on the Reserve Bank of India's updated security directives for digital payment aggregators and banking institutions.",
+                  "introductionHeading": "Regulatory Overview & Fintech Impact",
+                  "introductionText": "Published in The Economic Times, Veritas Law Partners contributed deep insights into the Reserve Bank of India's comprehensive directions enhancing cybersecurity, transaction encryption, and customer liability caps across digital banking.\n\nAs financial technology platforms handle unprecedented transaction volumes, the central bank's updated compliance circular establishes rigorous standards for payment tokenization and offline data storage.",
+                  "highlightsHeading": "Key Directives Issued by the Central Bank",
+                  "highlights": [
+                    {
+                      "number": "01.",
+                      "icon": "lock",
+                      "title": "Tokenization & Card Security",
+                      "description": "Zero-storage of actual card credentials by merchants and payment gateways, backed by multi-factor authentication."
+                    },
+                    {
+                      "number": "02.",
+                      "icon": "shield",
+                      "title": "Zero Liability for Prompt Fraud Reporting",
+                      "description": "Protection mechanisms capping customer liability to zero when unauthorized transactions are reported within 72 hours."
+                    },
+                    {
+                      "number": "03.",
+                      "icon": "building",
+                      "title": "Payment Aggregator Auditing",
+                      "description": "Mandatory annual cyber-resilience audits by CERT-IN empaneled information security auditors."
+                    },
+                    {
+                      "number": "04.",
+                      "icon": "file-text",
+                      "title": "Data Localization Compliance",
+                      "description": "Strict enforcement of complete payment system data storage within Indian territorial borders."
+                    }
+                  ],
+                  "quote": {
+                    "text": "Cyber resilience is no longer an IT operational issue—it is now a core statutory and fiduciary responsibility for board members.",
+                    "author": "Veritas Fintech & Banking Practice"
+                  },
+                  "conclusionHeading": "Next Steps for Financial Institutions",
+                  "conclusionText": "Financial institutions and payment intermediaries must review their vendor contracts and information security architectures to maintain uninterrupted license validity.",
+                  "sidebarData": {
+                    "recentPostsTitle": "Recent Media Features",
+                    "recentPosts": [
+                      {
+                        "id": "tax-amendments-2024",
+                        "slug": "tax-amendments-2024",
+                        "title": "What the Latest Tax Amendments Mean for Individuals and Businesses",
+                        "date": "10 Sep, 2024",
+                        "image": "/blog/blog1.svg",
+                        "logo": "/media-lallantop.svg",
+                        "link": "/media/tax-amendments-2024"
+                      },
+                      {
+                        "id": "webinar-legal-challenges",
+                        "slug": "webinar-legal-challenges",
+                        "title": "Upcoming Webinar: Navigating Legal Challenges in 2024",
+                        "date": "05 Sep, 2024",
+                        "image": "/blog/blog2.svg",
+                        "logo": "/media-newsindia.svg",
+                        "link": "/media/webinar-legal-challenges"
+                      },
+                      {
+                        "id": "arbitration-laws-changes",
+                        "slug": "arbitration-laws-changes",
+                        "title": "Changes in Arbitration Laws: What You Need to Know",
+                        "date": "01 Sep, 2024",
+                        "image": "/blog/blog3.svg",
+                        "logo": "/media-indiatv.svg",
+                        "link": "/media/arbitration-laws-changes"
+                      },
+                      {
+                        "id": "labour-code-updates",
+                        "slug": "labour-code-updates",
+                        "title": "New Labour Code Updates: Key Compliance Highlights",
+                        "date": "28 Aug, 2024",
+                        "image": "/services/ser6.svg",
+                        "logo": "/media-aajtak.svg",
+                        "link": "/media/labour-code-updates"
+                      },
+                      {
+                        "id": "ibc-amendments-explained",
+                        "slug": "ibc-amendments-explained",
+                        "title": "Insolvency and Bankruptcy Code Amendments Explained",
+                        "date": "22 Aug, 2024",
+                        "image": "/casestudy2.svg",
+                        "logo": "/media-businessstandard.svg",
+                        "link": "/media/ibc-amendments-explained"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "ibc-amendments-explained",
+                  "slug": "ibc-amendments-explained",
+                  "title": "Insolvency and Bankruptcy Code Amendments Explained",
+                  "date": "22 Aug, 2024",
+                  "source": "Business Standard",
+                  "logo": "/media-businessstandard.svg",
+                  "image": "/casestudy2.svg",
+                  "category": "INSOLVENCY & RESTRUCTURING",
+                  "excerpt": "Business Standard features Veritas Law Partners' analysis on the legislative amendments proposed to speed up resolution under the IBC.",
+                  "introductionHeading": "Insolvency Framework Overhaul",
+                  "introductionText": "In a dedicated column in Business Standard, Veritas Law Partners analyzed the latest legislative amendments tabled to bolster the Insolvency and Bankruptcy Code (IBC). The modifications aim to curtail procedural bottlenecks, maximize asset realization value, and enhance cross-border insolvency cooperation.\n\nWith commercial courts working to streamline resolution processes, the proposed reforms present substantial implications for secured creditors and resolution applicants alike.",
+                  "highlightsHeading": "Significant Reform Provisions",
+                  "highlights": [
+                    {
+                      "number": "01.",
+                      "icon": "scale",
+                      "title": "Group Insolvency Mechanisms",
+                      "description": "Enabling consolidated resolution proceedings for corporate debtors with interconnected operational entities."
+                    },
+                    {
+                      "number": "02.",
+                      "icon": "file-text",
+                      "title": "Pre-Packaged Insolvency Expansion",
+                      "description": "Extending expedited pre-pack resolution schemes beyond MSMEs to larger enterprise debtors."
+                    },
+                    {
+                      "number": "03.",
+                      "icon": "shield",
+                      "title": "Real Estate Resolution Carve-Outs",
+                      "description": "Project-wise resolution frameworks ensuring non-affected housing projects can progress toward homebuyer handover."
+                    },
+                    {
+                      "number": "04.",
+                      "icon": "building",
+                      "title": "Creditor Committee Code of Conduct",
+                      "description": "Statutory standards of conduct binding Committee of Creditors members during commercial evaluation."
+                    }
+                  ],
+                  "quote": {
+                    "text": "Preserving economic asset value through rapid resolution must take precedence over prolonged liquidation battles.",
+                    "author": "Veritas Insolvency Advisory"
+                  },
+                  "conclusionHeading": "Impact on Creditor Realization",
+                  "conclusionText": "The amendments will furnish financial institutions with sharper instruments to enforce timely turnaround plans while safeguarding asset integrity.",
+                  "sidebarData": {
+                    "recentPostsTitle": "Recent Media Features",
+                    "recentPosts": [
+                      {
+                        "id": "tax-amendments-2024",
+                        "slug": "tax-amendments-2024",
+                        "title": "What the Latest Tax Amendments Mean for Individuals and Businesses",
+                        "date": "10 Sep, 2024",
+                        "image": "/blog/blog1.svg",
+                        "logo": "/media-lallantop.svg",
+                        "link": "/media/tax-amendments-2024"
+                      },
+                      {
+                        "id": "webinar-legal-challenges",
+                        "slug": "webinar-legal-challenges",
+                        "title": "Upcoming Webinar: Navigating Legal Challenges in 2024",
+                        "date": "05 Sep, 2024",
+                        "image": "/blog/blog2.svg",
+                        "logo": "/media-newsindia.svg",
+                        "link": "/media/webinar-legal-challenges"
+                      },
+                      {
+                        "id": "arbitration-laws-changes",
+                        "slug": "arbitration-laws-changes",
+                        "title": "Changes in Arbitration Laws: What You Need to Know",
+                        "date": "01 Sep, 2024",
+                        "image": "/blog/blog3.svg",
+                        "logo": "/media-indiatv.svg",
+                        "link": "/media/arbitration-laws-changes"
+                      },
+                      {
+                        "id": "labour-code-updates",
+                        "slug": "labour-code-updates",
+                        "title": "New Labour Code Updates: Key Compliance Highlights",
+                        "date": "28 Aug, 2024",
+                        "image": "/services/ser6.svg",
+                        "logo": "/media-aajtak.svg",
+                        "link": "/media/labour-code-updates"
+                      },
+                      {
+                        "id": "rbi-digital-transactions-guidelines",
+                        "slug": "rbi-digital-transactions-guidelines",
+                        "title": "RBI Announces New Guidelines for Digital Transactions",
+                        "date": "25 Aug, 2024",
+                        "image": "/services/ser7.svg",
+                        "logo": "/media-economictimes.svg",
+                        "link": "/media/rbi-digital-transactions-guidelines"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "corporate-law-amendments-2024",
+                  "slug": "corporate-law-amendments-2024",
+                  "title": "Corporate Law Amendments 2024: Key Compliance Insights",
+                  "date": "18 Aug, 2024",
+                  "source": "The Lallantop",
+                  "logo": "/media-lallantop.svg",
+                  "image": "/casestudy3.svg",
+                  "category": "CORPORATE GOVERNANCE",
+                  "excerpt": "The Lallantop covers Veritas Law Partners' guidance on the Ministry of Corporate Affairs' revised rules for private and public companies.",
+                  "introductionHeading": "Corporate Governance Reforms",
+                  "introductionText": "The Lallantop featured Veritas Law Partners' overview of regulatory adjustments released under the Companies Act. The updates focus on enhancing director accountability, dematerialization of private company shares, and rigorous related-party disclosure mandates.\n\nOur corporate governance team delivered practical recommendations for secretarial and board audit compliance.",
+                  "highlightsHeading": "Core Compliance Requirements",
+                  "highlights": [
+                    {
+                      "number": "01.",
+                      "icon": "file-text",
+                      "title": "Mandatory Dematerialization",
+                      "description": "Compulsory conversion of all physical securities into demat format for private limited enterprises."
+                    },
+                    {
+                      "number": "02.",
+                      "icon": "users",
+                      "title": "Independent Director Scrutiny",
+                      "description": "Tighter disclosures regarding board meeting participation, conflicts of interest, and remuneration structures."
+                    },
+                    {
+                      "number": "03.",
+                      "icon": "shield",
+                      "title": "Audit Trail Maintenance",
+                      "description": "Statutory accounting software mandate featuring unalterable edit logs for every single financial transaction."
+                    },
+                    {
+                      "number": "04.",
+                      "icon": "building",
+                      "title": "CSR Impact Assessment Expansion",
+                      "description": "Enhanced evaluation criteria for corporate social responsibility project expenditures and sustainability records."
+                    }
+                  ],
+                  "quote": {
+                    "text": "Complete corporate transparency and audit readiness are non-negotiable fundamentals for the modern enterprise.",
+                    "author": "Corporate Advisory Practice"
+                  },
+                  "conclusionHeading": "Actionable Advisory for Boards",
+                  "conclusionText": "Company secretaries and legal officers must conduct immediate internal compliance reviews to satisfy statutory filings within designated reporting windows.",
+                  "sidebarData": {
+                    "recentPostsTitle": "Recent Media Features",
+                    "recentPosts": [
+                      {
+                        "id": "tax-amendments-2024",
+                        "slug": "tax-amendments-2024",
+                        "title": "What the Latest Tax Amendments Mean for Individuals and Businesses",
+                        "date": "10 Sep, 2024",
+                        "image": "/blog/blog1.svg",
+                        "logo": "/media-lallantop.svg",
+                        "link": "/media/tax-amendments-2024"
+                      },
+                      {
+                        "id": "webinar-legal-challenges",
+                        "slug": "webinar-legal-challenges",
+                        "title": "Upcoming Webinar: Navigating Legal Challenges in 2024",
+                        "date": "05 Sep, 2024",
+                        "image": "/blog/blog2.svg",
+                        "logo": "/media-newsindia.svg",
+                        "link": "/media/webinar-legal-challenges"
+                      },
+                      {
+                        "id": "arbitration-laws-changes",
+                        "slug": "arbitration-laws-changes",
+                        "title": "Changes in Arbitration Laws: What You Need to Know",
+                        "date": "01 Sep, 2024",
+                        "image": "/blog/blog3.svg",
+                        "logo": "/media-indiatv.svg",
+                        "link": "/media/arbitration-laws-changes"
+                      },
+                      {
+                        "id": "labour-code-updates",
+                        "slug": "labour-code-updates",
+                        "title": "New Labour Code Updates: Key Compliance Highlights",
+                        "date": "28 Aug, 2024",
+                        "image": "/services/ser6.svg",
+                        "logo": "/media-aajtak.svg",
+                        "link": "/media/labour-code-updates"
+                      },
+                      {
+                        "id": "rbi-digital-transactions-guidelines",
+                        "slug": "rbi-digital-transactions-guidelines",
+                        "title": "RBI Announces New Guidelines for Digital Transactions",
+                        "date": "25 Aug, 2024",
+                        "image": "/services/ser7.svg",
+                        "logo": "/media-economictimes.svg",
+                        "link": "/media/rbi-digital-transactions-guidelines"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "ip-protection-ai-era",
+                  "slug": "ip-protection-ai-era",
+                  "title": "Intellectual Property Protection in the Era of Artificial Intelligence",
+                  "date": "14 Aug, 2024",
+                  "source": "News India",
+                  "logo": "/media-newsindia.svg",
+                  "image": "/services/ser1.svg",
+                  "category": "INTELLECTUAL PROPERTY & AI",
+                  "excerpt": "News India interviews Veritas Law Partners on the legal ownership of AI-generated content, patent eligibility, and trade secret protection.",
+                  "introductionHeading": "Emerging Frontiers in AI & IP",
+                  "introductionText": "In a prime-time technology feature on News India, Veritas Law Partners discussed the unprecedented legal challenges posed by generative artificial intelligence across copyright, patent law, and commercial trade secrets.\n\nAs businesses integrate autonomous machine models into their core development pipelines, questions of human authorship and copyright infringement liability have entered the judicial spotlight.",
+                  "highlightsHeading": "Critical Legal Dilemmas & Advisory Solutions",
+                  "highlights": [
+                    {
+                      "number": "01.",
+                      "icon": "lock",
+                      "title": "Authorship of AI-Generated Content",
+                      "description": "Current statutory interpretations in India requiring human intellectual labor for valid copyright protection."
+                    },
+                    {
+                      "number": "02.",
+                      "icon": "file-text",
+                      "title": "Training Data Fair Use vs Infringement",
+                      "description": "Legal boundaries surrounding web scraping, copyrighted datasets, and commercial training permissions."
+                    },
+                    {
+                      "number": "03.",
+                      "icon": "shield",
+                      "title": "Enterprise Trade Secret Security",
+                      "description": "Contractual safeguards restricting employees from inputting proprietary code and trade secrets into external AI models."
+                    },
+                    {
+                      "number": "04.",
+                      "icon": "scale",
+                      "title": "Patent Eligibility of Computer-Related Inventions",
+                      "description": "Navigating Section 3(k) guidelines to successfully patent novel AI technical architectures."
+                    }
+                  ],
+                  "quote": {
+                    "text": "Firms failing to establish clear contractual guardrails around internal AI utilization risk compromising their core intellectual assets.",
+                    "author": "Veritas IP & Technology Desk"
+                  },
+                  "conclusionHeading": "Recommended Corporate Safeguards",
+                  "conclusionText": "Businesses must establish internal corporate AI policies and review third-party software licensing to defend their proprietary innovation portfolios.",
+                  "sidebarData": {
+                    "recentPostsTitle": "Recent Media Features",
+                    "recentPosts": [
+                      {
+                        "id": "tax-amendments-2024",
+                        "slug": "tax-amendments-2024",
+                        "title": "What the Latest Tax Amendments Mean for Individuals and Businesses",
+                        "date": "10 Sep, 2024",
+                        "image": "/blog/blog1.svg",
+                        "logo": "/media-lallantop.svg",
+                        "link": "/media/tax-amendments-2024"
+                      },
+                      {
+                        "id": "webinar-legal-challenges",
+                        "slug": "webinar-legal-challenges",
+                        "title": "Upcoming Webinar: Navigating Legal Challenges in 2024",
+                        "date": "05 Sep, 2024",
+                        "image": "/blog/blog2.svg",
+                        "logo": "/media-newsindia.svg",
+                        "link": "/media/webinar-legal-challenges"
+                      },
+                      {
+                        "id": "arbitration-laws-changes",
+                        "slug": "arbitration-laws-changes",
+                        "title": "Changes in Arbitration Laws: What You Need to Know",
+                        "date": "01 Sep, 2024",
+                        "image": "/blog/blog3.svg",
+                        "logo": "/media-indiatv.svg",
+                        "link": "/media/arbitration-laws-changes"
+                      },
+                      {
+                        "id": "labour-code-updates",
+                        "slug": "labour-code-updates",
+                        "title": "New Labour Code Updates: Key Compliance Highlights",
+                        "date": "28 Aug, 2024",
+                        "image": "/services/ser6.svg",
+                        "logo": "/media-aajtak.svg",
+                        "link": "/media/labour-code-updates"
+                      },
+                      {
+                        "id": "rbi-digital-transactions-guidelines",
+                        "slug": "rbi-digital-transactions-guidelines",
+                        "title": "RBI Announces New Guidelines for Digital Transactions",
+                        "date": "25 Aug, 2024",
+                        "image": "/services/ser7.svg",
+                        "logo": "/media-economictimes.svg",
+                        "link": "/media/rbi-digital-transactions-guidelines"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "top-corporate-advisory-firm-2024",
+                  "slug": "top-corporate-advisory-firm-2024",
+                  "title": "Veritas Law Partners Named Top Corporate Advisory Firm 2024",
+                  "date": "10 Aug, 2024",
+                  "source": "India TV",
+                  "logo": "/media-indiatv.svg",
+                  "image": "/services/ser3.svg",
+                  "category": "FIRM RECOGNITION & AWARDS",
+                  "excerpt": "India TV reports on Veritas Law Partners receiving national acclaim as the premier corporate advisory law firm of the year.",
+                  "introductionHeading": "National Industry Recognition",
+                  "introductionText": "India TV broadcasted coverage of the prestigious National Legal Excellence Awards 2024, where Veritas Law Partners was recognized as the 'Corporate Advisory Law Firm of the Year'.\n\nThe award acknowledges our firm's track record in navigating high-stakes corporate restructurings, cross-border mergers, commercial litigation victories, and progressive client counsel.",
+                  "highlightsHeading": "Key Milestones Driving Recognition",
+                  "highlights": [
+                    {
+                      "number": "01.",
+                      "icon": "scale",
+                      "title": "Multi-Billion Dollar Transaction Counsel",
+                      "description": "Advising domestic conglomerates and multinational leaders on complex cross-border joint ventures."
+                    },
+                    {
+                      "number": "02.",
+                      "icon": "users",
+                      "title": "Client-Centric Strategic Advocacy",
+                      "description": "Consistently delivering high-speed, outcome-oriented advisory solutions across commercial touchpoints."
+                    },
+                    {
+                      "number": "03.",
+                      "icon": "shield",
+                      "title": "Regulatory & Dispute Triumph",
+                      "description": "Securing landmark favorable orders before the Supreme Court, NCLAT, and regulatory tribunals."
+                    },
+                    {
+                      "number": "04.",
+                      "icon": "building",
+                      "title": "Expansion Across Key Metros",
+                      "description": "Broadening full-service legal facilities and specialist desks across Delhi NCR, Mumbai, Bengaluru, and Kolkata."
+                    }
+                  ],
+                  "quote": {
+                    "text": "This honor reflects the relentless commitment of our entire team to deliver exemplary, ethical, and transformative legal counsel.",
+                    "author": "Abhishek Kumar, Founding Partner"
+                  },
+                  "conclusionHeading": "Looking Ahead",
+                  "conclusionText": "Veritas Law Partners reiterates its dedication to pioneering innovative legal solutions, fostering client trust, and elevating Indian jurisprudence on the global stage.",
+                  "sidebarData": {
+                    "recentPostsTitle": "Recent Media Features",
+                    "recentPosts": [
+                      {
+                        "id": "tax-amendments-2024",
+                        "slug": "tax-amendments-2024",
+                        "title": "What the Latest Tax Amendments Mean for Individuals and Businesses",
+                        "date": "10 Sep, 2024",
+                        "image": "/blog/blog1.svg",
+                        "logo": "/media-lallantop.svg",
+                        "link": "/media/tax-amendments-2024"
+                      },
+                      {
+                        "id": "webinar-legal-challenges",
+                        "slug": "webinar-legal-challenges",
+                        "title": "Upcoming Webinar: Navigating Legal Challenges in 2024",
+                        "date": "05 Sep, 2024",
+                        "image": "/blog/blog2.svg",
+                        "logo": "/media-newsindia.svg",
+                        "link": "/media/webinar-legal-challenges"
+                      },
+                      {
+                        "id": "arbitration-laws-changes",
+                        "slug": "arbitration-laws-changes",
+                        "title": "Changes in Arbitration Laws: What You Need to Know",
+                        "date": "01 Sep, 2024",
+                        "image": "/blog/blog3.svg",
+                        "logo": "/media-indiatv.svg",
+                        "link": "/media/arbitration-laws-changes"
+                      },
+                      {
+                        "id": "labour-code-updates",
+                        "slug": "labour-code-updates",
+                        "title": "New Labour Code Updates: Key Compliance Highlights",
+                        "date": "28 Aug, 2024",
+                        "image": "/services/ser6.svg",
+                        "logo": "/media-aajtak.svg",
+                        "link": "/media/labour-code-updates"
+                      },
+                      {
+                        "id": "rbi-digital-transactions-guidelines",
+                        "slug": "rbi-digital-transactions-guidelines",
+                        "title": "RBI Announces New Guidelines for Digital Transactions",
+                        "date": "25 Aug, 2024",
+                        "image": "/services/ser7.svg",
+                        "logo": "/media-economictimes.svg",
+                        "link": "/media/rbi-digital-transactions-guidelines"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "rera-framework-homebuyers-rights",
+                  "slug": "rera-framework-homebuyers-rights",
+                  "title": "Real Estate Regulatory Framework: Protecting Homebuyers' Rights",
+                  "date": "05 Aug, 2024",
+                  "source": "Aaj Tak",
+                  "logo": "/media-aajtak.svg",
+                  "image": "/services/ser4.svg",
+                  "category": "REAL ESTATE & CONSUMER LAW",
+                  "excerpt": "Aaj Tak features Veritas Law Partners' legal guidance on RERA provisions, delayed possession remedies, and refund claims.",
+                  "introductionHeading": "Homebuyer Protection & RERA Enforcement",
+                  "introductionText": "Aaj Tak featured an in-depth legal awareness special with Veritas Law Partners exploring the Real Estate (Regulation and Development) Act (RERA) and remedies available to aggrieved property buyers facing delayed possession or structural deviations.\n\nOur real estate practice group explained how recent tribunal decisions have reinforced statutory interest mandates and strict escrow accounting compliance.",
+                  "highlightsHeading": "Core Rights & Legal Recourses",
+                  "highlights": [
+                    {
+                      "number": "01.",
+                      "icon": "scale",
+                      "title": "Compulsory Delayed Possession Interest",
+                      "description": "Statutory entitlement to monthly compensation at prescribed state SBI marginal rates without contractual waivers."
+                    },
+                    {
+                      "number": "02.",
+                      "icon": "shield",
+                      "title": "Escrow Account Protections",
+                      "description": "Rigid enforcement requiring 70% of buyer collections to remain dedicated strictly to project construction costs."
+                    },
+                    {
+                      "number": "03.",
+                      "icon": "file-text",
+                      "title": "Right to Full Refund with Damages",
+                      "description": "The right of allottees to exit stalled projects and claim full refund alongside legal expenses and interest."
+                    },
+                    {
+                      "number": "04.",
+                      "icon": "building",
+                      "title": "Structural Defect Rectification",
+                      "description": "Developer liability to rectify any structural or workmanship defects identified within five years of possession."
+                    }
+                  ],
+                  "quote": {
+                    "text": "RERA has transitioned real estate from an unregulated market into a structured, accountable arena where buyer covenants hold paramount force.",
+                    "author": "Veritas Real Estate Practice"
+                  },
+                  "conclusionHeading": "Action Guide for Homebuyers",
+                  "conclusionText": "Homebuyers encountering non-compliance should maintain organized documentation and seek expert legal representation before the state RERA Authority or Appellate Tribunal.",
+                  "sidebarData": {
+                    "recentPostsTitle": "Recent Media Features",
+                    "recentPosts": [
+                      {
+                        "id": "tax-amendments-2024",
+                        "slug": "tax-amendments-2024",
+                        "title": "What the Latest Tax Amendments Mean for Individuals and Businesses",
+                        "date": "10 Sep, 2024",
+                        "image": "/blog/blog1.svg",
+                        "logo": "/media-lallantop.svg",
+                        "link": "/media/tax-amendments-2024"
+                      },
+                      {
+                        "id": "webinar-legal-challenges",
+                        "slug": "webinar-legal-challenges",
+                        "title": "Upcoming Webinar: Navigating Legal Challenges in 2024",
+                        "date": "05 Sep, 2024",
+                        "image": "/blog/blog2.svg",
+                        "logo": "/media-newsindia.svg",
+                        "link": "/media/webinar-legal-challenges"
+                      },
+                      {
+                        "id": "arbitration-laws-changes",
+                        "slug": "arbitration-laws-changes",
+                        "title": "Changes in Arbitration Laws: What You Need to Know",
+                        "date": "01 Sep, 2024",
+                        "image": "/blog/blog3.svg",
+                        "logo": "/media-indiatv.svg",
+                        "link": "/media/arbitration-laws-changes"
+                      },
+                      {
+                        "id": "labour-code-updates",
+                        "slug": "labour-code-updates",
+                        "title": "New Labour Code Updates: Key Compliance Highlights",
+                        "date": "28 Aug, 2024",
+                        "image": "/services/ser6.svg",
+                        "logo": "/media-aajtak.svg",
+                        "link": "/media/labour-code-updates"
+                      },
+                      {
+                        "id": "rbi-digital-transactions-guidelines",
+                        "slug": "rbi-digital-transactions-guidelines",
+                        "title": "RBI Announces New Guidelines for Digital Transactions",
+                        "date": "25 Aug, 2024",
+                        "image": "/services/ser7.svg",
+                        "logo": "/media-economictimes.svg",
+                        "link": "/media/rbi-digital-transactions-guidelines"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "sebi-compliance-listed-companies",
+                  "slug": "sebi-compliance-listed-companies",
+                  "title": "SEBI Compliance Requirements for Listed Companies Updated",
+                  "date": "01 Aug, 2024",
+                  "source": "The Lallantop",
+                  "logo": "/media-lallantop.svg",
+                  "image": "/services/ser5.svg",
+                  "category": "SECURITIES & CAPITAL MARKETS",
+                  "excerpt": "The Lallantop reports on the Securities and Exchange Board of India's amended disclosure regulations for listed entities.",
+                  "introductionHeading": "Securities Market Reforms",
+                  "introductionText": "In a detailed economic review, The Lallantop covered Veritas Law Partners' analysis of SEBI's revamped Listing Obligations and Disclosure Requirements (LODR) regulations. The updated framework introduces rigorous disclosure timelines for material events, market rumor verifications, and senior management appointments.\n\nOur capital markets practice outlined the compliance roadmaps required to prevent administrative show-cause actions.",
+                  "highlightsHeading": "Key Listing Amendments",
+                  "highlights": [
+                    {
+                      "number": "01.",
+                      "icon": "file-text",
+                      "title": "Mandatory Rumor Confirmation",
+                      "description": "Obligation for top 250 listed entities to confirm, deny, or clarify mainstream market rumors within 24 hours."
+                    },
+                    {
+                      "number": "02.",
+                      "icon": "shield",
+                      "title": "Quantitative Materiality Thresholds",
+                      "description": "Objective financial metrics determining whether an event or transaction qualifies as disclosable material information."
+                    },
+                    {
+                      "number": "03.",
+                      "icon": "users",
+                      "title": "Director Permanency Curtailment",
+                      "description": "Requirement that any board director appointment be subject to shareholder approval at least once every five years."
+                    },
+                    {
+                      "number": "04.",
+                      "icon": "building",
+                      "title": "Related-Party Transaction Approvals",
+                      "description": "Prior approval mechanisms by independent audit committee members for all material RPT agreements."
+                    }
+                  ],
+                  "quote": {
+                    "text": "Transparency and prompt market communication protect companies from disruptive regulatory interventions and market speculation.",
+                    "author": "Veritas Capital Markets Desk"
+                  },
+                  "conclusionHeading": "Preparing Corporate Secretarial Teams",
+                  "conclusionText": "Compliance officers and company secretaries must configure automated escalation systems to detect and disclose qualifying market events within required deadlines.",
+                  "sidebarData": {
+                    "recentPostsTitle": "Recent Media Features",
+                    "recentPosts": [
+                      {
+                        "id": "tax-amendments-2024",
+                        "slug": "tax-amendments-2024",
+                        "title": "What the Latest Tax Amendments Mean for Individuals and Businesses",
+                        "date": "10 Sep, 2024",
+                        "image": "/blog/blog1.svg",
+                        "logo": "/media-lallantop.svg",
+                        "link": "/media/tax-amendments-2024"
+                      },
+                      {
+                        "id": "webinar-legal-challenges",
+                        "slug": "webinar-legal-challenges",
+                        "title": "Upcoming Webinar: Navigating Legal Challenges in 2024",
+                        "date": "05 Sep, 2024",
+                        "image": "/blog/blog2.svg",
+                        "logo": "/media-newsindia.svg",
+                        "link": "/media/webinar-legal-challenges"
+                      },
+                      {
+                        "id": "arbitration-laws-changes",
+                        "slug": "arbitration-laws-changes",
+                        "title": "Changes in Arbitration Laws: What You Need to Know",
+                        "date": "01 Sep, 2024",
+                        "image": "/blog/blog3.svg",
+                        "logo": "/media-indiatv.svg",
+                        "link": "/media/arbitration-laws-changes"
+                      },
+                      {
+                        "id": "labour-code-updates",
+                        "slug": "labour-code-updates",
+                        "title": "New Labour Code Updates: Key Compliance Highlights",
+                        "date": "28 Aug, 2024",
+                        "image": "/services/ser6.svg",
+                        "logo": "/media-aajtak.svg",
+                        "link": "/media/labour-code-updates"
+                      },
+                      {
+                        "id": "rbi-digital-transactions-guidelines",
+                        "slug": "rbi-digital-transactions-guidelines",
+                        "title": "RBI Announces New Guidelines for Digital Transactions",
+                        "date": "25 Aug, 2024",
+                        "image": "/services/ser7.svg",
+                        "logo": "/media-economictimes.svg",
+                        "link": "/media/rbi-digital-transactions-guidelines"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "cross-border-mergers-legal-tax",
+                  "slug": "cross-border-mergers-legal-tax",
+                  "title": "Understanding Cross-Border Mergers: Legal and Financial Tax Impact",
+                  "date": "28 Jul, 2024",
+                  "source": "India TV",
+                  "logo": "/media-indiatv.svg",
+                  "image": "/casestudy.svg",
+                  "category": "CROSS-BORDER M&A",
+                  "excerpt": "India TV features Veritas Law Partners' expert breakdown of outbound and inbound merger legalities under FEMA and corporate tax regimes.",
+                  "introductionHeading": "Global M&A Structural Complexity",
+                  "introductionText": "India TV broadcasted a specialized business interview featuring Veritas Law Partners examining the evolving regulatory landscape of inbound and outbound cross-border corporate mergers. Operating under the tripartite oversight of the Companies Act, FEMA regulations, and Competition Commission clearance, such transactions require immaculate structuring.\n\nOur cross-border M&A team highlighted statutory avenues to optimize valuation transfer while securing regulatory approvals.",
+                  "highlightsHeading": "Strategic Considerations in Cross-Border Deals",
+                  "highlights": [
+                    {
+                      "number": "01.",
+                      "icon": "building",
+                      "title": "Dual Regulatory Cleared Frameworks",
+                      "description": "Synchronizing approval workflows between RBI, Ministry of Corporate Affairs, and jurisdictional courts."
+                    },
+                    {
+                      "number": "02.",
+                      "icon": "scale",
+                      "title": "Deemed Approval Mechanisms",
+                      "description": "Capitalizing on fast-track routes where transactions comply with standardized foreign exchange caps."
+                    },
+                    {
+                      "number": "03.",
+                      "icon": "file-text",
+                      "title": "Capital Gains & Withholding Tax Safeguards",
+                      "description": "Structuring share-swap and asset transfers to maintain tax neutrality under domestic and international treaties."
+                    },
+                    {
+                      "number": "04.",
+                      "icon": "shield",
+                      "title": "Antitrust & Competition Clearances",
+                      "description": "Conducting market concentration impact analyses to prevent unexpected CCI investigations or transaction halts."
+                    }
+                  ],
+                  "quote": {
+                    "text": "Flawless cross-border transactions hinge on synthesizing foreign exchange compliance, corporate law, and tax neutrality into a singular strategy.",
+                    "author": "M&A Strategic Group, Veritas Law Partners"
+                  },
+                  "conclusionHeading": "Strategic Execution Recommendations",
+                  "conclusionText": "Multinational boards planning corporate consolidation should engage experienced transaction counsel early during termsheet negotiation to preempt regulatory snags.",
+                  "sidebarData": {
+                    "recentPostsTitle": "Recent Media Features",
+                    "recentPosts": [
+                      {
+                        "id": "tax-amendments-2024",
+                        "slug": "tax-amendments-2024",
+                        "title": "What the Latest Tax Amendments Mean for Individuals and Businesses",
+                        "date": "10 Sep, 2024",
+                        "image": "/blog/blog1.svg",
+                        "logo": "/media-lallantop.svg",
+                        "link": "/media/tax-amendments-2024"
+                      },
+                      {
+                        "id": "webinar-legal-challenges",
+                        "slug": "webinar-legal-challenges",
+                        "title": "Upcoming Webinar: Navigating Legal Challenges in 2024",
+                        "date": "05 Sep, 2024",
+                        "image": "/blog/blog2.svg",
+                        "logo": "/media-newsindia.svg",
+                        "link": "/media/webinar-legal-challenges"
+                      },
+                      {
+                        "id": "arbitration-laws-changes",
+                        "slug": "arbitration-laws-changes",
+                        "title": "Changes in Arbitration Laws: What You Need to Know",
+                        "date": "01 Sep, 2024",
+                        "image": "/blog/blog3.svg",
+                        "logo": "/media-indiatv.svg",
+                        "link": "/media/arbitration-laws-changes"
+                      },
+                      {
+                        "id": "labour-code-updates",
+                        "slug": "labour-code-updates",
+                        "title": "New Labour Code Updates: Key Compliance Highlights",
+                        "date": "28 Aug, 2024",
+                        "image": "/services/ser6.svg",
+                        "logo": "/media-aajtak.svg",
+                        "link": "/media/labour-code-updates"
+                      },
+                      {
+                        "id": "rbi-digital-transactions-guidelines",
+                        "slug": "rbi-digital-transactions-guidelines",
+                        "title": "RBI Announces New Guidelines for Digital Transactions",
+                        "date": "25 Aug, 2024",
+                        "image": "/services/ser7.svg",
+                        "logo": "/media-economictimes.svg",
+                        "link": "/media/rbi-digital-transactions-guidelines"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "dpdp-act-corporate-playbook",
+                  "slug": "dpdp-act-corporate-playbook",
+                  "title": "Digital Personal Data Protection Act 2023: Corporate Playbook",
+                  "date": "22 Jul, 2024",
+                  "source": "The Lallantop",
+                  "logo": "/media-lallantop.svg",
+                  "image": "/services/ser6.svg",
+                  "category": "DATA PRIVACY & CYBER LAW",
+                  "excerpt": "The Lallantop details Veritas Law Partners' enterprise roadmap for compliance with India's landmark Digital Personal Data Protection Act.",
+                  "introductionHeading": "A Paradigm Shift in Data Governance",
+                  "introductionText": "In a dedicated digital economy story, The Lallantop showcased Veritas Law Partners' actionable corporate playbook on implementing the Digital Personal Data Protection Act (DPDP Act). With penalties for major data breaches scaling up to INR 250 Crores, data protection is now a board-level imperative.\n\nOur data privacy desk outlined the essential compliance milestones every enterprise managing digital personal data must enforce.",
+                  "highlightsHeading": "Essential DPDP Act Mandates",
+                  "highlights": [
+                    {
+                      "number": "01.",
+                      "icon": "lock",
+                      "title": "Unbundled Consent Architecture",
+                      "description": "Clear, itemized, and withdrawable consent notices in multiple scheduled Indian languages without coercive terms."
+                    },
+                    {
+                      "number": "02.",
+                      "icon": "shield",
+                      "title": "Data Principal Rights Enablement",
+                      "description": "Operational mechanisms allowing users to access, correct, erase, or nominate representatives for their personal data."
+                    },
+                    {
+                      "number": "03.",
+                      "icon": "file-text",
+                      "title": "Data Protection Officer (DPO) Appointment",
+                      "description": "Mandatory appointment of India-based Data Protection Officers for designated Significant Data Fiduciaries."
+                    },
+                    {
+                      "number": "04.",
+                      "icon": "users",
+                      "title": "Children's Data Processing Restrictions",
+                      "description": "Strict prohibition of behavioral tracking, targeted advertisements, and processing of children's data without parental consent."
+                    }
+                  ],
+                  "quote": {
+                    "text": "Data fiduciary compliance is no longer a checklist exercise; it requires a systemic overhaul of enterprise digital architecture.",
+                    "author": "Veritas Cyber & Privacy Desk"
+                  },
+                  "conclusionHeading": "Implementation Roadmap",
+                  "conclusionText": "Enterprises should map their data workflows, audit third-party processors, and establish rapid incident reporting protocols before full enforcement rollout.",
+                  "sidebarData": {
+                    "recentPostsTitle": "Recent Media Features",
+                    "recentPosts": [
+                      {
+                        "id": "tax-amendments-2024",
+                        "slug": "tax-amendments-2024",
+                        "title": "What the Latest Tax Amendments Mean for Individuals and Businesses",
+                        "date": "10 Sep, 2024",
+                        "image": "/blog/blog1.svg",
+                        "logo": "/media-lallantop.svg",
+                        "link": "/media/tax-amendments-2024"
+                      },
+                      {
+                        "id": "webinar-legal-challenges",
+                        "slug": "webinar-legal-challenges",
+                        "title": "Upcoming Webinar: Navigating Legal Challenges in 2024",
+                        "date": "05 Sep, 2024",
+                        "image": "/blog/blog2.svg",
+                        "logo": "/media-newsindia.svg",
+                        "link": "/media/webinar-legal-challenges"
+                      },
+                      {
+                        "id": "arbitration-laws-changes",
+                        "slug": "arbitration-laws-changes",
+                        "title": "Changes in Arbitration Laws: What You Need to Know",
+                        "date": "01 Sep, 2024",
+                        "image": "/blog/blog3.svg",
+                        "logo": "/media-indiatv.svg",
+                        "link": "/media/arbitration-laws-changes"
+                      },
+                      {
+                        "id": "labour-code-updates",
+                        "slug": "labour-code-updates",
+                        "title": "New Labour Code Updates: Key Compliance Highlights",
+                        "date": "28 Aug, 2024",
+                        "image": "/services/ser6.svg",
+                        "logo": "/media-aajtak.svg",
+                        "link": "/media/labour-code-updates"
+                      },
+                      {
+                        "id": "rbi-digital-transactions-guidelines",
+                        "slug": "rbi-digital-transactions-guidelines",
+                        "title": "RBI Announces New Guidelines for Digital Transactions",
+                        "date": "25 Aug, 2024",
+                        "image": "/services/ser7.svg",
+                        "logo": "/media-economictimes.svg",
+                        "link": "/media/rbi-digital-transactions-guidelines"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "esg-regulations-sustainable-finance",
+                  "slug": "esg-regulations-sustainable-finance",
+                  "title": "ESG Regulations and Sustainable Finance Frameworks for Indian Business",
+                  "date": "18 Jul, 2024",
+                  "source": "News India",
+                  "logo": "/media-newsindia.svg",
+                  "image": "/services/ser7.svg",
+                  "category": "ESG & SUSTAINABILITY",
+                  "excerpt": "News India features Veritas Law Partners' advisory on BRSR Core compliance, green financing, and sustainable corporate governance.",
+                  "introductionHeading": "The Rise of ESG Regulation in India",
+                  "introductionText": "News India's environmental law segment featured Veritas Law Partners discussing the rapid evolution of Environmental, Social, and Governance (ESG) mandates for corporate India. Under SEBI's Business Responsibility and Sustainability Reporting (BRSR) Core framework, listed companies must now provide reasonable assurance on sustainability disclosures.\n\nOur sustainability practice unpacked the legal liabilities tied to greenwashing and the opportunities unlocking in sustainable debt financing.",
+                  "highlightsHeading": "Core ESG Pillars & Compliance Norms",
+                  "highlights": [
+                    {
+                      "number": "01.",
+                      "icon": "shield",
+                      "title": "BRSR Core Assurance Protocols",
+                      "description": "Mandatory third-party verification of key performance indicators covering greenhouse emissions, water use, and gender diversity."
+                    },
+                    {
+                      "number": "02.",
+                      "icon": "building",
+                      "title": "Value Chain ESG Disclosure",
+                      "description": "Extending sustainability accountability to upstream suppliers and downstream logistics partners."
+                    },
+                    {
+                      "number": "03.",
+                      "icon": "scale",
+                      "title": "Greenwashing Legal Liabilities",
+                      "description": "Regulatory enforcement curbing unsubstantiated environmental claims across consumer and investment products."
+                    },
+                    {
+                      "number": "04.",
+                      "icon": "file-text",
+                      "title": "Green Bonds & Sustainable Financing",
+                      "description": "Legal frameworks for raising capital through certified green bonds and sustainability-linked credit facilities."
+                    }
+                  ],
+                  "quote": {
+                    "text": "Sustainable corporate strategy has migrated from ethical aspiration to a core legal and financial determinant of capital access.",
+                    "author": "Veritas ESG Practice Group"
+                  },
+                  "conclusionHeading": "Strategic Recommendations for Management",
+                  "conclusionText": "Boards of directors should institute specialized ESG committees to audit supply chain integrity and review sustainability reporting with the same rigor applied to financial statements.",
+                  "sidebarData": {
+                    "recentPostsTitle": "Recent Media Features",
+                    "recentPosts": [
+                      {
+                        "id": "tax-amendments-2024",
+                        "slug": "tax-amendments-2024",
+                        "title": "What the Latest Tax Amendments Mean for Individuals and Businesses",
+                        "date": "10 Sep, 2024",
+                        "image": "/blog/blog1.svg",
+                        "logo": "/media-lallantop.svg",
+                        "link": "/media/tax-amendments-2024"
+                      },
+                      {
+                        "id": "webinar-legal-challenges",
+                        "slug": "webinar-legal-challenges",
+                        "title": "Upcoming Webinar: Navigating Legal Challenges in 2024",
+                        "date": "05 Sep, 2024",
+                        "image": "/blog/blog2.svg",
+                        "logo": "/media-newsindia.svg",
+                        "link": "/media/webinar-legal-challenges"
+                      },
+                      {
+                        "id": "arbitration-laws-changes",
+                        "slug": "arbitration-laws-changes",
+                        "title": "Changes in Arbitration Laws: What You Need to Know",
+                        "date": "01 Sep, 2024",
+                        "image": "/blog/blog3.svg",
+                        "logo": "/media-indiatv.svg",
+                        "link": "/media/arbitration-laws-changes"
+                      },
+                      {
+                        "id": "labour-code-updates",
+                        "slug": "labour-code-updates",
+                        "title": "New Labour Code Updates: Key Compliance Highlights",
+                        "date": "28 Aug, 2024",
+                        "image": "/services/ser6.svg",
+                        "logo": "/media-aajtak.svg",
+                        "link": "/media/labour-code-updates"
+                      },
+                      {
+                        "id": "rbi-digital-transactions-guidelines",
+                        "slug": "rbi-digital-transactions-guidelines",
+                        "title": "RBI Announces New Guidelines for Digital Transactions",
+                        "date": "25 Aug, 2024",
+                        "image": "/services/ser7.svg",
+                        "logo": "/media-economictimes.svg",
+                        "link": "/media/rbi-digital-transactions-guidelines"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "dispute-resolution-commercial-contracts",
+                  "slug": "dispute-resolution-commercial-contracts",
+                  "title": "Navigating Dispute Resolution in High-Stakes Commercial Contracts",
+                  "date": "12 Jul, 2024",
+                  "source": "India TV",
+                  "logo": "/media-indiatv.svg",
+                  "image": "/blog/blog1.svg",
+                  "category": "COMMERCIAL LITIGATION",
+                  "excerpt": "India TV consults Veritas Law Partners on contract drafting pitfalls, indemnity enforcement, and multi-jurisdictional dispute strategies.",
+                  "introductionHeading": "Commercial Litigation Realities",
+                  "introductionText": "In a prime-time discussion on India TV's corporate series, Veritas Law Partners provided strategic perspectives on mitigating dispute exposure in high-value commercial joint ventures and procurement contracts.\n\nWith commercial courts enforcing contractual party autonomy with increasing rigor, vague dispute resolution clauses frequently lead to multi-year jurisdictional quagmires.",
+                  "highlightsHeading": "Essential Contractual Protections",
+                  "highlights": [
+                    {
+                      "number": "01.",
+                      "icon": "file-text",
+                      "title": "Unambiguous Seat vs Venue Selection",
+                      "description": "Preventing conflicting court jurisdictions by precisely designating the legal seat of arbitration."
+                    },
+                    {
+                      "number": "02.",
+                      "icon": "scale",
+                      "title": "Multi-Tiered Escalation Protocols",
+                      "description": "Mandating executive mediation and good-faith negotiation intervals prior to invoking formal arbitration."
+                    },
+                    {
+                      "number": "03.",
+                      "icon": "shield",
+                      "title": "Comprehensive Indemnity & Limitation of Liability",
+                      "description": "Explicitly defining indemnity triggers, survival periods, and monetary caps to prevent open-ended liabilities."
+                    },
+                    {
+                      "number": "04.",
+                      "icon": "building",
+                      "title": "Interim Relief & Asset Preservation",
+                      "description": "Leveraging Section 9 of the Arbitration Act to secure bank guarantees and prevent asset dissipation."
+                    }
+                  ],
+                  "quote": {
+                    "text": "A commercial agreement is only as solid as its dispute clause under stress; foresight during drafting saves millions in courtroom defense.",
+                    "author": "Veritas Commercial Litigation Desk"
+                  },
+                  "conclusionHeading": "Practical Drafting Advice",
+                  "conclusionText": "General counsels should ensure dispute resolution terms are drafted by trial litigators who understand how contractual clauses hold up under fierce judicial scrutiny.",
+                  "sidebarData": {
+                    "recentPostsTitle": "Recent Media Features",
+                    "recentPosts": [
+                      {
+                        "id": "tax-amendments-2024",
+                        "slug": "tax-amendments-2024",
+                        "title": "What the Latest Tax Amendments Mean for Individuals and Businesses",
+                        "date": "10 Sep, 2024",
+                        "image": "/blog/blog1.svg",
+                        "logo": "/media-lallantop.svg",
+                        "link": "/media/tax-amendments-2024"
+                      },
+                      {
+                        "id": "webinar-legal-challenges",
+                        "slug": "webinar-legal-challenges",
+                        "title": "Upcoming Webinar: Navigating Legal Challenges in 2024",
+                        "date": "05 Sep, 2024",
+                        "image": "/blog/blog2.svg",
+                        "logo": "/media-newsindia.svg",
+                        "link": "/media/webinar-legal-challenges"
+                      },
+                      {
+                        "id": "arbitration-laws-changes",
+                        "slug": "arbitration-laws-changes",
+                        "title": "Changes in Arbitration Laws: What You Need to Know",
+                        "date": "01 Sep, 2024",
+                        "image": "/blog/blog3.svg",
+                        "logo": "/media-indiatv.svg",
+                        "link": "/media/arbitration-laws-changes"
+                      },
+                      {
+                        "id": "labour-code-updates",
+                        "slug": "labour-code-updates",
+                        "title": "New Labour Code Updates: Key Compliance Highlights",
+                        "date": "28 Aug, 2024",
+                        "image": "/services/ser6.svg",
+                        "logo": "/media-aajtak.svg",
+                        "link": "/media/labour-code-updates"
+                      },
+                      {
+                        "id": "rbi-digital-transactions-guidelines",
+                        "slug": "rbi-digital-transactions-guidelines",
+                        "title": "RBI Announces New Guidelines for Digital Transactions",
+                        "date": "25 Aug, 2024",
+                        "image": "/services/ser7.svg",
+                        "logo": "/media-economictimes.svg",
+                        "link": "/media/rbi-digital-transactions-guidelines"
+                      }
+                    ]
                   }
                 }
               ]

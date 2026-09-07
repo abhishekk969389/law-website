@@ -42,7 +42,6 @@ export default function About({ data = defaultAboutData }: AboutProps) {
     return (
         <section className="relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden">
             <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                { }
                 <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-6 md:mb-8 gap-6">
                     <FadeIn direction="up" delay={0.1}>
                         <div className="flex flex-col items-center md:items-start text-center md:text-left">
@@ -74,8 +73,6 @@ export default function About({ data = defaultAboutData }: AboutProps) {
                             </h2>
                         </div>
                     </FadeIn>
-
-                    { }
                     <FadeIn
                         direction="left"
                         delay={0.2}
@@ -148,16 +145,13 @@ export default function About({ data = defaultAboutData }: AboutProps) {
                         </div>
                     </FadeIn>
 
-                    { }
                     <div className="lg:col-span-7 flex flex-col justify-center text-center md:text-left items-center md:items-start">
-                        { }
                         <FadeIn direction="up" delay={0.2}>
                             <span className="text-[#D4A359] text-sm md:text-lg font-semibold tracking-wider uppercase mb-3 block text-center md:text-left">
                                 {foundation.subTagline}
                             </span>
                         </FadeIn>
 
-                        { }
                         <FadeIn direction="up" delay={0.3}>
                             <h3 className="font-serif text-2xl sm:text-2xl md:text-4xl lg:text-[42px] leading-tight mb-6 text-center md:text-left">
                                 <span className="text-white italic">
@@ -169,14 +163,12 @@ export default function About({ data = defaultAboutData }: AboutProps) {
                             </h3>
                         </FadeIn>
 
-                        { }
                         <FadeIn direction="up" delay={0.4}>
                             <p className="text-slate-300 text-sm sm:text-lg leading-relaxed mb-10 max-w-2xl text-center md:text-left">
                                 {foundation.description}
                             </p>
                         </FadeIn>
 
-                        { }
                         <StaggerContainer
                             staggerChildren={0.12}
                             delayChildren={0.45}
@@ -191,13 +183,11 @@ export default function About({ data = defaultAboutData }: AboutProps) {
                                         key={item.id || idx}
                                         className="relative lg:pr-4 bg-[#0E141E]/40 sm:bg-transparent p-4 sm:p-0 rounded-2xl sm:rounded-none border border-slate-800/50 sm:border-none"
                                     >
-                                        { }
                                         {idx < foundation.items.length - 1 && (
                                             <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-24 bg-slate-800" />
                                         )}
 
                                         <div className="flex flex-col items-center md:items-start text-center md:text-left">
-                                            { }
                                             <motion.div
                                                 whileHover={{ scale: 1.1, rotate: 6 }}
                                                 transition={{ type: "spring", stiffness: 300 }}
@@ -207,12 +197,11 @@ export default function About({ data = defaultAboutData }: AboutProps) {
                                             </motion.div>
 
                                             <div className="text-center md:text-left">
-                                                { }
+
                                                 <h4 className="text-white font-semibold text-sm sm:text-sm mb-1">
                                                     {item.title}
                                                 </h4>
 
-                                                { }
                                                 <p className="text-slate-400 text-sm sm:text-sm leading-relaxed">
                                                     {item.description}
                                                 </p>

@@ -62,15 +62,15 @@ export default function CaseStudy({
   return (
     <section className="relative w-full bg-[#0B151E] text-white py-10 sm:py-12 md:py-14 mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        { }
+
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-10 sm:mb-12 gap-6">
-          { }
+  
           <FadeIn
             direction="up"
             delay={0.1}
             className="max-w-3xl text-center md:text-left flex flex-col items-center md:items-start"
           >
-            { }
+    
             <div className="flex items-center gap-2 mb-3 justify-center md:justify-start">
               <Folder className="w-6 h-6 text-[#D4A359]" />
               <span className="text-[#D4A359] text-sm md:text-lg font-semibold tracking-widest uppercase">
@@ -79,7 +79,7 @@ export default function CaseStudy({
               <span className="w-12 h-[1px] bg-[#D4A359]/60 ml-1" />
             </div>
 
-            { }
+    
             <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.2] tracking-tight text-white mb-4 text-center md:text-left">
               <span className="font-medium">{heading.line1}</span>{" "}
               <span className="text-[#D4A359] italic font-serif">
@@ -88,13 +88,13 @@ export default function CaseStudy({
               <span className="font-medium">{heading.line2}</span>
             </h2>
 
-            { }
+    
             <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl text-center md:text-left">
               {subheading}
             </p>
           </FadeIn>
 
-          { }
+  
           <FadeIn
             direction="left"
             delay={0.2}
@@ -121,7 +121,7 @@ export default function CaseStudy({
           </FadeIn>
         </div>
 
-        { }
+
         <StaggerContainer
           key={currentIndex}
           staggerChildren={0.12}

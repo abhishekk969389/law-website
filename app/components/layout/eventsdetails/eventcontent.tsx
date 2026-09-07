@@ -52,7 +52,7 @@ export function EventContent({ event }: EventContentProps) {
 
   return (
     <div className="rounded-2xl sm:rounded-3xl bg-[#0B0E14] border border-slate-800/80 p-5 sm:p-7 md:p-8 lg:p-10 shadow-2xl select-none text-left divide-y divide-slate-800/80">
-      { }
+     
       {event.aboutText && (
         <FadeIn
           direction="up"
@@ -61,12 +61,12 @@ export function EventContent({ event }: EventContentProps) {
           className="pb-6 sm:pb-8"
         >
           <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-5">
-            { }
+           
             <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl border border-[#D4A359]/70 bg-[#070B12] text-[#D4A359] flex items-center justify-center shrink-0 shadow-md">
               <FileText className="w-5 h-5 stroke-[1.8]" />
             </div>
 
-            { }
+           
             <div className="flex-1">
               <h2 className="font-serif text-xl sm:text-2xl text-white font-medium mb-3">
                 {headings?.about ? (
@@ -88,7 +88,7 @@ export function EventContent({ event }: EventContentProps) {
         </FadeIn>
       )}
 
-      { }
+     
       {event.takeaways && event.takeaways.length > 0 && (
         <FadeIn
           direction="up"
@@ -97,12 +97,12 @@ export function EventContent({ event }: EventContentProps) {
           className="py-6 sm:py-8"
         >
           <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-5">
-            { }
+           
             <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl border border-[#D4A359]/70 bg-[#070B12] text-[#D4A359] flex items-center justify-center shrink-0 shadow-md">
               <CheckCircle2 className="w-5 h-5 stroke-[1.8]" />
             </div>
 
-            { }
+           
             <div className="flex-1">
               <h2 className="font-serif text-xl sm:text-2xl text-white font-medium mb-5">
                 {headings?.takeaways || "Key Takeaways"}
@@ -125,7 +125,7 @@ export function EventContent({ event }: EventContentProps) {
         </FadeIn>
       )}
 
-      { }
+     
       {event.timeline && event.timeline.length > 0 && (
         <FadeIn
           direction="up"
@@ -134,18 +134,18 @@ export function EventContent({ event }: EventContentProps) {
           className="py-6 sm:py-8"
         >
           <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-5">
-            { }
+           
             <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl border border-[#D4A359]/70 bg-[#070B12] text-[#D4A359] flex items-center justify-center shrink-0 shadow-md">
               <Clock className="w-5 h-5 stroke-[1.8]" />
             </div>
 
-            { }
+           
             <div className="flex-1 min-w-0 w-full">
               <h2 className="font-serif text-xl sm:text-2xl text-white font-medium mb-6">
                 {headings?.agenda || "Agenda / Schedule"}
               </h2>
 
-              { }
+             
               <div className="block md:hidden space-y-5 relative before:absolute before:left-3 before:top-0 before:bottom-0 before:w-0.5 before:-translate-x-1/2 before:bg-gradient-to-b before:from-transparent before:via-[#D4A359]/60 before:to-transparent">
                 {event.timeline.map((item: any, idx: any) => (
                   <div key={idx} className="relative flex items-start mb-5">
@@ -162,10 +162,10 @@ export function EventContent({ event }: EventContentProps) {
                 ))}
               </div>
 
-              { }
+             
               <div className="hidden md:block overflow-x-auto pb-2 pt-1 scrollbar-thin w-full">
                 <div className="min-w-[720px]">
-                  { }
+                 
                   <div
                     className="grid divide-x divide-slate-800/90"
                     style={{

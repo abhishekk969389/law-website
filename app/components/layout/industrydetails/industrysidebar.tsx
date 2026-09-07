@@ -78,7 +78,7 @@ export function IndustrySidebar({
 
   return (
     <aside className="space-y-8 sticky top-24">
-      { }
+    
       {allIndustries && allIndustries.length > 0 && (
         <FadeIn
           direction="up"

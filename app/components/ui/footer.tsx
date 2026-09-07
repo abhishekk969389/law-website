@@ -39,7 +39,7 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
 
   return (
     <footer className="relative w-full bg-[#0C191B] text-white pt-6 md:pt-8 overflow-hidden">
-      { }
+   
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Image
           src={backgroundImage || "/footerimg.svg"}
@@ -53,7 +53,7 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
       </div>
 
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        { }
+     
         <FadeIn
           direction="up"
           delay={0.1}
@@ -92,13 +92,13 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
           </form>
         </FadeIn>
 
-        { }
+     
         <StaggerContainer
           staggerChildren={0.1}
           delayChildren={0.2}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-6 py-7"
         >
-          { }
+       
           <StaggerItem className="lg:col-span-3">
             <div className="mb-4">
               <Link href="/" className="inline-block">
@@ -163,7 +163,7 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
             </div>
           </StaggerItem>
 
-          { }
+       
           <StaggerItem className="lg:col-span-2">
             <h5 className="text-lg lg:text-xl font-bold text-[#D4A359] mb-4">
               {popularCases?.title}
@@ -185,7 +185,7 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
             </ul>
           </StaggerItem>
 
-          { }
+       
           <StaggerItem className="lg:col-span-2">
             <h5 className="text-lg lg:text-xl font-bold text-[#D4A359] mb-4">
               {resources?.title || "Resources"}
@@ -222,7 +222,7 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
             </ul>
           </StaggerItem>
 
-          { }
+       
           <StaggerItem className="lg:col-span-2">
             <h5 className="text-lg lg:text-xl font-bold text-[#D4A359] mb-4">
               {recentNews?.title}
@@ -257,7 +257,7 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
             </div>
           </StaggerItem>
 
-          { }
+       
           <StaggerItem className="lg:col-span-3 lg:justify-self-end space-y-4">
             <div>
               <h5 className="text-lg lg:text-xl font-bold text-[#D4A359] mb-3">
@@ -299,7 +299,7 @@ export default function Footer({ data = defaultFooterData }: FooterProps) {
         </StaggerContainer>
       </div>
 
-      { }
+   
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pb-6 pt-3 relative z-10">
         <div className="w-full bg-[#E5B562]/80 text-[#0B0E14] font-semibold text-sm sm:text-base text-center py-4 px-4 shadow-md">
           {copyrightText}

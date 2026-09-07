@@ -116,32 +116,32 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
 
   return (
     <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      { }
+ 
       <FadeIn
         direction="up"
         delay={0.1}
         className="group relative rounded-3xl border border-slate-800/80 bg-[#070A11] p-6 sm:p-10 lg:p-12 shadow-2xl overflow-hidden hover:border-[#D4A359]/30 transition-all duration-300"
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-stretch relative z-10">
-          { }
+     
           <div className="lg:col-span-5 space-y-6 sm:space-y-7 flex flex-col items-center md:items-start text-center md:text-left">
-            { }
+       
             <div className="w-12 h-12 sm:w-13 sm:h-13 rounded-full border border-[#D4A359]/60 flex items-center justify-center bg-[#05080E] text-[#D4A359] mb-5 shadow-[0_0_12px_rgba(212,163,89,0.15)]">
               <Scale className="w-6 h-6 sm:w-7 sm:h-7 text-[#D4A359]" />
             </div>
 
-            { }
+       
             <div className="flex flex-col items-center md:items-start text-center md:text-left">
               <h2 className="font-serif text-4xl sm:text-5xl lg:text-[50px] leading-[1.15] tracking-tight mb-4 text-center md:text-left">
                 {title || "Book a Consultation"}
               </h2>
 
-              { }
+         
               <div className="w-14 h-[2px] bg-[#D4A359] mb-4 relative flex items-center mx-auto md:mx-0">
                 <span className="w-1.5 h-1.5 bg-[#D4A359] rotate-45 absolute left-1/2 -translate-x-1/2" />
               </div>
 
-              { }
+         
               {subtitle && (
                 <p className="text-slate-400 text-sm sm:text-base leading-relaxed mb-6 text-center md:text-left">
                   {subtitle}
@@ -149,7 +149,7 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
               )}
             </div>
 
-            { }
+       
             <div className="space-y-6 sm:space-y-7">
               {features &&
                 features.map((item: any) => (
@@ -172,7 +172,7 @@ export function Booksec({ data = defaultBookSectionData }: BooksecProps) {
                 ))}
             </div>
 
-            { }
+       
             {assistance && (
               <div className="rounded-2xl border border-slate-800/80 bg-[#05080E] p-5 sm:p-6 flex items-center gap-4 md:mt-20 shadow-xl">
                 <div className="w-12 h-12 rounded-full border border-[#D4A359]/60 flex items-center justify-center bg-[#090D16] text-[#D4A359] shrink-0">

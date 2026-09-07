@@ -47,18 +47,18 @@ export function Careersec({ data = defaultCareerSectionData }: CareersecProps) {
 
   return (
     <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      { }
+
       <FadeIn
         direction="up"
         delay={0.1}
         className="text-center md:text-left max-w-3xl mb-4 sm:mb-5 flex flex-col items-center md:items-start"
       >
-        { }
+  
         <h2 className="font-serif text-2xl sm:text-2xl md:text-4xl leading-[1.15] tracking-tight text-white mb-3 text-center md:text-left">
           {title || "Open Positions"}
         </h2>
 
-        { }
+  
         {description && (
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed max-w-2xl text-center md:text-left">
             {description}
@@ -66,7 +66,7 @@ export function Careersec({ data = defaultCareerSectionData }: CareersecProps) {
         )}
       </FadeIn>
 
-      { }
+
       <StaggerContainer
         staggerChildren={0.1}
         delayChildren={0.2}

@@ -184,16 +184,6 @@ export function EventHero({ event }: EventHeroProps) {
                 <ChevronRight className="w-4 h-4" />
               </Link>
             )}
-
-            {event.calendarText && (
-              <button
-                onClick={handleAddToCalendar}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-md border border-slate-700 hover:border-[#D4A359] bg-[#0A0E17]/80 hover:bg-[#0A0E17] text-white font-medium text-sm transition-all shadow-md"
-              >
-                <span>{event.calendarText}</span>
-                <CalendarPlus className="w-4 h-4 text-[#D4A359]" />
-              </button>
-            )}
           </div>
         </div>
       </div>

@@ -56,12 +56,12 @@ export default function Card({ data = defaultFeatures }: CardProps) {
                   transition={{ duration: 0.2 }}
                   className="flex items-center gap-4 lg:px-6 lg:first:pl-2 lg:last:pr-2 relative group cursor-pointer"
                 >
-                  { }
+       
                   {index < data.length - 1 && (
                     <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-12 bg-slate-800/80" />
                   )}
 
-                  { }
+       
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ type: "spring", stiffness: 300 }}
@@ -70,7 +70,7 @@ export default function Card({ data = defaultFeatures }: CardProps) {
                     <IconComponent className="w-8 h-8 lg:w-10 lg:h-10 text-[#D4A359] transition-transform duration-300 group-hover:scale-110" />
                   </motion.div>
 
-                  { }
+       
                   <div>
                     <h3 className="text-white font-semibold text-sm lg:text-base tracking-tight mb-0.5 group-hover:text-[#D4A359] transition-colors duration-300">
                       {item.title}

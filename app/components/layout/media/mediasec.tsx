@@ -26,7 +26,7 @@ export interface MediasecProps {
 export function Mediasec({ data = defaultMediaSectionData }: MediasecProps) {
   if (!data) return null;
 
-  const { tagline, heading, subheading, items = [] } = data;
+  const { tagline, heading, subheading, buttonText, items = [] } = (data || {}) as any;
   const [currentPage, setCurrentPage] = React.useState(1);
   const itemsPerPage = 6;
   const totalPages = Math.max(1, Math.ceil(items.length / itemsPerPage));
@@ -44,14 +44,14 @@ export function Mediasec({ data = defaultMediaSectionData }: MediasecProps) {
 
   return (
     <section className="max-w-[1400px] mx-auto relative w-full bg-[#0B0E14] text-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden select-none px-4 sm:px-6 lg:px-8">
-      { }
+
       <FadeIn
         id="media-section-header"
         direction="up"
         delay={0.1}
         className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 lg:mb-12"
       >
-        { }
+   
         <div className="flex items-center justify-center gap-3 mb-3">
           <span className="w-12 h-[1px] bg-[#D4A359]/60" />
           <div className="flex items-center gap-2">
@@ -63,7 +63,6 @@ export function Mediasec({ data = defaultMediaSectionData }: MediasecProps) {
           <span className="w-12 h-[1px] bg-[#D4A359]/60" />
         </div>
 
-        { }
         <h2 className="font-serif text-2xl sm:text-2xl md:text-5xl lg:text-[56px] leading-[1.15] tracking-tight mb-4">
           <span className="text-white font-medium">
             {heading?.line1 || "Veritas in the"}
@@ -72,8 +71,6 @@ export function Mediasec({ data = defaultMediaSectionData }: MediasecProps) {
             {heading?.highlight || "News"}
           </span>
         </h2>
-
-        { }
         {subheading && (
           <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-[620px] mx-auto">
             {subheading}
@@ -81,7 +78,6 @@ export function Mediasec({ data = defaultMediaSectionData }: MediasecProps) {
         )}
       </FadeIn>
 
-      { }
       <StaggerContainer
         key={currentPage}
         staggerChildren={0.12}
@@ -91,44 +87,47 @@ export function Mediasec({ data = defaultMediaSectionData }: MediasecProps) {
         {displayedItems &&
           displayedItems.map((item: any) => (
             <StaggerItem key={item.id}>
-              <motion.div
-                whileHover={{ y: -5, scale: 1.01 }}
-                transition={{ duration: 0.25 }}
-                className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] p-6 sm:p-7 overflow-hidden hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl flex flex-col sm:flex-row items-center sm:items-stretch gap-6 justify-between h-full cursor-pointer"
-              >
-                { }
-                <div className="w-[190px] sm:w-[220px] h-[115px] sm:h-[125px] shrink-0 bg-transparent flex items-center justify-center p-2">
-                  <Image
-                    src={item.logo || "/subbanner.svg"}
-                    alt={item.title}
-                    width={220}
-                    height={125}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
+              <Link href={item.link || "#"} className="block h-full">
+                <motion.div
+                  whileHover={{ y: -5, scale: 1.01 }}
+                  transition={{ duration: 0.25 }}
+                  className="group relative rounded-2xl border border-slate-800/80 bg-[#0A0E17] p-6 sm:p-7 overflow-hidden hover:border-[#D4A359]/50 transition-colors duration-300 shadow-xl flex flex-col sm:flex-row items-center sm:items-stretch gap-6 justify-between h-full cursor-pointer"
+                >
+                  <div className="w-[190px] sm:w-[220px] h-[115px] sm:h-[125px] shrink-0 bg-transparent flex items-center justify-center p-2">
+                    <Image
+                      src={item.logo || "/subbanner.svg"}
+                      alt={item.title}
+                      width={220}
+                      height={125}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="hidden sm:block w-[1px] bg-slate-800/80 self-stretch my-1 shrink-0" />
 
-                { }
-                <div className="hidden sm:block w-[1px] bg-slate-800/80 self-stretch my-1 shrink-0" />
+         
+                  <div className="flex flex-col justify-between flex-1 text-left">
+                    <div>
+                
+                      <h3 className="font-serif font-semibold text-white text-lg sm:text-xl mb-3 group-hover:text-[#D4A359] transition-colors leading-snug line-clamp-2">
+                        {item.title}
+                      </h3>
 
-                { }
-                <div className="flex flex-col justify-between flex-1 text-left">
-                  <div>
-                    { }
-                    <h3 className="font-serif font-semibold text-white text-lg sm:text-xl mb-3 group-hover:text-[#D4A359] transition-colors leading-snug line-clamp-2">
-                      {item.title}
-                    </h3>
+              
+                      <div className="flex items-center gap-2 text-slate-400 text-sm sm:text-sm font-medium mb-3">
+                        <Calendar className="w-4 h-4 text-[#D4A359]" />
+                        <span>{item.date}</span>
+                      </div>
+                    </div>
 
-                    { }
-                    <div className="flex items-center gap-2 text-slate-400 text-sm sm:text-sm font-medium mb-4">
-                      <Calendar className="w-4 h-4 text-[#D4A359]" />
-                      <span>{item.date}</span>
+                    <div className="pt-1">
+                      <div className="inline-flex items-center gap-2 text-[#D4A359] text-sm sm:text-base font-medium group-hover:gap-3 transition-all duration-300">
+                        <span>{item.linkText || buttonText || "Read More"}</span>
+                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                      </div>
                     </div>
                   </div>
-
-                  { }
-                  { }
-                </div>
-              </motion.div>
+                </motion.div>
+              </Link>
             </StaggerItem>
           ))}
       </StaggerContainer>

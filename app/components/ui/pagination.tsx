@@ -31,7 +31,7 @@ export function Pagination({
 
   return (
     <div className="flex items-center justify-center gap-2 sm:gap-2.5 mt-10 sm:mt-12 lg:mt-14 select-none">
-      {}
+ 
       <button
         onClick={() => handlePageClick(activePage - 1)}
         disabled={activePage === 1}

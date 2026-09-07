@@ -49,7 +49,7 @@ export function PublicationContent({ publication }: PublicationContentProps) {
 
   return (
     <div className="space-y-8 sm:space-y-10 text-left select-none pt-4">
-      { }
+    
       {publication.introductionText && (
         <FadeIn
           direction="up"
@@ -73,7 +73,7 @@ export function PublicationContent({ publication }: PublicationContentProps) {
         </FadeIn>
       )}
 
-      { }
+    
       {publication.highlights && publication.highlights.length > 0 && (
         <FadeIn direction="up" delay={0.2} duration={0.6} className="space-y-6">
           <h2 className="font-serif text-xl sm:text-2xl text-white font-medium tracking-tight">
@@ -89,12 +89,12 @@ export function PublicationContent({ publication }: PublicationContentProps) {
                   key={idx}
                   className="flex items-start gap-4 sm:gap-5 group"
                 >
-                  { }
+                
                   <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-[#D4A359]/70 bg-[#070B12] text-[#D4A359] flex items-center justify-center shrink-0 shadow-md group-hover:border-[#D4A359] group-hover:scale-105 transition-all duration-300">
                     <IconComp className="w-6 h-6 sm:w-7 sm:h-7 stroke-[1.8]" />
                   </div>
 
-                  { }
+                
                   <div className="flex-1 pt-1">
                     <h3 className="font-serif text-base sm:text-lg text-white font-medium mb-1 group-hover:text-[#D4A359] transition-colors leading-snug">
                       <span className="font-normal text-slate-400 mr-1.5">
@@ -113,7 +113,7 @@ export function PublicationContent({ publication }: PublicationContentProps) {
         </FadeIn>
       )}
 
-      { }
+    
       {publication.callout && (
         <FadeIn
           direction="up"
@@ -122,12 +122,12 @@ export function PublicationContent({ publication }: PublicationContentProps) {
           className="rounded-2xl border border-[#D4A359]/60 bg-[#0A0E17]/90 p-5 sm:p-6 shadow-xl relative overflow-hidden"
         >
           <div className="flex items-start gap-4 sm:gap-5">
-            { }
+          
             <div className="w-12 h-12 rounded-xl bg-[#D4A359]/10 text-[#D4A359] flex items-center justify-center shrink-0 mt-0.5">
               <CalloutIcon className="w-7 h-7 stroke-[1.8]" />
             </div>
 
-            { }
+          
             <div className="flex-1">
               <h3 className="font-serif text-base sm:text-lg text-[#D4A359] font-medium mb-1.5">
                 {publication.callout.title}
@@ -140,7 +140,7 @@ export function PublicationContent({ publication }: PublicationContentProps) {
         </FadeIn>
       )}
 
-      { }
+    
       {publication.conclusionText && (
         <FadeIn
           direction="up"
